@@ -2,11 +2,11 @@
   "scope": "Implementation self-verification with deliberate faults; physical device NOT_TESTED",
   "utc": "2026-11-03T23:03:53.243Z",
   "sourceHashes": {
-    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
-    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
+    "src/main.js": "c46ae8baa5aeef2693905498af46d071e332852a8d1020f743f527e713eade1d",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
     "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
-    "public/data/nishinomaru.json": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca"
   },
   "results": [
     {
@@ -83,5 +83,13 @@
       "status": "PASS",
       "pageerrors": []
     }
-  ]
+  ],
+  "sourceHashesAtExecution": {
+    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
+    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/nishinomaru.json": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
+  },
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
 }

@@ -70,6 +70,8 @@ GitHub Pagesのリポジトリサブパスに対応する既存BASE_URLを維持
 
 最終自己検証：単体18/18（fail/skip 0）、通常ブラウザ32条件（新16・既存16）、障害/境界22条件、操作サイクル2条件がPASS。実装を意図的に戻した変異4条件はすべて期待どおりFAILし、同じ条件の修正版はPASS。新区域16条件はローカル静的Pagesサブパスで確認した。`summary.json` はレポート件数・実ファイルhash・native終了0・保全票を突き合わせて集約し、不完全な票を成功として扱わない。lint/型検査の独立スクリプトは既存構成にないため新設していない。JavaScript構文、単体、通常build・Pagesサブパスbuildを実行。Viteの500kB超bundle警告は既存から継続し、軽量化・実機負荷は留保する。
 
+提出時にWindows CRLFとGitのLF保存との差を検出したため、文字ファイルのhashはUTF-8のCRLF→LFのみを正規化した値でコミット実体と対応付ける。実行時の生hashは `sourceHashesAtExecution` / `hashesAtExecution` / `scriptSha256AtExecution` に別途保持。改行以外は変更せず、3D/GISバイナリのhashは生のまま。この正規化後に単体・buildと集約票を再確認し、実行時の生byte検証とGitの保存形式を混同しない。
+
 | 項目 | 判定 / 証拠 |
 |---|---|
 | 第1期再現 | 変更前の単体12/12・build PASS |

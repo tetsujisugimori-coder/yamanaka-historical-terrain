@@ -1,8 +1,10 @@
 import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {canonicalSha256,normalization} from './evidence-hash.mjs';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317';
 const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js','src/style.css','public/data/nishinomaru.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashesAtExecution={...sourceHashes};for(const file of Object.keys(sourceHashes))sourceHashes[file]=canonicalSha256(file,await readFile(file));
 const results=[];await mkdir('evidence/phase2a/browser',{recursive:true});
 const meta=JSON.parse(await readFile('public/data/nishinomaru.json','utf8'));
 const ready=(p)=>p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready&&window.__terrainDiagnostics().state.view==='reconstruction',null,{timeout:25000});
@@ -34,7 +36,7 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
    await page.locator('[data-facility=nm-bailey]').uncheck();await page.locator('#reset').click();await page.waitForFunction(()=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().state.view==='regional');await page.locator('[data-view=reconstruction]').click();await ready(page);expect((await page.evaluate(()=>window.__terrainDiagnostics())).reconstruction.hidden).toEqual([]);await expect(page.locator('[data-facility=nm-bailey]')).toBeChecked();row.checks.push('Reset clears hidden layers and repeated view switches recover');
    row.status='PASS';
   }catch(e){row.status='FAIL';row.reason=e.message;await page.screenshot({path:`evidence/phase2a/browser/${key}-failure.png`,fullPage:true}).catch(()=>{});}
-  results.push(row);console.log(`${row.status} ${key}`);await context.close();await writeFile('evidence/phase2a/browser.json',JSON.stringify({scope:'implementation self-verification; emulated engine/viewport, not physical Safari or VoiceOver',testUrl:root,utc:new Date().toISOString(),sourceHashes,results},null,2));
+  results.push(row);console.log(`${row.status} ${key}`);await context.close();await writeFile('evidence/phase2a/browser.json',JSON.stringify({scope:'implementation self-verification; emulated engine/viewport, not physical Safari or VoiceOver',testUrl:root,utc:new Date().toISOString(),sourceHashes,sourceHashesAtExecution,hashNormalization:normalization,results},null,2));
  }
  await browser.close();
 }

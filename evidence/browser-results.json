@@ -2,10 +2,10 @@
   "scope": "implementation self-verification; browser engines, not physical iPhone",
   "timestamp": "2026-11-03T23:04:46.303Z",
   "sourceHashes": {
-    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
-    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
+    "src/main.js": "c46ae8baa5aeef2693905498af46d071e332852a8d1020f743f527e713eade1d",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
-    "src/style.css": "8b6355578c602050ef07dc1a8b1ba24aaa27f4b6b1602f96f0431991c60ce3b7",
+    "src/style.css": "fe33df14c91315f7ff9f6bca455d6203d639581bf9be4abdb9c98dc8703c3d54",
     "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
     "src/scale.js": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad",
     "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
@@ -4921,5 +4921,17 @@
       },
       "totalMs": 5267.517199999995
     }
-  ]
+  ],
+  "sourceHashesAtExecution": {
+    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
+    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "src/style.css": "8b6355578c602050ef07dc1a8b1ba24aaa27f4b6b1602f96f0431991c60ce3b7",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/scale.js": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad",
+    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/moat-study.glb": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387"
+  },
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
 }

@@ -101,5 +101,17 @@
   },
   "reason": "Process terminated normally after checks and explicit teardown",
   "stdout": "QGIS phase2a data created; external runner must inspect actual exit\r\n",
-  "stderr": "[workspace]\\scripts\\build-phase2a-gis.py:20: DeprecationWarning: QgsField constructor is deprecated\r\n  pr.addAttributes([QgsField('facility_id',QVariant.String),QgsField('name',QVariant.String),QgsField('category',QVariant.String),QgsField('accuracy',QVariant.String),QgsField('a_min_m',QVariant.Double),QgsField('a_max_m',QVariant.Double),QgsField('c_center_m',QVariant.Double),QgsField('source_ids',QVariant.String)]);vl.updateFields();samples=[]\r\nC:\\PROGRA~1\\QGIS34~1.10\\apps\\Python312\\Lib\\site-packages\\osgeo\\gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.\r\n  warnings.warn(\r\n"
+  "stderr": "[workspace]\\scripts\\build-phase2a-gis.py:20: DeprecationWarning: QgsField constructor is deprecated\r\n  pr.addAttributes([QgsField('facility_id',QVariant.String),QgsField('name',QVariant.String),QgsField('category',QVariant.String),QgsField('accuracy',QVariant.String),QgsField('a_min_m',QVariant.Double),QgsField('a_max_m',QVariant.Double),QgsField('c_center_m',QVariant.Double),QgsField('source_ids',QVariant.String)]);vl.updateFields();samples=[]\r\nC:\\PROGRA~1\\QGIS34~1.10\\apps\\Python312\\Lib\\site-packages\\osgeo\\gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.\r\n  warnings.warn(\r\n",
+  "hashesAtExecution": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+    "production/phase2a/facilities.gpkg": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e",
+    "production/phase2a/inferred-surface-50cm.tif": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2"
+  },
+  "scriptSha256AtExecution": "ec00f61afd0fab88a1acd45dd44b33f11ecd899e2e15f56c89ec3f9a81e6c1ec",
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
 }

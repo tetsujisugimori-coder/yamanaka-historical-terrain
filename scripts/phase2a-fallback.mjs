@@ -1,7 +1,9 @@
 import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {canonicalSha256,normalization} from './evidence-hash.mjs';
 const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js','public/data/nishinomaru.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashesAtExecution={...sourceHashes};for(const file of Object.keys(sourceHashes))sourceHashes[file]=canonicalSha256(file,await readFile(file));
 const baseline=process.argv.includes('--negative-control');const results=[];
 for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
  const browser=await engine.launch();
@@ -40,5 +42,5 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
  }
  await browser.close();
 }
-await writeFile(`evidence/phase2a/${baseline?'negative-controls':'fallback'}.json`,JSON.stringify({scope:baseline?'Mutation negative control: deliberately remove visibility and stale-request safeguards; expected FAIL':'Implementation self-verification with deliberate faults; physical device NOT_TESTED',utc:new Date().toISOString(),sourceHashes,results},null,2));
+await writeFile(`evidence/phase2a/${baseline?'negative-controls':'fallback'}.json`,JSON.stringify({scope:baseline?'Mutation negative control: deliberately remove visibility and stale-request safeguards; expected FAIL':'Implementation self-verification with deliberate faults; physical device NOT_TESTED',utc:new Date().toISOString(),sourceHashes,sourceHashesAtExecution,hashNormalization:normalization,results},null,2));
 if(baseline?results.some(r=>r.status!=='FAIL'||!r.mutationApplied):results.some(r=>r.status!=='PASS'))process.exitCode=1;

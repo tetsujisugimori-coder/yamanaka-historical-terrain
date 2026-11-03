@@ -176,31 +176,38 @@
   "artifacts": {
     "production/yamanaka-phase2a.qgz": {
       "bytes": 15112,
-      "sha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8"
+      "sha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+      "rawSha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8"
     },
     "production/yamanaka-phase2a.blend": {
       "bytes": 42163408,
-      "sha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc"
+      "sha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+      "rawSha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc"
     },
     "production/phase2a/facilities.gpkg": {
       "bytes": 98304,
-      "sha256": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e"
+      "sha256": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e",
+      "rawSha256": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e"
     },
     "production/phase2a/inferred-surface-50cm.tif": {
       "bytes": 79974,
-      "sha256": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2"
+      "sha256": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2",
+      "rawSha256": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2"
     },
     "production/phase2a/profiles.json": {
       "bytes": 33288,
-      "sha256": "67215e622e02d4acaad87b6536900ba4f729e93245e88b41bebe86235f2f8127"
+      "sha256": "f61231f932e4c6ee48b2acab86a2ef4f282a5ae2b16262441a8d61cbd5f6f0b5",
+      "rawSha256": "67215e622e02d4acaad87b6536900ba4f729e93245e88b41bebe86235f2f8127"
     },
     "public/data/nishinomaru.glb": {
       "bytes": 24933760,
-      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "rawSha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
     },
     "public/data/nishinomaru.json": {
       "bytes": 8351,
-      "sha256": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
+      "sha256": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+      "rawSha256": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
     }
   },
   "sources": [
@@ -211,5 +218,6 @@
       "traced": false,
       "sha256": "611656844f9c993b2042c98b301f2a63a8e3d14a2be24830c34838b6c995d2d8"
     }
-  ]
+  ],
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
 }

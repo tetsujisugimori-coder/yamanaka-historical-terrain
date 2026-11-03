@@ -1,6 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
+import {canonicalSha256} from './evidence-hash.mjs';
 const read=async p=>JSON.parse(await readFile(p,'utf8'));
 const reports={};
 for(const [name,file,count,expected]of [
@@ -13,12 +14,12 @@ for(const [name,file,count,expected]of [
 ]){
  const r=await read(file);assert.equal(r.results.length,count,file);assert.ok(r.results.every(x=>x.status===expected),file);
  if(name==='mutationControls')assert.ok(r.results.every(x=>x.mutationApplied));
- for(const [file,sha]of Object.entries(r.sourceHashes??{}))assert.equal(createHash('sha256').update(await readFile(file)).digest('hex'),sha,'stale browser receipt '+file);
+ for(const [file,sha]of Object.entries(r.sourceHashes??{}))assert.equal(canonicalSha256(file,await readFile(file)),sha,'stale browser receipt '+file);
  reports[name]={file,cases:count,result:expected,interpretation:expected==='FAIL'?'expected detection of deliberate implementation mutation':'all requested checks in these cases passed'};
 }
 for(const kind of ['gis','blender','gis-check','blender-check']){
  const file=`evidence/phase2a/${kind}.json`,r=await read(file);assert.equal(r.status,'PASS');assert.equal(r.exitCode,0);assert.equal(r.details.workerStatus,'CHECKS_AND_TEARDOWN_RETURNED');
- for(const [file,sha]of Object.entries(r.hashes))assert.equal(createHash('sha256').update(await readFile(file)).digest('hex'),sha,'stale native receipt '+file);
+ for(const [file,sha]of Object.entries(r.hashes))assert.equal(canonicalSha256(file,await readFile(file)),sha,'stale native receipt '+file);
  reports[kind]={file,status:r.status,actualExitCode:r.exitCode};
 }
 const preservation=await read('evidence/phase2a/preservation.json');assert.ok(preservation.preservation.every(x=>x.unchanged));

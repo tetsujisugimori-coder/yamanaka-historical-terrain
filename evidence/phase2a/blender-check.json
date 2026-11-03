@@ -37,5 +37,16 @@
   },
   "reason": "Process terminated normally after checks and explicit teardown",
   "stdout": "Blender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka-phase2a.blend\"\n\nBlender quit\n",
-  "stderr": ""
+  "stderr": "",
+  "hashesAtExecution": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  "scriptSha256AtExecution": "bc6b2d73d1af10ac27cb19fbd5b76a96b6614e8cef86a6d64851e1ffe351c092",
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
 }
