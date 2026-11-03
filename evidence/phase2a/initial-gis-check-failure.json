@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-03T22:44:25.455Z",
+  "scriptSha256": "bd5896f493e013291245ad8fd925a7fab0c2e6118dbe35c4594634204e0cf923",
+  "status": "FAIL",
+  "exitCode": 1,
+  "exitHex": "0x00000001",
+  "signal": null,
+  "processError": null,
+  "details": null,
+  "reason": "Native process did not finish successfully; printed PASS is not sufficient",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"[workspace]\\scripts\\verify-phase2a-gis.py\", line 17, in <module>\r\n    assert len(layers)==11,len(layers)\r\n           ^^^^^^^^^^^^^^^\r\nAssertionError: 10\r\n"
+}

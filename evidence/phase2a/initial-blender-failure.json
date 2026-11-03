@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-03T22:40:17.148Z",
+  "scriptSha256": "8ea32ac76436b932c3185ebdcd66287f622ca6073242b74f8052555794890861",
+  "status": "FAIL",
+  "exitCode": 1,
+  "exitHex": "0x00000001",
+  "signal": null,
+  "processError": null,
+  "details": null,
+  "reason": "Native process did not finish successfully; printed PASS is not sufficient",
+  "stdout": "Blender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[local path]\n\nBlender quit\n",
+  "stderr": "Traceback (most recent call last):\r\n  File \"[local path]\n    g=json.loads((ROOT/'public/data/castle.json').read_text());layout=json.loads((ROOT/'public/data/nishinomaru-layout.json').read_text())\r\n                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"[local path]\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\r\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"[local path]\n    return io.open(self, mode, buffering, encoding, errors, newline)\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nFileNotFoundError: [Errno 2] No such file or directory: '[local path]\n\nError: script failed, file: '[local path]\n"
+}

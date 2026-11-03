@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-03T22:57:07.444Z",
+  "scriptSha256": "bc6b2d73d1af10ac27cb19fbd5b76a96b6614e8cef86a6d64851e1ffe351c092",
+  "hashes": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "exitHex": "0x00000000",
+  "signal": null,
+  "processError": null,
+  "details": {
+    "workerStatus": "CHECKS_AND_TEARDOWN_RETURNED",
+    "blender": "4.5.9 LTS",
+    "objects": [
+      "nm-bailey",
+      "nm-context",
+      "nm-moat",
+      "nm-passage",
+      "nm-rampart",
+      "nm-transition"
+    ],
+    "originalGeometryHashes": {
+      "A_castle_current": "39273d9a29e9d7b6c6f18f79a624a9dc6d7684ffd2efdbaa6a13eb4272bf118c",
+      "A_regional_current": "8f418eec03e84518ad4052992ac1c7744b9e8f4547011a4ae8ea88899b5dae95",
+      "C_castle_with_study_cutout": "9cdb31a5455272dfac717a16a1b67a17a3dd53be30dbe32b1699fdd6b6a47804",
+      "C_source_informed_moat_study": "ae163e273999a19ef26b875302e19265cb39b1c4daf228ab67aa6d0c5c719e05"
+    },
+    "externalDependencies": 0,
+    "scope": "reopened editable .blend, not historical accuracy"
+  },
+  "reason": "Process terminated normally after checks and explicit teardown",
+  "stdout": "Blender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka-phase2a.blend\"\n\nBlender quit\n",
+  "stderr": ""
+}

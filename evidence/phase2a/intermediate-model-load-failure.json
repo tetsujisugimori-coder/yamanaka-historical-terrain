@@ -1,0 +1,287 @@
+{
+  "scope": "implementation self-verification; emulated engine/viewport, not physical Safari or VoiceOver",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 375,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "reducedMotion": "reduce",
+      "status": "FAIL",
+      "checks": [],
+      "pageerrors": [],
+      "requestFailures": [
+        "http://127.0.0.1:4317/data/nishinomaru.glb"
+      ],
+      "reason": "page.waitForFunction: Timeout 25000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 765,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 765,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 765,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 765,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "new metric GLB loaded with six independently editable meshes",
+        "real mesh picking selects ID; hidden surface cannot be picked",
+        "five IDs select exact names, C status, explanation and sources",
+        "A/C comparison preserves exact camera and target in both directions",
+        "individual and C category visibility changes actual scene objects",
+        "keyboard rotation, focus, zoom and low viewpoint",
+        "trusted pointer drag and browser touch tap where enabled",
+        "Reset clears hidden layers and repeated view switches recover"
+      ],
+      "pageerrors": [],
+      "requestFailures": []
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "scope": "implementation self-verification; context injection and missing assets are deliberate, errors must remain observable",
   "sourceHashes": {
-    "index.html": "6ec944feb860150b69eb4ec8afacc769f1ca6b38546c013e015b2a8996635317",
-    "src/main.js": "528a14c04048c6038e083e07f6e387db079ebc5aba65c495e7e0715a450e05c6",
-    "src/reading.js": "6df89243303c88b83233e851c7f947e733accd8efd13a079d12ecf3687b960a6"
+    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
+    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229"
   },
   "results": [
     {
@@ -21,16 +21,17 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=c17e4fcb:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793724995796:29:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:30:15)"
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ],
       "actual": {
         "facilityButtons": 4,
-        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
-        "sourceLinks": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
+        "sourceLinks": 5,
         "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
       }
     },
@@ -49,16 +50,17 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=c17e4fcb:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793724995796:29:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:30:15)"
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ],
       "actual": {
         "facilityButtons": 4,
-        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
-        "sourceLinks": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
+        "sourceLinks": 5,
         "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
       }
     },
@@ -76,11 +78,12 @@
       "pageerrors": [],
       "consoleErrors": [
         "Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "HttpError: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=c17e4fcb:23503:15"
+        "HttpError: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:23503:15"
       ],
       "dataRequests": [
         "/data/features.json",
         "/data/sources.json",
+        "/data/nishinomaru.json",
         "/data/regional.json",
         "/data/castle.json",
         "/data/study.json",
@@ -98,11 +101,12 @@
       "pageerrors": [],
       "consoleErrors": [
         "Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793724995796:23:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793724995796:27:25)"
+        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793746603724:24:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:28:49)"
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ]
     },
     {
@@ -118,11 +122,12 @@
       ],
       "pageerrors": [],
       "consoleErrors": [
-        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793724995796:99:152)"
+        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793746603724:109:152)"
       ],
       "dataRequests": [
         "/data/features.json",
         "/data/sources.json",
+        "/data/nishinomaru.json",
         "/data/regional.json",
         "/data/castle.json",
         "/data/study.json",
@@ -149,12 +154,13 @@
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ],
       "actual": {
         "facilityButtons": 4,
-        "detailText": "A\n現況\n山中城の立地\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
-        "sourceLinks": 4,
+        "detailText": "A\n現況\n山中城の立地\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
+        "sourceLinks": 5,
         "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
       }
     },
@@ -177,12 +183,13 @@
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ],
       "actual": {
         "facilityButtons": 4,
-        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
-        "sourceLinks": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
+        "sourceLinks": 5,
         "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
       }
     },
@@ -205,6 +212,7 @@
       "dataRequests": [
         "/data/features.json",
         "/data/sources.json",
+        "/data/nishinomaru.json",
         "/data/regional.json",
         "/data/castle.json",
         "/data/study.json",
@@ -226,7 +234,8 @@
       ],
       "dataRequests": [
         "/data/features.json",
-        "/data/sources.json"
+        "/data/sources.json",
+        "/data/nishinomaru.json"
       ]
     },
     {
@@ -247,6 +256,7 @@
       "dataRequests": [
         "/data/features.json",
         "/data/sources.json",
+        "/data/nishinomaru.json",
         "/data/regional.json",
         "/data/castle.json",
         "/data/study.json",

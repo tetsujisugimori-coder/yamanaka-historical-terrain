@@ -5,3 +5,5 @@ data/raw/
 *.blend1
 *.log
 .cache/
+__pycache__/
+*.qgz~

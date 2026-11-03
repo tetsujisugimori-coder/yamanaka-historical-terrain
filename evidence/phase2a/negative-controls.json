@@ -1,0 +1,45 @@
+{
+  "scope": "Mutation negative control: deliberately remove visibility and stale-request safeguards; expected FAIL",
+  "utc": "2026-11-03T23:03:35.846Z",
+  "sourceHashes": {
+    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
+    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/nishinomaru.json": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "reason": "expect(locator).toHaveText(expected) failed\n\nLocator:  locator('#detail h2')\nExpected: \"西ノ丸 曲輪候補\"\nReceived: \"西ノ丸 障子堀候補\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.text\" with timeout 5000ms\n  - waiting for locator('#detail h2')\n    8 × locator resolved to <h2>西ノ丸 障子堀候補</h2>\n      - unexpected value \"西ノ丸 障子堀候補\"\n"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "reason": "expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('body')\nExpected: \"ready\"\nReceived: \"error\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.attribute.value\" with timeout 5000ms\n  - waiting for locator('body')\n    9 × locator resolved to <body data-render-state=\"error\" data-reading-state=\"ready\">…</body>\n      - unexpected value \"error\"\n"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "reason": "expect(locator).toHaveText(expected) failed\n\nLocator:  locator('#detail h2')\nExpected: \"西ノ丸 曲輪候補\"\nReceived: \"西ノ丸 障子堀候補\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.text\" with timeout 5000ms\n  - waiting for locator('#detail h2')\n    9 × locator resolved to <h2>西ノ丸 障子堀候補</h2>\n      - unexpected value \"西ノ丸 障子堀候補\"\n"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "reason": "expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('body')\nExpected: \"ready\"\nReceived: \"error\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.have.attribute.value\" with timeout 5000ms\n  - waiting for locator('body')\n    9 × locator resolved to <body data-render-state=\"error\" data-reading-state=\"ready\">…</body>\n      - unexpected value \"error\"\n"
+    }
+  ]
+}

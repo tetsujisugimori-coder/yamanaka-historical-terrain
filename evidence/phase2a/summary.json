@@ -1,0 +1,90 @@
+{
+  "utc": "2026-11-03T23:06:55.140Z",
+  "overall": "PARTIAL",
+  "technicalAcceptance": "PASS",
+  "unit": {
+    "cases": 18,
+    "pass": 18,
+    "fail": 0,
+    "skip": 0
+  },
+  "reports": {
+    "newBrowser": {
+      "file": "evidence/phase2a/browser.json",
+      "cases": 16,
+      "result": "PASS",
+      "interpretation": "all requested checks in these cases passed"
+    },
+    "newFallback": {
+      "file": "evidence/phase2a/fallback.json",
+      "cases": 12,
+      "result": "PASS",
+      "interpretation": "all requested checks in these cases passed"
+    },
+    "mutationControls": {
+      "file": "evidence/phase2a/negative-controls.json",
+      "cases": 4,
+      "result": "FAIL",
+      "interpretation": "expected detection of deliberate implementation mutation"
+    },
+    "regressionBrowser": {
+      "file": "evidence/browser-results.json",
+      "cases": 16,
+      "result": "PASS",
+      "interpretation": "all requested checks in these cases passed"
+    },
+    "regressionFallback": {
+      "file": "evidence/fallback-results.json",
+      "cases": 10,
+      "result": "PASS",
+      "interpretation": "all requested checks in these cases passed"
+    },
+    "interactionCycles": {
+      "file": "evidence/interaction-cycles.json",
+      "cases": 2,
+      "result": "PASS",
+      "interpretation": "all requested checks in these cases passed"
+    },
+    "gis": {
+      "file": "evidence/phase2a/gis.json",
+      "status": "PASS",
+      "actualExitCode": 0
+    },
+    "blender": {
+      "file": "evidence/phase2a/blender.json",
+      "status": "PASS",
+      "actualExitCode": 0
+    },
+    "gis-check": {
+      "file": "evidence/phase2a/gis-check.json",
+      "status": "PASS",
+      "actualExitCode": 0
+    },
+    "blender-check": {
+      "file": "evidence/phase2a/blender-check.json",
+      "status": "PASS",
+      "actualExitCode": 0
+    }
+  },
+  "protectedFiles": 24,
+  "newFacilities": {
+    "B": 0,
+    "C": 5
+  },
+  "independentReview": "NOT_VERIFIED",
+  "mergeRecommendation": "NO before independent review",
+  "notTested": [
+    "physical iPhone Safari",
+    "VoiceOver",
+    "field survey",
+    "physical device memory/thermal load",
+    "trusted continuous touch drag in WebKit"
+  ],
+  "unknowns": [
+    "historic placement/dimensions and georeference residual; 0 control points",
+    "phase1 QGIS internal crash root cause",
+    "phase1 browser timeout root cause",
+    "intermediate new GLB requestfailed/25s timeout root cause"
+  ],
+  "publication": "no deployment, merge or auto-merge performed; Issue #1 remains OPEN"
+}

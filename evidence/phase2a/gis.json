@@ -1,0 +1,105 @@
+{
+  "utc": "2026-11-03T22:56:45.921Z",
+  "scriptSha256": "ec00f61afd0fab88a1acd45dd44b33f11ecd899e2e15f56c89ec3f9a81e6c1ec",
+  "hashes": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+    "production/phase2a/facilities.gpkg": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e",
+    "production/phase2a/inferred-surface-50cm.tif": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2"
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "exitHex": "0x00000000",
+  "signal": null,
+  "processError": null,
+  "details": {
+    "utc": "2026-11-03T22:56:45.720355+00:00",
+    "qgis": "3.44.10-Solothurn",
+    "crs": "EPSG:6676",
+    "origin": [
+      44862.121277226666,
+      -93478.07235405142
+    ],
+    "bounds": [
+      -80,
+      -50,
+      30,
+      55
+    ],
+    "samples": [
+      {
+        "id": "nm-bailey",
+        "localBounds": [
+          -30,
+          -20,
+          10,
+          25
+        ],
+        "measured1mCornerMin": 567.17724609375,
+        "measured1mCornerMax": 575.0424194335938,
+        "hypothesisCenterHeight": 575.1700244140625
+      },
+      {
+        "id": "nm-moat",
+        "localBounds": [
+          -62,
+          -26,
+          -42,
+          32
+        ],
+        "measured1mCornerMin": 569.4344482421875,
+        "measured1mCornerMax": 573.3543090820312,
+        "hypothesisCenterHeight": 575.1740244140625
+      },
+      {
+        "id": "nm-rampart",
+        "localBounds": [
+          -40,
+          -26,
+          16,
+          32
+        ],
+        "measured1mCornerMin": 567.6778564453125,
+        "measured1mCornerMax": 572.6629638671875,
+        "hypothesisCenterHeight": 575.1740244140625
+      },
+      {
+        "id": "nm-passage",
+        "localBounds": [
+          -4,
+          -40,
+          20,
+          -10
+        ],
+        "measured1mCornerMin": 566.00634765625,
+        "measured1mCornerMax": 574.98876953125,
+        "hypothesisCenterHeight": 574.3865244140625
+      },
+      {
+        "id": "nm-transition",
+        "localBounds": [
+          -80,
+          -50,
+          30,
+          55
+        ],
+        "measured1mCornerMin": 553.7844848632812,
+        "measured1mCornerMax": 572.1571044921875,
+        "hypothesisCenterHeight": 575.1700244140625
+      }
+    ],
+    "rasterResolution": 0.5,
+    "controlPoints": 0,
+    "georeferenceResidual": "UNKNOWN; no measured common control points. C placement revised to DEM shoulder; old flank anchor is not survey evidence.",
+    "scope": "C hypothesis envelopes and derived surface, not survey polygons; raster resolution is computational",
+    "profileSamples": 222,
+    "workerStatus": "CHECKS_AND_TEARDOWN_RETURNED"
+  },
+  "reason": "Process terminated normally after checks and explicit teardown",
+  "stdout": "QGIS phase2a data created; external runner must inspect actual exit\r\n",
+  "stderr": "[workspace]\\scripts\\build-phase2a-gis.py:20: DeprecationWarning: QgsField constructor is deprecated\r\n  pr.addAttributes([QgsField('facility_id',QVariant.String),QgsField('name',QVariant.String),QgsField('category',QVariant.String),QgsField('accuracy',QVariant.String),QgsField('a_min_m',QVariant.Double),QgsField('a_max_m',QVariant.Double),QgsField('c_center_m',QVariant.Double),QgsField('source_ids',QVariant.String)]);vl.updateFields();samples=[]\r\nC:\\PROGRA~1\\QGIS34~1.10\\apps\\Python312\\Lib\\site-packages\\osgeo\\gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.\r\n  warnings.warn(\r\n"
+}

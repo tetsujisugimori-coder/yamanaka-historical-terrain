@@ -1,0 +1,87 @@
+{
+  "scope": "Implementation self-verification with deliberate faults; physical device NOT_TESTED",
+  "utc": "2026-11-03T23:03:53.243Z",
+  "sourceHashes": {
+    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
+    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/nishinomaru.json": "29a7f2df141b080b5f4171ef23eb29aab114f5144c1e9f1cff363093f7ac8eba"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-model-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-reading-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "context-lost",
+      "status": "PASS",
+      "pageerrors": [],
+      "lossKind": "native extension"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-model-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-reading-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "context-lost",
+      "status": "PASS",
+      "pageerrors": [],
+      "lossKind": "native extension"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    }
+  ]
+}
