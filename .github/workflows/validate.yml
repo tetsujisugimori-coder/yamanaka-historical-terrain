@@ -39,6 +39,7 @@ jobs:
           done
           node scripts/browser-test.mjs
           node scripts/interaction-cycles.mjs
+          node scripts/fallback-test.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -46,5 +47,7 @@ jobs:
           path: |
             evidence/browser-results.json
             evidence/interaction-cycles.json
+            evidence/fallback-results.json
+            evidence/fallback/*.png
             evidence/browser/*.png
           if-no-files-found: error

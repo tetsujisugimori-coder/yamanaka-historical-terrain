@@ -1,12 +1,12 @@
 vite v7.1.12 building for production...
 transforming...
-✓ 11 modules transformed.
+✓ 12 modules transformed.
 rendering chunks...
 computing gzip size...
-dist/index.html                   7.21 kB │ gzip:   3.65 kB
-dist/assets/index-CXgjr3RN.css    9.45 kB │ gzip:   2.88 kB
-dist/assets/index-K_RO2ogK.js   608.12 kB │ gzip: 157.20 kB
-✓ built in 759ms
+dist/index.html                   7.57 kB │ gzip:   3.77 kB
+dist/assets/index-bqejfyXO.css    9.64 kB │ gzip:   2.95 kB
+dist/assets/index-Cd3p_SDn.js   610.57 kB │ gzip: 157.92 kB
+✓ built in 895ms
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application

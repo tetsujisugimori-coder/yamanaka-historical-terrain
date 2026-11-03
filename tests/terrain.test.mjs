@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {PerspectiveCamera,Vector3} from 'three';
 import {ORIGIN,toWeb,fromWeb,sampleHeight} from '../src/coordinates.js';
 import {groundScale} from '../src/scale.js';
+import {meshData,triangleSurface,measureStudy,assertStudyRange} from './glb-surface.mjs';
 const data=name=>JSON.parse(readFileSync(new URL(`../public/data/${name}.json`,import.meta.url)));
 function glb(name){const b=readFileSync(new URL(`../public/data/${name}.glb`,import.meta.url));assert.equal(b.toString('ascii',0,4),'glTF');assert.equal(b.readUInt32LE(4),2);assert.equal(b.readUInt32LE(8),b.length);const len=b.readUInt32LE(12),g=JSON.parse(b.toString('utf8',20,20+len)),bin=b.subarray(28+len);return{g,bin};}
 function positions(model,mesh){const primitive=model.g.meshes[mesh].primitives[0],a=model.g.accessors[primitive.attributes.POSITION],v=model.g.bufferViews[a.bufferView];assert.equal(a.componentType,5126);assert.equal(a.type,'VEC3');return Array.from({length:a.count},(_,i)=>[0,1,2].map(k=>model.bin.readFloatLE((v.byteOffset??0)+(a.byteOffset??0)+i*(v.byteStride??12)+k*4)));}
@@ -22,10 +23,15 @@ test('every observation anchor remains inside castle and regional measured bound
  for(const f of data('features'))for(const name of ['regional','castle']){const g=data(name),[e,n]=f.local;assert.ok(e>=g.bounds[0]&&e<=g.bounds[2]&&n>=g.bounds[1]&&n<=g.bounds[3]);assert.ok(Number.isFinite(sampleHeight(g,e,n)));}
 });
 test('inferred study cuts the terrain, meets the boundary and has no A category',()=>{
- const model=glb('moat-study'),meta=data('study'),base=data('castle');const nodes=model.g.nodes.filter(n=>n.mesh!==undefined);assert.equal(nodes.length,2);assert.ok(nodes.every(n=>n.extras.evidenceCategory==='C'));const patch=nodes.find(n=>n.name.includes('moat_study'));assert.ok(patch.extras.unknowns.includes('UNKNOWN'));const p=positions(model,patch.mesh);let maxDrop=0,maxBoundaryError=0;
- for(const [e,h,s]of p){const n=-s,reference=sampleHeight(base,e,n),drop=reference-h;assert.ok(drop>=-.001&&drop<=1.801);maxDrop=Math.max(maxDrop,drop);if(e===meta.bounds[0]||e===meta.bounds[2]||n===meta.bounds[1]||n===meta.bounds[3])maxBoundaryError=Math.max(maxBoundaryError,Math.abs(drop));}
- assert.ok(Math.abs(maxDrop-1.8)<.001);assert.ok(maxBoundaryError<.001);
+ const model=glb('moat-study'),meta=data('study');const nodes=model.g.nodes.filter(n=>n.mesh!==undefined);assert.equal(nodes.length,2);assert.ok(nodes.every(n=>n.extras.evidenceCategory==='C'));const patch=nodes.find(n=>n.name.includes('moat_study'));assert.ok(patch.extras.unknowns.includes('UNKNOWN'));
+ const measured=measureStudy(meshData(glb('castle'),'A_castle_current'),meshData(model,'moat_study'),meta.bounds);assertStudyRange(measured);assert.ok(Math.abs(measured.maxBelow-1.8)<.001);
  const terrain=nodes.find(n=>n.name.includes('cutout')),mesh=model.g.meshes[terrain.mesh].primitives[0],pa=positions(model,terrain.mesh),ia=model.g.accessors[mesh.indices],iv=model.g.bufferViews[ia.bufferView];const bytes=ia.componentType===5125?4:2;for(let i=0;i<ia.count;i+=3){const points=[0,1,2].map(k=>{const offset=(iv.byteOffset??0)+(ia.byteOffset??0)+(i+k)*bytes;return pa[bytes===4?model.bin.readUInt32LE(offset):model.bin.readUInt16LE(offset)];});const e=points.reduce((s,p)=>s+p[0],0)/3,n=-points.reduce((s,p)=>s+p[2],0)/3;assert.ok(!(e>meta.bounds[0]&&e<meta.bounds[2]&&n>meta.bounds[1]&&n<meta.bounds[3]),'no uncut surface covers the study');}
+});
+test('triangle-surface negative control rejects a bilinear raised patch and an excessive cut',()=>{
+ const positions=[[0,0,0],[5,0,0],[0,0,5],[5,4,5]],indices=[0,2,1,1,2,3],surface=triangleSurface(positions,indices);
+ assert.equal(surface(2.5,2.5),0,'actual exported diagonal has zero height; bilinear would give 1m');
+ const raised=measureStudy({positions,indices},{positions:[[2.5,1,2.5]]},[-10,-10,10,10]);assert.throws(()=>assertStudyRange(raised),/does not cut/);
+ const deep=measureStudy({positions,indices},{positions:[[2.5,-2,2.5]]},[-10,-10,10,10]);assert.throws(()=>assertStudyRange(deep),/does not cut/);
 });
 test('perspective scale preserves actual projected length through narrow/wide, rotation and zoom',()=>{
  for(const [w,h]of [[337,385],[1013,528]])for(const angle of [0,.4,1.5,3])for(const distance of [45,1500,9000]){const camera=new PerspectiveCamera(38,w/h,1,30000),target=new Vector3(0,550,0);camera.position.set(Math.sin(angle)*distance,550+distance*.7,Math.cos(angle)*distance);camera.lookAt(target);camera.updateMatrixWorld();const s=groundScale(camera,target,w,h,Math.min(160,w*.4));const a=new Vector3(...s.start),b=new Vector3(...s.end);assert.ok(Math.abs(a.distanceTo(b)-s.metres)<1e-8);const p=a.project(camera),q=b.project(camera),actual=Math.hypot((q.x-p.x)*w/2,(q.y-p.y)*h/2);assert.ok(Math.abs(actual-s.pixels)<1e-8);assert.ok(s.pixels>0&&s.pixels<=Math.min(160,w*.4));}

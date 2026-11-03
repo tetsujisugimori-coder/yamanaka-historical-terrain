@@ -31,7 +31,14 @@ def terrain(g):
 wide=terrain(regional); core=terrain(castle)
 def height(e,n):
  c=(e-castle['bounds'][0])/5; r=(castle['bounds'][3]-n)/5; c0,r0=int(c),int(r); u,v=c-c0,r-r0; a=castle['heights']
- return (1-v)*((1-u)*a[r0][c0]+u*a[r0][c0+1])+v*((1-u)*a[r0+1][c0]+u*a[r0+1][c0+1])
+ # Match the actual A_current triangles (a,south,east)/(east,south,southeast),
+ # including Blender's stored float32 vertex heights. Bilinear interpolation
+ # would be a different surface inside non-planar cells.
+ cols=castle['cols']; index=r0*cols+c0
+ h00=core.data.vertices[index].co.z; h10=core.data.vertices[index+1].co.z
+ h01=core.data.vertices[index+cols].co.z; h11=core.data.vertices[index+cols+1].co.z
+ if u+v<=1: return h00+u*(h10-h00)+v*(h01-h00)
+ return h11+(1-u)*(h01-h11)+(1-v)*(h10-h11)
 # Study patch has the same geospatial frame, but its approximate placement is
 # educational. No facility footprint has been georeferenced from a survey plan.
 anchor=next(f for f in features if f['id']=='west')['local']; cx=round(anchor[0]/5)*5; cy=round(anchor[1]/5)*5
@@ -56,6 +63,8 @@ cut=mesh('C_source_informed_moat_study',verts,faces,study,'C')
 cut['sourceURL']='https://www.city.mishima.shizuoka.jp/site/kyoudoshiryoukan/36489.html'
 cut['sourceScope']='Observed excavation example: 0.35m rounded crest, 1.8m depth, approximately 58deg slope; NOT every moat'
 cut['unknowns']='Actual footprint, pitch, orientation, extent, 1590 ground level UNKNOWN. 7m pitch and placement are illustrative.'
+cut['referenceSurface']='Actual A_castle_current triangular mesh, not bilinear interpolation'
+cut['slopeParameterMeaning']='58 degrees is the lowering function flank parameter relative to the reference surface, not a measured absolute slope of every final face on the inclined DEM.'
 # An alternative castle terrain with a real hole, not a moat sitting above an
 # uncut measured surface. The immutable A_current object is always retained.
 verts=[tuple(v.co) for v in core.data.vertices]; faces=[]

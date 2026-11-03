@@ -1,0 +1,9 @@
+{
+  "vertices": 58081,
+  "maxAbove": 0.00003051757823868684,
+  "maxBelow": 1.8000305175781932,
+  "aboveCount": 0,
+  "maxBoundaryError": 0.000030517578125,
+  "reference": "actual exported A_castle_current triangle faces",
+  "status": "PASS"
+}

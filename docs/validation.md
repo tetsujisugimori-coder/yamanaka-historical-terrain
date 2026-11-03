@@ -5,9 +5,9 @@
 ## 実行済み
 
 - QGIS 3.44.10：Processingによる実DEM処理、GeoTIFF・`.qgz` 保存。1m36枚全画素有効、広域5m30枚に部分欠測があり20m投影後31セルだけ実10mで補完。12枚の10m代替も記録。
-- QGIS制作ファイルを別フォルダーへコピーして実QGISで再読込み。8レイヤーすべて有効、CRS6676、個人の絶対パスなし、対象DEMの欠測0。`evidence/qgis-project-check.json`。
+- QGIS制作ファイルを別フォルダーへコピーして実QGISで再読込み。独立レビューで旧検査の終了時クラッシュが判明したため、現在は外側runnerが実プロセス終了と終了コード0まで確認する（旧PASS JSONだけの判定を撤回）。8レイヤーすべて有効、CRS6676、個人の絶対パスなし、対象DEMの欠測0。`evidence/qgis-project-check.json`。
 - Blender 4.5.9 LTS：公式ZIPとSHA256照合。実Blenderで制作・保存・glTF出力し、`.blend`を再読込み。4メッシュ、m単位、外部画像0・外部ライブラリ0。`evidence/blender-project-check.json`。
-- 単体8試験：現況GLB全84,822頂点の水平座標と標高をGIS格子と照合（誤差1mm未満）、全58,081教材頂点の切下げ0〜1.8m、境界1mm未満、現況面の切抜き、座標軸・距離、格子補間、縮尺投影、出典マスク契約。`npm test`。
+- 単体12試験：現況GLB全84,822頂点の水平座標と標高をGIS格子と照合（誤差1mm未満）、全58,081教材頂点の実GLB三角形地形面からの切下げ0〜1.8m（浮動小数点許容1mm）、境界1mm未満、現況面の切抜き、座標軸・距離、格子補間、縮尺投影、出典マスク契約。`npm test`。
 - 実ブラウザ16条件：Chromium／WebKit ×375／390／765／1280px ×通常／reduced motion。`evidence/browser-results.json`。施設選択、プリセット、キーボード・pointer、ブラウザのtrusted touch tap（765px以下）、表示モード、縦倍率、レイヤー、全状態Reset、ダイアログfocus復帰、横はみ出し、pageerrorを検査。
 - 任意の継続アニメーションは実装しない。イベント時だけ再描画、DPR上限1.5、地形GLBは1.45／1.60MB、教材3.68MB。初期ロード時間等は上記JSONの実測。通信はループバックのため、モバイル回線性能とは扱わない。
 
@@ -43,3 +43,5 @@
 CIは`data-and-build`と`browser`。後者は16条件を呼び、失敗時も証拠を保存し、失敗終了コードをそのまま返す。CIはQGIS・Blenderを再インストールして制作データを再生成する保証ではない。ローカル制作ファイル検査と分離する。
 
 初回CI（HEAD ed9d541）の単体・buildは成功したが、browserは試験前の依存インストールで停止した。`ubuntu-latest` が26.04で、固定Playwright 1.56.1が対応していなかったことが原因。対応ビルドが提供されるUbuntu 24.04へrunnerを固定した。試験条件・終了コード・受入値は変更していない。
+
+独立レビュー後の修正と同一反例のRED→GREENは [review-followup.md](review-followup.md) を参照。WebGL不能・モデル404・読込404・context lossは `scripts/fallback-test.mjs` で10条件。非ゼロ終了をPASS出力で隠す負対照と、双線形補間による浮上を検出する負対照を単体に追加。

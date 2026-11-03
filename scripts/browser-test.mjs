@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317';
 await mkdir('evidence/browser',{recursive:true});
 const results=[];let failures=0;
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/style.css','src/coordinates.js','src/scale.js','public/data/regional.glb','public/data/castle.glb','public/data/moat-study.glb'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js','src/style.css','src/coordinates.js','src/scale.js','public/data/regional.glb','public/data/castle.glb','public/data/moat-study.glb'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 async function ready(page,view){await page.waitForFunction(v=>window.__terrainDiagnostics?.().state.ready&&(!v||window.__terrainDiagnostics().state.view===v),view,{timeout:20000});}
 for(const [engineName,engine]of [['chromium',chromium],['webkit',webkit]]){
  let browser;try{browser=await engine.launch({headless:true});}catch(e){results.push({engine:engineName,status:'NOT_TESTED',reason:e.message});failures++;continue;}
@@ -26,6 +26,7 @@ for(const [engineName,engine]of [['chromium',chromium],['webkit',webkit]]){
    await page.locator('#exaggeration').check();await expect(page.locator('#height-mode')).toHaveText('標高倍率 2×（誇張）');const doubled=await page.evaluate(()=>window.__terrainDiagnostics());expect(doubled.modelBounds[4]).toBeCloseTo(610.19*2,2);expect(doubled.modelBounds[0]).toBe(-350);row.checks.push('2x vertical only, disclosed');await page.locator('#exaggeration').uncheck();
    await page.getByRole('button',{name:'障子堀の断面教材',exact:true}).click();await ready(page,'study');await expect(page.locator('#study-note')).toBeVisible();await expect(page.locator('#detail')).toContainText('推定・案内');row.study=await page.evaluate(()=>window.__terrainDiagnostics());expect(row.study.triangles).toBe(203128);row.checks.push('C study, source note, terrain replacement rendering');
    const s=row.study.scale;const measured=await page.locator('#scale').evaluate(el=>el.getBoundingClientRect().width);expect(measured).toBeCloseTo(s.pixels,0);row.checks.push('scale bar CSS width matches perspective projection');
+   await page.getByRole('button',{name:'斜面の急さ',exact:true}).click();await expect(page.locator('#legend')).toContainText('茶色のC教材は標高・傾斜・等高帯の凡例対象外（固定色）');row.checks.push('study fixed colour explicitly excluded from measurement legend');
    if([375,1280].includes(width))await page.screenshot({path:`evidence/browser/${key}-study.png`,fullPage:true});
    if(width<800){await page.touchscreen.tap(vp.x+vp.width*.5,vp.y+vp.height*.5);row.checks.push('trusted browser touch tap');}
    await page.getByRole('button',{name:'初期視点に戻す',exact:true}).click();await ready(page,'regional');const reset=await page.evaluate(()=>window.__terrainDiagnostics().state);expect(reset).toEqual({view:'regional',mode:'terrain',selected:'castle',exaggeration:1,route:false,features:true,ready:true});row.checks.push('Reset restores every display state');
