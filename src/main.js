@@ -6,7 +6,8 @@ import {sampleHeight} from './coordinates.js';
 import {groundScale} from './scale.js';
 import {createReading} from './reading.js';
 
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const $=s=>document.querySelector(s), $=s=>[...document.querySelectorAll(s)];
+const assetPath=path=>`${import.meta.env.BASE_URL}${path}`;
 const state={view:'regional',mode:'terrain',selected:'castle',exaggeration:1,route:false,features:true,ready:false};
 const sourceDialog=$('#sources'); $('#sources-open').onclick=()=>sourceDialog.showModal();$('#sources-close').onclick=()=>sourceDialog.close();
 sourceDialog.addEventListener('close',()=>$('#sources-open').focus());
@@ -24,7 +25,7 @@ async function json(url){const r=await fetch(url);if(!r.ok)throw new Error(`${r.
 setRenderControls(false);
 async function bootstrap(){
  let features,sources;
- try{[features,sources]=await Promise.all(['/data/features.json','/data/sources.json'].map(json));reading=createReading({features,sources});}
+ try{[features,sources]=await Promise.all(['data/features.json','data/sources.json'].map(path=>json(assetPath(path))));reading=createReading({features,sources});}
  catch(e){document.body.dataset.readingState='error';$('#reading-status').textContent='施設解説・出典データを読み込めませんでした。';$('#source-list').textContent='出典データを読み込めませんでした。接続と配布ファイルを確認してください。';showError('解説・出典データの読込みに失敗したため、3Dの初期化を開始できませんでした。',e);return;}
  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});}
  catch(e){showError('この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。',e,'unavailable');return;}
@@ -33,7 +34,7 @@ async function bootstrap(){
 }
 bootstrap();
 async function initialize(features){
- const [regional,castle,studyMeta]=await Promise.all(['/data/regional.json','/data/castle.json','/data/study.json'].map(json));
+ const [regional,castle,studyMeta]=await Promise.all(['data/regional.json','data/castle.json','data/study.json'].map(path=>json(assetPath(path))));
  const scene=new THREE.Scene();scene.background=new THREE.Color('#e2e9de');
  const camera=new THREE.PerspectiveCamera(38,1,1,30000);
  renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.5));renderer.setClearColor('#e2e9de');renderer.outputColorSpace=THREE.SRGBColorSpace;viewport.append(renderer.domElement);
@@ -56,7 +57,7 @@ async function initialize(features){
   if(state.view==='study'){const note=document.createElement('span');note.className='legend-exclusion';note.textContent='茶色のC教材は標高・傾斜・等高帯の凡例対象外（固定色）';$('#legend').append(note);}
 
  }
- async function getModel(view){const file=view==='study'?'moat-study':view;if(models.has(file))return models.get(file);const gltf=await loader.loadAsync(`/data/${file}.glb`);gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});models.set(file,group);return group;}
+ async function getModel(view){const file=view==='study'?'moat-study':view;if(models.has(file))return models.get(file);const gltf=await loader.loadAsync(assetPath(`data/${file}.glb`));gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});models.set(file,group);return group;}
  function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;renderer.render(scene,camera);updateLabels();updateScale();}
  function resize(){const r=viewport.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();render();}
  const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
