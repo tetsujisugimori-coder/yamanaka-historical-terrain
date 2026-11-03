@@ -1,5 +1,5 @@
 {
-  "utc": "2026-11-03T16:16:28.624Z",
+  "utc": "2026-11-03T16:18:55.156Z",
   "status": "PASS",
   "scope": "candidate tracked and untracked non-ignored files; excludes this self-referential audit JSON",
   "checks": [
@@ -11,9 +11,9 @@
   "problems": [],
   "files": [
     {
-      "path": "scripts/record-checks.mjs",
-      "bytes": 981,
-      "sha256": "ecd72681de695a6f11075278b9c039f22cb71103b1d74af02e509e0e8a572c67"
+      "path": "evidence/ci-initial-failure.json",
+      "bytes": 529,
+      "sha256": "337faa45765a5e95d46eb13f920e73c491424f2130da649a46bfc1cfeb321bec"
     },
     {
       "path": ".gitattributes",
@@ -22,8 +22,8 @@
     },
     {
       "path": ".github/workflows/validate.yml",
-      "bytes": 1393,
-      "sha256": "4aaec5559c5714b93582326f0ac30422a917001c452078511f7a8f3b3959fd38"
+      "bytes": 1470,
+      "sha256": "372ffdd0c14fdec7e83aff65f2b767c952919ca2284cfb31b5f58f11f688faed"
     },
     {
       "path": ".gitignore",
@@ -67,8 +67,8 @@
     },
     {
       "path": "docs/validation.md",
-      "bytes": 4868,
-      "sha256": "54ac8ec5b17bed75b6dda641e37e585f62825ce739258042b88f29b565f1b203"
+      "bytes": 5240,
+      "sha256": "6dac22599a6dc6434fbd19c86f40c3962f2d98f6bf6ec9364e74a19229f5db4e"
     },
     {
       "path": "evidence/blender-build.json",
@@ -429,6 +429,11 @@
       "path": "scripts/probe-qgis.py",
       "bytes": 572,
       "sha256": "a4120cc4e791928d235970ee22eacc8d3c1ebb0662464205c8fdae6a98ce2e2b"
+    },
+    {
+      "path": "scripts/record-checks.mjs",
+      "bytes": 981,
+      "sha256": "ecd72681de695a6f11075278b9c039f22cb71103b1d74af02e509e0e8a572c67"
     },
     {
       "path": "scripts/setup-tools.ps1",

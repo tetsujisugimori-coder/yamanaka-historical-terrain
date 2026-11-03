@@ -41,3 +41,5 @@
 実機iPhone Safari、VoiceOver、OSの実文字拡大、実測による位置・標高・距離、現地の見通し、戦国期の地表、個別DEM測量年・標高基準改定、実機での熱・電池・メモリ圧迫、発掘測量図の地理参照。WebKitのtrustedな連続タッチドラッグ・pinchは公開Playwright APIだけでは今回実行していない。操作イベントの取消試験はtrusted／syntheticを別記する。
 
 CIは`data-and-build`と`browser`。後者は16条件を呼び、失敗時も証拠を保存し、失敗終了コードをそのまま返す。CIはQGIS・Blenderを再インストールして制作データを再生成する保証ではない。ローカル制作ファイル検査と分離する。
+
+初回CI（HEAD ed9d541）の単体・buildは成功したが、browserは試験前の依存インストールで停止した。`ubuntu-latest` が26.04で、固定Playwright 1.56.1が対応していなかったことが原因。対応ビルドが提供されるUbuntu 24.04へrunnerを固定した。試験条件・終了コード・受入値は変更していない。
