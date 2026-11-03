@@ -1,0 +1,3324 @@
+{
+  "scope": "implementation self-verification; browser engines, not physical iPhone",
+  "timestamp": "2026-11-03T16:13:28.099Z",
+  "sourceHashes": {
+    "index.html": "d69efee8e81be96ee1bd884701510b103ddc7c672b06f71234a16938721be4a3",
+    "src/main.js": "6254c6c0346846324750fdda9ce278474e8a53a90d70b9d875d87c77645fec6f",
+    "src/style.css": "061ccb74a1e846d345d0fe5fd371260145e042a92f22697e4c2fccdc9f582d95",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/scale.js": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad",
+    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/moat-study.glb": "01d484479a773358d8dbc2df4456cdb2edac9582d355b2b2a0e94c4bec719954"
+  },
+  "results": [
+    {
+      "key": "chromium-375-no-preference",
+      "engine": "chromium",
+      "width": 375,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 482.9373,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.79619038697189,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.0538113356568567e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.039705908849106145,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1340375284767574,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07697840742348767,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874225,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.773589015983823,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1337935717589244,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -18.487231931151975,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.492086546114116,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 1948.7199
+    },
+    {
+      "key": "chromium-375-reduce",
+      "engine": "chromium",
+      "width": 375,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 311.5526,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.79619038697189,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.0538113356568567e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.039705908849106145,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1340375284767574,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07697840742348767,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874225,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.773589015983823,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1337935717589244,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -18.487231931151975,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.492086546114116,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 1845.5904
+    },
+    {
+      "key": "chromium-390-no-preference",
+      "engine": "chromium",
+      "width": 390,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 485.7408000000005,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.7961903869719,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.9743659114982108e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.03817000693087425,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.12885269571332983,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07400073263776538,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874224,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.550255343445768,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.12861817571667378,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -17.77210977908736,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.086232195476466,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 1796.1400000000003
+    },
+    {
+      "key": "chromium-390-reduce",
+      "engine": "chromium",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 488.09519999999975,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.7961903869719,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.9743659114982108e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.03817000693087425,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.12885269571332983,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07400073263776538,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874224,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.550255343445768,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.12861817571667378,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -17.77210977908736,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.086232195476466,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 1946.9411999999993
+    },
+    {
+      "key": "chromium-765-no-preference",
+      "engine": "chromium",
+      "width": 765,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 421.6786000000011,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 127.21376402808876,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          431.8125,
+          511.265625
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.1190623015299448e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.04096739224745556,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1382959908021456,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07942406314100674,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 84.47551449888583,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          431.8125,
+          533.8125
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              6.2197251016615756,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1441320527675524,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -19.91577512429359,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              11.30282981331183,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 1990.8562000000002
+    },
+    {
+      "key": "chromium-765-reduce",
+      "engine": "chromium",
+      "width": 765,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 473.66389999999956,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 127.21376402808876,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          431.8125,
+          511.265625
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.1190623015299448e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.04096739224745556,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1382959908021456,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07942406314100674,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 84.47551449888583,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          431.8125,
+          533.8125
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              6.2197251016615756,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1441320527675524,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -19.91577512429359,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              11.30282981331183,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 2009.6998999999996
+    },
+    {
+      "key": "chromium-1280-no-preference",
+      "engine": "chromium",
+      "width": 1280,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 583.4040999999997,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -5428.012384256003,
+          5414.556712960001,
+          5724.085787033604
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 1000,
+          "pixels": 82.3147054263675,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            725.623851173435,
+            480,
+            688.0915830092915
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          865.625,
+          527.453125
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.3380344654346796e-16,
+              0.031795353858039443,
+              0.9998502456148444
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.026507044755827793,
+              0.01451785572108254,
+              0.999849312922345
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.08973517541150615,
+              -0.015557037657514549,
+              0.9998462997314499
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.051277347485100114,
+              0.03623375260931028,
+              0.99985163297339
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 87.36109362955553,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          552.046875
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.20866092958927,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.07435551875004848,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -10.274243391679047,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              5.830956806448227,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 2246.9665999999997
+    },
+    {
+      "key": "chromium-1280-reduce",
+      "engine": "chromium",
+      "width": 1280,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 411.5511999999999,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -5428.012384256003,
+          5414.556712960001,
+          5724.085787033604
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 1000,
+          "pixels": 82.3147054263675,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            725.623851173435,
+            480,
+            688.0915830092915
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          865.625,
+          527.453125
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.3380344654346796e-16,
+              0.031795353858039443,
+              0.9998502456148444
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.026507044755827793,
+              0.01451785572108254,
+              0.999849312922345
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.08973517541150615,
+              -0.015557037657514549,
+              0.9998462997314499
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.051277347485100114,
+              0.03623375260931028,
+              0.99985163297339
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 87.36109362955553,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          552.046875
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.20866092958927,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.07435551875004848,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -10.274243391679047,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              5.830956806448227,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 2251.8806000000004
+    },
+    {
+      "key": "webkit-375-no-preference",
+      "engine": "webkit",
+      "width": 375,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 472.08050000000003,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.79619038697189,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.0538113356568567e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.039705908849106145,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1340375284767574,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07697840742348767,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874225,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.773589015983823,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1337935717589244,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -18.487231931151975,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.492086546114116,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3318.597600000001
+    },
+    {
+      "key": "webkit-375-reduce",
+      "engine": "webkit",
+      "width": 375,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 532.3200000000033,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.79619038697189,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.0538113356568567e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.039705908849106145,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1340375284767574,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07697840742348767,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874225,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          335.5,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.773589015983823,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1337935717589244,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -18.487231931151975,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.492086546114116,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3211.5219000000034
+    },
+    {
+      "key": "webkit-390-no-preference",
+      "engine": "webkit",
+      "width": 390,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 537.6695,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.7961903869719,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.9743659114982108e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.03817000693087425,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.12885269571332983,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07400073263776538,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874224,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.550255343445768,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.12861817571667378,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -17.77210977908736,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.086232195476466,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3100.8424000000014
+    },
+    {
+      "key": "webkit-390-reduce",
+      "engine": "webkit",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 522.4578000000001,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 95.7961903869719,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.9743659114982108e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.03817000693087425,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.12885269571332983,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.07400073263776538,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 121.85204760874224,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -137.44310917210183,
+            550.2,
+            -43.45069461582158
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          385
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              5.550255343445768,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.12861817571667378,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -17.77210977908736,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              10.086232195476466,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3220.954600000001
+    },
+    {
+      "key": "webkit-765-no-preference",
+      "engine": "webkit",
+      "width": 765,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 521.5691999999981,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 129.38706234084515,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          431.8125,
+          520
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.1552640015560822e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.04166727221036402,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1406586159926471,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.08078093033014591,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 83.23919096389453,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          431.8125,
+          526
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              6.128697629737013,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.14202263857765146,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -19.624302007499693,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              11.137409636908133,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3534.352500000001
+    },
+    {
+      "key": "webkit-765-reduce",
+      "engine": "webkit",
+      "width": 765,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 538.9248999999982,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -6808.898734810731,
+          6669.907940737026,
+          7180.293211254955
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 129.38706234084515,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.183166018583
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          431.8125,
+          520
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.1552640015560822e-16,
+              0.025311905792322117,
+              0.9998943768757897
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.04166727221036402,
+              0.011547346023996945,
+              0.9998937862949258
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1406586159926471,
+              -0.012338900784226881,
+              0.9998918854095937
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.08078093033014591,
+              0.02888301721664494,
+              0.999895257273979
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 83.23919096389453,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          431.8125,
+          526
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              6.128697629737013,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.14202263857765146,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -19.624302007499693,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              11.137409636908133,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3489.576399999998
+    },
+    {
+      "key": "webkit-1280-no-preference",
+      "engine": "webkit",
+      "width": 1280,
+      "reducedMotion": "no-preference",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 594.6130000000048,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -5428.012384256003,
+          5414.556712960001,
+          5724.085787033604
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 1000,
+          "pixels": 81.15156550017805,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            725.623851173435,
+            480,
+            688.0915830092915
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          865.625,
+          520
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.319127499767934e-16,
+              0.031795353858039443,
+              0.9998502456148444
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.0261324895421379,
+              0.01451785572108254,
+              0.999849312922345
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.0884671812570704,
+              -0.015557037657514549,
+              0.9998462997314499
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.050552777921738665,
+              0.03623375260931028,
+              0.99985163297339
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 86.0876803885145,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          544
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.16189009438114,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.07327168041667907,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -10.12448155797169,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              5.745962247694702,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 4143.027600000001
+    },
+    {
+      "key": "webkit-1280-reduce",
+      "engine": "webkit",
+      "width": 1280,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 513.7887000000046,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -5428.012384256003,
+          5414.556712960001,
+          5724.085787033604
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 1000,
+          "pixels": 81.15156550017805,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            725.623851173435,
+            480,
+            688.0915830092915
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          865.625,
+          520
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              1.319127499767934e-16,
+              0.031795353858039443,
+              0.9998502456148444
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.0261324895421379,
+              0.01451785572108254,
+              0.999849312922345
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.0884671812570704,
+              -0.015557037657514549,
+              0.9998462997314499
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.050552777921738665,
+              0.03623375260931028,
+              0.99985163297339
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 86.0876803885145,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          544
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.16189009438114,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.07327168041667907,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -10.12448155797169,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              5.745962247694702,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 3659.8287000000055
+    }
+  ]
+}

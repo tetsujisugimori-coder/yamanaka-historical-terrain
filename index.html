@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#edf0e8"><meta name="description" content="国土地理院の実標高と史料を分けて読む、山中城の歴史地形3Dプロトタイプ。"><title>山中城 — 地形から、城を読む。</title></head>
+<body>
+<a class="skip" href="#guide">解説へ移動</a>
+<header><a href="./" class="brand"><span class="brand-mark" aria-hidden="true">山</span><span>歴史地形図録<small>LANDSCAPE / ARCHIVE 01</small></span></a><span class="edition">山中城跡 · 静岡県三島市<br><b>研究プロトタイプ / 未公開</b></span><button id="sources-open" class="quiet">資料と精度 ↗</button></header>
+<main>
+<div class="intro"><div><p class="eyebrow">YAMANAKA CASTLE · HAKONE WESTERN SLOPES</p><h1>地形から、<br class="mobile-break">城を読む。</h1></div><p>谷が守り、尾根がつなぎ、道を押さえる。<br>山中城が「ここ」にある理由を、実際の土地から探る。</p></div>
+<div class="workspace">
+<section class="terrain-panel" aria-label="山中城の3D地形">
+<div class="map-top"><span class="live-dot"></span><span id="extent">広域 · 4 × 4 km</span><span id="height-mode">標高倍率 1×</span></div>
+<div id="viewport" tabindex="0" role="application" aria-label="山中城3D地形。矢印キーで回転、プラス・マイナスでズーム。施設は右の一覧からも選択できます。"><p id="loading" role="status">実標高の地形を読み込んでいます…</p></div>
+<div class="map-tools" aria-label="視点操作"><button id="zoom-in" aria-label="拡大">＋</button><button id="zoom-out" aria-label="縮小">−</button><button id="north" aria-label="北を上にした俯瞰">N ↑</button><button id="reset" aria-label="初期視点に戻す">↺</button></div>
+<div id="point-labels" aria-hidden="true"></div>
+<div class="map-bottom"><span id="scale">中央の東西500 m</span><span id="elevation">施設を選んで地形を読む</span></div>
+<p class="map-help">ドラッグ：回転 · 右ドラッグ：移動 · ホイール：拡大<br>タッチ：1本で回転、2本で移動・拡大。周囲の余白でページをスクロール。</p>
+</section>
+<aside id="guide" class="guide" tabindex="-1">
+<div class="chapter"><span>OBSERVATION</span><span id="chapter-no">01 / 04</span></div>
+<nav id="feature-list" aria-label="観察地点"></nav>
+<article id="detail" aria-live="polite"></article>
+<button id="focus-feature" class="primary">この場所を近くで見る <span>↗</span></button>
+<p class="accuracy-note">地点は概略案内です。遺構の境界・正確な平面形はまだ復元していません。</p>
+</aside>
+</div>
+<section class="controls" aria-label="表示設定">
+<fieldset><legend>01　地形の読み方</legend><div class="segmented"><button data-mode="terrain" aria-pressed="true">陰影と標高</button><button data-mode="slope" aria-pressed="false">斜面の急さ</button><button data-mode="contour" aria-pressed="false">50m等高帯</button></div><div id="legend" class="legend"><span class="ramp"></span><span>低い</span><span>215–803 m</span><span>高い</span></div></fieldset>
+<fieldset><legend>02　観察スケール</legend><div class="segmented"><button data-view="regional" aria-pressed="true">周辺の山地</button><button data-view="castle" aria-pressed="false">城域の地形</button><button data-view="study" aria-pressed="false">障子堀の断面教材</button></div><label class="check"><input id="exaggeration" type="checkbox">標高差を2倍に強調 <span>水平縮尺は変更なし</span></label></fieldset>
+<fieldset><legend>03　読み解く手がかり</legend><label class="check"><input id="features-toggle" type="checkbox" checked>観察地点を表示</label><label class="check"><input id="route-toggle" type="checkbox">交通の方向関係 <span>模式表現 D</span></label></fieldset>
+</section>
+<section id="study-note" class="study-note" hidden><b>C 推定・教材モデル</b>　発掘時の一例（畝上部約35cm、深さ1.8m、斜面約58°）を参考にした断面です。7mの区画間隔・配置・向きは説明用で、現地の測量復元ではありません。現況DEMの一部を教材に置き換えています。<a href="https://www.city.mishima.shizuoka.jp/site/kyoudoshiryoukan/36489.html" target="_blank" rel="noopener">三島市の解説 ↗</a></section>
+<div class="reading-row"><section><span class="section-no">1590</span><h2>土の城と、箱根を越える道。</h2><p>後北条氏にとって、山中城は小田原の西を守る拠点だった。豊臣方の攻撃を受けた1590年3月29日、短時間のうちに落城したと伝えられる。地形の優位だけで戦いの結果を説明できるわけではない。</p><a href="https://www.city.mishima.shizuoka.jp/page/2145.html" target="_blank" rel="noopener">三島市文化財課の歴史解説 ↗</a></section><section><span class="section-no">EVIDENCE</span><h2>見えているものの確かさ。</h2><div class="categories"><span><b>A</b> 現況</span><span><b>B</b> 史料復元</span><span><b>C</b> 推定復元</span><span><b>D</b> 演出</span></div><p>地形は現在の標高データ。戦国時代の地表を完全に戻したものではない。Bに相当する遺構全形の復元は未実装。門・柵・兵の配置はUNKNOWNのまま残している。</p></section></div>
+<p id="app-status" role="status" class="app-status">地形準備中</p>
+</main>
+<footer><span>出典：<a href="https://maps.gsi.go.jp/development/ichiran.html#dem" target="_blank" rel="noopener">国土地理院・地理院タイル</a>を加工</span><span>現況 DEM / 1 unit = 1 m / EPSG:6676</span><span>調査版 0.1 · 2026.11</span></footer>
+<dialog id="sources"><div class="dialog-head"><h2>資料・精度・未確定事項</h2><button id="sources-close" aria-label="資料を閉じる">閉じる ×</button></div><div id="source-list"></div><h3>地形データの限界</h3><p>1m・5m・10mは元DEMの格子区分で、位置や高さの保証精度ではありません。PNG標高は平滑化されています。城域のWebメッシュは5m、広域は20mへ間引いています。広域の5m系欠測31セルは10m系へ置換し、出典マスクを保存しました。</p><p>取得日：2026年11月3日。個別の測量年・標高基準の改定適用状況はUNKNOWN。PNGの0.01m格納単位を測量精度として扱いません。古地形や堀の細部はDEMから確定できません。</p><p>市の図面・写真は転載していません。観察地点は案内用の概略位置。教材の平面配置は推定で、遺構の正確な位置合わせは次期の測量図照合対象です。</p><p>実機iPhone Safari・VoiceOver・現地照合はNOT_TESTED。将来の移動・戦闘データは研究用地形から分離します。</p></dialog>
+<script type="module" src="/src/main.js"></script>
+</body></html>

@@ -1,0 +1,62 @@
+{
+  "utc": "2026-11-03T16:06:52.341179+00:00",
+  "status": "PASS",
+  "relocation": "project copied with gis folder to a new path; all layers valid",
+  "layers": [
+    {
+      "name": "Approximate observation anchors",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "Regional DEM: 5A + explicitly masked 10B gaps",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "Source provenance: 5=DEM5A, 10=DEM10B",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "castle-dem-1m",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "hillshade",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "regional-10b-20m",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "regional-5a-20m",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "slope-degrees",
+      "valid": true,
+      "relocated": true,
+      "crs": "EPSG:6676"
+    }
+  ],
+  "fallbackCells": 31,
+  "noData": {
+    "regional-dem-20m.tif": 0,
+    "castle-dem-1m.tif": 0
+  },
+  "projectContainsAbsoluteUserPath": false,
+  "scope": "internal file/CRS integrity; not field survey or historical registration"
+}

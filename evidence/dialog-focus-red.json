@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-11-03T16:03:53.450Z",
+  "scope": "before explicit dialog focus restoration; same acceptance assertion",
+  "conditions": [
+    {
+      "key": "chromium-375-no-preference",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-375-reduce",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-390-no-preference",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-390-reduce",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-765-no-preference",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-765-reduce",
+      "status": "PASS",
+      "completedChecks": 14
+    },
+    {
+      "key": "chromium-1280-no-preference",
+      "status": "PASS",
+      "completedChecks": 13
+    },
+    {
+      "key": "chromium-1280-reduce",
+      "status": "PASS",
+      "completedChecks": 13
+    },
+    {
+      "key": "webkit-375-no-preference",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-375-reduce",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-390-no-preference",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-390-reduce",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-765-no-preference",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-765-reduce",
+      "status": "FAIL",
+      "completedChecks": 13,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-1280-no-preference",
+      "status": "FAIL",
+      "completedChecks": 12,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    },
+    {
+      "key": "webkit-1280-reduce",
+      "status": "FAIL",
+      "completedChecks": 12,
+      "reason": "Sources dialog closed but focus did not return to opener"
+    }
+  ]
+}

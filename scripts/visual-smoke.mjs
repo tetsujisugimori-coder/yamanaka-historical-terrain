@@ -1,0 +1,15 @@
+import { chromium } from '@playwright/test';
+import { mkdir,writeFile } from 'node:fs/promises';
+await mkdir('evidence/browser',{recursive:true});
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1100}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:4317');
+await page.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
+await page.screenshot({path:'evidence/browser/desktop-initial.png',fullPage:true});
+console.log(JSON.stringify({errors,diagnostics:await page.evaluate(()=>window.__terrainDiagnostics())}));
+await page.getByRole('button',{name:'障子堀の断面教材',exact:true}).click();
+await page.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready&&window.__terrainDiagnostics().state.view==='study');
+await page.screenshot({path:'evidence/browser/desktop-study.png',fullPage:true});
+console.log(JSON.stringify({errors,study:await page.evaluate(()=>window.__terrainDiagnostics())}));
+await browser.close();

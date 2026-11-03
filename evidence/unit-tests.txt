@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: regional: all Blender-exported positions match GIS heights and metric axes
+ok 1 - regional: all Blender-exported positions match GIS heights and metric axes
+  ---
+  duration_ms: 28.9819
+  type: 'test'
+  ...
+# Subtest: castle: all Blender-exported positions match GIS heights and metric axes
+ok 2 - castle: all Blender-exported positions match GIS heights and metric axes
+  ---
+  duration_ms: 26.6143
+  type: 'test'
+  ...
+# Subtest: projected/local conversion preserves cardinal orientation and 1 metre scale
+ok 3 - projected/local conversion preserves cardinal orientation and 1 metre scale
+  ---
+  duration_ms: 0.5781
+  type: 'test'
+  ...
+# Subtest: bilinear terrain sampler interpolates independent known plane
+ok 4 - bilinear terrain sampler interpolates independent known plane
+  ---
+  duration_ms: 0.1328
+  type: 'test'
+  ...
+# Subtest: every observation anchor remains inside castle and regional measured bounds
+ok 5 - every observation anchor remains inside castle and regional measured bounds
+  ---
+  duration_ms: 8.8797
+  type: 'test'
+  ...
+# Subtest: inferred study cuts the terrain, meets the boundary and has no A category
+ok 6 - inferred study cuts the terrain, meets the boundary and has no A category
+  ---
+  duration_ms: 35.6721
+  type: 'test'
+  ...
+# Subtest: perspective scale preserves actual projected length through narrow/wide, rotation and zoom
+ok 7 - perspective scale preserves actual projected length through narrow/wide, rotation and zoom
+  ---
+  duration_ms: 1.896
+  type: 'test'
+  ...
+# Subtest: GIS metadata reports fallback and no missing heights without implying measurement precision
+ok 8 - GIS metadata reports fallback and no missing heights without implying measurement precision
+  ---
+  duration_ms: 0.524
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 246.1941
