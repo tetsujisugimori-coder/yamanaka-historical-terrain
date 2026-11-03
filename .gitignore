@@ -1,0 +1,7 @@
+node_modules/
+dist/
+tools/
+data/raw/
+*.blend1
+*.log
+.cache/
