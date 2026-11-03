@@ -6,7 +6,7 @@ import {sampleHeight} from './coordinates.js';
 import {groundScale} from './scale.js';
 import {createReading} from './reading.js';
 
-const $=s=>document.querySelector(s), $=s=>[...document.querySelectorAll(s)];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const assetPath=path=>`${import.meta.env.BASE_URL}${path}`;
 const state={view:'regional',mode:'terrain',selected:'castle',exaggeration:1,route:false,features:true,ready:false};
 const sourceDialog=$('#sources'); $('#sources-open').onclick=()=>sourceDialog.showModal();$('#sources-close').onclick=()=>sourceDialog.close();
