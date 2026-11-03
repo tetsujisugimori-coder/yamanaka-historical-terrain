@@ -1,0 +1,8 @@
+{
+  "head": "ed9d5416863a4f616ca5a753a24ef8105fb1f337",
+  "run": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/41672526377",
+  "data-and-build": "SUCCESS",
+  "browser": "NOT_TESTED: failed before browser installation and application execution",
+  "reason": "Playwright 1.56.1 does not support chromium on ubuntu26.04-x64; ubuntu-latest moved to 26.04",
+  "resolution": "Pin both jobs to ubuntu-24.04, supported by the locked Playwright build. No test skips, retries or relaxed assertions."
+}

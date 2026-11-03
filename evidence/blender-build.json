@@ -1,0 +1,73 @@
+{
+  "blenderVersion": "4.5.9 LTS",
+  "objects": [
+    {
+      "name": "A_regional_current",
+      "category": "A",
+      "vertices": 40401,
+      "triangles": 80000
+    },
+    {
+      "name": "A_castle_current",
+      "category": "A",
+      "vertices": 44421,
+      "triangles": 88000
+    },
+    {
+      "name": "C_castle_with_study_cutout",
+      "category": "C",
+      "vertices": 44421,
+      "triangles": 87928
+    },
+    {
+      "name": "C_source_informed_moat_study",
+      "category": "C",
+      "vertices": 58081,
+      "triangles": 115200
+    }
+  ],
+  "study": {
+    "center": [
+      -145,
+      50
+    ],
+    "bounds": [
+      -160,
+      35,
+      -130,
+      65
+    ],
+    "minDepth": 0.0,
+    "maxDepth": 1.8,
+    "pitch": 7,
+    "placementAccuracy": "UNKNOWN; illustrative anchor, not surveyed",
+    "samples": [
+      {
+        "x": -160.0,
+        "north": 35.0,
+        "z": 547.239990234375,
+        "referenceHeight": 547.239990234375,
+        "cutDepth": 0.0
+      },
+      {
+        "x": -145.0,
+        "north": 50.0,
+        "z": 550.2000122070312,
+        "referenceHeight": 550.2000122070312,
+        "cutDepth": 0.0
+      },
+      {
+        "x": -130.0,
+        "north": 65.0,
+        "z": 552.0499877929688,
+        "referenceHeight": 552.0499877929688,
+        "cutDepth": 0.0
+      }
+    ]
+  },
+  "files": {
+    "castle.glb": 1595392,
+    "moat-study.glb": 3681212,
+    "regional.glb": 1450940
+  }
+}

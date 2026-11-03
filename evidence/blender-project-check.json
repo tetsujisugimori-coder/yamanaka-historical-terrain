@@ -1,0 +1,34 @@
+{
+  "utc": "2026-11-03T16:59:22.992285+00:00",
+  "status": "PASS",
+  "blenderVersion": "4.5.9 LTS",
+  "objects": [
+    {
+      "name": "A_regional_current",
+      "category": "A",
+      "vertices": 40401,
+      "metresPerUnit": 1
+    },
+    {
+      "name": "A_castle_current",
+      "category": "A",
+      "vertices": 44421,
+      "metresPerUnit": 1
+    },
+    {
+      "name": "C_source_informed_moat_study",
+      "category": "C",
+      "vertices": 58081,
+      "metresPerUnit": 1
+    },
+    {
+      "name": "C_castle_with_study_cutout",
+      "category": "C",
+      "vertices": 44421,
+      "metresPerUnit": 1
+    }
+  ],
+  "externalImages": 0,
+  "externalLibraries": 0,
+  "scope": "editable production file reopened in Blender; not archaeological accuracy"
+}

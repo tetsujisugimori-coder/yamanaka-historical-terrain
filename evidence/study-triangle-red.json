@@ -1,0 +1,10 @@
+{
+  "vertices": 58081,
+  "maxAbove": 0.32159423828125,
+  "maxBelow": 2.1553726196289062,
+  "aboveCount": 1582,
+  "maxBoundaryError": 0.00005493164064773737,
+  "reference": "actual exported A_castle_current triangle faces",
+  "status": "FAIL",
+  "reason": "Study does not cut the displayed triangle surface within 0..1.8m: {\"vertices\":58081,\"maxAbove\":0.32159423828125,\"maxBelow\":2.1553726196289062,\"aboveCount\":1582,\"maxBoundaryError\":0.00005493164064773737,\"reference\":\"actual exported A_castle_current triangle faces\"}"
+}

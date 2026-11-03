@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "observation-anchors",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::6676" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "castle", "name": "山中城の立地", "evidence": "A" }, "geometry": { "type": "Point", "coordinates": [ 44862.12127722666628, -93478.072354051415459 ] } },
+{ "type": "Feature", "properties": { "id": "west", "name": "西ノ丸・障子堀を読む", "evidence": "C" }, "geometry": { "type": "Point", "coordinates": [ 44718.838277226663195, -93428.859354051412083 ] } },
+{ "type": "Feature", "properties": { "id": "south", "name": "岱崎出丸方面", "evidence": "C" }, "geometry": { "type": "Point", "coordinates": [ 45044.881277226668317, -93954.192354051410803 ] } },
+{ "type": "Feature", "properties": { "id": "route", "name": "箱根越えの交通路", "evidence": "D" }, "geometry": { "type": "Point", "coordinates": [ 45097.89227722666692, -93621.120354051410686 ] } }
+]
+}

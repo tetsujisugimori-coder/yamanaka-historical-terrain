@@ -1,0 +1,97 @@
+{
+  "scope": "implementation self-verification; context injection and missing assets are deliberate, errors must remain observable",
+  "sourceHashes": {
+    "index.html": "d69efee8e81be96ee1bd884701510b103ddc7c672b06f71234a16938721be4a3",
+    "src/main.js": "6254c6c0346846324750fdda9ce278474e8a53a90d70b9d875d87c77645fec6f"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl-390",
+      "width": 390,
+      "status": "FAIL",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=c17e4fcb:40047:19)\n    at http://127.0.0.1:4317/src/main.js:14:14"
+      ],
+      "dataRequests": [],
+      "actual": {
+        "facilityButtons": 0,
+        "detailText": "",
+        "sourceLinks": 0,
+        "status": "この環境ではWebGLを開始できません。解説と資料は引き続き読めます。"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 4\nReceived: 0"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl-1280",
+      "width": 1280,
+      "status": "FAIL",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=c17e4fcb:40047:19)\n    at http://127.0.0.1:4317/src/main.js:14:14"
+      ],
+      "dataRequests": [],
+      "actual": {
+        "facilityButtons": 0,
+        "detailText": "",
+        "sourceLinks": 0,
+        "status": "この環境ではWebGLを開始できません。解説と資料は引き続き読めます。"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 4\nReceived: 0"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl-390",
+      "width": 390,
+      "status": "FAIL",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context."
+      ],
+      "dataRequests": [],
+      "actual": {
+        "facilityButtons": 0,
+        "detailText": "",
+        "sourceLinks": 0,
+        "status": "この環境ではWebGLを開始できません。解説と資料は引き続き読めます。"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 4\nReceived: 0"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl-1280",
+      "width": 1280,
+      "status": "FAIL",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context."
+      ],
+      "dataRequests": [],
+      "actual": {
+        "facilityButtons": 0,
+        "detailText": "",
+        "sourceLinks": 0,
+        "status": "この環境ではWebGLを開始できません。解説と資料は引き続き読めます。"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 4\nReceived: 0"
+    }
+  ]
+}

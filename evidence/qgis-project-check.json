@@ -1,0 +1,75 @@
+{
+  "utc": "2026-11-03T17:01:27.517Z",
+  "workerSha256": "fe2ed861e44451a4acfa5488b63adc9bde23f03895f6cf4d1519dba6ece7c303",
+  "status": "PASS",
+  "exitCode": 0,
+  "exitHex": "0x00000000",
+  "signal": null,
+  "processError": null,
+  "details": {
+    "utc": "2026-11-03T17:01:27.247263+00:00",
+    "workerStatus": "CHECKS_AND_TEARDOWN_RETURNED",
+    "relocation": "project copied with gis folder to a new path; all layers valid",
+    "layers": [
+      {
+        "name": "Approximate observation anchors",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "Regional DEM: 5A + explicitly masked 10B gaps",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "Source provenance: 5=DEM5A, 10=DEM10B",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "castle-dem-1m",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "hillshade",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "regional-10b-20m",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "regional-5a-20m",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "name": "slope-degrees",
+        "valid": true,
+        "relocated": true,
+        "crs": "EPSG:6676"
+      }
+    ],
+    "fallbackCells": 31,
+    "noData": {
+      "regional-dem-20m.tif": 0,
+      "castle-dem-1m.tif": 0
+    },
+    "projectContainsAbsoluteUserPath": false,
+    "scope": "internal checks; final PASS belongs to the external runner after actual process termination"
+  },
+  "reason": "Process terminated normally after checks and explicit teardown",
+  "stdout": "{\"utc\": \"2026-11-03T17:01:27.247263+00:00\", \"workerStatus\": \"CHECKS_AND_TEARDOWN_RETURNED\", \"relocation\": \"project copied with gis folder to a new path; all layers valid\", \"layers\": [{\"name\": \"Approximate observation anchors\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"Regional DEM: 5A + explicitly masked 10B gaps\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"Source provenance: 5=DEM5A, 10=DEM10B\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"castle-dem-1m\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"hillshade\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"regional-10b-20m\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"regional-5a-20m\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}, {\"name\": \"slope-degrees\", \"valid\": true, \"relocated\": true, \"crs\": \"EPSG:6676\"}], \"fallbackCells\": 31, \"noData\": {\"regional-dem-20m.tif\": 0, \"castle-dem-1m.tif\": 0}, \"projectContainsAbsoluteUserPath\": false, \"scope\": \"internal checks; final PASS belongs to the external runner after actual process termination\"}\r\n",
+  "stderr": "C:\\PROGRA~1\\QGIS34~1.10\\apps\\Python312\\Lib\\site-packages\\osgeo\\gdal.py:606: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.\r\n  warnings.warn(\r\n",
+  "scope": "native exit code plus internal checks; no forced-success exit, no retry"
+}
