@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317';
 await mkdir('evidence/browser',{recursive:true});
 const results=[];let failures=0;
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js','src/style.css','src/coordinates.js','src/scale.js','public/data/regional.glb','public/data/castle.glb','public/data/moat-study.glb'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','src/style.css','src/coordinates.js','src/scale.js','public/data/regional.glb','public/data/castle.glb','public/data/moat-study.glb'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 async function ready(page,view){await page.waitForFunction(v=>window.__terrainDiagnostics?.().state.ready&&(!v||window.__terrainDiagnostics().state.view===v),view,{timeout:20000});}
 for(const [engineName,engine]of [['chromium',chromium],['webkit',webkit]]){
  let browser;try{browser=await engine.launch({headless:true});}catch(e){results.push({engine:engineName,status:'NOT_TESTED',reason:e.message});failures++;continue;}

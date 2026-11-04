@@ -1,0 +1,968 @@
+{
+  "scope": "implementation self-verification; actual GLB responses gated explicitly; only setView completion counter instrumented; transformed main module captured once before contexts, not fetched during context shutdown; not physical Safari",
+  "baseline": false,
+  "baselineCommit": null,
+  "mutation": "height",
+  "testUrl": "http://127.0.0.1:4317",
+  "sourceHashes": {
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+  },
+  "sourceHashesAtExecution": {
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+  },
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged.",
+  "servedModuleSha256": "a6d907b4e9de83678c8a73c41784ca8e9fd537fe16fbc9c3fd3484cb298a9497",
+  "utc": "2026-11-04T09:26:11.919Z",
+  "results": [
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-bailey",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 575.1700439453125,
+      "expectedTarget": [
+        -10,
+        575.1700439453125,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        574.7449999999999,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.42504394531260914,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    0.42504394531260914"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-moat",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 575.1500244140625,
+      "expectedTarget": [
+        -52,
+        575.1500244140625,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        569.524,
+        0
+      ],
+      "errorMetres": 5.626024414062499,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    5.626024414062499"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-rampart",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 577.6500244140625,
+      "expectedTarget": [
+        -36,
+        577.6500244140625,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        576.1959999999999,
+        0
+      ],
+      "errorMetres": 1.4540244140625873,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    1.4540244140625873"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-passage",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 574.3865356445312,
+      "expectedTarget": [
+        5,
+        574.3865356445312,
+        25
+      ],
+      "actualTarget": [
+        5,
+        572.47,
+        25
+      ],
+      "errorMetres": 1.9165356445312227,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    1.9165356445312227"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-transition",
+      "variant": "restored",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        566.0700073242188,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        566.07,
+        -40
+      ],
+      "errorMetres": 0.000007324218699977791,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-bailey",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 575.1700439453125,
+      "expectedTarget": [
+        -10,
+        1150.340087890625,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        1149.4899999999998,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.8500878906252183,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    0.8500878906252183"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-moat",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 575.1500244140625,
+      "expectedTarget": [
+        -52,
+        1150.300048828125,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        1139.048,
+        0
+      ],
+      "errorMetres": 11.252048828124998,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    11.252048828124998"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-rampart",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 577.6500244140625,
+      "expectedTarget": [
+        -36,
+        1155.300048828125,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        1152.3919999999998,
+        0
+      ],
+      "errorMetres": 2.9080488281251746,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    2.9080488281251746"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-passage",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 574.3865356445312,
+      "expectedTarget": [
+        5,
+        1148.7730712890625,
+        25
+      ],
+      "actualTarget": [
+        5,
+        1144.94,
+        25
+      ],
+      "errorMetres": 3.8330712890624454,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    3.8330712890624454"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-transition",
+      "variant": "restored",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        1132.1400146484375,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        1132.14,
+        -40.00000000000001
+      ],
+      "errorMetres": 0.000014648437399955583,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-bailey",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 574.7449951171875,
+      "expectedTarget": [
+        -10,
+        574.7449951171875,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        574.7449999999999,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.000004882812390860636,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-moat",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 569.5239990234375,
+      "expectedTarget": [
+        -52,
+        569.5239990234375,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        569.524,
+        0
+      ],
+      "errorMetres": 9.765625463842298e-7,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-rampart",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 576.1959960937501,
+      "expectedTarget": [
+        -36,
+        576.1959960937501,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        576.1959999999999,
+        0
+      ],
+      "errorMetres": 0.000003906249844476406,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-passage",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 572.469970703125,
+      "expectedTarget": [
+        5,
+        572.469970703125,
+        25
+      ],
+      "actualTarget": [
+        5,
+        572.47,
+        25
+      ],
+      "errorMetres": 0.00002929687502728484,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-transition",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        566.0700073242188,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        566.07,
+        -40
+      ],
+      "errorMetres": 0.000007324218699977791,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-bailey",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 574.7449951171875,
+      "expectedTarget": [
+        -10,
+        1149.489990234375,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        1149.4899999999998,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.000009765624781721272,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-moat",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 569.5239990234375,
+      "expectedTarget": [
+        -52,
+        1139.047998046875,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        1139.048,
+        0
+      ],
+      "errorMetres": 0.0000019531250927684596,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-rampart",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 576.1959960937501,
+      "expectedTarget": [
+        -36,
+        1152.3919921875001,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        1152.3919999999998,
+        0
+      ],
+      "errorMetres": 0.000007812499688952812,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-passage",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 572.469970703125,
+      "expectedTarget": [
+        5,
+        1144.93994140625,
+        25
+      ],
+      "actualTarget": [
+        5,
+        1144.94,
+        25
+      ],
+      "errorMetres": 0.00005859375005456968,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "id": "nm-transition",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        1132.1400146484375,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        1132.14,
+        -40.00000000000001
+      ],
+      "errorMetres": 0.000014648437399955583,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-bailey",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 575.1700439453125,
+      "expectedTarget": [
+        -10,
+        575.1700439453125,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        574.7449999999999,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.42504394531260914,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    0.42504394531260914"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-moat",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 575.1500244140625,
+      "expectedTarget": [
+        -52,
+        575.1500244140625,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        569.524,
+        0
+      ],
+      "errorMetres": 5.626024414062499,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    5.626024414062499"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-rampart",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 577.6500244140625,
+      "expectedTarget": [
+        -36,
+        577.6500244140625,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        576.1959999999999,
+        0
+      ],
+      "errorMetres": 1.4540244140625873,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    1.4540244140625873"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-passage",
+      "variant": "restored",
+      "scale": 1,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 574.3865356445312,
+      "expectedTarget": [
+        5,
+        574.3865356445312,
+        25
+      ],
+      "actualTarget": [
+        5,
+        572.47,
+        25
+      ],
+      "errorMetres": 1.9165356445312227,
+      "toleranceMetres": 0.001,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.001\nReceived:    1.9165356445312227"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-transition",
+      "variant": "restored",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        566.0700073242188,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        566.07,
+        -40
+      ],
+      "errorMetres": 0.000007324218699977791,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-bailey",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 575.1700439453125,
+      "expectedTarget": [
+        -10,
+        1150.340087890625,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        1149.4899999999998,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.8500878906252183,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    0.8500878906252183"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-moat",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 575.1500244140625,
+      "expectedTarget": [
+        -52,
+        1150.300048828125,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        1139.048,
+        0
+      ],
+      "errorMetres": 11.252048828124998,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    11.252048828124998"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-rampart",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 577.6500244140625,
+      "expectedTarget": [
+        -36,
+        1155.300048828125,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        1152.3919999999998,
+        0
+      ],
+      "errorMetres": 2.9080488281251746,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    2.9080488281251746"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-passage",
+      "variant": "restored",
+      "scale": 2,
+      "status": "FAIL",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 574.3865356445312,
+      "expectedTarget": [
+        5,
+        1148.7730712890625,
+        25
+      ],
+      "actualTarget": [
+        5,
+        1144.94,
+        25
+      ],
+      "errorMetres": 3.8330712890624454,
+      "toleranceMetres": 0.002,
+      "reason": "expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.002\nReceived:    3.8330712890624454"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-transition",
+      "variant": "restored",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        1132.1400146484375,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        1132.14,
+        -40.00000000000001
+      ],
+      "errorMetres": 0.000014648437399955583,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-bailey",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 574.7449951171875,
+      "expectedTarget": [
+        -10,
+        574.7449951171875,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        574.7449999999999,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.000004882812390860636,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-moat",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 569.5239990234375,
+      "expectedTarget": [
+        -52,
+        569.5239990234375,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        569.524,
+        0
+      ],
+      "errorMetres": 9.765625463842298e-7,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-rampart",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 576.1959960937501,
+      "expectedTarget": [
+        -36,
+        576.1959960937501,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        576.1959999999999,
+        0
+      ],
+      "errorMetres": 0.000003906249844476406,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-passage",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 572.469970703125,
+      "expectedTarget": [
+        5,
+        572.469970703125,
+        25
+      ],
+      "actualTarget": [
+        5,
+        572.47,
+        25
+      ],
+      "errorMetres": 0.00002929687502728484,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-transition",
+      "variant": "current",
+      "scale": 1,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        566.0700073242188,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        566.07,
+        -40
+      ],
+      "errorMetres": 0.000007324218699977791,
+      "toleranceMetres": 0.001
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-bailey",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1700244140625,
+      "glbHeight": 574.7449951171875,
+      "expectedTarget": [
+        -10,
+        1149.489990234375,
+        -2.5
+      ],
+      "actualTarget": [
+        -9.999999999999998,
+        1149.4899999999998,
+        -2.4999999999999996
+      ],
+      "errorMetres": 0.000009765624781721272,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-moat",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 575.1500244140625,
+      "glbHeight": 569.5239990234375,
+      "expectedTarget": [
+        -52,
+        1139.047998046875,
+        0
+      ],
+      "actualTarget": [
+        -52,
+        1139.048,
+        0
+      ],
+      "errorMetres": 0.0000019531250927684596,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-rampart",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 577.6500244140625,
+      "glbHeight": 576.1959960937501,
+      "expectedTarget": [
+        -36,
+        1152.3919921875001,
+        0
+      ],
+      "actualTarget": [
+        -36,
+        1152.3919999999998,
+        0
+      ],
+      "errorMetres": 0.000007812499688952812,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-passage",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 574.3865244140625,
+      "glbHeight": 572.469970703125,
+      "expectedTarget": [
+        5,
+        1144.93994140625,
+        25
+      ],
+      "actualTarget": [
+        5,
+        1144.94,
+        25
+      ],
+      "errorMetres": 0.00005859375005456968,
+      "toleranceMetres": 0.002
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "id": "nm-transition",
+      "variant": "current",
+      "scale": 2,
+      "status": "PASS",
+      "mutationApplied": true,
+      "metadataHeight": 566.0700073242188,
+      "glbHeight": 566.0700073242188,
+      "expectedTarget": [
+        -70,
+        1132.1400146484375,
+        -40
+      ],
+      "actualTarget": [
+        -70,
+        1132.14,
+        -40.00000000000001
+      ],
+      "errorMetres": 0.000014648437399955583,
+      "toleranceMetres": 0.002
+    }
+  ]
+}

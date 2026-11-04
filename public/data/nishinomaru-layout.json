@@ -1,0 +1,82 @@
+{
+  "utc": "2026-11-03T22:56:45.720355+00:00",
+  "qgis": "3.44.10-Solothurn",
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142
+  ],
+  "bounds": [
+    -80,
+    -50,
+    30,
+    55
+  ],
+  "samples": [
+    {
+      "id": "nm-bailey",
+      "localBounds": [
+        -30,
+        -20,
+        10,
+        25
+      ],
+      "measured1mCornerMin": 567.17724609375,
+      "measured1mCornerMax": 575.0424194335938,
+      "hypothesisCenterHeight": 575.1700244140625
+    },
+    {
+      "id": "nm-moat",
+      "localBounds": [
+        -62,
+        -26,
+        -42,
+        32
+      ],
+      "measured1mCornerMin": 569.4344482421875,
+      "measured1mCornerMax": 573.3543090820312,
+      "hypothesisCenterHeight": 575.1740244140625
+    },
+    {
+      "id": "nm-rampart",
+      "localBounds": [
+        -40,
+        -26,
+        16,
+        32
+      ],
+      "measured1mCornerMin": 567.6778564453125,
+      "measured1mCornerMax": 572.6629638671875,
+      "hypothesisCenterHeight": 575.1740244140625
+    },
+    {
+      "id": "nm-passage",
+      "localBounds": [
+        -4,
+        -40,
+        20,
+        -10
+      ],
+      "measured1mCornerMin": 566.00634765625,
+      "measured1mCornerMax": 574.98876953125,
+      "hypothesisCenterHeight": 574.3865244140625
+    },
+    {
+      "id": "nm-transition",
+      "localBounds": [
+        -80,
+        -50,
+        30,
+        55
+      ],
+      "measured1mCornerMin": 553.7844848632812,
+      "measured1mCornerMax": 572.1571044921875,
+      "hypothesisCenterHeight": 575.1700244140625
+    }
+  ],
+  "rasterResolution": 0.5,
+  "controlPoints": 0,
+  "georeferenceResidual": "UNKNOWN; no measured common control points. C placement revised to DEM shoulder; old flank anchor is not survey evidence.",
+  "scope": "C hypothesis envelopes and derived surface, not survey polygons; raster resolution is computational",
+  "profileSamples": 222
+}

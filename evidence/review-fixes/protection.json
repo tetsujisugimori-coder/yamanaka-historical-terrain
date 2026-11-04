@@ -1,0 +1,253 @@
+{
+  "base": "77b015565b79493a05f45c6d959d459546e21526",
+  "utc": "2026-11-04T09:23:25.889Z",
+  "status": "PASS",
+  "nativeRegeneration": "NOT_RERUN; QGIS/Blender projects, DEM, source metadata and GLBs preserved byte for byte. New direct observation-point validation is against GLB triangles, not a new native project re-read.",
+  "files": [
+    {
+      "file": "ATTRIBUTION.md",
+      "bytes": 2927,
+      "sha256": "934b0715e7ef2996b076b1641cb2b56fdd8efb02dade7343e56628cf72009a91",
+      "baselineSha256": "934b0715e7ef2996b076b1641cb2b56fdd8efb02dade7343e56628cf72009a91",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/castle-dem-1m.tif",
+      "bytes": 3625311,
+      "sha256": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+      "baselineSha256": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/castle-dem-1m.tif.aux.xml",
+      "bytes": 432,
+      "sha256": "2b46f3c09a5920d69020756fd46cf0a437811d6c262df1aff249c142b9492143",
+      "baselineSha256": "2b46f3c09a5920d69020756fd46cf0a437811d6c262df1aff249c142b9492143",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/hillshade.tif",
+      "bytes": 38133,
+      "sha256": "6832bfd2d94bf2b69d0b57a60660da076483ebc20409094451e5bea28e00c86c",
+      "baselineSha256": "6832bfd2d94bf2b69d0b57a60660da076483ebc20409094451e5bea28e00c86c",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/hillshade.tif.aux.xml",
+      "bytes": 351,
+      "sha256": "a50c8d912d310c544907757e60722d1c4702fc09fc47de38c6d686c724070cef",
+      "baselineSha256": "a50c8d912d310c544907757e60722d1c4702fc09fc47de38c6d686c724070cef",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/observation-anchors.geojson",
+      "bytes": 986,
+      "sha256": "0b40575e715a612dd4e41e39dbe0217f1b2b275110f2fc67c2d4d68cdf398847",
+      "baselineSha256": "0b40575e715a612dd4e41e39dbe0217f1b2b275110f2fc67c2d4d68cdf398847",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-10b-20m.tif",
+      "bytes": 139460,
+      "sha256": "b2ebf0b699037651322b05121dcc55a10429c2aa411b4f4180c747fc3f495aea",
+      "baselineSha256": "b2ebf0b699037651322b05121dcc55a10429c2aa411b4f4180c747fc3f495aea",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-10b-20m.tif.aux.xml",
+      "bytes": 383,
+      "sha256": "c3c039dcb2922b10771a2f3253827eb9199c351713c354ce3614015e87d2f994",
+      "baselineSha256": "c3c039dcb2922b10771a2f3253827eb9199c351713c354ce3614015e87d2f994",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-5a-20m.tif",
+      "bytes": 139520,
+      "sha256": "b4f54b0d833e00225d5b7ee8183bc9f72cff188670d61d330fdab6b98047b9bd",
+      "baselineSha256": "b4f54b0d833e00225d5b7ee8183bc9f72cff188670d61d330fdab6b98047b9bd",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-5a-20m.tif.aux.xml",
+      "bytes": 385,
+      "sha256": "4a7bf79e19bdac024de5b7f0327e2da41ca0486980e811d29d36ffd9f5a556bf",
+      "baselineSha256": "4a7bf79e19bdac024de5b7f0327e2da41ca0486980e811d29d36ffd9f5a556bf",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-dem-20m.tif",
+      "bytes": 167474,
+      "sha256": "90147c901ebec5c497a69fecdd3e31c5fd35c5a521f9a57e10a32f436342940c",
+      "baselineSha256": "90147c901ebec5c497a69fecdd3e31c5fd35c5a521f9a57e10a32f436342940c",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-dem-20m.tif.aux.xml",
+      "bytes": 384,
+      "sha256": "5ffc2ca06125883252e77a0bbdba9a864215ae0e6e2af01bb49b94557ca728ab",
+      "baselineSha256": "5ffc2ca06125883252e77a0bbdba9a864215ae0e6e2af01bb49b94557ca728ab",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-source-mask.tif",
+      "bytes": 667,
+      "sha256": "f202e454c8c672ffa624825c9ee5cd654d5e8df22b8fd51550bd08e25378c253",
+      "baselineSha256": "f202e454c8c672ffa624825c9ee5cd654d5e8df22b8fd51550bd08e25378c253",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/regional-source-mask.tif.aux.xml",
+      "bytes": 349,
+      "sha256": "2bfd3e483feea9911caa16ac2f5d77a5488b2b9520cff005b1d4b0d5e9bd3c82",
+      "baselineSha256": "2bfd3e483feea9911caa16ac2f5d77a5488b2b9520cff005b1d4b0d5e9bd3c82",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/slope-degrees.tif",
+      "bytes": 141781,
+      "sha256": "4d6528207c0a43829273d78eb2e9481eb43be3c0983b35e65e5babe923cc22fa",
+      "baselineSha256": "4d6528207c0a43829273d78eb2e9481eb43be3c0983b35e65e5babe923cc22fa",
+      "unchanged": true
+    },
+    {
+      "file": "production/gis/slope-degrees.tif.aux.xml",
+      "bytes": 385,
+      "sha256": "2df91eff02355b98e93ace63f186ed5398620f80c52438abeedd722f61393181",
+      "baselineSha256": "2df91eff02355b98e93ace63f186ed5398620f80c52438abeedd722f61393181",
+      "unchanged": true
+    },
+    {
+      "file": "production/phase2a/facilities.gpkg",
+      "bytes": 98304,
+      "sha256": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e",
+      "baselineSha256": "643865b1ab85e5766ea4c526bd21dc556e745943296dace1640146a6b90d215e",
+      "unchanged": true
+    },
+    {
+      "file": "production/phase2a/inferred-surface-50cm.tif",
+      "bytes": 79974,
+      "sha256": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2",
+      "baselineSha256": "4bfdcb2376c3c118215194c64094f61a8679c82efb59ba474deabe486d631fe2",
+      "unchanged": true
+    },
+    {
+      "file": "production/phase2a/inferred-surface-50cm.tif.aux.xml",
+      "bytes": 384,
+      "sha256": "69990f26d501277d01594cb69385e5f2ddb718ad55a7e72ff08ad31789f8c5be",
+      "baselineSha256": "69990f26d501277d01594cb69385e5f2ddb718ad55a7e72ff08ad31789f8c5be",
+      "unchanged": true
+    },
+    {
+      "file": "production/phase2a/profiles.json",
+      "bytes": 31733,
+      "sha256": "f61231f932e4c6ee48b2acab86a2ef4f282a5ae2b16262441a8d61cbd5f6f0b5",
+      "baselineSha256": "f61231f932e4c6ee48b2acab86a2ef4f282a5ae2b16262441a8d61cbd5f6f0b5",
+      "unchanged": true
+    },
+    {
+      "file": "production/yamanaka-phase2a.blend",
+      "bytes": 42163408,
+      "sha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+      "baselineSha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+      "unchanged": true
+    },
+    {
+      "file": "production/yamanaka-phase2a.qgz",
+      "bytes": 15112,
+      "sha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+      "baselineSha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+      "unchanged": true
+    },
+    {
+      "file": "production/yamanaka.blend",
+      "bytes": 19087826,
+      "sha256": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+      "baselineSha256": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+      "unchanged": true
+    },
+    {
+      "file": "production/yamanaka.qgz",
+      "bytes": 11527,
+      "sha256": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+      "baselineSha256": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/castle.glb",
+      "bytes": 1595392,
+      "sha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "baselineSha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/castle.json",
+      "bytes": 307204,
+      "sha256": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+      "baselineSha256": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/features.json",
+      "bytes": 2366,
+      "sha256": "d55ba4a43f8ebc4959237197e39618f243468a7668f8e12535c4aa1d1289422c",
+      "baselineSha256": "d55ba4a43f8ebc4959237197e39618f243468a7668f8e12535c4aa1d1289422c",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/moat-study.glb",
+      "bytes": 3681212,
+      "sha256": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+      "baselineSha256": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/nishinomaru-layout.json",
+      "bytes": 1900,
+      "sha256": "03a1a0c72241668bdf55b66878bb09dd63e56e8b8792a7d69cd2c31ecdcb0b16",
+      "baselineSha256": "03a1a0c72241668bdf55b66878bb09dd63e56e8b8792a7d69cd2c31ecdcb0b16",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/nishinomaru.glb",
+      "bytes": 24933760,
+      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "baselineSha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/nishinomaru.json",
+      "bytes": 8105,
+      "sha256": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+      "baselineSha256": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/regional.glb",
+      "bytes": 1450940,
+      "sha256": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+      "baselineSha256": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/regional.json",
+      "bytes": 279576,
+      "sha256": "17ef568fb7a1fd9d0c81c432f7f5208c71805ff972fd829c1dd19e805e883bc3",
+      "baselineSha256": "17ef568fb7a1fd9d0c81c432f7f5208c71805ff972fd829c1dd19e805e883bc3",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/sources.json",
+      "bytes": 3240,
+      "sha256": "5ea8ddbcb7fe0c43ad0f0ddba335e502ef14255dc892172a52793c8d956a0035",
+      "baselineSha256": "5ea8ddbcb7fe0c43ad0f0ddba335e502ef14255dc892172a52793c8d956a0035",
+      "unchanged": true
+    },
+    {
+      "file": "public/data/study.json",
+      "bytes": 677,
+      "sha256": "e4b4702a42c234b17683cefb9e50654f612f76ee750f738e6906e9174dd981d1",
+      "baselineSha256": "e4b4702a42c234b17683cefb9e50654f612f76ee750f738e6906e9174dd981d1",
+      "unchanged": true
+    }
+  ]
+}

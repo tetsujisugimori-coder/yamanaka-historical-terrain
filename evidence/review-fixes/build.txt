@@ -1,0 +1,13 @@
+
+> yamanaka-historical-terrain@0.1.0 build
+> vite build
+
+vite v7.1.12 building for production...
+transforming...
+✓ 14 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   9.29 kB │ gzip:   4.39 kB
+dist/assets/index-vfd-bRac.css   10.80 kB │ gzip:   3.20 kB
+dist/assets/index-BIw-5Njs.js   615.71 kB │ gzip: 159.57 kB
+✓ built in 974ms

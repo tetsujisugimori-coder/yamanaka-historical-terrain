@@ -1,0 +1,862 @@
+{
+  "utc": "2026-11-04T09:30:27.136Z",
+  "overall": "PARTIAL",
+  "selfVerification": {
+    "P2-01": "PASS",
+    "P3-01": "PASS"
+  },
+  "independentReview": "NOT_VERIFIED; parent arranges a different reviewer",
+  "mergeRecommendation": "NO until independent re-review",
+  "oldCommit": "77b015565b79493a05f45c6d959d459546e21526",
+  "greenCases": 112,
+  "sameConditionComparisons": 88,
+  "redToGreen": {
+    "P2": 26,
+    "P3": 16
+  },
+  "mutationFailures": {
+    "intent": 16,
+    "height": 16,
+    "reset": 4
+  },
+  "maxHeightError": 2.2737367544323206e-13,
+  "protectedFiles": 35,
+  "nativeReexecution": "NOT_RERUN",
+  "comparisons": [
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "castle",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "castle",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "west",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "west",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "south",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "south",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "route",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "route",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "reset",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "reset",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "view:castle",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "view:castle",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "view:study",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "view:study",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 0.42504394531260914,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 5.626024414062499,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 1.4540244140625873,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 1.9165356445312227,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "variant": "restored",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007324218699977791,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 0.8500878906252183,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 11.252048828124998,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 2.9080488281251746,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 3.8330712890624454,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "variant": "restored",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000014648437399955583,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000004882812390860636,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 9.765625463842298e-7,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000003906249844476406,
+      "fixedError": 1.1368683772161603e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.00002929687502728484,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007324218699977791,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-bailey",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000009765624781721272,
+      "fixedError": 2.2737367544323206e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-moat",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.0000019531250927684596,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-rampart",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007812499688952812,
+      "fixedError": 2.2737367544323206e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-passage",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.00005859375005456968,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "chromium",
+      "target": "nm-transition",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000014648437399955583,
+      "fixedError": 0
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "castle",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "castle",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "west",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "west",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "south",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "south",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "route",
+      "outcome": "success",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "route",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "outcome": "404",
+      "old": "FAIL",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "reset",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "reset",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "view:castle",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "view:castle",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "view:study",
+      "outcome": "success",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "view:study",
+      "outcome": "404",
+      "old": "PASS",
+      "fixed": "PASS"
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 0.42504394531260914,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 5.626024414062499,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 1.4540244140625873,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "variant": "restored",
+      "scale": 1,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 1.9165356445312227,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "variant": "restored",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007324218699977791,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 0.8500878906252183,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 11.252048828124998,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 2.9080488281251746,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "variant": "restored",
+      "scale": 2,
+      "old": "FAIL",
+      "fixed": "PASS",
+      "oldError": 3.8330712890624454,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "variant": "restored",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000014648437399955583,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000004882812390860636,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 9.765625463842298e-7,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000003906249844476406,
+      "fixedError": 1.1368683772161603e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.00002929687502728484,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "variant": "current",
+      "scale": 1,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007324218699977791,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-bailey",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000009765624781721272,
+      "fixedError": 2.2737367544323206e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-moat",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.0000019531250927684596,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-rampart",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000007812499688952812,
+      "fixedError": 2.2737367544323206e-13
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-passage",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.00005859375005456968,
+      "fixedError": 0
+    },
+    {
+      "kind": "P3-01",
+      "engine": "webkit",
+      "target": "nm-transition",
+      "variant": "current",
+      "scale": 2,
+      "old": "PASS",
+      "fixed": "PASS",
+      "oldError": 0.000014648437399955583,
+      "fixedError": 0
+    }
+  ],
+  "additionalResetBoundary": {
+    "red": 4,
+    "green": 4,
+    "scope": "implementation intermediate version; initial A held, C usable, 2x -> Reset -> later C selection"
+  },
+  "unit": {
+    "pass": 21,
+    "fail": 0,
+    "skip": 0
+  },
+  "staticSubpathCases": 4
+}

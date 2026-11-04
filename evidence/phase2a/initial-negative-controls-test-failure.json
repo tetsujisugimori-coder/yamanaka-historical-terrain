@@ -1,0 +1,29 @@
+{
+  "scope": "Mutation negative control: deliberately remove visibility and stale-request safeguards; expected FAIL",
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    }
+  ]
+}

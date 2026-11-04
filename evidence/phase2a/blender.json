@@ -1,0 +1,95 @@
+{
+  "utc": "2026-11-03T22:57:04.566Z",
+  "scriptSha256": "8e0c9fcd7393adb15e529c27c84161a7e9c99d602e4ad48d4f5f19f05888913b",
+  "hashes": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "exitHex": "0x00000000",
+  "signal": null,
+  "processError": null,
+  "details": {
+    "utc": "2026-11-03T22:57:03.655881+00:00",
+    "blender": "4.5.9 LTS",
+    "originalMeshVertices": {
+      "A_castle_current": 44421,
+      "A_regional_current": 40401,
+      "C_castle_with_study_cutout": 44421,
+      "C_source_informed_moat_study": 58081
+    },
+    "originalMeshSha256": {
+      "A_castle_current": "39273d9a29e9d7b6c6f18f79a624a9dc6d7684ffd2efdbaa6a13eb4272bf118c",
+      "A_regional_current": "8f418eec03e84518ad4052992ac1c7744b9e8f4547011a4ae8ea88899b5dae95",
+      "C_castle_with_study_cutout": "9cdb31a5455272dfac717a16a1b67a17a3dd53be30dbe32b1699fdd6b6a47804",
+      "C_source_informed_moat_study": "ae163e273999a19ef26b875302e19265cb39b1c4daf228ab67aa6d0c5c719e05"
+    },
+    "newObjects": [
+      {
+        "id": "nm-context",
+        "vertices": 44421,
+        "triangles": 87076,
+        "category": "C"
+      },
+      {
+        "id": "nm-bailey",
+        "vertices": 26901,
+        "triangles": 53120,
+        "category": "C"
+      },
+      {
+        "id": "nm-moat",
+        "vertices": 18873,
+        "triangles": 37120,
+        "category": "C"
+      },
+      {
+        "id": "nm-rampart",
+        "vertices": 17436,
+        "triangles": 33735,
+        "category": "C"
+      },
+      {
+        "id": "nm-passage",
+        "vertices": 11737,
+        "triangles": 23040,
+        "category": "C"
+      },
+      {
+        "id": "nm-transition",
+        "vertices": 113214,
+        "triangles": 222585,
+        "category": "C"
+      }
+    ],
+    "bounds": [
+      -80,
+      -50,
+      30,
+      55
+    ],
+    "gridStep": 0.25,
+    "B_objects": 0,
+    "workerStatus": "CHECKS_AND_TEARDOWN_RETURNED"
+  },
+  "reason": "Process terminated normally after checks and explicit teardown",
+  "stdout": "INFO Draco mesh compression is available, use library at [local path]\r\n07:56:55 | INFO: Starting glTF 2.0 export\r\n07:56:56 | INFO: Extracting primitive: nm-bailey\r\n07:56:56 | INFO: Primitives created: 1\r\n07:56:56 | INFO: Extracting primitive: nm-moat\r\n07:56:56 | INFO: Primitives created: 1\r\n07:56:56 | INFO: Extracting primitive: nm-rampart\r\n07:56:56 | INFO: Primitives created: 1\r\n07:56:56 | INFO: Extracting primitive: nm-passage\r\n07:56:56 | INFO: Primitives created: 1\r\n07:56:56 | INFO: Extracting primitive: nm-transition\r\n07:56:57 | INFO: Primitives created: 1\r\n07:56:57 | INFO: Extracting primitive: nm-context\r\n07:56:57 | INFO: Primitives created: 1\r\n07:56:58 | INFO: Finished glTF 2.0 export in 2.2526652812957764 s\r\n\r\nInfo: Saved as \"yamanaka-phase2a.blend\"\r\nBlender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka.blend\"\n\nBlender quit\n",
+  "stderr": "",
+  "hashesAtExecution": {
+    "scripts/phase2a-shape.py": "c272c9b28e0a0b28fa73da5bd101a34d7bd0fc580b56f5e0d40a45b5a9b8e326",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/gis/castle-dem-1m.tif": "4da1dea8ef87e7bb0dbeb3a0edbf9959f2e93b5753343bb9224eee44bd10c850",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  "scriptSha256AtExecution": "8e0c9fcd7393adb15e529c27c84161a7e9c99d602e4ad48d4f5f19f05888913b",
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
+}

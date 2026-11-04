@@ -28,7 +28,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium webkit
-      - name: Serve locally and run 16 browser conditions
+      - name: Run browser regression, phase2A operations and negative controls
         run: |
           npm run dev -- --port 4317 --strictPort > /tmp/yamanaka-vite.log 2>&1 &
           server_pid=$!
@@ -40,6 +40,9 @@ jobs:
           node scripts/browser-test.mjs
           node scripts/interaction-cycles.mjs
           node scripts/fallback-test.mjs
+          node scripts/phase2a-browser.mjs
+          node scripts/phase2a-fallback.mjs
+          node scripts/phase2a-fallback.mjs --negative-control
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -50,4 +53,65 @@ jobs:
             evidence/fallback-results.json
             evidence/fallback/*.png
             evidence/browser/*.png
+            evidence/phase2a/browser.json
+            evidence/phase2a/fallback.json
+            evidence/phase2a/negative-controls.json
+            evidence/phase2a/browser/*.png
+          if-no-files-found: error
+  initial-camera:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Initial real-GLB completion after trusted camera input
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/initial-camera-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/initial-camera-browser.mjs --label=fixed
+          node scripts/initial-camera-browser.mjs --label=mutation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: initial-camera-evidence
+          path: evidence/initial-camera/
+          if-no-files-found: error
+  review-fixes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Gated real-GLB intent, height and mutation checks
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/review-fixes-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/review-fixes-browser.mjs
+          node scripts/review-fixes-browser.mjs --mutation=intent
+          node scripts/review-fixes-browser.mjs --mutation=height
+          node scripts/review-reset-cancel.mjs
+          node scripts/review-reset-cancel.mjs --remove-reset-commit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review-fixes-evidence
+          path: evidence/review-fixes/
           if-no-files-found: error

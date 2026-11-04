@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-03T22:40:15.971Z",
+  "scriptSha256": "2f486767970a6777ff9a90eb2063c8871e8eaa1b6b25e71b0e85ce27be593a80",
+  "status": "FAIL",
+  "exitCode": 1,
+  "exitHex": "0x00000001",
+  "signal": null,
+  "processError": null,
+  "details": null,
+  "reason": "Native process did not finish successfully; printed PASS is not sufficient",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"[local path]\n    g=json.loads((ROOT/'public/data/castle.json').read_text()); E0,N0=g['origin']\r\n                                                                ^^^^^\r\nValueError: too many values to unpack (expected 2)\r\n"
+}

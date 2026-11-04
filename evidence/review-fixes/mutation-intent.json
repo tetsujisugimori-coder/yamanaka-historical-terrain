@@ -1,0 +1,7384 @@
+{
+  "scope": "implementation self-verification; actual GLB responses gated explicitly; only setView completion counter instrumented; transformed main module captured once before contexts, not fetched during context shutdown; not physical Safari",
+  "baseline": false,
+  "baselineCommit": null,
+  "mutation": "intent",
+  "testUrl": "http://127.0.0.1:4317",
+  "sourceHashes": {
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+  },
+  "sourceHashesAtExecution": {
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+  },
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged.",
+  "servedModuleSha256": "a6d907b4e9de83678c8a73c41784ca8e9fd537fe16fbc9c3fd3484cb298a9497",
+  "utc": "2026-11-04T09:25:35.203Z",
+  "results": [
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "castle",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "castle",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"castle\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "castle",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "error",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "castle",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "west",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "ready",
+        "pressed": [
+          "west"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "west",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"west\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "west",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "ready",
+        "pressed": [
+          "west"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "error",
+        "pressed": [
+          "west"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "west",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "south",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "ready",
+        "pressed": [
+          "south"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "south",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"south\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "south",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "ready",
+        "pressed": [
+          "south"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "error",
+        "pressed": [
+          "south"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "south",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "route",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "ready",
+        "pressed": [
+          "route"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "route",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"route\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "chromium",
+      "target": "route",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "ready",
+        "pressed": [
+          "route"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "error",
+        "pressed": [
+          "route"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "route",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "castle",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "castle",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"castle\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "castle",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "error",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "castle",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "west",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "ready",
+        "pressed": [
+          "west"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "west",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"west\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "west",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "ready",
+        "pressed": [
+          "west"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "west",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸・障子堀を読む",
+        "renderState": "error",
+        "pressed": [
+          "west"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "west",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "south",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "ready",
+        "pressed": [
+          "south"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "south",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"south\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "south",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "ready",
+        "pressed": [
+          "south"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "south",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "岱崎出丸方面",
+        "renderState": "error",
+        "pressed": [
+          "south"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "south",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "route",
+      "outcome": "success",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "ready",
+        "pressed": [
+          "route"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "reconstruction",
+            "mode": "terrain",
+            "selected": "nm-moat",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 456676,
+          "drawCalls": 6,
+          "geometries": 11,
+          "modelBounds": [
+            -350,
+            363.3800048828125,
+            -450,
+            650,
+            610.1900024414062,
+            650
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0736549390260115e-16,
+                0.02258383138238109,
+                0.999894477565585
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.04013255544006006,
+                0.009193243957318194,
+                0.999893873737542
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13547642385732245,
+                -0.014727385314776012,
+                0.9998919755675331
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07780107511258362,
+                0.02625140772502384,
+                0.9998953538331834
+              ]
+            }
+          ]
+        },
+        "heading": "西ノ丸 障子堀候補",
+        "renderState": "ready",
+        "pressed": [
+          "nm-moat"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "route",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"route\"\nReceived: \"nm-moat\""
+    },
+    {
+      "kind": "P2-01",
+      "engine": "webkit",
+      "target": "route",
+      "outcome": "404",
+      "width": 390,
+      "motion": "reduce",
+      "matrix": false,
+      "status": "FAIL",
+      "pageerrors": [],
+      "mutationApplied": true,
+      "before": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "castle",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "山中城の立地",
+        "renderState": "ready",
+        "pressed": [
+          "castle"
+        ]
+      },
+      "afterIntent": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": true
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "ready",
+        "pressed": [
+          "route"
+        ]
+      },
+      "actual": {
+        "diagnostics": {
+          "state": {
+            "view": "regional",
+            "mode": "terrain",
+            "selected": "route",
+            "exaggeration": 1,
+            "route": false,
+            "features": true,
+            "ready": false
+          },
+          "camera": [
+            -6808.898734810731,
+            6669.907940737026,
+            7180.293211254955
+          ],
+          "target": [
+            0,
+            480,
+            0
+          ],
+          "scale": {
+            "metres": 2000,
+            "pixels": 100.77261586161977,
+            "start": [
+              0,
+              480,
+              0
+            ],
+            "end": [
+              1451.24770234687,
+              480,
+              1376.183166018583
+            ]
+          },
+          "triangles": 80672,
+          "drawCalls": 5,
+          "geometries": 5,
+          "modelBounds": [
+            -2000,
+            215.2899932861328,
+            -2000,
+            2000,
+            802.5700073242188,
+            2000
+          ],
+          "canvas": [
+            349,
+            405
+          ],
+          "studyBounds": [
+            -160,
+            35,
+            -130,
+            65
+          ],
+          "facilityScreen": [
+            {
+              "id": "nm-bailey",
+              "ndc": [
+                -0.0026041449993119688,
+                0.019498910719911895,
+                0.9998945032696188
+              ]
+            },
+            {
+              "id": "nm-moat",
+              "ndc": [
+                -0.010971063630574011,
+                0.015457295525354941,
+                0.9998941166618014
+              ]
+            },
+            {
+              "id": "nm-rampart",
+              "ndc": [
+                -0.007590107963205777,
+                0.017439193797654177,
+                0.9998942357907277
+              ]
+            },
+            {
+              "id": "nm-passage",
+              "ndc": [
+                0.006047103119054368,
+                0.018067740968563867,
+                0.9998943883153222
+              ]
+            },
+            {
+              "id": "nm-transition",
+              "ndc": [
+                -0.022734391581581952,
+                0.015713841868710346,
+                0.9998943978887128
+              ]
+            }
+          ],
+          "reconstruction": {
+            "comparison": "restored",
+            "visible": [
+              "A_regional_current"
+            ],
+            "hidden": []
+          },
+          "markerScreen": [
+            {
+              "id": "castle",
+              "ndc": [
+                2.0769303744331822e-16,
+                0.025311905792322117,
+                0.9998943768757897
+              ]
+            },
+            {
+              "id": "west",
+              "ndc": [
+                -0.040152864433776796,
+                0.011547346023996945,
+                0.9998937862949258
+              ]
+            },
+            {
+              "id": "south",
+              "ndc": [
+                0.13554634224389242,
+                -0.012338900784226881,
+                0.9998918854095937
+              ]
+            },
+            {
+              "id": "route",
+              "ndc": [
+                0.07784492654102591,
+                0.02888301721664494,
+                0.999895257273979
+              ]
+            }
+          ]
+        },
+        "heading": "箱根越えの交通路",
+        "renderState": "error",
+        "pressed": [
+          "route"
+        ]
+      },
+      "realGlbResponses": 1,
+      "expected": {
+        "id": "route",
+        "renderState": "ready",
+        "view": "regional"
+      },
+      "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"ready\"\nReceived: \"error\""
+    }
+  ]
+}
