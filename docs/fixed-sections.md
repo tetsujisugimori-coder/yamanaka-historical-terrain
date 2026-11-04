@@ -70,3 +70,15 @@ WindowsローカルはPLAYWRIGHT_BROWSERS_PATHをworkspace内tools/browsers、TE
 堀の今回測定は西/東の比高がA約1.9/2.6m、C約1.4/1.4m。土塁対応点と曲輪対応点はA約-5.4m、C2.5m、水平16m。代表点名はC形状に基づく対応位置であり、Aの同位置が実際の堀底/土塁天端であるという認定ではない。点の座標と符号を併記している。
 
 追加の再現command：`node scripts/sections-summary.mjs`、`node scripts/sections-summary-controls.mjs`、`GITHUB_PAGES=1 npm run build` 後にsubpath previewを4320で起動し `node scripts/sections-subpath.mjs`。補助検査は既存依存だけを使用し、新規packageなし。CI・提出HEAD/tree・独立担当の結果はDraft PRへ記録し、後から自己検証票を独立結果へ改称しない。
+
+## 独立指摘への修正（P2-01 / P2-02）
+
+別担当は提出7e79e63を別cloneで検査し、幾何と既存回帰はPASS、次の2点をP2としてchanges requestedとした。独立承認ではない。元の独立報告と失敗票は改変せず保全し、今回の修正後自己確認と分ける。
+
+P2-01：断面表示→実moat-study.glb応答を保留→断面教材へ切替→nm-moat施設選択で取消→旧200/404解放。両engineの4件でready=trueなのに線0/点0、説明が「3D切替中」のまま。beginIntentがcurrentModelのreadyだけを戻し、断面syncとreconstruction controlsの復帰を行わなかった。現在の表示を復帰するrestoreCurrentPresentationを1経路へまとめ、model/readiness/説明/断面/controlsを現在のstateから同期する。古い非同期要求を採用したり、その視点を適用するものではない。
+
+実装担当も未修正の同4件を再実行して4 FAIL（終了1）を保存。修正後は施設選択直後と旧応答完了後の両方で線672値/点3・対応する面高さ・controls・説明・最新選択/カメラを照合し4 PASS。復帰処理を除去した負対照は同4件を「Section presentation missing after cancellation」で拒否。単なる通信エラーは負対照成功に数えない。
+
+P2-02：点名はC形状で選んだ対応位置なのに、展示内ではA自身の堀底/天端と誤読できた。Aの断面最低値はS+16mで569.669983m、Cの堀底に対応するS+10.5mはA570.313007mであり、同一ではない。新たな極値計算や位置の置換は行わず、点/寸法の直前に常時表示の定義を置き、buttonと選択文に「C」「対応する水平位置」、Aの寸法に「同位置間の比高」を明記。A自身の最深部/最高部や実遺構の認定でないと説明する。折畳みの説明やGitHubを開かなくても読める。元の独立指摘4例を自己再現し、修正後の両engine×375/390/1280×2線12例で、定義の可視性/折畳み外/keyboard focus/横超過なし、旧提出と全プロファイル一致、1/2倍の数値不変を確認する。
+
+新規証拠はevidence/sections-review-fixes/。取消の同条件runnerはscripts/sections-cancel-browser.mjs、定義の可視検査はscripts/sections-labels-browser.mjs。SECTION_REVIEW_EVIDENCEで出力先を指定する。CIにも正常/復帰除去/常時定義を追加。旧試行や独立報告を修正後PASSへ書き換えず、同じ担当の独立再レビューを待つ。

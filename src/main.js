@@ -50,7 +50,11 @@ async function initialize(features){
  function applyLayers(){if(state.view!=='reconstruction')return;currentModel.children.forEach(ob=>{ob.visible=!(comparison==='restored'&&ob.userData.facilityId&&ob.userData.facilityId!=='nm-context'&&(!$('#category-c').checked||hiddenFacilities.has(ob.userData.facilityId)));});}
  $('#facility-layers').replaceChildren(...modelFeatures.map(f=>{const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.facility=f.id;input.onchange=()=>{if(input.checked)hiddenFacilities.delete(f.id);else hiddenFacilities.add(f.id);applyLayers();sectionExhibit?.sync();render();};label.append(input,document.createTextNode(`C ${f.shortLabel}`));return label;}));
  $('#category-c').onchange=()=>{applyLayers();sectionExhibit?.sync();render();};
- function beginIntent(){const intent=intents.begin();if(currentModel&&!renderFailed){state.ready=true;reportReady();}return intent;}
+ function restoreCurrentPresentation(){
+  if(!currentModel||renderFailed)return;
+  state.ready=true;$('#reconstruction-controls').hidden=state.view!=='reconstruction';reportReady();sectionExhibit?.sync();
+ }
+ function beginIntent(){const intent=intents.begin();restoreCurrentPresentation();return intent;}
  function beginCameraIntent(){if(currentModel)return beginIntent();intents.adjustCamera();}
  async function runAction(action,message='表示操作に失敗しました。施設一覧から解説と出典は利用できます。'){
   const intent=beginIntent();try{return await action(intent);}catch(error){if(intent.isCurrent()&&!renderFailed)showError(message,error);return false;}

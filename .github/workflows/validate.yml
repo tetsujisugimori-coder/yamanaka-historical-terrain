@@ -31,6 +31,10 @@ jobs:
           node scripts/sections-evidence.mjs
           node scripts/sections-browser.mjs
           node scripts/sections-pending.mjs
+          export SECTION_REVIEW_EVIDENCE="$SECTION_EVIDENCE/review-fixes"
+          node scripts/sections-cancel-browser.mjs
+          node scripts/sections-cancel-browser.mjs --remove-presentation-restore
+          node scripts/sections-labels-browser.mjs
           node scripts/sections-browser.mjs --mutation=height
           node scripts/sections-browser.mjs --mutation=coordinate
           node scripts/sections-browser.mjs --mutation=double
