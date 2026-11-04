@@ -1,0 +1,194 @@
+{
+  "protection": "PASS",
+  "protectedFiles": 156,
+  "models": {
+    "A": {
+      "sha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "profiles": [
+        {
+          "id": "moat",
+          "name": "障子堀を西から東へ",
+          "start": [
+            -66,
+            -10
+          ],
+          "end": [
+            -38,
+            -10
+          ],
+          "direction": "西 → 東",
+          "reason": "保存済みN=-10m標本と同じ線で、複数の堀底・畝と両外縁を横断する。",
+          "points": [
+            {
+              "name": "西縁",
+              "distance": 4,
+              "height": 572.1720092773437
+            },
+            {
+              "name": "堀底",
+              "distance": 10.5,
+              "height": 570.3130065917969
+            },
+            {
+              "name": "東縁",
+              "distance": 25,
+              "height": 572.9359741210938
+            }
+          ],
+          "measurements": [
+            {
+              "name": "西縁 − 堀底",
+              "horizontal": 6.5,
+              "height": 1.859002685546784
+            },
+            {
+              "name": "東縁 − 堀底",
+              "horizontal": 14.5,
+              "height": 2.6229675292968295
+            }
+          ],
+          "count": 21,
+          "maxError": 1.1368683772161603e-13,
+          "segments": 7,
+          "length": 28
+        },
+        {
+          "id": "rampart",
+          "name": "曲輪から西の土塁へ",
+          "start": [
+            -15,
+            15
+          ],
+          "end": [
+            -45,
+            15
+          ],
+          "direction": "東 → 西",
+          "reason": "保存済みN=15m標本の範囲内。曲輪平場から西側土塁の天端・外側を横断する。",
+          "points": [
+            {
+              "name": "曲輪面",
+              "distance": 5,
+              "height": 576.0700073242188
+            },
+            {
+              "name": "土塁頂部",
+              "distance": 21,
+              "height": 570.716015625
+            },
+            {
+              "name": "外側",
+              "distance": 30,
+              "height": 567.9600219726562
+            }
+          ],
+          "measurements": [
+            {
+              "name": "土塁頂部 − 曲輪面",
+              "horizontal": 16,
+              "height": -5.3539916992187955
+            }
+          ],
+          "count": 18,
+          "maxError": 0,
+          "segments": 6,
+          "length": 30
+        }
+      ]
+    },
+    "C": {
+      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "profiles": [
+        {
+          "id": "moat",
+          "name": "障子堀を西から東へ",
+          "start": [
+            -66,
+            -10
+          ],
+          "end": [
+            -38,
+            -10
+          ],
+          "direction": "西 → 東",
+          "reason": "保存済みN=-10m標本と同じ線で、複数の堀底・畝と両外縁を横断する。",
+          "points": [
+            {
+              "name": "西縁",
+              "distance": 4,
+              "height": 575.0700073242188
+            },
+            {
+              "name": "堀底",
+              "distance": 10.5,
+              "height": 573.6897583007812
+            },
+            {
+              "name": "東縁",
+              "distance": 25,
+              "height": 575.0700073242188
+            }
+          ],
+          "measurements": [
+            {
+              "name": "西縁 − 堀底",
+              "horizontal": 6.5,
+              "height": 1.3802490234375
+            },
+            {
+              "name": "東縁 − 堀底",
+              "horizontal": 14.5,
+              "height": 1.3802490234375
+            }
+          ],
+          "count": 336,
+          "maxError": 0,
+          "segments": 112,
+          "length": 28
+        },
+        {
+          "id": "rampart",
+          "name": "曲輪から西の土塁へ",
+          "start": [
+            -15,
+            15
+          ],
+          "end": [
+            -45,
+            15
+          ],
+          "direction": "東 → 西",
+          "reason": "保存済みN=15m標本の範囲内。曲輪平場から西側土塁の天端・外側を横断する。",
+          "points": [
+            {
+              "name": "曲輪面",
+              "distance": 5,
+              "height": 575.27001953125
+            },
+            {
+              "name": "土塁頂部",
+              "distance": 21,
+              "height": 577.77001953125
+            },
+            {
+              "name": "外側",
+              "distance": 30,
+              "height": 575.27001953125
+            }
+          ],
+          "measurements": [
+            {
+              "name": "土塁頂部 − 曲輪面",
+              "horizontal": 16,
+              "height": 2.5
+            }
+          ],
+          "count": 360,
+          "maxError": 0,
+          "segments": 120,
+          "length": 30
+        }
+      ]
+    }
+  }
+}

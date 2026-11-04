@@ -55,3 +55,9 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 - [三島市教育委員会・保存活用計画、2023年3月10日](https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf)
 
 本プロジェクトは国土地理院・三島市の公式事業ではありません。
+
+## 固定2断面の比較（Issue #7）
+
+障子堀横断と曲輪から土塁の2本で、現況A・推定Cの同じ水平位置を比較できます。表示GLB三角形面から断面を取得し、モデル基準高と実寸の比高・水平距離を示します。グラフの点をtap、または下のボタンをkeyboardで選ぶと3D位置と対応します。3Dの誇張1/2倍でもグラフの実寸値は不変です。幾何的一致は歴史的な正確さの証明ではありません。
+
+[座標・取得方法・根拠と仮定・検証手順](docs/fixed-sections.md)、[提出用の新規証拠](evidence/sections/submission/)、[Issue #7](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/7)。自己検証と別担当の独立レビューは区別し、Draft・既存UNKNOWNを維持します。

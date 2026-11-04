@@ -62,3 +62,11 @@ WindowsローカルはPLAYWRIGHT_BROWSERS_PATHをworkspace内tools/browsers、TE
 ## 留保と独立レビュー
 
 実機iPhone Safari、VoiceOver、現地、基準高の個別補正、歴史的配置、完全な見通し、QGIS/Blender native再生成は未検証。WebKit自動操作を実機Safari完了とは扱わない。bundleサイズ警告は既存同様に留保。独立レビューは別担当が提出HEADに対して実行し、特に交線の欠損/境界、隠した施設、2倍時の実寸と描画位置、遅延成功/404・Reset、グラフ直接tapと軸/凡例の可読性を重点確認する。指摘は修正・同条件再確認して追記、自己検証だけではIssueを閉じない。
+
+## 提出時の自己検証結果
+
+正式票は [evidence/sections/submission](../evidence/sections/submission/)、履歴の区別は [証拠案内](../evidence/sections/README.md)。単体26/26、通常ブラウザ62/62、C保留と誇張4/4、Pages相当の新断面8/8、既存回帰248/248がPASS。高さ+0.1m16件、座標誤り16件、二重誇張2倍8件を具体的な幾何エラーで拒否、影響しない1倍8件は受理。集約の正常/欠落/破損/条件不足/source違い/HEAD違いの6対照も期待終了を確認。幾何735点の最大誤差1.1369e-13m、3D描画buffer最大0.000024414063m、許容は双方1mm。元mainの制作正本/データ/過去証拠156ファイル保全PASS。
+
+堀の今回測定は西/東の比高がA約1.9/2.6m、C約1.4/1.4m。土塁対応点と曲輪対応点はA約-5.4m、C2.5m、水平16m。代表点名はC形状に基づく対応位置であり、Aの同位置が実際の堀底/土塁天端であるという認定ではない。点の座標と符号を併記している。
+
+追加の再現command：`node scripts/sections-summary.mjs`、`node scripts/sections-summary-controls.mjs`、`GITHUB_PAGES=1 npm run build` 後にsubpath previewを4320で起動し `node scripts/sections-subpath.mjs`。補助検査は既存依存だけを使用し、新規packageなし。CI・提出HEAD/tree・独立担当の結果はDraft PRへ記録し、後から自己検証票を独立結果へ改称しない。

@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';import {spawnSync} from 'node:child_process';
+const dir=`tools/summary-controls-${process.pid}`,target=process.env.SECTION_EVIDENCE??'evidence/sections/submission';await mkdir(dir,{recursive:true});const names=['normal','pending-green','height','coordinate','double'],bytes={};for(const n of names)bytes[n]=await readFile(`${target}/${n}.json`);const reset=async()=>{for(const n of names)await writeFile(`${dir}/${n}.json`,bytes[n]);};const results=[];
+async function run(name,expected,edit,extra={}){await reset();if(edit)await edit();const r=spawnSync(process.execPath,['scripts/sections-summary.mjs'],{encoding:'utf8',env:{...process.env,SECTION_EVIDENCE:dir,...extra}});const row={name,expectedExit:expected,actualExit:r.status,output:[process.cwd().replaceAll('\\','\\\\'),process.cwd().replaceAll('\\','/'),process.cwd()].reduce((s,path)=>s.replaceAll(path,'<workspace>'),r.stdout+r.stderr)};row.status=r.status===expected?'PASS':'FAIL';results.push(row);}
+await run('complete current-source positive',0);
+await run('missing mandatory normal file',1,async()=>{const fs=await import('node:fs/promises');await fs.unlink(`${dir}/normal.json`);});
+await run('corrupt JSON',1,async()=>writeFile(`${dir}/normal.json`,'{ broken'));
+await run('missing condition',1,async()=>{const d=JSON.parse(bytes.normal);d.results.pop();await writeFile(`${dir}/normal.json`,JSON.stringify(d));});
+await run('wrong source hash',1,async()=>{const d=JSON.parse(bytes.normal);d.worktreeHashes['src/main.js']='0'.repeat(64);await writeFile(`${dir}/normal.json`,JSON.stringify(d));});
+await run('wrong required HEAD',1,null,{GITHUB_SHA:'0'.repeat(40)});
+await writeFile(`${target}/summary-controls.json`,JSON.stringify({scope:'validation of evidence aggregation; synthetic faults, not terrain product defects',results},null,2));console.log(results.map(({name,status,actualExit})=>({name,status,actualExit})));if(results.some(r=>r.status!=='PASS'))process.exitCode=1;
