@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
+const base=process.env.SECTION_EVIDENCE??'evidence/sections';
+const read=async name=>JSON.parse(await readFile(`${base}/${name}.json`,'utf8'));
+const normal=await read('normal'),pending=await read('pending-green'),controls=await Promise.all(['height','coordinate','double'].map(read));
+if(normal.results.length!==62||normal.results.some(r=>r.status!=='PASS'))throw Error('Normal matrix incomplete or failed');
+for(const engine of ['chromium','webkit'])for(const width of [375,390,1280])for(const id of ['moat','rampart'])for(const comparison of ['current','restored'])for(const ve of [1,2])if(normal.results.filter(r=>r.engine===engine&&r.width===width&&r.id===id&&r.comparison===comparison&&r.ve===ve).length!==1)throw Error('Missing/duplicate required case');
+if(pending.results.length!==4||pending.results.some(r=>r.status!=='PASS'))throw Error('Pending C/VE acceptance failed');
+for(const [i,d]of controls.entries()){if(d.results.length!==16)throw Error('Missing negative-control cases');for(const r of d.results){const expected=i===2?(r.ve===1?r.status==='PASS':r.status==='FAIL'&&r.reason.startsWith('Drawing height mismatch')):r.status==='FAIL'&&r.reason.startsWith(i===0?'Surface height mismatch':'No section coverage');if(!expected)throw Error('Unexpected failure or undetected fault: '+r.reason);}}
+for(const d of [normal,...controls]){for(const [file,hash]of Object.entries(d.worktreeHashes))if(createHash('sha256').update(await readFile(file)).digest('hex')!==hash)throw Error('Evidence does not match current source '+file);if(process.env.GITHUB_SHA&&d.head!==process.env.GITHUB_SHA)throw Error('Evidence HEAD mismatch');}
+const result={status:'PASS',normal:62,pending:4,negative:{heightRejected:16,coordinateRejected:16,doubleRejected:8,doubleAt1xAccepted:8},head:normal.head,utc:new Date().toISOString(),note:'Implementation self-verification. Numerical oracle differs from product computation; separate reviewer still required.'};await writeFile(`${base}/summary.json`,JSON.stringify(result,null,2));console.log(JSON.stringify(result));

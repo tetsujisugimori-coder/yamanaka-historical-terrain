@@ -27,12 +27,14 @@ jobs:
             if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
             sleep 1
           done
+          export SECTION_EVIDENCE="evidence/sections/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           node scripts/sections-evidence.mjs
           node scripts/sections-browser.mjs
           node scripts/sections-pending.mjs
           node scripts/sections-browser.mjs --mutation=height
           node scripts/sections-browser.mjs --mutation=coordinate
           node scripts/sections-browser.mjs --mutation=double
+          node scripts/sections-summary.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
