@@ -20,3 +20,15 @@
 .reconstruction-controls[hidden]{display:none}
 @media(max-width:700px){.reconstruction-controls{padding:18px}.reconstruction-controls h2{font-size:21px}#detail dl{flex-wrap:wrap;gap:10px 24px}.terrain-panel{min-height:405px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+.section-exhibit{margin:24px 0;padding:24px;background:#f8f8f1;border:1px solid #acb9a6;max-width:100%;font-size:14px;line-height:1.8}
+.section-exhibit[hidden],#section-result[hidden]{display:none}
+.section-exhibit h2{margin-top:4px}.section-exhibit select,.section-exhibit button{min-height:44px;font:inherit;margin:4px 4px 4px 0;padding:7px 10px;max-width:100%}
+.section-exhibit select{background:#fff;color:#213f35;border:1px solid #869a83}.section-exhibit button[aria-pressed=true]{background:#243f37;color:white}
+#section-graph{display:block;width:100%;height:auto;aspect-ratio:auto;min-height:180px;background:#fffef8;border:1px solid #c5cfc0}#section-graph text{font:12px sans-serif;fill:#263d35}
+.section-grid{stroke:#dce3d9;stroke-width:1}.curve-A{fill:none;stroke:#225c4c;stroke-width:2.5}.curve-C{fill:none;stroke:#984724;stroke-width:2.5;stroke-dasharray:7 4}
+.dot-A{fill:#225c4c;stroke:white;stroke-width:1.5}.dot-C{fill:#984724;stroke:white;stroke-width:1.5}.section-selected{stroke:#7b6910;stroke-width:1.5;stroke-dasharray:2 3}
+.section-key{display:flex;flex-wrap:wrap;gap:10px 26px;font-weight:700}.key-a{color:#225c4c}.key-c{color:#984724}
+#section-points{display:flex;flex-wrap:wrap;gap:6px}#section-points button{flex:1 1 230px;text-align:left;font-size:13px}#section-dimensions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 20px}#section-dimensions dd{margin:0;font-weight:700}
+.section-exhibit details{border-top:1px solid #bdcaba;padding-top:14px}.section-exhibit summary{cursor:pointer;min-height:44px}#section-aspect,#section-visibility{font-size:13px}
+@media(max-width:700px){.section-exhibit{padding:14px;font-size:14px}.section-exhibit h2{font-size:20px}#section-dimensions{grid-template-columns:1fr;gap:4px}#section-dimensions dd{margin-bottom:12px}}
+.section-exhibit [data-section-point]{cursor:pointer}

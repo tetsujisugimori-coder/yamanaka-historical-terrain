@@ -1,0 +1,64 @@
+# 固定2断面の比較（Issue #7）
+
+提出前の自己検証と、別担当による独立レビューは区別する。Draft維持、マージ・自動マージ・公開なし。最重要条件は実GLB三角形面との幾何的一致であり、歴史的な正確さの証明ではない。
+
+## 出発点と保全
+
+2026-11-04 UTCのGitHub実データでPR #6のmerged=true、merge commit/main `5f54eacea3f9fed702e8caf10a3acda0c243ac14`、tree `b00b45affddc1b05526a7a70365e652478421555` を確認。提出HEAD `2bc1e6fce31123d4d50e56b5132b8ee63754207f` はその親。新規cloneのclean mainから `feat/fixed-terrain-sections`。AGENTS.md、README、関連Issue #1/#4/#5、PR #6本文・独立結果、生成scripts・既存CIを確認。既存LOGファイルなしのため今回LOG.mdを新設。
+
+production、public/data、過去evidence、ATTRIBUTIONは元mainとのbyte比較を `geometry-and-protection.json` に保存。QGIS/Blender正本・DEM・GLB・5施設C・新規B=0を保全。native再生成・再読込はNOT_RERUN。位置精度・図面残差・旧QGISクラッシュ/旧timeout原因UNKNOWN、実機/公開受入は既存Issueへ継続。今回その結論を変更しない。
+
+## 2本の選定と標本
+
+| ID | S→E（ローカル東/北m） | 向き・長さ | 選定理由・測定点（Sからm） |
+|---|---|---|---|
+| moat | (-66,-10) → (-38,-10) | 西→東28m | N=-10の保存標本と同じ横断線。堀群と外縁を横断。西縁4、堀底10.5、東縁25。左右の縁との差を別々に表示 |
+| rampart | (-15,15) → (-45,15) | 東→西30m | N=15の保存標本の範囲内。曲輪平場から西の土塁を越える。曲輪面5、土塁頂部21、外側30 |
+
+`production/phase2a/profiles.json` は `build-phase2a-gis.py` により生成された222点。EPSG:6676のローカルE/N、m、A_1mは元DEM、A_webTriangleはWeb5m三角形、Cはphase2a解析曲面の値。生成コードと保存値・実GLBを照合し、既存phase2a.testは全点のCの対応GLB頂点、A実三角形値を1mm以内で確認する。今回の2線はその標本と対応するが、標本間の解析式補間はGLB面と同一とは限らない。標本は由来と版の照合に活用し、グラフには実GLBとの交線を新しく計算する。古い標本やDEMを今回の独立正解値に使わない。
+
+## 座標、交線と寸法
+
+原点はEPSG:6676 E=44862.121277226666、N=-93478.07235405142、高さ0。Blenderは東/北/上、glTFとWebは東/上/南。既存loaderがnodeのworld transformをgeometryへ焼き込む。断面はこのgeometryの実三角形をローカルの垂直平面で切り、各辺との交点を距離/高さの一次区間へ変換する。全区間端と重なり交差点で分割し、重なる場合は最上の地表面を採用。現GLBは地表専用。鉛直/縮退面は高さ場から除外、範囲外/欠損は区間を作らず、SVGも別subpathで接続しない。三角形内部も厳密な線形面、平滑化・頂点近傍近似・外挿なし。
+
+Aはcastle.glb、Cはnishinomaru.glbの全地表。Cで施設を非表示にしてもグラフは全モデルの比較と明示し、非表示の面上の3D線/点を隠す。3Dが別範囲/切替中/失敗時も状態を明示し、対応線/点は表示しない。3DのS/Eは文字sprite、選択点は白い球。線の位置は面そのもの（高さオフセットなし）。視認のためdepthTestを無効にした補助表示で、遮蔽/見通し解析ではない。
+
+横軸はSからの水平距離m、縦軸は実寸の「モデル基準高m」。個別の基準補正適用UNKNOWNのため絶対標高とは断定しない。数値は0.1m表示、元データの格子間隔やFloat32/PNGの格納桁は測量精度でない。代表点の座標/距離/高さを示し、点間の水平距離と符号付き比高を計算する。堀の左右縁は別の比高。Cの2.5mなどの設計仮定と実面の点間測定を区別する。
+
+グラフはSVG、A緑実線・C茶破線と文字ラベル。全三角形交線を保持して連続面の区間だけつなぎ、破線の読みやすさを維持。軸と凡例は375pxでも常時可読、代表点はグラフを直接tap、または下の44px以上のbuttonをTab/Enterで選択。数値と主要寸法は文章で常時表示。SVGの縦横1mあたりの画素比を計算し、3D誇張とは独立に明示する。ページ内状態のみ、URL永続化・自由断面作成は対象外。
+
+3D誇張1/2倍は実寸プロファイルには一切適用せず、3D line/marker座標だけ高さ×倍率。モデルは既存Promise cacheを共有、断面の選択revisionで古い成功/失敗を捨てる。選び直し/Resetで旧結果を消す。A/Cが揃うまで表/グラフを出さず、失敗は明示して再選択で再試行する。
+
+## 発見した競合と修正
+
+現main由来の誇張handlerがbeginIntentで保留中C要求まで失効させる。regional表示→C実GLB応答保留→断面変更→2倍→成功/404解放で、Cへ移らずregionalのまま、404も見えなくなる。両エンジン×成功/404の4反例を `pending-red.json` に保存。誇張操作をcameraRevisionの更新だけにし、表示要求を維持。`pending-green.json` の同条件4件はC成立/明示errorと2倍・最後の断面を確認。比較controlsはC読込み中から操作できるよう先に開く。古いモデル応答を後のA選択/Resetへ採用するものではない。
+
+## 検証契約と再現
+
+独立数値oracleは `tests/section-oracle.mjs`。raw GLB decode後、各三角形の水平bbox全体を索引化し、点の重心座標で高さを計算する。製品の交線/補間/座標関数はimportしない。各交線端点・中点、密な0.137m照合、共有境界/内部/端点/欠損/鉛直面/重なりを確認。事前許容1mmはFloat32変換と浮動小数計算のための数値許容で、測量/歴史精度ではない。3D Float32描画bufferも同じ1mm以内、距離・水平座標は別に照合する。
+
+通常ブラウザはChromium/WebKit×375/390/1280×2断面×A/C×1/2倍=48観測、既存操作/施設非表示/Reset6件、ゲート成功/404×Reset有無×2engine=8件、計62件。さらに保留Cと誇張の4反例。モデルの完了をinstrumented counterと2描画frameで待ち、固定sleepで競合を成功扱いにしない。自動操作はUIのtrusted click/tap/keyboardを使用し、diagnosticsは読み取り専用。
+
+高さ+0.1m、座標E/N取り違え、3D誇張二重適用の3故障をレスポンスのmoduleだけに注入し、同じoracle/許容差で両engineの拒否を確認する。単体にも同3負対照と欠損・重なりを含む。自己検証の中で独立計算を使うことと、別担当の独立レビューは同じではない。
+
+```sh
+npm ci
+npx playwright install chromium webkit
+npm test
+npm run build
+npm run dev -- --port 4317 --strictPort
+node scripts/sections-evidence.mjs
+node scripts/sections-browser.mjs
+node scripts/sections-pending.mjs
+node scripts/sections-browser.mjs --mutation=height
+node scripts/sections-browser.mjs --mutation=coordinate
+node scripts/sections-browser.mjs --mutation=double
+```
+
+WindowsローカルはPLAYWRIGHT_BROWSERS_PATHをworkspace内tools/browsers、TEST_URLを127.0.0.1:4327へ設定。sandboxでloopback拒否、sandbox外browser→sandbox内serverでもtimeoutとなった試行は製品到達前の環境失敗として保存。OS信頼CAの `--use-system-ca` でbrowser取得、server/browserとも許可された環境で実行。TLS検証の無効化なし。
+
+既存ブラウザscriptsは過去evidenceを上書きしない別cwd（src/index/publicを同一sourceへコピー）で実行し、新規evidence配下に収集する。CIは既存jobを保持し、固定版Playwrightとubuntu-24.04で専用jobを追加、通常/故障/競合の結果とPNGをalways artifactへ保存。新しいsource hashと対象HEAD/treeを票に保存。証拠だけの後続commitは製品hashで同一性を照合する。
+
+## 留保と独立レビュー
+
+実機iPhone Safari、VoiceOver、現地、基準高の個別補正、歴史的配置、完全な見通し、QGIS/Blender native再生成は未検証。WebKit自動操作を実機Safari完了とは扱わない。bundleサイズ警告は既存同様に留保。独立レビューは別担当が提出HEADに対して実行し、特に交線の欠損/境界、隠した施設、2倍時の実寸と描画位置、遅延成功/404・Reset、グラフ直接tapと軸/凡例の可読性を重点確認する。指摘は修正・同条件再確認して追記、自己検証だけではIssueを閉じない。

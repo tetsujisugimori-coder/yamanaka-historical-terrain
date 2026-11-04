@@ -6,6 +6,39 @@ on:
 permissions:
   contents: read
 jobs:
+  fixed-sections:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Compare sections to independent raw GLB oracle and exercise gated races
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/sections-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/sections-evidence.mjs
+          node scripts/sections-browser.mjs
+          node scripts/sections-pending.mjs
+          node scripts/sections-browser.mjs --mutation=height
+          node scripts/sections-browser.mjs --mutation=coordinate
+          node scripts/sections-browser.mjs --mutation=double
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fixed-sections-evidence
+          path: evidence/sections/
+          if-no-files-found: error
   data-and-build:
     runs-on: ubuntu-24.04
     steps:
