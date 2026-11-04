@@ -51,5 +51,5 @@ for(const [engineName,engine]of [['chromium',chromium],['webkit',webkit]]){
  }
  await browser.close();
 }
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js']){try{sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');}catch(e){if(e.code!=='ENOENT')throw e;}}
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js']){try{sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');}catch(e){if(e.code!=='ENOENT')throw e;}}
 await writeFile(`evidence/fallback-${baseline?'red':'results'}.json`,JSON.stringify({scope:'implementation self-verification; context injection and missing assets are deliberate, errors must remain observable',sourceHashes,results},null,2));if(results.some(r=>r.status!=='PASS'))process.exitCode=1;

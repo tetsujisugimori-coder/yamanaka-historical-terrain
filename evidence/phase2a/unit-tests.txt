@@ -2,29 +2,31 @@
 > yamanaka-historical-terrain@0.1.0 test
 > node --test tests/*.test.mjs
 
-✔ printed PASS followed by nonzero native termination cannot be accepted (93.0586ms)
-✔ Windows access violation status is retained even if all internal assertions passed (0.1118ms)
-✔ native success also requires the worker completion contract (0.0968ms)
-✔ phase2a stable IDs, sources, confidence and model objects form a closed relation (454.0324ms)
-✔ phase2a actual exported C faces cover one full patch and meet immutable A boundary (213.4839ms)
-✔ phase2a all split surface edges agree in height and coordinate orientation (137.4945ms)
-✔ phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces (27.4883ms)
-✔ negative controls detect a raised seam, missing facility and reassigned evidence ID (234.6248ms)
-✔ QGIS C cross sections and exported Blender vertices share actual heights (93.8788ms)
-✔ regional: all Blender-exported positions match GIS heights and metric axes (30.1799ms)
-✔ castle: all Blender-exported positions match GIS heights and metric axes (22.099ms)
-✔ projected/local conversion preserves cardinal orientation and 1 metre scale (2.3141ms)
-✔ bilinear terrain sampler interpolates independent known plane (0.1224ms)
-✔ every observation anchor remains inside castle and regional measured bounds (9.0852ms)
-✔ inferred study cuts the terrain, meets the boundary and has no A category (228.6022ms)
-✔ triangle-surface negative control rejects a bilinear raised patch and an excessive cut (1.3241ms)
-✔ perspective scale preserves actual projected length through narrow/wide, rotation and zoom (1.9312ms)
-✔ GIS metadata reports fallback and no missing heights without implying measurement precision (0.8895ms)
-ℹ tests 18
+✔ a later synchronous selection supersedes both successful and failed earlier work (0.5988ms)
+✔ surface height uses triangle geometry and world scaling; missing geometry is an error (2.069ms)
+✔ printed PASS followed by nonzero native termination cannot be accepted (94.6396ms)
+✔ Windows access violation status is retained even if all internal assertions passed (0.117ms)
+✔ native success also requires the worker completion contract (0.1073ms)
+✔ phase2a stable IDs, sources, confidence and model objects form a closed relation (462.7755ms)
+✔ phase2a actual exported C faces cover one full patch and meet immutable A boundary (223.4784ms)
+✔ phase2a all split surface edges agree in height and coordinate orientation (178.3127ms)
+✔ phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces (35.2054ms)
+✔ negative controls detect a raised seam, missing facility and reassigned evidence ID (279.6752ms)
+✔ QGIS C cross sections and exported Blender vertices share actual heights (104.0767ms)
+✔ regional: all Blender-exported positions match GIS heights and metric axes (35.1978ms)
+✔ castle: all Blender-exported positions match GIS heights and metric axes (29.1711ms)
+✔ projected/local conversion preserves cardinal orientation and 1 metre scale (0.6426ms)
+✔ bilinear terrain sampler interpolates independent known plane (0.1182ms)
+✔ every observation anchor remains inside castle and regional measured bounds (10.078ms)
+✔ inferred study cuts the terrain, meets the boundary and has no A category (244.5357ms)
+✔ triangle-surface negative control rejects a bilinear raised patch and an excessive cut (0.5415ms)
+✔ perspective scale preserves actual projected length through narrow/wide, rotation and zoom (1.9316ms)
+✔ GIS metadata reports fallback and no missing heights without implying measurement precision (0.9988ms)
+ℹ tests 20
 ℹ suites 0
-ℹ pass 18
+ℹ pass 20
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 1918.776
+ℹ duration_ms 2082.5989

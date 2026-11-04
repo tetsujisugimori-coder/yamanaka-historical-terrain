@@ -58,3 +58,33 @@ jobs:
             evidence/phase2a/negative-controls.json
             evidence/phase2a/browser/*.png
           if-no-files-found: error
+  review-fixes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Gated real-GLB intent, height and mutation checks
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/review-fixes-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/review-fixes-browser.mjs
+          node scripts/review-fixes-browser.mjs --mutation=intent
+          node scripts/review-fixes-browser.mjs --mutation=height
+          node scripts/review-reset-cancel.mjs
+          node scripts/review-reset-cancel.mjs --remove-reset-commit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review-fixes-evidence
+          path: evidence/review-fixes/
+          if-no-files-found: error

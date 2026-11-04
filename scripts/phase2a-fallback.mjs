@@ -2,7 +2,7 @@ import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {canonicalSha256,normalization} from './evidence-hash.mjs';
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/reading.js','public/data/nishinomaru.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','public/data/nishinomaru.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 const sourceHashesAtExecution={...sourceHashes};for(const file of Object.keys(sourceHashes))sourceHashes[file]=canonicalSha256(file,await readFile(file));
 const baseline=process.argv.includes('--negative-control');const results=[];
 for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
@@ -10,7 +10,10 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
  for(const scenario of baseline?['hidden-pick','superseded-load']:['no-webgl','new-model-404','new-reading-404','context-lost','hidden-pick','superseded-load']){
   const row={engine:name,scenario,status:'RUNNING',pageerrors:[]};const context=await browser.newContext({viewport:{width:390,height:960},reducedMotion:'reduce'});const page=await context.newPage();page.on('pageerror',e=>row.pageerrors.push(e.message));
   let release;const gate=new Promise(resolve=>release=resolve);
-  if(baseline)await page.route('**/src/main.js*',async route=>{const response=await route.fetch();let code=await response.text();const before=code;code=code.replace('currentModel.children.filter(o=>o.visible),true','currentModel.children,true').replace('if(token!==request||renderFailed)return false;throw error;','throw error;');row.mutationApplied=code!==before;await route.fulfill({response,body:code});});
+  if(baseline){
+   await page.route('**/src/main.js*',async route=>{const response=await route.fetch();let code=await response.text();const before=code;code=code.replace('currentModel.children.filter(o=>o.visible),true','currentModel.children,true');row.mutationApplied=code!==before;await route.fulfill({response,body:code});});
+   await page.route('**/src/intent.js*',async route=>{const response=await route.fetch(),before=await response.text(),code=before.replace('token===revision','true');if(code===before)throw Error('intent mutation did not apply');row.mutationApplied=true;await route.fulfill({response,body:code});});
+  }
   if(scenario==='no-webgl')await page.addInitScript(()=>{const old=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return type.includes('webgl')?null:old.call(this,type,...args);};});
   if(['new-model-404','superseded-load'].includes(scenario))await page.route('**/data/nishinomaru.glb',async route=>{if(scenario==='superseded-load')await gate;await route.fulfill({status:404,body:'deliberate missing reconstruction'});});
   if(scenario==='new-reading-404')await page.route('**/data/nishinomaru.json',r=>r.fulfill({status:404,body:'deliberate missing reading'}));

@@ -1,9 +1,11 @@
 {
   "scope": "implementation self-verification; browser engines, not physical iPhone",
-  "timestamp": "2026-11-03T23:04:46.303Z",
+  "timestamp": "2026-11-04T08:36:34.230Z",
   "sourceHashes": {
     "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
-    "src/main.js": "c46ae8baa5aeef2693905498af46d071e332852a8d1020f743f527e713eade1d",
+    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
+    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
     "src/style.css": "fe33df14c91315f7ff9f6bca455d6203d639581bf9be4abdb9c98dc8703c3d54",
     "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
@@ -38,7 +40,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 415.8646,
+      "firstReadyMs": 484.2662,
       "initial": {
         "state": {
           "view": "regional",
@@ -318,7 +320,7 @@
           }
         ]
       },
-      "totalMs": 2133.7380000000003
+      "totalMs": 2451.0952
     },
     {
       "key": "chromium-375-reduce",
@@ -345,7 +347,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 319.49090000000024,
+      "firstReadyMs": 401.5936999999999,
       "initial": {
         "state": {
           "view": "regional",
@@ -625,7 +627,7 @@
           }
         ]
       },
-      "totalMs": 2134.3469000000005
+      "totalMs": 2350.5263
     },
     {
       "key": "chromium-390-no-preference",
@@ -652,7 +654,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 415.85480000000007,
+      "firstReadyMs": 465.7545,
       "initial": {
         "state": {
           "view": "regional",
@@ -932,7 +934,7 @@
           }
         ]
       },
-      "totalMs": 2137.0640999999996
+      "totalMs": 2280.7986
     },
     {
       "key": "chromium-390-reduce",
@@ -959,7 +961,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 426.6828000000005,
+      "firstReadyMs": 430.67159999999967,
       "initial": {
         "state": {
           "view": "regional",
@@ -1239,7 +1241,7 @@
           }
         ]
       },
-      "totalMs": 2141.9915999999994
+      "totalMs": 2729.6058000000003
     },
     {
       "key": "chromium-765-no-preference",
@@ -1266,7 +1268,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 386.22979999999916,
+      "firstReadyMs": 562.708700000001,
       "initial": {
         "state": {
           "view": "regional",
@@ -1546,7 +1548,7 @@
           }
         ]
       },
-      "totalMs": 2175.6474
+      "totalMs": 3207.8068000000003
     },
     {
       "key": "chromium-765-reduce",
@@ -1573,7 +1575,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 437.5169999999998,
+      "firstReadyMs": 443.54669999999896,
       "initial": {
         "state": {
           "view": "regional",
@@ -1853,7 +1855,7 @@
           }
         ]
       },
-      "totalMs": 2265.7819999999992
+      "totalMs": 2669.7479999999996
     },
     {
       "key": "chromium-1280-no-preference",
@@ -1879,7 +1881,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 479.3737999999994,
+      "firstReadyMs": 453.38770000000113,
       "initial": {
         "state": {
           "view": "regional",
@@ -2159,7 +2161,7 @@
           }
         ]
       },
-      "totalMs": 2809.988799999999
+      "totalMs": 3275.3109999999997
     },
     {
       "key": "chromium-1280-reduce",
@@ -2185,7 +2187,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 441.55899999999747,
+      "firstReadyMs": 460.60359999999855,
       "initial": {
         "state": {
           "view": "regional",
@@ -2465,7 +2467,7 @@
           }
         ]
       },
-      "totalMs": 2532.4457
+      "totalMs": 3274.8202999999994
     },
     {
       "key": "webkit-375-no-preference",
@@ -2492,7 +2494,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 481.52509999999893,
+      "firstReadyMs": 508.5685999999987,
       "initial": {
         "state": {
           "view": "regional",
@@ -2772,7 +2774,7 @@
           }
         ]
       },
-      "totalMs": 3519.4291999999987
+      "totalMs": 3677.0337
     },
     {
       "key": "webkit-375-reduce",
@@ -2799,7 +2801,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 564.8902999999991,
+      "firstReadyMs": 586.1831999999995,
       "initial": {
         "state": {
           "view": "regional",
@@ -3079,7 +3081,7 @@
           }
         ]
       },
-      "totalMs": 4216.2893
+      "totalMs": 4182.750400000001
     },
     {
       "key": "webkit-390-no-preference",
@@ -3106,7 +3108,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 577.4948000000004,
+      "firstReadyMs": 557.2817000000032,
       "initial": {
         "state": {
           "view": "regional",
@@ -3386,7 +3388,7 @@
           }
         ]
       },
-      "totalMs": 3976.9814000000006
+      "totalMs": 3834.133300000005
     },
     {
       "key": "webkit-390-reduce",
@@ -3413,7 +3415,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 515.8529999999992,
+      "firstReadyMs": 607.6434999999983,
       "initial": {
         "state": {
           "view": "regional",
@@ -3693,7 +3695,7 @@
           }
         ]
       },
-      "totalMs": 3811.736299999997
+      "totalMs": 3834.471400000002
     },
     {
       "key": "webkit-765-no-preference",
@@ -3720,314 +3722,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 542.7100999999966,
-      "initial": {
-        "state": {
-          "view": "regional",
-          "mode": "terrain",
-          "selected": "castle",
-          "exaggeration": 1,
-          "route": false,
-          "features": true,
-          "ready": true
-        },
-        "camera": [
-          -6079.373870366724,
-          6006.703518515202,
-          6410.976081477637
-        ],
-        "target": [
-          0,
-          480,
-          0
-        ],
-        "scale": {
-          "metres": 1000,
-          "pixels": 99.90671782903101,
-          "start": [
-            0,
-            480,
-            0
-          ],
-          "end": [
-            725.623851173435,
-            480,
-            688.0915830092915
-          ]
-        },
-        "triangles": 80672,
-        "drawCalls": 5,
-        "geometries": 5,
-        "modelBounds": [
-          -2000,
-          215.2899932861328,
-          -2000,
-          2000,
-          802.5700073242188,
-          2000
-        ],
-        "canvas": [
-          431.8125,
-          717
-        ],
-        "studyBounds": [
-          -160,
-          35,
-          -130,
-          65
-        ],
-        "facilityScreen": [
-          {
-            "id": "nm-bailey",
-            "ndc": [
-              -0.004175642339658314,
-              0.021851141619938924,
-              0.999873734248438
-            ]
-          },
-          {
-            "id": "nm-moat",
-            "ndc": [
-              -0.01759642839070961,
-              0.017326663991181275,
-              0.9998732486068669
-            ]
-          },
-          {
-            "id": "nm-rampart",
-            "ndc": [
-              -0.01217271590529558,
-              0.019546616279396453,
-              0.9998733982800011
-            ]
-          },
-          {
-            "id": "nm-passage",
-            "ndc": [
-              0.009697069033135964,
-              0.020248955176745777,
-              0.9998735898748492
-            ]
-          },
-          {
-            "id": "nm-transition",
-            "ndc": [
-              -0.03645637941542018,
-              0.017610765267177645,
-              0.9998736018991653
-            ]
-          }
-        ],
-        "reconstruction": {
-          "comparison": "restored",
-          "visible": [
-            "A_regional_current"
-          ],
-          "hidden": []
-        },
-        "markerScreen": [
-          {
-            "id": "castle",
-            "ndc": [
-              -9.81113389016326e-17,
-              0.028367893659298267,
-              0.9998735755064202
-            ]
-          },
-          {
-            "id": "west",
-            "ndc": [
-              -0.06441587283848792,
-              0.012946852311851824,
-              0.999872833404373
-            ]
-          },
-          {
-            "id": "south",
-            "ndc": [
-              0.21774254231919563,
-              -0.013852801449575226,
-              0.9998704406447534
-            ]
-          },
-          {
-            "id": "route",
-            "ndc": [
-              0.1247553151588679,
-              0.03235019882883492,
-              0.9998746806425582
-            ]
-          }
-        ]
-      },
-      "study": {
-        "state": {
-          "view": "study",
-          "mode": "contour",
-          "selected": "west",
-          "exaggeration": 1,
-          "route": true,
-          "features": true,
-          "ready": true
-        },
-        "camera": [
-          -171,
-          573.2,
-          -20.000000000000007
-        ],
-        "target": [
-          -145,
-          550.2,
-          -50
-        ],
-        "scale": {
-          "metres": 5,
-          "pixels": 114.41432522223525,
-          "start": [
-            -145,
-            550.2,
-            -50
-          ],
-          "end": [
-            -141.2215545860509,
-            550.2,
-            -46.72534730791079
-          ]
-        },
-        "triangles": 203128,
-        "drawCalls": 2,
-        "geometries": 8,
-        "modelBounds": [
-          -350,
-          363.3800048828125,
-          -450,
-          650,
-          610.1900024414062,
-          650
-        ],
-        "canvas": [
-          431.8125,
-          723
-        ],
-        "studyBounds": [
-          -160,
-          35,
-          -130,
-          65
-        ],
-        "facilityScreen": [
-          {
-            "id": "nm-bailey",
-            "ndc": [
-              8.214347087340776,
-              1.7664923412678608,
-              0.9746873827737472
-            ]
-          },
-          {
-            "id": "nm-moat",
-            "ndc": [
-              9.384847101481055,
-              1.8051986342212392,
-              0.9625991239032472
-            ]
-          },
-          {
-            "id": "nm-rampart",
-            "ndc": [
-              9.147291044553908,
-              1.9266624243760648,
-              0.9673832378646638
-            ]
-          },
-          {
-            "id": "nm-passage",
-            "ndc": [
-              11.331933922269801,
-              1.7397104214171684,
-              0.9713789733717618
-            ]
-          },
-          {
-            "id": "nm-transition",
-            "ndc": [
-              4.16096923228425,
-              1.3587018609634853,
-              0.9729976741949303
-            ]
-          }
-        ],
-        "reconstruction": {
-          "comparison": "restored",
-          "visible": [
-            "C_source_informed_moat_study",
-            "C_castle_with_study_cutout"
-          ],
-          "hidden": []
-        },
-        "markerScreen": [
-          {
-            "id": "castle",
-            "ndc": [
-              8.424046361786806,
-              1.8190472056383646,
-              0.975720891621
-            ]
-          },
-          {
-            "id": "west",
-            "ndc": [
-              0.1952136267901939,
-              0.14800211576197023,
-              0.9557774620433304
-            ]
-          },
-          {
-            "id": "south",
-            "ndc": [
-              -26.97408812057467,
-              2.75878679312788,
-              1.0187997848096997
-            ]
-          },
-          {
-            "id": "route",
-            "ndc": [
-              15.308644805103764,
-              1.2928399912097683,
-              0.9848638730828824
-            ]
-          }
-        ]
-      },
-      "totalMs": 3997.0746
-    },
-    {
-      "key": "webkit-765-reduce",
-      "engine": "webkit",
-      "width": 765,
-      "reducedMotion": "reduce",
-      "status": "PASS",
-      "checks": [
-        "no horizontal page overflow",
-        "actual WebGL and metric terrain bounds",
-        "keyboard rotation and visible focus target",
-        "zoom controls",
-        "trusted pointer rotation",
-        "slope and contour modes",
-        "layer controls",
-        "facility selection and camera preset",
-        "2x vertical only, disclosed",
-        "C study, source note, terrain replacement rendering",
-        "scale bar CSS width matches perspective projection",
-        "study fixed colour explicitly excluded from measurement legend",
-        "trusted browser touch tap",
-        "Reset restores every display state",
-        "sources dialog keyboard and focus return"
-      ],
-      "pageerrors": [],
-      "failedRequests": [],
-      "firstReadyMs": 589.5179000000062,
+      "firstReadyMs": 568.3882999999987,
       "initial": {
         "state": {
           "view": "regional",
@@ -4307,7 +4002,314 @@
           }
         ]
       },
-      "totalMs": 3967.208000000006
+      "totalMs": 3950.4762000000046
+    },
+    {
+      "key": "webkit-765-reduce",
+      "engine": "webkit",
+      "width": 765,
+      "reducedMotion": "reduce",
+      "status": "PASS",
+      "checks": [
+        "no horizontal page overflow",
+        "actual WebGL and metric terrain bounds",
+        "keyboard rotation and visible focus target",
+        "zoom controls",
+        "trusted pointer rotation",
+        "slope and contour modes",
+        "layer controls",
+        "facility selection and camera preset",
+        "2x vertical only, disclosed",
+        "C study, source note, terrain replacement rendering",
+        "scale bar CSS width matches perspective projection",
+        "study fixed colour explicitly excluded from measurement legend",
+        "trusted browser touch tap",
+        "Reset restores every display state",
+        "sources dialog keyboard and focus return"
+      ],
+      "pageerrors": [],
+      "failedRequests": [],
+      "firstReadyMs": 539.8421999999991,
+      "initial": {
+        "state": {
+          "view": "regional",
+          "mode": "terrain",
+          "selected": "castle",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -9566.012481700174,
+          9176.374983363796,
+          10087.794980702003
+        ],
+        "target": [
+          0,
+          480,
+          0
+        ],
+        "scale": {
+          "metres": 2000,
+          "pixels": 126.9850506688789,
+          "start": [
+            0,
+            480,
+            0
+          ],
+          "end": [
+            1451.24770234687,
+            480,
+            1376.1831660185833
+          ]
+        },
+        "triangles": 80672,
+        "drawCalls": 5,
+        "geometries": 5,
+        "modelBounds": [
+          -2000,
+          215.2899932861328,
+          -2000,
+          2000,
+          802.5700073242188,
+          2000
+        ],
+        "canvas": [
+          431.8125,
+          717
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              -0.0026485961356117116,
+              0.01386010691184312,
+              0.999944291084124
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.01115109153875437,
+              0.010980138238105055,
+              0.9999440958745298
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.007716199632645343,
+              0.012390463601383423,
+              0.9999441559991958
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.0061491360854415535,
+              0.012840331500614373,
+              0.9999442330138576
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.02311836138556744,
+              0.011167648632458864,
+              0.9999442378490919
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "A_regional_current"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.307084576211899e-16,
+              0.017988248673391532,
+              0.9999442272362946
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.04078912659803343,
+              0.008198147051709914,
+              0.9999439292632818
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              0.1372564892456845,
+              -0.008732271024919528,
+              0.9999429741823421
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.0792740914206144,
+              0.0205564998666897,
+              0.9999446725333143
+            ]
+          }
+        ]
+      },
+      "study": {
+        "state": {
+          "view": "study",
+          "mode": "contour",
+          "selected": "west",
+          "exaggeration": 1,
+          "route": true,
+          "features": true,
+          "ready": true
+        },
+        "camera": [
+          -171,
+          573.2,
+          -20.000000000000007
+        ],
+        "target": [
+          -145,
+          550.2,
+          -50
+        ],
+        "scale": {
+          "metres": 5,
+          "pixels": 114.41432522223525,
+          "start": [
+            -145,
+            550.2,
+            -50
+          ],
+          "end": [
+            -141.2215545860509,
+            550.2,
+            -46.72534730791079
+          ]
+        },
+        "triangles": 203128,
+        "drawCalls": 2,
+        "geometries": 8,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          431.8125,
+          723
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              8.214347087340776,
+              1.7664923412678608,
+              0.9746873827737472
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              9.384847101481055,
+              1.8051986342212392,
+              0.9625991239032472
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              9.147291044553908,
+              1.9266624243760648,
+              0.9673832378646638
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              11.331933922269801,
+              1.7397104214171684,
+              0.9713789733717618
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              4.16096923228425,
+              1.3587018609634853,
+              0.9729976741949303
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "C_source_informed_moat_study",
+            "C_castle_with_study_cutout"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              8.424046361786806,
+              1.8190472056383646,
+              0.975720891621
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              0.1952136267901939,
+              0.14800211576197023,
+              0.9557774620433304
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -26.97408812057467,
+              2.75878679312788,
+              1.0187997848096997
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              15.308644805103764,
+              1.2928399912097683,
+              0.9848638730828824
+            ]
+          }
+        ]
+      },
+      "totalMs": 4049.2822000000015
     },
     {
       "key": "webkit-1280-no-preference",
@@ -4333,7 +4335,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 564.0103000000017,
+      "firstReadyMs": 576.607600000003,
       "initial": {
         "state": {
           "view": "regional",
@@ -4613,7 +4615,7 @@
           }
         ]
       },
-      "totalMs": 5005.683499999999
+      "totalMs": 4820.330700000006
     },
     {
       "key": "webkit-1280-reduce",
@@ -4639,7 +4641,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 650.9238999999943,
+      "firstReadyMs": 573.011599999998,
       "initial": {
         "state": {
           "view": "regional",
@@ -4919,19 +4921,7 @@
           }
         ]
       },
-      "totalMs": 5267.517199999995
+      "totalMs": 5031.589399999997
     }
-  ],
-  "sourceHashesAtExecution": {
-    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
-    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
-    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
-    "src/style.css": "8b6355578c602050ef07dc1a8b1ba24aaa27f4b6b1602f96f0431991c60ce3b7",
-    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
-    "src/scale.js": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad",
-    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
-    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
-    "public/data/moat-study.glb": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387"
-  },
-  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
+  ]
 }

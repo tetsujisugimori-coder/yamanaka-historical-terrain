@@ -1,10 +1,10 @@
 {
-  "utc": "2026-11-03T23:10:01.169Z",
+  "utc": "2026-11-04T08:41:03.508Z",
   "overall": "PARTIAL",
   "technicalAcceptance": "PASS",
   "unit": {
-    "cases": 18,
-    "pass": 18,
+    "cases": 20,
+    "pass": 20,
     "fail": 0,
     "skip": 0
   },
@@ -48,22 +48,30 @@
     "gis": {
       "file": "evidence/phase2a/gis.json",
       "status": "PASS",
-      "actualExitCode": 0
+      "actualExitCode": 0,
+      "executedAt": "2026-11-03T22:56:45.921Z",
+      "scope": "retained native receipt; this summary does not reexecute QGIS or Blender"
     },
     "blender": {
       "file": "evidence/phase2a/blender.json",
       "status": "PASS",
-      "actualExitCode": 0
+      "actualExitCode": 0,
+      "executedAt": "2026-11-03T22:57:04.566Z",
+      "scope": "retained native receipt; this summary does not reexecute QGIS or Blender"
     },
     "gis-check": {
       "file": "evidence/phase2a/gis-check.json",
       "status": "PASS",
-      "actualExitCode": 0
+      "actualExitCode": 0,
+      "executedAt": "2026-11-03T22:57:06.257Z",
+      "scope": "retained native receipt; this summary does not reexecute QGIS or Blender"
     },
     "blender-check": {
       "file": "evidence/phase2a/blender-check.json",
       "status": "PASS",
-      "actualExitCode": 0
+      "actualExitCode": 0,
+      "executedAt": "2026-11-03T22:57:07.444Z",
+      "scope": "retained native receipt; this summary does not reexecute QGIS or Blender"
     }
   },
   "protectedFiles": 24,

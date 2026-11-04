@@ -2,7 +2,9 @@
   "scope": "implementation self-verification; context injection and missing assets are deliberate, errors must remain observable",
   "sourceHashes": {
     "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
-    "src/main.js": "c46ae8baa5aeef2693905498af46d071e332852a8d1020f743f527e713eade1d",
+    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
+    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229"
   },
   "results": [
@@ -21,7 +23,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:30:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:32:15)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -50,7 +52,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:30:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:32:15)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -78,7 +80,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "HttpError: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=0456c10c:23503:15"
+        "HttpError: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:23503:15"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -101,7 +103,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793746603724:24:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793746603724:28:49)"
+        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793781106159:26:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:30:49)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -122,7 +124,7 @@
       ],
       "pageerrors": [],
       "consoleErrors": [
-        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793746603724:109:152)"
+        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793781106159:134:152)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -264,11 +266,5 @@
       ],
       "eventKind": "real WEBGL_lose_context extension"
     }
-  ],
-  "sourceHashesAtExecution": {
-    "index.html": "396a2495ca0539713f410fa78543a0a7f7ae855f691fbc9b1930f733aecd64be",
-    "src/main.js": "d05ebcdea712908c13e6e2c79ab28856617d88c69bb5755a8b2dd6fb163073e7",
-    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229"
-  },
-  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged."
+  ]
 }
