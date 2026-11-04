@@ -1,0 +1,99 @@
+{
+  "scope": "Implementation self-verification with deliberate faults; physical device NOT_TESTED",
+  "utc": "2026-11-04T19:57:44.071Z",
+  "sourceHashes": {
+    "index.html": "618e86976c2a0dc6462067b53173538bef454bac6c229b152dd7c1701ddd8582",
+    "src/main.js": "6abf33099e556dd7781bfcb78c982135b02335fa5e16e7c6ae4982ac1cea41a8",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca"
+  },
+  "sourceHashesAtExecution": {
+    "index.html": "618e86976c2a0dc6462067b53173538bef454bac6c229b152dd7c1701ddd8582",
+    "src/main.js": "6abf33099e556dd7781bfcb78c982135b02335fa5e16e7c6ae4982ac1cea41a8",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca"
+  },
+  "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged.",
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-model-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-reading-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "context-lost",
+      "status": "PASS",
+      "pageerrors": [],
+      "lossKind": "native extension"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-model-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-reading-404",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "context-lost",
+      "status": "PASS",
+      "pageerrors": [],
+      "lossKind": "native extension"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "PASS",
+      "pageerrors": []
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "PASS",
+      "pageerrors": []
+    }
+  ]
+}

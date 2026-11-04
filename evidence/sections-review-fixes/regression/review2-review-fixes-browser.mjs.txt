@@ -1,0 +1,104 @@
+green PASS chromium P2 castle success 390/reduce
+green PASS chromium P2 castle 404 390/reduce
+green PASS chromium P2 west success 390/reduce
+green PASS chromium P2 west 404 390/reduce
+green PASS chromium P2 south success 390/reduce
+green PASS chromium P2 south 404 390/reduce
+green PASS chromium P2 route success 390/reduce
+green PASS chromium P2 route 404 390/reduce
+green PASS chromium P2 nm-bailey success 390/reduce
+green PASS chromium P2 nm-bailey 404 390/reduce
+green PASS chromium P2 nm-moat success 390/reduce
+green PASS chromium P2 nm-moat 404 390/reduce
+green PASS chromium P2 nm-rampart success 390/reduce
+green PASS chromium P2 nm-rampart 404 390/reduce
+green PASS chromium P2 nm-passage success 390/reduce
+green PASS chromium P2 nm-passage 404 390/reduce
+green PASS chromium P2 nm-transition success 390/reduce
+green PASS chromium P2 nm-transition 404 390/reduce
+green PASS chromium P2 reset success 390/reduce
+green PASS chromium P2 reset 404 390/reduce
+green PASS chromium P2 view:castle success 390/reduce
+green PASS chromium P2 view:castle 404 390/reduce
+green PASS chromium P2 view:study success 390/reduce
+green PASS chromium P2 view:study 404 390/reduce
+green PASS chromium P2 castle success 375/no-preference
+green PASS chromium P2 west 404 375/reduce
+green PASS chromium P2 south success 390/no-preference
+green PASS chromium P2 route 404 390/reduce
+green PASS chromium P2 castle success 765/no-preference
+green PASS chromium P2 west 404 765/reduce
+green PASS chromium P2 south success 1280/no-preference
+green PASS chromium P2 route 404 1280/reduce
+green PASS chromium P3 nm-bailey restored 1x ﾎ・0
+green PASS chromium P3 nm-moat restored 1x ﾎ・0
+green PASS chromium P3 nm-rampart restored 1x ﾎ・0
+green PASS chromium P3 nm-passage restored 1x ﾎ・0
+green PASS chromium P3 nm-transition restored 1x ﾎ・0
+green PASS chromium P3 nm-bailey restored 2x ﾎ・0
+green PASS chromium P3 nm-moat restored 2x ﾎ・0
+green PASS chromium P3 nm-rampart restored 2x ﾎ・0
+green PASS chromium P3 nm-passage restored 2x ﾎ・0
+green PASS chromium P3 nm-transition restored 2x ﾎ・0
+green PASS chromium P3 nm-bailey current 1x ﾎ・0
+green PASS chromium P3 nm-moat current 1x ﾎ・0
+green PASS chromium P3 nm-rampart current 1x ﾎ・1.1368683772161603e-13
+green PASS chromium P3 nm-passage current 1x ﾎ・0
+green PASS chromium P3 nm-transition current 1x ﾎ・0
+green PASS chromium P3 nm-bailey current 2x ﾎ・2.2737367544323206e-13
+green PASS chromium P3 nm-moat current 2x ﾎ・0
+green PASS chromium P3 nm-rampart current 2x ﾎ・2.2737367544323206e-13
+green PASS chromium P3 nm-passage current 2x ﾎ・0
+green PASS chromium P3 nm-transition current 2x ﾎ・0
+green PASS webkit P2 castle success 390/reduce
+green PASS webkit P2 castle 404 390/reduce
+green PASS webkit P2 west success 390/reduce
+green PASS webkit P2 west 404 390/reduce
+green PASS webkit P2 south success 390/reduce
+green PASS webkit P2 south 404 390/reduce
+green PASS webkit P2 route success 390/reduce
+green PASS webkit P2 route 404 390/reduce
+green PASS webkit P2 nm-bailey success 390/reduce
+green PASS webkit P2 nm-bailey 404 390/reduce
+green PASS webkit P2 nm-moat success 390/reduce
+green PASS webkit P2 nm-moat 404 390/reduce
+green PASS webkit P2 nm-rampart success 390/reduce
+green PASS webkit P2 nm-rampart 404 390/reduce
+green PASS webkit P2 nm-passage success 390/reduce
+green PASS webkit P2 nm-passage 404 390/reduce
+green PASS webkit P2 nm-transition success 390/reduce
+green PASS webkit P2 nm-transition 404 390/reduce
+green PASS webkit P2 reset success 390/reduce
+green PASS webkit P2 reset 404 390/reduce
+green PASS webkit P2 view:castle success 390/reduce
+green PASS webkit P2 view:castle 404 390/reduce
+green PASS webkit P2 view:study success 390/reduce
+green PASS webkit P2 view:study 404 390/reduce
+green PASS webkit P2 castle success 375/no-preference
+green PASS webkit P2 west 404 375/reduce
+green PASS webkit P2 south success 390/no-preference
+green PASS webkit P2 route 404 390/reduce
+green PASS webkit P2 castle success 765/no-preference
+green PASS webkit P2 west 404 765/reduce
+green PASS webkit P2 south success 1280/no-preference
+green PASS webkit P2 route 404 1280/reduce
+green PASS webkit P3 nm-bailey restored 1x ﾎ・0
+green PASS webkit P3 nm-moat restored 1x ﾎ・0
+green PASS webkit P3 nm-rampart restored 1x ﾎ・0
+green PASS webkit P3 nm-passage restored 1x ﾎ・0
+green PASS webkit P3 nm-transition restored 1x ﾎ・0
+green PASS webkit P3 nm-bailey restored 2x ﾎ・0
+green PASS webkit P3 nm-moat restored 2x ﾎ・0
+green PASS webkit P3 nm-rampart restored 2x ﾎ・0
+green PASS webkit P3 nm-passage restored 2x ﾎ・0
+green PASS webkit P3 nm-transition restored 2x ﾎ・0
+green PASS webkit P3 nm-bailey current 1x ﾎ・0
+green PASS webkit P3 nm-moat current 1x ﾎ・0
+green PASS webkit P3 nm-rampart current 1x ﾎ・1.1368683772161603e-13
+green PASS webkit P3 nm-passage current 1x ﾎ・0
+green PASS webkit P3 nm-transition current 1x ﾎ・0
+green PASS webkit P3 nm-bailey current 2x ﾎ・2.2737367544323206e-13
+green PASS webkit P3 nm-moat current 2x ﾎ・0
+green PASS webkit P3 nm-rampart current 2x ﾎ・2.2737367544323206e-13
+green PASS webkit P3 nm-passage current 2x ﾎ・0
+green PASS webkit P3 nm-transition current 2x ﾎ・0

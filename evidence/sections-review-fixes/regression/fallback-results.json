@@ -1,0 +1,270 @@
+{
+  "scope": "implementation self-verification; context injection and missing assets are deliberate, errors must remain observable",
+  "sourceHashes": {
+    "index.html": "618e86976c2a0dc6462067b53173538bef454bac6c229b152dd7c1701ddd8582",
+    "src/main.js": "6abf33099e556dd7781bfcb78c982135b02335fa5e16e7c6ae4982ac1cea41a8",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+    "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl-390",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged",
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "no false 3D-ready status or model fetch"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=40a88534:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793821680916:33:15)"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ],
+      "actual": {
+        "facilityButtons": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
+        "sourceLinks": 5,
+        "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
+      }
+    },
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl-1280",
+      "width": 1280,
+      "status": "PASS",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged",
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "no false 3D-ready status or model fetch"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=40a88534:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793821680916:33:15)"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ],
+      "actual": {
+        "facilityButtons": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　",
+        "sourceLinks": 5,
+        "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
+      }
+    },
+    {
+      "engine": "chromium",
+      "scenario": "missing-model",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "model 404 leaves text and sources intact, error visible"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "HttpError: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found\n    at http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=40a88534:23503:15"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json",
+        "/data/regional.json",
+        "/data/castle.json",
+        "/data/study.json",
+        "/data/regional.glb"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "scenario": "missing-reading",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "negative control: reading 404 is explicit failure, not a successful text fallback"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793821680916:27:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793821680916:31:49)"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "scenario": "context-lost",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "runtime context loss preserves reading and stops reporting ready"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793821680916:143:152)"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json",
+        "/data/regional.json",
+        "/data/castle.json",
+        "/data/study.json",
+        "/data/regional.glb"
+      ],
+      "eventKind": "real WEBGL_lose_context extension"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl-390",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged",
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "no false 3D-ready status or model fetch"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context."
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ],
+      "actual": {
+        "facilityButtons": 4,
+        "detailText": "A\n現況\n山中城の立地\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
+        "sourceLinks": 5,
+        "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
+      }
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl-1280",
+      "width": 1280,
+      "status": "PASS",
+      "checks": [
+        "actual WebGL context creation denied; 2D capability unchanged",
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "no false 3D-ready status or model fetch"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "THREE.WebGLRenderer: Error creating WebGL context.",
+        "Error: Error creating WebGL context."
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ],
+      "actual": {
+        "facilityButtons": 4,
+        "detailText": "A\n現況\n山中城の立地\n\n急な谷に挟まれた尾根を使い、箱根越えの道を城内へ取り込む。小田原の西を守る拠点だった。現在の地形で立地を読み、当時の地表との違いを残す。\n\n現在のDEM標高（概略案内地点）\n575 m\n位置の確実性\n概略 / 未測量\n地点案内用の概略位置。遺構境界・測量基準点ではない。\n国土地理院 ↗　三島市の解説 ↗　保存活用計画 ↗　\n",
+        "sourceLinks": 5,
+        "status": "この環境ではWebGLを開始できません。施設一覧から解説と出典は利用できます。"
+      }
+    },
+    {
+      "engine": "webkit",
+      "scenario": "missing-model",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "model 404 leaves text and sources intact, error visible"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Error: fetch for \"http://127.0.0.1:4317/data/regional.glb\" responded with 404: Not Found"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json",
+        "/data/regional.json",
+        "/data/castle.json",
+        "/data/study.json",
+        "/data/regional.glb"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "scenario": "missing-reading",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "negative control: reading 404 is explicit failure, not a successful text fallback"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Error: 404 /data/sources.json"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "scenario": "context-lost",
+      "width": 390,
+      "status": "PASS",
+      "checks": [
+        "all four facility descriptions and per-facility source links remain usable",
+        "complete sources accessible and dialog focus restored",
+        "3D controls disabled without disabling reading controls",
+        "runtime context loss preserves reading and stops reporting ready"
+      ],
+      "pageerrors": [],
+      "consoleErrors": [
+        "Error: WebGL context lost"
+      ],
+      "dataRequests": [
+        "/data/features.json",
+        "/data/sources.json",
+        "/data/nishinomaru.json",
+        "/data/regional.json",
+        "/data/castle.json",
+        "/data/study.json",
+        "/data/regional.glb"
+      ],
+      "eventKind": "real WEBGL_lose_context extension"
+    }
+  ]
+}

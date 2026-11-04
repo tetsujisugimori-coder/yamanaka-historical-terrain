@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "scope": "implementation self-verification after independent changes requested; independent rereview pending",
+  "productHead": "be3f4e1d408d64346188b41421f4e5a7f30be443",
+  "P2_01": {
+    "redRejected": 4,
+    "greenAccepted": 4,
+    "restoreRemovedRejected": 4,
+    "maxRestoredSurfaceError": 0
+  },
+  "P2_02": {
+    "redRejected": 4,
+    "visibleAccepted": 12,
+    "builtVisibleAccepted": 12,
+    "profilesUnchanged": true
+  },
+  "existing": {
+    "normal": 62,
+    "pending": 4,
+    "unit": 26,
+    "regression": 248,
+    "builtSections": 8,
+    "negativeGeometryRejected": 40,
+    "unaffected1xAccepted": 8
+  },
+  "oldSubmissionProtected": true,
+  "independentOriginalCopies": [
+    {
+      "file": "cancel-overlay.json",
+      "sha256": "87728767215902faa7a5e53227fd8eaeb0bb18179edf3cd5cc641c77687dc9f4",
+      "unchanged": true
+    },
+    {
+      "file": "cancel-overlay.mjs",
+      "sha256": "07938537436c88bfa169e97bc8d9bfb1977afc18f965d55a8f252b0f3aab8c87",
+      "unchanged": true
+    },
+    {
+      "file": "execution-summary.json",
+      "sha256": "c35db9d3b30c2d8583168dec6cee423e30bc27597c9c8943f54cb93d56d19978",
+      "unchanged": true
+    },
+    {
+      "file": "REVIEW.md",
+      "sha256": "81c0262cbc7a62dd06ea15827e03bf38a16f1e531aa4dd73d520e65a091ab77c",
+      "unchanged": true
+    }
+  ]
+}
