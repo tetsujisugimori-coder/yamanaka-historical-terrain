@@ -1,0 +1,113 @@
+{
+  "overall": "PARTIAL",
+  "selfVerification": "PASS",
+  "independentReview": "NOT_VERIFIED; parent arranges separate reviewer",
+  "mergeRecommendation": "NO until independent review",
+  "commits": {
+    "legacy": "77b015565b79493a05f45c6d959d459546e21526",
+    "defect": "bf5c4b66cd74f572b49a2015be571a8105f1f7e1"
+  },
+  "comparisons": [
+    {
+      "engine": "chromium",
+      "input": "drag",
+      "outcome": "success",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "ready",
+      "defectRender": "loading",
+      "fixedRender": "ready"
+    },
+    {
+      "engine": "chromium",
+      "input": "drag",
+      "outcome": "404",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "error",
+      "defectRender": "loading",
+      "fixedRender": "error"
+    },
+    {
+      "engine": "chromium",
+      "input": "wheel",
+      "outcome": "success",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "ready",
+      "defectRender": "loading",
+      "fixedRender": "ready"
+    },
+    {
+      "engine": "chromium",
+      "input": "wheel",
+      "outcome": "404",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "error",
+      "defectRender": "loading",
+      "fixedRender": "error"
+    },
+    {
+      "engine": "webkit",
+      "input": "drag",
+      "outcome": "success",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "ready",
+      "defectRender": "loading",
+      "fixedRender": "ready"
+    },
+    {
+      "engine": "webkit",
+      "input": "drag",
+      "outcome": "404",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "error",
+      "defectRender": "loading",
+      "fixedRender": "error"
+    },
+    {
+      "engine": "webkit",
+      "input": "wheel",
+      "outcome": "success",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "ready",
+      "defectRender": "loading",
+      "fixedRender": "ready"
+    },
+    {
+      "engine": "webkit",
+      "input": "wheel",
+      "outcome": "404",
+      "legacy": "PASS",
+      "defect": "FAIL",
+      "fixed": "PASS",
+      "legacyRender": "error",
+      "defectRender": "loading",
+      "fixedRender": "error"
+    }
+  ],
+  "fixedCases": 72,
+  "mutationExpectedFailures": 72,
+  "unit": {
+    "pass": 21,
+    "fail": 0,
+    "skip": 0
+  },
+  "scope": "Windows; real regional.glb; explicit response gate; trusted drag/wheel plus keyboard/tap; Chromium/WebKit; 375/390/765/1280; usual/reduced motion. Camera pose is preserved, not disabled.",
+  "unknowns": [
+    "Historical QGIS crash and old browser timeout causes remain UNKNOWN",
+    "Physical Safari/VoiceOver/field and 25MB real-device load remain NOT_TESTED",
+    "Native projects not regenerated or reopened in this repair"
+  ]
+}

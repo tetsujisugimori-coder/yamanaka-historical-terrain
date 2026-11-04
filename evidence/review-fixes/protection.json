@@ -1,6 +1,6 @@
 {
   "base": "77b015565b79493a05f45c6d959d459546e21526",
-  "utc": "2026-11-04T08:41:05.183Z",
+  "utc": "2026-11-04T09:23:25.889Z",
   "status": "PASS",
   "nativeRegeneration": "NOT_RERUN; QGIS/Blender projects, DEM, source metadata and GLBs preserved byte for byte. New direct observation-point validation is against GLB triangles, not a new native project re-read.",
   "files": [

@@ -5,28 +5,28 @@
   "mutation": "height",
   "testUrl": "http://127.0.0.1:4317",
   "sourceHashes": {
-    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
     "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
     "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
     "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
     "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
-    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
     "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
   },
   "sourceHashesAtExecution": {
-    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
     "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
     "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
     "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
     "public/data/nishinomaru.json": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca",
-    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
     "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
   },
   "hashNormalization": "UTF-8 CRLF to LF only, matching repository .gitattributes; raw hashes at execution are retained separately. Binary bytes are unchanged.",
-  "servedModuleSha256": "8faca38740e23ccbf8ebcf61b57bf170a6d8be579c48a76195b8766e72edac49",
-  "utc": "2026-11-04T08:35:34.468Z",
+  "servedModuleSha256": "a6d907b4e9de83678c8a73c41784ca8e9fd537fe16fbc9c3fd3484cb298a9497",
+  "utc": "2026-11-04T09:26:11.919Z",
   "results": [
     {
       "kind": "P3-01",

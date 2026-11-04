@@ -1,6 +1,8 @@
 {
   "scope": "real initial A response held while C becomes usable; 2x -> Reset -> C selection -> release A",
-  "sourceHash": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
+  "mutationApplied": false,
+  "servedModuleSha256": "a6d907b4e9de83678c8a73c41784ca8e9fd537fe16fbc9c3fd3484cb298a9497",
+  "sourceHash": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
   "results": [
     {
       "engine": "chromium",

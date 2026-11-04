@@ -42,6 +42,7 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 - [技術比較・将来シミュレーションとの分離・次期提案](docs/design-and-next.md)
 - [検証結果と受入基準](docs/validation.md)
 - [第2期Aの制作・根拠・再現・検証と独立レビュー引継ぎ](docs/phase2a.md)
+- [初期カメラ操作のP2修正・旧版/欠陥版/修正版の比較](docs/initial-camera-fix.md)
 - [出典・利用条件](ATTRIBUTION.md)
 
 検証公開はGitHub Pages用の別ワークフローで扱います。Pagesを利用するには、リポジトリの Settings → Pages → Source で GitHub Actions を選びます。公開URLが表示されるまでデプロイ完了とは扱いません。基盤の独立レビューとマージ判断は実装担当の自己検証から分けています。

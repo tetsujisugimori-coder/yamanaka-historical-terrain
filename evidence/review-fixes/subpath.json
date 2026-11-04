@@ -1,5 +1,11 @@
 {
-  "root": "http://127.0.0.1:4320/yamanaka-historical-terrain/",
+  "root": "http://127.0.0.1:4321/yamanaka-historical-terrain/",
+  "sourceHashes": {
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+    "dist/index.html": "48ac4a9299551da6b754b832fb2e68595789b422a91bc19015fdb0fdcf9d7d4a"
+  },
   "scope": "local static Pages build; no public deployment",
   "results": [
     {

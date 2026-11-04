@@ -1,0 +1,38 @@
+{
+  "root": "http://127.0.0.1:4320/yamanaka-historical-terrain/",
+  "scope": "local static Pages build; no public deployment",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "status": "FAIL",
+      "pageerrors": [],
+      "assetFailures": [],
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "status": "FAIL",
+      "pageerrors": [],
+      "assetFailures": [],
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "status": "FAIL",
+      "pageerrors": [],
+      "assetFailures": [],
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "status": "FAIL",
+      "pageerrors": [],
+      "assetFailures": [],
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    }
+  ]
+}

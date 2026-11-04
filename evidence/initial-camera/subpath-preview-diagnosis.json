@@ -1,0 +1,26 @@
+{
+  "classification": "HARNESS_CONFIGURATION_ERROR",
+  "cause": "Subpath build served with root preview config. Repeated identical browser module request remains 404 at default base and succeeds at explicit GITHUB_PAGES=1 preview. No application code change between configurations. This does not resolve historic timeout UNKNOWN.",
+  "observations": [
+    {
+      "config": "default-root-preview",
+      "moduleResponse": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4320/yamanaka-historical-terrain/assets/index-DA97CMKD.js"
+        }
+      ],
+      "renderState": "loading"
+    },
+    {
+      "config": "explicit-GITHUB_PAGES=1-preview",
+      "moduleResponse": [
+        {
+          "status": 200,
+          "url": "http://127.0.0.1:4321/yamanaka-historical-terrain/assets/index-DA97CMKD.js"
+        }
+      ],
+      "renderState": "ready"
+    }
+  ]
+}

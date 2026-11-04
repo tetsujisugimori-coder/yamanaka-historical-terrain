@@ -1,10 +1,10 @@
 {
   "scope": "implementation self-verification; browser engines, not physical iPhone",
-  "timestamp": "2026-11-04T08:36:34.230Z",
+  "timestamp": "2026-11-04T09:25:58.300Z",
   "sourceHashes": {
     "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
-    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
-    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
     "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229",
     "src/style.css": "fe33df14c91315f7ff9f6bca455d6203d639581bf9be4abdb9c98dc8703c3d54",
@@ -40,7 +40,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 484.2662,
+      "firstReadyMs": 425.9603,
       "initial": {
         "state": {
           "view": "regional",
@@ -320,7 +320,7 @@
           }
         ]
       },
-      "totalMs": 2451.0952
+      "totalMs": 2242.9574
     },
     {
       "key": "chromium-375-reduce",
@@ -347,7 +347,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 401.5936999999999,
+      "firstReadyMs": 564.4258999999997,
       "initial": {
         "state": {
           "view": "regional",
@@ -627,7 +627,7 @@
           }
         ]
       },
-      "totalMs": 2350.5263
+      "totalMs": 2503.0838999999996
     },
     {
       "key": "chromium-390-no-preference",
@@ -654,7 +654,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 465.7545,
+      "firstReadyMs": 436.3729000000003,
       "initial": {
         "state": {
           "view": "regional",
@@ -934,7 +934,7 @@
           }
         ]
       },
-      "totalMs": 2280.7986
+      "totalMs": 2229.6978
     },
     {
       "key": "chromium-390-reduce",
@@ -961,7 +961,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 430.67159999999967,
+      "firstReadyMs": 447.6902,
       "initial": {
         "state": {
           "view": "regional",
@@ -1241,7 +1241,7 @@
           }
         ]
       },
-      "totalMs": 2729.6058000000003
+      "totalMs": 2219.9763999999996
     },
     {
       "key": "chromium-765-no-preference",
@@ -1268,7 +1268,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 562.708700000001,
+      "firstReadyMs": 420.9839000000011,
       "initial": {
         "state": {
           "view": "regional",
@@ -1548,7 +1548,7 @@
           }
         ]
       },
-      "totalMs": 3207.8068000000003
+      "totalMs": 2334.2286000000004
     },
     {
       "key": "chromium-765-reduce",
@@ -1575,7 +1575,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 443.54669999999896,
+      "firstReadyMs": 441.0671999999995,
       "initial": {
         "state": {
           "view": "regional",
@@ -1855,7 +1855,7 @@
           }
         ]
       },
-      "totalMs": 2669.7479999999996
+      "totalMs": 2266.9758999999995
     },
     {
       "key": "chromium-1280-no-preference",
@@ -1881,7 +1881,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 453.38770000000113,
+      "firstReadyMs": 371.90939999999864,
       "initial": {
         "state": {
           "view": "regional",
@@ -2161,7 +2161,7 @@
           }
         ]
       },
-      "totalMs": 3275.3109999999997
+      "totalMs": 2685.142099999999
     },
     {
       "key": "chromium-1280-reduce",
@@ -2187,7 +2187,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 460.60359999999855,
+      "firstReadyMs": 459.90139999999883,
       "initial": {
         "state": {
           "view": "regional",
@@ -2467,7 +2467,7 @@
           }
         ]
       },
-      "totalMs": 3274.8202999999994
+      "totalMs": 2772.0549999999967
     },
     {
       "key": "webkit-375-no-preference",
@@ -2494,7 +2494,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 508.5685999999987,
+      "firstReadyMs": 503.8361999999979,
       "initial": {
         "state": {
           "view": "regional",
@@ -2774,7 +2774,7 @@
           }
         ]
       },
-      "totalMs": 3677.0337
+      "totalMs": 3597.056199999999
     },
     {
       "key": "webkit-375-reduce",
@@ -2801,7 +2801,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 586.1831999999995,
+      "firstReadyMs": 583.2700000000004,
       "initial": {
         "state": {
           "view": "regional",
@@ -3081,7 +3081,7 @@
           }
         ]
       },
-      "totalMs": 4182.750400000001
+      "totalMs": 4204.308400000002
     },
     {
       "key": "webkit-390-no-preference",
@@ -3108,7 +3108,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 557.2817000000032,
+      "firstReadyMs": 532.0276000000013,
       "initial": {
         "state": {
           "view": "regional",
@@ -3388,7 +3388,7 @@
           }
         ]
       },
-      "totalMs": 3834.133300000005
+      "totalMs": 3776.5035000000025
     },
     {
       "key": "webkit-390-reduce",
@@ -3415,7 +3415,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 607.6434999999983,
+      "firstReadyMs": 578.7871999999988,
       "initial": {
         "state": {
           "view": "regional",
@@ -3695,7 +3695,7 @@
           }
         ]
       },
-      "totalMs": 3834.471400000002
+      "totalMs": 3830.8143999999993
     },
     {
       "key": "webkit-765-no-preference",
@@ -3722,7 +3722,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 568.3882999999987,
+      "firstReadyMs": 708.0602999999974,
       "initial": {
         "state": {
           "view": "regional",
@@ -4002,7 +4002,7 @@
           }
         ]
       },
-      "totalMs": 3950.4762000000046
+      "totalMs": 4208.2135999999955
     },
     {
       "key": "webkit-765-reduce",
@@ -4029,7 +4029,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 539.8421999999991,
+      "firstReadyMs": 626.1731,
       "initial": {
         "state": {
           "view": "regional",
@@ -4309,7 +4309,7 @@
           }
         ]
       },
-      "totalMs": 4049.2822000000015
+      "totalMs": 4374.536200000002
     },
     {
       "key": "webkit-1280-no-preference",
@@ -4335,7 +4335,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 576.607600000003,
+      "firstReadyMs": 677.0580999999947,
       "initial": {
         "state": {
           "view": "regional",
@@ -4615,7 +4615,7 @@
           }
         ]
       },
-      "totalMs": 4820.330700000006
+      "totalMs": 4887.7402
     },
     {
       "key": "webkit-1280-reduce",
@@ -4641,7 +4641,7 @@
       ],
       "pageerrors": [],
       "failedRequests": [],
-      "firstReadyMs": 573.011599999998,
+      "firstReadyMs": 580.4873999999982,
       "initial": {
         "state": {
           "view": "regional",
@@ -4921,7 +4921,7 @@
           }
         ]
       },
-      "totalMs": 5031.589399999997
+      "totalMs": 5001.156800000004
     }
   ]
 }

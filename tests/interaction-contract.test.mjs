@@ -10,6 +10,14 @@ test('a later synchronous selection supersedes both successful and failed earlie
   const latest=intents.begin();state='latest selection';release();await pending;assert.equal(state,'latest selection');assert.ok(latest.isCurrent());
  }
 });
+test('initial camera input preserves model ownership and errors, but supersedes default camera effects',()=>{
+ const intents=createIntentController(),initial=intents.begin();
+ intents.adjustCamera();intents.adjustCamera();
+ assert.ok(initial.isCurrent());assert.equal(initial.canMoveCamera(),false);
+ const selection=intents.begin();
+ assert.equal(initial.isCurrent(),false);assert.equal(initial.canMoveCamera(),false);
+ assert.ok(selection.isCurrent());assert.ok(selection.canMoveCamera());
+});
 test('surface height uses triangle geometry and world scaling; missing geometry is an error',()=>{
  const g=new BufferGeometry();g.setAttribute('position',new Float32BufferAttribute([0,10,0, 10,10,0, 0,10,10, 10,14,10],3));g.setIndex([0,2,1,1,2,3]);
  const mesh=new Mesh(g,new MeshBasicMaterial({side:DoubleSide})),parent=new Group();parent.add(mesh);

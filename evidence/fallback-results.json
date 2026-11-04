@@ -2,8 +2,8 @@
   "scope": "implementation self-verification; context injection and missing assets are deliberate, errors must remain observable",
   "sourceHashes": {
     "index.html": "8fb5dcd8ec6e4e47565d8427862382d2a522198ededa4a002f9a20b81b6003d5",
-    "src/main.js": "ff3a1abdf4b6f760089c3de7f0030d204e41dfcddc910ef3c3c2d28a16755431",
-    "src/intent.js": "39e2a0d0f5e0fe359edc2e796e85ae20de524cd989f03bbc11e0b4119da6f7c5",
+    "src/main.js": "0381c802123efd7bc8b3552ea20bba9d46426203579c3924cf82616f001a0f0c",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
     "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
     "src/reading.js": "622dbd7a8799c99a31fec2b92fb420aafd2b7368b85f2af4f7b494715e879229"
   },
@@ -23,7 +23,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:32:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793784104200:32:15)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -52,7 +52,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "THREE.WebGLRenderer: Error creating WebGL context.",
-        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:32:15)"
+        "Error: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:4317/node_modules/.vite/deps/chunk-SCGUQBHX.js?v=4a0b5d2a:40047:19)\n    at bootstrap (http://127.0.0.1:4317/src/main.js?t=1793784104200:32:15)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -103,7 +103,7 @@
       "pageerrors": [],
       "consoleErrors": [
         "Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793781106159:26:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793781106159:30:49)"
+        "Error: 404 /data/sources.json\n    at json (http://127.0.0.1:4317/src/main.js?t=1793784104200:26:66)\n    at async Promise.all (index 1)\n    at async bootstrap (http://127.0.0.1:4317/src/main.js?t=1793784104200:30:49)"
       ],
       "dataRequests": [
         "/data/features.json",
@@ -124,7 +124,7 @@
       ],
       "pageerrors": [],
       "consoleErrors": [
-        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793781106159:134:152)"
+        "Error: WebGL context lost\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:4317/src/main.js?t=1793784104200:137:152)"
       ],
       "dataRequests": [
         "/data/features.json",

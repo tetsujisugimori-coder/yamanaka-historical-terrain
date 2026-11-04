@@ -7,7 +7,7 @@ const resetRed=await read('reset-cancel-red'),resetGreen=await read('reset-cance
 const resetMutation=await read('reset-cancel-mutation');assert.equal(resetMutation.mutationApplied,true);assert.equal(resetMutation.results.length,4);assert.ok(resetMutation.results.every(r=>r.status==='FAIL'));
 for(const report of [resetGreen,resetMutation])assert.equal(report.sourceHash,canonicalSha256('src/main.js',await readFile('src/main.js')));
 const subpath=await read('subpath');assert.equal(subpath.results.length,4);assert.ok(subpath.results.every(r=>r.status==='PASS'));
-const unit=await readFile('evidence/review-fixes/unit-tests.txt','utf8');assert.match(unit,/pass\s+20/);assert.match(unit,/fail\s+0/);assert.match(unit,/skipped\s+0/);
+const unit=await readFile('evidence/review-fixes/unit-tests.txt','utf8');assert.match(unit,/pass\s+21/);assert.match(unit,/fail\s+0/);assert.match(unit,/skipped\s+0/);
 const red=await read('red'),green=await read('green'),intent=await read('mutation-intent'),height=await read('mutation-height'),protection=await read('protection');
 assert.equal(red.results.length,88);assert.equal(green.results.length,112);assert.ok(green.results.every(r=>r.status==='PASS'));
 assert.equal(intent.results.length,16);assert.ok(intent.results.every(r=>r.status==='FAIL'&&r.mutationApplied));
@@ -24,7 +24,7 @@ assert.equal(failedOld.filter(r=>r.kind==='P2-01').length,26);assert.equal(faile
 const result={utc:new Date().toISOString(),overall:'PARTIAL',selfVerification:{'P2-01':'PASS','P3-01':'PASS'},independentReview:'NOT_VERIFIED; parent arranges a different reviewer',mergeRecommendation:'NO until independent re-review',oldCommit:'77b015565b79493a05f45c6d959d459546e21526',greenCases:112,sameConditionComparisons:88,redToGreen:{P2:failedOld.filter(r=>r.kind==='P2-01').length,P3:failedOld.filter(r=>r.kind==='P3-01').length},mutationFailures:{intent:16,height:16},maxHeightError:Math.max(...green.results.filter(r=>r.kind==='P3-01').map(r=>r.errorMetres)),protectedFiles:protection.files.length,nativeReexecution:'NOT_RERUN',comparisons};
 result.additionalResetBoundary={red:4,green:4,scope:'implementation intermediate version; initial A held, C usable, 2x -> Reset -> later C selection'};
 result.mutationFailures.reset=4;
-result.unit={pass:20,fail:0,skip:0};result.staticSubpathCases=4;
+result.unit={pass:21,fail:0,skip:0};result.staticSubpathCases=4;
 await writeFile('evidence/review-fixes/summary.json',JSON.stringify(result,null,2));
 const rows=green.results.filter(r=>r.kind==='P3-01').map(r=>`| ${r.engine} | ${r.id} | ${r.variant} | ${r.scale} | ${r.expectedTarget[1]} | ${r.actualTarget[1]} | ${r.errorMetres} | ${r.status} |`).join('\n');
 await writeFile('evidence/review-fixes/heights.md',`# 実GLB観察点と処理注視点\n\n実装担当の自己検証。高さはm。1mm×表示倍率の数値許容差であり、測量精度ではない。\n\n| Engine | ID | A/C表示 | 倍率 | 期待Y | 実Y | 誤差m | 判定 |\n|---|---|---|---|---|---|---|---|\n${rows}\n`);
