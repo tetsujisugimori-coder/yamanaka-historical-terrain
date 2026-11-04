@@ -1,0 +1,50 @@
+[
+  {
+    "script": "browser-test.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:52:22.5608845Z",
+    "end": "2026-11-04T19:53:38.6158946Z"
+  },
+  {
+    "script": "interaction-cycles.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:53:38.8363530Z",
+    "end": "2026-11-04T19:53:45.7474840Z"
+  },
+  {
+    "script": "fallback-test.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:53:45.7641818Z",
+    "end": "2026-11-04T19:53:57.2670608Z"
+  },
+  {
+    "script": "phase2a-browser.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:53:57.2746897Z",
+    "end": "2026-11-04T19:57:26.3692218Z"
+  },
+  {
+    "script": "phase2a-fallback.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:57:26.3828762Z",
+    "end": "2026-11-04T19:57:44.0876200Z"
+  },
+  {
+    "script": "review-fixes-browser.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T19:57:44.0964596Z",
+    "end": "2026-11-04T20:00:14.2392083Z"
+  },
+  {
+    "script": "review-reset-cancel.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T20:00:14.2541840Z",
+    "end": "2026-11-04T20:00:24.4835250Z"
+  },
+  {
+    "script": "initial-camera-browser.mjs",
+    "exitCode": 0,
+    "start": "2026-11-04T20:00:24.4921201Z",
+    "end": "2026-11-04T20:01:20.1580758Z"
+  }
+]

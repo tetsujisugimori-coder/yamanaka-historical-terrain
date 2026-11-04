@@ -1,0 +1,451 @@
+{
+  "head": "7e79e63b50fbcf8d9b5125e864309f5dc3d7f571",
+  "runId": 41895189063,
+  "attempt": 1,
+  "jobId": 126802700775,
+  "reason": "Agent-requested cancellation after >24 minutes in Ubuntu APT dependency acquisition; live log progress observed from packages43 to54, strict transport cause unknown. Product checks were not executed in this job. Other 4 jobs succeeded. Retry same job, same source and dependency versions.",
+  "jobs": [
+    {
+      "id": 126802700378,
+      "name": "data-and-build",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-04T19:15:32Z",
+      "completedAt": "2026-11-04T19:15:51Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:34Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T19:15:34Z",
+          "completed_at": "2026-11-04T19:15:40Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T19:15:40Z",
+          "completed_at": "2026-11-04T19:15:42Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T19:15:42Z",
+          "completed_at": "2026-11-04T19:15:43Z"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T19:15:43Z",
+          "completed_at": "2026-11-04T19:15:47Z"
+        },
+        {
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T19:15:47Z",
+          "completed_at": "2026-11-04T19:15:49Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-04T19:15:49Z",
+          "completed_at": "2026-11-04T19:15:49Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-04T19:15:49Z",
+          "completed_at": "2026-11-04T19:15:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-04T19:15:49Z",
+          "completed_at": "2026-11-04T19:15:49Z"
+        }
+      ]
+    },
+    {
+      "id": 126802700541,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-04T19:15:32Z",
+      "completedAt": "2026-11-04T19:22:50Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:33Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:39Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T19:15:39Z",
+          "completed_at": "2026-11-04T19:15:41Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T19:15:41Z",
+          "completed_at": "2026-11-04T19:15:43Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium webkit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T19:15:43Z",
+          "completed_at": "2026-11-04T19:16:19Z"
+        },
+        {
+          "name": "Run browser regression, phase2A operations and negative controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T19:16:19Z",
+          "completed_at": "2026-11-04T19:22:47Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T19:22:47Z",
+          "completed_at": "2026-11-04T19:22:48Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-04T19:22:48Z",
+          "completed_at": "2026-11-04T19:22:49Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-04T19:22:49Z",
+          "completed_at": "2026-11-04T19:22:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T19:22:49Z",
+          "completed_at": "2026-11-04T19:22:49Z"
+        }
+      ]
+    },
+    {
+      "id": 126802700709,
+      "name": "initial-camera",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-04T19:15:32Z",
+      "completedAt": "2026-11-04T19:27:32Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:33Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:40Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T19:15:40Z",
+          "completed_at": "2026-11-04T19:15:41Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T19:15:41Z",
+          "completed_at": "2026-11-04T19:15:43Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium webkit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T19:15:43Z",
+          "completed_at": "2026-11-04T19:25:33Z"
+        },
+        {
+          "name": "Initial real-GLB completion after trusted camera input",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T19:25:33Z",
+          "completed_at": "2026-11-04T19:27:29Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T19:27:29Z",
+          "completed_at": "2026-11-04T19:27:30Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-04T19:27:30Z",
+          "completed_at": "2026-11-04T19:27:31Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-04T19:27:31Z",
+          "completed_at": "2026-11-04T19:27:31Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T19:27:31Z",
+          "completed_at": "2026-11-04T19:27:31Z"
+        }
+      ]
+    },
+    {
+      "id": 126802700775,
+      "name": "fixed-sections",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "startedAt": "2026-11-04T19:15:32Z",
+      "completedAt": "2026-11-04T19:41:10Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:34Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T19:15:34Z",
+          "completed_at": "2026-11-04T19:15:41Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T19:15:41Z",
+          "completed_at": "2026-11-04T19:15:43Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T19:15:43Z",
+          "completed_at": "2026-11-04T19:15:45Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium webkit",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "number": 5,
+          "started_at": "2026-11-04T19:15:45Z",
+          "completed_at": "2026-11-04T19:41:02Z"
+        },
+        {
+          "name": "Compare sections to independent raw GLB oracle and exercise gated races",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-11-04T19:41:02Z",
+          "completed_at": "2026-11-04T19:41:02Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T19:41:02Z",
+          "completed_at": "2026-11-04T19:41:08Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-11-04T19:41:08Z",
+          "completed_at": "2026-11-04T19:41:08Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-04T19:41:08Z",
+          "completed_at": "2026-11-04T19:41:08Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T19:41:08Z",
+          "completed_at": "2026-11-04T19:41:08Z"
+        }
+      ]
+    },
+    {
+      "id": 126802700832,
+      "name": "review-fixes",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-11-04T19:15:32Z",
+      "completedAt": "2026-11-04T19:20:00Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T19:15:32Z",
+          "completed_at": "2026-11-04T19:15:33Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T19:15:33Z",
+          "completed_at": "2026-11-04T19:15:40Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T19:15:40Z",
+          "completed_at": "2026-11-04T19:15:42Z"
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T19:15:42Z",
+          "completed_at": "2026-11-04T19:15:43Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium webkit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T19:15:43Z",
+          "completed_at": "2026-11-04T19:16:16Z"
+        },
+        {
+          "name": "Gated real-GLB intent, height and mutation checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T19:16:16Z",
+          "completed_at": "2026-11-04T19:19:56Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T19:19:56Z",
+          "completed_at": "2026-11-04T19:19:57Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-04T19:19:57Z",
+          "completed_at": "2026-11-04T19:19:58Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-04T19:19:58Z",
+          "completed_at": "2026-11-04T19:19:58Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T19:19:58Z",
+          "completed_at": "2026-11-04T19:19:58Z"
+        }
+      ]
+    }
+  ]
+}

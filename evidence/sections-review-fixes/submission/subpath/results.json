@@ -1,0 +1,54 @@
+{
+  "scope": "local built repository subpath; no deployment",
+  "url": "http://127.0.0.1:4320/yamanaka-historical-terrain/",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "moat",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "rampart",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "id": "moat",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "id": "rampart",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "moat",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "rampart",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "id": "moat",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "id": "rampart",
+      "status": "PASS"
+    }
+  ]
+}

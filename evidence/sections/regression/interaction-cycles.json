@@ -1,0 +1,31 @@
+{
+  "scope": "implementation self-verification, not physical mobile Safari; synthetic and trusted events distinguished",
+  "results": [
+    {
+      "engine": "chromium",
+      "checks": [
+        "synthetic pointercancel followed by trusted mouse drag recovers",
+        "trusted right-pointer pan",
+        "trusted touchscreen tap in viewport",
+        "trusted Chromium touch drag",
+        "trusted Chromium two-finger pinch",
+        "trusted touchCancel and Reset recover",
+        "page background/foreground cycle and render recovery",
+        "3 repeated scene swaps keep one canvas and bounded geometry count"
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "checks": [
+        "synthetic pointercancel followed by trusted mouse drag recovers",
+        "trusted right-pointer pan",
+        "trusted touchscreen tap in viewport",
+        "page background/foreground cycle and render recovery",
+        "3 repeated scene swaps keep one canvas and bounded geometry count"
+      ],
+      "status": "PASS",
+      "touchDrag": "NOT_TESTED: public Playwright WebKit API exposes tap but not continuous trusted touch gesture; physical Safari NOT_TESTED"
+    }
+  ]
+}

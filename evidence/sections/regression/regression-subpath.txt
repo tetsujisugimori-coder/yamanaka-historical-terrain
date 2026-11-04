@@ -1,0 +1,4 @@
+PASS static subpath chromium 390
+PASS static subpath chromium 1280
+PASS static subpath webkit 390
+PASS static subpath webkit 1280

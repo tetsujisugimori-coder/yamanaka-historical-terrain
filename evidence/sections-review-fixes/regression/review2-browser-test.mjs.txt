@@ -1,0 +1,17 @@
+PASS chromium-375-no-preference 15 checks
+PASS chromium-375-reduce 15 checks
+PASS chromium-390-no-preference 15 checks
+PASS chromium-390-reduce 15 checks
+PASS chromium-765-no-preference 15 checks
+PASS chromium-765-reduce 15 checks
+PASS chromium-1280-no-preference 14 checks
+PASS chromium-1280-reduce 14 checks
+PASS webkit-375-no-preference 15 checks
+PASS webkit-375-reduce 15 checks
+PASS webkit-390-no-preference 15 checks
+PASS webkit-390-reduce 15 checks
+PASS webkit-765-no-preference 15 checks
+PASS webkit-765-reduce 15 checks
+PASS webkit-1280-no-preference 14 checks
+PASS webkit-1280-reduce 14 checks
+{"conditions":16,"pass":16,"failures":0}

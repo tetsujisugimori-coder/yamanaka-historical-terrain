@@ -7,6 +7,7 @@ import {groundScale} from './scale.js';
 import {createReading} from './reading.js';
 import {createIntentController} from './intent.js';
 import {sampleSurfaceHeight} from './surface.js';
+import {createSectionExhibit} from './section-exhibit.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const assetPath=path=>`${import.meta.env.BASE_URL}${path}`;
@@ -14,13 +15,13 @@ const state={view:'regional',mode:'terrain',selected:'castle',exaggeration:1,rou
 const sourceDialog=$('#sources'); $('#sources-open').onclick=()=>sourceDialog.showModal();$('#sources-close').onclick=()=>sourceDialog.close();
 sourceDialog.addEventListener('close',()=>$('#sources-open').focus());
 const viewport=$('#viewport'),viewportLabel=viewport.getAttribute('aria-label');
-let renderer,reading,renderFailed=false,teardownTerrain=()=>{};
+let renderer,reading,sectionExhibit,renderFailed=false,teardownTerrain=()=>{};
 function setRenderControls(enabled){
  $$('.controls fieldset, #reconstruction-controls fieldset').forEach(el=>{el.disabled=!enabled;});$$('.map-tools button, #focus-feature').forEach(el=>{el.disabled=!enabled;});
  viewport.tabIndex=enabled?0:-1;viewport.setAttribute('role',enabled?'application':'region');viewport.setAttribute('aria-label',enabled?viewportLabel:'3D地形の状態');
 }
 function showError(message,error,kind='error'){
- renderFailed=true;state.ready=false;setRenderControls(false);reading?.setSelectionHandler(null);teardownTerrain();document.body.dataset.renderState=kind;
+ renderFailed=true;state.ready=false;sectionExhibit?.fail();setRenderControls(false);reading?.setSelectionHandler(null);teardownTerrain();document.body.dataset.renderState=kind;
  $('#loading')?.remove();$('#app-status').textContent=message;viewport.querySelector('.error')?.remove();const block=document.createElement('div');block.className='error';block.setAttribute('role','status');const p=document.createElement('p');p.textContent=message;block.append(p);viewport.append(block);console.error(error);
 }
 async function json(url){const r=await fetch(url);if(!r.ok)throw new Error(`${r.status} ${url}`);return r.json();}
@@ -47,9 +48,13 @@ async function initialize(features){
  let comparison='restored';const hiddenFacilities=new Set();
  const modelFeatures=features.filter(f=>f.reconstruction);
  function applyLayers(){if(state.view!=='reconstruction')return;currentModel.children.forEach(ob=>{ob.visible=!(comparison==='restored'&&ob.userData.facilityId&&ob.userData.facilityId!=='nm-context'&&(!$('#category-c').checked||hiddenFacilities.has(ob.userData.facilityId)));});}
- $('#facility-layers').replaceChildren(...modelFeatures.map(f=>{const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.facility=f.id;input.onchange=()=>{if(input.checked)hiddenFacilities.delete(f.id);else hiddenFacilities.add(f.id);applyLayers();render();};label.append(input,document.createTextNode(`C ${f.shortLabel}`));return label;}));
- $('#category-c').onchange=()=>{applyLayers();render();};
- function beginIntent(){const intent=intents.begin();if(currentModel&&!renderFailed){state.ready=true;reportReady();}return intent;}
+ $('#facility-layers').replaceChildren(...modelFeatures.map(f=>{const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.facility=f.id;input.onchange=()=>{if(input.checked)hiddenFacilities.delete(f.id);else hiddenFacilities.add(f.id);applyLayers();sectionExhibit?.sync();render();};label.append(input,document.createTextNode(`C ${f.shortLabel}`));return label;}));
+ $('#category-c').onchange=()=>{applyLayers();sectionExhibit?.sync();render();};
+ function restoreCurrentPresentation(){
+  if(!currentModel||renderFailed)return;
+  state.ready=true;$('#reconstruction-controls').hidden=state.view!=='reconstruction';reportReady();sectionExhibit?.sync();
+ }
+ function beginIntent(){const intent=intents.begin();restoreCurrentPresentation();return intent;}
  function beginCameraIntent(){if(currentModel)return beginIntent();intents.adjustCamera();}
  async function runAction(action,message='表示操作に失敗しました。施設一覧から解説と出典は利用できます。'){
   const intent=beginIntent();try{return await action(intent);}catch(error){if(intent.isCurrent()&&!renderFailed)showError(message,error);return false;}
@@ -82,9 +87,10 @@ async function initialize(features){
   const pending=loader.loadAsync(assetPath(`data/${file}.glb`)).then(gltf=>{gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});return group;});
   models.set(file,pending);try{return await pending;}catch(error){if(models.get(file)===pending)models.delete(file);throw error;}
  }
+ sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
  function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;renderer.render(scene,camera);updateLabels();updateScale();}
  function resize(){const r=viewport.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();render();}
- const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
+ const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
  function fitTerrain(g){
   const direction=camera.position.clone().sub(controls.target).normalize();let distance=camera.position.distanceTo(controls.target);
   for(let i=0;i<15;i++){camera.position.copy(controls.target).addScaledVector(direction,distance);camera.lookAt(controls.target);camera.updateMatrixWorld();let fits=true;for(const x of [g.bounds[0],g.bounds[2]])for(const n of [g.bounds[1],g.bounds[3]])for(const h of [g.min,g.max]){const p=new THREE.Vector3(x,h*state.exaggeration,-n).project(camera);if(Math.abs(p.x)>.86||Math.abs(p.y)>.76||p.z>1)fits=false;}if(fits)break;distance*=1.12;}
@@ -111,7 +117,7 @@ async function initialize(features){
  function makeRoute(){if(routeLine){routeGroup.remove(routeLine);routeLine.geometry.dispose();routeLine.material.dispose();}const pts=[];for(let i=0;i<=60;i++){const t=i/60,e=-1400+2800*t,n=-1400+2700*t;pts.push(new THREE.Vector3(e,sampleHeight(regional,e,n)*state.exaggeration+10,-n));}const geo=new THREE.BufferGeometry().setFromPoints(pts);routeLine=new THREE.Line(geo,new THREE.LineDashedMaterial({color:'#9c572d',dashSize:28,gapSize:20,depthTest:false}));routeLine.computeLineDistances();routeLine.renderOrder=9;routeGroup.add(routeLine);routeGroup.visible=state.route&&state.view==='regional';}
  function reportReady(){document.body.dataset.renderState='ready';$('#app-status').textContent=`表示準備完了 · ${state.view==='regional'?'国土地理院 DEM5A + 欠測部DEM10B / Web20m':state.view==='castle'?'国土地理院 DEM1A / Web5m':state.view==='reconstruction'?`西ノ丸候補 ${comparison==='current'?'現況A':'推定C'} / B形状0・位置UNKNOWN`:'資料を参考にした推定教材 / 平面位置UNKNOWN'} · 連続アニメーションなし`;}
  async function setView(view,{reset=true,variant=comparison,intent=beginIntent(),selected}={}){
-  state.ready=false;$('#app-status').textContent='地形を切り替えています…';let model;
+  state.ready=false;$('#reconstruction-controls').hidden=view!=='reconstruction';sectionExhibit?.sync();$('#app-status').textContent='地形を切り替えています…';let model;
   // Seed a usable pose before initial input; late data may attach without refocusing.
   if(!currentModel&&reset){resize();focusPreset(view);}
   try{model=await getModel(view,variant);}catch(error){if(!intent.isCurrent()||renderFailed)return false;throw error;}
@@ -119,16 +125,16 @@ async function initialize(features){
   terrainGroup.clear();currentModel=model;terrainGroup.add(model);state.view=view;comparison=variant;
   if(selected!==undefined)state.selected=selected;else if(view==='study')state.selected='west';else if(view==='reconstruction'&&!state.selected.startsWith('nm-'))state.selected='nm-bailey';
   terrainGroup.scale.y=state.exaggeration;paint();applyLayers();placeMarkers();makeRoute();$$('[data-compare]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.compare===comparison)));$('#reconstruction-controls').hidden=view!=='reconstruction';$$('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));$('#study-note').hidden=view!=='study';$('#extent').textContent=view==='regional'?'広域 · 4 × 4 km':view==='study'?'断面教材 · 推定配置 C':view==='reconstruction'?`西ノ丸候補 · ${comparison==='current'?'現況 A':'復元 C'} / 位置UNKNOWN`:'城域 · 1 × 1.1 km';
-  select(state.selected);if(reset&&intent.canMoveCamera())focusPreset(view);$('#loading')?.remove();state.ready=true;setRenderControls(true);$('#route-toggle').disabled=view!=='regional';reportReady();render();return true;
+  select(state.selected);if(reset&&intent.canMoveCamera())focusPreset(view);$('#loading')?.remove();state.ready=true;setRenderControls(true);$('#route-toggle').disabled=view!=='regional';reportReady();sectionExhibit?.sync();render();return true;
  }
  $$('[data-view]').forEach(b=>b.onclick=()=>runAction(intent=>setView(b.dataset.view,{intent})));
  $$('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;$$('[data-mode]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));paint();render();});
- $('#exaggeration').onchange=()=>{beginIntent();state.exaggeration=$('#exaggeration').checked?2:1;terrainGroup.scale.y=state.exaggeration;$('#height-mode').textContent=`標高倍率 ${state.exaggeration}×${state.exaggeration===2?'（誇張）':''}`;placeMarkers();makeRoute();focusPreset();};
+ $('#exaggeration').onchange=()=>{intents.adjustCamera();state.exaggeration=$('#exaggeration').checked?2:1;terrainGroup.scale.y=state.exaggeration;sectionExhibit?.sync();$('#height-mode').textContent=`標高倍率 ${state.exaggeration}×${state.exaggeration===2?'（誇張）':''}`;placeMarkers();makeRoute();focusPreset();};
  $('#features-toggle').onchange=()=>{state.features=$('#features-toggle').checked;placeMarkers();render();};$('#route-toggle').onchange=()=>{state.route=$('#route-toggle').checked;makeRoute();render();};
  $('#focus-feature').onclick=()=>runAction(async intent=>{const f=features.find(f=>f.id===state.selected);if(f.id==='route'){if(!await setView('regional',{intent}))return;state.route=true;$('#route-toggle').checked=true;makeRoute();render();return;}if(!await setView(f.reconstruction?'reconstruction':'castle',{reset:false,intent})||!intent.canMoveCamera())return;const [e,n]=f.local,h=displayedHeight(f)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-(f.reconstruction?35:230),h+(f.reconstruction?30:230),-n+(f.reconstruction?45:280));controls.update();render();});
  function zoom(f){beginCameraIntent();camera.position.sub(controls.target).multiplyScalar(f).add(controls.target);controls.update();render();}
  $('#zoom-in').onclick=()=>zoom(.8);$('#zoom-out').onclick=()=>zoom(1.25);$('#north').onclick=()=>{beginCameraIntent();const t=controls.target,d=camera.position.distanceTo(t);camera.position.set(t.x,t.y+d*.99,t.z+d*.1);controls.update();render();};
- $('#reset').onclick=()=>runAction(async intent=>{state.exaggeration=1;state.mode='terrain';state.route=false;state.features=true;$('#exaggeration').checked=false;$('#route-toggle').checked=false;$('#features-toggle').checked=true;$('#height-mode').textContent='標高倍率 1×';$$('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='terrain')));state.selected='castle';hiddenFacilities.clear();$('#category-c').checked=true;$$('[data-facility]').forEach(el=>el.checked=true);if(currentModel){terrainGroup.scale.y=1;paint();applyLayers();placeMarkers();makeRoute();select('castle');focusPreset();}await setView('regional',{intent,variant:'restored'});});
+ $('#reset').onclick=()=>runAction(async intent=>{sectionExhibit?.reset();state.exaggeration=1;state.mode='terrain';state.route=false;state.features=true;$('#exaggeration').checked=false;$('#route-toggle').checked=false;$('#features-toggle').checked=true;$('#height-mode').textContent='標高倍率 1×';$$('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode==='terrain')));state.selected='castle';hiddenFacilities.clear();$('#category-c').checked=true;$$('[data-facility]').forEach(el=>el.checked=true);if(currentModel){terrainGroup.scale.y=1;paint();applyLayers();placeMarkers();makeRoute();select('castle');focusPreset();}await setView('regional',{intent,variant:'restored'});});
  viewport.addEventListener('keydown',e=>{if(['+','=','-'].includes(e.key)){e.preventDefault();zoom(e.key==='-'?1.2:.83);}if(e.key.startsWith('Arrow')){e.preventDefault();beginCameraIntent();const offset=camera.position.clone().sub(controls.target),s=new THREE.Spherical().setFromVector3(offset);if(e.key==='ArrowLeft')s.theta-=.12;if(e.key==='ArrowRight')s.theta+=.12;if(e.key==='ArrowUp')s.phi=Math.max(.06,s.phi-.12);if(e.key==='ArrowDown')s.phi=Math.min(Math.PI*.48,s.phi+.12);camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(s));controls.update();render();}});
  let pointerStart;
  renderer.domElement.addEventListener('pointerdown',e=>{pointerStart=[e.clientX,e.clientY];});
@@ -136,6 +142,6 @@ async function initialize(features){
  renderer.domElement.addEventListener('pointercancel',()=>{pointerStart=null;});
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();showError('3Dの描画接続が失われました。施設一覧から解説と出典は利用できます。3Dを再開する場合はページを再読込してください。',new Error('WebGL context lost'));});
  // Read-only diagnostics for reproducible QA. Tests exercise UI, not these setters.
- window.__terrainDiagnostics=()=>({state:{...state},camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
+ window.__terrainDiagnostics=()=>({state:{...state},section:sectionExhibit?.diagnostics(),camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
  await setView('regional');resize();
 }

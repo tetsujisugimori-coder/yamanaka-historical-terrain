@@ -1,0 +1,47 @@
+{
+  "scope": "validation of evidence aggregation; synthetic faults, not terrain product defects",
+  "results": [
+    {
+      "name": "complete current-source positive",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "output": "{\"status\":\"PASS\",\"normal\":62,\"pending\":4,\"negative\":{\"heightRejected\":16,\"coordinateRejected\":16,\"doubleRejected\":8,\"doubleAt1xAccepted\":8},\"head\":\"be3f4e1d408d64346188b41421f4e5a7f30be443\",\"utc\":\"2026-11-04T19:57:15.401Z\",\"note\":\"Implementation self-verification. Numerical oracle differs from product computation; separate reviewer still required.\"}\n",
+      "status": "PASS"
+    },
+    {
+      "name": "missing mandatory normal file",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "output": "node:internal/fs/promises:1345\r\n  return new FileHandle(await PromisePrototypeThen(\r\n                        ^\r\n\r\nError: ENOENT: no such file or directory, open '<workspace>\\tools\\summary-controls-28332\\normal.json'\r\n    at async open (node:internal/fs/promises:1345:25)\r\n    at async readFile (node:internal/fs/promises:1996:14)\r\n    at async read (file:///<workspace>/scripts/sections-summary.mjs:3:35)\r\n    at async file:///<workspace>/scripts/sections-summary.mjs:4:14 {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: '<workspace>\\\\tools\\\\summary-controls-28332\\\\normal.json'\r\n}\r\n\r\nNode.js v24.20.0\r\n",
+      "status": "PASS"
+    },
+    {
+      "name": "corrupt JSON",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "output": "<anonymous_script>:1\r\n{ broken\r\n  ^\r\n\r\nSyntaxError: Expected property name or '}' in JSON at position 2 (line 1 column 3)\r\n    at JSON.parse (<anonymous>)\r\n    at read (file:///<workspace>/scripts/sections-summary.mjs:3:29)\r\n    at async file:///<workspace>/scripts/sections-summary.mjs:4:14\r\n\r\nNode.js v24.20.0\r\n",
+      "status": "PASS"
+    },
+    {
+      "name": "missing condition",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "output": "file:///<workspace>/scripts/sections-summary.mjs:5\r\nif(normal.results.length!==62||normal.results.some(r=>r.status!=='PASS'))throw Error('Normal matrix incomplete or failed');\r\n                                                                               ^\r\n\r\nError: Normal matrix incomplete or failed\r\n    at file:///<workspace>/scripts/sections-summary.mjs:5:80\r\n\r\nNode.js v24.20.0\r\n",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong source hash",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "output": "file:///<workspace>/scripts/sections-summary.mjs:11\r\nfor(const d of [normal,...controls]){for(const [file,hash]of Object.entries(d.worktreeHashes))if(createHash('sha256').update(await readFile(file)).digest('hex')!==hash)throw Error('Evidence does not match current source '+file);if(process.env.GITHUB_SHA&&d.head!==process.env.GITHUB_SHA)throw Error('Evidence HEAD mismatch');}\r\n                                                                                                                                                                              ^\r\n\r\nError: Evidence does not match current source src/main.js\r\n    at file:///<workspace>/scripts/sections-summary.mjs:11:175\r\n\r\nNode.js v24.20.0\r\n",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong required HEAD",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "output": "file:///<workspace>/scripts/sections-summary.mjs:7\r\nif(process.env.GITHUB_SHA&&pending.head!==process.env.GITHUB_SHA)throw Error('Pending evidence HEAD mismatch');\r\n                                                                       ^\r\n\r\nError: Pending evidence HEAD mismatch\r\n    at file:///<workspace>/scripts/sections-summary.mjs:7:72\r\n\r\nNode.js v24.20.0\r\n",
+      "status": "PASS"
+    }
+  ]
+}

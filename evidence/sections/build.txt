@@ -1,0 +1,18 @@
+
+> yamanaka-historical-terrain@0.1.0 build
+> vite build
+
+vite v7.1.12 building for production...
+transforming...
+笨・16 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   9.39 kB 笏・gzip:   4.42 kB
+dist/assets/index-hWoTkqtP.css   12.60 kB 笏・gzip:   3.65 kB
+dist/assets/index-BmIUtH-T.js   630.63 kB 笏・gzip: 165.90 kB
+笨・built in 761ms
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

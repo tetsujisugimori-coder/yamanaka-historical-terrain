@@ -1,0 +1,60 @@
+{
+  "root": "http://127.0.0.1:4320/yamanaka-historical-terrain/",
+  "sourceHashes": {
+    "src/main.js": "6abf33099e556dd7781bfcb78c982135b02335fa5e16e7c6ae4982ac1cea41a8",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+    "dist/index.html": "d306f88b3a5132c89215dd507995f24e01dff4db1412a3633aa96d160c5e9cd6"
+  },
+  "scope": "local static Pages build; no public deployment",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "status": "PASS",
+      "pageerrors": [],
+      "assetFailures": [],
+      "expectedHeights": {
+        "restored": 575.1500244140625,
+        "current": 569.5239990234375
+      },
+      "actualAHeight": 569.5239990234375
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "status": "PASS",
+      "pageerrors": [],
+      "assetFailures": [],
+      "expectedHeights": {
+        "restored": 575.1500244140625,
+        "current": 569.5239990234375
+      },
+      "actualAHeight": 569.5239990234375
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "status": "PASS",
+      "pageerrors": [],
+      "assetFailures": [],
+      "expectedHeights": {
+        "restored": 575.1500244140625,
+        "current": 569.5239990234375
+      },
+      "actualAHeight": 569.5239990234375
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "status": "PASS",
+      "pageerrors": [],
+      "assetFailures": [],
+      "expectedHeights": {
+        "restored": 575.1500244140625,
+        "current": 569.5239990234375
+      },
+      "actualAHeight": 569.5239990234375
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+PASS chromium no-webgl-390: 5 checks
+PASS chromium no-webgl-1280: 5 checks
+PASS chromium missing-model: 4 checks
+PASS chromium missing-reading: 1 checks
+PASS chromium context-lost: 4 checks
+PASS webkit no-webgl-390: 5 checks
+PASS webkit no-webgl-1280: 5 checks
+PASS webkit missing-model: 4 checks
+PASS webkit missing-reading: 1 checks
+PASS webkit context-lost: 4 checks

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "normal": 62,
+  "pending": 4,
+  "negative": {
+    "heightRejected": 16,
+    "coordinateRejected": 16,
+    "doubleRejected": 8,
+    "doubleAt1xAccepted": 8
+  },
+  "head": "c96c8c0bcbaf49a33ebefb57c81cba347f6e364c",
+  "utc": "2026-11-04T19:10:34.649Z",
+  "note": "Implementation self-verification. Numerical oracle differs from product computation; separate reviewer still required."
+}

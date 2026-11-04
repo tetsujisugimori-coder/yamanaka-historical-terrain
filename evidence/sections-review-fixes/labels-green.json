@@ -1,0 +1,139 @@
+{
+  "scope": "implementation self-verification of independently reported P2-02; same numeric profiles as original submission, visible correspondence definition",
+  "head": "7e79e63b50fbcf8d9b5125e864309f5dc3d7f571",
+  "sourceSha256": "56d037a9c169009fa6ec832d3cae5e256fe89cd99569bc2b4d10056e569c5237",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 375,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "C 西縁位置 / Sから4.0m / A 572.2m / C 575.1mC 堀底位置 / Sから10.5m / A 570.3m / C 573.7mC 東縁位置 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "Cで選んだ対応点：西縁 − 堀底（水平距離 6.5m）A 同位置間の比高 1.9m / C 比高 1.4mCで選んだ対応点：東縁 − 堀底（水平距離 14.5m）A 同位置間の比高 2.6m / C 比高 1.4m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "C 曲輪面位置 / Sから5.0m / A 576.1m / C 575.3mC 土塁頂部位置 / Sから21.0m / A 570.7m / C 577.8mC 外側位置 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "Cで選んだ対応点：土塁頂部 − 曲輪面（水平距離 16.0m）A 同位置間の比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": true,
+      "definition": "代表点はCで選んだ対応位置です。Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "scope": "implementation self-verification; independent numerical oracle, not independent personnel review; emulated WebKit not real Safari",
+  "utc": "2026-11-04T19:04:52.244Z",
+  "head": "aa9cc5cd7068756816aead177ace0104df99ea4b",
+  "tree": "02ad840ae59293d7f45649edaf4fbc2914b6390d",
+  "worktreeHashes": {
+    "src/main.js": "4dffacf98e84da65a5c9f86c614c2d05da669c589a04d17cc2268fb88bfc779b",
+    "src/sections.js": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6",
+    "src/section-exhibit.js": "9e3faf3c60b0d5c7cccf23c23e8e888dd782b69ef7867fc4f2e2975dc2062038",
+    "src/style.css": "02c9568e5e4607710e98b31c6d0a36ef9808ecc1dccab7ce0222d241452c8a71",
+    "index.html": "618e86976c2a0dc6462067b53173538bef454bac6c229b152dd7c1701ddd8582",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "production/phase2a/profiles.json": "f61231f932e4c6ee48b2acab86a2ef4f282a5ae2b16262441a8d61cbd5f6f0b5"
+  },
+  "platform": "win32",
+  "node": "v24.20.0",
+  "toleranceMetres": 0.001,
+  "mutation": "coordinate",
+  "results": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "moat",
+      "comparison": "current",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "moat",
+      "comparison": "current",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "restored",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "restored",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "current",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "current",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "moat",
+      "comparison": "current",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "moat",
+      "comparison": "current",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "restored",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "restored",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "current",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "id": "rampart",
+      "comparison": "current",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "No section coverage"
+    }
+  ]
+}

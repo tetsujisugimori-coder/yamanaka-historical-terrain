@@ -1,0 +1,41 @@
+{
+  "scope": "implementation self-verification; independent numerical oracle, not independent personnel review; emulated WebKit not real Safari",
+  "utc": "2026-11-04T18:55:19.181Z",
+  "head": "5f54eacea3f9fed702e8caf10a3acda0c243ac14",
+  "tree": "b00b45affddc1b05526a7a70365e652478421555",
+  "worktreeHashes": {
+    "src/main.js": "cbc8af502ebfdb2a237ecf4a62f24524b4cf86c2c5a9a615d47c0d8e1ff79d1c",
+    "src/sections.js": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6",
+    "src/section-exhibit.js": "2de95b0f30bcf3328ad1dcf29c93055756e3bbbb732804c88ae54cf7070b8f38",
+    "src/style.css": "9d5175959032e185ed235f9d903bde2f4976f5115c0bd263e44556c820bb3420",
+    "index.html": "618e86976c2a0dc6462067b53173538bef454bac6c229b152dd7c1701ddd8582",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "production/phase2a/profiles.json": "f61231f932e4c6ee48b2acab86a2ef4f282a5ae2b16262441a8d61cbd5f6f0b5"
+  },
+  "platform": "win32",
+  "node": "v24.20.0",
+  "toleranceMetres": 0.001,
+  "results": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 375,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 1,
+      "status": "FAIL",
+      "reason": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://127.0.0.1:4317/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4317/\", waiting until \"load\"\u001b[22m\n"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 375,
+      "id": "moat",
+      "comparison": "restored",
+      "ve": 2,
+      "status": "FAIL",
+      "reason": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://127.0.0.1:4317/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4317/\", waiting until \"load\"\u001b[22m\n"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "implementation self-verification of independently reported P2-02; same numeric profiles as original submission, visible correspondence definition",
+  "head": "7e79e63b50fbcf8d9b5125e864309f5dc3d7f571",
+  "sourceSha256": "9e3faf3c60b0d5c7cccf23c23e8e888dd782b69ef7867fc4f2e2975dc2062038",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "西縁 / Sから4.0m / A 572.2m / C 575.1m堀底 / Sから10.5m / A 570.3m / C 573.7m東縁 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "西縁 − 堀底（水平距離 6.5m）A 比高 1.9m / C 比高 1.4m東縁 − 堀底（水平距離 14.5m）A 比高 2.6m / C 比高 1.4m",
+      "definitionVisible": false,
+      "status": "FAIL",
+      "reason": "Missing always-visible C correspondence definition"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "曲輪面 / Sから5.0m / A 576.1m / C 575.3m土塁頂部 / Sから21.0m / A 570.7m / C 577.8m外側 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "土塁頂部 − 曲輪面（水平距離 16.0m）A 比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": false,
+      "status": "FAIL",
+      "reason": "Missing always-visible C correspondence definition"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "moat",
+      "unchangedProfiles": true,
+      "pointText": "西縁 / Sから4.0m / A 572.2m / C 575.1m堀底 / Sから10.5m / A 570.3m / C 573.7m東縁 / Sから25.0m / A 572.9m / C 575.1m",
+      "dimensions": "西縁 − 堀底（水平距離 6.5m）A 比高 1.9m / C 比高 1.4m東縁 − 堀底（水平距離 14.5m）A 比高 2.6m / C 比高 1.4m",
+      "definitionVisible": false,
+      "status": "FAIL",
+      "reason": "Missing always-visible C correspondence definition"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "id": "rampart",
+      "unchangedProfiles": true,
+      "pointText": "曲輪面 / Sから5.0m / A 576.1m / C 575.3m土塁頂部 / Sから21.0m / A 570.7m / C 577.8m外側 / Sから30.0m / A 568.0m / C 575.3m",
+      "dimensions": "土塁頂部 − 曲輪面（水平距離 16.0m）A 比高 -5.4m / C 比高 2.5m",
+      "definitionVisible": false,
+      "status": "FAIL",
+      "reason": "Missing always-visible C correspondence definition"
+    }
+  ]
+}

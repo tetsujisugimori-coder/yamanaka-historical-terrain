@@ -1,0 +1,8 @@
+{
+ "scope":"implementation test development; not a product defect",
+ "initialUnitRun":{"tests":26,"pass":24,"fail":2,"reason":"Arbitrary >30 face-query count was invalid for A's 5m mesh; numeric comparisons themselves passed. Replaced count threshold with complete face endpoint/midpoint checks plus dense .137m independent coverage."},
+ "browserInstallation":["sandbox DNS ENOTFOUND","escalated TLS UNABLE_TO_VERIFY_LEAF_SIGNATURE; retain TLS verification, retry with OS trust --use-system-ca"],
+ "toleranceDeclaredBeforeBrowser":0.001,
+ "toleranceMeaning":"metres numeric agreement with Float32 GLB; not survey or historical accuracy",
+ "sectionSelectionRefinement":"Moat representative bottom moved from d=7.5m (slope) to d=10.5m (local depression floor), from actual GLB inspection before acceptance. Original d7.5 h574.489929m; C rim575.070007m. No geometry changed."
+}

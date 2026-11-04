@@ -1,0 +1,38 @@
+
+> yamanaka-historical-terrain@0.1.0 test
+> node --test tests/*.test.mjs
+
+笨・a later synchronous selection supersedes both successful and failed earlier work (0.6521ms)
+笨・initial camera input preserves model ownership and errors, but supersedes default camera effects (0.1315ms)
+笨・surface height uses triangle geometry and world scaling; missing geometry is an error (2.2293ms)
+笨・printed PASS followed by nonzero native termination cannot be accepted (94.6423ms)
+笨・Windows access violation status is retained even if all internal assertions passed (0.1094ms)
+笨・native success also requires the worker completion contract (0.0978ms)
+笨・phase2a stable IDs, sources, confidence and model objects form a closed relation (468.1299ms)
+笨・phase2a actual exported C faces cover one full patch and meet immutable A boundary (223.7952ms)
+笨・phase2a all split surface edges agree in height and coordinate orientation (148.2602ms)
+笨・phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces (30.1731ms)
+笨・negative controls detect a raised seam, missing facility and reassigned evidence ID (275.4402ms)
+笨・QGIS C cross sections and exported Blender vertices share actual heights (109.5982ms)
+笨・A moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (14.0342ms)
+笨・A rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (11.373ms)
+笨・C moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (58.0507ms)
+笨・C rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (39.9062ms)
+笨・triangle interior, shared diagonal, endpoints, overlap top face, gaps, outside and vertical faces (1.0332ms)
+笨・regional: all Blender-exported positions match GIS heights and metric axes (33.8627ms)
+笨・castle: all Blender-exported positions match GIS heights and metric axes (28.4806ms)
+笨・projected/local conversion preserves cardinal orientation and 1 metre scale (0.7805ms)
+笨・bilinear terrain sampler interpolates independent known plane (0.1424ms)
+笨・every observation anchor remains inside castle and regional measured bounds (10.3422ms)
+笨・inferred study cuts the terrain, meets the boundary and has no A category (261.7286ms)
+笨・triangle-surface negative control rejects a bilinear raised patch and an excessive cut (0.5306ms)
+笨・perspective scale preserves actual projected length through narrow/wide, rotation and zoom (1.8736ms)
+笨・GIS metadata reports fallback and no missing heights without implying measurement precision (1.3222ms)
+邃ｹ tests 26
+邃ｹ suites 0
+邃ｹ pass 26
+邃ｹ fail 0
+邃ｹ cancelled 0
+邃ｹ skipped 0
+邃ｹ todo 0
+邃ｹ duration_ms 2239.5213
