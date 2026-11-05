@@ -22,7 +22,7 @@ export function createReading({features,sources}){
   document.querySelectorAll('#feature-list button,#reconstruction-list button,#landscape-list button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.id===id)));
   return f;
  }
- $('#source-list').replaceChildren(...sources.map(s=>{const div=document.createElement('section');div.className='source';const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';a.textContent=s.title+' ↗';div.append(a);for(const text of [s.year,s.use,s.terms,s.accuracy]){const p=document.createElement('p');p.textContent=text;div.append(p);}return div;}));
+ $('#source-list').replaceChildren(...sources.map(s=>{const div=document.createElement('section');div.className='source';const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener';a.dataset.sourceId=s.id;a.textContent=s.title+' ↗';div.append(a);for(const text of [s.year,s.use,s.terms,s.accuracy]){const p=document.createElement('p');p.textContent=text;div.append(p);}return div;}));
  function button(f,index){const b=document.createElement('button');b.textContent=f.shortLabel??`0${index+1} ${['立地','堀','出丸','道'][index]}`;b.title=f.name;b.setAttribute('aria-label',f.name);b.dataset.id=f.id;b.onclick=()=>selectionHandler?selectionHandler(f.id):select(f.id);return b;}
  $('#feature-list').replaceChildren(...features.filter(f=>!f.reconstruction).map(button));
  $('#reconstruction-list').replaceChildren(...features.filter(f=>f.reconstruction&&!f.landscape).map(button));

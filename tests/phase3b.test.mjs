@@ -5,8 +5,14 @@ import {readGlb,meshData} from './glb-surface.mjs';
 import {oracle} from './section-oracle.mjs';
 import {BufferGeometry,Float32BufferAttribute} from 'three';
 import {contextOutsidePatch} from '../src/phase3b.js';
+import {appendOnlySources} from '../scripts/source-preservation.mjs';
 
 const meta=JSON.parse(readFileSync('public/data/phase3b.json','utf8'));
+test('source additions preserve every old record and reject edits, removal and duplicate IDs',()=>{
+ const a=JSON.stringify([{id:'old',title:'original',url:'same'}]);
+ assert.ok(appendOnlySources(a,JSON.stringify([...JSON.parse(a),{id:'new',url:'same'}])));
+ for(const b of [[{id:'old',title:'changed',url:'same'}],[],[{id:'old',title:'original',url:'same'},{id:'old',url:'same'}]])assert.equal(appendOnlySources(a,JSON.stringify(b)),false);
+});
 test('western model preserves metric topology, has one ground sheet and joins the actual A boundary',()=>{
  const glb=readGlb('public/data/phase3b.glb'),a=oracle('public/data/castle.glb');
  const ids=new Set(meta.elements.map(e=>e.id)),[w,s,e,n]=meta.bounds;

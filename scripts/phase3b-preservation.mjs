@@ -1,7 +1,7 @@
 import {execFileSync} from 'node:child_process';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-const base='6a84b95',allowed=new Set(['index.html','src/main.js','src/landscape.js','src/style.css','public/data/sources.json','README.md','LOG.md']);
+const base='6a84b95',allowed=new Set(['index.html','src/main.js','src/landscape.js','src/style.css','public/data/sources.json','README.md','LOG.md','src/reading.js','scripts/fallback-test.mjs','scripts/sections-evidence.mjs']);
 const files=execFileSync('git',['ls-tree','-r','--name-only',base],{encoding:'utf8'}).trim().split('\n'),rows=[];
 for(const file of files.filter(f=>!allowed.has(f))){const a=await readFile('.cache/baseline/'+file),b=await readFile(file),hash=x=>createHash('sha256').update(x).digest('hex');rows.push({file,baseline:hash(a),current:hash(b),equal:a.equals(b)});}
 const oldSources=JSON.parse(await readFile('.cache/baseline/public/data/sources.json','utf8')),sources=JSON.parse(await readFile('public/data/sources.json','utf8'));

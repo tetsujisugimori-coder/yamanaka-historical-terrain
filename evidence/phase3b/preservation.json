@@ -9,9 +9,12 @@
     "src/style.css",
     "public/data/sources.json",
     "README.md",
-    "LOG.md"
+    "LOG.md",
+    "src/reading.js",
+    "scripts/fallback-test.mjs",
+    "scripts/sections-evidence.mjs"
   ],
-  "count": 917,
+  "count": 914,
   "sourcesPreserved": true,
   "rows": [
     {
@@ -5121,12 +5124,6 @@
       "equal": true
     },
     {
-      "file": "scripts/fallback-test.mjs",
-      "baseline": "1a58a410f2fd02d3184043939f9e573918f05a28d286a5fa0643349418310810",
-      "current": "1a58a410f2fd02d3184043939f9e573918f05a28d286a5fa0643349418310810",
-      "equal": true
-    },
-    {
       "file": "scripts/fetch-data.mjs",
       "baseline": "eb89cde2b61dad85f3366eb60d71499299701085f1f0f42a3ed06aa4518ca04a",
       "current": "eb89cde2b61dad85f3366eb60d71499299701085f1f0f42a3ed06aa4518ca04a",
@@ -5319,12 +5316,6 @@
       "equal": true
     },
     {
-      "file": "scripts/sections-evidence.mjs",
-      "baseline": "0d6faf797ac13c86c478ddb26421477325807a233e097625683dc9f24a53ecd9",
-      "current": "0d6faf797ac13c86c478ddb26421477325807a233e097625683dc9f24a53ecd9",
-      "equal": true
-    },
-    {
       "file": "scripts/sections-labels-browser.mjs",
       "baseline": "77da719a47687da70f3b855772f57881c5abf575f3d94128fd842b7f4b93bd9c",
       "current": "77da719a47687da70f3b855772f57881c5abf575f3d94128fd842b7f4b93bd9c",
@@ -5430,12 +5421,6 @@
       "file": "src/intent.js",
       "baseline": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
       "current": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
-      "equal": true
-    },
-    {
-      "file": "src/reading.js",
-      "baseline": "29bec1278c85120e2085b939e72424d5b36e5ca7f81a29333a0f58a571ab4155",
-      "current": "29bec1278c85120e2085b939e72424d5b36e5ca7f81a29333a0f58a571ab4155",
       "equal": true
     },
     {

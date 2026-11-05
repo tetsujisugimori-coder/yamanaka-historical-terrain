@@ -10,7 +10,7 @@ async function verifyReading(page,row){
  for(const f of features){await page.getByRole('button',{name:f.name,exact:true}).click();await expect(page.locator('#detail h2')).toHaveText(f.name);await expect(page.locator('#detail')).toContainText(f.description);expect(await page.locator('#detail .source-inline a').count()).toBe(f.sourceIds.length);}
  row.checks.push('all four facility descriptions and per-facility source links remain usable');
  await page.locator('#sources-open').click();await expect(page.locator('#sources')).toBeVisible();expect(await page.locator('#source-list .source a').count()).toBe(sources.length);
- for(const source of sources)await expect(page.locator(`#source-list a[href="${source.url}"]`)).toHaveText(source.title+' ↗');
+ for(const source of sources){const link=page.locator(`#source-list a[data-source-id="${source.id}"]`);await expect(link).toHaveText(source.title+' ↗');await expect(link).toHaveAttribute('href',source.url);}
  await page.keyboard.press('Escape');await expect(page.locator('#sources-open')).toBeFocused();row.checks.push('complete sources accessible and dialog focus restored');
  await expect(page.locator('#focus-feature')).toBeDisabled();for(const button of ['#zoom-in','#zoom-out','#north','#reset'])await expect(page.locator(button)).toBeDisabled();
  expect(await page.locator('.controls :enabled').count(),'unavailable 3D controls must not stay enabled').toBe(0);row.checks.push('3D controls disabled without disabling reading controls');

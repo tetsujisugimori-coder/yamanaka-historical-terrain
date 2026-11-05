@@ -19,10 +19,10 @@
     "slope_degrees_ea6e2422_9371_43f9_aecf_99bb7f340d0d": "[workspace]/production/gis/slope-degrees.tif"
   },
   "newLayers": [
-    "Phase3B_C_candidate_heights___NOT_measured_DEM_b74b9329_a7ec_4bd0_bb74_ad3b018e7822",
-    "Phase3B_C_elements_hypotheses_45bb966f_de6a_4558_b46d_b51ff67f85b0",
-    "Phase3B_C_stations_hypotheses_6d09b4bd_ca5c_48df_9aa8_0073eeb49a16",
-    "Phase3B_C_terrain_footprint___not_surveyed_92ebf98b_8ec3_473f_bce7_cea8205fe7b5"
+    "Phase3B_C_candidate_heights___NOT_measured_DEM_1e43e006_8cba_4da9_8cef_195cd2b88bbc",
+    "Phase3B_C_elements_hypotheses_670e1c57_3387_49f8_b0b7_31df5dfb8f07",
+    "Phase3B_C_stations_hypotheses_d87c795e_a0f0_48e2_895c_9e4517003890",
+    "Phase3B_C_terrain_footprint___not_surveyed_c115655c_e6c2_48c8_87e4_2471947bbac2"
   ],
   "positionAccuracy": "UNKNOWN; no map control point registration"
 }

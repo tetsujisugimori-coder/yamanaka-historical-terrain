@@ -29,8 +29,10 @@ for kind,items in [('elements',r['elements']),('stations',r['stations'])]:
     features=[]
     for e in items:
         x,y=e.get('local',e.get('eye'))
-        features.append(dict(type='Feature',geometry=dict(type='Point',coordinates=[E+x,N+y]),
-            properties=dict(id=e['id'],name=e['name'],category='C',modelHeight=e.get('height',s.surface_height(x,y)),accuracy='UNKNOWN; conceptual placement, no control points',ledger='public/data/phase3b.json#'+e['id'])))
+        properties=dict(id=e['id'],name=e['name'],category='C',modelHeight=e.get('height',s.surface_height(x,y)),accuracy='UNKNOWN; conceptual placement, no control points',ledger='public/data/phase3b.json#'+e['id'])
+        if kind=='stations':
+            properties.update(elementId=e['elementId'],lookEast=e['look'][0],lookNorth=e['look'][1],lookDown=e['lookDown'],fov=e.get('fov',38))
+        features.append(dict(type='Feature',geometry=dict(type='Point',coordinates=[E+x,N+y]),properties=properties))
     path=out/(kind+'.geojson')
     path.write_text(json.dumps(dict(type='FeatureCollection',crs=dict(type='name',properties=dict(name='EPSG:6676')),features=features),ensure_ascii=False,indent=2),encoding='utf8')
     layer=QgsVectorLayer(str(path),'Phase3B C '+kind+' hypotheses','ogr');assert layer.isValid();p.addMapLayer(layer);layers.append(layer.id())

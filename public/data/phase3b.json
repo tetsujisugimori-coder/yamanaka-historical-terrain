@@ -168,6 +168,7 @@
   "stations": [
     {
       "id": "wb-bailey",
+      "elementId": "wb-bailey",
       "name": "西櫓の曲輪上",
       "eye": [
         -143,
@@ -182,20 +183,23 @@
     },
     {
       "id": "wb-gate",
+      "elementId": "wb-gate",
       "name": "西木戸口を正面から",
       "eye": [
-        -196,
+        -197,
         -35
       ],
       "look": [
         -191,
         -35
       ],
-      "lookDown": 0.1,
-      "groundHeight": 548.1513061523438
+      "lookDown": -1.15,
+      "fov": 60,
+      "groundHeight": 547.6080932617188
     },
     {
       "id": "wb-moat",
+      "elementId": "wb-moat",
       "name": "西櫓堀を見下ろす",
       "eye": [
         -154,
@@ -210,6 +214,7 @@
     },
     {
       "id": "wb-earth",
+      "elementId": "wb-moat",
       "name": "赤土と畝の近景",
       "eye": [
         -156,
@@ -224,6 +229,7 @@
     },
     {
       "id": "wb-wood",
+      "elementId": "wb-gate",
       "name": "西木戸口の木組み",
       "eye": [
         -195,

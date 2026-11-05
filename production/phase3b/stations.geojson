@@ -22,7 +22,12 @@
         "category": "C",
         "modelHeight": 553.0239868164062,
         "accuracy": "UNKNOWN; conceptual placement, no control points",
-        "ledger": "public/data/phase3b.json#wb-bailey"
+        "ledger": "public/data/phase3b.json#wb-bailey",
+        "elementId": "wb-bailey",
+        "lookEast": -131,
+        "lookNorth": 7,
+        "lookDown": 0.15,
+        "fov": 38
       }
     },
     {
@@ -30,7 +35,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          44666.121277226666,
+          44665.121277226666,
           -93513.07235405142
         ]
       },
@@ -38,9 +43,14 @@
         "id": "wb-gate",
         "name": "西木戸口を正面から",
         "category": "C",
-        "modelHeight": 548.1513061523438,
+        "modelHeight": 547.6080932617188,
         "accuracy": "UNKNOWN; conceptual placement, no control points",
-        "ledger": "public/data/phase3b.json#wb-gate"
+        "ledger": "public/data/phase3b.json#wb-gate",
+        "elementId": "wb-gate",
+        "lookEast": -191,
+        "lookNorth": -35,
+        "lookDown": -1.15,
+        "fov": 60
       }
     },
     {
@@ -58,7 +68,12 @@
         "category": "C",
         "modelHeight": 552.1508178710938,
         "accuracy": "UNKNOWN; conceptual placement, no control points",
-        "ledger": "public/data/phase3b.json#wb-moat"
+        "ledger": "public/data/phase3b.json#wb-moat",
+        "elementId": "wb-moat",
+        "lookEast": -169,
+        "lookNorth": 5,
+        "lookDown": 6,
+        "fov": 38
       }
     },
     {
@@ -76,7 +91,12 @@
         "category": "C",
         "modelHeight": 551.47314453125,
         "accuracy": "UNKNOWN; conceptual placement, no control points",
-        "ledger": "public/data/phase3b.json#wb-earth"
+        "ledger": "public/data/phase3b.json#wb-earth",
+        "elementId": "wb-moat",
+        "lookEast": -170,
+        "lookNorth": -10,
+        "lookDown": 4,
+        "fov": 38
       }
     },
     {
@@ -94,7 +114,12 @@
         "category": "C",
         "modelHeight": 548.416015625,
         "accuracy": "UNKNOWN; conceptual placement, no control points",
-        "ledger": "public/data/phase3b.json#wb-wood"
+        "ledger": "public/data/phase3b.json#wb-wood",
+        "elementId": "wb-gate",
+        "lookEast": -192,
+        "lookNorth": -35,
+        "lookDown": -0.2,
+        "fov": 38
       }
     }
   ]

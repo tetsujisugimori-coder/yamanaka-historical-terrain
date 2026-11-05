@@ -5,7 +5,7 @@
 制作内容・分類・UNKNOWN・再現は[実装説明](../../docs/phase3b.md)、[編集元](../../production/phase3b/README.md)を参照。
 
 - `native/`：Blender制作/別プロセス再読込、QGIS保存/全層再読込、境界と支持脚の自己検査。外部終了0を要求。初期失敗票と後続成功票を区別。
-- `preservation.json`：最新main基準の既存917ファイルraw byte保全、既存source5件のデータ保持。
+- `preservation.json`：最新main基準の既存914ファイルraw byte保全、既存source5件のデータ保持。
 - `browser/`：実装側runnerによるChrome/WebKit、4幅×2motion、施設・定点・比較・非表示・障害/回復・取消の原票とPNG。自動WebKitを実機iPhone Safariと扱わない。
 - `legacy-landscape/`：旧景観suiteを隔離cwdで再実行した新規票。過去の証拠は保全。
 - `performance*.json`と対応画像：同PC、同canvas600px、新規context、旧main対新景観と品質別の比較。

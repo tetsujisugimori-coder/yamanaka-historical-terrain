@@ -90,11 +90,11 @@ def produce():
             '8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。',
             '柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。')]
     stations=[
-        dict(id='wb-bailey',name='西櫓の曲輪上',eye=[-143,2],look=[-131,7],lookDown=.15),
-        dict(id='wb-gate',name='西木戸口を正面から',eye=[-196,-35],look=[-191,-35],lookDown=.1),
-        dict(id='wb-moat',name='西櫓堀を見下ろす',eye=[-154,5],look=[-169,5],lookDown=6),
-        dict(id='wb-earth',name='赤土と畝の近景',eye=[-156,-10],look=[-170,-10],lookDown=4),
-        dict(id='wb-wood',name='西木戸口の木組み',eye=[-195,-32],look=[-192,-35],lookDown=-.2)]
+        dict(id='wb-bailey',elementId='wb-bailey',name='西櫓の曲輪上',eye=[-143,2],look=[-131,7],lookDown=.15),
+        dict(id='wb-gate',elementId='wb-gate',name='西木戸口を正面から',eye=[-197,-35],look=[-191,-35],lookDown=-1.15,fov=60),
+        dict(id='wb-moat',elementId='wb-moat',name='西櫓堀を見下ろす',eye=[-154,5],look=[-169,5],lookDown=6),
+        dict(id='wb-earth',elementId='wb-moat',name='赤土と畝の近景',eye=[-156,-10],look=[-170,-10],lookDown=4),
+        dict(id='wb-wood',elementId='wb-gate',name='西木戸口の木組み',eye=[-195,-32],look=[-192,-35],lookDown=-.2)]
     for station in stations:
         station['groundHeight']=surface_height(*station['eye'])
     recipe=dict(version=1,crs='EPSG:6676',origin=G['origin'],units='metres',bounds=BOUNDS,
