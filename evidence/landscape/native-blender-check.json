@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "worker": {
+    "status": "PASS",
+    "reread": true,
+    "oldMeshHashes": {
+      "A_castle_current": "0603033084681dcb12a2a4b3383eb8a358f9db98093c3d4f2ea9100a45114159",
+      "A_regional_current": "cc10172310f877ed24be2cfd6e652673a426a46119b4e44fcddc9df1bb0fa0db",
+      "C_castle_with_study_cutout": "4c8d49334cd450cded75638307b54464f646f05d9a439528af7728960d03ee04",
+      "C_source_informed_moat_study": "a2a3469e8f94b5a375566a0c0bfe258a472f39c2d5924f0e53cde8352c54509f",
+      "nm-bailey": "d8a44e442653d6b1df4ae5d260fff5ebad205493ca898e2cc9975c8c2361a0e7",
+      "nm-context": "bb6b984dc4b070f694fad5a6831f657372b4175a4e84e038bf1decea26f1bcda",
+      "nm-moat": "c7e920281a9c4c4ce05147cb531210eef52360f1514d116a7bb0bf7c125d2ecc",
+      "nm-passage": "0cc4af95e2351cc804c6e5439d7226656cd98ab5903bf1193c4d9dcb0ba92bd8",
+      "nm-rampart": "350f29ffaf3c27748e1870dbd8c07b77f1054cd764949825d4aaa22045294c80",
+      "nm-transition": "8bb4238d410755cde945e5c034a22304bb1c29f6380016d2451444ef8d0539aa"
+    },
+    "objects": 271,
+    "elements": {
+      "sc-palisade": "C",
+      "sc-gate": "C",
+      "sc-vegetation": "C",
+      "sc-flags": "D",
+      "sc-people": "D"
+    },
+    "externalImages": 0
+  },
+  "hashes": {
+    "scripts/verify-landscape-blender.py": "9070105980f7ac983329d6abfd4532048fb9f6252c2fadffa88ecf74179ebee5",
+    "production/landscape/recipe.json": "b34c7920d5416f62325f8e4cd76d4d74210e2a01a9d5283ad04d0577280177fe",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+    "production/yamanaka-1590.blend": "6d45ec6df4c0f820e238d2fcd0bda226b5791396070f760eb725847461c9cda1",
+    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+  },
+  "utc": "2026-11-05T04:37:00.644Z",
+  "stdout": "Blender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka-1590.blend\"\n\nBlender quit\n",
+  "stderr": ""
+}

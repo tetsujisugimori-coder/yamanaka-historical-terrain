@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "reread": true,
+  "oldMeshHashes": {
+    "A_castle_current": "0603033084681dcb12a2a4b3383eb8a358f9db98093c3d4f2ea9100a45114159",
+    "A_regional_current": "cc10172310f877ed24be2cfd6e652673a426a46119b4e44fcddc9df1bb0fa0db",
+    "C_castle_with_study_cutout": "4c8d49334cd450cded75638307b54464f646f05d9a439528af7728960d03ee04",
+    "C_source_informed_moat_study": "a2a3469e8f94b5a375566a0c0bfe258a472f39c2d5924f0e53cde8352c54509f",
+    "nm-bailey": "d8a44e442653d6b1df4ae5d260fff5ebad205493ca898e2cc9975c8c2361a0e7",
+    "nm-context": "bb6b984dc4b070f694fad5a6831f657372b4175a4e84e038bf1decea26f1bcda",
+    "nm-moat": "c7e920281a9c4c4ce05147cb531210eef52360f1514d116a7bb0bf7c125d2ecc",
+    "nm-passage": "0cc4af95e2351cc804c6e5439d7226656cd98ab5903bf1193c4d9dcb0ba92bd8",
+    "nm-rampart": "350f29ffaf3c27748e1870dbd8c07b77f1054cd764949825d4aaa22045294c80",
+    "nm-transition": "8bb4238d410755cde945e5c034a22304bb1c29f6380016d2451444ef8d0539aa"
+  },
+  "objects": 271,
+  "elements": {
+    "sc-palisade": "C",
+    "sc-gate": "C",
+    "sc-vegetation": "C",
+    "sc-flags": "D",
+    "sc-people": "D"
+  },
+  "externalImages": 0
+}

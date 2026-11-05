@@ -1,0 +1,1933 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "worker": {
+    "status": "PASS",
+    "blender": "4.5.9 LTS",
+    "oldMeshHashes": {
+      "A_castle_current": "0603033084681dcb12a2a4b3383eb8a358f9db98093c3d4f2ea9100a45114159",
+      "A_regional_current": "cc10172310f877ed24be2cfd6e652673a426a46119b4e44fcddc9df1bb0fa0db",
+      "C_castle_with_study_cutout": "4c8d49334cd450cded75638307b54464f646f05d9a439528af7728960d03ee04",
+      "C_source_informed_moat_study": "a2a3469e8f94b5a375566a0c0bfe258a472f39c2d5924f0e53cde8352c54509f",
+      "nm-bailey": "d8a44e442653d6b1df4ae5d260fff5ebad205493ca898e2cc9975c8c2361a0e7",
+      "nm-context": "bb6b984dc4b070f694fad5a6831f657372b4175a4e84e038bf1decea26f1bcda",
+      "nm-moat": "c7e920281a9c4c4ce05147cb531210eef52360f1514d116a7bb0bf7c125d2ecc",
+      "nm-passage": "0cc4af95e2351cc804c6e5439d7226656cd98ab5903bf1193c4d9dcb0ba92bd8",
+      "nm-rampart": "350f29ffaf3c27748e1870dbd8c07b77f1054cd764949825d4aaa22045294c80",
+      "nm-transition": "8bb4238d410755cde945e5c034a22304bb1c29f6380016d2451444ef8d0539aa"
+    },
+    "objects": 271,
+    "placements": [
+      {
+        "part": 0,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -19,
+        "ground": 577.498046875
+      },
+      {
+        "part": 1,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -18,
+        "ground": 577.506103515625
+      },
+      {
+        "part": 2,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -17,
+        "ground": 577.5140380859375
+      },
+      {
+        "part": 3,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -16,
+        "ground": 577.52197265625
+      },
+      {
+        "part": 4,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -15,
+        "ground": 577.530029296875
+      },
+      {
+        "part": 5,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -14,
+        "ground": 577.5380859375
+      },
+      {
+        "part": 6,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -13,
+        "ground": 577.5460205078125
+      },
+      {
+        "part": 7,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -12,
+        "ground": 577.553955078125
+      },
+      {
+        "part": 8,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -11,
+        "ground": 577.56201171875
+      },
+      {
+        "part": 9,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -10,
+        "ground": 577.570068359375
+      },
+      {
+        "part": 10,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -9,
+        "ground": 577.5780029296875
+      },
+      {
+        "part": 11,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -8,
+        "ground": 577.5859375
+      },
+      {
+        "part": 12,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -7,
+        "ground": 577.593994140625
+      },
+      {
+        "part": 13,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -6,
+        "ground": 577.60205078125
+      },
+      {
+        "part": 14,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -5,
+        "ground": 577.610107421875
+      },
+      {
+        "part": 15,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -4,
+        "ground": 577.6180419921875
+      },
+      {
+        "part": 16,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -3,
+        "ground": 577.6259765625
+      },
+      {
+        "part": 17,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -2,
+        "ground": 577.634033203125
+      },
+      {
+        "part": 18,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": -1,
+        "ground": 577.64208984375
+      },
+      {
+        "part": 19,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 0,
+        "ground": 577.6500244140625
+      },
+      {
+        "part": 20,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 1,
+        "ground": 577.657958984375
+      },
+      {
+        "part": 21,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 2,
+        "ground": 577.666015625
+      },
+      {
+        "part": 22,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 3,
+        "ground": 577.674072265625
+      },
+      {
+        "part": 23,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 4,
+        "ground": 577.6820068359375
+      },
+      {
+        "part": 24,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 5,
+        "ground": 577.68994140625
+      },
+      {
+        "part": 25,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 6,
+        "ground": 577.697998046875
+      },
+      {
+        "part": 26,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 7,
+        "ground": 577.7060546875
+      },
+      {
+        "part": 27,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 8,
+        "ground": 577.714111328125
+      },
+      {
+        "part": 28,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 9,
+        "ground": 577.7220458984375
+      },
+      {
+        "part": 29,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 10,
+        "ground": 577.72998046875
+      },
+      {
+        "part": 30,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 11,
+        "ground": 577.738037109375
+      },
+      {
+        "part": 31,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 12,
+        "ground": 577.74609375
+      },
+      {
+        "part": 32,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 13,
+        "ground": 577.7540283203125
+      },
+      {
+        "part": 33,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 14,
+        "ground": 577.761962890625
+      },
+      {
+        "part": 34,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 15,
+        "ground": 577.77001953125
+      },
+      {
+        "part": 35,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 16,
+        "ground": 577.778076171875
+      },
+      {
+        "part": 36,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 17,
+        "ground": 577.7860107421875
+      },
+      {
+        "part": 37,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 18,
+        "ground": 577.7939453125
+      },
+      {
+        "part": 38,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 19,
+        "ground": 577.802001953125
+      },
+      {
+        "part": 39,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 20,
+        "ground": 577.81005859375
+      },
+      {
+        "part": 40,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 21,
+        "ground": 577.818115234375
+      },
+      {
+        "part": 41,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 22,
+        "ground": 577.8260498046875
+      },
+      {
+        "part": 42,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 23,
+        "ground": 577.833984375
+      },
+      {
+        "part": 43,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 24,
+        "ground": 577.842041015625
+      },
+      {
+        "part": 44,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 25,
+        "ground": 577.85009765625
+      },
+      {
+        "part": 45,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 26,
+        "ground": 577.8580322265625
+      },
+      {
+        "part": 46,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 27,
+        "ground": 577.865966796875
+      },
+      {
+        "part": 47,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 48,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 29,
+        "ground": 577.882080078125
+      },
+      {
+        "part": 49,
+        "element": "sc-palisade",
+        "east": -36,
+        "north": 30,
+        "ground": 577.056640625
+      },
+      {
+        "part": 50,
+        "element": "sc-palisade",
+        "east": -34,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 51,
+        "element": "sc-palisade",
+        "east": -33,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 52,
+        "element": "sc-palisade",
+        "east": -32,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 53,
+        "element": "sc-palisade",
+        "east": -31,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 54,
+        "element": "sc-palisade",
+        "east": -30,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 55,
+        "element": "sc-palisade",
+        "east": -29,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 56,
+        "element": "sc-palisade",
+        "east": -28,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 57,
+        "element": "sc-palisade",
+        "east": -27,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 58,
+        "element": "sc-palisade",
+        "east": -26,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 59,
+        "element": "sc-palisade",
+        "east": -25,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 60,
+        "element": "sc-palisade",
+        "east": -24,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 61,
+        "element": "sc-palisade",
+        "east": -23,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 62,
+        "element": "sc-palisade",
+        "east": -22,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 63,
+        "element": "sc-palisade",
+        "east": -21,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 64,
+        "element": "sc-palisade",
+        "east": -20,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 65,
+        "element": "sc-palisade",
+        "east": -19,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 66,
+        "element": "sc-palisade",
+        "east": -18,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 67,
+        "element": "sc-palisade",
+        "east": -17,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 68,
+        "element": "sc-palisade",
+        "east": -16,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 69,
+        "element": "sc-palisade",
+        "east": -15,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 70,
+        "element": "sc-palisade",
+        "east": -14,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 71,
+        "element": "sc-palisade",
+        "east": -13,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 72,
+        "element": "sc-palisade",
+        "east": -12,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 73,
+        "element": "sc-palisade",
+        "east": -11,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 74,
+        "element": "sc-palisade",
+        "east": -10,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 75,
+        "element": "sc-palisade",
+        "east": -9,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 76,
+        "element": "sc-palisade",
+        "east": -8,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 77,
+        "element": "sc-palisade",
+        "east": -7,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 78,
+        "element": "sc-palisade",
+        "east": -6,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 79,
+        "element": "sc-palisade",
+        "east": -5,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 80,
+        "element": "sc-palisade",
+        "east": -4,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 81,
+        "element": "sc-palisade",
+        "east": -3,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 82,
+        "element": "sc-palisade",
+        "east": -2,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 83,
+        "element": "sc-palisade",
+        "east": -1,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 84,
+        "element": "sc-palisade",
+        "east": 0,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 85,
+        "element": "sc-palisade",
+        "east": 1,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 86,
+        "element": "sc-palisade",
+        "east": 2,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 87,
+        "element": "sc-palisade",
+        "east": 3,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 88,
+        "element": "sc-palisade",
+        "east": 4,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 89,
+        "element": "sc-palisade",
+        "east": 5,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 90,
+        "element": "sc-palisade",
+        "east": 6,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 91,
+        "element": "sc-palisade",
+        "east": 7,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 92,
+        "element": "sc-palisade",
+        "east": 8,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 93,
+        "element": "sc-palisade",
+        "east": 9,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 94,
+        "element": "sc-palisade",
+        "east": 10,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 95,
+        "element": "sc-palisade",
+        "east": 11,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 96,
+        "element": "sc-palisade",
+        "east": 12,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 97,
+        "element": "sc-palisade",
+        "east": 13,
+        "north": 28,
+        "ground": 577.8740234375
+      },
+      {
+        "part": 98,
+        "element": "sc-palisade",
+        "east": -34,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 99,
+        "element": "sc-palisade",
+        "east": -33,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 100,
+        "element": "sc-palisade",
+        "east": -32,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 101,
+        "element": "sc-palisade",
+        "east": -31,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 102,
+        "element": "sc-palisade",
+        "east": -30,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 103,
+        "element": "sc-palisade",
+        "east": -29,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 104,
+        "element": "sc-palisade",
+        "east": -28,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 105,
+        "element": "sc-palisade",
+        "east": -27,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 106,
+        "element": "sc-palisade",
+        "east": -26,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 107,
+        "element": "sc-palisade",
+        "east": -25,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 108,
+        "element": "sc-palisade",
+        "east": -24,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 109,
+        "element": "sc-palisade",
+        "east": -23,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 110,
+        "element": "sc-palisade",
+        "east": -22,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 111,
+        "element": "sc-palisade",
+        "east": -21,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 112,
+        "element": "sc-palisade",
+        "east": -20,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 113,
+        "element": "sc-palisade",
+        "east": -19,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 114,
+        "element": "sc-palisade",
+        "east": -18,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 115,
+        "element": "sc-palisade",
+        "east": -17,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 116,
+        "element": "sc-palisade",
+        "east": -16,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 117,
+        "element": "sc-palisade",
+        "east": -15,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 118,
+        "element": "sc-palisade",
+        "east": -14,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 119,
+        "element": "sc-palisade",
+        "east": -13,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 120,
+        "element": "sc-palisade",
+        "east": -12,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 121,
+        "element": "sc-palisade",
+        "east": -11,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 122,
+        "element": "sc-palisade",
+        "east": -10,
+        "north": -23,
+        "ground": 577.466064453125
+      },
+      {
+        "part": 123,
+        "element": "sc-palisade",
+        "east": -9,
+        "north": -23,
+        "ground": 577.120849609375
+      },
+      {
+        "part": 124,
+        "element": "sc-palisade",
+        "east": -8,
+        "north": -23,
+        "ground": 576.43603515625
+      },
+      {
+        "part": 125,
+        "element": "sc-palisade",
+        "east": -7,
+        "north": -23,
+        "ground": 575.6640625
+      },
+      {
+        "part": 126,
+        "element": "sc-palisade",
+        "east": -6,
+        "north": -23,
+        "ground": 574.966064453125
+      },
+      {
+        "part": 127,
+        "element": "sc-palisade",
+        "east": -5,
+        "north": -23,
+        "ground": 574.966064453125
+      },
+      {
+        "part": 128,
+        "element": "sc-palisade",
+        "east": -4,
+        "north": -23,
+        "ground": 574.966064453125
+      },
+      {
+        "part": 129,
+        "element": "sc-palisade",
+        "east": -3,
+        "north": -23,
+        "ground": 574.917236328125
+      },
+      {
+        "part": 130,
+        "element": "sc-palisade",
+        "east": -2,
+        "north": -23,
+        "ground": 574.809814453125
+      },
+      {
+        "part": 131,
+        "element": "sc-palisade",
+        "east": -1,
+        "north": -23,
+        "ground": 574.702392578125
+      },
+      {
+        "part": 132,
+        "element": "sc-palisade",
+        "east": 0,
+        "north": -23,
+        "ground": 574.653564453125
+      },
+      {
+        "part": 133,
+        "element": "sc-palisade",
+        "east": 1,
+        "north": -23,
+        "ground": 574.653564453125
+      },
+      {
+        "part": 134,
+        "element": "sc-gate",
+        "east": 2.2,
+        "north": -22,
+        "ground": 574.76611328125
+      },
+      {
+        "part": 135,
+        "element": "sc-gate",
+        "east": 7.8,
+        "north": -22,
+        "ground": 574.76611328125
+      },
+      {
+        "part": 136,
+        "element": "sc-gate",
+        "east": 5,
+        "north": -22,
+        "ground": 574.76611328125
+      },
+      {
+        "part": 137,
+        "element": "sc-gate",
+        "east": 2.2,
+        "north": -22,
+        "ground": 574.76611328125
+      },
+      {
+        "part": 138,
+        "element": "sc-gate",
+        "east": 7.8,
+        "north": -22,
+        "ground": 574.76611328125
+      },
+      {
+        "part": 139,
+        "element": "sc-vegetation",
+        "east": 48,
+        "north": 4,
+        "ground": 567.74609375
+      },
+      {
+        "part": 140,
+        "element": "sc-vegetation",
+        "east": 48,
+        "north": 4,
+        "ground": 567.74609375
+      },
+      {
+        "part": 141,
+        "element": "sc-vegetation",
+        "east": -76.56528549451303,
+        "north": 53.986294310563615,
+        "ground": 562.863037109375
+      },
+      {
+        "part": 142,
+        "element": "sc-vegetation",
+        "east": -76.56528549451303,
+        "north": 53.986294310563615,
+        "ground": 562.863037109375
+      },
+      {
+        "part": 143,
+        "element": "sc-vegetation",
+        "east": -15.180829172526742,
+        "north": -73.70134432058262,
+        "ground": 570.8968505859375
+      },
+      {
+        "part": 144,
+        "element": "sc-vegetation",
+        "east": -15.180829172526742,
+        "north": -73.70134432058262,
+        "ground": 570.8968505859375
+      },
+      {
+        "part": 145,
+        "element": "sc-vegetation",
+        "east": 27.8920314492114,
+        "north": 69.07522722104703,
+        "ground": 551.24755859375
+      },
+      {
+        "part": 146,
+        "element": "sc-vegetation",
+        "east": 27.8920314492114,
+        "north": 69.07522722104703,
+        "ground": 551.24755859375
+      },
+      {
+        "part": 147,
+        "element": "sc-vegetation",
+        "east": -106.68537350210829,
+        "north": -10.979569913999995,
+        "ground": 557.460693359375
+      },
+      {
+        "part": 148,
+        "element": "sc-vegetation",
+        "east": -106.68537350210829,
+        "north": -10.979569913999995,
+        "ground": 557.460693359375
+      },
+      {
+        "part": 149,
+        "element": "sc-vegetation",
+        "east": 37.06282748119442,
+        "north": -33.57103152598643,
+        "ground": 566.1353759765625
+      },
+      {
+        "part": 150,
+        "element": "sc-vegetation",
+        "east": 37.06282748119442,
+        "north": -33.57103152598643,
+        "ground": 566.1353759765625
+      },
+      {
+        "part": 151,
+        "element": "sc-vegetation",
+        "east": -41.21062006021613,
+        "north": 75.46294198325467,
+        "ground": 563.220703125
+      },
+      {
+        "part": 152,
+        "element": "sc-vegetation",
+        "east": -41.21062006021613,
+        "north": 75.46294198325467,
+        "ground": 563.220703125
+      },
+      {
+        "part": 153,
+        "element": "sc-vegetation",
+        "east": -57.95085924188978,
+        "north": -65.22091966862206,
+        "ground": 570.4730224609375
+      },
+      {
+        "part": 154,
+        "element": "sc-vegetation",
+        "east": -57.95085924188978,
+        "north": -65.22091966862206,
+        "ground": 570.4730224609375
+      },
+      {
+        "part": 155,
+        "element": "sc-vegetation",
+        "east": 55.0243979950541,
+        "north": 32.12902617403428,
+        "ground": 561.883056640625
+      },
+      {
+        "part": 156,
+        "element": "sc-vegetation",
+        "east": 55.0243979950541,
+        "north": 32.12902617403428,
+        "ground": 561.883056640625
+      },
+      {
+        "part": 157,
+        "element": "sc-vegetation",
+        "east": -101.49364998314495,
+        "north": 36.81401548663677,
+        "ground": 557.537841796875
+      },
+      {
+        "part": 158,
+        "element": "sc-vegetation",
+        "east": -101.49364998314495,
+        "north": 36.81401548663677,
+        "ground": 557.537841796875
+      },
+      {
+        "part": 159,
+        "element": "sc-vegetation",
+        "east": 7.669074002095268,
+        "north": -59.40146723742436,
+        "ground": 562.662841796875
+      },
+      {
+        "part": 160,
+        "element": "sc-vegetation",
+        "east": 7.669074002095268,
+        "north": -59.40146723742436,
+        "ground": 562.662841796875
+      },
+      {
+        "part": 161,
+        "element": "sc-vegetation",
+        "east": 0.1471843967041515,
+        "north": 74.60808893673857,
+        "ground": 550.6468505859375
+      },
+      {
+        "part": 162,
+        "element": "sc-vegetation",
+        "east": 0.1471843967041515,
+        "north": 74.60808893673857,
+        "ground": 550.6468505859375
+      },
+      {
+        "part": 163,
+        "element": "sc-vegetation",
+        "east": -89.48658217617155,
+        "north": -35.1096052930587,
+        "ground": 567.86083984375
+      },
+      {
+        "part": 164,
+        "element": "sc-vegetation",
+        "east": -89.48658217617155,
+        "north": -35.1096052930587,
+        "ground": 567.86083984375
+      },
+      {
+        "part": 165,
+        "element": "sc-vegetation",
+        "east": 58.08736085435255,
+        "north": -13.607232360161486,
+        "ground": 566.739990234375
+      },
+      {
+        "part": 166,
+        "element": "sc-vegetation",
+        "east": 58.08736085435255,
+        "north": -13.607232360161486,
+        "ground": 566.739990234375
+      },
+      {
+        "part": 167,
+        "element": "sc-vegetation",
+        "east": -71.46090463517594,
+        "north": 74.35352807549903,
+        "ground": 560.9346923828125
+      },
+      {
+        "part": 168,
+        "element": "sc-vegetation",
+        "east": -71.46090463517594,
+        "north": 74.35352807549903,
+        "ground": 560.9346923828125
+      },
+      {
+        "part": 169,
+        "element": "sc-vegetation",
+        "east": -30.995987500835916,
+        "north": -65.41953765968773,
+        "ground": 573.2825927734375
+      },
+      {
+        "part": 170,
+        "element": "sc-vegetation",
+        "east": -30.995987500835916,
+        "north": -65.41953765968773,
+        "ground": 573.2825927734375
+      },
+      {
+        "part": 171,
+        "element": "sc-vegetation",
+        "east": 34.58420095212272,
+        "north": 51.6888687495289,
+        "ground": 553.365966796875
+      },
+      {
+        "part": 172,
+        "element": "sc-vegetation",
+        "east": 34.58420095212272,
+        "north": 51.6888687495289,
+        "ground": 553.365966796875
+      },
+      {
+        "part": 173,
+        "element": "sc-vegetation",
+        "east": -99.93337962572947,
+        "north": 7.223094803435576,
+        "ground": 559.561279296875
+      },
+      {
+        "part": 174,
+        "element": "sc-vegetation",
+        "east": -99.93337962572947,
+        "north": 7.223094803435576,
+        "ground": 559.561279296875
+      },
+      {
+        "part": 175,
+        "element": "sc-vegetation",
+        "east": 36.12377279251122,
+        "north": -53.84139552573514,
+        "ground": 559.89111328125
+      },
+      {
+        "part": 176,
+        "element": "sc-vegetation",
+        "east": 36.12377279251122,
+        "north": -53.84139552573514,
+        "ground": 559.89111328125
+      },
+      {
+        "part": 177,
+        "element": "sc-vegetation",
+        "east": -25.972089374889283,
+        "north": 89.90822141097959,
+        "ground": 556.1744384765625
+      },
+      {
+        "part": 178,
+        "element": "sc-vegetation",
+        "east": -25.972089374889283,
+        "north": 89.90822141097959,
+        "ground": 556.1744384765625
+      },
+      {
+        "part": 179,
+        "element": "sc-vegetation",
+        "east": -66.8498870816627,
+        "north": -49.74465209453034,
+        "ground": 571.063720703125
+      },
+      {
+        "part": 180,
+        "element": "sc-vegetation",
+        "east": -66.8498870816627,
+        "north": -49.74465209453034,
+        "ground": 571.063720703125
+      },
+      {
+        "part": 181,
+        "element": "sc-vegetation",
+        "east": 51.33918414605202,
+        "north": 13.867323284025522,
+        "ground": 564.0697021484375
+      },
+      {
+        "part": 182,
+        "element": "sc-vegetation",
+        "east": 51.33918414605202,
+        "north": 13.867323284025522,
+        "ground": 564.0697021484375
+      },
+      {
+        "part": 183,
+        "element": "sc-vegetation",
+        "east": -86.02672513413951,
+        "north": 48.54860793108297,
+        "ground": 561.52001953125
+      },
+      {
+        "part": 184,
+        "element": "sc-vegetation",
+        "east": -86.02672513413951,
+        "north": 48.54860793108297,
+        "ground": 561.52001953125
+      },
+      {
+        "part": 185,
+        "element": "sc-vegetation",
+        "east": -4.002950425774614,
+        "north": -76.00066378863912,
+        "ground": 566.139404296875
+      },
+      {
+        "part": 186,
+        "element": "sc-vegetation",
+        "east": -4.002950425774614,
+        "north": -76.00066378863912,
+        "ground": 566.139404296875
+      },
+      {
+        "part": 187,
+        "element": "sc-vegetation",
+        "east": 20.757966649776243,
+        "north": 78.6173993648708,
+        "ground": 550.2781982421875
+      },
+      {
+        "part": 188,
+        "element": "sc-vegetation",
+        "east": 20.757966649776243,
+        "north": 78.6173993648708,
+        "ground": 550.2781982421875
+      },
+      {
+        "part": 189,
+        "element": "sc-vegetation",
+        "east": -88.68861659217227,
+        "north": -17.27506561734291,
+        "ground": 565.580810546875
+      },
+      {
+        "part": 190,
+        "element": "sc-vegetation",
+        "east": -88.68861659217227,
+        "north": -17.27506561734291,
+        "ground": 565.580810546875
+      },
+      {
+        "part": 191,
+        "element": "sc-vegetation",
+        "east": 45.1763585001579,
+        "north": -27.037668383083524,
+        "ground": 564.763671875
+      },
+      {
+        "part": 192,
+        "element": "sc-vegetation",
+        "east": 45.1763585001579,
+        "north": -27.037668383083524,
+        "ground": 564.763671875
+      },
+      {
+        "part": 193,
+        "element": "sc-vegetation",
+        "east": -52.11231811094336,
+        "north": 75.95309790401906,
+        "ground": 562.1956787109375
+      },
+      {
+        "part": 194,
+        "element": "sc-vegetation",
+        "east": -52.11231811094336,
+        "north": 75.95309790401906,
+        "ground": 562.1956787109375
+      },
+      {
+        "part": 195,
+        "element": "sc-vegetation",
+        "east": -49.75358324471135,
+        "north": -73.16047315224861,
+        "ground": 572.358154296875
+      },
+      {
+        "part": 196,
+        "element": "sc-vegetation",
+        "east": -49.75358324471135,
+        "north": -73.16047315224861,
+        "ground": 572.358154296875
+      },
+      {
+        "part": 197,
+        "element": "sc-vegetation",
+        "east": 54.12655816581548,
+        "north": 44.00933818281317,
+        "ground": 558.4190673828125
+      },
+      {
+        "part": 198,
+        "element": "sc-vegetation",
+        "east": 54.12655816581548,
+        "north": 44.00933818281317,
+        "ground": 558.4190673828125
+      },
+      {
+        "part": 199,
+        "element": "sc-vegetation",
+        "east": -89.68777739670868,
+        "north": 21.84277980286741,
+        "ground": 561.419921875
+      },
+      {
+        "part": 200,
+        "element": "sc-vegetation",
+        "east": -89.68777739670868,
+        "north": 21.84277980286741,
+        "ground": 561.419921875
+      },
+      {
+        "part": 201,
+        "element": "sc-vegetation",
+        "east": 18.021549365653478,
+        "north": -58.24367908769984,
+        "ground": 558.929443359375
+      },
+      {
+        "part": 202,
+        "element": "sc-vegetation",
+        "east": 18.021549365653478,
+        "north": -58.24367908769984,
+        "ground": 558.929443359375
+      },
+      {
+        "part": 203,
+        "element": "sc-vegetation",
+        "east": -8.788093427159959,
+        "north": 80.87291801870504,
+        "ground": 551.511962890625
+      },
+      {
+        "part": 204,
+        "element": "sc-vegetation",
+        "east": -8.788093427159959,
+        "north": 80.87291801870504,
+        "ground": 551.511962890625
+      },
+      {
+        "part": 205,
+        "element": "sc-vegetation",
+        "east": -86.83148097900745,
+        "north": -46.20835661589208,
+        "ground": 570.8050537109375
+      },
+      {
+        "part": 206,
+        "element": "sc-vegetation",
+        "east": -86.83148097900745,
+        "north": -46.20835661589208,
+        "ground": 570.8050537109375
+      },
+      {
+        "part": 207,
+        "element": "sc-vegetation",
+        "east": 63.706312541214245,
+        "north": -3.101266829777785,
+        "ground": 572.02880859375
+      },
+      {
+        "part": 208,
+        "element": "sc-vegetation",
+        "east": 63.706312541214245,
+        "north": -3.101266829777785,
+        "ground": 572.02880859375
+      },
+      {
+        "part": 209,
+        "element": "sc-vegetation",
+        "east": -69.53514109260749,
+        "north": 55.38492348253424,
+        "ground": 563.8939208984375
+      },
+      {
+        "part": 210,
+        "element": "sc-vegetation",
+        "east": -69.53514109260749,
+        "north": 55.38492348253424,
+        "ground": 563.8939208984375
+      },
+      {
+        "part": 211,
+        "element": "sc-vegetation",
+        "east": -21.639619479766633,
+        "north": -69.99912246696333,
+        "ground": 572.8067626953125
+      },
+      {
+        "part": 212,
+        "element": "sc-vegetation",
+        "east": -21.639619479766633,
+        "north": -69.99912246696333,
+        "ground": 572.8067626953125
+      },
+      {
+        "part": 213,
+        "element": "sc-vegetation",
+        "east": 30.407534071209348,
+        "north": 61.770670522117285,
+        "ground": 551.6085205078125
+      },
+      {
+        "part": 214,
+        "element": "sc-vegetation",
+        "east": 30.407534071209348,
+        "north": 61.770670522117285,
+        "ground": 551.6085205078125
+      },
+      {
+        "part": 215,
+        "element": "sc-vegetation",
+        "east": -103.65014750995866,
+        "north": -3.5665984168576035,
+        "ground": 558.7840576171875
+      },
+      {
+        "part": 216,
+        "element": "sc-vegetation",
+        "east": -103.65014750995866,
+        "north": -3.5665984168576035,
+        "ground": 558.7840576171875
+      },
+      {
+        "part": 217,
+        "element": "sc-vegetation",
+        "east": 46.50364616764338,
+        "north": -47.992792401815834,
+        "ground": 560.03466796875
+      },
+      {
+        "part": 218,
+        "element": "sc-vegetation",
+        "east": 46.50364616764338,
+        "north": -47.992792401815834,
+        "ground": 560.03466796875
+      },
+      {
+        "part": 219,
+        "element": "sc-vegetation",
+        "east": -34.52821796463156,
+        "north": 72.8697593623695,
+        "ground": 563.1231689453125
+      },
+      {
+        "part": 220,
+        "element": "sc-vegetation",
+        "east": -34.52821796463156,
+        "north": 72.8697593623695,
+        "ground": 563.1231689453125
+      },
+      {
+        "part": 221,
+        "element": "sc-vegetation",
+        "east": -61.413403865821294,
+        "north": -58.630532455900955,
+        "ground": 570.4747314453125
+      },
+      {
+        "part": 222,
+        "element": "sc-vegetation",
+        "east": -61.413403865821294,
+        "north": -58.630532455900955,
+        "ground": 570.4747314453125
+      },
+      {
+        "part": 223,
+        "element": "sc-vegetation",
+        "east": 53.22629752895003,
+        "north": 24.61562902474449,
+        "ground": 564.40771484375
+      },
+      {
+        "part": 224,
+        "element": "sc-vegetation",
+        "east": 53.22629752895003,
+        "north": 24.61562902474449,
+        "ground": 564.40771484375
+      },
+      {
+        "part": 225,
+        "element": "sc-vegetation",
+        "east": -94.95390691227136,
+        "north": 41.43965098976812,
+        "ground": 559.2838134765625
+      },
+      {
+        "part": 226,
+        "element": "sc-vegetation",
+        "east": -94.95390691227136,
+        "north": 41.43965098976812,
+        "ground": 559.2838134765625
+      },
+      {
+        "part": 227,
+        "element": "sc-vegetation",
+        "east": 7.894231328280092,
+        "north": -76.63705682433653,
+        "ground": 560.0531005859375
+      },
+      {
+        "part": 228,
+        "element": "sc-vegetation",
+        "east": 7.894231328280092,
+        "north": -76.63705682433653,
+        "ground": 560.0531005859375
+      },
+      {
+        "part": 229,
+        "element": "sc-vegetation",
+        "east": 4.39365605569796,
+        "north": 68.83343982863718,
+        "ground": 550.406494140625
+      },
+      {
+        "part": 230,
+        "element": "sc-vegetation",
+        "east": 4.39365605569796,
+        "north": 68.83343982863718,
+        "ground": 550.406494140625
+      },
+      {
+        "part": 231,
+        "element": "sc-vegetation",
+        "east": -88.87086831948027,
+        "north": -27.690487061557295,
+        "ground": 566.812255859375
+      },
+      {
+        "part": 232,
+        "element": "sc-vegetation",
+        "east": -88.87086831948027,
+        "north": -27.690487061557295,
+        "ground": 566.812255859375
+      },
+      {
+        "part": 233,
+        "element": "sc-vegetation",
+        "east": 52.537546871687,
+        "north": -18.981603650551957,
+        "ground": 562.7894287109375
+      },
+      {
+        "part": 234,
+        "element": "sc-vegetation",
+        "east": 52.537546871687,
+        "north": -18.981603650551957,
+        "ground": 562.7894287109375
+      },
+      {
+        "part": 235,
+        "element": "sc-vegetation",
+        "east": -63.460253005430786,
+        "north": 74.74635977013706,
+        "ground": 561.3187255859375
+      },
+      {
+        "part": 236,
+        "element": "sc-vegetation",
+        "east": -63.460253005430786,
+        "north": 74.74635977013706,
+        "ground": 561.3187255859375
+      },
+      {
+        "part": 237,
+        "element": "sc-vegetation",
+        "east": -40.056851092638695,
+        "north": -80.08299547838595,
+        "ground": 572.881591796875
+      },
+      {
+        "part": 238,
+        "element": "sc-vegetation",
+        "east": -40.056851092638695,
+        "north": -80.08299547838595,
+        "ground": 572.881591796875
+      },
+      {
+        "part": 239,
+        "element": "sc-vegetation",
+        "east": 35.0677595136501,
+        "north": 44.53727696937966,
+        "ground": 556.7415771484375
+      },
+      {
+        "part": 240,
+        "element": "sc-vegetation",
+        "east": 35.0677595136501,
+        "north": 44.53727696937966,
+        "ground": 556.7415771484375
+      },
+      {
+        "part": 241,
+        "element": "sc-vegetation",
+        "east": -95.43181210763963,
+        "north": 13.15253902413477,
+        "ground": 560.3135986328125
+      },
+      {
+        "part": 242,
+        "element": "sc-vegetation",
+        "east": -95.43181210763963,
+        "north": 13.15253902413477,
+        "ground": 560.3135986328125
+      },
+      {
+        "part": 243,
+        "element": "sc-vegetation",
+        "east": 28.55651023544759,
+        "north": -55.39730021485053,
+        "ground": 559.6778564453125
+      },
+      {
+        "part": 244,
+        "element": "sc-vegetation",
+        "east": 28.55651023544759,
+        "north": -55.39730021485053,
+        "ground": 559.6778564453125
+      },
+      {
+        "part": 245,
+        "element": "sc-vegetation",
+        "east": -19.010657961626052,
+        "north": 85.94549306812188,
+        "ground": 553.503662109375
+      },
+      {
+        "part": 246,
+        "element": "sc-vegetation",
+        "east": -19.010657961626052,
+        "north": 85.94549306812188,
+        "ground": 553.503662109375
+      },
+      {
+        "part": 247,
+        "element": "sc-flags",
+        "east": -28,
+        "north": 18,
+        "ground": 575.2939453125
+      },
+      {
+        "part": 248,
+        "element": "sc-flags",
+        "east": -27.35,
+        "north": 18,
+        "ground": 575.2939453125
+      },
+      {
+        "part": 249,
+        "element": "sc-flags",
+        "east": -29,
+        "north": -12,
+        "ground": 575.053955078125
+      },
+      {
+        "part": 250,
+        "element": "sc-flags",
+        "east": -28.35,
+        "north": -12,
+        "ground": 575.053955078125
+      },
+      {
+        "part": 251,
+        "element": "sc-flags",
+        "east": 8,
+        "north": 21,
+        "ground": 575.318115234375
+      },
+      {
+        "part": 252,
+        "element": "sc-flags",
+        "east": 8.65,
+        "north": 21,
+        "ground": 575.318115234375
+      },
+      {
+        "part": 253,
+        "element": "sc-flags",
+        "east": 0,
+        "north": -18,
+        "ground": 575.006103515625
+      },
+      {
+        "part": 254,
+        "element": "sc-flags",
+        "east": 0.65,
+        "north": -18,
+        "ground": 575.006103515625
+      },
+      {
+        "part": 255,
+        "element": "sc-people",
+        "east": -15,
+        "north": 4,
+        "ground": 575.1820068359375
+      },
+      {
+        "part": 256,
+        "element": "sc-people",
+        "east": -15,
+        "north": 4,
+        "ground": 575.1820068359375
+      },
+      {
+        "part": 257,
+        "element": "sc-people",
+        "east": -15.13,
+        "north": 4,
+        "ground": 575.1820068359375
+      },
+      {
+        "part": 258,
+        "element": "sc-people",
+        "east": -14.87,
+        "north": 4,
+        "ground": 575.1820068359375
+      },
+      {
+        "part": 259,
+        "element": "sc-people",
+        "east": -12,
+        "north": 6,
+        "ground": 575.197998046875
+      },
+      {
+        "part": 260,
+        "element": "sc-people",
+        "east": -12,
+        "north": 6,
+        "ground": 575.197998046875
+      },
+      {
+        "part": 261,
+        "element": "sc-people",
+        "east": -12.13,
+        "north": 6,
+        "ground": 575.197998046875
+      },
+      {
+        "part": 262,
+        "element": "sc-people",
+        "east": -11.87,
+        "north": 6,
+        "ground": 575.197998046875
+      },
+      {
+        "part": 263,
+        "element": "sc-people",
+        "east": 3,
+        "north": -16,
+        "ground": 575.02197265625
+      },
+      {
+        "part": 264,
+        "element": "sc-people",
+        "east": 3,
+        "north": -16,
+        "ground": 575.02197265625
+      },
+      {
+        "part": 265,
+        "element": "sc-people",
+        "east": 2.87,
+        "north": -16,
+        "ground": 575.02197265625
+      },
+      {
+        "part": 266,
+        "element": "sc-people",
+        "east": 3.13,
+        "north": -16,
+        "ground": 575.02197265625
+      },
+      {
+        "part": 267,
+        "element": "sc-people",
+        "east": 8,
+        "north": -28,
+        "ground": 573.926025390625
+      },
+      {
+        "part": 268,
+        "element": "sc-people",
+        "east": 8,
+        "north": -28,
+        "ground": 573.926025390625
+      },
+      {
+        "part": 269,
+        "element": "sc-people",
+        "east": 7.87,
+        "north": -28,
+        "ground": 573.926025390625
+      },
+      {
+        "part": 270,
+        "element": "sc-people",
+        "east": 8.13,
+        "north": -28,
+        "ground": 573.926025390625
+      }
+    ],
+    "externalAssets": 0
+  },
+  "hashes": {
+    "scripts/build-landscape-blender.py": "8dca0ebcddd559e255075ad95b3dad142e7658050a7c2baebeff52dd1b1eb451",
+    "production/landscape/recipe.json": "b34c7920d5416f62325f8e4cd76d4d74210e2a01a9d5283ad04d0577280177fe",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+    "production/yamanaka-1590.blend": "6d45ec6df4c0f820e238d2fcd0bda226b5791396070f760eb725847461c9cda1",
+    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+  },
+  "utc": "2026-11-05T04:36:58.381Z",
+  "stdout": "INFO Draco mesh compression is available, use library at [Blender]\\4.5\\scripts\\addons_core\\io_scene_gltf2\\extern_draco.dll\r\n13:36:45 | INFO: Starting glTF 2.0 export\r\n13:36:45 | INFO: Extracting primitive: Cylinder\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.001\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.001\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.002\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.002\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.003\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.003\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.004\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.004\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.005\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.005\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.006\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.006\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.007\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.007\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.008\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.008\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.009\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.009\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.010\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.010\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.011\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.011\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.012\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.012\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.013\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.013\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.014\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.014\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.015\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.015\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.016\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.016\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.017\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.017\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.018\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.018\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.019\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.019\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.020\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.020\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.021\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.021\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.022\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.022\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.023\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.023\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.024\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.024\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.025\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.025\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.026\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.026\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.027\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.027\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.028\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.028\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.029\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.029\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.030\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.030\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.031\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.031\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.032\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.032\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.033\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.033\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.034\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.034\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.035\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.035\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.036\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.036\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.037\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.037\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.038\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.038\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.039\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.039\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.040\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.040\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.041\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.041\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.042\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.042\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.043\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.043\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.044\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.044\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.045\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.045\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.046\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.046\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.047\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.047\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.048\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.048\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.049\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.049\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.050\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.050\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.051\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.051\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.052\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.052\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.053\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.053\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.054\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.054\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.055\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.055\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.056\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.056\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.057\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.057\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.058\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.058\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.059\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.059\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.060\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.060\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.061\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.061\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.062\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.062\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.063\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.063\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.064\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.064\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.065\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.065\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.066\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.066\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.067\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.068\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.067\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.068\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cube.069\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.069\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cone\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cylinder.070\r\n13:36:45 | INFO: Primitives created: 1\r\n13:36:45 | INFO: Extracting primitive: Cone.001\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.071\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.002\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.072\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.003\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.073\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.004\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.074\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.005\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.075\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.006\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.076\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.007\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.077\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.008\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.078\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.009\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.079\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.010\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.080\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.011\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.081\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.012\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.082\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.013\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.083\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.014\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.084\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.015\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.085\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.016\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.086\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.017\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.087\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.018\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.088\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.019\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.089\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.020\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.090\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.021\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.091\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.022\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.092\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.023\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.093\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.024\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.094\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.025\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.095\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.026\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.096\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.027\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.097\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.028\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.098\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.029\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.099\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.030\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.100\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.031\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.101\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.032\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.102\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.033\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.103\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.034\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.104\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.035\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.105\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.036\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.106\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.037\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.107\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.038\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.108\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.039\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.109\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.040\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.110\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.041\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.111\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.042\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.112\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.043\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.113\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.044\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.114\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.045\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.115\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.046\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.116\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.047\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.117\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.048\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.118\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.049\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.119\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.050\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.120\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.051\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.121\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.052\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.122\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.053\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.123\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: folded cloth\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.124\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: folded cloth.001\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.125\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: folded cloth.002\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.126\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: folded cloth.003\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.054\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Sphere\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.127\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.128\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.055\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Sphere.001\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.129\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.130\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.056\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Sphere.002\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.131\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.132\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cone.057\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Sphere.003\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.133\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:46 | INFO: Extracting primitive: Cylinder.134\r\n13:36:46 | INFO: Primitives created: 1\r\n13:36:47 | INFO: Finished glTF 2.0 export in 1.8482491970062256 s\r\n\r\nInfo: Saved as \"yamanaka-1590.blend\"\r\nBlender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka-phase2a.blend\"\n\nBlender quit\n",
+  "stderr": ""
+}

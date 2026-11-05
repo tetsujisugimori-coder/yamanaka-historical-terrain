@@ -1,0 +1,17 @@
+{
+  "scope": "Self verification; trusted emulated touch at raw GLB part projections, not physical iPhone",
+  "rows": [
+    {
+      "engine": "chromium",
+      "checks": [],
+      "status": "FAIL",
+      "reason": "expect(received).toBeLessThan(expected)\n\nExpected: < 0.98\nReceived:   1.3454479986945918"
+    },
+    {
+      "engine": "webkit",
+      "checks": [],
+      "status": "FAIL",
+      "reason": "expect(received).toBeLessThan(expected)\n\nExpected: < 0.98\nReceived:   1.3454479986945918"
+    }
+  ]
+}

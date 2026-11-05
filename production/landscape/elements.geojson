@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44826.121277226666,
+          -93466.07235405142
+        ]
+      },
+      "properties": {
+        "id": "sc-palisade",
+        "category": "C",
+        "name": "土塁上の木柵候補",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#sc-palisade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44867.121277226666,
+          -93500.07235405142
+        ]
+      },
+      "properties": {
+        "id": "sc-gate",
+        "category": "C",
+        "name": "虎口の門候補",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#sc-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44788.121277226666,
+          -93443.07235405142
+        ]
+      },
+      "properties": {
+        "id": "sc-vegetation",
+        "category": "C",
+        "name": "周辺の樹木と低木",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#sc-vegetation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44834.121277226666,
+          -93460.07235405142
+        ]
+      },
+      "properties": {
+        "id": "sc-flags",
+        "category": "D",
+        "name": "旗の創作演出",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#sc-flags"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44847.121277226666,
+          -93474.07235405142
+        ]
+      },
+      "properties": {
+        "id": "sc-people",
+        "category": "D",
+        "name": "人物の創作演出",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#sc-people"
+      }
+    }
+  ]
+}

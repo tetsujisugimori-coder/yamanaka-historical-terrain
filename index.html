@@ -5,6 +5,15 @@
 <header><a href="./" class="brand"><span class="brand-mark" aria-hidden="true">山</span><span>歴史地形図録<small>LANDSCAPE / ARCHIVE 01</small></span></a><span class="edition">山中城跡 · 静岡県三島市<br><b>研究プロトタイプ / 検証版（未完成）</b></span><button id="sources-open" class="quiet">資料と精度 ↗</button></header>
 <main>
 <div class="intro"><div><p class="eyebrow">YAMANAKA CASTLE · HAKONE WESTERN SLOPES</p><h1>地形から、<br class="mobile-break">城を読む。</h1></div><p>谷が守り、尾根がつなぎ、道を押さえる。<br>山中城が「ここ」にある理由を、実際の土地から探る。</p></div>
+<section class="landscape-entry" aria-label="1590年景観の入口"><div><p class="eyebrow">EXPERIENCE / 1590</p><h2>西ノ丸に、立ってみる。</h2><p>土塁の向こう、畝の連なる堀へ。C 推定復元と D 創作演出で見る景観です。史実確定の復元ではありません。</p></div><button id="landscape-enter" class="primary">1590年の景観へ →</button></section>
+<section id="landscape-toolbar" class="landscape-toolbar" aria-label="1590年景観の操作" hidden>
+<p><b>1590年 推定景観</b>　<span>C 推定 ／ D 創作演出 ／ B形状0</span><br>配置・植生・門・木柵は仮説。人物と旗は創作。史実確定ではありません。</p>
+<div class="segmented"><button data-landscape-mode="cd" aria-pressed="false">C＋D 景観</button><button data-landscape-mode="c" aria-pressed="false">Cのみ（Dを隠す）</button><button data-landscape-mode="a" aria-pressed="false">A 現況と比較</button></div>
+<p id="landscape-asset-status" class="accuracy-note" role="status" hidden></p>
+<p id="landscape-selection-status" role="status"></p>
+<div class="segmented station-buttons"><button data-station="bailey">曲輪に立つ</button><button data-station="bank">土塁の内側</button><button data-station="moat">障子堀を見下ろす</button><button data-station="passage">虎口の通路</button><button id="landscape-overview">俯瞰へ</button></div>
+<p id="station-status">低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。</p>
+</section>
 <div class="workspace">
 <section class="terrain-panel" aria-label="山中城の3D地形">
 <div class="map-top"><span class="live-dot"></span><span id="extent">広域 · 4 × 4 km</span><span id="height-mode">標高倍率 1×</span></div>
@@ -19,6 +28,7 @@
 <nav id="feature-list" aria-label="観察地点"></nav><p class="reconstruction-heading">西ノ丸候補区域 · C 推定復元</p><nav id="reconstruction-list" aria-label="復元施設の解説"></nav>
 <p id="reading-status" class="accuracy-note" role="status">施設解説・出典を読み込んでいます…</p>
 <article id="detail" aria-live="polite"></article>
+<p class="reconstruction-heading">景観の推定と創作</p><nav id="landscape-list" aria-label="景観要素の解説"></nav>
 <button id="focus-feature" class="primary">この場所を近くで見る <span>↗</span></button>
 <p class="accuracy-note">地点は概略案内です。遺構の境界・正確な平面形はまだ復元していません。</p>
 </aside>
@@ -34,7 +44,7 @@
 <fieldset><legend>同じ視点で比較（視点を保持）</legend><div class="segmented"><button data-compare="restored" aria-pressed="true">C 復元候補</button><button data-compare="current" aria-pressed="false">A 現況地形</button></div></fieldset>
 <fieldset><legend>推定施設の表示（非表示部分は空隙になります）</legend><label class="check"><input id="category-c" type="checkbox" checked>C 推定施設を表示 · B形状は未制作</label><div id="facility-layers"></div></fieldset>
 <fieldset><legend>区域内から観察</legend><div class="segmented"><button data-eye="nm-bailey">曲輪から見る</button><button data-eye="nm-passage">通路から見る</button></div></fieldset>
-<p class="accuracy-note">第1期の西アンカーを測量根拠にしていません。現況DEMの肩に仮配置を再検討。基準点0・図面残差UNKNOWN。凡例は名称とC表示でも確認できます。門・柵・戦闘シミュレーションは未実装。</p>
+<p class="accuracy-note">第1期の西アンカーを測量根拠にしていません。現況DEMの肩に仮配置を再検討。基準点0・図面残差UNKNOWN。凡例は名称とC表示でも確認できます。門・木柵は1590年景観モードのC候補で、史実確定ではありません。戦闘シミュレーションは未実装。</p>
 </section>
 <section id="section-exhibit" class="section-exhibit" aria-label="固定断面の比較"></section>
 <section id="study-note" class="study-note" hidden><b>C 推定・教材モデル</b>　発掘時の一例（畝上部約35cm、深さ1.8m、斜面約58°）を参考に、現在の地表から最大1.8m切り下げる教材です。現況斜面に沿うため、表示された全斜面が58°になる復元ではありません。7mの区画間隔・配置・向きは説明用で、現地の測量復元ではありません。現況DEMの一部を教材に置き換えています。<a href="https://www.city.mishima.shizuoka.jp/site/kyoudoshiryoukan/36489.html" target="_blank" rel="noopener">三島市の解説 ↗</a></section>

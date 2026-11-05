@@ -1,0 +1,79 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44844.121277226666,
+          -93473.07235405142
+        ]
+      },
+      "properties": {
+        "id": "bailey",
+        "category": "C",
+        "name": "曲輪に立つ",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#bailey"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44834.121277226666,
+          -93466.07235405142
+        ]
+      },
+      "properties": {
+        "id": "bank",
+        "category": "C",
+        "name": "土塁の内側",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44823.121277226666,
+          -93488.07235405142
+        ]
+      },
+      "properties": {
+        "id": "moat",
+        "category": "C",
+        "name": "障子堀を見下ろす",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#moat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44867.121277226666,
+          -93508.07235405142
+        ]
+      },
+      "properties": {
+        "id": "passage",
+        "category": "C",
+        "name": "虎口の通路",
+        "accuracy": "UNKNOWN; hypothetical placement; not historical route",
+        "ledger": "public/data/landscape.json#passage"
+      }
+    }
+  ]
+}

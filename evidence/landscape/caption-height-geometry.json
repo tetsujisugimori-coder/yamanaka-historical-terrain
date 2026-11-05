@@ -1,0 +1,18 @@
+{
+  "oldHead": "e667286a961da8671fcc9f63e15ecf30449b418d",
+  "status": "PASS",
+  "nodes": 271,
+  "maxPositionError": 0,
+  "maxTransformError": 0,
+  "indexDifferences": 4,
+  "differentIndices": [
+    "sc-people.256",
+    "sc-people.260",
+    "sc-people.264",
+    "sc-people.268"
+  ],
+  "triangleSetDifferences": 0,
+  "metadataDifferences": 0,
+  "binaryChunkIdentical": false,
+  "note": "Vertex positions, transforms, metadata and oriented triangle sets independent of triangle order compared independently. Triangle order is separately recorded."
+}

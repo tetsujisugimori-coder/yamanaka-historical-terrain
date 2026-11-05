@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "layers": 12,
+  "preservedLayers": 10,
+  "crs": "EPSG:6676",
+  "reread": true
+}

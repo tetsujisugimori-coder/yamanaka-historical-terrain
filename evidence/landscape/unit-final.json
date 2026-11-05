@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "sourceHashes": {
+    "tests/interaction-contract.test.mjs": "6e14de8b8bd3ee987af8078412aeeb3ccfc24da29c01303b829c720a23806326",
+    "tests/landscape.test.mjs": "8ebaaec949ffcad27a4929dc4c203c70526d79babae289e67d706b862ccaac26",
+    "tests/native-check.test.mjs": "e35cdd38f0179221845fca6dabbef0ac457f2e7d7a5cff88acc84d06a9777954",
+    "tests/phase2a.test.mjs": "e12f767f2e5dcd9210fddad9a9eb7334def3328b1b88fa0a14146443a6a0c712",
+    "tests/sections.test.mjs": "4f55f38ffd53322dc092467692cb8b8c71b721290d0abfffaa8d2ff7daeae0a8",
+    "tests/terrain.test.mjs": "3458f4b08b0e01ab6dd7d590eaba9e310778480091efafb96aed5be329efe61c"
+  },
+  "utc": "2026-11-05T04:33:40.410Z"
+}
