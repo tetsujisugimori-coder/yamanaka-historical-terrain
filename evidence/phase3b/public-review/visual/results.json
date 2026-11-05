@@ -1,0 +1,864 @@
+{
+  "head": "36d8417df3a70f9530db3df92fd3f46015b0bb68",
+  "utc": "2026-11-05T10:55:10.048Z",
+  "scope": "Independent browser review runner; no product response mutation in core checks. Reduced motion, existing browsers, no hardware Safari.",
+  "rows": [
+    {
+      "name": "chrome",
+      "width": 1280,
+      "buildingToggle": {
+        "selection": "wb-building",
+        "hidden": true,
+        "cameraPreserved": true,
+        "explanation": "C\n推定・案内\n西櫓の建物候補（上部構造未確定）\n\n掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n推定モデル観察点の標高\n553 m\n位置の確実性\nUNKNOWN / 推定配置\n\nUNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。\n\n歴史的な役割：掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n復元の仮定：8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。\n\n不明な事項：柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。\n\n制作上の演出：土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。\n\n編集元：production/yamanaka-phase3b.blend / production/phase3b/recipe.json\n\n三島市の解説 ↗　"
+      },
+      "aMode": {
+        "cameraPreserved": true,
+        "selectionPreserved": true,
+        "newMeshes": 0
+      },
+      "overflow": {
+        "scroll": 1280,
+        "width": 1280
+      },
+      "beforeResize": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "wb-building",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "phase3b": {
+          "visible": true,
+          "unavailable": false,
+          "objects": [
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-moat",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            }
+          ],
+          "quality": "balanced",
+          "finish": true,
+          "building": true,
+          "bounds": [
+            -205,
+            -55,
+            -80,
+            55
+          ],
+          "shadows": true
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -206.99999999999997,
+          582.1799926757812,
+          43.00000000000001
+        ],
+        "target": [
+          -168.99999999999997,
+          543.1799926757812,
+          -5
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 120.02875548908258,
+          "start": [
+            -168.99999999999997,
+            543.1799926757812,
+            -5
+          ],
+          "end": [
+            -161.15954175538235,
+            543.1799926757812,
+            1.2070294436556104
+          ]
+        },
+        "triangles": 355873,
+        "drawCalls": 20,
+        "geometries": 41,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              1.8547714751922684,
+              1.673877361473675,
+              0.9978199547107411
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              1.684177094293979,
+              1.6365369424082774,
+              0.9973634242632791
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              1.795553449060558,
+              1.7205198696603592,
+              0.9975180332747758
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              2.456150236863442,
+              1.6389017926120437,
+              0.9976491369273259
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              0.8318750337549131,
+              1.4399658119762178,
+              0.997792050337555
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              2.0302457944086654,
+              1.9617499777904581,
+              0.9977787949167369
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.13972791594300457,
+              1.205678705158272,
+              0.9971495419213763
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -17.921487468005882,
+              3.622625480030935,
+              1.0046595599536474
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.753999550585579,
+              1.5668021152344107,
+              0.9982788239360451
+            ]
+          }
+        ]
+      },
+      "afterResize": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "wb-building",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "phase3b": {
+          "visible": true,
+          "unavailable": false,
+          "objects": [
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-moat",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            }
+          ],
+          "quality": "balanced",
+          "finish": true,
+          "building": true,
+          "bounds": [
+            -205,
+            -55,
+            -80,
+            55
+          ],
+          "shadows": true
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -206.99999999999997,
+          582.1799926757812,
+          43.00000000000001
+        ],
+        "target": [
+          -168.99999999999997,
+          543.1799926757812,
+          -5
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 92.02204587496331,
+          "start": [
+            -168.99999999999997,
+            543.1799926757812,
+            -5
+          ],
+          "end": [
+            -161.15954175538235,
+            543.1799926757812,
+            1.2070294436556104
+          ]
+        },
+        "triangles": 355389,
+        "drawCalls": 18,
+        "geometries": 41,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              3.526966651280426,
+              1.673877361473675,
+              0.9978199547107411
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              3.2025705192654432,
+              1.6365369424082774,
+              0.9973634242632791
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              3.4143597850897844,
+              1.7205198696603592,
+              0.9975180332747758
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              4.6705268502438475,
+              1.6389017926120437,
+              0.9976491369273259
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              1.5818636103308712,
+              1.4399658119762178,
+              0.997792050337555
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.8606422982860567,
+              1.9617499777904581,
+              0.9977787949167369
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.26570157368459946,
+              1.205678705158272,
+              0.9971495419213763
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -34.07885525867522,
+              3.622625480030935,
+              1.0046595599536474
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              9.040034365084981,
+              1.5668021152344107,
+              0.9982788239360451
+            ]
+          }
+        ]
+      },
+      "errors": [],
+      "status": "completed"
+    },
+    {
+      "name": "chrome",
+      "width": 375,
+      "buildingToggle": {
+        "selection": "wb-building",
+        "hidden": true,
+        "cameraPreserved": true,
+        "explanation": "C\n推定・案内\n西櫓の建物候補（上部構造未確定）\n\n掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n推定モデル観察点の標高\n553 m\n位置の確実性\nUNKNOWN / 推定配置\n\nUNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。\n\n歴史的な役割：掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n復元の仮定：8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。\n\n不明な事項：柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。\n\n制作上の演出：土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。\n\n編集元：production/yamanaka-phase3b.blend / production/phase3b/recipe.json\n\n三島市の解説 ↗　"
+      },
+      "aMode": {
+        "cameraPreserved": true,
+        "selectionPreserved": true,
+        "newMeshes": 0
+      },
+      "overflow": {
+        "scroll": 375,
+        "width": 375
+      },
+      "errors": [],
+      "status": "completed"
+    },
+    {
+      "name": "chrome",
+      "width": 390,
+      "buildingToggle": {
+        "selection": "wb-building",
+        "hidden": true,
+        "cameraPreserved": true,
+        "explanation": "C\n推定・案内\n西櫓の建物候補（上部構造未確定）\n\n掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n推定モデル観察点の標高\n553 m\n位置の確実性\nUNKNOWN / 推定配置\n\nUNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。\n\n歴史的な役割：掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n復元の仮定：8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。\n\n不明な事項：柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。\n\n制作上の演出：土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。\n\n編集元：production/yamanaka-phase3b.blend / production/phase3b/recipe.json\n\n三島市の解説 ↗　"
+      },
+      "aMode": {
+        "cameraPreserved": true,
+        "selectionPreserved": true,
+        "newMeshes": 0
+      },
+      "overflow": {
+        "scroll": 390,
+        "width": 390
+      },
+      "errors": [],
+      "status": "completed"
+    },
+    {
+      "name": "chrome",
+      "width": 765,
+      "buildingToggle": {
+        "selection": "wb-building",
+        "hidden": true,
+        "cameraPreserved": true,
+        "explanation": "C\n推定・案内\n西櫓の建物候補（上部構造未確定）\n\n掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n推定モデル観察点の標高\n553 m\n位置の確実性\nUNKNOWN / 推定配置\n\nUNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。\n\n歴史的な役割：掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n復元の仮定：8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。\n\n不明な事項：柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。\n\n制作上の演出：土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。\n\n編集元：production/yamanaka-phase3b.blend / production/phase3b/recipe.json\n\n三島市の解説 ↗　"
+      },
+      "aMode": {
+        "cameraPreserved": true,
+        "selectionPreserved": true,
+        "newMeshes": 0
+      },
+      "overflow": {
+        "scroll": 765,
+        "width": 765
+      },
+      "errors": [],
+      "status": "completed"
+    },
+    {
+      "name": "webkit",
+      "width": 390,
+      "buildingToggle": {
+        "selection": "wb-building",
+        "hidden": true,
+        "cameraPreserved": true,
+        "explanation": "C\n推定・案内\n西櫓の建物候補（上部構造未確定）\n掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n推定モデル観察点の標高\n553 m\n位置の確実性\nUNKNOWN / 推定配置\nUNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。\n歴史的な役割：掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。\n\n復元の仮定：8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。\n\n不明な事項：柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。\n\n制作上の演出：土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。\n\n編集元：production/yamanaka-phase3b.blend / production/phase3b/recipe.json\n\n三島市の解説 ↗　\n"
+      },
+      "aMode": {
+        "cameraPreserved": true,
+        "selectionPreserved": true,
+        "newMeshes": 0
+      },
+      "overflow": {
+        "scroll": 390,
+        "width": 390
+      },
+      "errors": [],
+      "status": "completed"
+    }
+  ]
+}

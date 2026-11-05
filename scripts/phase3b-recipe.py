@@ -39,12 +39,14 @@ def elevation(e,n):
     # Soil ramparts. Deliberate 6m-wide southern entrance, no stone walls.
     d = min(segment(e,n,(-151,25),(-108,25)),segment(e,n,(-108,-15),(-108,25)))
     base += 2.1*clamp((4-d)/3)
-    # One north-south ditch with transverse, unpaired ridges. This is not
-    # the alternating two-column shoji moat of the existing Nishinomaru.
+    # One north-south ditch with transverse, unpaired ridges. Historical
+    # descriptions distinguish Nishinomaru's alternating two-column moat;
+    # the existing C model simplifies that feature to an aligned grid.
     mw = rect(e,n,[-180,-30,-158,34],3)
     cross = smooth(min(e+180,-158-e)/5.0)
     end = smooth(min(n+30,34-n)/5.0)
-    # 7 actual model cells; dimensions intentionally distinct from city values.
+    # Seven standard cells plus one short southern connection cell: eight
+    # actual model cells. Dimensions intentionally differ from city values.
     ridge_distance = min(abs(n-v) for v in [-24,-16,-8,0,8,16,24,32])
     ridge = 1.6*clamp(1-ridge_distance/1.5)
     base -= (6.5-ridge)*cross*end*mw
@@ -82,8 +84,8 @@ def produce():
             '幅4.2m、高3.6mの簡素な門と部分開放の扉をCで仮置き。南側通路を西櫓曲輪へ接続する。',
             '門の正確な位置・向き・構法・寸法・年代はUNKNOWN。'),
         element('wb-moat','西櫓堀の単列畝堀候補',[-169,5],
-            '深い一本の溝を横切る畝が移動を妨げる。左右二列の交互畝を持つ既存西ノ丸障子堀とは区別する。',
-            '長さ64m、上面幅22m、最大切下げ6.5m、畝高1.6m、8mピッチの7区画。実測復元ではなく地形接続に合わせたC模型。',
+            '深い一本の溝を横切る畝が移動を妨げる。史料上の西ノ丸複列は左右交互の畝。既存C模型は格子状に簡略化しており、本候補の単列畝堀とは区別する。',
+            '長さ64m、上面幅22m、最大切下げ6.5m、畝高1.6m、8mピッチの中央の標準7区画と南端接続部1区画（計8）。実測復元ではなく地形接続に合わせたC模型。',
             '実際の範囲・区画位置・深さ・方位・侵食履歴・1590年の表土はUNKNOWN。'),
         element('wb-building','西櫓の建物候補（上部構造未確定）',[-131,7],
             '掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。',
@@ -102,7 +104,9 @@ def produce():
         placement='C conceptual western extension; no control-point georeferencing; not a surveyed layout',
         referenceDimensions=dict(sourceId='mishima-western',scope='三島市1301の一般説明。模型の確定寸法や地理位置ではない。',
             ridgeHeightMetres=1.8,cells=10,cellTopMetres='8–9',cellBottomWidthMetres=2,cellBottomLengthMetres=5,slopeDegrees=55,depthMetres='9以上'),
-        modelDimensions=dict(moatTopWidth=22,moatLength=64,maximumCut=6.5,ridgeHeight=1.6,ridgePitch=8,cells=7,
+        modelDimensions=dict(moatTopWidth=22,moatLength=64,maximumCut=6.5,ridgeHeight=1.6,ridgePitch=8,cells=8,
+            cellCounting=dict(standardCells=7,southernConnectionCells=1,totalCells=8,
+                definition='畝で分かれる中央の標準7区画と南端の短い接続部1区画を別に数える。参考史料の10区画とは別の模型寸法。'),
             baileyApprox=[45,40],rampartHeight=2.1,palisadeHeight=1.8,palisadePostTop=1.93,
             buildingPlan=[8,6],buildingRoofPlaneRidgeHeight=5.8,buildingOverallHeight=5.94,
             gateOpening=4.2,gateNominalHeight=3.6,gateOverallHeight=3.62),

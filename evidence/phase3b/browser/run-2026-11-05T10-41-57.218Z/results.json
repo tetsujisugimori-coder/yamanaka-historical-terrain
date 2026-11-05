@@ -1,0 +1,137 @@
+{
+  "scope": "Implementation-authored automated verification; screenshots require separate visual assessment. Automated WebKit is not an iPhone Safari hardware test.",
+  "head": "6a84b95c7782897f5ccfe977fe69a3086e553b63",
+  "hashes": {
+    "src/main.js": "6c6783f4f4b2368de1e47e2a08ee433de20717dcba9e89d5a7d8c157205bd0b5",
+    "src/phase3b.js": "3d794f13d377dafd9c6c7782ed25050a0cf66f76795c6a0cd338c4e2c491aba4",
+    "index.html": "8c8f58bb6a8ec833fe092a833afff3e82e1a170a089b537fea2692de5a040466",
+    "public/data/phase3b.json": "5c88e39a2eaf0e1f29709820ceda2cf83113c20af257198c2d0b70b20dae6b42",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "scripts/phase3b-browser.mjs": "29df8fe991ca4b912b42d57c983e9558ef63d12a5a344ab855c6d96c6c42f4b6"
+  },
+  "utc": "2026-11-05T10:42:48.060Z",
+  "root": "http://127.0.0.1:4317",
+  "channel": "chrome",
+  "rows": [
+    {
+      "kind": "matrix",
+      "key": "chromium-390-no-preference",
+      "engine": "chromium",
+      "browser": "156.0.8078.80",
+      "width": 390,
+      "reducedMotion": "no-preference",
+      "checks": [
+        "all new element IDs and exact C/D captions, assumptions, unknowns and stage direction",
+        "replaceable building can be hidden independently while its explanation remains available",
+        "A/C/C+D, C category visibility and camera/selection preservation",
+        "all new and four old fixed eyes agree with independent raw A/C/new surface oracle; keyboard look changes direction only",
+        "trusted drag and touch tap equivalent; fixed eye remains in place",
+        "light/balanced/high and D surface/light finish preserve camera; same-view finish comparison saved where specified"
+      ],
+      "eyes": [
+        {
+          "id": "wb-bailey",
+          "expected": 554.7239868164063,
+          "actual": 554.7239868164063,
+          "groundA": 549.0839965820312,
+          "groundC": 549.0839965820312,
+          "groundWestern": 553.0239868164062
+        },
+        {
+          "id": "wb-gate",
+          "expected": 546.0800048828125,
+          "actual": 546.0800048828125,
+          "groundA": 540.72998046875,
+          "groundC": 540.72998046875,
+          "groundWestern": 544.3800048828125
+        },
+        {
+          "id": "wb-moat",
+          "expected": 553.8508178710938,
+          "actual": 553.8508178710938,
+          "groundA": 548.14599609375,
+          "groundC": 548.14599609375,
+          "groundWestern": 552.1508178710938
+        },
+        {
+          "id": "wb-earth",
+          "expected": 553.17314453125,
+          "actual": 553.17314453125,
+          "groundA": 547.2680175781251,
+          "groundC": 547.2680175781251,
+          "groundWestern": 551.47314453125
+        },
+        {
+          "id": "wb-wood",
+          "expected": 550.116015625,
+          "actual": 550.116015625,
+          "groundA": 542.6939819335937,
+          "groundC": 542.6939819335937,
+          "groundWestern": 548.416015625
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "kind": "matrix",
+      "key": "chromium-390-reduce",
+      "engine": "chromium",
+      "browser": "156.0.8078.80",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "checks": [
+        "all new element IDs and exact C/D captions, assumptions, unknowns and stage direction",
+        "replaceable building can be hidden independently while its explanation remains available",
+        "A/C/C+D, C category visibility and camera/selection preservation",
+        "all new and four old fixed eyes agree with independent raw A/C/new surface oracle; keyboard look changes direction only",
+        "new eyes at 2x and both fixed sections retain metric data at 1x/2x",
+        "trusted drag and touch tap equivalent; fixed eye remains in place",
+        "light/balanced/high and D surface/light finish preserve camera; same-view finish comparison saved where specified"
+      ],
+      "eyes": [
+        {
+          "id": "wb-bailey",
+          "expected": 554.7239868164063,
+          "actual": 554.7239868164063,
+          "groundA": 549.0839965820312,
+          "groundC": 549.0839965820312,
+          "groundWestern": 553.0239868164062
+        },
+        {
+          "id": "wb-gate",
+          "expected": 546.0800048828125,
+          "actual": 546.0800048828125,
+          "groundA": 540.72998046875,
+          "groundC": 540.72998046875,
+          "groundWestern": 544.3800048828125
+        },
+        {
+          "id": "wb-moat",
+          "expected": 553.8508178710938,
+          "actual": 553.8508178710938,
+          "groundA": 548.14599609375,
+          "groundC": 548.14599609375,
+          "groundWestern": 552.1508178710938
+        },
+        {
+          "id": "wb-earth",
+          "expected": 553.17314453125,
+          "actual": 553.17314453125,
+          "groundA": 547.2680175781251,
+          "groundC": 547.2680175781251,
+          "groundWestern": 551.47314453125
+        },
+        {
+          "id": "wb-wood",
+          "expected": 550.116015625,
+          "actual": 550.116015625,
+          "groundA": 542.6939819335937,
+          "groundC": 542.6939819335937,
+          "groundWestern": 548.416015625
+        }
+      ],
+      "finishImageBytesDiffer": true,
+      "status": "PASS"
+    }
+  ]
+}

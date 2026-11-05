@@ -1,4 +1,4 @@
-> 第3期B：西櫓・西木戸口・西櫓堀のC候補と赤土・木材・限定影を追加。[制作内容と留保](docs/phase3b.md)／[検証証拠](evidence/phase3b/README.md)。史実位置はUNKNOWN、実機受入は未完了。
+> 第3期B：西櫓・西木戸口・西櫓堀のC候補と赤土・木材・限定影を追加。[制作内容と留保](docs/phase3b.md)／[検証証拠](evidence/phase3b/README.md)／[提出結果 A–H](docs/phase3b-results.md)。史実位置はUNKNOWN、実機受入は未完了。
 
 # 山中城 — 歴史地形図録
 

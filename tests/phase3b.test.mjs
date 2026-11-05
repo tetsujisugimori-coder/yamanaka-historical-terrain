@@ -39,9 +39,22 @@ test('three regions and detachable upper structure remain C with separate refere
  assert.deepEqual(meta.elements.map(e=>e.id).sort(),['wb-bailey','wb-building','wb-gate','wb-moat']);
  const sources=new Set(JSON.parse(readFileSync('public/data/sources.json')).map(s=>s.id));
  for(const f of meta.elements){assert.equal(f.category,'C');for(const key of ['role','description','assumptions','unknown','direction','editor'])assert.ok(f[key]);f.sourceIds.forEach(id=>assert.ok(sources.has(id)));}
- assert.equal(meta.referenceDimensions.cells,10);assert.equal(meta.modelDimensions.cells,7);
+ assert.equal(meta.referenceDimensions.cells,10);assert.equal(meta.modelDimensions.cells,8);
  assert.notEqual(meta.modelDimensions.maximumCut,Number(meta.referenceDimensions.depthMetres));
  assert.equal(new Set(meta.stations.map(s=>s.id)).size,5);
+});
+
+test('recorded eight model cells include the short southern connection seen in raw GLB',()=>{
+ const glb=readGlb('public/data/phase3b.glb'),profile=new Map();
+ for(const node of glb.g.nodes.filter(n=>n.extras?.surface)){
+  const m=meshData(glb,node.name);for(const p of m.positions){
+   if(Math.abs(p[0]+169)<1e-6&&-p[2]>=-30&&-p[2]<=34)profile.set(-p[2],p[1]);
+  }
+ }
+ const minima=[];for(let n=-29;n<34;n++)if(profile.get(n)<profile.get(n-1)&&profile.get(n)<profile.get(n+1))minima.push(n);
+ assert.deepEqual(minima,[-25,-22,-14,-6,2,10,18,26]);
+ assert.equal(meta.modelDimensions.cells,minima.length);
+ assert.deepEqual(meta.modelDimensions.cellCounting.standardCells+meta.modelDimensions.cellCounting.southernConnectionCells,minima.length);
 });
 
 test('display cutout removes only whole aligned context triangles without altering source vertices',()=>{
