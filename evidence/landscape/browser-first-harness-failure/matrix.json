@@ -1,0 +1,31 @@
+{
+  "scope": "Implementation self-verification. Automated WebKit is not real iPhone Safari. No independent reviewer claim.",
+  "head": "7465eebc6667d471e35c1d2b37a0782ad654f18a",
+  "sourceHashes": {
+    "index.html": "769674f6e2e175144dd3e2cca0b9a9ac26011b1c56409c10fc7b7b1f68718d05",
+    "src/main.js": "2d3b10a7d59f1ac69b508a8b4bdbd348bde4dd546f820060ae4992ed0a70fbe3",
+    "src/reading.js": "29bec1278c85120e2085b939e72424d5b36e5ca7f81a29333a0f58a571ab4155",
+    "src/style.css": "6e39fdbdadfd4257b975ed622c716ab53faada9ec0e29de68b5758d90a20907b",
+    "src/landscape.js": "47dc5f9756cb151f47b841e0349f791e39e35ef31c61b2c56940ff388b7e7b03",
+    "public/data/landscape.json": "7198639620fb7ac530ceaa6bd5a2c06faf287cbb3438c0af79e803dc17ac923e",
+    "public/data/landscape.glb": "8eb3c812ed1349f377de261c6b4452e68a372e557aed6865d793246a54e3edd6",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "scripts/landscape-browser.mjs": "18745dd623349df3de7ed11b403903ee87e9e6871e18127e899ebf252e24cf8c"
+  },
+  "utc": "2026-11-05T03:13:46.824Z",
+  "root": "http://127.0.0.1:4318",
+  "rows": [
+    {
+      "kind": "matrix",
+      "key": "chromium-375-no-preference",
+      "engine": "chromium",
+      "version": "141.0.7390.37",
+      "width": 375,
+      "reducedMotion": "no-preference",
+      "checks": [],
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    }
+  ]
+}

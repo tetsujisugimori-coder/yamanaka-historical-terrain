@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "axes": "recipe east,north,base offset up; Blender east,north,up; glTF east,up,south",
+  "license": "MIT; original primitives; no external images/models",
+  "elements": [
+    {
+      "id": "sc-palisade",
+      "name": "土塁上の木柵候補",
+      "category": "C",
+      "role": "防御境界と見通しを示す。",
+      "sourceIds": [
+        "mishima-works"
+      ],
+      "assumptions": "土塁天端に高さ1.8m、約2m間隔の丸太と横木を仮配置。柱穴の証拠は未確認。",
+      "unknown": "1590年の木柵の有無、位置、材、寸法はUNKNOWN。",
+      "direction": "形を読みやすくする木色。",
+      "local": [
+        -36,
+        12
+      ],
+      "shortLabel": "土塁上の木柵候補",
+      "landscape": true,
+      "reconstruction": true,
+      "height": 575.17,
+      "description": "防御境界と見通しを示す。",
+      "accuracy": "1590年の木柵の有無、位置、材、寸法はUNKNOWN。",
+      "modelObject": "sc-palisade",
+      "modelVersion": "landscape-v1",
+      "editor": "production/yamanaka-1590.blend / production/landscape/recipe.json"
+    },
+    {
+      "id": "sc-gate",
+      "name": "虎口の門候補",
+      "category": "C",
+      "role": "曲輪への入口と防御境界を示す。",
+      "sourceIds": [
+        "plan"
+      ],
+      "assumptions": "既存C通路の開口に幅5mの簡素な冠木門を仮配置。隣接曲輪の史料を位置証拠にしない。",
+      "unknown": "門の実在、位置、構法、年代はUNKNOWN。",
+      "direction": "屋根や史実未確認の装飾は加えない。",
+      "local": [
+        5,
+        -22
+      ],
+      "shortLabel": "虎口の門候補",
+      "landscape": true,
+      "reconstruction": true,
+      "height": 575.17,
+      "description": "曲輪への入口と防御境界を示す。",
+      "accuracy": "門の実在、位置、構法、年代はUNKNOWN。",
+      "modelObject": "sc-gate",
+      "modelVersion": "landscape-v1",
+      "editor": "production/yamanaka-1590.blend / production/landscape/recipe.json"
+    },
+    {
+      "id": "sc-vegetation",
+      "name": "周辺の樹木と低木",
+      "category": "C",
+      "role": "山城の外縁と開けた曲輪の対比を示す。",
+      "sourceIds": [
+        "gsi"
+      ],
+      "assumptions": "現況地形を足場に樹木を外周へ疎配置。防御施設の近くを開ける景観仮説。",
+      "unknown": "1590年の樹種、密度、伐採範囲はUNKNOWN。現況植生の復元ではない。",
+      "direction": "独自の簡略樹冠、季節は初春の常緑を想定。",
+      "local": [
+        -74,
+        35
+      ],
+      "shortLabel": "周辺の樹木と低木",
+      "landscape": true,
+      "reconstruction": true,
+      "height": 575.17,
+      "description": "山城の外縁と開けた曲輪の対比を示す。",
+      "accuracy": "1590年の樹種、密度、伐採範囲はUNKNOWN。現況植生の復元ではない。",
+      "modelObject": "sc-vegetation",
+      "modelVersion": "landscape-v1",
+      "editor": "production/yamanaka-1590.blend / production/landscape/recipe.json"
+    },
+    {
+      "id": "sc-flags",
+      "name": "旗の創作演出",
+      "category": "D",
+      "role": "風向きと人の活動を感じるための目印。",
+      "sourceIds": [],
+      "assumptions": "位置、枚数、無地の生成りと朱色の布は創作。所属や家紋を示さない。",
+      "unknown": "1590年当日の旗の色、意匠、位置はUNKNOWN。",
+      "direction": "静止した布のふくらみを表現。連続アニメーションなし。",
+      "local": [
+        -28,
+        18
+      ],
+      "shortLabel": "旗の創作演出",
+      "landscape": true,
+      "reconstruction": true,
+      "height": 575.17,
+      "description": "風向きと人の活動を感じるための目印。",
+      "accuracy": "1590年当日の旗の色、意匠、位置はUNKNOWN。",
+      "modelObject": "sc-flags",
+      "modelVersion": "landscape-v1",
+      "editor": "production/yamanaka-1590.blend / production/landscape/recipe.json"
+    },
+    {
+      "id": "sc-people",
+      "name": "人物の創作演出",
+      "category": "D",
+      "role": "身長を手がかりに地形と施設の大きさを読む。",
+      "sourceIds": [],
+      "assumptions": "身長約1.65mの簡略人物を曲輪と入口へ配置。",
+      "unknown": "実在人物、人数、装束、行動はUNKNOWN。",
+      "direction": "特定の人物や戦闘場面を再現しない静止シルエット。",
+      "local": [
+        -15,
+        4
+      ],
+      "shortLabel": "人物の創作演出",
+      "landscape": true,
+      "reconstruction": true,
+      "height": 575.17,
+      "description": "身長を手がかりに地形と施設の大きさを読む。",
+      "accuracy": "実在人物、人数、装束、行動はUNKNOWN。",
+      "modelObject": "sc-people",
+      "modelVersion": "landscape-v1",
+      "editor": "production/yamanaka-1590.blend / production/landscape/recipe.json"
+    }
+  ],
+  "stations": [
+    {
+      "id": "bailey",
+      "name": "曲輪に立つ",
+      "eye": [
+        -18,
+        5
+      ],
+      "look": [
+        5,
+        -22
+      ],
+      "lookDown": 0.3
+    },
+    {
+      "id": "bank",
+      "name": "土塁の内側",
+      "eye": [
+        -28,
+        12
+      ],
+      "look": [
+        -36,
+        15
+      ],
+      "lookDown": 0.3
+    },
+    {
+      "id": "moat",
+      "name": "障子堀を見下ろす",
+      "eye": [
+        -39,
+        -10
+      ],
+      "look": [
+        -56,
+        -10
+      ],
+      "lookDown": 3.2
+    },
+    {
+      "id": "passage",
+      "name": "虎口の通路",
+      "eye": [
+        5,
+        -30
+      ],
+      "look": [
+        5,
+        -18
+      ],
+      "lookDown": 0.3
+    }
+  ],
+  "surfaceCaptions": {
+    "nm-bailey": {
+      "role": "平場での活動空間を示す。",
+      "assumptions": "草地と裸地、南北の踏み跡はCの表面表現。",
+      "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
+      "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+    },
+    "nm-moat": {
+      "role": "格子状の畝と堀底の高低差を示す。",
+      "assumptions": "畝の側面を土、堀底を草色に表す。実際の1590年の植生は未確認。",
+      "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
+      "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+    },
+    "nm-rampart": {
+      "role": "曲輪を囲う土の防御線。",
+      "assumptions": "法面を土、天端を草色とする推定。",
+      "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
+      "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+    },
+    "nm-passage": {
+      "role": "入口と曲輪をつなぐ候補地形。",
+      "assumptions": "摩耗した裸地と仮定。史実の通行経路ではない。",
+      "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
+      "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+    },
+    "nm-transition": {
+      "role": "推定区域と外周の地形をつなぐ。",
+      "assumptions": "外周の植被は便宜的な草色。現在の地形を1590年の確定景観としない。",
+      "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
+      "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+    }
+  }
+}
