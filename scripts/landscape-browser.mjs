@@ -66,35 +66,35 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
   if(failure==='webgl')await p.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){return /webgl/i.test(kind)?null:original.call(this,kind,...args);};});
   else await p.route('**/data/landscape.glb',r=>failScenery?r.fulfill({status:404,body:'deliberate 404'}):r.continue());
   try{
-   await p.goto(root);
+   row.stage='open page';await p.goto(root);
    if(failure==='webgl'){
     await p.waitForFunction(()=>document.body.dataset.renderState==='unavailable');
    }else{
-    await ready(p);await p.locator('#landscape-enter').click();await ready(p);
+    row.stage='enter scenery';await ready(p);await p.locator('#landscape-enter').click();await ready(p);
     await expect(p.locator('body')).toHaveAttribute('data-render-state','ready');
     await expect(p.locator('#landscape-asset-status')).toBeVisible();
     await expect(p.locator('#landscape-asset-status')).toContainText('追加景観GLBを読み込めませんでした');
     const d=await snap(p);expect(d.state.landscape).toBe(true);expect(d.landscape.objects).toEqual([]);
     expect(d.reconstruction.visible.length).toBeGreaterThan(0);
    }
-   for(const f of meta.elements){await p.locator(`#landscape-list [data-id=${f.id}]`).click();await expect(p.locator('#detail h2')).toHaveText(f.name);await expect(p.locator('#detail')).toContainText(f.assumptions);}
+   row.stage='read captions';for(const f of meta.elements){await p.locator(`#landscape-list [data-id=${f.id}]`).click();await expect(p.locator('#detail h2')).toHaveText(f.name);await expect(p.locator('#detail')).toContainText(f.assumptions);}
    if(failure==='scenery404'){
-    await p.locator('[data-landscape-mode=a]').click();await ready(p);
+    row.stage='switch to A';await p.locator('[data-landscape-mode=a]').click();await ready(p);
     expect((await snap(p)).reconstruction.comparison).toBe('current');
     await expect(p.locator('body')).toHaveAttribute('data-render-state','ready');
-    await p.locator('[data-landscape-mode=c]').click();await ready(p);
+    row.stage='switch to C';await p.locator('[data-landscape-mode=c]').click();await ready(p);
     expect((await snap(p)).landscape.objects).toEqual([]);
-    await p.locator('[data-station=bailey]').click();await ready(p);
+    row.stage='enter station';await p.locator('[data-station=bailey]').click();await ready(p);
     expect((await snap(p)).state.station).toBe('bailey');
-    await p.locator('#landscape-overview').click();await p.locator('#zoom-in').click();
+    row.stage='return to overview';await p.locator('#landscape-overview').click();await p.locator('#zoom-in').click();
     await expect(p.locator('body')).toHaveAttribute('data-render-state','ready');
-    failScenery=false;await p.locator('[data-landscape-mode=cd]').click();
+    row.stage='retry scenery fetch';failScenery=false;await p.locator('[data-landscape-mode=cd]').click();
     await p.waitForFunction(n=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().landscape.objects.length===n,meta.elements.length);
     await expect(p.locator('#landscape-asset-status')).toBeHidden();
     row.checks=['404 leaves A/C terrain, captions, fixed views and zoom usable','recovery reloads all scenery and clears warning'];
    }
    row.status='PASS';
-  }catch(e){row.status='FAIL';row.reason=e.message;}rows.push(row);await save();await ctx.close();
+  }catch(e){row.status='FAIL';row.reason=e.message;row.failureState=await snap(p).catch(()=>null);row.warning=await p.locator('#landscape-asset-status').textContent().catch(()=>null);row.renderState=await p.locator('body').getAttribute('data-render-state').catch(()=>null);}rows.push(row);console.log('fallback',name,failure,row.status,row.stage,row.reason??'');await save();await ctx.close();
  }
  await browser.close();
 }
