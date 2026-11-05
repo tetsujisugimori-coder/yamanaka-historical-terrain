@@ -49,10 +49,13 @@ async function initialize(features){
  const loader=new GLTFLoader(),models=new Map(),grids={regional,castle};let currentModel,routeLine;const intents=createIntentController();
  let comparison='restored';const hiddenFacilities=new Set();
  const modelFeatures=features.filter(f=>f.reconstruction&&!f.landscape);
+ function setBaseExtent(){const view=state.view;$('#extent').textContent=view==='regional'?'広域 · 4 × 4 km':view==='study'?'断面教材 · 仮定配置 C':view==='reconstruction'?`西ノ丸候補 · ${comparison==='current'?'現況 A':'復元 C'} / 位置UNKNOWN`:'城域 · 1 × 1.1 km';}
  function syncLandscape(){
   const active=state.landscape&&state.view==='reconstruction';sceneryGroup.visible=active&&comparison==='restored'&&$('#category-c').checked;
   sceneryGroup.scale.y=state.exaggeration;sceneryGroup.traverse(o=>{if(o.isMesh)o.visible=o.userData.evidenceCategory!=='D'||state.drama;});
   $('#landscape-toolbar').hidden=!active;document.body.dataset.landscape=String(active);
+  if(active)$('#extent').textContent=comparison==='current'?'現況 A（1590年地表ではない）':state.drama?'1590 C推定＋D創作（史実未確定）':'1590 C推定（史実未確定）';
+  else setBaseExtent();
   $$('[data-landscape-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.landscapeMode===(comparison==='current'?'a':state.drama?'cd':'c'))));
   const f=features.find(f=>f.id===state.selected);$('#landscape-selection-status').textContent=f?.landscape?(comparison==='current'?'選択中の景観要素に現況Aの対応物はありません。解説を保持しています。':f.category==='D'&&!state.drama?'選択中のD要素は非表示です。創作の解説を保持しています。':'選択中：'+f.category+' '+f.name):'';
   scene.background=new THREE.Color(active?'#cfdee1':'#e2e9de');scene.fog=active?new THREE.Fog('#cfdee1',220,1300):null;

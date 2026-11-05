@@ -73,7 +73,22 @@ BlenderのGUIで各部品を直接編集した場合、同じレシピからの�
 
 既存回帰は隔離cwdへコード・データを複製して実行し、以前の証拠を上書きしない。正式票には対象HEADとsource hashを保存。初回の試験配信でViteのimport変換を通さなかった失敗、依存取得競合でファイルが欠けた失敗、中間版を配信中のHMRが試験を巻き戻した失敗は別フォルダーに保存し、製品の確定原因や完了票に混同しない。人物頭部のprimitive高さ定義はraw GLB検査で不整合を検出して揃えた。
 
-性能は同じWindows PCのloopbackと同じcanvas寸法で基準mainと比較する。冷たいbrowser contextでGLB転送サイズ・ready時間・三角形・draw call・幾何数・JS heap（利用できるengineのみ）・入力＋2frame遅延を保存。GPU/全体メモリや持続FPSではない。既存約25MBのC地形は維持し、追加景観は約0.59MB・約5,664三角形、271部品を14描画batchに集約する。動的LODで地形を変えて固定断面整合を失う方式は採用しない。実機負荷は別途受入する。
+性能は同じWindows PCのloopbackと同じcanvas寸法で基準mainと比較する。冷たいbrowser contextでGLB転送サイズ・ready時間・三角形・draw call・幾何数・JS heap（利用できるengineのみ）・入力＋2frame遅延を保存。GPU/全体メモリや持続FPSではない。既存C地形24,933,760 bytesを維持し、追加景観は593,620 bytes・5,696三角形、271部品を14描画batchに集約。描画三角形456,676→462,372、draw call6→20。動的LODで地形を変えて固定断面整合を失う方式は採用しない。実機負荷は別途受入する。
+
+各条件3回の性能実測（中央値、各canvas高600pxで比較）：
+
+| 環境・幅 | UI ready 旧→景観 | keyboard dispatch＋2frame 旧→景観 |
+|---|---|---|
+| Chrome156 / Intel D3D11 / 390 | 0.78→1.47秒 | 16.5→12.2ms |
+| Chrome156 / Intel D3D11 / 1280 | 0.77→1.00秒 | 23.8→30.5ms |
+| 自動WebKit / 390 | 0.86→1.37秒 | 46.5→50.5ms |
+| 自動WebKit / 1280 | 0.98→1.44秒 | 76.0→76.0ms |
+| headless Chromium141 / SwiftShader / 390 | 1.20→1.39秒 | 1304→1352ms |
+| headless Chromium141 / SwiftShader / 1280 | 1.33→1.19秒 | 1796→1867ms |
+
+Chrome390の景観readyには1.00〜3.78秒の幅があり、3.78秒の外れ値も保持。原因を確定していない。実機通信の保証値ではない。ソフトウェア描画では旧版から操作が遅く、この条件の快適性をPASSとはしない。Intel GPUでの通常Chromeは別条件として記録し、実機iPhoneと混同しない。keyboard値はsynthetic dispatchを含む描画経路の指標で、機器入力遅延やFPSではない。JS heapは観測時点・GC依存で、全メモリ/ピーク/GPUメモリではない。GPU Chrome1280の観測点は旧121〜123MB、景観124MB程度。WebKitのheap APIは未提供。原票・バージョン・範囲は`performance*.json`を参照。
+
+再現時は`.cache/baseline`へ基準mainの別worktreeを作り、同じViteで4319に配信して`BASE_TEST_URL`を指定する。`node scripts/landscape-performance.mjs`が両engineの24試行を保存する。通常Chromeを使う場合は`PERF_CHROMIUM_CHANNEL=chrome`、`PERF_OUTPUT=evidence/landscape/performance-chrome.json`を指定。`scripts/landscape-gpu-probe.mjs`で描画driverを確認できる。
 
 ## 未確認・次工程
 

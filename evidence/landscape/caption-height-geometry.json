@@ -14,5 +14,5 @@
   "triangleSetDifferences": 0,
   "metadataDifferences": 0,
   "binaryChunkIdentical": false,
-  "note": "Vertex positions, transforms, metadata and unordered triangle sets compared independently. Triangle order is separately recorded."
+  "note": "Vertex positions, transforms, metadata and oriented triangle sets independent of triangle order compared independently. Triangle order is separately recorded."
 }

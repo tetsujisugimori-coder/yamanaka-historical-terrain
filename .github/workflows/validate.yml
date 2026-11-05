@@ -30,6 +30,8 @@ jobs:
           export LANDSCAPE_EVIDENCE="evidence/landscape/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           node scripts/landscape-browser.mjs
           node scripts/landscape-picking.mjs
+          node scripts/landscape-reset-cancel.mjs
+          node scripts/landscape-reset-cancel.mjs --remove-label-restore
           node scripts/landscape-browser.mjs --mutation=drama
           node scripts/landscape-browser.mjs --mutation=ground
       - uses: actions/upload-artifact@v4
