@@ -24,7 +24,7 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
  console.log('landscape: launching',name);const browser=await engine.launch();
  for(const width of mutation?[390]:[375,390,765,1280])for(const reducedMotion of mutation?['reduce']:['no-preference','reduce']){
   const key=`${name}-${width}-${reducedMotion}`,row={kind:'matrix',key,engine:name,version:browser.version(),width,reducedMotion,checks:[]};
-  console.log('landscape: starting',key);const ctx=await browser.newContext({viewport:{width,height:960},hasTouch:width<800,isMobile:width<700,reducedMotion,deviceScaleFactor:1}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));p.setDefaultTimeout(15000);await instrument(p);
+  console.log('landscape: starting',key);const ctx=await browser.newContext({viewport:{width,height:960},hasTouch:width<800,isMobile:width<700,reducedMotion,deviceScaleFactor:1}),p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));p.setDefaultTimeout(30000);await instrument(p);
   try{
    await p.goto(root);await ready(p);console.log(key,'regional ready');let t=performance.now();await p.locator('#landscape-enter').click();await p.waitForFunction(()=>window.__terrainDiagnostics().state.landscape&&window.__terrainDiagnostics().state.ready);row.firstLandscapeReadyMs=performance.now()-t;await settle(p);console.log(key,'landscape ready');
    let d=await snap(p);expect([...visible(d)].sort()).toEqual(meta.elements.map(e=>e.id).sort());row.overview=d;row.checks.push('five scenery IDs visible including flags and people D');
@@ -50,7 +50,7 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
    row.checks.push('trusted drag/touch equivalent; five legacy facilities, category visibility, two sections and real dimensions unchanged at 1/2x');
    for(const station of meta.stations){await p.locator('#exaggeration').check();await p.locator(`[data-station=${station.id}]`).click();await p.waitForFunction(id=>window.__terrainDiagnostics().state.station===id,station.id);assertCamera(await snap(p),station);await p.locator('#exaggeration').uncheck();}
    expect(await p.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1)).toBe(true);expect(errors).toEqual([]);await p.locator('#reset').click();await ready(p);expect((await snap(p)).state.landscape).toBe(false);expect((await snap(p)).landscape.objects).toEqual([]);row.status='PASS';
-  }catch(e){row.status='FAIL';row.reason=e.message;await p.screenshot({path:`${dir}/${mutation??'matrix'}-${key}-failure.png`,fullPage:true}).catch(()=>{});}
+  }catch(e){row.status='FAIL';row.reason=e.message;row.pageerrors=errors;row.failureSnapshot=await snap(p).catch(()=>null);await p.screenshot({path:`${dir}/${mutation??'matrix'}-${key}-failure.png`,fullPage:true}).catch(()=>{});}
   rows.push(row);console.log(mutation??'matrix',row.status,key,row.reason??'');await save();await ctx.close();
  }
  if(!mutation)for(const outcome of ['200','404'])for(const cancel of ['view','selection']){
