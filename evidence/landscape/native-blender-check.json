@@ -29,13 +29,13 @@
   },
   "hashes": {
     "scripts/verify-landscape-blender.py": "9070105980f7ac983329d6abfd4532048fb9f6252c2fadffa88ecf74179ebee5",
-    "production/landscape/recipe.json": "0b4071ce4fc9affe526a44f4afaaa02fe181569e23aa40686aa3206cfeca1ef8",
+    "production/landscape/recipe.json": "c0c76a0600798dad7b13f9eff845f149e6ac8389de2671b4d6556c1fdeb23b7f",
     "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
     "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
-    "production/yamanaka-1590.blend": "5ef348943bf9d339dfd64565e3ca7c1d008ed6ffcc33d7cdb610901167718854",
-    "public/data/landscape.glb": "28de3b22ab24bda640f0fb6ccec60f356003350562407e385f4c1452ddbd7a8c"
+    "production/yamanaka-1590.blend": "b525b848d87fd6c00953c6fe884801a078a4dac74988ccd788f8c7eb305490b8",
+    "public/data/landscape.glb": "7f72ee14ba8fb6d138691d8bdf760498632ba7d18105d6a36dd1dbc161bb3fee"
   },
-  "utc": "2026-11-05T03:30:49.653Z",
+  "utc": "2026-11-05T04:02:27.645Z",
   "stdout": "Blender 4.5.9 LTS (hash 8bf95cbd38d1 built 2026-04-21 01:33:45)\nRead blend: \"[workspace]\\production\\yamanaka-1590.blend\"\n\nBlender quit\n",
   "stderr": ""
 }

@@ -56,6 +56,7 @@ npm run build
 npm run dev -- --port 4317 --strictPort
 # 別terminal。Windowsでは必要ならPLAYWRIGHT_BROWSERS_PATHを指定
 node scripts/landscape-browser.mjs
+node scripts/landscape-picking.mjs
 node scripts/landscape-browser.mjs --mutation=drama
 node scripts/landscape-browser.mjs --mutation=ground
 ```
@@ -77,5 +78,11 @@ BlenderのGUIで各部品を直接編集した場合、同じレシピからの�
 ## 未確認・次工程
 
 実機iPhone Safari・VoiceOver・現地照合はNOT_TESTED。旧QGISクラッシュと過去のブラウザtimeoutの根本原因はUNKNOWNのまま。今回の再読込成功・自動WebKit成功で解明済みにしない。初回npm auditは既存lockにhigh1件を報告（依存版変更は本作業の範囲外、後続で確認）。Viteの既存500kB超bundle警告を維持。
+
+提出途中の自己検査では、説明欄の伸長により765pxの初期視点がズーム上限に達する不具合を検出。PCのcanvas/解説欄を600pxに固定して解説を欄内スクロールへ変更した。修正途中のflex配置でモバイルcanvas幅0が発生し、stretchを維持するよう修正。元票を`b9054a2-attempt`/`a7410e4-mobile-width-defect`に保全。旧Reset試験の厳密な状態期待値には新規landscape/drama/stationの既定値も追加した。失敗した期待値を部分一致へ緩めず、全状態のResetを引き続き検査する。
+
+`e667286`で全28ブラウザ条件と6ジョブのValidateが成功。後続は景観5要素の観察点高さを便宜的な共通値から各C地表に対応させ、raw GLB oracleとの1mm以内一致を単体試験に追加した。再出力GLBは271部品の頂点位置・変換・category/ID・三角形集合が完全一致し、4人物メッシュの三角形順序のみ異なる。コンテナbyte同一とは扱わない。これは表示用模型の基準高で、1590年の絶対標高や歴史的精度の保証ではない。
+
+別の実メッシュ選択検査では、カメラをUIの矢印で見回して画面内の門柱Cと人物Dをtrusted touchで選び、D非表示後は同じ人物位置のrayでDを選べないことを両engineで確認する。最初に画面外の柱を投影して失敗した試験票は`picking-first-projection-failure`に保存し、製品不具合と混同しない。
 
 別担当が固定HEADのソース、GLB、編集正本、資料支持範囲、画像、反例、CIを確認する。独立レビューは親担当が手配予定。確認完了まで総合PARTIAL、Draft維持。次は実機性能・VoiceOver、史料と測量基準点の追加、植生や門の複数案差替え、低視点の視認性改善を優先し、その後に歩行衝突を検討する。

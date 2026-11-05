@@ -7,7 +7,7 @@ const recipe=JSON.parse(readFileSync('production/landscape/recipe.json')),ledger
 const q=oracle('public/data/nishinomaru.glb'),sources=new Set(JSON.parse(readFileSync('public/data/sources.json')).map(s=>s.id));
 test('every exported scenery part maps to C/D ledger, exact metric recipe and original material',()=>{
  assert.equal(model.g.nodes.length,recipe.parts.length);assert.equal(ledger.elements.length,5);assert.equal(recipe.origin[0],44862.121277226666);
- for(const e of ledger.elements){assert.ok(['C','D'].includes(e.category));for(const key of ['role','assumptions','unknown','direction','editor'])assert.ok(e[key]);e.sourceIds.forEach(s=>assert.ok(sources.has(s)));}
+ for(const e of ledger.elements){assert.ok(['C','D'].includes(e.category));assert.ok(Math.abs(e.height-q(...e.local))<.001,'caption observation height agrees with actual C triangles');for(const key of ['role','assumptions','unknown','direction','editor'])assert.ok(e[key]);e.sourceIds.forEach(s=>assert.ok(sources.has(s)));}
  for(const node of model.g.nodes){const p=recipe.parts[node.extras.recipePart],e=ledger.elements.find(e=>e.id===p.element);assert.equal(node.extras.elementId,e.id);assert.equal(node.extras.evidenceCategory,e.category);assert.equal(node.extras.metresPerUnit,1);assert.equal(node.extras.horizontalCRS,'EPSG:6676');assert.ok(Math.abs(node.extras.groundHeight-q(...p.at.slice(0,2)))<.001);
   const m=meshData(model,node.name);assert.ok(!node.rotation&&!node.matrix&&!node.children,'test must explicitly handle new transforms');
   const points=m.positions.map(v=>v.map((x,k)=>x*(node.scale?.[k]??1)+(node.translation?.[k]??0))),xs=points.map(p=>p[0]),zs=points.map(p=>p[2]);

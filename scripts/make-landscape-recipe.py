@@ -1,7 +1,9 @@
 """Editable, deterministic primitive recipe. All assets are project-original MIT."""
-import json, math
+import json, math, importlib.util
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+spec=importlib.util.spec_from_file_location('shape',ROOT/'scripts/phase2a-shape.py');shape=importlib.util.module_from_spec(spec);spec.loader.exec_module(shape)
+ground_grid=json.loads((ROOT/'public/data/castle.json').read_text(encoding='utf8'))
 elements=[
  dict(id='sc-palisade',name='土塁上の木柵候補',category='C',role='防御境界と見通しを示す。',sourceIds=['mishima-works'],assumptions='土塁天端に高さ1.8m、約2m間隔の丸太と横木を仮配置。柱穴の証拠は未確認。',unknown='1590年の木柵の有無、位置、材、寸法はUNKNOWN。',direction='形を読みやすくする木色。',local=[-36,12]),
  dict(id='sc-gate',name='虎口の門候補',category='C',role='曲輪への入口と防御境界を示す。',sourceIds=['plan'],assumptions='既存C通路の開口に幅5mの簡素な冠木門を仮配置。隣接曲輪の史料を位置証拠にしない。',unknown='門の実在、位置、構法、年代はUNKNOWN。',direction='屋根や史実未確認の装飾は加えない。',local=[5,-22]),
@@ -10,7 +12,7 @@ elements=[
  dict(id='sc-people',name='人物の創作演出',category='D',role='身長を手がかりに地形と施設の大きさを読む。',sourceIds=[],assumptions='身長約1.65mの簡略人物を曲輪と入口へ配置。',unknown='実在人物、人数、装束、行動はUNKNOWN。',direction='特定の人物や戦闘場面を再現しない静止シルエット。',local=[-15,4]),
 ]
 for e in elements:
- e.update(shortLabel=e['name'],landscape=True,reconstruction=True,height=575.17,description=e['role'],accuracy=e['unknown'],modelObject=e['id'],modelVersion='landscape-v1',editor='production/yamanaka-1590.blend / production/landscape/recipe.json')
+ e.update(shortLabel=e['name'],landscape=True,reconstruction=True,height=shape.elevation(ground_grid,*e['local']),description=e['role'],accuracy=e['unknown'],modelObject=e['id'],modelVersion='landscape-v1',editor='production/yamanaka-1590.blend / production/landscape/recipe.json')
 parts=[]
 def part(id,kind,at,size,color,rotation=0):parts.append(dict(element=id,kind=kind,at=at,size=size,color=color,rotation=rotation))
 wood='#65503a'; lightwood='#a0875b'

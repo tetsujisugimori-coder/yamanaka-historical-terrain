@@ -40,6 +40,8 @@ jobs:
           test -f dist/data/moat-study.glb
           test -f dist/data/nishinomaru.glb
           test -f dist/data/nishinomaru.json
+          test -f dist/data/landscape.glb
+          test -f dist/data/landscape.json
           test -f dist/data/features.json
           test -f dist/data/sources.json
           node --input-type=module -e "import {readFileSync} from 'node:fs'; const html=readFileSync('dist/index.html','utf8'); if(!html.includes('/yamanaka-historical-terrain/assets/')) process.exit(1);"

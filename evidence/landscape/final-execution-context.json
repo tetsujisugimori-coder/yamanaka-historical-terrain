@@ -1,0 +1,17 @@
+{
+  "head": "e667286a961da8671fcc9f63e15ecf30449b418d",
+  "utc": "2026-11-05T04:07:30.254Z",
+  "note": "Working tree after five caption height corrections; product JS/CSS/HTML identical to 49f4b45. These source hashes bind the following local picking/mutation/performance results to the forthcoming submission commit.",
+  "hashes": {
+    "src/main.js": "72ac969b1a2107bdc6edc1cf5c086b2dab2ca97bfc6ea76ef8724fb9981e7f67",
+    "src/landscape.js": "47dc5f9756cb151f47b841e0349f791e39e35ef31c61b2c56940ff388b7e7b03",
+    "src/reading.js": "29bec1278c85120e2085b939e72424d5b36e5ca7f81a29333a0f58a571ab4155",
+    "src/style.css": "3b50e354622063d3428c423c512e525cc831b89f8a11d6bb8cdea1a162be53fe",
+    "index.html": "769674f6e2e175144dd3e2cca0b9a9ac26011b1c56409c10fc7b7b1f68718d05",
+    "public/data/landscape.json": "05073395d0592c12c6a466d964456bd9b319a3e56cdef32b5837e3965ba107db",
+    "public/data/landscape.glb": "7f72ee14ba8fb6d138691d8bdf760498632ba7d18105d6a36dd1dbc161bb3fee",
+    "scripts/landscape-performance.mjs": "90002c79b9808e2d843ce44fac2019a538730794c83d421524022d69e91d927a",
+    "scripts/landscape-browser.mjs": "7c2eae6101d61acbda26e1d3e2502474b974ed2b75828d11c4b072748c552141",
+    "scripts/landscape-picking.mjs": "514ed532c275841ebbe4b9394f8e497bbb92d88e85314bc20595b4ed1a55a5e5"
+  }
+}

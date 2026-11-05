@@ -1,0 +1,1195 @@
+{
+  "scope": "Implementation self-verification. Automated WebKit is not real iPhone Safari. No independent reviewer claim.",
+  "head": "e667286a961da8671fcc9f63e15ecf30449b418d",
+  "sourceHashes": {
+    "index.html": "769674f6e2e175144dd3e2cca0b9a9ac26011b1c56409c10fc7b7b1f68718d05",
+    "src/main.js": "72ac969b1a2107bdc6edc1cf5c086b2dab2ca97bfc6ea76ef8724fb9981e7f67",
+    "src/reading.js": "29bec1278c85120e2085b939e72424d5b36e5ca7f81a29333a0f58a571ab4155",
+    "src/style.css": "3b50e354622063d3428c423c512e525cc831b89f8a11d6bb8cdea1a162be53fe",
+    "src/landscape.js": "47dc5f9756cb151f47b841e0349f791e39e35ef31c61b2c56940ff388b7e7b03",
+    "public/data/landscape.json": "05073395d0592c12c6a466d964456bd9b319a3e56cdef32b5837e3965ba107db",
+    "public/data/landscape.glb": "7f72ee14ba8fb6d138691d8bdf760498632ba7d18105d6a36dd1dbc161bb3fee",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "scripts/landscape-browser.mjs": "7c2eae6101d61acbda26e1d3e2502474b974ed2b75828d11c4b072748c552141"
+  },
+  "utc": "2026-11-05T04:03:15.133Z",
+  "root": "http://127.0.0.1:4317",
+  "mutation": "drama",
+  "rows": [
+    {
+      "kind": "matrix",
+      "key": "chromium-390-reduce",
+      "engine": "chromium",
+      "version": "141.0.7390.37",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "deepRegression": true,
+      "checks": [
+        "nonzero canvas; five scenery IDs visible including flags and people D",
+        "captions bind exact category, role, assumptions, unknowns, direction and editor"
+      ],
+      "firstLandscapeReadyMs": 941.4960999999998,
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 25,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "FAIL",
+      "reason": "D visibility leak",
+      "pageerrors": [],
+      "failureSnapshot": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "sc-people",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": false,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 25,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "matrix",
+      "key": "webkit-390-reduce",
+      "engine": "webkit",
+      "version": "26.0",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "deepRegression": true,
+      "checks": [
+        "nonzero canvas; five scenery IDs visible including flags and people D",
+        "captions bind exact category, role, assumptions, unknowns, direction and editor"
+      ],
+      "firstLandscapeReadyMs": 999.8737000000001,
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 25,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "FAIL",
+      "reason": "D visibility leak",
+      "pageerrors": [],
+      "failureSnapshot": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "sc-people",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": false,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 25,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

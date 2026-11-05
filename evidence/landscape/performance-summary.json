@@ -1,0 +1,197 @@
+{
+  "scope": "Same Windows PC, local loopback, fresh browser contexts; viewport emulation, not iPhone hardware or mobile network. Input plus two frame latency, not sustained FPS. JS heap is not total/GPU memory.",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "version": "base",
+      "trials": 3,
+      "readyMedianMs": 1199.9,
+      "readyRangeMs": [
+        621.3,
+        1309.3
+      ],
+      "inputTwoFramesMedianMs": 1303.8,
+      "triangles": [
+        456676
+      ],
+      "drawCalls": [
+        6
+      ],
+      "geometries": [
+        11
+      ],
+      "jsHeapMB": [
+        131.0,
+        131.0,
+        131.0
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "version": "landscape",
+      "trials": 3,
+      "readyMedianMs": 1390.2,
+      "readyRangeMs": [
+        1336.9,
+        1424.7
+      ],
+      "inputTwoFramesMedianMs": 1351.9,
+      "triangles": [
+        462372
+      ],
+      "drawCalls": [
+        20
+      ],
+      "geometries": [
+        25
+      ],
+      "jsHeapMB": [
+        76.6,
+        76.6,
+        50.4
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "version": "base",
+      "trials": 3,
+      "readyMedianMs": 1327.9,
+      "readyRangeMs": [
+        1159.7,
+        1554.3
+      ],
+      "inputTwoFramesMedianMs": 1795.9,
+      "triangles": [
+        456676
+      ],
+      "drawCalls": [
+        6
+      ],
+      "geometries": [
+        11
+      ],
+      "jsHeapMB": [
+        131.0,
+        131.0,
+        131.0
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "version": "landscape",
+      "trials": 3,
+      "readyMedianMs": 1194.7,
+      "readyRangeMs": [
+        1172.0,
+        1276.2
+      ],
+      "inputTwoFramesMedianMs": 1866.5,
+      "triangles": [
+        462372
+      ],
+      "drawCalls": [
+        20
+      ],
+      "geometries": [
+        25
+      ],
+      "jsHeapMB": [
+        76.6,
+        76.6,
+        76.6
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "version": "base",
+      "trials": 3,
+      "readyMedianMs": 857.1,
+      "readyRangeMs": [
+        847.8,
+        917.4
+      ],
+      "inputTwoFramesMedianMs": 46.5,
+      "triangles": [
+        456676
+      ],
+      "drawCalls": [
+        6
+      ],
+      "geometries": [
+        11
+      ],
+      "jsHeapMB": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "version": "landscape",
+      "trials": 3,
+      "readyMedianMs": 1366.6,
+      "readyRangeMs": [
+        1226.3,
+        1665.8
+      ],
+      "inputTwoFramesMedianMs": 50.5,
+      "triangles": [
+        462372
+      ],
+      "drawCalls": [
+        20
+      ],
+      "geometries": [
+        25
+      ],
+      "jsHeapMB": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "version": "base",
+      "trials": 3,
+      "readyMedianMs": 980.9,
+      "readyRangeMs": [
+        918.3,
+        1031.4
+      ],
+      "inputTwoFramesMedianMs": 76.0,
+      "triangles": [
+        456676
+      ],
+      "drawCalls": [
+        6
+      ],
+      "geometries": [
+        11
+      ],
+      "jsHeapMB": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "version": "landscape",
+      "trials": 3,
+      "readyMedianMs": 1439.7,
+      "readyRangeMs": [
+        1411.1,
+        1585.2
+      ],
+      "inputTwoFramesMedianMs": 76.0,
+      "triangles": [
+        462372
+      ],
+      "drawCalls": [
+        20
+      ],
+      "geometries": [
+        25
+      ],
+      "jsHeapMB": []
+    }
+  ]
+}

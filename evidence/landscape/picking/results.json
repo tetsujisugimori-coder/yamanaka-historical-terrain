@@ -1,0 +1,75 @@
+{
+  "scope": "Self verification; trusted emulated touch at raw GLB part projections, not physical iPhone",
+  "rows": [
+    {
+      "engine": "chromium",
+      "checks": [
+        {
+          "id": "sc-gate",
+          "category": "C",
+          "point": {
+            "x": 47.35546021575906,
+            "y": 381.4090640634788,
+            "world": [
+              2.2,
+              576.56611328125,
+              22
+            ]
+          },
+          "selected": "sc-gate"
+        },
+        {
+          "id": "sc-people",
+          "category": "D",
+          "point": {
+            "x": 180.3501522681983,
+            "y": 472.73578909413857,
+            "world": [
+              3,
+              575.94697265625,
+              16
+            ]
+          },
+          "selected": "sc-people"
+        },
+        "hidden D cannot be selected by the same actual screen ray"
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "checks": [
+        {
+          "id": "sc-gate",
+          "category": "C",
+          "point": {
+            "x": 47.35546021575906,
+            "y": 380.8153140634788,
+            "world": [
+              2.2,
+              576.56611328125,
+              22
+            ]
+          },
+          "selected": "sc-gate"
+        },
+        {
+          "id": "sc-people",
+          "category": "D",
+          "point": {
+            "x": 180.3501522681983,
+            "y": 471.34516409413857,
+            "world": [
+              3,
+              575.94697265625,
+              16
+            ]
+          },
+          "selected": "sc-people"
+        },
+        "hidden D cannot be selected by the same actual screen ray"
+      ],
+      "status": "PASS"
+    }
+  ]
+}
