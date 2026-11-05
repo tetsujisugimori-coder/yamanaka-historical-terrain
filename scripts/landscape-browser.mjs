@@ -89,7 +89,8 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
     row.stage='return to overview';await p.locator('#landscape-overview').click();await p.locator('#zoom-in').click();
     await expect(p.locator('body')).toHaveAttribute('data-render-state','ready');
     row.stage='retry scenery fetch';failScenery=false;await p.locator('[data-landscape-mode=cd]').click();
-    await p.waitForFunction(n=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().landscape.objects.length===n,meta.elements.length);
+    await p.waitForFunction(ids=>{const d=window.__terrainDiagnostics(),objects=d.landscape.objects,actual=[...new Set(objects.map(o=>o.id))];return d.state.ready&&d.landscape.visible&&actual.length===ids.length&&ids.every(id=>actual.includes(id));},meta.elements.map(e=>e.id));
+    const actual=await snap(p);expect([...new Set(actual.landscape.objects.map(o=>o.id))].sort()).toEqual(meta.elements.map(e=>e.id).sort());
     await expect(p.locator('#landscape-asset-status')).toBeHidden();
     row.checks=['404 leaves A/C terrain, captions, fixed views and zoom usable','recovery reloads all scenery and clears warning'];
    }
