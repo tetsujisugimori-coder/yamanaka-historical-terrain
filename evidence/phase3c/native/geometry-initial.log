@@ -1,0 +1,87 @@
+[repository]/scripts/phase3c-geometry-check.py:41: DeprecationWarning: Arrays of 2-dimensional vectors are deprecated. Use arrays of 3-dimensional vectors instead. (deprecated in NumPy 2.0)
+  cross=np.cross(t[:,1,:2]-t[:,0,:2],t[:,2,:2]-t[:,0,:2]);assert (cross>0).all(),'winding/degenerate'
+{
+  "status": "PASS",
+  "method": "direct binary GLB positions/index arrays; no authoring recipe import",
+  "triangles": 97280,
+  "projectedArea": 3040.0,
+  "seamSamples": 1016,
+  "maxSeamError": 3.0517578125e-05,
+  "stations": [
+    {
+      "id": "ic-station-nishinomaru",
+      "height": 575.1900024414062,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-lookout",
+      "height": 566.9139404296875,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-bridge",
+      "height": 555.6599731445312,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-koguchi",
+      "height": 567.8749389648438,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "height": 570.4840087890625,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-station-western",
+      "height": 553.0239868164062,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-station-westgate",
+      "height": 547.6080932617188,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    },
+    {
+      "id": "ic-station-westmoat",
+      "height": 552.1508178710938,
+      "error": 0.0,
+      "eyeHeight": 1.7
+    }
+  ],
+  "vertexCount": 49149,
+  "negativeControls": {
+    "coordinate": {
+      "rejected": true,
+      "reason": "bounds/origin"
+    },
+    "facility-id": {
+      "rejected": true,
+      "reason": "facility ID"
+    },
+    "category": {
+      "rejected": true,
+      "reason": "classification"
+    },
+    "seam-height": {
+      "rejected": true,
+      "reason": "internal crack"
+    }
+  },
+  "fixedSections": {
+    "status": "PASS",
+    "reason": "prior GLB byte equality against ed22133 plus new footprint east edge -68 strictly west of sections starting -66 and -45"
+  },
+  "newFileHashes": {
+    "public/data/phase3c.glb": "08e7bc391ce143fd43470a8fe28a094affec914a4f05d5bd1df6af9a07a0d5f4",
+    "public/data/phase3c.json": "7ccf48c0b3179f17d4a0654facc33da1b467243477162818c9e3e193c1ca7779"
+  }
+}

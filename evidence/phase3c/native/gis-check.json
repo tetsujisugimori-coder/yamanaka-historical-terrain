@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "separateProcess": true,
+  "layers": 21,
+  "crs": "EPSG:6676",
+  "validLayers": true,
+  "rasterShape": [
+    381,
+    129
+  ],
+  "glbVertexComparisons": 17796,
+  "maximumRasterGlbHeightError": 0,
+  "pixelCentreMatchesGrid": true
+}

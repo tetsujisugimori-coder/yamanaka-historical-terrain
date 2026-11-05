@@ -1,0 +1,257 @@
+{
+  "head": "573dc70e90fb58f38271b1eff08efe4179ee3ccb",
+  "hashes": {
+    "phase3c.glb": "d966fde9c320fe8bed4919ceb965ab4a49700a83f29b7eb02f9c3e4209b3c0bd",
+    "phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d"
+  },
+  "newObjects": [
+    {
+      "name": "ic-bridge.surface.earth",
+      "extra": {
+        "elementId": "ic-bridge",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "earth",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-bridge",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 785
+    },
+    {
+      "name": "ic-koguchi.surface.earth",
+      "extra": {
+        "elementId": "ic-koguchi",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "earth",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-koguchi",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 629
+    },
+    {
+      "name": "ic-bridge.surface.path",
+      "extra": {
+        "elementId": "ic-bridge",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "path",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-bridge",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 164
+    },
+    {
+      "name": "ic-koguchi.surface.path",
+      "extra": {
+        "elementId": "ic-koguchi",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "path",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-koguchi",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 132
+    },
+    {
+      "name": "ic-bridge.surface.grass",
+      "extra": {
+        "elementId": "ic-bridge",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "grass",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-bridge",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 2853
+    },
+    {
+      "name": "ic-koguchi.surface.grass",
+      "extra": {
+        "elementId": "ic-koguchi",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "grass",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-koguchi",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 33
+    },
+    {
+      "name": "ic-lookout.surface.grass",
+      "extra": {
+        "elementId": "ic-lookout",
+        "evidenceCategory": "C",
+        "surface": true,
+        "materialRole": "grass",
+        "metresPerUnit": 1,
+        "horizontalCRS": "EPSG:6676",
+        "modelVersion": "phase3c-v1",
+        "ledger": "data/phase3c.json#ic-lookout",
+        "appearanceEvidence": "D treatment is runtime only; portable neutral material"
+      },
+      "triangles": 2746
+    }
+  ],
+  "boundsGLTF": [
+    [
+      -100.0,
+      552.5180053710938,
+      -50.0
+    ],
+    [
+      -68.0,
+      573.5162353515625,
+      45.0
+    ]
+  ],
+  "triangles": 7342,
+  "projectedArea": 3040.0,
+  "expectedArea": 3040,
+  "degenerateProjected": 0,
+  "edgeCounts": {
+    "2": 10505,
+    "1": 1016
+  },
+  "interiorBoundarySamples": [],
+  "interiorBoundarySampleCount": 0,
+  "perimeterMaxHeightGap": 3.0517578125e-05,
+  "perimeterMissingOldSupport": 0,
+  "oldRemainingOverlapArea": 0.0,
+  "stations": [
+    {
+      "id": "ic-station-nishinomaru",
+      "metadataGround": 575.1900024414062,
+      "actualHeights": [
+        575.1900024414062,
+        575.1900024414062,
+        575.1900024414062,
+        575.1900024414062,
+        575.1900024414062,
+        575.1900024414062
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-lookout",
+      "metadataGround": 567.0759887695312,
+      "actualHeights": [
+        567.0759887695312,
+        567.0759887695312,
+        567.0759887695312,
+        567.0759887695312,
+        567.0759887695312,
+        567.0759887695312
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-bridge",
+      "metadataGround": 555.6599731445312,
+      "actualHeights": [
+        555.6599731445312,
+        555.6599731445312,
+        555.6599731445312,
+        555.6599731445312,
+        555.6599731445312,
+        555.6599731445312
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-koguchi",
+      "metadataGround": 571.7760009765625,
+      "actualHeights": [
+        571.7760009765625,
+        571.7760009765625,
+        571.7760009765625,
+        571.7760009765625,
+        571.7760009765625,
+        571.7760009765625
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "metadataGround": 570.4840087890625,
+      "actualHeights": [
+        570.4840087890625,
+        570.4840087890625,
+        570.4840087890625,
+        570.4840087890625,
+        570.4840087890625,
+        570.4840087890625
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-station-western",
+      "metadataGround": 553.0239868164062,
+      "actualHeights": [
+        549.0839965820313,
+        549.0839965820312,
+        553.0239868164062,
+        553.0239868164062,
+        553.0239868164062,
+        553.0239868164062,
+        553.0239868164062,
+        553.0239868164062
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-station-westgate",
+      "metadataGround": 548.3800048828125,
+      "actualHeights": [
+        543.1199951171875,
+        543.1199951171875,
+        543.1199951171875,
+        543.1199951171875,
+        543.1199951171875,
+        543.1199951171875,
+        548.3800048828125,
+        548.3800048828125,
+        548.3800048828125,
+        548.3800048828125,
+        548.3800048828125,
+        548.3800048828125
+      ],
+      "difference": 0.0
+    },
+    {
+      "id": "ic-station-westmoat",
+      "metadataGround": 552.1508178710938,
+      "actualHeights": [
+        548.14599609375,
+        548.14599609375,
+        552.1508178710938,
+        552.1508178710938,
+        552.1508178710938,
+        552.1508178710938,
+        552.1508178710938,
+        552.1508178710938
+      ],
+      "difference": 0.0
+    }
+  ]
+}

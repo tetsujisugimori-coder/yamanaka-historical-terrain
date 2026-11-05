@@ -1,0 +1,188 @@
+✖ shared source geometry stays UV-free through staggered D activation and deactivation (145.466106ms)
+✖ two finish controllers cannot contaminate a shared source UV reference (270.179327ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 533.943913
+
+✖ failing tests:
+
+test at tests/phase3c-finish.test.mjs:6:1
+✖ shared source geometry stays UV-free through staggered D activation and deactivation (145.466106ms)
+  AssertionError [ERR_ASSERTION]: D must never write to shared source geometry
+  + actual - expected
+  
+  + BufferAttribute {
+  +   array: Float32Array(48) [
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     0.3499999940395355,
+  +     0.10999999940395355,
+  +     -0.3499999940395355,
+  +     0.10999999940395355,
+  +     0.3499999940395355,
+  +     -0.10999999940395355,
+  +     -0.3499999940395355,
+  +     -0.10999999940395355
+  +   ],
+  +   count: 24,
+  +   gpuType: 1015,
+  +   isBufferAttribute: true,
+  +   itemSize: 2,
+  +   name: '',
+  +   normalized: false,
+  +   updateRanges: [],
+  +   usage: 35044,
+  +   version: 0
+  + }
+  - undefined
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-finish.test.mjs:11:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: {
+      isBufferAttribute: true,
+      name: '',
+      array: Float32Array(48) [
+          0.3499999940395355,  0.10999999940395355,   0.3499999940395355,
+         0.10999999940395355,   0.3499999940395355, -0.10999999940395355,
+          0.3499999940395355, -0.10999999940395355,  -0.3499999940395355,
+         0.10999999940395355,  -0.3499999940395355,  0.10999999940395355,
+         -0.3499999940395355, -0.10999999940395355,  -0.3499999940395355,
+        -0.10999999940395355,  -0.3499999940395355,  0.10999999940395355,
+          0.3499999940395355,  0.10999999940395355,  -0.3499999940395355,
+         0.10999999940395355,   0.3499999940395355,  0.10999999940395355,
+         -0.3499999940395355, -0.10999999940395355,   0.3499999940395355,
+        -0.10999999940395355,  -0.3499999940395355, -0.10999999940395355,
+          0.3499999940395355, -0.10999999940395355,  -0.3499999940395355,
+         0.10999999940395355,   0.3499999940395355,  0.10999999940395355,
+         -0.3499999940395355, -0.10999999940395355,   0.3499999940395355,
+        -0.10999999940395355,   0.3499999940395355,  0.10999999940395355,
+         -0.3499999940395355,  0.10999999940395355,   0.3499999940395355,
+        -0.10999999940395355,  -0.3499999940395355, -0.10999999940395355
+      ],
+      itemSize: 2,
+      count: 24,
+      normalized: false,
+      usage: 35044,
+      updateRanges: [],
+      gpuType: 1015,
+      version: 0
+    },
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/phase3c-finish.test.mjs:16:1
+✖ two finish controllers cannot contaminate a shared source UV reference (270.179327ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" not to be reference-equal to "expected":
+  
+  BoxGeometry {
+    attributes: {
+      normal: Float32BufferAttribute {
+        array: Float32Array(72) [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+  ...
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-finish.test.mjs:22:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { isBufferGeometry: true, uuid: '16f4e83e-4327-4b2d-80bd-4993f1576446', name: '', type: 'BoxGeometry', index: { isBufferAttribute: true, name: '', array: [Uint16Array], itemSize: 1, count: 36, normalized: false, usage: 35044, updateRanges: [], gpuType: 1015, version: 0 }, indirect: null, attributes: { position: [Object], normal: [Object], uv: [Object] }, morphAttributes: {}, morphTargetsRelative: false, groups: [ [Object], [Object], [Object], [Object], [Object], [Object] ], boundingBox: null, boundingSphere: null, drawRange: { start: 0, count: Infinity }, userData: {}, parameters: { width: 1, height: 1, depth: 1, widthSegments: 1, heightSegments: 1, depthSegments: 1 } },
+    expected: { isBufferGeometry: true, uuid: '16f4e83e-4327-4b2d-80bd-4993f1576446', name: '', type: 'BoxGeometry', index: { isBufferAttribute: true, name: '', array: [Uint16Array], itemSize: 1, count: 36, normalized: false, usage: 35044, updateRanges: [], gpuType: 1015, version: 0 }, indirect: null, attributes: { position: [Object], normal: [Object], uv: [Object] }, morphAttributes: {}, morphTargetsRelative: false, groups: [ [Object], [Object], [Object], [Object], [Object], [Object] ], boundingBox: null, boundingSphere: null, drawRange: { start: 0, count: Infinity }, userData: {}, parameters: { width: 1, height: 1, depth: 1, widthSegments: 1, heightSegments: 1, depthSegments: 1 } },
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,24 @@
+Blender 4.3.2
+Read blend: "[repository]/production/yamanaka-phase3b.blend"
+Warning: File written by newer Blender binary (405.91), expect loss of data!
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+07:22:07 | INFO: Starting glTF 2.0 export
+07:22:07 | INFO: Extracting primitive: ic-bridge.earth
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-koguchi.earth
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-bridge.path
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-koguchi.path
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-bridge.grass
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-koguchi.grass
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Extracting primitive: ic-lookout.grass
+07:22:07 | INFO: Primitives created: 1
+07:22:07 | INFO: Finished glTF 2.0 export in 0.11914968490600586 s
+
+Info: Saved "yamanaka-phase3c.blend"
+
+Blender quit

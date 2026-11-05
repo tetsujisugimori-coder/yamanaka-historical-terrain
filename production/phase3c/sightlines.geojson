@@ -1,0 +1,136 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44785.621277226666,
+            -93494.97235405141,
+            576.3928283691407
+          ],
+          [
+            44785.121277226666,
+            -93507.07235405142,
+            566.5246459960938
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ic-sightline-0",
+        "category": "C",
+        "stationId": "ic-lookout",
+        "expected": "visible",
+        "scope": "virtual model ray, not archaeological visibility evidence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44785.621277226666,
+            -93494.97235405141,
+            576.3928283691407
+          ],
+          [
+            44777.121277226666,
+            -93507.07235405142,
+            562.621142578125
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ic-sightline-1",
+        "category": "C",
+        "stationId": "ic-lookout",
+        "expected": "visible",
+        "scope": "virtual model ray, not archaeological visibility evidence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44785.621277226666,
+            -93494.97235405141,
+            576.3928283691407
+          ],
+          [
+            44770.121277226666,
+            -93507.07235405142,
+            559.2054931640625
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ic-sightline-2",
+        "category": "C",
+        "stationId": "ic-lookout",
+        "expected": "visible",
+        "scope": "virtual model ray, not archaeological visibility evidence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44781.121277226666,
+            -93507.07235405142,
+            566.0728637695313
+          ],
+          [
+            44787.121277226666,
+            -93513.07235405142,
+            567.5402099609375
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ic-sightline-3",
+        "category": "C",
+        "stationId": "ic-koguchi",
+        "expected": "occluded",
+        "scope": "virtual model ray, not archaeological visibility evidence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            44789.121277226666,
+            -93505.07235405142,
+            570.146044921875
+          ],
+          [
+            44787.121277226666,
+            -93513.07235405142,
+            567.5402099609375
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ic-sightline-4",
+        "category": "C",
+        "stationId": "ic-koguchi-inside",
+        "expected": "visible",
+        "scope": "virtual model ray, not archaeological visibility evidence"
+      }
+    }
+  ]
+}

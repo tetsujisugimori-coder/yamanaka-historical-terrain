@@ -1,0 +1,13 @@
+✔ finish restores base without source mutation, appearance=false (143.727903ms)
+✔ finish restores base without source mutation, appearance=true (137.239089ms)
+✔ existing UV and non-default shadow flags restore exactly (138.933516ms)
+✔ shared source geometry stays UV-free through staggered D activation and deactivation (144.516445ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (271.730773ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 532.54497

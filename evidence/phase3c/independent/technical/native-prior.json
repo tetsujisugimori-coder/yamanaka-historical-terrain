@@ -1,0 +1,4857 @@
+{
+  "input": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/yamanaka-phase3b.blend",
+  "units": 1.0,
+  "meshes": {
+    "A_castle_current": {
+      "sha256": "4c49e4e300c144350aaeea7d7d87a3b6048a969935288e6d464ee91f6548dfdc",
+      "vertices": 44421,
+      "polygons": 88000,
+      "category": "A",
+      "id": null
+    },
+    "A_regional_current": {
+      "sha256": "aba0880eb8ddc3a3f7a7c9a3643735cf87f4df9c4a45dfbcb8e1e85eac0571a2",
+      "vertices": 40401,
+      "polygons": 80000,
+      "category": "A",
+      "id": null
+    },
+    "C_castle_with_study_cutout": {
+      "sha256": "4397d4609d6ab53e7b493737007a58c4fc27a8f194948af05d31adeadf39e898",
+      "vertices": 44421,
+      "polygons": 87928,
+      "category": "C",
+      "id": null
+    },
+    "C_source_informed_moat_study": {
+      "sha256": "92595458262a95a8475ce1250598c1e2a76ea6d7713c3603ff3b01b6779a37d6",
+      "vertices": 58081,
+      "polygons": 115200,
+      "category": "C",
+      "id": null
+    },
+    "nm-bailey": {
+      "sha256": "6a26dc4cd94b04f1e79446175ade656a54a862e97fe5e2b71121e376ff001f87",
+      "vertices": 26901,
+      "polygons": 53120,
+      "category": "C",
+      "id": null
+    },
+    "nm-context": {
+      "sha256": "4eb5736aae1e272d01314a401f666960cded9b2e197a5131c4c3d0e0f30b6f6a",
+      "vertices": 44421,
+      "polygons": 87076,
+      "category": "C",
+      "id": null
+    },
+    "nm-moat": {
+      "sha256": "6880003c3a5f83315d6cdd8fa28be643d15595317ec15e48a4bdcd9db6942633",
+      "vertices": 18873,
+      "polygons": 37120,
+      "category": "C",
+      "id": null
+    },
+    "nm-passage": {
+      "sha256": "aa0fab3fc68f2c08a49a5c27b6c95f0435897b4632d6593781f3f832c5a84d1e",
+      "vertices": 11737,
+      "polygons": 23040,
+      "category": "C",
+      "id": null
+    },
+    "nm-rampart": {
+      "sha256": "4c39f753e5a44c3628ef187454e71a3db38f370f81d712af75a2c09aa19e19a5",
+      "vertices": 17436,
+      "polygons": 33735,
+      "category": "C",
+      "id": null
+    },
+    "nm-transition": {
+      "sha256": "1fbf130a998025d87689d3f748b277f029dd291099f33af038324a883a0b7fc8",
+      "vertices": 113214,
+      "polygons": 222585,
+      "category": "C",
+      "id": null
+    },
+    "sc-flags.247": {
+      "sha256": "620ac84cb3e3b6f305bc304db2c372cf713a99f9b58fac89fcc895dd2c5c03c9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.248": {
+      "sha256": "929d5c63091c07fcd0ea6f7b09be3873ca1409dacf35a878fca6a5fc42860367",
+      "vertices": 10,
+      "polygons": 4,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.249": {
+      "sha256": "0c1e208d36b11971bf6ecdce9c517aa33426ec07c064d0e2bc61156857e94d7d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.250": {
+      "sha256": "e35fd5aebd729a1a579a1bb73457d756756feddba93e2a267212b8a72c4bfe3f",
+      "vertices": 10,
+      "polygons": 4,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.251": {
+      "sha256": "f1b4400b39bad8940224b00924bdccf9115f21e90dfdf145506ed5c405828ffe",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.252": {
+      "sha256": "2ade98394cb0acbdbb84a08e42078d252b1c0c3a24684e615012f259d35e5c65",
+      "vertices": 10,
+      "polygons": 4,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.253": {
+      "sha256": "16737d454d65f7afeac7786a934987571c10d7a81a1041d76b47468b969e930b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-flags.254": {
+      "sha256": "d604c486f8a621d66656ca453dc76b041d8aeaf8e144c80bc69e1d03fd6f68b7",
+      "vertices": 10,
+      "polygons": 4,
+      "category": "D",
+      "id": "sc-flags"
+    },
+    "sc-gate.134": {
+      "sha256": "fb9b5c7922eee239a551dbeb739208f010ad8d95d0e0c9a1a71ce7af5db4ddc5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-gate"
+    },
+    "sc-gate.135": {
+      "sha256": "5d35e38e9fdac566737c3414287f5b38293edeb0039ea33eac9dc3cd03609138",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-gate"
+    },
+    "sc-gate.136": {
+      "sha256": "3cd9abe42d5d93d38b5353e178850997373dcb95b18674eb66a66a4ad3dde153",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-gate"
+    },
+    "sc-gate.137": {
+      "sha256": "012a5ad72ee40174d9e1da8c8b588de33028a2cf58dc7bc7b584ce4604a6bd54",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-gate"
+    },
+    "sc-gate.138": {
+      "sha256": "f382978bfc263751294dd017354aec5ce344b5fe508912b3c5eda79c659b7bf1",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-gate"
+    },
+    "sc-palisade.000": {
+      "sha256": "8c1b08aad6be44338f7f4012c9c112cfb60513e38d975af1cb7ed2c606e5a96c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.001": {
+      "sha256": "1e5de5c57d56aacb9e6f2c85c728bfe1a46d1d140f09149fc47611dc80521539",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.002": {
+      "sha256": "beb0553b5619a9326680b84b70836acdeb140427028397c5f1cf993d3adcb3e5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.003": {
+      "sha256": "dcf213518a557282be1e7f2b44ec3cabb65fc1452f9ed9071a447c4142aff2f9",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.004": {
+      "sha256": "22c19d14f0776563c5a21992e53a6bb712e0a1817cca90bed97046cde4d6ddca",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.005": {
+      "sha256": "33be86a566f0af595191b890f342fd856ce4fa666be48e3ea35815d974c7c660",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.006": {
+      "sha256": "5165fbfdb30ea639784570aaf3d7b615b09915fb77717cde4670d58db2ed7c37",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.007": {
+      "sha256": "729a185b914b336db3feb235559e541f0c0990e2c3fc307bca1e6df46136c093",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.008": {
+      "sha256": "ecb0394f47e8807c7c01bc85ec8162feb4d491fd576fad12301d361b73167263",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.009": {
+      "sha256": "67fe249d722d841665bd03a1ff924cd8b2fb56bc227672def6026c01627f4218",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.010": {
+      "sha256": "6d2aa244da851ec3dfd7060c5732c40f67bce40961cc8877c26158b7532f474b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.011": {
+      "sha256": "ae4244d56146527d46f606fddf1d77fb8117f6265d94f6252a5a3f0dadc77ff5",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.012": {
+      "sha256": "fe528ce6930068e600c2a796770c3b9970aad41ec52433978689ed7d601907f7",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.013": {
+      "sha256": "96da6d40f121feec79a9c5882cbfa8e88645333238664588fde499fa8c964e8e",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.014": {
+      "sha256": "21694913f38ea5ae3dad912cead81395657cb7dc5d910b057e2ad4dd694e9b9e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.015": {
+      "sha256": "2a389d750f1ea70a122f57c386e424ad2719af32c5b3f3b576ca992e419f78fd",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.016": {
+      "sha256": "e60eefa902588099581172ed3e99078eb0c1a2ca6b995dd881833b9716a83d9d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.017": {
+      "sha256": "7267e7ac5b233957319653d5b8485027dfcd3a839e83c7a6a89244d64f685e4d",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.018": {
+      "sha256": "3273a24d4c1fe10a97066e5d2509c1b48584f177cb2d4efa6456ee7ba910ee59",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.019": {
+      "sha256": "3b6b36882fddcf9b8c503bd747339efb5332f6a01d38fd1c1d1732ae9f9c1428",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.020": {
+      "sha256": "1f32b8a9eb17b1bd07dfa04547aba4993c84e68d59f83bd208254233f344dab0",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.021": {
+      "sha256": "f056a645da41daf9605f1717aa6560c431766c139ba25f8273c95e904b6897f2",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.022": {
+      "sha256": "7dfed5dd33e89699e38aa09c22cdb84dbf2eaa36a8d222d5d72091e7f564e04c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.023": {
+      "sha256": "46f64c89ebb465439a32b5a9119df0d417020255de13e0061f8495b2cd7e9b80",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.024": {
+      "sha256": "90a253b05d595dc303027c5868dfad08c7d01f18692d44ef6080e39e6a26b6d6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.025": {
+      "sha256": "a3c3e7a344b2635089793a4dd5e7c8df9bfccc6abc81f4e8f6b69a829d2a573d",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.026": {
+      "sha256": "c6e8190d40d583a59f45c9fcc37397e77319da0b170b2ea07ac84bed841fa25b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.027": {
+      "sha256": "65b1406946a394f4a9fe3762f61546d3ccf81087736fa9b972ab751265bf548b",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.028": {
+      "sha256": "d6d2284ad5edc64c51a1a5977e1529a79c816188398e21bf6bc0dc48583e60be",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.029": {
+      "sha256": "6be608433dae5e578057d41b8c8d1cdfac19c7b2473ffdb99539b59b51689d3f",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.030": {
+      "sha256": "d67ad1cec51102030ad5ff98b5a30ff656f970c2f8eeb76f6c2e16ee3b73b850",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.031": {
+      "sha256": "2ac61f136be0d773814f76dbab7990944a74334668c2dc4a27ecd41591f1264e",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.032": {
+      "sha256": "70ccb76ad103401904a8d37d11ead169d566595c00434f87360a9fadf048a960",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.033": {
+      "sha256": "f8dd3fe388eed34f3169f8e6669e8c327ea2a49a34e5855e4404cfa0d44358f1",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.034": {
+      "sha256": "77b73a2f7d774ce1be1b115c2f5a604666e092d5d72fccf80981f5100c6bed0b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.035": {
+      "sha256": "232c2b09d5a804d81042dafa89f288577347a3683ac30151f642ec61831c1a4b",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.036": {
+      "sha256": "e569474a8f53fd891aef6271d64ed6c1f91fc762a3ec37a5dd060bdea514a438",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.037": {
+      "sha256": "a233726b181be9d073d85b66538661407308efcb61858686d7fb1a10a3d377bd",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.038": {
+      "sha256": "105f55aff2a0195ef9bc14c0b074f1b4cbe2d532c726bef95b0ca2fbf46257df",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.039": {
+      "sha256": "8d7b3ec7dbfa9c0ccbd8ec21abf1c46a8a8d3a8f6dd9b26fd540f23a8a0f84a1",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.040": {
+      "sha256": "55af17ca67c88a5335baf5509735a8f974ee9564593b246017440a2865d430c6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.041": {
+      "sha256": "8f8b58ca6b78570fe7e92380e27f9de43d07973082e4bfd247c1083e594ac357",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.042": {
+      "sha256": "2b56e9081e1cecb37a256b04ee5746a2c211f71c14eb554b691aba6254b79caf",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.043": {
+      "sha256": "da52bd3d5ef24bc4e4b14e49d2f6cd03f9986bc0f750e3330d40ff467fc78599",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.044": {
+      "sha256": "79597a0181c87f446f2a4207faa0ba4f90c9d96a78b87836745b415759942744",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.045": {
+      "sha256": "05e41c814786b94a8c097e2b99315b7704e7df6c01e612262fa5e07943c0e04c",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.046": {
+      "sha256": "7fcba645f5f11f76d0f5c759a8a57f3b8cdb20b2e5313ecd721a2f3a5b45ce6c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.047": {
+      "sha256": "d561c94b4bd0280780fcf185bbdd3398d9293d83cf489d8b6b7435ad19cb3011",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.048": {
+      "sha256": "30f0d6d408f1bc44474a565f64daf84d18b9c582930f2f99afa45339f769c5b6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.049": {
+      "sha256": "17c58da7fd79b43a854cd613e6e7f213e1b978e8921eae336180c40800a48a1d",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.050": {
+      "sha256": "02827f981ba1dd97d1be22d53ffa5705934e8b758b3f80d11970bc926cd6dbfd",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.051": {
+      "sha256": "3f6b6f5995da0b41910ebc0e6ff096d0f34b7f18b85616d129dd2ff027ada90f",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.052": {
+      "sha256": "0c13b1247a99c922fff7d49617af16f6ee6710c482f4b98ae445e114f9efa1f3",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.053": {
+      "sha256": "43fccb93f4b58c24b75a5c42424984c87b44da643b7c73f672c04682ca3cd745",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.054": {
+      "sha256": "f8eedb4a6b4ad7786fd76fb261b5989669b783bf0d197564bc6f9aab03ecb401",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.055": {
+      "sha256": "f7cd7b117ed03fe1c82908ad5bc9eab0bf0b93de7ce2f9714438ab4b9860568b",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.056": {
+      "sha256": "3fd0647343bf6efce10699a79ea125e1d8b35ee2ec3830f3984a61a97121b3af",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.057": {
+      "sha256": "a11d3ed6680785079957867faa8f3fc858fa281d4f257b4c4ea4b855cbe5c8c8",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.058": {
+      "sha256": "7e41f8265a23345e7cc8533d5b8fc709b5c894647709d15f892b49c5583db5d8",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.059": {
+      "sha256": "c38ed18dce673cbb7772a35aeabf0973122f53c1536be582d1826c1cb488f414",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.060": {
+      "sha256": "6b889582318a9b6c34054e30e0a0275a30918070c7f1cfb8fd0ee1e0832dacd6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.061": {
+      "sha256": "a13ecdff606d741fa30f4533ea748b9716777663195978b1e912883ff3bc9c81",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.062": {
+      "sha256": "34d58176727ce5aea933bf90892ac98736a6ae915c63a65775e7ad6b690b0149",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.063": {
+      "sha256": "e1a051cd058ff20d39ad25f9546270c458e9390c78b42268553520f9287ae0d1",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.064": {
+      "sha256": "b4ee08216441792ad556d488bf1756624fffc3d0a74df2fcaf8584c92dda2a91",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.065": {
+      "sha256": "511316c62367c5ae73aba070c27d26e804c82bfd6841168df70f288cdf73fdf4",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.066": {
+      "sha256": "671bf6f32904ef0874e3979d708c410f07b76a81342c4291efcff00091528740",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.067": {
+      "sha256": "cf0f3c33fdb7796b1f560f9942cf570c5f656b0fa0b43fbf0937be2f309ecf33",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.068": {
+      "sha256": "f22b3ca1d13a5745546c6dca7ca8559dca310440a2937594d742546f459e1a50",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.069": {
+      "sha256": "d5576953f33c3002f28c8b25364c89df5151973597d7e7562a5c78233d97da87",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.070": {
+      "sha256": "5b6e7509687ee667e592331da4d9bf8b3ec0cc12f1974a84a25eb5d36a15f970",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.071": {
+      "sha256": "bc05d188db24eedf6093c010f783b7482f3ce9c83801646425d58f2d2d4ebd27",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.072": {
+      "sha256": "e6c2355edee78ff84b7440c97bfe529144c3d679991daa5025bbe5d29a4a3ab5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.073": {
+      "sha256": "d340b44eb6cd4e1bcb26457317f7c682a65f12bf53fde79df21c89abcd7d4148",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.074": {
+      "sha256": "13c604e868c68544cebadc64d584aa3889e9dec4db48d427a59d3d63caf17c3f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.075": {
+      "sha256": "a932fa861c536d83d139de406281c773f7b333125b478ce492d624d8d7f94ac3",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.076": {
+      "sha256": "27ebe3384e2dfd9ea1d4d6887009f251c667e087506a5796cfdaa974cb9b5374",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.077": {
+      "sha256": "732f1ea68a3fc7782d52b3e1c5b3e23c85961e2e805a76ccc580bfc2f7e221eb",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.078": {
+      "sha256": "a3653a2f2ae5d69bf17783021d8d0329e2d0887f4e89a70c25367952874e83e6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.079": {
+      "sha256": "b8b4e1193f5baf35b9afd909092381b094750c2062bc52faad5fad47e340d4e5",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.080": {
+      "sha256": "d9359bc0f8ad9a5c182f665f7160141f10d1eb5cf3f5301ea4552c1044921ecf",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.081": {
+      "sha256": "a4d9c02eeed850079b30689a443f77a871a55a87e88933e0d03798d61033c4d4",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.082": {
+      "sha256": "bac98e7a46279f5a2e9af9d788f1dc89273671534cdba727e9f9852792eef2a0",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.083": {
+      "sha256": "08fcfe7bf396aedef26df3f398dd02299cf41dccd4a3a767f8342bacd1603024",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.084": {
+      "sha256": "32f4e38bac4560c9429f3a6fd00e96476858a1093c6adcdb862be374c505106a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.085": {
+      "sha256": "7637102f4873b18b92a78a3220abd2b7efe114a053abd9621afa06ff90e84b4f",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.086": {
+      "sha256": "f29263819d6bb447a720026a0fff8306a6364579ccf4e58c890cae2c7928d165",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.087": {
+      "sha256": "18fb653abf48f376e7fa5662a140bddc8984d29e247ed9d61c4daf3ddef52619",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.088": {
+      "sha256": "588cbdb979427a80dd9d9e1869604dd6d24e1a2d15dca35022bf37a1db208047",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.089": {
+      "sha256": "2076df90c6c4aac7e948d5cc8148ee17a7fe15b79272c5cd25ad788f55711cbf",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.090": {
+      "sha256": "3a9ba386c604f8ff9731895e4189ca2478f6403ebf5face33228bafae89c9113",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.091": {
+      "sha256": "b09647778e6004d523cc2b02f0c29e45474ba714074e6a4d58f21dd15eed280c",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.092": {
+      "sha256": "1b470787ba6ce8faa4a0f37b6ca6582fe219c200107d99609dcdead909d81177",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.093": {
+      "sha256": "9ef4256333f35b942302b0b9dba66054a3c2060d4eea3de201bdb97919ee6cf1",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.094": {
+      "sha256": "0a4d2e1ba3bf19470dade0cfeb11f68f1965c4455528ca29c71a377aaaf2c588",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.095": {
+      "sha256": "0a667b5e705fea3cb33c5f7f5ab9433b654d3f2de30a52384ee02642cc08eced",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.096": {
+      "sha256": "e7e0fe497ccb5cc174aef589f73413348e5629178f645e10d87e572f7af50c88",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.097": {
+      "sha256": "08577653bc24df58327903e68b8a2d7f3acfd57b784628327ec8fd50a697509c",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.098": {
+      "sha256": "01786b87cc2cb566cd41741c295360ed1d3c4ff30b2d2e87fcb01a2106c9ac06",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.099": {
+      "sha256": "58b4883007d8f0c2589b6ce72fd256f5644955115f7daacdf6fca00af49de4cb",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.100": {
+      "sha256": "b4232e4ebcad325683fc31053929f323c3585ca2af985503f7a8546c85cf87d5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.101": {
+      "sha256": "4cdc739c2d8e3bb7b499a796ea498c3a2a117dc0e08440682ccdb8c5d1331713",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.102": {
+      "sha256": "0eee76bb8df10c474222504c4f1ec54dde52ac2750927abb42b70b5c29d833b2",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.103": {
+      "sha256": "9d79b4ca966d45a53360b050d61bc605045de6bb2cccf308c9c2d8193c8e7e5e",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.104": {
+      "sha256": "eb10c2de556c73abab2b5689a520efd9b8212e5eafac57832b56d807729bdf60",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.105": {
+      "sha256": "600ed7ce2cb7cd8a8e8806dd773248b7bd9caf205f270c66507dd9336f714053",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.106": {
+      "sha256": "9e43317f14de36b6898e21d0c78ee942b50a5e517ce82b31f8d28ae34e5528ca",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.107": {
+      "sha256": "b6593cbb6fc94c5a3f71296a792f45aee280279a037f5d1487b927f8f992d0c8",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.108": {
+      "sha256": "126eec3494f4c635cc0c3901bb4a773bd78773d9f931f63c9f98391d41765b32",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.109": {
+      "sha256": "0da2b82a0baebbfdfc7b656f66ff36092c9c8db0a79e07a60decbf47dde6dafe",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.110": {
+      "sha256": "29208407ffa0fb00ee6d63db37cba4f09f9b27f62ec0cb8313519d38d03b26b9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.111": {
+      "sha256": "6a6b9335197b53dba45bcbddd4ef4bc1d699867f8e3f7e571068b008b2d61736",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.112": {
+      "sha256": "b5dd232a6fbe5ea3588d47df0d186bf4800b09b3fe4b3a4b7d4df15e43bef543",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.113": {
+      "sha256": "c8df2fd21cb9056130fd8046c1417d384780cdf86a41534b7e988a184485e2e7",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.114": {
+      "sha256": "9c529cc36402883012dc4b0732de938b41b7481e3b478e5a8cafce72e4200e75",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.115": {
+      "sha256": "e51c6b3aa8d77d57a8f52b40c4ade4945fd414b0cfa512845d8c29e18cb4ebba",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.116": {
+      "sha256": "12e5661a8de0e70c368ca19b15e54556ee90d86771874b13543510adc7ed8a63",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.117": {
+      "sha256": "ef5d696b0d139e09fefec2107a816b20704c2c54f32b6b7731972e367ad45e95",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.118": {
+      "sha256": "6cc51c19d595c0dc7e2cfc9a76fc914f8bb9fba9502a5b56949688742c1e070b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.119": {
+      "sha256": "c46764393ea535a763c8f9815f531602f10d6bcdd3e92af6d85c6a214b356164",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.120": {
+      "sha256": "59bfe1de0e237d8ea2aa3fab3aaa7f8e5a0c858e9c855d5a0d7dc88c2c76b8e8",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.121": {
+      "sha256": "70fa2f1e7f3f1b86fd8c670258269175d145b51c0ee7bb40ac1cdf0492dde8bc",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.122": {
+      "sha256": "6b32a72dad8f46ebcc22e6bdeb09293870ecf62fe188a82214f291abe5ea8ab5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.123": {
+      "sha256": "2cf6c3e90e30cc000abb38c7033fa606c22fcec72cc6f6b903dfecc429e22b90",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.124": {
+      "sha256": "869e813d5a4f192bfac609244c7cb28e30cc9015ed4e7d6740bcd81d81b41859",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.125": {
+      "sha256": "c13b00f06aeb0254e8262baa4e24dde291105cf10afdb804e96111b2d2d3db18",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.126": {
+      "sha256": "f3d5726f2f58708752b7ea7c2a030084ebcf9956c264bc0f5bb66c6915a1789f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.127": {
+      "sha256": "0129648de02f4a579f843ae9d49084673ccd57123af804f1101f989d5e2f0650",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.128": {
+      "sha256": "d6ecdd995fc81fb3fe7cc0d5ee37fcd5fcb61772fb29585bdd3af9ff2240832e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.129": {
+      "sha256": "03c20b7b12d047894e4da7f30ffb69d0acf0fc453d8795e345047b37bd7b7639",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.130": {
+      "sha256": "312c26c277973a7dbc8ebce327ac5177f20b0337230fe64277a98d0e06f8b2bc",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.131": {
+      "sha256": "5b7e7eb418ec7bf2b15a69411459000857a64198e7f295fd1941be0d2a50d81b",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.132": {
+      "sha256": "af32e70a73c9902a08cb3b52cb7dccc4b0e62d029519f38f28ec74e86496aef6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-palisade.133": {
+      "sha256": "d828be91ac88005789e8918bd712b8a95d8ba336f287390d00f5c2f6bec82b20",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "sc-palisade"
+    },
+    "sc-people.255": {
+      "sha256": "c0e83f00236da29d37de164b11f3dbf348df6f86e7b823460be346fac8563427",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.256": {
+      "sha256": "68b15f800b396324e853b49f8a9f88d20a7306373d4633aa30faa20467f0b4af",
+      "vertices": 26,
+      "polygons": 32,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.257": {
+      "sha256": "31ed14bd7270c5c4febe5fbb89af77f1598d40e5e41ef4dc0e81ea4f9b935d19",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.258": {
+      "sha256": "ba7a809727e5f18e3c348af86dfa958336f9d03f07c88b4c22261e977c28a573",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.259": {
+      "sha256": "0d3067c7029ea285c96132fb7afd56d7bb237a7602b84cd5f57a5e33791b68a6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.260": {
+      "sha256": "3e6e10bdddfc3cf35d0b66f41f51147184eb96a74d8ba8c10eadda7348292158",
+      "vertices": 26,
+      "polygons": 32,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.261": {
+      "sha256": "9d7f019971f0fea709fd8952f2355d2bf83a33dfbf4b48d6b3341883b54a91c7",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.262": {
+      "sha256": "65d5f67ddd29be30ad233af092821fc688ef5fbc1e4d194a4e86189bca3fd710",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.263": {
+      "sha256": "03ea8ff623271efbdc6288949795b1ca85a4ce53e55c71fff3fed0a3548e5ab6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.264": {
+      "sha256": "59daeb23b3a2fc1cf6bb4d8a9153774775f259bde89447c9c980ba384a2b50ae",
+      "vertices": 26,
+      "polygons": 32,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.265": {
+      "sha256": "7b1aab85058c35ef191df842026aac960cb88f718434e2aaac8f273c47e78017",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.266": {
+      "sha256": "753b80cbd74f8937920e8f46ab3d6348ef69ba9495b96a796d4c2d5492c311a4",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.267": {
+      "sha256": "1be6c632ffc553c17e9b5affbe9eef8aa23e0933ebbf08cf99207216d02e3816",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.268": {
+      "sha256": "04c8b8a1bc1f14a49c4fb51248038bf69b0acf729b057b66faa7b895a9fd2ca1",
+      "vertices": 26,
+      "polygons": 32,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.269": {
+      "sha256": "5061f5c65ce61a8ce2d35038ee39c344ca5a2ef0417eab613b800f1c7b6694ee",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-people.270": {
+      "sha256": "6429dceede47703abb94ca2b4f4967173e6d52409033532b6af30557f0e3740c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "D",
+      "id": "sc-people"
+    },
+    "sc-vegetation.139": {
+      "sha256": "a351e790e2791c7b0b8cdd705799b7af5ed1988629f480465df45752ac790a7a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.140": {
+      "sha256": "50889fc5d4e7b7e94b48fc02521581deb3ef2985b140a5f179d3fa780d48a067",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.141": {
+      "sha256": "56e19b9272e235164023a5d5a0f7a93f3f316533e53e31f830a7077f2a53d17e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.142": {
+      "sha256": "d51b2c215b961ebb97f927a5853d676ce6df47822b5d41dd74a61645a7aee245",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.143": {
+      "sha256": "cc1d8b1632be81373c14cb9cd539425b17d172d2a1350003c3e728c748845d03",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.144": {
+      "sha256": "2684727d5c50840f0a0d30aff3cbbdb351d33ddb717525d8bd5d9b4d440156ee",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.145": {
+      "sha256": "fb85076b9bb6d92429ea32070bd918ffc8d88474db8551d7af066b974a0c312e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.146": {
+      "sha256": "68ae051ee0ba02a01aab9cdc1dadebb72292ead468b30999456ec320a2197b4a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.147": {
+      "sha256": "afd972d00e553ad3218e843b6975327f6a38bd4b1357ceeefaaea236dd2d9e40",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.148": {
+      "sha256": "dd9b31b4c8dd847d85696bfc937f8f86f0bab3a05cdbed953c66e02a34061091",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.149": {
+      "sha256": "950e9b3b747005bbc9b7dbbc890fedd59e835217015dc834aa1ca6faabcf6b16",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.150": {
+      "sha256": "820b7703aa3fbe1c400e28931001153bb545de0854557b8ca84e7612bc58f647",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.151": {
+      "sha256": "4db5118a96e00c4c6044d8e7b525f346d79d531b1173b904be36592974526daa",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.152": {
+      "sha256": "234fe444e3bc06a2082bdf9e61722e354ed353621ced1949da012460e634d5c5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.153": {
+      "sha256": "67c35eeb03c28f7d33e120cc70ad10536cf1798855a88f22eb1a174af8c80daf",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.154": {
+      "sha256": "0523ab97134c1b26246df015bde2ca6c39bedf3c842fc8664302d0f3e2e14d48",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.155": {
+      "sha256": "82cdfe15392c4d510070b7a8a32e771c2e296e962a144acffee991d85a3060c5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.156": {
+      "sha256": "851b38db2796ba5f75b15d076385f2d4e4d4ecbae55c0638a7a91ce41fbdc310",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.157": {
+      "sha256": "0042fe9b6cd953a487cc2f3949121029b77f8d8b205bb63be8b6dda7df19ae4d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.158": {
+      "sha256": "d84ef994e63cf026a1a9ce35570c4eb71e86c2b0ddcd9e0a0a5a2283b6862a28",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.159": {
+      "sha256": "f5a46de387e6db84e6eda67a04158dfd677ea60ccd0e775aa34e631b639ae7f7",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.160": {
+      "sha256": "b2e35e6b70eb5b2efcc713cc22e2c8974ce1f96d5052d98feac809f60a6d210f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.161": {
+      "sha256": "c83505a29efe4e61aeb652763a9bd2a204e3c9d404cf344ff6db5ef036b80629",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.162": {
+      "sha256": "467175183172c6a525b850e5448a90a9ff9acaf813f76610abb1703e0e2d9852",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.163": {
+      "sha256": "115eccd767fb0a5c795c43829cdb53ff46926884d77cfddc8623412fc6cfaf41",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.164": {
+      "sha256": "b4b06823131ae89bd0905111d857d477874e143667f8f58d72e234dce02620c9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.165": {
+      "sha256": "4abc8bb7d8126a87a8a639e67e7aa1a7f97814502b9659bdc43ba6ebc88d1902",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.166": {
+      "sha256": "cf912f39ae2d8824c7a66a34b499e0b2056e036e7ce9d025598a53224b17429a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.167": {
+      "sha256": "aa89f84c2ec5f6a74f02b37b1756737fde593a168abca6d270db424d7a601b8d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.168": {
+      "sha256": "14783790bc3c2abf72eecf7fa92785e19c85fc8f38f77cf27365de86fb23f8ed",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.169": {
+      "sha256": "bae6f29a6602464ad17029c6e950f6a16f0e181910feaffd5f2e5edb38125919",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.170": {
+      "sha256": "5c73b7916888ce689a6ca808c7c282154c1a3ceb1e79b15b7fdb11ff8b0c4265",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.171": {
+      "sha256": "76d2814477023aaea451d3dffc46d15a43be646e72ca391608b69d0d6ed19769",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.172": {
+      "sha256": "ecf1a1b16e0f6dbdef2a3b680484f486f0e2e3da9268adb0ffa39389cfa245e3",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.173": {
+      "sha256": "a132e6236d2df958b1da05429d89271c9c43a25025025ab285470bb27084a44e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.174": {
+      "sha256": "5689f80768e1dc11a4e694acad57431bd7b22fb2215c8b03119d1c03e622fbfe",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.175": {
+      "sha256": "e412bc6b5edf9d0c875928202ddcfd3445c8f85b39830b3553f571f65b6e42f7",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.176": {
+      "sha256": "63c035ff9a484b96ba151bac81b587a99c39746c4325427a319d98b71fdc9142",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.177": {
+      "sha256": "58456a69a966157b24a41dca2ac2fb0c2c2ab845429b3349c19b77522f90f155",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.178": {
+      "sha256": "dec23b07bfdad2aa8d12b8577fa21b55db0a24c63b40a0ca8d040fe6ba7b57f9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.179": {
+      "sha256": "3537f5560445af6be50b6de7e266fff6107eac84dcf4dc413ab9644972d4257d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.180": {
+      "sha256": "9ab8e95cefb8a83c30297b6f1116afdf57b8cf39f54727f3c2afc915f915e2fd",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.181": {
+      "sha256": "c5f64c0612381770a04489c2e2dfabdca0cdc3c802d388e7438caa4dd251589a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.182": {
+      "sha256": "df25d25220389882fc67274d12505e1bef03da2f97fdba5ea4ba205deb56d501",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.183": {
+      "sha256": "8dcf3c07d42a818d5916a11a52d73a5df589d956db8507de565f584734e676aa",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.184": {
+      "sha256": "44e81d2e1c44b756fcdb243096872f49d14488482154769e9af4f94aa595da46",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.185": {
+      "sha256": "94b4342b76f0ca659265b8dfe84c4291a2dca1000e0eb9fd680b75cac711c308",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.186": {
+      "sha256": "ca44a4772a7fb9658dbe5fa3591a0ae779c93e095db07a3a3ce8f42f05b2c108",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.187": {
+      "sha256": "4250fb40661c40ebaa454c009e5a75ab4bb053d770a5d2e9829ceb359077daa8",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.188": {
+      "sha256": "3257a041983bf82aefd510e664e4c0b3d34335b2da7d25a7368b04ef8827ba08",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.189": {
+      "sha256": "eab1ff902b7f4ee0518eb49e95397aa7d128d821557e76ead053a647ac9e27f6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.190": {
+      "sha256": "65daf1cb4745c232c59a7838a39d6b974d545e6a6a62ede1cc7180be3be5cf81",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.191": {
+      "sha256": "f942d3296100828f00bc2cf49bab5cded0fd64194854fdc38ae0dc8dbbb47814",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.192": {
+      "sha256": "4ba30c1e8305e3ad10f4cc99f4e0b84231249faee9aa8af552d12a02b5aef6f9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.193": {
+      "sha256": "bc0189ba81b0e6683a4ce2b7a3caa677c53f7dae4e3ddadf857d522e1b785435",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.194": {
+      "sha256": "16a52df48f298328d9170aaa5f312aaa66bcf3b23c1f2c0cd188a6597cc7128a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.195": {
+      "sha256": "cc656722afb0e68beb299e97b5fbf09c4a23d726341b679e04b3b8bdcfe966cd",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.196": {
+      "sha256": "d0edb4643b2c9ee7ba62897358f91d80a9c2cfeb65a0e1f3156ea9e4c10cd4b6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.197": {
+      "sha256": "ad6afd00c7507b88ba64f8ff2b595728f3b057d2e6de2ecb805b2b0ae96c0e46",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.198": {
+      "sha256": "f71b2d9ae83e8d18926dcbffaec153cd72d7c48ec27a583f818e64f6295e6eae",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.199": {
+      "sha256": "47007b7554cc07c4998fefd239e485dd789ce204faa14ffd573a5b38e9082c1f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.200": {
+      "sha256": "5ee36c1760bc196312b157fb83746c3b84686d6eef09aa320b81b152ed22a48e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.201": {
+      "sha256": "2e91156278e174a8fb2642f629d1c1326e9fe0ed9debbc2f13851faecae4901d",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.202": {
+      "sha256": "31d7472f8c0f80610b6230e52d79bd6d46800048c9bb70cc1e867f68571b6f15",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.203": {
+      "sha256": "c5331dd0bcfbabd52580681e61018f68d6dfa28e21578d2a5d69e79f7d63e364",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.204": {
+      "sha256": "a9da261ae8100358c3b48d856a5c63e479352c8c8a215120e1627985c2a807a6",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.205": {
+      "sha256": "55edd6ddc9ba28277c53acec96c88fc8eeb9a0d6fa849b710355863cb3dbb5ef",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.206": {
+      "sha256": "55344029a4333140a577c4b10951f99f8c78b83f7e1a82a302851af3a1a68e3c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.207": {
+      "sha256": "83fda4d1b7f4f89e9536c0da32cd4b2e23867e249169993d582589e4a89286a5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.208": {
+      "sha256": "d9974bc0813ed5c1625e432aaca87eb3483f3be060e1c555526e493caf7633b3",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.209": {
+      "sha256": "a64ac7c1462b48e223098ce216d12062353c05e8eb255d8c2386877efd202e4a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.210": {
+      "sha256": "b551c36d503ca79c5ee97686c723ec67125cfd4df4f2d93a0f7751c0f5d11b81",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.211": {
+      "sha256": "e77fd4ca2dd0add2e714696ac26dc8351843438c595e966a7d60312f74654183",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.212": {
+      "sha256": "b6525b245d578f8d8000e81e054c085c91e760adbd72ad4fba99f4f3b40be231",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.213": {
+      "sha256": "66878c768eb78b25c4a24e048c2c9064893f9161caffd2f3a5ecd13691a24cd8",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.214": {
+      "sha256": "6ab47edc98a1339dfc8c27d509daf2bbee7a97f0caf77c4f420fd6779b8de3d5",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.215": {
+      "sha256": "6fdd1d4b9d3f89b4fd9cff96f2ea6f3938bf93705fd2ce12668e142f612ac54a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.216": {
+      "sha256": "9c0d389dd7dd362f9b8655f2ce89f3119e5a3730c49250b17756f8c24135eee9",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.217": {
+      "sha256": "183d201228a5eed55a3cf92ebe3fee2a0e81e9922f9a3ff64385186650ec405f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.218": {
+      "sha256": "6b427f88563216f2f6a6c9bbd340b4b7497aeb8c5ebd72a5ab10a5b11e8fded3",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.219": {
+      "sha256": "1d6b42ce020e5511add9d0078a97726f4f73a419cf6a829bbd2910f86b71998f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.220": {
+      "sha256": "29c45d57deffaee956cdcb40dbd57fecbacd0d6d30f5cf39471631457b694304",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.221": {
+      "sha256": "c7c724956a601ab386be6628ad5216245615acb78d262fa143dc6b842cbcb734",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.222": {
+      "sha256": "a4f6254386e104bd46cb0935a313fa54080f41f021ca6b3500d6a04bc0a84983",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.223": {
+      "sha256": "96aff0775a7f7e8ecab2f5ffe866ed35a75b4b969442c73d8a4177a5d6e97dfa",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.224": {
+      "sha256": "0ce944eb28d46ea5118c0158ad16d228a062f91a00a106afd829da4e2064de72",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.225": {
+      "sha256": "18f54c7774f5ac95d34c5115d3e3cf306fe05507c78fbe1e17c2009219fe5141",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.226": {
+      "sha256": "ea41670cf84df300edd3c41004153547fa8f96e9f1c32488c92ddafea182362e",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.227": {
+      "sha256": "90831b4ecb36efc3cd610a6812d9c96ce63450cd4d9411dfcb7794039d32ae99",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.228": {
+      "sha256": "c5990ed7526271517a502a7bc30b8f0865a49ebbd73f7e5ab9562d0b9aeaf769",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.229": {
+      "sha256": "085abbf396a19c8a1443c5c52ebc66af4b83a475214edaa1320b345e00dddfc2",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.230": {
+      "sha256": "86dfb5d9a1d926ef97157109d0d09253215456b4cf822c6b29c734175fb75496",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.231": {
+      "sha256": "23bd5a5540dfdc6107b3f5cf1c3c4e953a96fac253e8a0e5bf6f43e51be88d6a",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.232": {
+      "sha256": "26ffbcbfee698d5fa29b31365b39dcc00fef87413e04ec1bf0ae56be6ca184ff",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.233": {
+      "sha256": "0692512184597c30fa337f0e09ce528201564bd2f296351ba92f01ca89128c54",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.234": {
+      "sha256": "3bf636a3003a351d0f446e0c4166dfd28106890b56eb2e52eb827c91856fedca",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.235": {
+      "sha256": "fb39af7055323fd30526590f6ef4c9f71ca9a7813153b392aa667248efc45220",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.236": {
+      "sha256": "e297e5737b3061081d777f4d8f855181cee4960d5448af70034c6e6d9e158030",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.237": {
+      "sha256": "4f2ab57bb5d6c8167703c284e0af98e01f46dfb7bac019149a4065cd86a0ab18",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.238": {
+      "sha256": "55f2dfe895ab3aab804c13287cd77e299f444548606e6e18c9670829560a413c",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.239": {
+      "sha256": "cb4254177386fab6b8962b8d5076f52553bbdb5693bfc3732514218d3d2a8d99",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.240": {
+      "sha256": "c0d1a8aebafc4fba5d93588d6a88acd76fd3854f1507d48f382f3839e5149a62",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.241": {
+      "sha256": "396266914956feaa9866e8d295f38e6344771542e06f783004bb8bf33440d768",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.242": {
+      "sha256": "9ba2b96afb8293fd0cc9464b062417eadde4e18d11efe324a74495caed11a957",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.243": {
+      "sha256": "0bb414cb5e4b0604bc4af729ef83bb8c26bbe042ab58edcde848a0ca072aac4b",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.244": {
+      "sha256": "d479fd1d44d02a11ecd830604cee8a431efa88c53d844ffb0437eebae5e25cd7",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.245": {
+      "sha256": "97eb29429bc4670b40c9db9cd5352db91d4bb584e9f59f37522600b586df745f",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "sc-vegetation.246": {
+      "sha256": "861fe0ccfb3c6632b447e678e34d034aea7c06d8f77004971842d0565efbc524",
+      "vertices": 14,
+      "polygons": 9,
+      "category": "C",
+      "id": "sc-vegetation"
+    },
+    "wb-bailey.east.board.0.0": {
+      "sha256": "2045eb224cf434a86ac28ecc34ba39b21f0dab46ddff7a53e2ef763ee8d4761f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.0.1": {
+      "sha256": "d4fd99445cd3d0d36a42ce83914a0dd79d94300c0b218bbcd0fb043b3b761314",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.0.2": {
+      "sha256": "4c134f7ef744e4afcf9c3f0f8c45ecb262bbef3c53d205ed7011957d6af45d58",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.0.3": {
+      "sha256": "72b64c343f2754c5f9e7cf093b0d3281a9bba99e97e48dd27be5e44eeedc821e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.0.4": {
+      "sha256": "b1f3820ece67d4f6a9c68f8c5c7e8cb220332e2f6b33aa73ec0ee3f05a93806c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.1.0": {
+      "sha256": "efe29dfc6160feb80aaf5a530a20ebc93dcb3dcb6ee4ed289f8e92a24229c7e7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.1.1": {
+      "sha256": "41922f627044fb0bcca92cb3550cceaf93f2532a9ec77f832f9757712ac81ee8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.1.2": {
+      "sha256": "72b8afc1b99bced37d911c33065d640eaea6cc7ad166a84ce3f556145fc01488",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.1.3": {
+      "sha256": "7ba01d2e81f216e0bbbdac2bb111784706388e928a931c80bcf2c3e60dd2046c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.1.4": {
+      "sha256": "6601758b3c21ea0689f4b0b5ad4d025d2196f5103c21b5387a904eccb65e02f9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.10.0": {
+      "sha256": "ea68eec00d6f17f0dab2597f73d123b5bd0560f9becc2844bc68d79e26b533ad",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.10.1": {
+      "sha256": "c93b7f46c69fefd8874c3daeee2c5815435f5e2570856eca751fb6a6a426ef19",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.10.2": {
+      "sha256": "a33264fb974ec36b48ae201c116f2f3f5e49b02ea233bb82ce2222438029f688",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.10.3": {
+      "sha256": "c25b30bab4928ea76146017eace34cead897ea9bd645dc8e34199ba014c98a7c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.10.4": {
+      "sha256": "7490f7925f1388b1b0f3b775a6083e1dca0570543304022e313938e3dc74f27a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.11.0": {
+      "sha256": "19b6eee5abbc668d8d3a13a42b7ac72a5f4268b7da100d79f6e2a6958eb90bad",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.11.1": {
+      "sha256": "09421d56123c485dcbc114bdc30c2f60d90a6e19b3d9159c968ae0df727c2dfb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.11.2": {
+      "sha256": "b529374ab8ba372a5e9ed2a6f1d841d6f2014dde60c4dba9d33830e4a91c769d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.11.3": {
+      "sha256": "7cb62687c6ddec14862f476cf17fde93f70fa4b6fee23dd758e59c3dbaaeac9b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.11.4": {
+      "sha256": "a038ae64d67a070320ede3ad9ea0ab99cd7f587501ec93070689c9c823583f7f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.12.0": {
+      "sha256": "2020df5b746476352a141e82e3e4466941623d831b281a764aaf2af9367f7355",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.12.1": {
+      "sha256": "7aaeeb3647db1e8053c68b5f9d63b586e9aef366b423325101c5c455fd4e124a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.12.2": {
+      "sha256": "5666c4d09abf5568442907f0641db590c4a7bdbe78d2206293d6dfd6842830e4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.12.3": {
+      "sha256": "ed7cec8d83ed6bf9a5bd73ee02696c20842668cb88a7a75f46c63d4a61184b71",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.12.4": {
+      "sha256": "815e4a5bd7294b8c6d842bea249f6f6fad0257cb110ab9269e89f248837ca164",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.13.0": {
+      "sha256": "0f924583512f278d656712a28c044fa6c81d7f9fbc0647e0e37799cb9a260fc0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.13.1": {
+      "sha256": "a037a9ca5853282f707572a248caade48c1ed9f73ddc98e48553b9a4bf8f16dd",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.13.2": {
+      "sha256": "463f7c06390fa119b8ca79233c8d9f294ad7e28bce095137925bbf2e6cbf0439",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.13.3": {
+      "sha256": "b51135e01e0d658e59ace69de23d0fe2f5e06ec7361583a072976fda3b599381",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.13.4": {
+      "sha256": "a00981abd4a633dc1d232f6bbc9a906f09e2ebec5d20f25e374fb8386367b6f9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.14.0": {
+      "sha256": "8cada878e30d1e6d643c3755abcd219384971b11b097bb94211c01d5f7ba253e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.14.1": {
+      "sha256": "525c208caf9aead745c5decda117f5b77f169337e1b080461b9989bc409ffde8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.14.2": {
+      "sha256": "43a3b398ea10c9a8a7678a677a73d56ad54168a16286085ecb781ebece6fd7e5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.14.3": {
+      "sha256": "1d23a594d4b9f88b1c3ac6e04af71aa9a7b3dfc48003bb821b02294c5f0d9e41",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.14.4": {
+      "sha256": "43989b606275d4d7c77d0349ef05b9da952db70f96772c9da0af31797a8f6f25",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.15.0": {
+      "sha256": "cfe0817e5365af4de5d900fb975fc64e273369786666b4b850ff35f305f7f4d9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.15.1": {
+      "sha256": "ecfabf4843ba22e79056fa6498b688d5d86e5e2542083f456bb75ff513b2b124",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.15.2": {
+      "sha256": "fefdc4124d100dced1161d763947bacf80700ba072ee7bc8d9e23c65e43dba36",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.15.3": {
+      "sha256": "58e7dfd592b336dcc42e3b60715e1d0fbf4ec0879ac9028d8c65966738a2aa6f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.15.4": {
+      "sha256": "da00e14e7b178b50efd34ff388f2793c5f2193f112b73c2b12a04b7222604711",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.16.0": {
+      "sha256": "97b0b22b01c644b68bda9fa747d2944a70d79885f5a6122c75f25dcaf1feb757",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.16.1": {
+      "sha256": "5103c86656a6bb4b10d71b69b1d3bf8f1cb5a92cf5626efbb28c151bb8d50494",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.16.2": {
+      "sha256": "1e922e1a764aae68cfcbd87d248a87c2ef20945265417e3d4b9cb6bf82025a8e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.16.3": {
+      "sha256": "028c8b7572f8f6a65775b70d3eb889e02ac749423d583f2292fa4461420a348c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.16.4": {
+      "sha256": "fc772bcbd79215457bcf828534116cdf68e5c32d660c13041647062cbb8b853b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.17.0": {
+      "sha256": "9c0d7703ce0e8b8847a65182c1e1d510e2fff716e2073e4cb2969fe9412ab82e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.17.1": {
+      "sha256": "4b0fb140ca9c4525f4beed1f015159e5b160df64add2466465ffe1578ab1fb11",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.17.2": {
+      "sha256": "0febdf002ce814b68d81bc2a7b8ef7d73a59d145218d9b9ccb8f4cfaf1549642",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.17.3": {
+      "sha256": "468d4dc708cb53236e02be42a7e65a71579b4d48e5fe31efa950b634032eeff8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.17.4": {
+      "sha256": "8717785e11cead82992dd8b275ae80801f955c36ccbc504acf100f53e654cb64",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.18.0": {
+      "sha256": "b1c6c319a9c1ef2d4f0950bae4bd9cbbe4feb5f276991f55738f41ad15c7e118",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.18.1": {
+      "sha256": "5206cb60e6eca548668a40a096290a13e47867ef661d9728a3d0c13b4b34a843",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.18.2": {
+      "sha256": "78ee922a34219ebbd2cab1f28a9b5697e3674e7d86b24a3f8eb415fa82164f67",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.18.3": {
+      "sha256": "b4201d22753b9953cb1eb8eb6705f6ab2d9f75957dc7a654b8af7cdb304840c0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.18.4": {
+      "sha256": "a08925dc88054649d2c2130ce1a284ae50bf8e6e34e4d482667a609da995b199",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.19.0": {
+      "sha256": "475d799fb57851b76d4d77e3f4f62ea0db38b306493cba87f07dcea6658a8688",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.19.1": {
+      "sha256": "f0badb58f82221f8af45a3e4f8169230ec6905528188bdee43c9c883e196ce64",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.19.2": {
+      "sha256": "3a8df1cc5904c81b43c3a776070b5e0c67cf295e98d6b13041b503356beb7ad0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.19.3": {
+      "sha256": "78856ee2ba41156821841a9c7ec7b56b3d78d31752a3537df283afe2fd251fff",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.19.4": {
+      "sha256": "db8cd9d6e707f8b010718a09b6a79eae48d4bcac17bf9761eaaf0ba08305bfe7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.2.0": {
+      "sha256": "77978427db60d1c8cb04a43d1c861011b0e857675683e5384265a1f82e4f22e7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.2.1": {
+      "sha256": "92b3c812ee950b4615417185172ec081fab9dfa4b74864fc9ad76d1a866fe14d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.2.2": {
+      "sha256": "ec44fc9c7407429a9a2301be55f6dbdc9fdfd47513c77d8d249745b33c2f9f20",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.2.3": {
+      "sha256": "f6ecebd75105ce6b8f8a301cd455ba356088d9e28f944ee9efd5e66c3a9b1ea8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.2.4": {
+      "sha256": "a9893358c5072260ecf120b9a3b2713221df494b011f5db0c707db144e38dd54",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.3.0": {
+      "sha256": "0ef7349383e7d6786863e4987509d20ece44b62aed71cf1557be0c5fbd01aa13",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.3.1": {
+      "sha256": "6acf906c8c005474415e4f20e8f0d6b54bf4c15efc4ad8e356f45dfe6d4af3d8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.3.2": {
+      "sha256": "7b66851545856cc1b8fc8dcd3c44bb153e14e83a9238ce343e64115f3eeb266d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.3.3": {
+      "sha256": "0870e23a59117eb396ce02127028df70048350e0f96634933697b8c439bebbd8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.3.4": {
+      "sha256": "0617ff037ce71f35ba6fe233216f7327e98e18d7c26fc00de4da6571d8b0265c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.4.0": {
+      "sha256": "c6177b375d5e9e6284c92faa10dd17c74153801cc940ef83fc4e674674410069",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.4.1": {
+      "sha256": "dc8f13fb0477be2e905ac40a8cd1df69e3d7377d438d47515cca66ecb33913f1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.4.2": {
+      "sha256": "3dea15c733c987d893dcf733781cd030321b3b4f6efab21ad583e90839bfde77",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.4.3": {
+      "sha256": "fe4cb4928ecbfad707b0d9d9cc277562f0a38411f5e1bdf43b405a203daa0783",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.4.4": {
+      "sha256": "d9fd4498c23abac375d61113a584a9a15135338205ea2766796302068e3694ab",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.5.0": {
+      "sha256": "97bc54840fdbc7f902a93832a5f12fafa3e0b8247c221c080ed823747c6c8287",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.5.1": {
+      "sha256": "0a047d57fa9d147965fdf047afcc535a03a9690a043210b4368cf3b6658550de",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.5.2": {
+      "sha256": "fb0ec3a28d4ddd7c7142406fb3bca11332160fa4df0c77d4da3c6d75fa3af9b5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.5.3": {
+      "sha256": "94b82122de244d67d6c9e6dd9560e7330c0c351ebba8d7b3d516170518397038",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.5.4": {
+      "sha256": "d191011f10aa838d972aaaeeea7e099390b85a52362ef2d437a11e5950b3e8df",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.6.0": {
+      "sha256": "93b8db059e04dbcaef8b1957df16926a3df14b1890448047d4e4c68a25ec5ccc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.6.1": {
+      "sha256": "634abafc9a8ad136b3b51b0397a02b7b430869e4f6a362f93497504bd172d65a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.6.2": {
+      "sha256": "db5536bf73f15e40840dcf49d1515d09d82a8479ea6103cda2a69974b3eb36c6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.6.3": {
+      "sha256": "ba6542c0711edff508937b0443f3a67f8b76e381881c6f75ddf4080f1fdbbecb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.6.4": {
+      "sha256": "dd767d93dc3c7d5eb78d75fe5f7b04bbcea1f13446cb9d53e5d76b7b7699e7ae",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.7.0": {
+      "sha256": "3e05a603bc0f2a7be7522668ecc0f442a0a62e60299b86a7d06ba61576bdbb87",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.7.1": {
+      "sha256": "61b3748511d2d1588ec981d4c7f04734e80b6b37a527dcbb42782abed0cda473",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.7.2": {
+      "sha256": "b02d010f6915ee87def693d7384de022f00dd49378afe6a556c05622f5baf223",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.7.3": {
+      "sha256": "9f3a2894e60a6eac6ee228d9aa00f8b07ecd68df3140d199783c628239582a0c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.7.4": {
+      "sha256": "1a0cac2cfba7e73be883de4065038748b2e495ed8c60359321efe882a91547d8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.8.0": {
+      "sha256": "b25daa8e7307967b063f8acfe869c22b77fe471f6e71997a895fcc1e97f9b765",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.8.1": {
+      "sha256": "193779cf12112753ac3f2a3a2232506c09689db195c8f0917db91d3bbdf959b0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.8.2": {
+      "sha256": "79440a3eae45916271d19e6355a96511c8cd1b12e65dac6bbe8cd748eed11842",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.8.3": {
+      "sha256": "4f9b4331b75330c0438b885a07424a32ce481f72dd7cfd0c44de227add0a94a8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.8.4": {
+      "sha256": "97a5eab9b64cfa71028e6ade2d78e653be9b0e9066ba86a917030c4906d45d0a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.9.0": {
+      "sha256": "b4f9faf3863df8e83be0fbd2a1b86f7adbec570c72494a092bc8b4d19315d124",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.9.1": {
+      "sha256": "aa11bde6b0c43db65723e156abd71855d83a200082ed8973f6443de8b218c710",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.9.2": {
+      "sha256": "a5f57e3647d37bae503170d8c97a2921335a386be7986d49c3598d84663c2141",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.9.3": {
+      "sha256": "e4794e1489a6344d36723ee619b6a89717f5fbea1661a6a504358c93b5707a8f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.board.9.4": {
+      "sha256": "065a1b3980c9fd655d2775c2acc7a69428a0c8295d90d9f033fa901f6bad0d55",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.0": {
+      "sha256": "c609c5f6a9989ae726f4486982d73544d531089c20cf6c04d29f98cc7ca7f2ea",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.1": {
+      "sha256": "0b5e4efcfab2b3237d62cafa6b70304049a713e84b6842954ea4f0225956ddb9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.10": {
+      "sha256": "c03d676fc8a10b93b5dd3228f86db828f5f661bb3292a7534d386effbb2db08d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.11": {
+      "sha256": "1a52b43743487e3d43db0027fdfcdf16f82ae772b0254372f44864b9680bdd26",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.12": {
+      "sha256": "b31b0e85827a6f09244b6adeac0f6e57064029403c5b78cbf0e7956e17e42f8d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.13": {
+      "sha256": "e42b90d997565719f55e660c30f264ee026568e2ef5685b4f7293cd61434197d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.14": {
+      "sha256": "1dfcb33d04c2dff024f254f77c1536e6742e67d0108178c8b9b2c00405f0eb15",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.15": {
+      "sha256": "66eaa0044259e374f89e5d8b8db74db71c821db318a58573cea16a9ecdc656c1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.16": {
+      "sha256": "8b07bd47e2aa6af3ec49d14e2ff4e91d0d864d2c852e090092657b23337a1d17",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.17": {
+      "sha256": "8899702a0f45d1d4055ef929be21201c79b24dec4cd05dc7f48e63d8de208b44",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.18": {
+      "sha256": "46e90902037069967042891c98d4907b563c2cf554d3c29e7921c59f368a6ad5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.19": {
+      "sha256": "87474c8a9ab2edeac46766fc6460a31704c594c83d78515cdc1451bf100f53ab",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.2": {
+      "sha256": "b68cee16a131fb388ab0805da4e86fda9619f06d6f98615049c5ebd0d8d5b5db",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.3": {
+      "sha256": "e2664c694e14692749e04ea2ef069f358e0d287c0e4d35e36ebd32cfe9d83084",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.4": {
+      "sha256": "90fbb02e5d2e8fc9df1f090781f66ecc1d31351dafacd7ea2d5841db3df0a0e2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.5": {
+      "sha256": "a21562a0232c0d02b0b65057990c824d6835535a6196f442af94c4f13e9d94c6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.6": {
+      "sha256": "da5afee304e3815c01daed01817793d14a3e26474bde7f849f1f4d5fb59d9ff2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.7": {
+      "sha256": "7584d75e1e47b457acf72ffe5d8a6944c3e1de727c080a9941877248e5fe4e53",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.8": {
+      "sha256": "138581dbe501802ddc74d29d38e93c9bfd0fb81b82ad60a6a7dd97050efba1c7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.post.9": {
+      "sha256": "dba5a3f59bb0e4890e2ea2ffeebf9611c548fd6f7232a521f96adf621c805905",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.0.0.45": {
+      "sha256": "a6e1d686ab5677253e03e6984d5723f0d2f434c0abea8d0cace1bc03dda96a1c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.0.1.2": {
+      "sha256": "5dab6f7e947945654ef55c123842befd25f4a548a9191c103e3bea2d9524655f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.1.0.45": {
+      "sha256": "f8b96924789fb7add8e55c1fd0b7d0c4e09c11a045e9bd055dcdf4c1e3cc8e5f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.1.1.2": {
+      "sha256": "4f909c4bfc9d3c343959591569a99a5114ec12ab5ef16194fbb299fc4c8fa2c6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.10.0.45": {
+      "sha256": "6e2fca529899eae1171fc5c5dc4db451292d88f275340fc17b2653c9ec564634",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.10.1.2": {
+      "sha256": "fdd8664e8e4090cb0eea6e2ffa969541415a2eb1b5d0328dd831c407b9f3f2b6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.11.0.45": {
+      "sha256": "8179a5d36b5de16b5c20c7937b19da53eeae85c13f5ff50c2d52398df60a5b9b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.11.1.2": {
+      "sha256": "cbca55348b5cac04eaf6dcfa1f112a88a9a96d97d2e176bc54a185e65dd18d04",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.12.0.45": {
+      "sha256": "b827e2251ee63ee0f077dfc400abae29da1da8c797f3b915218b75e6adf13b45",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.12.1.2": {
+      "sha256": "b4387e60f5f152730857a416e1b98103cbefc4e37d9dfd8e1d275a4a37b8205b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.13.0.45": {
+      "sha256": "ef93727c98c9a428e7ff8b9aa87d731bb26f8dfbac7b17aed3be418f8619c506",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.13.1.2": {
+      "sha256": "62a563b57f8eea6f709d4b3dfc20dc217864b92c73d8b3837b6fc9666f8ce9d9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.14.0.45": {
+      "sha256": "3ed3e053985cd8c670a6a5e037bc108f8ea82dabbf5afe5b3eb3740f112861a7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.14.1.2": {
+      "sha256": "1d06f73f457223d9e4db2d791b680f4c2c363cef7b35a4104822d091796de06c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.15.0.45": {
+      "sha256": "b7adea2157a13388f3c5776e83d52d872d54b2334d2892d3040486d3be5ef3f4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.15.1.2": {
+      "sha256": "d7ca9dad8788cd4dd7224b0879ad0d1fa82c14cc2b03ecb50661c50e8b4f61d0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.16.0.45": {
+      "sha256": "f53b18725ad978bd5bbdf1b155279ee0ad4b10a59a52ba830ca7176183d8ecaf",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.16.1.2": {
+      "sha256": "09869379cb9e702197c6a6fb791b60a015be60b63d33e58fc789a25e66097611",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.17.0.45": {
+      "sha256": "9965decf5695e7f0322328562535077edeeefc8026a07d1a140f1a073cd44d00",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.17.1.2": {
+      "sha256": "14903c4a2ffb607f3f6ccaaed524a7ce815ddbe22185ac5a8717a60ba2b6aa82",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.18.0.45": {
+      "sha256": "b4aea7a5496ad144d10f32590f1d0ba789234fe1310448031982d360e1be4d5a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.18.1.2": {
+      "sha256": "9265801fcd7cef34075741a23ff0c6ffa0cd1cd6b5c2ac6692c7131c478b13e2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.19.0.45": {
+      "sha256": "9c2b8fcbd155da7934176a4d5c62e9ea9f4824b0d0616bbe85b06dfc5a212a48",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.19.1.2": {
+      "sha256": "77571f5ad9f5bc48ed4f3754347d2cedfd6676c19e11fd32ef55dad51b941085",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.2.0.45": {
+      "sha256": "cbdada9923a5e12a8303ea688628ed104fa9025b25d1dab5ca16f101cf19d839",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.2.1.2": {
+      "sha256": "ceebdb648a90c7f1961959a37bdbdebade09261c196fc02a3b47710aa80b9963",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.3.0.45": {
+      "sha256": "9c20ef8bf0c994c014c3c9cc05e0eafee982f1e0e922222f3bbebd2b6dd495f4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.3.1.2": {
+      "sha256": "c5ad25ad26ad353660e6cd29cabcb644a43ef012fedc96f73fc3b0162c598923",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.4.0.45": {
+      "sha256": "e55b62a7f28cb9e1834a652b740a67971fac81109472fbfe0a91715dd20e064d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.4.1.2": {
+      "sha256": "156d64017b154e245baf6964cf439c53e796130db366168df84357f053e09159",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.5.0.45": {
+      "sha256": "b7ec5854612d2dcd45002ccca096edb45bc804f52a0724bfd7868341eab855be",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.5.1.2": {
+      "sha256": "7f4ccb89cdaed2463e64f77d497d1de2bf9e2da259550e1b86549adf6812688d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.6.0.45": {
+      "sha256": "c33911e2c65a44539ef853eae0b07aae932ae7635a286e0c4a931b16353e1204",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.6.1.2": {
+      "sha256": "154c9675edfe5933805f9dcd49af48e0fa717c92f1bc4b0f1e838d194836ca04",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.7.0.45": {
+      "sha256": "6c46a854da23906e5b98fc05afee9e184ab0463c943cee80110a9b1a9e714afe",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.7.1.2": {
+      "sha256": "70704523c2cdc1432acc1203fa1d826f1e3db07594667b4d0936528125e5686e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.8.0.45": {
+      "sha256": "95340bd4a6ee36a0cf454080a21ecbb19b69d3c801cde6c2f6e55ee6ac263d0e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.8.1.2": {
+      "sha256": "17215ced5cfbcc4261fcd6f9c46cd6c3221ca84f99d9b86e3d22b739cd4db3fe",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.9.0.45": {
+      "sha256": "113cefb07168cde699e24deee4eebe1a2f1a988ea2515f607ee44e46781de9f3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.east.rail.9.1.2": {
+      "sha256": "308403763f9d30b52accb0611532bbb65aa20d360eea8ef1ddb22f391ec42596",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.0.0": {
+      "sha256": "85197eb72c396303128d54d06cdfa986b11fd029c1fe5eb7ef8608bd561226aa",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.0.1": {
+      "sha256": "8ccf04c614a11cf1d58036c8073c3f34662b87833fb848a95753c1fdd893af99",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.0.2": {
+      "sha256": "0959edf33ba5d358e27d8d689b38fa3da015cbbffdfff9c861809b06eb179a68",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.0.3": {
+      "sha256": "d078dba807b393822efded3740f48d3a22063e47d51df2650668cf050b961ad3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.0.4": {
+      "sha256": "5daa06cb892c5bb65f3125fd2337385ce1ff922471dd1478e46ddf5958c755af",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.1.0": {
+      "sha256": "f02ba7cde71912310600c7d32bf4ee2a11f68c965b27062f7fd544b6a4d24eb7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.1.1": {
+      "sha256": "22578e626bd26988dc24ca3154fd5d23dcb07a19e77001cb8e7ef636e3a614ca",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.1.2": {
+      "sha256": "7fd2a4e0119c1553c7ff79b95579d7ad0dcaf69ef50fb125e5b2c7b91bceaf50",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.1.3": {
+      "sha256": "d2e566704120afaa6eddfb60552ac3ef61ab20862aa58a6f846a97e54998b1fa",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.1.4": {
+      "sha256": "9dc65d8224c159a17c2a8dd9e374b447bf3ee59c107e8eed875b8dc878a0deb5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.10.0": {
+      "sha256": "eb7de0c4b71f070ac55c5b098c4e206232b7374932f7d61f3539fe8da348c161",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.10.1": {
+      "sha256": "b5ad00d4c9258b50e753e43f402ac4435e8f67679adfebb86406ee3c38b7dfbf",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.10.2": {
+      "sha256": "a4e5f37bb7d1e15508ed7277f1a8b69251b243f7dc5390b1a1b348acd02a6c9c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.10.3": {
+      "sha256": "11f0a41499f91a8f60d4569a019da70c45aa83056698b3848c57c32cbd79b9b9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.10.4": {
+      "sha256": "d8f4ed328e8bd28a5c8cc8e9ab25c806cd56f7378a9355f3915f461508a50024",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.11.0": {
+      "sha256": "2b03137ecb104a5addd408f284183eefd1225784afbb7c2bd3bdb3a6425559d3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.11.1": {
+      "sha256": "2b775154457a0fea97dd9202f113b35ff5e0ec47ce84b5bbf8cad8540d828621",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.11.2": {
+      "sha256": "8817b81d5d17abf9f8648f086ff6ac5ad0f1f2dc4d48b63b61f7c0593c409b46",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.11.3": {
+      "sha256": "0a6d623161e6ec513be605dff239d2cd124d56b5d8ee339c1514f66466b2b50d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.11.4": {
+      "sha256": "0fdc26cecb61e3abb8322447aa0cdbd11e62bd28500b6fda7280cb93bcd12caa",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.12.0": {
+      "sha256": "246cfb85c107cf823249c1966108992c489bc920d04fe13fbe283cb072193ff3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.12.1": {
+      "sha256": "209c71af00e57b235499b2490370b84582426070af406b5376504d935053f177",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.12.2": {
+      "sha256": "33d2b3be091f72d5c4a6a86b9f54ff4adbf02ac704ecfaf8da82986710d2680a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.12.3": {
+      "sha256": "2dc9b26dd04bd984f000838dabf50da4019776ad1e48221edae223759e963095",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.12.4": {
+      "sha256": "5a6f7b66bb374275e14f28d2bc837dc55bc8a7c2148781f08a6d8bf71895ac03",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.13.0": {
+      "sha256": "38bd21ce560c3f980a7b8e2f9ffaa4213bf1dfea69d4c7025a461c06f1f0f691",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.13.1": {
+      "sha256": "aada7934af39c2cd82886e314140a06d56a994288132e8ebd08bf96cf8695ef2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.13.2": {
+      "sha256": "5c3eb3433f747a118369b1f4cdc31bb3f5417e97a07f41633cc73e4c016206a3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.13.3": {
+      "sha256": "02277a8e264973f448cf92a24bdca1e93aeb3ad41bbef56f85625594d2ef4499",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.13.4": {
+      "sha256": "d1785086daa2dfc9308f3e12c18ca507bde5231f9a7c8e827256eb1b6934a654",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.14.0": {
+      "sha256": "4d5d318c00be59cc3b947c456a0ee29dc983b6ac8460e3245193b27360c43e5d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.14.1": {
+      "sha256": "16c1e0f983e4d941e98892d04bf8e3c74759137101aaaa337f32d52534211acb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.14.2": {
+      "sha256": "92757d93d4167f99d693c0751f9b8a4011b3d5a7c302d06e08f47e956dd1cb4e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.14.3": {
+      "sha256": "7e2c0cd66ca1fa9491a8d521d2d926a8718b15c78361b008e38f506f41cff3a5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.14.4": {
+      "sha256": "8d086c9adbd7d50861097d8538627822ffd05a6546a99b9d8b348c652fdd0344",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.15.0": {
+      "sha256": "3dc9b1d832dbf5cae544e511e5cb0f5ee34da647c2e499e5c1abfc9ed1e2b281",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.15.1": {
+      "sha256": "44b78493e9fbc7b54c3b543b99f82f37b49ee720918d0690d51dd03c6fc7f44d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.15.2": {
+      "sha256": "7f5731a5fde0e4a0b0f6f3b7f39c6793c78bd7b9664a8b92e59e9579d9aa10b6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.15.3": {
+      "sha256": "d6ed72af31212c51e8dd2c3eab904a073aa3f29b4ad5f927c4d6d4cdca834add",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.15.4": {
+      "sha256": "244c7487e0de77796d0af61d287a2cd8ddaf3d26d5c18ae462d8aa9e9a9692c7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.16.0": {
+      "sha256": "d80ca94bc1d296ed7bea1ff9e982cff91afa1d8624749606771fba5212253586",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.16.1": {
+      "sha256": "d58ae01b41b8779a83b888b37d79cc472c8ac8766d7d3bc23101e43abf17aaf5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.16.2": {
+      "sha256": "908dcc514740f2cedd6a3d90d8b99146e04eeae542c7b44134ce9e914e9db3b4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.16.3": {
+      "sha256": "de68d14313ad5a3ed1642e71bdacefa4f5e932ebe639886fc975a80d8e0577ad",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.16.4": {
+      "sha256": "981c471d4a0cf472e11a16bf8fb75f08151e7e132e9b541d4d1b39ceac6e51ae",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.17.0": {
+      "sha256": "4d605264c93d022953071f3b2d14680d90ad247da763b5ccf506cef0bd037a51",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.17.1": {
+      "sha256": "c3f779553d8e6e3da667721265cb3bb5ff6d0cb3490e78d2c50916dcc7160921",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.17.2": {
+      "sha256": "d57263167e6610b5622a6c388fb3756b007320269c209600fd4dac7ed64be303",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.17.3": {
+      "sha256": "737d2814c3e731de64f8550fc9b59f09e4407d81c9331a63466415d4eaa0254d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.17.4": {
+      "sha256": "a7c3649dd7ddf77b53dc7dc6a24874e77fe339fdb9567e9e48a315e3eaa222d8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.18.0": {
+      "sha256": "9bea22d9b002e53b8730f0071fd5ea9cc429f1427c680831ee0a24b7af41a51e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.18.1": {
+      "sha256": "c00344360afbcfe6769b955bb680e7ae2635e17b480cf6ce3f9e9723d464efc1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.18.2": {
+      "sha256": "140029e0c308f39bdf8d15109289b04816c04e0b19755e2fce6ec52724abb201",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.18.3": {
+      "sha256": "9fc476ac7193a67ba45a431db7069ba5a6714274bb48dc8b86b53cdf39281033",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.18.4": {
+      "sha256": "568e1d40cc5c641b2342ca07d755eb0d508e2d03334d3fe775705fe3ee7e3c58",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.19.0": {
+      "sha256": "c3da58003828ed20c1df02cf8c2af32b45026c1c92cea183cb8a5094bacadbb0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.19.1": {
+      "sha256": "71ac7bcd53ccf8fa3f0415b84c88b5d16c038fa42de4fce2539418e3b6f0502c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.19.2": {
+      "sha256": "084c1669af414da39ef8b2f11c19be1e77b89bf74a658f0687336edc60a8212c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.19.3": {
+      "sha256": "20deb8e0252421c21c42e49ff048cae17b9019845e1df70b758f1a1b68995531",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.19.4": {
+      "sha256": "69076d89604529978177abaa05fa105eb9c6e580a3efafd0d12d532e06358ab2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.2.0": {
+      "sha256": "719544ef2be7226972b19f93f6ddc1e5d08bd92d78ff456698434435ff8968c1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.2.1": {
+      "sha256": "bdc8c8cfa2e97b57723bfc604fbe7ccead45aaf76dd89479df919e0a44eb1dbc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.2.2": {
+      "sha256": "1bee298682361a24fe5720ede761a2de3a44c326ddfbc217242c78f276f2d7fc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.2.3": {
+      "sha256": "e51467d77e01291915dc6804d243571a27f00789132474c7b3f43e5a5fc9e3c1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.2.4": {
+      "sha256": "20196b05ddf2868fa3e04b0d79f8fa2aad727cf7937aa856e728830bf3a07491",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.20.0": {
+      "sha256": "af48107519d724af383e2a7de804a60c0106f951868b59af2709cf27819af82e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.20.1": {
+      "sha256": "38e32b888cccd6e3ea6e31e47d0068fb85097d6a2c34b20100f3d331fb7986cd",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.20.2": {
+      "sha256": "ace7905c147a580ad379591323b0f9e336cc4f95dd65f1100cd11cc1738ea31c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.20.3": {
+      "sha256": "0b921d6bbd662cd055e775abe63b815e3803d9a5d87933c76c885411242f7c27",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.20.4": {
+      "sha256": "fb97609072bde9b15d596bd2e2cbc4cb934380e53ad0f7d3397af4b681b96d76",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.21.0": {
+      "sha256": "efec5dc444daccd0403e0633e339f93725bdb436d4e8707a884b3d3bb4018c8a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.21.1": {
+      "sha256": "5e99101822af4c41c45e23b22fde8533910f1f845c132c11ad9ebf90cb9b06d1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.21.2": {
+      "sha256": "15c06c7aea6c184ca7b9481a7987b01ef6609e2c035442b8d8b35b9e5fecc54f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.21.3": {
+      "sha256": "dcfe5d2e46500283d02bd1be0e8ee8e7034e269489ea75cab6dbddab05ff6ebf",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.21.4": {
+      "sha256": "039ba5cc5758ae9bb05d8ba90b5dba5e00ad0791b70cdeb757a31c4307abcfb0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.3.0": {
+      "sha256": "3ed81821407fae3e560237ca953dc63aa598f15eea04d48da17c26017db8ad65",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.3.1": {
+      "sha256": "50b7af90c1f6d1b5c4b1066130d30ffb258a1d049b772e78cc2e146fef9b6866",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.3.2": {
+      "sha256": "8f3e6627dbd363c342d28f3a3f39ec9ca1432a0a1eafae1a4abda9701ce734f6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.3.3": {
+      "sha256": "6f0e0a0ca44b1c742486bc6aa4a60b4f23501179ddd5bf717a86e5e5a228b72c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.3.4": {
+      "sha256": "2cccb391008d749360b7440071650ba92a7bfee4b753d7520983080602aaa48d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.4.0": {
+      "sha256": "d01f03c1335cbe22707a2208b34fb633576880e076a85e129c057764bc25cb42",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.4.1": {
+      "sha256": "c77eac6cc45239007669cfe96e4e266f3d351a90daff74e6d898cf7180d07786",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.4.2": {
+      "sha256": "d17f20a192ec04ba2ab2384b0d92e8c21e4e774746d003c5f414e5a720f06d5a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.4.3": {
+      "sha256": "801eeb078a0d00e3f53841ddea59de9329d7a6d6e0a908fe123ddd3d14651ca7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.4.4": {
+      "sha256": "e1231a973c18eecaf80e571be46cf80c1626a18fdaeb1fa802785430fca8ed97",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.5.0": {
+      "sha256": "55bf03cb4693d74bafd4f98e129f70af66b82cf29018084f85c4cfa27ee26cad",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.5.1": {
+      "sha256": "305f76688e02324bc6da549f16f945bb20fb19583468cdbc3774ac1bd8500263",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.5.2": {
+      "sha256": "2639efeba2997a9e6263f09112d4b995366f023a9eefb890dac86c39b9d10ec1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.5.3": {
+      "sha256": "1c34fe7d479a5eaba4e2a4117ca1dc8a93bc6e4f74f87b207c2f9c32b15afe9a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.5.4": {
+      "sha256": "2c013f5864c4268b681a91e9e48400330487ff6363cd3f42b1eb783c1cbeb936",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.6.0": {
+      "sha256": "1503310eba7a025f41ba72fdd3a182a3ec3deb182a7137767defedd9754cb3a4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.6.1": {
+      "sha256": "52235872c69cff444a72c7d16e9c950ffaa54f6d46ccdee09c069095ddde5a6e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.6.2": {
+      "sha256": "9871f757a781a66caeeebca013a7bd1b03a56e30076fcda976b207eb80fe1824",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.6.3": {
+      "sha256": "2277ce2a3ac646997cbbb74c7a86b858ab236e579ab293e8a26b92482b663f0f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.6.4": {
+      "sha256": "2c6ac96a4fdad8609e3f850b3c390f9bdc632539ea1bb0eead917c78220b15fe",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.7.0": {
+      "sha256": "42d7544cb91d9200b241d1774d30c159a97d60610b9d32781c49a724a58da06e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.7.1": {
+      "sha256": "88e6b8142db340b244c1bfba0fbbb79507cb26e3fd1bfd45561feb87d336bfb7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.7.2": {
+      "sha256": "1e9200c02ef96f57937e47ed0f4c7ddff5ecbe83719a8a2c5a48e846c2eafa86",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.7.3": {
+      "sha256": "a4b1b15c1dda8179065c7c0c4c27e5ccd96055486ddb8c5c2747963295a701be",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.7.4": {
+      "sha256": "3e0458497d8b4b1a81a7bc7ed144c97d598955ae91e4503187a4012fbc736483",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.8.0": {
+      "sha256": "2505a9c00f55c91f0ac7617b0e34d53d914711bcf8d98d83a4bc30dc0a18b24d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.8.1": {
+      "sha256": "a7f89b6b7e3dfc455e9b659dff392d0f47d0a593fc1fbb9f33ef3843507833bb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.8.2": {
+      "sha256": "719ee0b8a6f37ef11bb84c354b50050ff4522140ac09415f504df04d58547775",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.8.3": {
+      "sha256": "fd5169e02da14817f2072e7c22861129ed3609425e94a02bf7bd93a1f5ee0f81",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.8.4": {
+      "sha256": "583eef7ba811f9af58dbcf54573f00ca9f849073a52d6b0401a91e9124e63b26",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.9.0": {
+      "sha256": "e35a0a2cf8784b9f1349d6bed6e5cda158673807b33eff774045c5dc49009ac7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.9.1": {
+      "sha256": "3f4f7926bcd2a290d2fb92b13fa4c6324551ce7ddaa9e1eda5a9a4c98ff27e66",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.9.2": {
+      "sha256": "1ac0ea2c4d59646968312ee6cf14a1fc7487bcc0ee5022f039eaef48dea30790",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.9.3": {
+      "sha256": "bfc5ef79d3e29a4ef2138fa5ec0c6296ebf1882647cf0f0c9d491f3cbefbe738",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.board.9.4": {
+      "sha256": "744ca9e5450359f2e58aeda832790fe72edafd6b1864d9a60a15d32a97d8874e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.0": {
+      "sha256": "94895af45925dffb418ec699d49771fe411fe051a392c38625b7a0c1519d2c29",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.1": {
+      "sha256": "f12b53f52e4c7a9bfb51a93f52af2e1002ef5aaee812365357ae6d5e49ea211f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.10": {
+      "sha256": "ce4da5058209fd57d41141bbb2ef7af55cd0f1ebdd8ed238d76e4dbc4cef87c6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.11": {
+      "sha256": "f099f7dad08833d5734ecdc296f1079f91fded3bbf18dbe47e47ddac53651dc7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.12": {
+      "sha256": "218dc087b17e18199d9722e63a8af693614bacef720ca11777bd638475238ae6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.13": {
+      "sha256": "a9d7aab31ccc955b65e1bbbf3b5e5201e5e94997fee8d43983f7d363beb7a2bb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.14": {
+      "sha256": "1b1c0d2bf254b02bda4a2b5ce8d06b46b2386cd7263158b3cdb99b5b1a121c24",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.15": {
+      "sha256": "8ed05ad71b0e09473532d1a6fe1ce6acb3c5aa1149d311a9d5ddac28c5573831",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.16": {
+      "sha256": "df2ad850af29eeaa1cc974bfe7c12e343105c7157b5b19d2beedc80fc94a66e5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.17": {
+      "sha256": "69ebd03056c6aec40b7e65da789026e4149d9424ed6e8bac39d5271c647a2d0a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.18": {
+      "sha256": "7e39a697da5cea37109cede5104e1084b5ddc883d7696ebede3ca9d2766ca9c9",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.19": {
+      "sha256": "a23a981b245f3727c07f4b2e6814b595b7844858f241d07272fdbd39cddc15a4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.2": {
+      "sha256": "b980f0b28be8966773b4bb8db4ff24189a712385a06840c7d8587e7d545145ec",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.20": {
+      "sha256": "e5fd85651ee63406b4dee755b970430e2d7f91005ef714eeb918a1f792be60fa",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.21": {
+      "sha256": "9d933c119786d3e3be1cff1b1e40c0ebe59bf35016cb15037b28ae3bbc43e186",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.3": {
+      "sha256": "7a368fd9b807b34ac774ff259610fab668f85eb1d5e313776f6353d27e8c0c0b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.4": {
+      "sha256": "64a50f0a5dc45742304a45b5a59b22ee96441536ddb073f78f6479f12a8b1038",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.5": {
+      "sha256": "1a6291ac21303eb01f365c8738bb30c2519cb881ab9939d36c3cf5165e325e5c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.6": {
+      "sha256": "bbb5f1427c50024216ea31144aaf743b0249db835488ed1925b1a4470ff39966",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.7": {
+      "sha256": "b8bd9dce56a09ba09b7f873097b79333ce8733b8b21a39d3368adab4ead4db6b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.8": {
+      "sha256": "bb7d1a05d521512454eef15b628a074ad001098e8cd7297a0868f8ba28ae71e7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.post.9": {
+      "sha256": "764fa14332d31ee0d49a59ba2c6c62a1b2d30faac99dd761d93575d602724378",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.0.0.45": {
+      "sha256": "3b2b34de9a9dc9794e794462e4286ba49ccf170432decae6dbe66baae8713fd4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.0.1.2": {
+      "sha256": "298f299f606883b8391315b8a72fca812b23ce8317da5185edafd3723d89bea2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.1.0.45": {
+      "sha256": "d28841cdf95d529657dcc068b0cf0584330507b71c0674f72a39261d81a93829",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.1.1.2": {
+      "sha256": "fd3e93edcebe07370059a98d56da8cc239a4bb17951169bd6425c914e6900f19",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.10.0.45": {
+      "sha256": "559fd20b22ed87f6ee95d1292cc6ad45d6b3954bc472a7a6e680b2332760e3a1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.10.1.2": {
+      "sha256": "88b0a9b9d91f21f36b1bdc88263ad5b9a38a889dfc55b1557b5037ba5daf1e17",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.11.0.45": {
+      "sha256": "13de0019d241e2b1cbd741d7e766073c5430ce74369188a7be50457f8f986205",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.11.1.2": {
+      "sha256": "a6faf2676e2573d338701b01e665fa7561b769cc42e50931402ed254f399ab10",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.12.0.45": {
+      "sha256": "63c4684f93c81001db21280f17bc8e2995536d2cee2e4340433aef187da01be5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.12.1.2": {
+      "sha256": "cbcebc5d234370810939a9251a27dfa27753520bc28b7781686efc6238636377",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.13.0.45": {
+      "sha256": "0f3916dd1efed1a45d89370711a9222ed373b2b9849d2654f465a18e65ccb9fb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.13.1.2": {
+      "sha256": "3658578ed4f1858adfd221d9f24b2bcdc947103060a3d1393cc85f0400017d9c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.14.0.45": {
+      "sha256": "4240a0a030520e361579277b86cf8203dbcf2aced6d101e047d19217f3cbddd2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.14.1.2": {
+      "sha256": "cdcda7fbd41c1c29d949ff0b68aab2cead4b1d94a53ce05da7445e9041726388",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.15.0.45": {
+      "sha256": "429327db9c4e255b38bb100a3e4d8773076452e7a179b54d3a283cafb965bc17",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.15.1.2": {
+      "sha256": "da42211af0c56395ac0615b24fc2b41badf0d7609651dfff2ad258d92de75b27",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.16.0.45": {
+      "sha256": "65d67c2894526c8173aa2af1047b7b2cd4f6ddd672275f42cf794788e53c2419",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.16.1.2": {
+      "sha256": "65844f52a7db104359e794d271c68bbd982ff5757a7809b8c68c409ca2d885e6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.17.0.45": {
+      "sha256": "58b3ab3d7d24b6221f30f757b08d6f6bdc6797923566a18b51e5eb781758b758",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.17.1.2": {
+      "sha256": "83f3aa4a90941a2e55a9801aa692a833357dc9dda6ed34f89c3fa02225e66d3b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.18.0.45": {
+      "sha256": "9b34d95b84c69a75b0f09150dcd431b7609ba5a02be2b05bd60fdbd74cfae029",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.18.1.2": {
+      "sha256": "c88d79de87fde6de4036c1d6c2f5e1eb1646ee254ebebb086e067d844c29914d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.19.0.45": {
+      "sha256": "4a54ff956094671a5aadc9e6d260a462ae18bc79ed4c25667e68283fc06be2e3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.19.1.2": {
+      "sha256": "a50dbfa8cdc3bdbaff47f50fadf88ee468a69943f3d92250928c863fb9e4b9e7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.2.0.45": {
+      "sha256": "c7b7cf50c0129d9b939a861ca1c5ce29a33cd01a61bf740e8342308639ac1a8a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.2.1.2": {
+      "sha256": "499a9abd7e695d5096995c065d7da38db9bdfa6f39ecabb891319724a5f666f5",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.20.0.45": {
+      "sha256": "cd1c02ddcf749eada4323a028338f896c8798eac47739e87e2cdf7f36ecf002a",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.20.1.2": {
+      "sha256": "f8d6c4dd69914321a2e6086f268b860382b70f0782e8acf15984f56051160d5b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.21.0.45": {
+      "sha256": "5b4addf60a8be59b25c92e6fa1cb39e27a841740d7edfa59b1cd5429afc51f4e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.21.1.2": {
+      "sha256": "27ac023817ee30d9ee4e713742b567a08390549a726d1de5db706cc5e4a3948e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.3.0.45": {
+      "sha256": "9b20bf4e5dda12d836b941c650e0ea0c6a33b2a0d5027f9cae8a51a2724f2d14",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.3.1.2": {
+      "sha256": "9834fa4988cd682310c5ce7f1cbad37e560d5ea25c650cab7a13ab6aca9e0c9c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.4.0.45": {
+      "sha256": "ad21e5b3cfcab63aa2454286b7101c5217f0b167680be24d60ffd29b5b38c911",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.4.1.2": {
+      "sha256": "989e68bc90ed1eec457480fd55836c019e0702e12024c20bf297d71cfb884ec1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.5.0.45": {
+      "sha256": "6d5ecde44efbe1c81a11eabb0e5c322cb241ca4550aacd5ebdb81e63c1fddccd",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.5.1.2": {
+      "sha256": "5c8c46040ffb53f28226d3944349d011fc2090b6ea8d5947e8557dd133388369",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.6.0.45": {
+      "sha256": "2b663986362c06cd1b9865c60ff3e15d9550c29c63a251c1e78d50eadf38a546",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.6.1.2": {
+      "sha256": "b88d371d7c84f551c58eeeec6034a097dfd6f021c42059729721a828928dada4",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.7.0.45": {
+      "sha256": "6772b63d1997889cc1bcd4541ef5146af8db5de7ec7a386779f897e29f0683f2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.7.1.2": {
+      "sha256": "452d13e3f97f11f4a46c9fe3348c5c55c4b6c208843461f03d91d1d24c5f6375",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.8.0.45": {
+      "sha256": "40cebc3db1030601f9b7eb538d4bc01f70e2d6ce8d14aa813a2a962a92bc023f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.8.1.2": {
+      "sha256": "d1ddef2942e0a89aefb066016c6360ac732d65abbbf6e0e8c855cba2222d49c2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.9.0.45": {
+      "sha256": "3dda01e137c7404c43ad9004cb860c28dc24b9d20f641119b74e8c0a1174fba6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.north.rail.9.1.2": {
+      "sha256": "6c0929a3470d280fe43eed788f1f615c5fa432949dc0f0687866fb0fb3357ff3",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-bailey.surface.grass": {
+      "sha256": "114ff2511da695ad3c93ca465f2da346211bb5f9d3021427bdb92e2d608050b9",
+      "vertices": 7266,
+      "polygons": 14044,
+      "category": "C",
+      "id": "wb-bailey"
+    },
+    "wb-building.beam.10": {
+      "sha256": "b234e824f8bdaac510de6fe9788d963b6d83665df4b7d5ebb52d723c37e0473c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.beam.4": {
+      "sha256": "69181d2033014ad93f502b4a591493999b9dba17e13ff30e30b6e379ea244324",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.crossbeam.-127": {
+      "sha256": "6d957513d794e5c920937cfab7d585899a820e66f48101489e50fcdb7c812353",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.crossbeam.-135": {
+      "sha256": "1b1157cfb8cc593a35b827ddedae68a8c29ef5da63416655f44bddf899ad23de",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.floor": {
+      "sha256": "6b29cccbce2a078e5350fb45489877be7164a5aa7d73e37af686e72bffc86c1f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-127.10": {
+      "sha256": "b957c356e3eed18f62d73f4022eda0725bd423da1d4fc75280690647df60477e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-127.4": {
+      "sha256": "ea2652414331450ca7f49c022ed968212ff0ea941fa5a1e4dd88c9d0cb05a87c",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-131.10": {
+      "sha256": "5811099a75137632c27a7448a298408fde3fc112a8383202311b70160a0d24dc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-131.4": {
+      "sha256": "598517a171b64ca6a003a54ad1b66ea8349a422e1bc0b95fb8bdaf1b38b49ed1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-135.10": {
+      "sha256": "97f2a2dd7904975c4413b5d1c9893358edbe109f684bda5e074792ee8726fb45",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.joint.-135.4": {
+      "sha256": "6390c7858cb1d9a060b550dd585deae5677a9c9d846b3ce00d9f93966610abdc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-127.10": {
+      "sha256": "30a7483378f0c985c735e7c0f9c18fff89e4b8521a9b4152fee31938af1c5de8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-127.4": {
+      "sha256": "7e2d6b83df21d8a3b82c22b8ca7f78c3ec1bbe198571c2f333cc91c089e9a6b1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-131.10": {
+      "sha256": "dd5bd87e81a58b55a7723f7e07c010229fb4821cabf3bc74c4c402d77c726367",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-131.4": {
+      "sha256": "cbdb153ea3c4554a3d5d6acd4a8c46a882773cab873f95beb5a3535c11213aeb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-135.10": {
+      "sha256": "3b7d7785faeb43d0fb133bb3fa067d02aa8a87c553a7c8c1aea4a0d831b1a856",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.post.-135.4": {
+      "sha256": "6e79be4fa2c38d280e0d594c8883ee37abec277489d8aec56227559da4c5027f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.ridge": {
+      "sha256": "25c26f50aeb06105656717778019661bb5c19c1b76b4153e6e5d5334b2232224",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.roof.-1": {
+      "sha256": "20d9625b3a082ffdc0e2afebc23034e8cabba9f33a31ea6f45abb73b15cc0556",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.roof.1": {
+      "sha256": "951d649fea11c81b029a9073733f05851f3217f1ccb9155e12f1e028696b3c4e",
+      "vertices": 8,
+      "polygons": 6,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.wall.10": {
+      "sha256": "e955b78151ad6e5cc2e3b7ebc5c2b73ce055d203ff30cb62ca28df4b68afdce2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-building.wall.4": {
+      "sha256": "9ee2e4876e899346f22ae00a722f85fb6f9966a963f10fbc36515102a7b81d84",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-building"
+    },
+    "wb-gate.gate.cap.0": {
+      "sha256": "fe472b994318a74184b9855b356aefe6e4ffb27cc8594df1e5ef03439f664aae",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.cap.1": {
+      "sha256": "a363e2f5ef9cd77be5f349e55635edbcd71e019724cb5a45c7999895d13c23ea",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.crossbeam": {
+      "sha256": "cc4dea86c0a491a2625059d2c6109c0e29ebab680f1ce0594a8e6e5a6bb86a83",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.0": {
+      "sha256": "5f8bff5bbf4aec1c1ae982e3ddd23a0a138c2a97417a832d5e610a8b7ef4095d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.1": {
+      "sha256": "1dbe300b3d6333c9480294cc13139646f100a8d290a751262fa77f5d9c579969",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.2": {
+      "sha256": "87f8a13902bc88188e900d4dbd02492f4cdfe3dcbd728c9426a07751c919d8fc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.3": {
+      "sha256": "8023358623a4279a891f711655f8b9492b939491885519f0bb77e84770908620",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.4": {
+      "sha256": "328481ef2103db1de11ca0e965d327802987bcb5eeff02300f68060b7c47dedd",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.0.5": {
+      "sha256": "0692804498281848e91f2846df00338388764578d2b8fef5a591999bba6b2d0b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.0": {
+      "sha256": "927668f2f2d04c0bbc3b8927cedd7629ea07e5ad34954cf80c6daccfa6f7bb64",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.1": {
+      "sha256": "60d42c50c2d0bc4cf2b52884d930a64e4bb5d6116c9edbfba2218b4222f88a75",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.2": {
+      "sha256": "4ab5495d93c6e52fb0c20ea76d6a54d96ba2c2bf416051d797811f006029a656",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.3": {
+      "sha256": "99da134694145930700fc6d5540386cbe68fe1f5fb33cd1f924f11d63118cfbb",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.4": {
+      "sha256": "7b46b1099813a1b7de68d8ac779b44be7eef6d92a940a4997cca500883ab4446",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.1.5": {
+      "sha256": "3fc98f74e3e9cfe221f207f296a4185c3b2bf481e68f06466d5dc4dfcb922672",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.rail.0.0.45": {
+      "sha256": "c4aa5e6f15f0ddc8ef94bef74597a83dad26a3595b597a1f695e361e4b7cf6f1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.rail.0.2.15": {
+      "sha256": "f1155cd947936a67bb52c0e372a6f30a1eec9207c9f72b1c9025b882d31d36dc",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.rail.1.0.45": {
+      "sha256": "da1647b051279f513591f5a6f410fc6488288ad35aa2b267523a0c5981cf6782",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.door.rail.1.2.15": {
+      "sha256": "371c330411114d7adeb864a3f20b92116df93b45d960191e9a8f4843baa83587",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.post.0": {
+      "sha256": "7b799ca05d3158dab46b6533ba562e43f1cbf3a61656a4b14958ca0e36cc4d4e",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.gate.post.1": {
+      "sha256": "779e738375569e2b24de7a6c49b12421bb086ccdab88a4cf4c72d18f3ab6414f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.0": {
+      "sha256": "1d6d3cd9b6ed5addd51e84b60c6ecad366fe84c471002be0f4cc12680897d567",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.1": {
+      "sha256": "851b62c4c878bb8b1ae519aad4c10cad3cff361f7610de76fb221fab956355bf",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.2": {
+      "sha256": "8998f6f168ec140bb15b5ac46dd5ff6951cfeede269110f404475a7441afcb9b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.3": {
+      "sha256": "f6e58a15f44576d8466bc599165bfe607f189c6fd47addb3c1eb32bfeff6e3b0",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.4": {
+      "sha256": "b7e8ceea8e06680d8566aa6c7648bc2fee995469abfc9263a19ece7a748adfb6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.5": {
+      "sha256": "c06da4a8fe802ba927779441089a1d48e15463500d79684de145d10bb168c022",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.6": {
+      "sha256": "589228d1191ca122acdae37969efade2a08e682d429d5456833d0b4d9bdc2c6d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.7": {
+      "sha256": "9cc723f8c90dff5da76e1550a087f949d703ac5aa9361980332274531f6f2832",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.8": {
+      "sha256": "693911d8a2fb822768c46a084592956ed8e990b79d7903b0fd1ef82659ef90cd",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.post.9": {
+      "sha256": "8e4c902c29d78faaeb574e610a1edb7011d7742e00785db351b96877478d140b",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.0.0.5": {
+      "sha256": "1326a798fdd361998322339e7dd3f796be454025ce1640082bd7d2e8e58c35ca",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.0.1.25": {
+      "sha256": "33e50840b764e6938b1772d27233dc6b0c031cfc5432b3480f738bffbc32c736",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.1.0.5": {
+      "sha256": "0bce5dfad85f0b9e3b9d4366424bc1ea8b741281c540a6ccff80032bf374a08d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.1.1.25": {
+      "sha256": "23e18c0aef662107e1edd346cf94a148aeb7e7bda19246075d833ed4bfc9b422",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.2.0.5": {
+      "sha256": "0ba6d9c5b7e429f1ef130f02c92c3c7147b58fb56d5158eb686fe9cd69bcaec2",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.2.1.25": {
+      "sha256": "f699348687715a01f8f997b16108316cd68d2431fd3f070bfada6318acf9bb0d",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.3.0.5": {
+      "sha256": "3679c558ba490787b4ce5cdc5129945f6e0f96d8394ab95b47712b5cac9c1427",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.3.1.25": {
+      "sha256": "af02ea6a53464c56511f762f5e1df8e26de9e02a3ba952211226c2fbd4bf6df6",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.4.0.5": {
+      "sha256": "331861bc148c47fff980c97e56176eb248d12e4a275cf7fe4fef8c6f5cc24828",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.4.1.25": {
+      "sha256": "f3030a1e3937e65a248375ab4f90eb8fc54850eeaaa7b744cbb44b6d133a62b8",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.5.0.5": {
+      "sha256": "d9a91ba2d136f1b87884c5bc945c4d866df87aad8b51e94b7086b75467b59cce",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.5.1.25": {
+      "sha256": "8dd66ea2bc09b5592b8e0167a592a5e1c5a5c9d79048d5106341b24fc5baa263",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.6.0.5": {
+      "sha256": "849d9782c5db0ac134a6efa0fc8baf6bed7012af414dc05fef5386647054c02f",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.6.1.25": {
+      "sha256": "f218f8364809ec9076ffe93d49733c28521b4b03b541e02e6b490d82ef7f0ff1",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.7.0.5": {
+      "sha256": "1c041ea43af73e6910fb4b6dec2148f0436999d39ac6463ed2513e01214bec17",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.7.1.25": {
+      "sha256": "d429ae059892c8def6a4bd9f43a38522bede86fceea4303c8ff7a65ec0ca1388",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.8.0.5": {
+      "sha256": "ec6312e4d550b0bc16acfea4e695d42bb78d52925e9d0f7dfd28c431890e5daa",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.8.1.25": {
+      "sha256": "8a39970c2dc7ec8096ae956139bebe7387b7bbf861603108ff60b191dd56a836",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.9.0.5": {
+      "sha256": "1a3996821a6816a4b1b5a2dc0aef758f47d69590b725020d3c7a7c029c1531d7",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.side.rail.9.1.25": {
+      "sha256": "7c8ba8d20093a0c83ce3e94a4da95351c6405f4cc32888e5968515ecb0a29e83",
+      "vertices": 24,
+      "polygons": 26,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-gate.surface.path": {
+      "sha256": "5aee9a8e6546da4bd59d45eea8d73e4cc6be268f3dcb6d21d1864f97f9e29dae",
+      "vertices": 5561,
+      "polygons": 10640,
+      "category": "C",
+      "id": "wb-gate"
+    },
+    "wb-moat.surface.earth": {
+      "sha256": "d35181c619901716620cf5efa44c26428e7fa13c93aeb6d40e1f77d333c3d923",
+      "vertices": 1495,
+      "polygons": 2816,
+      "category": "C",
+      "id": "wb-moat"
+    }
+  }
+}

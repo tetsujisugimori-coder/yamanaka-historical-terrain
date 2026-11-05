@@ -1,0 +1,95 @@
+[repository]/scripts/phase3c-geometry-check.py:41: DeprecationWarning: Arrays of 2-dimensional vectors are deprecated. Use arrays of 3-dimensional vectors instead. (deprecated in NumPy 2.0)
+  cross=np.cross(t[:,1,:2]-t[:,0,:2],t[:,2,:2]-t[:,0,:2]);assert (cross>0).all(),'winding/degenerate'
+{
+  "status": "PASS",
+  "method": "direct binary GLB positions/index arrays; no authoring recipe import",
+  "triangles": 7342,
+  "projectedArea": 3040.0,
+  "seamSamples": 1016,
+  "maxSeamError": 3.0517578125e-05,
+  "stations": [
+    {
+      "id": "ic-station-nishinomaru",
+      "height": 575.1900024414062,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.008056640624545253
+    },
+    {
+      "id": "ic-lookout",
+      "height": 567.0759887695312,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.20831298828170475
+    },
+    {
+      "id": "ic-bridge",
+      "height": 555.6599731445312,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.07000732421943212
+    },
+    {
+      "id": "ic-koguchi",
+      "height": 571.7760009765625,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.2640380859372726
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "height": 570.4840087890625,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.3480224609381821
+    },
+    {
+      "id": "ic-station-western",
+      "height": 553.0239868164062,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.012023925780795253
+    },
+    {
+      "id": "ic-station-westgate",
+      "height": 548.3800048828125,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.22869873046943212
+    },
+    {
+      "id": "ic-station-westmoat",
+      "height": 552.1508178710938,
+      "error": 0.0,
+      "eyeHeight": 1.7,
+      "maximumCardinalGradeWithin10cm": 0.2791748046877274
+    }
+  ],
+  "vertexCount": 4180,
+  "negativeControls": {
+    "coordinate": {
+      "rejected": true,
+      "reason": "bounds/origin"
+    },
+    "facility-id": {
+      "rejected": true,
+      "reason": "facility ID"
+    },
+    "category": {
+      "rejected": true,
+      "reason": "classification"
+    },
+    "seam-height": {
+      "rejected": true,
+      "reason": "internal crack"
+    }
+  },
+  "fixedSections": {
+    "status": "PASS",
+    "reason": "prior GLB byte equality against ed22133 plus new footprint east edge -68 strictly west of sections starting -66 and -45"
+  },
+  "newFileHashes": {
+    "public/data/phase3c.glb": "d966fde9c320fe8bed4919ceb965ab4a49700a83f29b7eb02f9c3e4209b3c0bd",
+    "public/data/phase3c.json": "e3f44b0dc494ee16285db676c076a945f4586211d5a94b5e8eb92dbfa52d766b"
+  }
+}

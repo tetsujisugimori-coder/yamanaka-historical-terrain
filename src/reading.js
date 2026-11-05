@@ -28,5 +28,5 @@ export function createReading({features,sources}){
  $('#reconstruction-list').replaceChildren(...features.filter(f=>f.reconstruction&&!f.landscape).map(button));
  $('#landscape-list').replaceChildren(...features.filter(f=>f.landscape).map(f=>{const b=button(f,0);b.textContent=f.category+' '+f.name;return b;}));
  select('castle');document.body.dataset.readingState='ready';$('#reading-status').textContent='施設解説・出典を表示中';
- return{select,setSelectionHandler(handler){selectionHandler=handler;}};
+ return{select,setSelectionHandler(handler){selectionHandler=handler;},addFeatures(items){for(const f of items){if(features.some(x=>x.id===f.id))continue;features.push(f);const b=button(f,0);b.textContent=f.category+' '+f.name;$('#landscape-list').append(b);}}};
 }

@@ -1,0 +1,94 @@
+name: Validate inner observation
+on:
+  push:
+    branches: ['feat/**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  inner-observation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - run: python3 -m pip install numpy
+      - name: Exported geometry and negative controls
+        run: python3 scripts/phase3c-relationship-check.py
+      - name: Guided observations, support and async regressions
+        run: |
+          npm run dev -- --port 4317 --strictPort >/tmp/inner-vite.txt 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3c-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-browser
+          path: |
+            evidence/phase3c/browser/
+            evidence/phase3c/geometry/
+  appearance-and-performance:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Same-pose before-after and measured performance
+        run: |
+          git worktree add --detach /tmp/phase3c-baseline ed22133f766aa1a2256dcebbb0413ec11d479106
+          ln -s "$PWD/node_modules" /tmp/phase3c-baseline/node_modules
+          (cd /tmp/phase3c-baseline && node_modules/.bin/vite --host 127.0.0.1 --port 4319 --strictPort) >/tmp/old-vite.txt 2>&1 &
+          old=$!
+          npm run dev -- --port 4317 --strictPort >/tmp/new-vite.txt 2>&1 &
+          new=$!
+          trap 'kill "$old" "$new"' EXIT
+          for port in 4317 4319; do
+            for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done
+          done
+          node scripts/phase3c-appearance.mjs
+          PERF_TRIALS=3 node scripts/phase3c-performance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-appearance-performance
+          path: |
+            evidence/phase3c/appearance/
+            evidence/phase3c/performance/
+  independent-visual:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Reviewer-authored independent browser evidence
+        run: |
+          npm run dev -- --port 4317 --strictPort >/tmp/independent-vite.txt 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3c-independent-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-independent-visual
+          path: evidence/phase3c/independent/visual/

@@ -1,0 +1,134 @@
+{
+  "targetHEAD": "573dc70e90fb58f38271b1eff08efe4179ee3ccb",
+  "glbSHA256": "d966fde9c320fe8bed4919ceb965ab4a49700a83f29b7eb02f9c3e4209b3c0bd",
+  "manifestSHA256": "e3f44b0dc494ee16285db676c076a945f4586211d5a94b5e8eb92dbfa52d766b",
+  "features": {
+    "ic-bridge": {
+      "triangles": 3802,
+      "boundsEastNorthHeight": [
+        [
+          -100.0,
+          -68.0
+        ],
+        [
+          -45.0,
+          15.0
+        ],
+        [
+          552.5180053710938,
+          572.7780151367188
+        ]
+      ]
+    },
+    "ic-koguchi": {
+      "triangles": 794,
+      "boundsEastNorthHeight": [
+        [
+          -82.0,
+          -68.0
+        ],
+        [
+          -45.0,
+          -23.0
+        ],
+        [
+          565.9459838867188,
+          573.5162353515625
+        ]
+      ]
+    },
+    "ic-lookout": {
+      "triangles": 2746,
+      "boundsEastNorthHeight": [
+        [
+          -100.0,
+          -68.0
+        ],
+        [
+          15.0,
+          50.0
+        ],
+        [
+          555.6300048828125,
+          570.3880615234375
+        ]
+      ]
+    }
+  },
+  "anchorChecks": [
+    {
+      "id": "ic-lookout",
+      "height": 567.0759887695312,
+      "ledgerDelta": 0.0
+    },
+    {
+      "id": "ic-bridge",
+      "height": 557.2053833007812,
+      "ledgerDelta": 0.0
+    },
+    {
+      "id": "ic-koguchi",
+      "height": 571.2479858398438,
+      "ledgerDelta": 0.0
+    }
+  ],
+  "lookoutKoguchiDistanceMetres": 71.00704190430693,
+  "bridgeCentrelineSamples": [
+    {
+      "east": -99,
+      "north": -35,
+      "height": 555.0999755859375
+    },
+    {
+      "east": -95,
+      "north": -35,
+      "height": 555.3800048828125
+    },
+    {
+      "east": -91,
+      "north": -35,
+      "height": 555.6599731445312
+    },
+    {
+      "east": -88,
+      "north": -35,
+      "height": 557.2053833007812
+    },
+    {
+      "east": -85,
+      "north": -35,
+      "height": 563.2650146484375
+    },
+    {
+      "east": -82,
+      "north": -35,
+      "height": 569.8321533203125
+    },
+    {
+      "east": -79,
+      "north": -35,
+      "height": 571.7760009765625
+    },
+    {
+      "east": -77,
+      "north": -35,
+      "height": 571.2479858398438
+    },
+    {
+      "east": -73,
+      "north": -35,
+      "height": 570.4840087890625
+    },
+    {
+      "east": -69,
+      "north": -35,
+      "height": 571.05908203125
+    }
+  ],
+  "tests": {
+    "threeUniqueCIDs": true,
+    "legacyGateIDsNotReused": true,
+    "noTowerNodes": true,
+    "sourceDimensionsSeparate": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44786.121277226666,
+          -93494.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-lookout",
+        "name": "西ノ丸見張台の高所候補",
+        "category": "C",
+        "modelHeight": 574.9559936523438,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-lookout"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44774.121277226666,
+          -93507.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-bridge",
+        "name": "西ノ丸・西櫓方面の土橋候補",
+        "category": "C",
+        "modelHeight": 560.957275390625,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-bridge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44785.121277226666,
+          -93507.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-koguchi",
+        "name": "見張台側虎口の候補",
+        "category": "C",
+        "modelHeight": 566.3246459960938,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-koguchi"
+      }
+    }
+  ]
+}
