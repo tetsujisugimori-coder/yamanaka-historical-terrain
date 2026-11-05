@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "hashes": {
+    "scripts/phase3b-build-gis.py": "1a530e63bc6083aa4a6e37933f037b64cc74abed7a38f3a4a32cf49a38be056b",
+    "scripts/phase3b-recipe.py": "52ed32356172c838337ceaa2b35867a488d0cf4b37b0348101a39e716c0317a1",
+    "production/phase3b/recipe.json": "7cca67299703f65fd5ff3bb9ff3d2a7a93817182a6001bc14d1944ed341324c5"
+  },
+  "utc": "2026-11-05T10:37:35.178Z",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"[workspace]\\scripts\\phase3b-build-gis.py\", line 28, in <module>\r\n    assert p.write(str(ROOT/'production/yamanaka-phase3b.qgz')),p.error()\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: Unable to perform zip\r\n"
+}

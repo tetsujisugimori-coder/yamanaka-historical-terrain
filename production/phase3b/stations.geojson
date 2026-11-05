@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44719.121277226666,
+          -93476.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-bailey",
+        "name": "西櫓の曲輪上",
+        "category": "C",
+        "modelHeight": 553.0239868164062,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-bailey"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44666.121277226666,
+          -93513.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-gate",
+        "name": "西木戸口を正面から",
+        "category": "C",
+        "modelHeight": 548.1513061523438,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44708.121277226666,
+          -93473.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-moat",
+        "name": "西櫓堀を見下ろす",
+        "category": "C",
+        "modelHeight": 552.1508178710938,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-moat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44706.121277226666,
+          -93488.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-earth",
+        "name": "赤土と畝の近景",
+        "category": "C",
+        "modelHeight": 551.47314453125,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-earth"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44667.121277226666,
+          -93510.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-wood",
+        "name": "西木戸口の木組み",
+        "category": "C",
+        "modelHeight": 548.416015625,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-wood"
+      }
+    }
+  ]
+}

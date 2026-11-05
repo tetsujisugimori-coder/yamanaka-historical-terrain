@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "exitCode": 3221225506,
+  "signal": null,
+  "hashes": {
+    "scripts/phase3b-build-blender.py": "691a106232f85dcfcd6b568507e0ad02328b96cba8dda88e6bd94ff7289b6b98",
+    "scripts/phase3b-recipe.py": "52ed32356172c838337ceaa2b35867a488d0cf4b37b0348101a39e716c0317a1",
+    "production/phase3b/recipe.json": "7cca67299703f65fd5ff3bb9ff3d2a7a93817182a6001bc14d1944ed341324c5"
+  },
+  "utc": "2026-11-05T10:36:58.588Z",
+  "stdout": "",
+  "stderr": ""
+}

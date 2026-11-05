@@ -3,12 +3,16 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 // Bake exported transforms and batch by stable element ID + material. The .blend
 // keeps every post, tree and person editable; the browser needs few draw calls.
-export function landscapeModel(gltf){
+export function landscapeModel(gltf,westernBounds){
  const buckets=new Map();gltf.scene.updateMatrixWorld(true);
  gltf.scene.traverse(o=>{if(!o.isMesh)return;const id=o.userData.elementId,category=o.userData.evidenceCategory;
   if(!id||!['C','D'].includes(category))throw Error('Scenery missing ledger binding');
-  const key=id+':'+o.material.uuid,geo=o.geometry.clone();geo.applyMatrix4(o.matrixWorld);
-  if(!buckets.has(key))buckets.set(key,{geometries:[],material:o.material.clone(),data:{...o.userData}});
+  const geo=o.geometry.clone();geo.applyMatrix4(o.matrixWorld);
+  geo.computeBoundingBox();const center=geo.boundingBox.getCenter(new THREE.Vector3());
+  const overlap=id==='sc-vegetation'&&westernBounds&&center.x>westernBounds[0]-4&&center.x<westernBounds[2]+4&&-center.z>westernBounds[1]-4&&-center.z<westernBounds[3]+4;
+  const key=id+':'+o.material.uuid+':'+Boolean(overlap);
+  const materialRole=o.userData.materialRole??({'sc-vegetation':'leaf','sc-flags':'cloth','sc-people':'skin'}[id]??'wood');
+  if(!buckets.has(key))buckets.set(key,{geometries:[],material:o.material.clone(),data:{...o.userData,materialRole,westernOverlap:Boolean(overlap)}});
   buckets.get(key).geometries.push(geo);
  });
  const group=new THREE.Group();

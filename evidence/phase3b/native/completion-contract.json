@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "self-test: zero-exit child without fresh worker; stale-worker mutant demonstrates detection",
+  "results": [
+    {
+      "mutation": false,
+      "runnerExitCode": 1,
+      "childExitCode": 0,
+      "status": "FAIL",
+      "workerPresent": false,
+      "priorWorkerRetained": true
+    },
+    {
+      "mutation": true,
+      "runnerExitCode": 0,
+      "childExitCode": 0,
+      "status": "PASS",
+      "workerPresent": true,
+      "priorWorkerRetained": false
+    }
+  ]
+}

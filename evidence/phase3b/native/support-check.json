@@ -1,0 +1,372 @@
+{
+  "status": "PASS",
+  "scope": "self-check of actual native part records with grid recipe; not an independent review",
+  "boundarySamples": 474,
+  "maximumBoundaryError": 0.0,
+  "postFeet": 60,
+  "minimumPostEmbed": 0.11398925781247726,
+  "buildingGroundRange": 0.072021484375,
+  "minimumBuildingEmbed": 0.11398925781247726,
+  "feet": [
+    {
+      "object": "wb-bailey.north.post.0",
+      "surfaceHeight": 555.3548583984375,
+      "bottom": 555.2348583984375,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.1",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.2",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.3",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.4",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.5",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.6",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.7",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.8",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.9",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.10",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.11",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.12",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.13",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.14",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.15",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.16",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.17",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.18",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.19",
+      "surfaceHeight": 555.4000244140625,
+      "bottom": 555.2800244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.20",
+      "surfaceHeight": 555.4752197265625,
+      "bottom": 555.3552197265625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.north.post.21",
+      "surfaceHeight": 555.9979858398438,
+      "bottom": 555.8779858398437,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.0",
+      "surfaceHeight": 555.530029296875,
+      "bottom": 555.410029296875,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.1",
+      "surfaceHeight": 555.5540161132812,
+      "bottom": 555.4340161132812,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.2",
+      "surfaceHeight": 555.5780029296875,
+      "bottom": 555.4580029296875,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.3",
+      "surfaceHeight": 555.6019897460938,
+      "bottom": 555.4819897460937,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.4",
+      "surfaceHeight": 555.6260375976562,
+      "bottom": 555.5060375976562,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.5",
+      "surfaceHeight": 555.6500244140625,
+      "bottom": 555.5300244140625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.6",
+      "surfaceHeight": 555.6740112304688,
+      "bottom": 555.5540112304687,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.7",
+      "surfaceHeight": 555.697998046875,
+      "bottom": 555.577998046875,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.8",
+      "surfaceHeight": 555.7219848632812,
+      "bottom": 555.6019848632812,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.9",
+      "surfaceHeight": 555.7460327148438,
+      "bottom": 555.6260327148437,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.10",
+      "surfaceHeight": 555.77001953125,
+      "bottom": 555.65001953125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.11",
+      "surfaceHeight": 555.7940063476562,
+      "bottom": 555.6740063476562,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.12",
+      "surfaceHeight": 555.8179931640625,
+      "bottom": 555.6979931640625,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.13",
+      "surfaceHeight": 555.8419799804688,
+      "bottom": 555.7219799804687,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.14",
+      "surfaceHeight": 555.8660278320312,
+      "bottom": 555.7460278320312,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.15",
+      "surfaceHeight": 555.8900146484375,
+      "bottom": 555.7700146484375,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.16",
+      "surfaceHeight": 555.9140014648438,
+      "bottom": 555.7940014648437,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.17",
+      "surfaceHeight": 555.93798828125,
+      "bottom": 555.81798828125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.18",
+      "surfaceHeight": 555.9620361328125,
+      "bottom": 555.8420361328125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-bailey.east.post.19",
+      "surfaceHeight": 555.9860229492188,
+      "bottom": 555.8660229492187,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.gate.post.0",
+      "surfaceHeight": 548.6347900390625,
+      "bottom": 548.4599731445312,
+      "embed": 0.1748168945313182
+    },
+    {
+      "object": "wb-gate.gate.post.1",
+      "surfaceHeight": 548.6852172851562,
+      "bottom": 548.4599731445312,
+      "embed": 0.22524414062502274
+    },
+    {
+      "object": "wb-gate.side.post.0",
+      "surfaceHeight": 548.1649169921875,
+      "bottom": 548.0449169921875,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.1",
+      "surfaceHeight": 548.5399780273438,
+      "bottom": 548.4199780273437,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.2",
+      "surfaceHeight": 548.5640258789062,
+      "bottom": 548.4440258789062,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.3",
+      "surfaceHeight": 548.5880126953125,
+      "bottom": 548.4680126953125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.4",
+      "surfaceHeight": 548.6119995117188,
+      "bottom": 548.4919995117187,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.5",
+      "surfaceHeight": 548.7080078125,
+      "bottom": 548.5880078125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.6",
+      "surfaceHeight": 548.7319946289062,
+      "bottom": 548.6119946289062,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.7",
+      "surfaceHeight": 548.7559814453125,
+      "bottom": 548.6359814453125,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.8",
+      "surfaceHeight": 548.780029296875,
+      "bottom": 548.660029296875,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-gate.side.post.9",
+      "surfaceHeight": 548.8040161132812,
+      "bottom": 548.6840161132812,
+      "embed": 0.12000000000000455
+    },
+    {
+      "object": "wb-building.post.-135.4",
+      "surfaceHeight": 553.0479736328125,
+      "bottom": 552.933984375,
+      "embed": 0.11398925781247726
+    },
+    {
+      "object": "wb-building.post.-135.10",
+      "surfaceHeight": 553.1199951171875,
+      "bottom": 552.933984375,
+      "embed": 0.18601074218747726
+    },
+    {
+      "object": "wb-building.post.-131.4",
+      "surfaceHeight": 553.0479736328125,
+      "bottom": 552.933984375,
+      "embed": 0.11398925781247726
+    },
+    {
+      "object": "wb-building.post.-131.10",
+      "surfaceHeight": 553.1199951171875,
+      "bottom": 552.933984375,
+      "embed": 0.18601074218747726
+    },
+    {
+      "object": "wb-building.post.-127.4",
+      "surfaceHeight": 553.0479736328125,
+      "bottom": 552.933984375,
+      "embed": 0.11398925781247726
+    },
+    {
+      "object": "wb-building.post.-127.10",
+      "surfaceHeight": 553.1199951171875,
+      "bottom": 552.933984375,
+      "embed": 0.18601074218747726
+    }
+  ]
+}

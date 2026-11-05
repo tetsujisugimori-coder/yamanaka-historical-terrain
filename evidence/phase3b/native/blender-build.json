@@ -1,0 +1,7220 @@
+{
+  "status": "PASS",
+  "blender": "4.5.9 LTS",
+  "oldMeshes": {
+    "A_castle_current": "b1d71e668d4fcf4a7a78867f6e19a745c0f435f722f531a35cc43d5ee83c59d5",
+    "A_regional_current": "c040cbaf221f32f18ebc758e132ccfb970a829e17239d24a6c3e31fabf2e8d17",
+    "C_castle_with_study_cutout": "fbb2683913f9cbc8f7c7eaf80aa6cf85f6cec300b209a34b1888df270dba76ca",
+    "C_source_informed_moat_study": "ca4f005fc1c6108c02ed40e9515b99a4193400be22b436e99b55fa458f3df50b",
+    "nm-bailey": "54a952f922c33aa4d7e770f0f0845eb5524b16eadef15de147b08cce9fa74965",
+    "nm-context": "44183a51aabb1d722e4294de696bc7283d3784fda06c6309c6f60c767e5be1e9",
+    "nm-moat": "4ff78d4154867c3c34c2652323360f2fd27c1fe1c7fe93e87f5145f456fc8338",
+    "nm-passage": "27367643b7950655a5132f61420343de95c59edc5465919aa0988c7ab1c25e61",
+    "nm-rampart": "861dc5ee6a5849a25e0b32d57747dff9e2e5dab0c1b15ab039904d56b2601cdd",
+    "nm-transition": "442f7f4fe03c9eba1a7a170a44ea07b41ec46bc435edb737a94b345c5959dd04",
+    "sc-flags.247": "eff0c1801dd64c820d395b127a4bb94da8edc4ea0d35acea1153c6b1f7faa84e",
+    "sc-flags.248": "5ca7ff1ed555de8ad830653f66279f7509111e97e286726a0a9da29d4a33b1a2",
+    "sc-flags.249": "83692dda6ff5fd569064822643542e5fd42ec92a480c8844563756d71a09c2e8",
+    "sc-flags.250": "8c7b71ec0db6e29c458a392c987d591b550051e0569509192a150e67c4447d55",
+    "sc-flags.251": "23417c718e78f647a40dc475e1739d2d469396fb601ce08d6166120980ffde9b",
+    "sc-flags.252": "cbd850ba059942cee27dbc62dc3c0116be41c85497d8cd842b1cb21b063f31ff",
+    "sc-flags.253": "b04e0758b48ea179ddcf28247811db2e7c147be1bd32c922ba81c9dd01ffe60e",
+    "sc-flags.254": "bc03829278cd2647dc0e311c8d69ed03528872d09e1ff536be09f10056b8411c",
+    "sc-gate.134": "63507bc1fa779b8402b5e0e54356844abecb38612745b99886691f298b037d34",
+    "sc-gate.135": "6a148646f7488fa4259558b289fe21d5d170cc953c21ac60939dbd9eeedf0ad3",
+    "sc-gate.136": "40e7c8e4eb4ef55bc22769dfcffe92bb9e27268ac1ad126b72f4e1b938e7f627",
+    "sc-gate.137": "f1ce73f2d2129d2340e6de8046ef0976a371aa49c50839d384b6065d39a297e8",
+    "sc-gate.138": "e77863c9286b0e2229209ac06c6bc6f7d0b887f5b2e9a8e49e3428a8ad2e3bba",
+    "sc-palisade.000": "2c6e3eda7781482ab391623d7342cfc8dcebc6cd48ea854d705694da551887f4",
+    "sc-palisade.001": "8f79309d6541907dcfd422eeda4ef2133319b473b8620f9f02365c5daf77f71b",
+    "sc-palisade.002": "344e690a084c8b31231e38f56f67b26cb45dc411eb7053cf8ee1efb42bc74f77",
+    "sc-palisade.003": "d1fd2316d55a3473c848eb7d163f802940a4cc7860986fe22596620e59a76dda",
+    "sc-palisade.004": "dec296473893c09be54f30608169a6acf20f138e60cd2112c64815cad9511033",
+    "sc-palisade.005": "bd9f39d869c994529c70bf1845d65e479ad131b712376d47e9f3a69564f9f3e1",
+    "sc-palisade.006": "74423d9591f57d9acd8d43b8b047fa05534825c4f3159bef3be2a02703e53be0",
+    "sc-palisade.007": "14d06b389b07f47b3cd14ee1acf9d6f850345d15db3974479c10e1ec37614d36",
+    "sc-palisade.008": "16eaa5acde6753f629f99f288c5126bf18b21cc553a492b3ba652bd0a66b5a1c",
+    "sc-palisade.009": "c739711102d3b8c32e5ca3dc9ffa2076a2b181f38ebeee335e42d6b22db8f240",
+    "sc-palisade.010": "dfc481d3e6c3e2a3f2b583180587582392ad792fa950e4a6253109d658d73bf8",
+    "sc-palisade.011": "e19a11caf1e212f113d495c411cc52f7059f2c04d087bd4077c97524a994ff87",
+    "sc-palisade.012": "9a16ae806f02411741a34e5fa0e2d9de4856aa639ad82e022f25d70da7068f1e",
+    "sc-palisade.013": "1f13a55d8b16400155e0e4e1c31da55000dfc284284653506dc3e258a88348f6",
+    "sc-palisade.014": "d15f736bd2500e0a91c6dc0b49f5bfbcd1d41fb9e0ec3e5380228ba743a67ca3",
+    "sc-palisade.015": "e6e43a45f0bceca5fbdf03a269961579c01f3f97a764709fbe0c33a5c36aa195",
+    "sc-palisade.016": "cded4d1a5ae212c0e5c35ca565a0a42b84ed566301d30643b314ccd564cf6bd6",
+    "sc-palisade.017": "9ff51bd6266c1418859d19b58dd37e33268d1f0cba39b7abd15891694c420fa0",
+    "sc-palisade.018": "a42eabae323e574125093b1aed6a5a382612ec3498d0b0a72662f2d6f008da50",
+    "sc-palisade.019": "71afa47c00f17a4f906c59425f6906fbe1e87d3ddb56146f52a2af820bf12136",
+    "sc-palisade.020": "3db15be5769ea0cc1e92c9fafeb05bdfb4b93b163c51a987ef4427d0e25d9079",
+    "sc-palisade.021": "df6be8de2e1411f2db0b9a9c60529871253d7aa2da3c458f6936352485dc61a2",
+    "sc-palisade.022": "d6535441f2b8382c58a15e12ebe9a007e3a6855ce5d26091646a4b1d13ae1c0a",
+    "sc-palisade.023": "58b05de24f97e093456e044cb0f1d7d99588b53656ec059f975b1cfe8b6f1802",
+    "sc-palisade.024": "fbd9f32f9410c843dd1d16c226e6dee5b557d1e14c724ec47b11274716e628db",
+    "sc-palisade.025": "e103e2ae633403de74b482ce405c019f3682d555009426d4778656ddfedbb492",
+    "sc-palisade.026": "72f904d3de184c40c041c991be764f5468c9c14552262bac1258e8ce89206298",
+    "sc-palisade.027": "0a4a50c8e1381ad49cdda0317959965efd6c0ad80ea097ce4e3bdd0d28abfd89",
+    "sc-palisade.028": "d2e772555e89a45713acedd54e346e1059c42fc225689eb0945aa61882ba4c0a",
+    "sc-palisade.029": "2dd2854b7e75c6190bdb3811854fe92f5be9f225ee6e598022e9e17f7629d712",
+    "sc-palisade.030": "5fe4b7967a659097fba2b6df1e7466edb8abe7d68f07425c153637228b478108",
+    "sc-palisade.031": "b1bfa7860844c79ca2c530ba12890f2cdb05ccf5feb27b2049a4c8688b124259",
+    "sc-palisade.032": "c431413333cc8e75d04db9e34194b02c226b00852e025b5fad9e9edc9b8bbcb2",
+    "sc-palisade.033": "7c2b9b580a1112f93c4a195c8cf116479424d1e15890f76204e4b56d3746a545",
+    "sc-palisade.034": "e37f813694dee48b8b4c174a469aeee93238ce6216a76c5484a22760402f6b4d",
+    "sc-palisade.035": "75c5a75888e2dc3a0b380933b25654198c265f08a851e2e99dcd6b487f54b405",
+    "sc-palisade.036": "5eb214a6d0914748d7b22d5b61712e054adff6478d38cc27876e080740563aef",
+    "sc-palisade.037": "5dfbadffbc96ae09dc3a90e9760630e32c12cca96cb4bc94e94ceed2acd9431a",
+    "sc-palisade.038": "f4f36ccfa72a385a53989743a6197165a6575f7bec2996875262f651413828ad",
+    "sc-palisade.039": "8cccdcb09778b401385f167b2ed52d138b3d3fbc2a36731199baf02257eb7a27",
+    "sc-palisade.040": "06b6f13aa660bb4e43173348033e48f6128771e87184c024901086017e6b6784",
+    "sc-palisade.041": "cfefe28b6e41231ea55a0e0a3b598d8f0f05fae03590e1065adc23d013692cde",
+    "sc-palisade.042": "aaa1881e007d02363f21e67e2a7fc1c5392a701295018f72fd78e83c9a0c6857",
+    "sc-palisade.043": "61de92a1d9780d48e088db4427ec160a72babf4239fbfa841e5e2a62a26b21d9",
+    "sc-palisade.044": "dbbf4b7b8a31a5539e9bf50c85c3d1e748b0e4100624a18a12e492f7f98ff2f8",
+    "sc-palisade.045": "91cb6fb213012fcdb02b75109dbf30138fc3adb9b9cc72702b606e4bcd02b7fd",
+    "sc-palisade.046": "20fa7acccb8b8b22347248e489a13e327e8b4764e703358f034f75249ce3a0d2",
+    "sc-palisade.047": "c69e9b2d03054f96b0e9dafa30c29a750af5689b9432b89262a426a180959f1d",
+    "sc-palisade.048": "89d5c8652d02616becb95da15ac1ce3d9d14cc97081ac215462400ad91a6b4bd",
+    "sc-palisade.049": "21e61218b959fe7a452d032be96b9c168294fdec611602ce43308d7bf9630809",
+    "sc-palisade.050": "1f6f1e54b4d2c99baa96396e8eeeb5facaeb55490a6386cd848f7c0dbc2d35e6",
+    "sc-palisade.051": "6eef35c92b0f0a81940b4df0e6e2137f8e923361578e5b37593c967cbe3c44d1",
+    "sc-palisade.052": "6c596785c5114c1d543e5fd2ee78335521995f9f0b4d2b996766704b752dfb85",
+    "sc-palisade.053": "d72dc7efb1f313acfa85a9dd8223dac68901c20e3740150a455443a670d0416d",
+    "sc-palisade.054": "d99c62769fcb41ba69462e763de429c19c93c2685d431b2f78825220def6981f",
+    "sc-palisade.055": "9c47d5ee9cb3c5a4ccb579d1d610bae74ef92ea31b05110bcccc544de2b4f65f",
+    "sc-palisade.056": "00a895dcc42da43cbd760cc9459925d1214e07130991be2e1e3a52f5ec0751d9",
+    "sc-palisade.057": "de9ac7b103a0c2de1583d85700eeaa2fa23e5cc678f7a322b24f850468a81a96",
+    "sc-palisade.058": "b196c1eada85a922768c635f33dd303c47007dce3e7accf70951e0f8389efa38",
+    "sc-palisade.059": "0efd187a32eafc20ed95d8c243577576583f52934275d47f5a10b1741bb8551c",
+    "sc-palisade.060": "c3ac5b639b0e84d98c4d97bca24cee38a99a4bd16867503ee0037a35178d1bd4",
+    "sc-palisade.061": "c5dd0d028dbbca84780304318f90a67b2e4ea0ccb036881eec85f6da4c135eac",
+    "sc-palisade.062": "a5f4dfed84aac306ca1458b3b1f191f2da165c76c126020cb0159f827c2ccb4c",
+    "sc-palisade.063": "cd224c05db868a9bbb3b9a6d18b0db2e40b70940c3cbf388a591d8b263c0413c",
+    "sc-palisade.064": "ac6e2936c6d2e64a927389051d9c854ee4874843d52e0fb2ebea401b2bf2ce6d",
+    "sc-palisade.065": "599ee353f7212d60f80c48067687f9056f3efd572d242b89987f1d1ad10e0596",
+    "sc-palisade.066": "d52a08b27a3b9f4b9b8f8d7bcca31a9722b136b0287eb8febb903b20c5d4998e",
+    "sc-palisade.067": "28ea495047ff48b3626cc7fb0fb41f7e031bdfbfb5b392abf476eaf072a24536",
+    "sc-palisade.068": "ed9208175f432f660ac529d5ae8a8de24373744ad6ef696a7cb3c44a900e6378",
+    "sc-palisade.069": "360b67fc82109cde799272adb345d01e3d1675734af7a1c1a0b73cd2e5138fbd",
+    "sc-palisade.070": "87fd7b29ba30f0ad633e2627331930e97a237ce805217d11e48884f70c63f51b",
+    "sc-palisade.071": "b1e54474c63c9a7c0ec0a9d3fd8ccde849849ced882697fa15904142a3ff9063",
+    "sc-palisade.072": "520f344c34ece78f499eed439b674c92e1d0cea54f853e13df25f19597fbfa76",
+    "sc-palisade.073": "27485bdc4084ee20f43fe0cf3d99d82fc55d5f2c0c49d99eb6111296ec165f64",
+    "sc-palisade.074": "deba275761fbe0d04f5074f30a7bde9a0632624c921e433e223eca93d7de1a15",
+    "sc-palisade.075": "3d9166332b0a0bc661fc103e52a9c65e6c0e2860083ea3ebe66a8c81fbf11c5b",
+    "sc-palisade.076": "dbaf3f1baf5f86249eb1c10b26bd9697ca5f6824d4d5405491a90727a54413be",
+    "sc-palisade.077": "bdc0e529db00e11ac3ce24cb42800338582ebbf373d79c29dc853efeba63c640",
+    "sc-palisade.078": "e4e5981b557c5b5ea48113d9e36c0001efd8b2c190ad09803adf63e8d4fc4c39",
+    "sc-palisade.079": "0401023d5c267f5f558e560a5a77be12c61190455f245bc5dc93d1bc2f683fcc",
+    "sc-palisade.080": "21b49b854c725e58d6968aef2dbecfb51caad155d59b71e8c50ab804bdcc1cc7",
+    "sc-palisade.081": "1c66cace14f737bf36fe9cbd90b064739db6d6dd4208006a37cfb61f43b338cc",
+    "sc-palisade.082": "8bd18d5b42f21a94f3f947ba0a790461fe13bbb3964163efa3ff66f3214c2e08",
+    "sc-palisade.083": "1d712b44aa5795f3ac28690540314c674148edcfaf90216c8be570221a23a139",
+    "sc-palisade.084": "0f396eb13a39b8554bfae3a6327c816553b7c0b88c023a764f72c62134fd7992",
+    "sc-palisade.085": "b677ab32cf49329119440feec56a70b1aa9e8e8e18d0a80cea4d69d244066dd9",
+    "sc-palisade.086": "239caf6697d04e7aaf9510a1637338b999726ff083c6222a4ef484f8d821b5bc",
+    "sc-palisade.087": "33676301a4d66330339e94864e6103d424e9afa0cb5b8fd1b638bdd26d65f5e6",
+    "sc-palisade.088": "ab45b994e4d501d2cd26ff469a23958cadecbdd840054a77c8b5de23ad03631a",
+    "sc-palisade.089": "8f7970ce3a85f9d39cb339894ac9b2a37d5d4e6b7d6b1c31408970207f584956",
+    "sc-palisade.090": "7fb39bf703dce68e98044cc0fffc4bef548564da4784e5560b682f6c00272b65",
+    "sc-palisade.091": "e323440e128e5726ff76834bbd707512b242dd8bae423b38fd8ce41735625d3c",
+    "sc-palisade.092": "c4a5e8b0263548e5e6eb9446ecee2895fc127082d75704ad2c4405bc2789cf3f",
+    "sc-palisade.093": "03b9ce3e7a0f7cf2d9b47b94e5e8e65d60440e0ad3012e3148ff8375dcf77ca0",
+    "sc-palisade.094": "5527544bb2bf44c81440483efe96f5f30d20c08a7fad52549e1a8e02c40f71c9",
+    "sc-palisade.095": "ed5614eb765977de3e43fdb8f1a31e6fe5fcb63c5380f673eb27f55f99a15e06",
+    "sc-palisade.096": "1592a68774a6ef94426c566e7baa7ba915aa3c1aa5a53fe860cb7384a20c1ae6",
+    "sc-palisade.097": "021b26a8a9d58e4fa09ab42a36a188d28eae05fe5705ec72c9921be81b13f72c",
+    "sc-palisade.098": "5bc9463140348af71300fdb577ce4ca5a80994d4cf97625923e398e7a7ba65a5",
+    "sc-palisade.099": "08645bc16fc2eed5dea2e302e85d1261fa040f907e6febbee23fe1d5584a9646",
+    "sc-palisade.100": "92978118161fdbe1a1f4dc7625921510fbb42ce9fb3bc703c25db22b92609d8b",
+    "sc-palisade.101": "9a302bb9cf99509734e6de2a11a57fed531b96f15bf91fca5695328ef08a2337",
+    "sc-palisade.102": "c073d806f2296f18b1679c28a5ec6019c30208402a1d34329c03b9fcb89abf25",
+    "sc-palisade.103": "1e942de2d51ed5d98a280f0934fcfec19735fe627c02fcdf204818a799661c19",
+    "sc-palisade.104": "410aa62c1981251b4a66ec15cbdd7f5459d1f47aa56296fbfcdadd79e0d5d215",
+    "sc-palisade.105": "6757e52c7b9cf82f864954d89ada40a75fc8242aa45028cf2258c35f7169a564",
+    "sc-palisade.106": "926c43c273df45c56144584eecae3884fa837582ced07b7d025ce4664b44bd47",
+    "sc-palisade.107": "7e78477192e365b6a67dee13800fb8a93c34622b094b9f25881c26147429eb7b",
+    "sc-palisade.108": "a29303cd8246436e1c61574cd0ffdc7e76518f5fb570f025f78b1c7060c754d0",
+    "sc-palisade.109": "4f813eb7503489445d6d9b800b9a5b12d4c4d10f539eb47a8af011af40db423f",
+    "sc-palisade.110": "51cce57dab59d113e4931e78ca5447a15916aec5722a27fd96bf1a15e1e33a7d",
+    "sc-palisade.111": "23ab328e6e2410a6d4f029393a9778af5dbc8d83171dbf28d8b8a50774b06c92",
+    "sc-palisade.112": "9a0d75f6b79118e93890c6df6b00b64336812a21f7597e081732b4c442ee8039",
+    "sc-palisade.113": "f8296d63a2ffa64ce1f0051c8b2b57a6ba1b8e727cfcc6277a60cfc0bb988af9",
+    "sc-palisade.114": "d2e4c024b14825430cd4e9646e6aaea978843d0437fb8101aad2356d91ba10f8",
+    "sc-palisade.115": "9425067e40e101a454cfb741b8b200871fad5ca48c4da0875587506a4a871eda",
+    "sc-palisade.116": "3d826aa0d9c7b0b6231d768d5b2dbbda2f687e213b9d23a006f304db55c1623e",
+    "sc-palisade.117": "9e5ca7d2fa44c8da54ab89e1325b298f2f319e1f6dd4f323adb9a7681e1660ac",
+    "sc-palisade.118": "5002e22c5581f92088bbd033d0107d48046735c42f61ea86353df99f801391ee",
+    "sc-palisade.119": "e3c99a01fa0309f6033c8be5a1f6022f46f0c9a2a11712a2d8fbf7a38fc9483a",
+    "sc-palisade.120": "5352bd3a9e7b56515f1acb9d0d8873f667c8d4249a637d0acdd3e7243aa71ea5",
+    "sc-palisade.121": "df32c4aadcf2ff0c6234c8882c16e04838416db33bf36a39c0ea940f17d15695",
+    "sc-palisade.122": "c8e1515b517a6c466e592b4bf7bbb850d4c6859ac6995013d735c1d9def64f48",
+    "sc-palisade.123": "36c7235b8b8955b60ddac42280877c1c317ae7c1ed6665391b1d842ce3636fed",
+    "sc-palisade.124": "054c906e1a9cc105ddfafbce466a123abb9a3252f95931cd8e45e48348c3f97a",
+    "sc-palisade.125": "58a9333c80d61569623851bc8c4e53ad2d89059d94f4607bbbd87143769bf189",
+    "sc-palisade.126": "f59c689262d64a265d3167499c806de5d4e6fd47ce966fa32350176a244ec252",
+    "sc-palisade.127": "ef8283ed5edc195e4c2215921015ffc9bcd1523f1e8101f8de656a9fc66839b1",
+    "sc-palisade.128": "fb41b3f1371bd2e654f34e8be65f622a7b2c9d66638a7c69b73e024c858c0976",
+    "sc-palisade.129": "61da09df524ebe960d33cccde6c1f6a945da7aad8ba66293ed1e8f6e8e90fbff",
+    "sc-palisade.130": "5ba71967f27208e97f852f6c184400822c81897985c2c15a70e631cf54361039",
+    "sc-palisade.131": "1af9cdb9777c8ef21e99701c556f91ec77289ab501752b2026498510efd40fa9",
+    "sc-palisade.132": "79c193b1cb9d47cb2f80ab3e0d34304937ac076d1783ad870b5a973475ae746b",
+    "sc-palisade.133": "d3c12f971c355a89c8bdc77d1a9625a51ac30f1cea2ba3bce72c7c5e61586df7",
+    "sc-people.255": "62de082e47a301baa787df5331b2f81abda4c23d6404b383da83083f06586800",
+    "sc-people.256": "0bfd976f3ed45d84aa3dba57b0ca80a55fc8f49597986fdd83a09d83d3e3adc2",
+    "sc-people.257": "a398991e6c3132f4c06cc0cd1095894713dc7ec28929ed946dff2be5371ab88e",
+    "sc-people.258": "6165d674b5438270e67761fface43ac0eaf8600cf1cdb5d943100fb38156c017",
+    "sc-people.259": "6ab967989a502ac7844940e0a652ae1f7bd006f206f263bb80c06c5497d425b0",
+    "sc-people.260": "df16e9eaae114ed9f18f636f55e09ac894f71650e17d8a2a8eb5fef837df0621",
+    "sc-people.261": "0b3fd7a02c822a7f6c784682f04d5baffda6042a1119bb49185828c4a29ac0d0",
+    "sc-people.262": "2c738668c847984e189a002581e2a8b1c735aeaef631764a61db2d2ebe35b7d9",
+    "sc-people.263": "be93ff14980a04cfc24fa5849fabf8b1c081d473dff4f7f8ab957cb643a2c9a5",
+    "sc-people.264": "6db844b682c840a1a5bfad970826b516a0b1e6547bf396ad68654f23bafe2570",
+    "sc-people.265": "ed63144f5ec2978ec75d84148b935880b559882eaed74d6b8269f7a82a0c8246",
+    "sc-people.266": "d798e6a1a49b907705a48e9fb2112001eaaee0a5447f21344cfec2d43c1a76af",
+    "sc-people.267": "ea2e4482a2d3ed19880f0e7086edda0ec6b79dd94e934b48f2b5ef6d213c0606",
+    "sc-people.268": "c5196c6a93832176916c57cb05af485e2e463d41ea8b0501ff176afbe5312686",
+    "sc-people.269": "90a5aaa2df82269325867366a42dd8671ec589de067b1c293380721aa216a222",
+    "sc-people.270": "0bdd0c322621151fd1d7dabd2c84629c7f15626129713ac99f98cf17087704eb",
+    "sc-vegetation.139": "5054c56d54ceaafcebe3a170bd4dbeef697fe6e7cc0febfc1d8384e0366eb259",
+    "sc-vegetation.140": "cc524431d532f1481c2c3711be69c6e430b0af768861647233ee7d3f6b3a88e6",
+    "sc-vegetation.141": "e9d5c3dde7c18a088ec5097f7efbcbfc961dec382fabbda5c67086af2aead0b7",
+    "sc-vegetation.142": "0ff69d14de811476b1b4ca918f7ee14e396ed4b1f3c78072f2aebce71bfd10d6",
+    "sc-vegetation.143": "bad16237b3ad2952837133260d0bdca3f3b945c167b362509fa61638c2f5168a",
+    "sc-vegetation.144": "9bde7556b433dff34daf513b87780781d44eac85c10d004bda30375bad29d147",
+    "sc-vegetation.145": "00ec759b6636b415c021b3408bf52140580672509cc29d25505dafbeff03d9da",
+    "sc-vegetation.146": "ada92d99fe1c3cd809418714a466071dc7ff952c6109b953b045c9f7cdc58db4",
+    "sc-vegetation.147": "1036eea97647e95e3e5bb71715605967beb7c8aadb6ed10de5c1d1efd11ec691",
+    "sc-vegetation.148": "faccd04837e8c9f52640bd8e38e070fdec0cb4615bde3e61cb61802b18043ff2",
+    "sc-vegetation.149": "43c21420dc2bc487a1767c2e2aae4209245158703d697bde93493a48acf9dc5e",
+    "sc-vegetation.150": "1811fa15cd84bdd6bece761c04108466d0e60719a8c8a86443c05848b5f0a9c0",
+    "sc-vegetation.151": "d941a0f48d0704760adc176780949d955acd408043c4a9df87d66a1e0c0b0072",
+    "sc-vegetation.152": "f305502e8e4c985f660fad490d3781401950e069f32dad2ad17b421fb1da6a2e",
+    "sc-vegetation.153": "08a991e54e0143c08b7398eb27215b75d90cf587399fbc89de94a85ef49303d0",
+    "sc-vegetation.154": "47c1aee089096054f0fb412352a5e21ac5d0effebafcff72050f4425336a5a7d",
+    "sc-vegetation.155": "f03a930625f51fd423ae398b631eda7999467fb9bac65c60d7b8206d8697674a",
+    "sc-vegetation.156": "8d59b10da5ade84ce57a796ef23b76aacde5febeadc3700052f2dfa2b7c25224",
+    "sc-vegetation.157": "26c6c29afb645a20e727f64e59feb00b8b363bd94a32623f7ea827794c4eb0b9",
+    "sc-vegetation.158": "5a8783bd847b74473e4882bfa5b8a4f94fcc803d7fc6c52cc8ef863c2477f2df",
+    "sc-vegetation.159": "fa1cc6d4263b1f1b789285c71938bd77d03603c40d8d76f0135ec8452ef64751",
+    "sc-vegetation.160": "b0f0ba6a44b8ae5578a331ab2a0667eb61fe9f8ba1da2a27b3b8e3f3e1a879e9",
+    "sc-vegetation.161": "bf31922ff6d05059a640b8e7ac80e9194458c0718129bb65eafd9034661f7908",
+    "sc-vegetation.162": "daac282c09824ef1b9810655aefd46303c9842ed17dda985cf991a1b5fc9603f",
+    "sc-vegetation.163": "072a6c748ffbe82ff2e72c9d0b622eaf5b11787c123402dbbef4295360613334",
+    "sc-vegetation.164": "0c366b99bc391af415e6534d6c66ad79aafd34a6426b3c1c212335c9a1247fea",
+    "sc-vegetation.165": "546094e0c918616009ed7664b954841ae6558c437f660bfbf61074fc68e5fa04",
+    "sc-vegetation.166": "1bf2cc26588a88278aa92b2773200997b50aa93352e5dfdfb57c464dd09cfa49",
+    "sc-vegetation.167": "3903dada02306d8ef08ca435625372fbe7fb6007e717989d85696cd299b37507",
+    "sc-vegetation.168": "7d28f5739f941e1a35d18cbe0b990ad374eec77ced0c2a59faceade246cb4ad7",
+    "sc-vegetation.169": "d92e1d9a2244f43f1831be52dd1645949675ed703a3ee5cc874edaddf2260e1d",
+    "sc-vegetation.170": "02bc3d35e3ccc67d1727f9dd67f1555e77fe478256a8d6a47a22ca5116a404a2",
+    "sc-vegetation.171": "54a1d151afbbe885fd6c950744e0f2d4bb0782af9810e4557e1f2aff2a56c2eb",
+    "sc-vegetation.172": "b2eba45449134cd505bca680a8dddc78b7fcacfb6a78a7c29f09c104abafec59",
+    "sc-vegetation.173": "6a88416a023426bb464519d4561b05764e9a41521536abaeb4d101241df93db1",
+    "sc-vegetation.174": "b6e35ff8f26e63c6b7b253a888a0c7efc6b6ba9621c5e2925dfe7400a72d6f67",
+    "sc-vegetation.175": "d2e2e1eb7542c18ac6bca5c881e4ff0cb3d3c1c48e0a302f141fab01ddfee2ea",
+    "sc-vegetation.176": "21b4f17cf7695261f79571126133b4c8b3993bbb2d8075fc36e0a55b1ff66783",
+    "sc-vegetation.177": "2dbb0fb69532265c2afcc936969547b6bb3127041b9a8a8c2beeb11f3f00f1fe",
+    "sc-vegetation.178": "e6ddfe4c2947ceb849de55e3f1264c90b6eb8047dd0c9318a124c46e5bcdf970",
+    "sc-vegetation.179": "cc1c691e1deb9c87193019a7aeebb8d8bea7006535b2a215df70a36e5e457833",
+    "sc-vegetation.180": "ebc9a03b3274c6123354d3cd6cc1089dc8f5f53e24f1ad2390512c1e19735656",
+    "sc-vegetation.181": "19f4db54464931ddbec75ca20581476c6298039cf1d464d122ba9ead1ebb56dc",
+    "sc-vegetation.182": "58ffcecc3c802b92e98f5c8a3cedebb3d6571e662107ebfa81eb1bd521e8088c",
+    "sc-vegetation.183": "0b123ba4e0c0f569019bc988ce15a81f2b18b8deea014baaacb27af0f4c15df4",
+    "sc-vegetation.184": "777ef3e3d9561993d05edd8b7565fff89e870a799543ab508cf1b5690dadf378",
+    "sc-vegetation.185": "a340066abec566461de99f5975aacc310e1b4c6649e6faf190344807b9d4a614",
+    "sc-vegetation.186": "2bb5c12126197ac06850b65bc89ed4f8ce8c5b2376f8ef28f6f311940428b5ab",
+    "sc-vegetation.187": "1f948e069faf7ebd3ecb40a89b83aa29279fc04adaf21a608a211eca121e4416",
+    "sc-vegetation.188": "ee11a93668cfc3fe86b10d9ba419285a942cc3bcb67e619956af8c81e1b223d7",
+    "sc-vegetation.189": "750d683d6850b8e2685a2518763c40e16729cd74cb931e6421cbc7a65aa49fe0",
+    "sc-vegetation.190": "a01a7791a5a425fccb4bb45dbbe27b5d601b3dbfc138a34605baa377d173c91a",
+    "sc-vegetation.191": "7a2b4a0c85915cdf8916c919eba068a4a4475e440a77ba049e1bd4a583036574",
+    "sc-vegetation.192": "757489d0c2fa41ff965b6c77569391eaee195ecc0c9d94a800c678e5ea9ea946",
+    "sc-vegetation.193": "ecc1b37eea18afd52a393c655d81ddc424c397c22d464f2381a452e7669dc27a",
+    "sc-vegetation.194": "c86d9c785dadc4668e7b68968c89da831a68fe642d3bd7a9d9d24887234ae311",
+    "sc-vegetation.195": "4c1fab26c03191c3dec718131d2dc6a1002bfe9ce1e92a48295c11dfc827bc1b",
+    "sc-vegetation.196": "0369a9cfd5a8e3c4c9b6e4a59c41e9e232b80e15d6d9ca10db80abbd44507363",
+    "sc-vegetation.197": "b19065e0195ae1bb9ed9a102d474b9602b200990a53d586ef46ece2a44e98fbe",
+    "sc-vegetation.198": "2fb49a9ec8baf17a92ce3d66c83ffa14e0e132b491c96f0e84297e8c0e1f71f9",
+    "sc-vegetation.199": "7e54e2b5a12fe426dcbd4b6f959218a1b4eb7e83a034d8c014e33c951187ce99",
+    "sc-vegetation.200": "e490185927c4dca6246b1f674f1baa4bdcd05a3321677b4d97db9e5eab8f546b",
+    "sc-vegetation.201": "0533f7a8f0421d9326e942bd3f1fa66e06b2c86affd000ac36975a21288cb7e0",
+    "sc-vegetation.202": "03a59ee85dc7dd1130f48d531e20d4e975bae9142c5a643145060a4d4719f977",
+    "sc-vegetation.203": "b076a1d9271a398c8829d8298dbc8462bd00e9cb431b6f052260577c0c93db51",
+    "sc-vegetation.204": "d0f1e516ee818dd9a4633e6d93df8596581c4a9e4c2ed551d9adbf72559adf5f",
+    "sc-vegetation.205": "3ef0f3dad51a971d1b1b636169951b672253a1e3bfe8e0df2b68cafc038656db",
+    "sc-vegetation.206": "251d61c0a737fde1d3cf4ed9d0e3d7802afe420a784c2e037fb70c57d9d8e514",
+    "sc-vegetation.207": "efd8851627f57aceef62f142c0302177d503135cf122810402355e2cc4826c79",
+    "sc-vegetation.208": "87045257b529b4f6305daf2a3a123fbf46eade6a08ea030d3e3516e303be1270",
+    "sc-vegetation.209": "3b853f65fbbf40060fbeabc4fb32d62cc99a9a860b5202c9ffba4b474b53b00c",
+    "sc-vegetation.210": "22afe51a76c81e1c78edb3613198fcd61da5378a1b617b8f2c0dcdc43b997809",
+    "sc-vegetation.211": "ed55c505924600d72e11672466301f680270e120fb5df685b202325bf3c5eb9d",
+    "sc-vegetation.212": "37270e872e31468438c154746be88089d6b8ddc87ee536cdbb2269dea5a7a193",
+    "sc-vegetation.213": "da15d6fda80a967ad3c15ab14a74114cd4efb3d98f1fc814ad31bc0c108735b6",
+    "sc-vegetation.214": "1e5dda924b153d17cfc036a0ac7e20524abde0b7f422fd7632f486241deadd57",
+    "sc-vegetation.215": "3f1bf62d35eb6f3b6dad63ea7e48acd932ab911f98665f289bd721c60bbd8f00",
+    "sc-vegetation.216": "daa4e442d68df0eaf8a8bdeb57f79cc43091abd20872dcbb2cff8e054250526d",
+    "sc-vegetation.217": "77db539206139bb468923630cdc4b5707103ad4726f9fbef39fcf3afb79a8462",
+    "sc-vegetation.218": "5749ade792abc5323d149b8b6acaf7b191265f6b2c839603d45e71a7fae955f6",
+    "sc-vegetation.219": "6074919e93c1aa3fb34f25df3e432b19b51399087345e5a1699de6520fc90632",
+    "sc-vegetation.220": "b83a7e597651ddba2f48e1ad6127621aa487f8be4089c322b5a8c08aa93306b3",
+    "sc-vegetation.221": "b8462918d3f57aefde78e8f766d7c30390af47126f5da10497fcf7bb1427f356",
+    "sc-vegetation.222": "ec2f43fc3e1f5f34ba75e524ed3a22c37e11bd266ea18db74c09c97447a65c5f",
+    "sc-vegetation.223": "b87738df64d02e64ae1404ea1b4d37f95d8d9ddf3b6a05e3b81fcf5f2a6d5bcd",
+    "sc-vegetation.224": "01b459f633ad8cba67c46cea319f029e8c2ce73786ae6d7e863f12b0cedfed46",
+    "sc-vegetation.225": "8319211bd1a67473fb908cac89465728b56ccfcf099e3e4a67a3cf2617486144",
+    "sc-vegetation.226": "7e11a6b2e35c61ce6fccbb345ed13e10bc60ba7ce30ab244ba6e42cb6992c8eb",
+    "sc-vegetation.227": "fb0b0f843382b9dd214214a5c2fe408377253e200fd6a6af2e97726d303a6ab6",
+    "sc-vegetation.228": "d296e6d90e9aed28cd89db4663ec9d61dd1ef155d10c606e58d8b1889e1688e0",
+    "sc-vegetation.229": "f5eeec6471e51a01ed87d0357d74437c1dcefbc6b2d975bfdebcff88f464451e",
+    "sc-vegetation.230": "f02b4c6f71d808652d58a47721b5e954d8f1a24615170c352388b10ec1f1d7be",
+    "sc-vegetation.231": "35651d7aab5887d259a2c1e7e630b261293f8284fb588fb229a199260ab91b87",
+    "sc-vegetation.232": "64e61f7be1564949925f28b97020996271d96bcb74f242835d63d0d06cc48fe9",
+    "sc-vegetation.233": "ce76a203badb4f8944be501ef1807008a5294dffbb9ce0bc45d35d15cf3af40f",
+    "sc-vegetation.234": "b46845d35a804feaed35e7099509acd8c35170ae7b9739c169f9655414ab4b25",
+    "sc-vegetation.235": "96da1157533ff9e16edae2ffbeafb9400602526827112cf845e97cfb207de0e9",
+    "sc-vegetation.236": "d280248f5dda2e24c65f6c983743e124899c8be0c1d23fa9c2c860649dc6e184",
+    "sc-vegetation.237": "f13c136e5d8dde2b3e8be6a4888e15a814cdc00b5dd732dd38053b23197401c4",
+    "sc-vegetation.238": "fabc5f4cfc075aa8e45ecfac63f1feaa98b44711eec98469e26ec33500168fe4",
+    "sc-vegetation.239": "72f21c587503984aa9a850bbe7e062c0ac1f78b8ff903629526d105a3f2fa7e4",
+    "sc-vegetation.240": "274190b97ba59354fd502851f1868a74e0e56cf2e0cac4c2eaae9c0a864e80b9",
+    "sc-vegetation.241": "47076865bda1d37c05e993378fc454a0fde6cc9a0003304d3b98139fa7375bde",
+    "sc-vegetation.242": "5d04e5013d8ca536b6c8b490b5c2d5507cdc344794a8b6740c640c43621dfc8e",
+    "sc-vegetation.243": "3319701ed720688c7e7ab1fd615be878c7940eced27ffc6cd98529ce88ef0cb8",
+    "sc-vegetation.244": "9392f3b4e5544b0a45b44c56921e64c11cd7366da3057fa47c623e2557571c6b",
+    "sc-vegetation.245": "7782807fc5e7f4b2021f4f0f76663e03cd5b92f496cc2a4816fe5256d7098773",
+    "sc-vegetation.246": "7651847eca4cea42a62e4b981bef3e0e28d535daa8b4cb07022b2ffcb17ae196"
+  },
+  "newObjects": 412,
+  "surfaceVertices": 13986,
+  "surfaceTriangles": 27500,
+  "bounds": [
+    -205,
+    -55,
+    -80,
+    55
+  ],
+  "step": 1,
+  "parts": [
+    {
+      "object": "wb-bailey.north.post.0",
+      "element": "wb-bailey",
+      "at": [
+        -150,
+        25,
+        555.3548583984375
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.0.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -150,
+        25,
+        555.3548583984375
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.0.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -150,
+        25,
+        555.3548583984375
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.0.0",
+      "element": "wb-bailey",
+      "at": [
+        -150.68,
+        25,
+        555.2665380859376
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.0.1",
+      "element": "wb-bailey",
+      "at": [
+        -150.34,
+        25,
+        555.3106982421875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.0.2",
+      "element": "wb-bailey",
+      "at": [
+        -150.0,
+        25,
+        555.3548583984375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.0.3",
+      "element": "wb-bailey",
+      "at": [
+        -149.66,
+        25,
+        555.37021484375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.0.4",
+      "element": "wb-bailey",
+      "at": [
+        -149.32,
+        25,
+        555.3855712890625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.1",
+      "element": "wb-bailey",
+      "at": [
+        -148,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.1.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -148,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.1.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -148,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.1.0",
+      "element": "wb-bailey",
+      "at": [
+        -148.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.1.1",
+      "element": "wb-bailey",
+      "at": [
+        -148.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -148.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.1.3",
+      "element": "wb-bailey",
+      "at": [
+        -147.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.1.4",
+      "element": "wb-bailey",
+      "at": [
+        -147.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.2",
+      "element": "wb-bailey",
+      "at": [
+        -146,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.2.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -146,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.2.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -146,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.2.0",
+      "element": "wb-bailey",
+      "at": [
+        -146.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.2.1",
+      "element": "wb-bailey",
+      "at": [
+        -146.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.2.2",
+      "element": "wb-bailey",
+      "at": [
+        -146.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.2.3",
+      "element": "wb-bailey",
+      "at": [
+        -145.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.2.4",
+      "element": "wb-bailey",
+      "at": [
+        -145.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.3",
+      "element": "wb-bailey",
+      "at": [
+        -144,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.3.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -144,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.3.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -144,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.3.0",
+      "element": "wb-bailey",
+      "at": [
+        -144.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.3.1",
+      "element": "wb-bailey",
+      "at": [
+        -144.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.3.2",
+      "element": "wb-bailey",
+      "at": [
+        -144.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.3.3",
+      "element": "wb-bailey",
+      "at": [
+        -143.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.3.4",
+      "element": "wb-bailey",
+      "at": [
+        -143.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.4",
+      "element": "wb-bailey",
+      "at": [
+        -142,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.4.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -142,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.4.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -142,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.4.0",
+      "element": "wb-bailey",
+      "at": [
+        -142.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.4.1",
+      "element": "wb-bailey",
+      "at": [
+        -142.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.4.2",
+      "element": "wb-bailey",
+      "at": [
+        -142.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.4.3",
+      "element": "wb-bailey",
+      "at": [
+        -141.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.4.4",
+      "element": "wb-bailey",
+      "at": [
+        -141.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.5",
+      "element": "wb-bailey",
+      "at": [
+        -140,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.5.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -140,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.5.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -140,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.5.0",
+      "element": "wb-bailey",
+      "at": [
+        -140.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.5.1",
+      "element": "wb-bailey",
+      "at": [
+        -140.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.5.2",
+      "element": "wb-bailey",
+      "at": [
+        -140.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.5.3",
+      "element": "wb-bailey",
+      "at": [
+        -139.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.5.4",
+      "element": "wb-bailey",
+      "at": [
+        -139.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.6",
+      "element": "wb-bailey",
+      "at": [
+        -138,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.6.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -138,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.6.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -138,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.6.0",
+      "element": "wb-bailey",
+      "at": [
+        -138.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.6.1",
+      "element": "wb-bailey",
+      "at": [
+        -138.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.6.2",
+      "element": "wb-bailey",
+      "at": [
+        -138.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.6.3",
+      "element": "wb-bailey",
+      "at": [
+        -137.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.6.4",
+      "element": "wb-bailey",
+      "at": [
+        -137.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.7",
+      "element": "wb-bailey",
+      "at": [
+        -136,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.7.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -136,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.7.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -136,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.7.0",
+      "element": "wb-bailey",
+      "at": [
+        -136.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.7.1",
+      "element": "wb-bailey",
+      "at": [
+        -136.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.7.2",
+      "element": "wb-bailey",
+      "at": [
+        -136.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.7.3",
+      "element": "wb-bailey",
+      "at": [
+        -135.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.7.4",
+      "element": "wb-bailey",
+      "at": [
+        -135.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.8",
+      "element": "wb-bailey",
+      "at": [
+        -134,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.8.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -134,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.8.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -134,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.8.0",
+      "element": "wb-bailey",
+      "at": [
+        -134.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.8.1",
+      "element": "wb-bailey",
+      "at": [
+        -134.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.8.2",
+      "element": "wb-bailey",
+      "at": [
+        -134.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.8.3",
+      "element": "wb-bailey",
+      "at": [
+        -133.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.8.4",
+      "element": "wb-bailey",
+      "at": [
+        -133.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.9",
+      "element": "wb-bailey",
+      "at": [
+        -132,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.9.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -132,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.9.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -132,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.9.0",
+      "element": "wb-bailey",
+      "at": [
+        -132.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.9.1",
+      "element": "wb-bailey",
+      "at": [
+        -132.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.9.2",
+      "element": "wb-bailey",
+      "at": [
+        -132.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.9.3",
+      "element": "wb-bailey",
+      "at": [
+        -131.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.9.4",
+      "element": "wb-bailey",
+      "at": [
+        -131.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.10",
+      "element": "wb-bailey",
+      "at": [
+        -130,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.10.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -130,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.10.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -130,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.10.0",
+      "element": "wb-bailey",
+      "at": [
+        -130.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.10.1",
+      "element": "wb-bailey",
+      "at": [
+        -130.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.10.2",
+      "element": "wb-bailey",
+      "at": [
+        -130.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.10.3",
+      "element": "wb-bailey",
+      "at": [
+        -129.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.10.4",
+      "element": "wb-bailey",
+      "at": [
+        -129.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.11",
+      "element": "wb-bailey",
+      "at": [
+        -128,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.11.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -128,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.11.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -128,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.11.0",
+      "element": "wb-bailey",
+      "at": [
+        -128.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.11.1",
+      "element": "wb-bailey",
+      "at": [
+        -128.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.11.2",
+      "element": "wb-bailey",
+      "at": [
+        -128.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.11.3",
+      "element": "wb-bailey",
+      "at": [
+        -127.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.11.4",
+      "element": "wb-bailey",
+      "at": [
+        -127.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.12",
+      "element": "wb-bailey",
+      "at": [
+        -126,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.12.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -126,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.12.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -126,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.12.0",
+      "element": "wb-bailey",
+      "at": [
+        -126.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.12.1",
+      "element": "wb-bailey",
+      "at": [
+        -126.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.12.2",
+      "element": "wb-bailey",
+      "at": [
+        -126.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.12.3",
+      "element": "wb-bailey",
+      "at": [
+        -125.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.12.4",
+      "element": "wb-bailey",
+      "at": [
+        -125.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.13",
+      "element": "wb-bailey",
+      "at": [
+        -124,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.13.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -124,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.13.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -124,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.13.0",
+      "element": "wb-bailey",
+      "at": [
+        -124.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.13.1",
+      "element": "wb-bailey",
+      "at": [
+        -124.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.13.2",
+      "element": "wb-bailey",
+      "at": [
+        -124.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.13.3",
+      "element": "wb-bailey",
+      "at": [
+        -123.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.13.4",
+      "element": "wb-bailey",
+      "at": [
+        -123.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.14",
+      "element": "wb-bailey",
+      "at": [
+        -122,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.14.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -122,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.14.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -122,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.14.0",
+      "element": "wb-bailey",
+      "at": [
+        -122.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.14.1",
+      "element": "wb-bailey",
+      "at": [
+        -122.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.14.2",
+      "element": "wb-bailey",
+      "at": [
+        -122.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.14.3",
+      "element": "wb-bailey",
+      "at": [
+        -121.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.14.4",
+      "element": "wb-bailey",
+      "at": [
+        -121.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.15",
+      "element": "wb-bailey",
+      "at": [
+        -120,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.15.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -120,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.15.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -120,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.15.0",
+      "element": "wb-bailey",
+      "at": [
+        -120.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.15.1",
+      "element": "wb-bailey",
+      "at": [
+        -120.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.15.2",
+      "element": "wb-bailey",
+      "at": [
+        -120.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.15.3",
+      "element": "wb-bailey",
+      "at": [
+        -119.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.15.4",
+      "element": "wb-bailey",
+      "at": [
+        -119.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.16",
+      "element": "wb-bailey",
+      "at": [
+        -118,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.16.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -118,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.16.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -118,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.16.0",
+      "element": "wb-bailey",
+      "at": [
+        -118.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.16.1",
+      "element": "wb-bailey",
+      "at": [
+        -118.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.16.2",
+      "element": "wb-bailey",
+      "at": [
+        -118.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.16.3",
+      "element": "wb-bailey",
+      "at": [
+        -117.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.16.4",
+      "element": "wb-bailey",
+      "at": [
+        -117.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.17",
+      "element": "wb-bailey",
+      "at": [
+        -116,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.17.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -116,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.17.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -116,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.17.0",
+      "element": "wb-bailey",
+      "at": [
+        -116.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.17.1",
+      "element": "wb-bailey",
+      "at": [
+        -116.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.17.2",
+      "element": "wb-bailey",
+      "at": [
+        -116.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.17.3",
+      "element": "wb-bailey",
+      "at": [
+        -115.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.17.4",
+      "element": "wb-bailey",
+      "at": [
+        -115.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.18",
+      "element": "wb-bailey",
+      "at": [
+        -114,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.18.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -114,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.18.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -114,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.18.0",
+      "element": "wb-bailey",
+      "at": [
+        -114.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.18.1",
+      "element": "wb-bailey",
+      "at": [
+        -114.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.18.2",
+      "element": "wb-bailey",
+      "at": [
+        -114.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.18.3",
+      "element": "wb-bailey",
+      "at": [
+        -113.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.18.4",
+      "element": "wb-bailey",
+      "at": [
+        -113.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.19",
+      "element": "wb-bailey",
+      "at": [
+        -112,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.19.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -112,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.19.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -112,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.19.0",
+      "element": "wb-bailey",
+      "at": [
+        -112.68,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.19.1",
+      "element": "wb-bailey",
+      "at": [
+        -112.34,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.19.2",
+      "element": "wb-bailey",
+      "at": [
+        -112.0,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.19.3",
+      "element": "wb-bailey",
+      "at": [
+        -111.66,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.19.4",
+      "element": "wb-bailey",
+      "at": [
+        -111.32,
+        25,
+        555.4000244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.20",
+      "element": "wb-bailey",
+      "at": [
+        -110,
+        25,
+        555.4752197265625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.20.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -110,
+        25,
+        555.4752197265625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.20.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -110,
+        25,
+        555.4752197265625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.20.0",
+      "element": "wb-bailey",
+      "at": [
+        -110.68,
+        25,
+        555.4240869140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.20.1",
+      "element": "wb-bailey",
+      "at": [
+        -110.34,
+        25,
+        555.4496533203124
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.20.2",
+      "element": "wb-bailey",
+      "at": [
+        -110.0,
+        25,
+        555.4752197265625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.20.3",
+      "element": "wb-bailey",
+      "at": [
+        -109.66,
+        25,
+        555.5463366699219
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.20.4",
+      "element": "wb-bailey",
+      "at": [
+        -109.32,
+        25,
+        555.6174536132812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.post.21",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        25,
+        555.9979858398438
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.21.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        25,
+        555.9979858398438
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.rail.21.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        25,
+        555.9979858398438
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        2.1,
+        0.12,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.21.0",
+      "element": "wb-bailey",
+      "at": [
+        -108.68,
+        25,
+        555.7847387695313
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.21.1",
+      "element": "wb-bailey",
+      "at": [
+        -108.34,
+        25,
+        555.8913623046875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.21.2",
+      "element": "wb-bailey",
+      "at": [
+        -108.0,
+        25,
+        555.9979858398438
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.21.3",
+      "element": "wb-bailey",
+      "at": [
+        -107.66,
+        25,
+        556.1278723144532
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.north.board.21.4",
+      "element": "wb-bailey",
+      "at": [
+        -107.32,
+        25,
+        556.2577587890624
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.31,
+        0.1,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14,
+        555.530029296875
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.0.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14,
+        555.530029296875
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.0.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14,
+        555.530029296875
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.0.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14.68,
+        555.5218530273437
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.0.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14.34,
+        555.5259411621093
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.0.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -14.0,
+        555.530029296875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.0.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -13.66,
+        555.5340966796875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.0.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -13.32,
+        555.5381640625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12,
+        555.5540161132812
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.1.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12,
+        555.5540161132812
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.1.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12,
+        555.5540161132812
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.1.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12.68,
+        555.54583984375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.1.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12.34,
+        555.5499279785156
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -12.0,
+        555.5540161132812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.1.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -11.66,
+        555.5580834960938
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.1.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -11.32,
+        555.5621508789062
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10,
+        555.5780029296875
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.2.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10,
+        555.5780029296875
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.2.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10,
+        555.5780029296875
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.2.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10.68,
+        555.5698266601562
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.2.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10.34,
+        555.5739147949218
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.2.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -10.0,
+        555.5780029296875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.2.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -9.66,
+        555.5820910644532
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.2.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -9.32,
+        555.5861791992188
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8,
+        555.6019897460938
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.3.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8,
+        555.6019897460938
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.3.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8,
+        555.6019897460938
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.3.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8.68,
+        555.5938549804688
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.3.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8.34,
+        555.5979223632812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.3.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -8.0,
+        555.6019897460938
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.3.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -7.66,
+        555.6060778808594
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.3.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -7.32,
+        555.610166015625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6,
+        555.6260375976562
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.4.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6,
+        555.6260375976562
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.4.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6,
+        555.6260375976562
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.4.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6.68,
+        555.617861328125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.4.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6.34,
+        555.6219494628906
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.4.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -6.0,
+        555.6260375976562
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.4.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -5.66,
+        555.6301049804688
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.4.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -5.32,
+        555.6341723632812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.5",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4,
+        555.6500244140625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.5.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4,
+        555.6500244140625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.5.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4,
+        555.6500244140625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.5.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4.68,
+        555.6418481445312
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.5.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4.34,
+        555.6459362792968
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.5.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -4.0,
+        555.6500244140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.5.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -3.66,
+        555.654091796875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.5.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -3.32,
+        555.6581591796875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.6",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2,
+        555.6740112304688
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.6.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2,
+        555.6740112304688
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.6.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2,
+        555.6740112304688
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.6.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2.68,
+        555.6658349609374
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.6.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2.34,
+        555.6699230957031
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.6.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -2.0,
+        555.6740112304688
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.6.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -1.66,
+        555.6780993652344
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.6.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -1.3199999999999998,
+        555.6821875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.7",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0,
+        555.697998046875
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.7.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0,
+        555.697998046875
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.7.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0,
+        555.697998046875
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.7.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -0.68,
+        555.68986328125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.7.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        -0.34,
+        555.6939306640625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.7.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0.0,
+        555.697998046875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.7.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0.34,
+        555.7020861816407
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.7.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        0.68,
+        555.7061743164063
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.8",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2,
+        555.7219848632812
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.8.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2,
+        555.7219848632812
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.8.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2,
+        555.7219848632812
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.8.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        1.3199999999999998,
+        555.7138500976563
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.8.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        1.66,
+        555.7179174804687
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.8.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2.0,
+        555.7219848632812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.8.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2.34,
+        555.7260729980469
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.8.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        2.68,
+        555.7301611328126
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.9",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4,
+        555.7460327148438
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.9.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4,
+        555.7460327148438
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.9.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4,
+        555.7460327148438
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.9.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        3.32,
+        555.7378564453124
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.9.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        3.66,
+        555.7419445800781
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.9.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4.0,
+        555.7460327148438
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.9.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4.34,
+        555.7501000976563
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.9.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        4.68,
+        555.7541674804687
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.10",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6,
+        555.77001953125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.10.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6,
+        555.77001953125
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.10.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6,
+        555.77001953125
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.10.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        5.32,
+        555.7618432617187
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.10.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        5.66,
+        555.7659313964843
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.10.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6.0,
+        555.77001953125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.10.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6.34,
+        555.7740869140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.10.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        6.68,
+        555.778154296875
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.11",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8,
+        555.7940063476562
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.11.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8,
+        555.7940063476562
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.11.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8,
+        555.7940063476562
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.11.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        7.32,
+        555.785830078125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.11.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        7.66,
+        555.7899182128906
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.11.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8.0,
+        555.7940063476562
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.11.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8.34,
+        555.7980944824219
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.11.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        8.68,
+        555.8021826171876
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.12",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10,
+        555.8179931640625
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.12.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10,
+        555.8179931640625
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.12.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10,
+        555.8179931640625
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.12.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        9.32,
+        555.8098583984375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.12.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        9.66,
+        555.81392578125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.12.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10.0,
+        555.8179931640625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.12.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10.34,
+        555.8220812988282
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.12.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        10.68,
+        555.8261694335938
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.13",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12,
+        555.8419799804688
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.13.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12,
+        555.8419799804688
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.13.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12,
+        555.8419799804688
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.13.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        11.32,
+        555.8338452148438
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.13.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        11.66,
+        555.8379125976562
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.13.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12.0,
+        555.8419799804688
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.13.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12.34,
+        555.8460681152344
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.13.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        12.68,
+        555.85015625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.14",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14,
+        555.8660278320312
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.14.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14,
+        555.8660278320312
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.14.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14,
+        555.8660278320312
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.14.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        13.32,
+        555.8578515625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.14.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        13.66,
+        555.8619396972656
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.14.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14.0,
+        555.8660278320312
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.14.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14.34,
+        555.8700952148438
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.14.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        14.68,
+        555.8741625976562
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.15",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16,
+        555.8900146484375
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.15.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16,
+        555.8900146484375
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.15.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16,
+        555.8900146484375
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.15.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        15.32,
+        555.8818383789062
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.15.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        15.66,
+        555.8859265136718
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.15.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16.0,
+        555.8900146484375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.15.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16.34,
+        555.89408203125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.15.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        16.68,
+        555.8981494140625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.16",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18,
+        555.9140014648438
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.16.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18,
+        555.9140014648438
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.16.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18,
+        555.9140014648438
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.16.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        17.32,
+        555.9058251953124
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.16.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        17.66,
+        555.9099133300781
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.16.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18.0,
+        555.9140014648438
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.16.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18.34,
+        555.9180895996094
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.16.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        18.68,
+        555.922177734375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.17",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20,
+        555.93798828125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.17.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20,
+        555.93798828125
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.17.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20,
+        555.93798828125
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.17.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        19.32,
+        555.929853515625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.17.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        19.66,
+        555.9339208984375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.17.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20.0,
+        555.93798828125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.17.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20.34,
+        555.9420764160157
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.17.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        20.68,
+        555.9461645507813
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.18",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22,
+        555.9620361328125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.18.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22,
+        555.9620361328125
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.18.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22,
+        555.9620361328125
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.18.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        21.32,
+        555.9538598632812
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.18.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        21.66,
+        555.9579479980468
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.18.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22.0,
+        555.9620361328125
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.18.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22.34,
+        555.966103515625
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.18.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        22.68,
+        555.9701708984375
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.post.19",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24,
+        555.9860229492188
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.2,
+        0.2,
+        2.05
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.19.0.45",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24,
+        555.9860229492188
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.rail.19.1.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24,
+        555.9860229492188
+      ],
+      "bottomOffset": 1.2,
+      "kind": "box",
+      "size": [
+        0.12,
+        2.1,
+        0.17
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.19.0",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        23.32,
+        555.9778466796874
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.19.1",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        23.66,
+        555.9819348144531
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.19.2",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24.0,
+        555.9860229492188
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.19.3",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24.34,
+        555.9900903320313
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-bailey.east.board.19.4",
+      "element": "wb-bailey",
+      "at": [
+        -108,
+        24.68,
+        555.9941577148437
+      ],
+      "bottomOffset": 0,
+      "kind": "box",
+      "size": [
+        0.1,
+        0.31,
+        1.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.post.0",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -37.1,
+        548.6599731445312
+      ],
+      "bottomOffset": -0.2,
+      "kind": "box",
+      "size": [
+        0.38,
+        0.38,
+        3.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.cap.0",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -37.1,
+        548.6599731445312
+      ],
+      "bottomOffset": 3.55,
+      "kind": "box",
+      "size": [
+        0.42,
+        0.42,
+        0.07
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-gate.gate.post.1",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -32.9,
+        548.6599731445312
+      ],
+      "bottomOffset": -0.2,
+      "kind": "box",
+      "size": [
+        0.38,
+        0.38,
+        3.8
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.cap.1",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -32.9,
+        548.6599731445312
+      ],
+      "bottomOffset": 3.55,
+      "kind": "box",
+      "size": [
+        0.42,
+        0.42,
+        0.07
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-gate.gate.crossbeam",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -35,
+        548.6599731445312
+      ],
+      "bottomOffset": 3.1,
+      "kind": "box",
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.0",
+      "element": "wb-gate",
+      "at": [
+        -190.6,
+        -36.8605482689349,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.1",
+      "element": "wb-gate",
+      "at": [
+        -190.65761410593055,
+        -36.576328961360936,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.2",
+      "element": "wb-gate",
+      "at": [
+        -190.71522821186113,
+        -36.29210965378698,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.3",
+      "element": "wb-gate",
+      "at": [
+        -190.77284231779169,
+        -36.00789034621302,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.4",
+      "element": "wb-gate",
+      "at": [
+        -190.83045642372227,
+        -35.72367103863906,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.0.5",
+      "element": "wb-gate",
+      "at": [
+        -190.88807052965282,
+        -35.4394517310651,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.rail.0.0.45",
+      "element": "wb-gate",
+      "at": [
+        -190.7,
+        -36.15,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.17,
+        1.85,
+        0.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.rail.0.2.15",
+      "element": "wb-gate",
+      "at": [
+        -190.7,
+        -36.15,
+        548.6599731445312
+      ],
+      "bottomOffset": 2.15,
+      "kind": "box",
+      "size": [
+        0.17,
+        1.85,
+        0.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.0",
+      "element": "wb-gate",
+      "at": [
+        -190.6,
+        -34.5605482689349,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.1",
+      "element": "wb-gate",
+      "at": [
+        -190.54238589406944,
+        -34.27632896136094,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.2",
+      "element": "wb-gate",
+      "at": [
+        -190.48477178813886,
+        -33.99210965378698,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.3",
+      "element": "wb-gate",
+      "at": [
+        -190.4271576822083,
+        -33.70789034621302,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.4",
+      "element": "wb-gate",
+      "at": [
+        -190.36954357627772,
+        -33.423671038639064,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.1.5",
+      "element": "wb-gate",
+      "at": [
+        -190.31192947034717,
+        -33.1394517310651,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.05,
+      "kind": "box",
+      "size": [
+        0.13,
+        0.27,
+        2.85
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.rail.1.0.45",
+      "element": "wb-gate",
+      "at": [
+        -190.7,
+        -33.85,
+        548.6599731445312
+      ],
+      "bottomOffset": 0.45,
+      "kind": "box",
+      "size": [
+        0.17,
+        1.85,
+        0.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.gate.door.rail.1.2.15",
+      "element": "wb-gate",
+      "at": [
+        -190.7,
+        -33.85,
+        548.6599731445312
+      ],
+      "bottomOffset": 2.15,
+      "kind": "box",
+      "size": [
+        0.17,
+        1.85,
+        0.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.0",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -47,
+        548.1649169921875
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.0.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -47,
+        548.1649169921875
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.0.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -47,
+        548.1649169921875
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.1",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -45,
+        548.5399780273438
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.1.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -45,
+        548.5399780273438
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.1.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -45,
+        548.5399780273438
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.2",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -43,
+        548.5640258789062
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.2.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -43,
+        548.5640258789062
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.2.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -43,
+        548.5640258789062
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.3",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -41,
+        548.5880126953125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.3.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -41,
+        548.5880126953125
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.3.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -41,
+        548.5880126953125
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.4",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -39,
+        548.6119995117188
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.4.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -39,
+        548.6119995117188
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.4.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -39,
+        548.6119995117188
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -31,
+        548.7080078125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.5.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -31,
+        548.7080078125
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.5.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -31,
+        548.7080078125
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.6",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -29,
+        548.7319946289062
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.6.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -29,
+        548.7319946289062
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.6.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -29,
+        548.7319946289062
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.7",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -27,
+        548.7559814453125
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.7.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -27,
+        548.7559814453125
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.7.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -27,
+        548.7559814453125
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.8",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -25,
+        548.780029296875
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.8.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -25,
+        548.780029296875
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.8.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -25,
+        548.780029296875
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.post.9",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -23,
+        548.8040161132812
+      ],
+      "bottomOffset": -0.12,
+      "kind": "box",
+      "size": [
+        0.23,
+        0.23,
+        1.95
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.9.0.5",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -23,
+        548.8040161132812
+      ],
+      "bottomOffset": 0.5,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-gate.side.rail.9.1.25",
+      "element": "wb-gate",
+      "at": [
+        -191,
+        -23,
+        548.8040161132812
+      ],
+      "bottomOffset": 1.25,
+      "kind": "box",
+      "size": [
+        0.17,
+        2.2,
+        0.16
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.post.-135.4",
+      "element": "wb-building",
+      "at": [
+        -135,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-135.4",
+      "element": "wb-building",
+      "at": [
+        -135,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.post.-135.10",
+      "element": "wb-building",
+      "at": [
+        -135,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-135.10",
+      "element": "wb-building",
+      "at": [
+        -135,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.post.-131.4",
+      "element": "wb-building",
+      "at": [
+        -131,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-131.4",
+      "element": "wb-building",
+      "at": [
+        -131,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.post.-131.10",
+      "element": "wb-building",
+      "at": [
+        -131,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-131.10",
+      "element": "wb-building",
+      "at": [
+        -131,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.post.-127.4",
+      "element": "wb-building",
+      "at": [
+        -127,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-127.4",
+      "element": "wb-building",
+      "at": [
+        -127,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.post.-127.10",
+      "element": "wb-building",
+      "at": [
+        -127,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": -0.15,
+      "kind": "box",
+      "size": [
+        0.28,
+        0.28,
+        4.15
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.joint.-127.10",
+      "element": "wb-building",
+      "at": [
+        -127,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": 3.35,
+      "kind": "box",
+      "size": [
+        0.44,
+        0.4,
+        0.15
+      ],
+      "role": "endgrain"
+    },
+    {
+      "object": "wb-building.floor",
+      "element": "wb-building",
+      "at": [
+        -131,
+        7,
+        553.083984375
+      ],
+      "bottomOffset": 0.35,
+      "kind": "box",
+      "size": [
+        8.4,
+        6.4,
+        0.18
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.beam.4",
+      "element": "wb-building",
+      "at": [
+        -131,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": 3.5,
+      "kind": "box",
+      "size": [
+        8.6,
+        0.25,
+        0.32
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.wall.4",
+      "element": "wb-building",
+      "at": [
+        -131,
+        4,
+        553.083984375
+      ],
+      "bottomOffset": 0.65,
+      "kind": "box",
+      "size": [
+        8.0,
+        0.13,
+        1.2
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.beam.10",
+      "element": "wb-building",
+      "at": [
+        -131,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": 3.5,
+      "kind": "box",
+      "size": [
+        8.6,
+        0.25,
+        0.32
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.wall.10",
+      "element": "wb-building",
+      "at": [
+        -131,
+        10,
+        553.083984375
+      ],
+      "bottomOffset": 0.65,
+      "kind": "box",
+      "size": [
+        8.0,
+        0.13,
+        1.2
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.crossbeam.-135",
+      "element": "wb-building",
+      "at": [
+        -135,
+        7,
+        553.083984375
+      ],
+      "bottomOffset": 3.45,
+      "kind": "box",
+      "size": [
+        0.28,
+        6.7,
+        0.32
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.crossbeam.-127",
+      "element": "wb-building",
+      "at": [
+        -127,
+        7,
+        553.083984375
+      ],
+      "bottomOffset": 3.45,
+      "kind": "box",
+      "size": [
+        0.28,
+        6.7,
+        0.32
+      ],
+      "role": "wood"
+    },
+    {
+      "object": "wb-building.ridge",
+      "element": "wb-building",
+      "at": [
+        -131,
+        7,
+        553.083984375
+      ],
+      "bottomOffset": 5.78,
+      "kind": "box",
+      "size": [
+        9.5,
+        0.18,
+        0.16
+      ],
+      "role": "wood"
+    }
+  ],
+  "externalImages": 0,
+  "B_objects": 0
+}

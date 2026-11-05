@@ -1,0 +1,36 @@
+name: Validate western defences
+on:
+  push:
+    branches: [main, 'feat/**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  phase3b-browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Verify western areas, floor clearance, fallbacks and stale responses
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/phase3b-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          export PHASE3B_EVIDENCE="evidence/phase3b/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          node scripts/phase3b-browser.mjs
+          node scripts/phase3b-browser.mjs --mutation=gate-sightline
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3b-browser-evidence
+          path: evidence/phase3b/
+          if-no-files-found: error

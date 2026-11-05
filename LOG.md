@@ -23,3 +23,8 @@
 - P3：固定視点のzoom早期returnに対しボタンと通常案内が有効のままだった。安全処理を維持し、定点の拡大/縮小無効化と見回し案内・ariaを同期、俯瞰で通常操作へ復帰。3D正本・形状・座標・台帳を変更しない。
 - 修正前32反例と修正後同32条件、別ページのtrusted Chromium touch見回し8、2種×2engineの変異4を保存。混在touch APIによる試験timeoutと条件を分けた比較も保全し、ブラウザ内部原因UNKNOWNを維持。WebKit連続trusted touchドラッグ、実機iPhone/VoiceOver/現地はNOT_TESTED。
 - 修正HEADの独立再確認は親担当へ引き継ぐ。最終CI/HEAD/treeはPR本文。Draft解除・merge・auto-merge・deploy・Issue閉鎖なし。
+
+
+## 2026-11-05 第3期B / Issue #11
+
+最新main6a84b95から専用clone・branchで西方3区域と交換可能な西櫓建物候補を制作。全形状C、独自素材・光影はD演出。既存A/C・固定2断面・制作正本と過去証拠を保全。Blender/QGISの実制作・別名保存・再読込、raw GLB境界/単位/ID・31単体とbuildを確認。門定点の地面遮蔽P2を自己視覚検査で検出し、元画像を保存して定点を修正。最終ブラウザ/性能・固定HEAD独立レビュー・CIはevidence/phase3b/README.mdへ記録。Draft解除、merge、auto-merge、本番deployなし。

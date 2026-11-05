@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "preservedLayers": 12,
+  "layers": 16,
+  "crs": "EPSG:6676",
+  "reread": true,
+  "oldSources": {
+    "1590_elements___C_D_hypotheses_04574503_5a81_4b02_a0b8_da2ea7a5856e": "[workspace]/production/landscape/elements.geojson",
+    "1590_stations___C_D_hypotheses_9f7acab7_09af_4a3f_9ad2_ceaf09ded04e": "[workspace]/production/landscape/stations.geojson",
+    "Approximate_observation_anchors_8e43aa20_cc1c_4265_9c12_9cc536a5563a": "[workspace]/production/gis/observation-anchors.geojson",
+    "C______0_5m________________9e2dcaa7_f0d6_4be9_9a53_6f2b7dea7a66": "[workspace]/production/phase2a/inferred-surface-50cm.tif",
+    "C__________accuracy_UNKNOWN_4b8d259f_b596_45f2_bc66_1c9fffff6f36": "[workspace]/production/phase2a/facilities.gpkg",
+    "Regional_DEM__5A___explicitly_masked_10B_gaps_6bd4955c_5a6a_481d_92b0_92bca945d5ee": "[workspace]/production/gis/regional-dem-20m.tif",
+    "Source_provenance__5_DEM5A__10_DEM10B_d067284f_1d89_4463_93a4_3479287ef29d": "[workspace]/production/gis/regional-source-mask.tif",
+    "castle_dem_1m_0d166e6d_50f6_407b_9918_635a454bcfb8": "[workspace]/production/gis/castle-dem-1m.tif",
+    "hillshade_32576916_ab65_4670_9f8f_6427dab2d927": "[workspace]/production/gis/hillshade.tif",
+    "regional_10b_20m_52b28f80_36d5_447d_9081_6a2c745d7f1d": "[workspace]/production/gis/regional-10b-20m.tif",
+    "regional_5a_20m_aebad917_89a3_4586_bd8a_cc3acd93c51f": "[workspace]/production/gis/regional-5a-20m.tif",
+    "slope_degrees_ea6e2422_9371_43f9_aecf_99bb7f340d0d": "[workspace]/production/gis/slope-degrees.tif"
+  },
+  "newLayers": [
+    "Phase3B_C_candidate_heights___NOT_measured_DEM_b7edd6da_a02a_4d5d_925d_d9c0c4ced3e6",
+    "Phase3B_C_elements_hypotheses_1b237454_c1bf_43d3_81db_9f5f6220af1d",
+    "Phase3B_C_stations_hypotheses_591b80cc_6c4b_47e2_87fb_f121b7a0eee7",
+    "Phase3B_C_terrain_footprint___not_surveyed_aeb59942_ab1e_4a69_8d50_a2708baf82cd"
+  ],
+  "positionAccuracy": "UNKNOWN; no map control point registration"
+}
