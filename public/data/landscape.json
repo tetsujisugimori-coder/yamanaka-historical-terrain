@@ -213,7 +213,8 @@
       "assumptions": "摩耗した裸地と仮定。史実の通行経路ではない。",
       "unknown": "1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。",
       "direction": "土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。",
-      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js"
+      "editor": "既存production/yamanaka-phase2a.blend / src/landscape.js",
+      "description": "南東に土塁の開口と2m低い入口側からの連続勾配を仮設計。虎口の位置、形、段差と道路中心線の証拠は不足している。西櫓の東南虎口に関する記述を西ノ丸の確定位置へ転用していない。門・柵のC候補は1590年景観モードに追加。史実確定ではない。"
     },
     "nm-transition": {
       "role": "推定区域と外周の地形をつなぐ。",

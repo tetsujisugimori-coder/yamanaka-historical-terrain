@@ -40,6 +40,9 @@ for e,n in [(-15,4),(-12,6),(3,-16),(8,-28)]:
  for dx in [-.13,.13]:part('sc-people','cylinder',[e+dx,n,0],[.07,.6,.07],wood)
 recipe=dict(version=1,crs='EPSG:6676',origin=[44862.121277226666,-93478.07235405142,0],units='metres',axes='recipe east,north,base offset up; Blender east,north,up; glTF east,up,south',license='MIT; original primitives; no external images/models',elements=elements,parts=parts,stations=[dict(id='bailey',name='曲輪に立つ',eye=[-18,5],look=[5,-22],lookDown=.3),dict(id='bank',name='土塁の内側',eye=[-28,12],look=[-36,15],lookDown=.3),dict(id='moat',name='障子堀を見下ろす',eye=[-39,-10],look=[-56,-10],lookDown=3.2),dict(id='passage',name='虎口の通路',eye=[5,-30],look=[5,-18],lookDown=.3)])
 recipe['surfaceCaptions']={id:dict(role=role,assumptions=assumption,unknown='1590年の地表材、植被、摩耗状態はUNKNOWN。現況Aや史料Bの表面を再現したものではない。',direction='土色と草色を斜面・施設・仮の踏み跡で塗り分け。頂点位置と断面数値は既存Cのまま。外部テクスチャなし。',editor='既存production/yamanaka-phase2a.blend / src/landscape.js') for id,role,assumption in [('nm-bailey','平場での活動空間を示す。','草地と裸地、南北の踏み跡はCの表面表現。'),('nm-moat','格子状の畝と堀底の高低差を示す。','畝の側面を土、堀底を草色に表す。実際の1590年の植生は未確認。'),('nm-rampart','曲輪を囲う土の防御線。','法面を土、天端を草色とする推定。'),('nm-passage','入口と曲輪をつなぐ候補地形。','摩耗した裸地と仮定。史実の通行経路ではない。'),('nm-transition','推定区域と外周の地形をつなぐ。','外周の植被は便宜的な草色。現在の地形を1590年の確定景観としない。')]}
+legacy=json.loads((ROOT/'public/data/nishinomaru.json').read_text(encoding='utf8'))
+passage=next(f for f in legacy['facilities'] if f['id']=='nm-passage')
+recipe['surfaceCaptions']['nm-passage']['description']=passage['description'].replace('門・柵は未制作。','門・柵のC候補は1590年景観モードに追加。史実確定ではない。')
 (ROOT/'production/landscape').mkdir(exist_ok=True)
 (ROOT/'production/landscape/recipe.json').write_text(json.dumps(recipe,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 (ROOT/'public/data/landscape.json').write_text(json.dumps({k:v for k,v in recipe.items() if k!='parts'},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
