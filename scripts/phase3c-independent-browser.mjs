@@ -59,7 +59,7 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
    }
    // Old five facilities and fixed sections remain accessible through actual controls.
    row.legacy={facilities:await p.locator('[data-facility]').count()};expect(row.legacy.facilities).toBeGreaterThanOrEqual(5);
-   for(const id of ['moat','rampart']){await p.locator('#section-choice').selectOption(id);await expect(p.locator('#section-exhibit')).toHaveAttribute('data-status','ready');await expect(p.locator('#section-graph')).toBeVisible();}
+   for(const id of ['moat','rampart']){await p.locator('#section-choice').selectOption(id);await expect(p.locator('#section-status')).toContainText('実三角形面を取得済み');await expect(p.locator('#section-graph')).toBeVisible();}
 
    await p.locator('#section-choice').selectOption('');
    for(const quality of ['light','balanced','high']){await mode(p,'cd');await p.locator('#quality').selectOption(quality);const d=await read(p);expect(d.canvasVisibility).toBe('visible');}

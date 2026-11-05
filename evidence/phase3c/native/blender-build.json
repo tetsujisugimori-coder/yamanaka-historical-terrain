@@ -715,5 +715,7 @@
   ],
   "units": 1,
   "compressed": true,
-  "modelVersion": "phase3c-v2"
+  "modelVersion": "phase3c-v2",
+  "sourcePackaging": "standalone new meshes only",
+  "priorMeshesStoredInNewSource": 0
 }

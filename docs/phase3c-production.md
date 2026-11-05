@@ -43,7 +43,7 @@ The adaptive mesh uses1m interior triangles and external .25m seam points connec
 
 ## Editable files and actual native verification
 
-- `production/yamanaka-phase3c.blend`: compressed native project with all693 prior mesh objects preserved and hidden, plus the new editable C collection. Prior objects are not destructively clipped in this source. Native compression is a storage option; v2 shape changes are **not** claimed geometry-equal to v1.
+- `production/yamanaka-phase3c.blend`: self-contained compressed native source containing exactly the seven new editable C meshes and their materials. The build first verifies all693 prior meshes unchanged in memory, then removes their duplicated objects only from this new saved source. The immutable prior source files remain available separately. No old object is claimed to remain inside this standalone file. All seven mesh hashes match the earlier combined-v2 trial; the GLB, JSON and GIS remain byte-identical. Native packaging is not a new geometry revision.
 - `production/yamanaka-phase3c.qgz`: prior valid layers retained; new C raster, footprint, facilities, stations and virtual sightlines added.
 - `production/phase3c/recipe.json`: source scope, dimensions, assumptions, station calibration and intended sightline targets.
 - `surface-candidate-025m.tif`: float32 C derivative sampling the actual adaptive triangulation at .25m pixel centres, **not a measured DEM**.
@@ -66,3 +66,7 @@ QT_QPA_PLATFORM=offscreen /usr/bin/python3 scripts/phase3c-verify-gis.py
 The last command also runs the binary geometry/preservation/negative-control checks. Native serialization may change metadata bytes; compare exported geometry/raster checks rather than infer equality from timestamps.
 
 Actual-site georeferencing, field verification, free-walk collision handling, real Safari/VoiceOver, sustained FPS and military effectiveness remain outside this production proof. Browser/visual and independent review reports determine their own scope/status.
+
+## Standalone-source packaging correction
+
+The combined-v2 source duplicated old content and was16,683,165bytes. The current standalone source is216,261bytes, SHA256 `e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701`. It retains every new editable mesh/material. Historical combined-source checks and hashes are preserved under `history/v2-combined-source/`; the earlier claim of693 old objects inside that file applies only to that superseded trial. Current `native/source-packaging.json` and `native/blender-check.json` verify the seven-mesh source after a separate reopen. `scripts/phase3c-package-blender.py` is called by the build after old in-memory geometry verification. It never overwrites a prior source file. Fresh isolated reproduction verifies all seven mesh hashes, byte-identical GLB/manifest and a separate reopen without touching the live deliverables.

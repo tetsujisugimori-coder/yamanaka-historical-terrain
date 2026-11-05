@@ -38,7 +38,9 @@ def validate(nodes):
     t=np.concatenate([x['tri'] for x in nodes]);assert np.isfinite(t).all()
     assert np.allclose(t[:,:,:2].min((0,1)),b[:2],atol=1e-5) and np.allclose(t[:,:,:2].max((0,1)),b[2:],atol=1e-5),'bounds/origin'
     # Every projected triangle must be unique and cover precisely the grid once.
-    cross=np.cross(t[:,1,:2]-t[:,0,:2],t[:,2,:2]-t[:,0,:2]);assert (cross>0).all(),'winding/degenerate'
+    # Explicit 2x2 determinant: same signed twice-area, compatible with NumPy2.5+.
+    u=t[:,1,:2]-t[:,0,:2];v=t[:,2,:2]-t[:,0,:2]
+    cross=u[:,0]*v[:,1]-u[:,1]*v[:,0];assert (cross>0).all(),'winding/degenerate'
     assert abs(float(cross.sum()/2)-(b[2]-b[0])*(b[3]-b[1]))<.001,'projected coverage'
     keys=[tuple(sorted(tuple(v) for v in f[:,:2])) for f in t];assert len(set(keys))==len(keys),'duplicate projected face'
     vertex={}

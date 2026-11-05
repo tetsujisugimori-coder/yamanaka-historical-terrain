@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "installedNumpyVersionsTested": [
+    "2.3.5",
+    "2.2.4"
+  ],
+  "ordinaryFullRunVersion": "2.3.5",
+  "guardedFullRunVersion": "2.2.4",
+  "numpy25ActuallyExecutedLocally": false,
+  "numpy25Verification": "pending CI; local guard rejects all2D cross arguments",
+  "guardedThreeDimensionalCrossCalls": 11,
+  "old2DCrossRejected": true,
+  "determinantEqualsPadded3DCrossExactlyForSeededSamples": 10000,
+  "geometryStatus": "PASS",
+  "relationshipStatus": "PASS",
+  "shapeOrThresholdChanges": false,
+  "remainingCrossUses": "phase3c-relationship-check.py:3D camera basis vectors only"
+}

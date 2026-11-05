@@ -1,0 +1,23 @@
+Observed job: https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42125216828/job/127587538429
+HEAD: 7443d1dee919d2c1f46006a599f3d65b525206a6
+Result: FAILURE, before browser execution. NumPy 2.5.4 rejects 2D np.cross. Equivalent explicit determinant fixes portability without changing geometry or thresholds.
+
+
+2026-11-05T22:54:45.9092649Z Traceback (most recent call last):
+2026-11-05T22:54:45.9093420Z   File "/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/scripts/phase3c-relationship-check.py", line 6, in <module>
+2026-11-05T22:54:45.9094124Z     s=runpy.run_path(str(ROOT/'scripts/phase3c-geometry-check.py'))
+2026-11-05T22:54:45.9094499Z       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-05T22:54:45.9094806Z   File "<frozen runpy>", line 286, in run_path
+2026-11-05T22:54:45.9095130Z   File "<frozen runpy>", line 98, in _run_module_code
+2026-11-05T22:54:45.9095443Z   File "<frozen runpy>", line 88, in _run_code
+2026-11-05T22:54:45.9096119Z   File "/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/scripts/phase3c-geometry-check.py", line 62, in <module>
+2026-11-05T22:54:45.9096679Z     result=validate(new);negative={}
+2026-11-05T22:54:45.9097058Z            ^^^^^^^^^^^^^
+2026-11-05T22:54:45.9097599Z   File "/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/scripts/phase3c-geometry-check.py", line 41, in validate
+2026-11-05T22:54:45.9098279Z     cross=np.cross(t[:,1,:2]-t[:,0,:2],t[:,2,:2]-t[:,0,:2]);assert (cross>0).all(),'winding/degenerate'
+2026-11-05T22:54:45.9098648Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-05T22:54:45.9099080Z   File "/home/runner/.local/lib/python3.12/site-packages/numpy/_core/numeric.py", line 1680, in cross
+2026-11-05T22:54:45.9099473Z     raise ValueError(
+2026-11-05T22:54:45.9099958Z ValueError: Both input arrays must be (arrays of) 3-dimensional vectors, but they are 2 and 2 dimensional instead.
+2026-11-05T22:54:45.9274595Z ##[error]Process completed with exit code 1.
+2026-11-05T22:54:45.9330063Z

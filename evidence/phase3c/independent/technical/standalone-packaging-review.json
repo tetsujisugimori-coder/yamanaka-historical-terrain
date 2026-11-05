@@ -1,0 +1,48 @@
+{
+  "head": "8e10683d44d399e8e5b95dce27bbccd81452da3e",
+  "blendSha256": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701",
+  "blendBytes": 216261,
+  "newMeshCount": 7,
+  "sameSevenMeshes": true,
+  "onlyNewIDs": true,
+  "units": 1.0,
+  "priorSourcesUnchanged": true,
+  "changedProductDataSinceV2": [],
+  "reexport": [
+    {
+      "name": "ic-bridge.surface.earth",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-koguchi.surface.earth",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-bridge.surface.path",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-koguchi.surface.path",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-lookout.surface.earth",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-bridge.surface.grass",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    },
+    {
+      "name": "ic-lookout.surface.grass",
+      "maxCoordinateDelta": 0.0,
+      "extrasMatch": true
+    }
+  ]
+}

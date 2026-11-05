@@ -5,14 +5,16 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 const urls={base:process.env.BASE_TEST_URL??'http://127.0.0.1:4319',phase3c:process.env.TEST_URL??'http://127.0.0.1:4317'},rows=[];
 const output=process.env.PERF_OUTPUT??'evidence/phase3c/performance/results.json',channel=process.env.PERF_CHROMIUM_CHANNEL;
+const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
+const worktreeStatusAtStart=execFileSync('git',['status','--porcelain=v1'],{encoding:'utf8'}).trim(),startedAt=new Date().toISOString();
 await mkdir(path.dirname(output),{recursive:true});
 const imageDir=path.join(path.dirname(output),'performance-images');await mkdir(imageDir,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),base=process.env.BASE_HEAD??'ed22133f766aa1a2256dcebbb0413ec11d479106';
-const hashes={};for(const file of ['src/main.js','src/phase3b.js','src/style.css','src/landscape.js','index.html','public/data/phase3b.json','public/data/phase3b.glb','scripts/phase3c-performance.mjs','public/data/phase3c.glb','public/data/phase3c.json'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const hashes={};for(const file of ['src/main.js','src/phase3c.js','src/reading.js','src/phase3b.js','src/style.css','src/landscape.js','index.html','public/data/phase3b.json','public/data/phase3b.glb','scripts/phase3c-performance.mjs','public/data/phase3c.glb','public/data/phase3c.json','public/data/nishinomaru.glb','public/data/castle.glb','public/data/regional.glb','public/data/moat-study.glb','public/data/landscape.glb'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 const bytes={};for(const file of ['nishinomaru.glb','landscape.glb','phase3b.glb','phase3c.glb'])bytes[file]=(await stat('public/data/'+file)).size;
 const engines=[[channel?'chrome':'chromium',chromium],['webkit',webkit]].filter(([name])=>!process.env.PERF_ENGINE||name===process.env.PERF_ENGINE);
 const variants=['base','phase3c'].flatMap(version=>['balanced','light','high'].map(quality=>({version,quality})));
-async function save(){await writeFile(output,JSON.stringify({scope:'Same GitHub Actions Linux runner, loopback, new context and identical 600px terrain panel. Ready time uses initial balanced mode; quality switching is timed separately before each input sample. First trial screenshots are saved at identical initial camera before input samples. Synthetic keyboard dispatch + two animation frames; not physical input latency or sustained FPS. Endpoint JS heap excludes GPU/peak/total memory. Automated WebKit is not iPhone Safari hardware.',head,base,hashes,channel:channel??null,utc:new Date().toISOString(),urls,bytes,rows},null,2));}
+async function save(){await writeFile(output,JSON.stringify({scope:'Same GitHub Actions Linux runner, loopback, new context and identical 600px terrain panel. Ready time uses initial balanced mode; quality switching is timed separately before each input sample. First trial screenshots are saved at identical initial camera before input samples. Synthetic keyboard dispatch + two animation frames; not physical input latency or sustained FPS. Endpoint JS heap excludes GPU/peak/total memory. Automated WebKit is not iPhone Safari hardware.',metadataVersion:2,head,tree,base,worktreeStatusAtStart,startedAt,hashes,channel:channel??null,utc:new Date().toISOString(),urls,bytes,rows},null,2));}
 for(const [name,engine]of engines){
  const browser=await engine.launch(name!=='webkit'&&channel?{channel}:{});
  for(const width of [390,1280])for(const {version,quality} of variants)for(let trial=0;trial<Number(process.env.PERF_TRIALS??3);trial++){

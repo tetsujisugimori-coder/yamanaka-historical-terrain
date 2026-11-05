@@ -26,3 +26,11 @@ Reviewed local product HEAD `c71edbf440ddada2acf0e74501c47afad1772adc`, tree `f4
 Technical recommendation: YES for this tested v2 scope, contingent on identical delivered product tree and separate browser/visual CI acceptance. No independent browser screenshots, sustained FPS, GPU-memory measurement, physical Safari/VoiceOver, or field survey were performed by this reviewer. Geometry visibility is not a substitute for screenshots. No product files were edited.
 
 Reproduce using reviewer scripts `mesh_review.py`, `v2_rays.py`, `v2_negative.py`, `v2_target.mjs`, `native_blender.py`, `native_qgis.py`, and `v2_reexport.py` in this folder. Raw v2 JSON files and native logs accompany this report.
+
+## Standalone source packaging addendum
+
+Reviewed HEAD `8e10683d44d399e8e5b95dce27bbccd81452da3e` (reported delivery tree `2c77c118c55d056bdf48b1a079b701e4576e3375`). Independently reopened the new standalone Blender source in a separate process, then independently re-exported its selected seven meshes. Source SHA256 `e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701`, size216,261bytes. All seven decoded mesh coordinate/topology/transform hashes match the previous combined v2 source exactly; only new ic-* IDs remain; scene scale1m. Prior source files remain byte-identical to baseline. Removing duplicate prior meshes from the new source is intentional, not data loss: their old native sources remain intact.
+
+All checked public GLB/JSON and phase3c GIS files are byte-identical to reviewed c71edbf candidate. Released GLB SHA256 remains `810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4`. Independent standalone re-export has zero triangle-coordinate delta and identical extras for all seven released meshes. Raw evidence: `standalone-native.json`, `standalone-packaging-review.json`, and separate process logs.
+
+Packaging scope PASS; no new P1/P2 found. This does not certify the producer's full isolated recipe reproduction merely by reading its success report. Prior independent geometry findings remain applicable because product geometry is byte-identical. Parent reports a separate NumPy2.5 checker compatibility CI failure under repair; that pipeline remains an unresolved verification blocker until rerun. Browser PASS is not claimed here.
