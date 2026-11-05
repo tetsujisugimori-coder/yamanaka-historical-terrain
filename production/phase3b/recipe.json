@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "bounds": [
+    -205,
+    -55,
+    -80,
+    55
+  ],
+  "axes": "Blender east,north,up; glTF east,up,south",
+  "license": "MIT project-original primitives; no external textures or models",
+  "placement": "C conceptual western extension; no control-point georeferencing; not a surveyed layout",
+  "referenceDimensions": {
+    "sourceId": "mishima-western",
+    "scope": "三島市1301の一般説明。模型の確定寸法や地理位置ではない。",
+    "ridgeHeightMetres": 1.8,
+    "cells": 10,
+    "cellTopMetres": "8–9",
+    "cellBottomWidthMetres": 2,
+    "cellBottomLengthMetres": 5,
+    "slopeDegrees": 55,
+    "depthMetres": "9以上"
+  },
+  "modelDimensions": {
+    "moatTopWidth": 22,
+    "moatLength": 64,
+    "maximumCut": 6.5,
+    "ridgeHeight": 1.6,
+    "ridgePitch": 8,
+    "cells": 8,
+    "cellCounting": {
+      "standardCells": 7,
+      "southernConnectionCells": 1,
+      "totalCells": 8,
+      "definition": "畝で分かれる中央の標準7区画と南端の短い接続部1区画を別に数える。参考史料の10区画とは別の模型寸法。"
+    },
+    "baileyApprox": [
+      45,
+      40
+    ],
+    "rampartHeight": 2.1,
+    "palisadeHeight": 1.8,
+    "palisadePostTop": 1.93,
+    "buildingPlan": [
+      8,
+      6
+    ],
+    "buildingRoofPlaneRidgeHeight": 5.8,
+    "buildingOverallHeight": 5.94,
+    "gateOpening": 4.2,
+    "gateNominalHeight": 3.6,
+    "gateOverallHeight": 3.62
+  },
+  "ground": {
+    "bounds": [
+      -205,
+      -55,
+      -80,
+      55
+    ],
+    "step": 1.0,
+    "cols": 126,
+    "rows": 111,
+    "order": "rows south to north; vertices E,N,H; diagonal SW-NE"
+  },
+  "elements": [
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3b-v1",
+      "editor": "production/yamanaka-phase3b.blend / production/phase3b/recipe.json",
+      "accuracy": "UNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。",
+      "direction": "土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。",
+      "id": "wb-bailey",
+      "name": "西櫓の曲輪・土塁・板塀",
+      "shortLabel": "西櫓の曲輪・土塁・板塀",
+      "local": [
+        -132,
+        8
+      ],
+      "height": 553.0960083007812,
+      "modelObject": "wb-bailey",
+      "sourceIds": [
+        "mishima-western"
+      ],
+      "role": "西方の曲輪と土塁上の木造防御を推定模型で観察する。西櫓は曲輪の名称であり、建築の姿を確定しない。",
+      "description": "西方の曲輪と土塁上の木造防御を推定模型で観察する。西櫓は曲輪の名称であり、建築の姿を確定しない。",
+      "assumptions": "曲輪45×40m程度、土塁高2.1m、板塀高1.8mのC候補。市の柱穴・板塀推定を背景参照した独自配置。",
+      "unknown": "曲輪の実測対応、1590年の地表高、塀の全形・寸法・接合方法はUNKNOWN。"
+    },
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3b-v1",
+      "editor": "production/yamanaka-phase3b.blend / production/phase3b/recipe.json",
+      "accuracy": "UNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。",
+      "direction": "土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。",
+      "id": "wb-gate",
+      "name": "西木戸口の門候補",
+      "shortLabel": "西木戸口の門候補",
+      "local": [
+        -191,
+        -35
+      ],
+      "height": 548.6599731445312,
+      "modelObject": "wb-gate",
+      "sourceIds": [
+        "mishima-western"
+      ],
+      "role": "城域西端の入口で、門柱・横木・扉・木柵による通路の絞りを理解する。既存西ノ丸の冠木門sc-gateとは別施設。",
+      "description": "城域西端の入口で、門柱・横木・扉・木柵による通路の絞りを理解する。既存西ノ丸の冠木門sc-gateとは別施設。",
+      "assumptions": "幅4.2m、高3.6mの簡素な門と部分開放の扉をCで仮置き。南側通路を西櫓曲輪へ接続する。",
+      "unknown": "門の正確な位置・向き・構法・寸法・年代はUNKNOWN。"
+    },
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3b-v1",
+      "editor": "production/yamanaka-phase3b.blend / production/phase3b/recipe.json",
+      "accuracy": "UNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。",
+      "direction": "土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。",
+      "id": "wb-moat",
+      "name": "西櫓堀の単列畝堀候補",
+      "shortLabel": "西櫓堀の単列畝堀候補",
+      "local": [
+        -169,
+        5
+      ],
+      "height": 544.1799926757812,
+      "modelObject": "wb-moat",
+      "sourceIds": [
+        "mishima-western"
+      ],
+      "role": "深い一本の溝を横切る畝が移動を妨げる。史料上の西ノ丸複列は左右交互の畝。既存C模型は格子状に簡略化しており、本候補の単列畝堀とは区別する。",
+      "description": "深い一本の溝を横切る畝が移動を妨げる。史料上の西ノ丸複列は左右交互の畝。既存C模型は格子状に簡略化しており、本候補の単列畝堀とは区別する。",
+      "assumptions": "長さ64m、上面幅22m、最大切下げ6.5m、畝高1.6m、8mピッチの中央の標準7区画と南端接続部1区画（計8）。実測復元ではなく地形接続に合わせたC模型。",
+      "unknown": "実際の範囲・区画位置・深さ・方位・侵食履歴・1590年の表土はUNKNOWN。"
+    },
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3b-v1",
+      "editor": "production/yamanaka-phase3b.blend / production/phase3b/recipe.json",
+      "accuracy": "UNKNOWN：史料図と地形の対応点未登録。位置・縮尺・向きは制作上の仮定。",
+      "direction": "土の色むら、木材の経年、侵食模様はD相当の外観演出。形状Cの根拠とは別。",
+      "id": "wb-building",
+      "name": "西櫓の建物候補（上部構造未確定）",
+      "shortLabel": "西櫓の建物候補（上部構造未確定）",
+      "local": [
+        -131,
+        7
+      ],
+      "height": 553.083984375,
+      "modelObject": "wb-building",
+      "sourceIds": [
+        "mishima-western"
+      ],
+      "role": "掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。",
+      "description": "掘立柱建物跡1棟という発掘成果を背景参照した、交換可能な木造上部構造のC候補。櫓の階数や屋根の確定復元ではない。",
+      "assumptions": "8×6m、棟高5.8m、一層の切妻屋根を仮定。柱、梁、床、屋根を独立部材として保存し全体を個別に非表示にできる。",
+      "unknown": "柱穴の実測配置、階数、高さ、屋根形式、材種、用途、接合方法はUNKNOWN。"
+    }
+  ],
+  "stations": [
+    {
+      "id": "wb-bailey",
+      "elementId": "wb-bailey",
+      "name": "西櫓の曲輪上",
+      "eye": [
+        -143,
+        2
+      ],
+      "look": [
+        -131,
+        7
+      ],
+      "lookDown": 0.15,
+      "groundHeight": 553.0239868164062
+    },
+    {
+      "id": "wb-gate",
+      "elementId": "wb-gate",
+      "name": "西木戸口を正面から",
+      "eye": [
+        -197,
+        -35
+      ],
+      "look": [
+        -191,
+        -35
+      ],
+      "lookDown": -1.15,
+      "fov": 60,
+      "groundHeight": 547.6080932617188
+    },
+    {
+      "id": "wb-moat",
+      "elementId": "wb-moat",
+      "name": "西櫓堀を見下ろす",
+      "eye": [
+        -154,
+        5
+      ],
+      "look": [
+        -169,
+        5
+      ],
+      "lookDown": 6,
+      "groundHeight": 552.1508178710938
+    },
+    {
+      "id": "wb-earth",
+      "elementId": "wb-moat",
+      "name": "赤土と畝の近景",
+      "eye": [
+        -156,
+        -10
+      ],
+      "look": [
+        -170,
+        -10
+      ],
+      "lookDown": 4,
+      "groundHeight": 551.47314453125
+    },
+    {
+      "id": "wb-wood",
+      "elementId": "wb-gate",
+      "name": "西木戸口の木組み",
+      "eye": [
+        -195,
+        -32
+      ],
+      "look": [
+        -192,
+        -35
+      ],
+      "lookDown": -0.2,
+      "groundHeight": 548.416015625
+    }
+  ],
+  "overview": {
+    "target": [
+      -142,
+      553,
+      0
+    ],
+    "eye": [
+      -235,
+      635,
+      105
+    ]
+  }
+}

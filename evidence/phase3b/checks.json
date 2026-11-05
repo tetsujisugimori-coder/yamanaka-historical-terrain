@@ -1,0 +1,20 @@
+{
+  "scope": "Implementation self-verification; unit and build output captured as UTF-8 without shell re-encoding.",
+  "head": "56ce3a1a1098d8852ebbb6ca829f53dbf15d9973",
+  "utc": "2026-11-05T11:17:29.044Z",
+  "rows": [
+    {
+      "name": "unit",
+      "exit": 0,
+      "signal": null,
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "signal": null,
+      "status": "PASS"
+    }
+  ],
+  "workingTreeNote": "Executed after the final eight-cell ledger correction in the working tree; head is the parent commit at execution. Final committed-tree verification is recorded separately by CI."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "scope": "Self-check: recipe, JSON and GIS external layer bindings; QGIS native reread completed separately.",
+  "stations": [
+    {
+      "id": "wb-bailey",
+      "elementId": "wb-bailey",
+      "eye": [
+        -143,
+        2
+      ],
+      "groundHeight": 553.0239868164062,
+      "fov": 38
+    },
+    {
+      "id": "wb-gate",
+      "elementId": "wb-gate",
+      "eye": [
+        -197,
+        -35
+      ],
+      "groundHeight": 547.6080932617188,
+      "fov": 60
+    },
+    {
+      "id": "wb-moat",
+      "elementId": "wb-moat",
+      "eye": [
+        -154,
+        5
+      ],
+      "groundHeight": 552.1508178710938,
+      "fov": 38
+    },
+    {
+      "id": "wb-earth",
+      "elementId": "wb-moat",
+      "eye": [
+        -156,
+        -10
+      ],
+      "groundHeight": 551.47314453125,
+      "fov": 38
+    },
+    {
+      "id": "wb-wood",
+      "elementId": "wb-gate",
+      "eye": [
+        -195,
+        -32
+      ],
+      "groundHeight": 548.416015625,
+      "fov": 38
+    }
+  ]
+}

@@ -1,0 +1,1261 @@
+{
+  "scope": "Implementation-authored automated verification; screenshots require separate visual assessment. Automated WebKit is not an iPhone Safari hardware test.",
+  "head": "56ce3a1a1098d8852ebbb6ca829f53dbf15d9973",
+  "hashes": {
+    "src/main.js": "a1f47547e861f0995872d479e158f13d10578ddfb8dafee5400b699d6e916907",
+    "src/phase3b.js": "9abd612af9fe4d9c34c0c463efb237841672b20cd0fdff63721bff52e2ded2a0",
+    "src/style.css": "3b65a993e0d609382a0856c6f999fff31b6032cf884e33ac42e5acd6beb30dc8",
+    "src/reading.js": "ea36c650a686ea9153d035f3f93b41beaf3449dd109fc3150ff97c1999d7058d",
+    "src/landscape.js": "879deb021a976f02b5750878393913978b92c11e8a0508edf21a3738900683db",
+    "index.html": "2006d4d9979a18c4506e73ff50776234d54b689d528f2a2fb76b1510d6226f10",
+    "public/data/phase3b.json": "419b9f69c5b694060e02d308660e7c3b44fa421cc18e530d67609958ad00a248",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "scripts/phase3b-browser.mjs": "cd53dc4744f18fd0c255b99cc61176c09eb5882a5ca007cea82c3f9699d19567"
+  },
+  "utc": "2026-11-05T11:08:00.039Z",
+  "root": "http://127.0.0.1:4317",
+  "channel": "chrome",
+  "mutation": "gate-sightline",
+  "mutationDetails": {
+    "source": "phase3b.json response only",
+    "station": "wb-gate",
+    "eye": [
+      -200,
+      -35
+    ],
+    "lookDown": 0.1,
+    "expectedRejection": "sightline intersects its own C terrain"
+  },
+  "rows": [
+    {
+      "kind": "matrix",
+      "key": "chromium-390-reduce",
+      "engine": "chromium",
+      "browser": "156.0.8078.80",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "checks": [
+        "all new element IDs and exact C/D captions, assumptions, unknowns and stage direction",
+        "replaceable building can be hidden independently while its explanation remains available",
+        "A/C/C+D, C category visibility and camera/selection preservation"
+      ],
+      "loadEvents": [
+        {
+          "event": "request",
+          "file": "features.json",
+          "utc": "2026-11-05T11:07:45.484Z"
+        },
+        {
+          "event": "request",
+          "file": "sources.json",
+          "utc": "2026-11-05T11:07:45.486Z"
+        },
+        {
+          "event": "request",
+          "file": "nishinomaru.json",
+          "utc": "2026-11-05T11:07:45.486Z"
+        },
+        {
+          "event": "request",
+          "file": "landscape.json",
+          "utc": "2026-11-05T11:07:45.486Z"
+        },
+        {
+          "event": "request",
+          "file": "phase3b.json",
+          "utc": "2026-11-05T11:07:45.486Z"
+        },
+        {
+          "event": "response",
+          "file": "phase3b.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.600Z"
+        },
+        {
+          "event": "response",
+          "file": "sources.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.600Z"
+        },
+        {
+          "event": "response",
+          "file": "features.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.600Z"
+        },
+        {
+          "event": "response",
+          "file": "nishinomaru.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.600Z"
+        },
+        {
+          "event": "response",
+          "file": "landscape.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "phase3b.json",
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "sources.json",
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "features.json",
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "nishinomaru.json",
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "landscape.json",
+          "utc": "2026-11-05T11:07:45.601Z"
+        },
+        {
+          "event": "request",
+          "file": "regional.json",
+          "utc": "2026-11-05T11:07:45.634Z"
+        },
+        {
+          "event": "request",
+          "file": "castle.json",
+          "utc": "2026-11-05T11:07:45.634Z"
+        },
+        {
+          "event": "request",
+          "file": "study.json",
+          "utc": "2026-11-05T11:07:45.634Z"
+        },
+        {
+          "event": "response",
+          "file": "regional.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.653Z"
+        },
+        {
+          "event": "response",
+          "file": "castle.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.653Z"
+        },
+        {
+          "event": "response",
+          "file": "study.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.653Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "study.json",
+          "utc": "2026-11-05T11:07:45.653Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "regional.json",
+          "utc": "2026-11-05T11:07:45.661Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "castle.json",
+          "utc": "2026-11-05T11:07:45.662Z"
+        },
+        {
+          "event": "request",
+          "file": "regional.glb",
+          "utc": "2026-11-05T11:07:45.731Z"
+        },
+        {
+          "event": "response",
+          "file": "regional.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.741Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "regional.glb",
+          "utc": "2026-11-05T11:07:45.769Z"
+        },
+        {
+          "event": "request",
+          "file": "landscape.glb",
+          "utc": "2026-11-05T11:07:45.868Z"
+        },
+        {
+          "event": "request",
+          "file": "phase3b.glb",
+          "utc": "2026-11-05T11:07:45.868Z"
+        },
+        {
+          "event": "request",
+          "file": "nishinomaru.glb",
+          "utc": "2026-11-05T11:07:45.868Z"
+        },
+        {
+          "event": "response",
+          "file": "landscape.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.879Z"
+        },
+        {
+          "event": "response",
+          "file": "nishinomaru.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.880Z"
+        },
+        {
+          "event": "response",
+          "file": "phase3b.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:45.880Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "landscape.glb",
+          "utc": "2026-11-05T11:07:45.898Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "phase3b.glb",
+          "utc": "2026-11-05T11:07:45.946Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "nishinomaru.glb",
+          "utc": "2026-11-05T11:07:46.200Z"
+        },
+        {
+          "event": "request",
+          "file": "castle.glb",
+          "utc": "2026-11-05T11:07:47.766Z"
+        },
+        {
+          "event": "response",
+          "file": "castle.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:47.778Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "castle.glb",
+          "utc": "2026-11-05T11:07:47.808Z"
+        }
+      ],
+      "stage": "new station wb-gate",
+      "eyes": [
+        {
+          "id": "wb-bailey",
+          "expected": 554.7239868164063,
+          "actual": 554.7239868164063,
+          "groundA": 549.0839965820312,
+          "groundC": 549.0839965820312,
+          "groundWestern": 553.0239868164062,
+          "sightlineClearance": 1.4900024414063182
+        }
+      ],
+      "status": "EXPECTED_REJECTION",
+      "reason": "Fixed station wb-gate sightline intersects its own C terrain (-2.680m clearance)",
+      "errors": [],
+      "diagnostics": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "wb-gate",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": "wb-gate"
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "phase3b": {
+          "visible": true,
+          "unavailable": false,
+          "objects": [
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-moat",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            }
+          ],
+          "quality": "balanced",
+          "finish": true,
+          "building": true,
+          "bounds": [
+            -205,
+            -55,
+            -80,
+            55
+          ],
+          "shadows": false
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "cameraFov": 60,
+        "camera": [
+          -200,
+          546.0800048828125,
+          35
+        ],
+        "target": [
+          -191,
+          545.9800048828125,
+          35
+        ],
+        "scale": {
+          "metres": 2,
+          "pixels": 88.52157714949736,
+          "start": [
+            -191,
+            545.9800048828125,
+            35
+          ],
+          "end": [
+            -191,
+            545.9800048828125,
+            37
+          ]
+        },
+        "triangles": 505176,
+        "drawCalls": 30,
+        "geometries": 41,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              -0.4513744203297224,
+              0.28491597243026584,
+              0.9984282565076157
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5410968709017544,
+              0.3602389824503762,
+              0.9979784039416829
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.48828562401714143,
+              0.35342092426077365,
+              0.9981766884438042
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              -0.11154055378755019,
+              0.25880465994222424,
+              0.9985442389541017
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3194119009393939,
+              0.28606992580975016,
+              0.9976982039445277
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              -0.4004379077554712,
+              0.3704715827482815,
+              0.9985065204721884
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.4008658344456992,
+              0.5239891572844599,
+              0.9947031018798954
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              2.6313973562522257,
+              0.032309780620336306,
+              0.9992261011060519
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.5663960219078731,
+              0.106124297127374,
+              0.9993211354678435
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "matrix",
+      "key": "webkit-390-reduce",
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "reducedMotion": "reduce",
+      "checks": [
+        "all new element IDs and exact C/D captions, assumptions, unknowns and stage direction",
+        "replaceable building can be hidden independently while its explanation remains available",
+        "A/C/C+D, C category visibility and camera/selection preservation"
+      ],
+      "loadEvents": [
+        {
+          "event": "request",
+          "file": "features.json",
+          "utc": "2026-11-05T11:07:50.667Z"
+        },
+        {
+          "event": "request",
+          "file": "sources.json",
+          "utc": "2026-11-05T11:07:50.669Z"
+        },
+        {
+          "event": "request",
+          "file": "nishinomaru.json",
+          "utc": "2026-11-05T11:07:50.669Z"
+        },
+        {
+          "event": "request",
+          "file": "landscape.json",
+          "utc": "2026-11-05T11:07:50.669Z"
+        },
+        {
+          "event": "request",
+          "file": "phase3b.json",
+          "utc": "2026-11-05T11:07:50.669Z"
+        },
+        {
+          "event": "response",
+          "file": "phase3b.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.680Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "phase3b.json",
+          "utc": "2026-11-05T11:07:50.680Z"
+        },
+        {
+          "event": "response",
+          "file": "features.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.692Z"
+        },
+        {
+          "event": "response",
+          "file": "sources.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.693Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "features.json",
+          "utc": "2026-11-05T11:07:50.693Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "sources.json",
+          "utc": "2026-11-05T11:07:50.693Z"
+        },
+        {
+          "event": "response",
+          "file": "landscape.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.693Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "landscape.json",
+          "utc": "2026-11-05T11:07:50.693Z"
+        },
+        {
+          "event": "response",
+          "file": "nishinomaru.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.695Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "nishinomaru.json",
+          "utc": "2026-11-05T11:07:50.696Z"
+        },
+        {
+          "event": "request",
+          "file": "regional.json",
+          "utc": "2026-11-05T11:07:50.760Z"
+        },
+        {
+          "event": "request",
+          "file": "castle.json",
+          "utc": "2026-11-05T11:07:50.762Z"
+        },
+        {
+          "event": "request",
+          "file": "study.json",
+          "utc": "2026-11-05T11:07:50.762Z"
+        },
+        {
+          "event": "response",
+          "file": "regional.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.772Z"
+        },
+        {
+          "event": "response",
+          "file": "castle.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.776Z"
+        },
+        {
+          "event": "response",
+          "file": "study.json",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.777Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "study.json",
+          "utc": "2026-11-05T11:07:50.777Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "regional.json",
+          "utc": "2026-11-05T11:07:50.784Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "castle.json",
+          "utc": "2026-11-05T11:07:50.787Z"
+        },
+        {
+          "event": "request",
+          "file": "regional.glb",
+          "utc": "2026-11-05T11:07:50.835Z"
+        },
+        {
+          "event": "response",
+          "file": "regional.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:50.847Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "regional.glb",
+          "utc": "2026-11-05T11:07:50.870Z"
+        },
+        {
+          "event": "request",
+          "file": "landscape.glb",
+          "utc": "2026-11-05T11:07:51.139Z"
+        },
+        {
+          "event": "request",
+          "file": "phase3b.glb",
+          "utc": "2026-11-05T11:07:51.140Z"
+        },
+        {
+          "event": "request",
+          "file": "nishinomaru.glb",
+          "utc": "2026-11-05T11:07:51.140Z"
+        },
+        {
+          "event": "response",
+          "file": "phase3b.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:51.156Z"
+        },
+        {
+          "event": "response",
+          "file": "landscape.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:51.157Z"
+        },
+        {
+          "event": "response",
+          "file": "nishinomaru.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:51.160Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "landscape.glb",
+          "utc": "2026-11-05T11:07:51.170Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "phase3b.glb",
+          "utc": "2026-11-05T11:07:51.234Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "nishinomaru.glb",
+          "utc": "2026-11-05T11:07:51.413Z"
+        },
+        {
+          "event": "request",
+          "file": "castle.glb",
+          "utc": "2026-11-05T11:07:56.047Z"
+        },
+        {
+          "event": "response",
+          "file": "castle.glb",
+          "status": 200,
+          "utc": "2026-11-05T11:07:56.088Z"
+        },
+        {
+          "event": "requestfinished",
+          "file": "castle.glb",
+          "utc": "2026-11-05T11:07:56.163Z"
+        }
+      ],
+      "stage": "new station wb-gate",
+      "eyes": [
+        {
+          "id": "wb-bailey",
+          "expected": 554.7239868164063,
+          "actual": 554.7239868164063,
+          "groundA": 549.0839965820312,
+          "groundC": 549.0839965820312,
+          "groundWestern": 553.0239868164062,
+          "sightlineClearance": 1.4900024414063182
+        }
+      ],
+      "status": "EXPECTED_REJECTION",
+      "reason": "Fixed station wb-gate sightline intersects its own C terrain (-2.680m clearance)",
+      "errors": [],
+      "diagnostics": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "wb-gate",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": "wb-gate"
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "phase3b": {
+          "visible": true,
+          "unavailable": false,
+          "objects": [
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-moat",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            }
+          ],
+          "quality": "balanced",
+          "finish": true,
+          "building": true,
+          "bounds": [
+            -205,
+            -55,
+            -80,
+            55
+          ],
+          "shadows": false
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "cameraFov": 60,
+        "camera": [
+          -200,
+          546.0800048828125,
+          35
+        ],
+        "target": [
+          -191,
+          545.9800048828125,
+          35
+        ],
+        "scale": {
+          "metres": 2,
+          "pixels": 88.52157714949736,
+          "start": [
+            -191,
+            545.9800048828125,
+            35
+          ],
+          "end": [
+            -191,
+            545.9800048828125,
+            37
+          ]
+        },
+        "triangles": 505176,
+        "drawCalls": 30,
+        "geometries": 41,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              -0.4513744203297224,
+              0.28491597243026584,
+              0.9984282565076157
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5410968709017544,
+              0.3602389824503762,
+              0.9979784039416829
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.48828562401714143,
+              0.35342092426077365,
+              0.9981766884438042
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              -0.11154055378755019,
+              0.25880465994222424,
+              0.9985442389541017
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3194119009393939,
+              0.28606992580975016,
+              0.9976982039445277
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              -0.4004379077554712,
+              0.3704715827482815,
+              0.9985065204721884
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.4008658344456992,
+              0.5239891572844599,
+              0.9947031018798954
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              2.6313973562522257,
+              0.032309780620336306,
+              0.9992261011060519
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              0.5663960219078731,
+              0.106124297127374,
+              0.9993211354678435
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

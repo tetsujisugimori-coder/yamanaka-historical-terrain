@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44730.121277226666,
+          -93470.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-bailey",
+        "name": "西櫓の曲輪・土塁・板塀",
+        "category": "C",
+        "modelHeight": 553.0960083007812,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-bailey"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44671.121277226666,
+          -93513.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-gate",
+        "name": "西木戸口の門候補",
+        "category": "C",
+        "modelHeight": 548.6599731445312,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44693.121277226666,
+          -93473.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-moat",
+        "name": "西櫓堀の単列畝堀候補",
+        "category": "C",
+        "modelHeight": 544.1799926757812,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-moat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44731.121277226666,
+          -93471.07235405142
+        ]
+      },
+      "properties": {
+        "id": "wb-building",
+        "name": "西櫓の建物候補（上部構造未確定）",
+        "category": "C",
+        "modelHeight": 553.083984375,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3b.json#wb-building"
+      }
+    }
+  ]
+}

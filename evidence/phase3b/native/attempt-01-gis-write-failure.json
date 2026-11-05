@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "hashes": {
+    "scripts/phase3b-build-gis.py": "3ffa411016bd555404a01daf471d41efc28276fef26d631703bb9130963377e8",
+    "scripts/phase3b-recipe.py": "52ed32356172c838337ceaa2b35867a488d0cf4b37b0348101a39e716c0317a1",
+    "production/phase3b/recipe.json": "7cca67299703f65fd5ff3bb9ff3d2a7a93817182a6001bc14d1944ed341324c5"
+  },
+  "utc": "2026-11-05T10:36:15.830Z",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"[workspace]\\scripts\\phase3b-build-gis.py\", line 28, in <module>\r\n    assert p.write(str(ROOT/'production/yamanaka-phase3b.qgz'))\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n"
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Independent synthetic MeshStandardMaterial runtime test. Not browser or GLB proof.",
+  "target": "./src/phase3b.js",
+  "expectBad": true,
+  "results": [
+    {
+      "name": "disabled first call does not mutate original material",
+      "status": "FAIL",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    blendColor: 0,\n    color: 7043669,\n    emissive: 0,\n    envMapIntensity: 1,\n...\n    uuid: 'a6be8e0d-9f38-43f7-b8df-2d46add9cb67',\n-   vertexColors: true\n  }\n"
+    },
+    {
+      "name": "disabled first call keeps original shadow flags",
+      "status": "FAIL",
+      "message": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "enabled uses independent material",
+      "status": "PASS"
+    },
+    {
+      "name": "enabled does not mutate shared original material",
+      "status": "FAIL",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    blendColor: 0,\n    color: 7043669,\n    emissive: 0,\n    envMapIntensity: 1,\n...\n    uuid: 'a6be8e0d-9f38-43f7-b8df-2d46add9cb67',\n-   vertexColors: true\n  }\n"
+    },
+    {
+      "name": "untouched sibling material remains original",
+      "status": "PASS"
+    },
+    {
+      "name": "disable removes all finish texture maps",
+      "status": "PASS"
+    },
+    {
+      "name": "disable restores original shadow flags",
+      "status": "FAIL",
+      "message": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "repeated 20 toggles preserve source material",
+      "status": "FAIL",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    blendColor: 0,\n    color: 7043669,\n    emissive: 0,\n    envMapIntensity: 1,\n...\n    uuid: 'a6be8e0d-9f38-43f7-b8df-2d46add9cb67',\n-   vertexColors: true\n  }\n"
+    },
+    {
+      "name": "generated UV removed after D without source UV mutation",
+      "status": "FAIL",
+      "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ BufferAttribute {\n+   array: Float32Array(48) [\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869,\n+     -0.09000000357627869\n+   ],\n+   count: 24,\n+   gpuType: 1015,\n+   isBufferAttribute: true,\n+   itemSize: 2,\n+   name: '',\n+   normalized: false,\n+   updateRanges: [],\n+   usage: 35044,\n+   version: 0\n+ }\n- undefined\n"
+    },
+    {
+      "name": "existing UV attribute restored by identity and bytes",
+      "status": "PASS"
+    }
+  ]
+}

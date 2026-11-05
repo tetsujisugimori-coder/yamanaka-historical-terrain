@@ -1,0 +1,41 @@
+✔ a later synchronous selection supersedes both successful and failed earlier work (0.7029ms)
+✔ initial camera input preserves model ownership and errors, but supersedes default camera effects (0.1311ms)
+✔ surface height uses triangle geometry and world scaling; missing geometry is an error (2.3825ms)
+✔ every exported scenery part maps to C/D ledger, exact metric recipe and original material (20.2127ms)
+✔ fixed observation points exist on both raw A/C triangles and keep metric origin; surfaces unchanged (149.996ms)
+✔ printed PASS followed by nonzero native termination cannot be accepted (105.3453ms)
+✔ Windows access violation status is retained even if all internal assertions passed (0.1444ms)
+✔ native success also requires the worker completion contract (0.1423ms)
+✔ phase2a stable IDs, sources, confidence and model objects form a closed relation (513.8206ms)
+✔ phase2a actual exported C faces cover one full patch and meet immutable A boundary (221.3425ms)
+✔ phase2a all split surface edges agree in height and coordinate orientation (146.3712ms)
+✔ phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces (39.0926ms)
+✔ negative controls detect a raised seam, missing facility and reassigned evidence ID (297.5369ms)
+✔ QGIS C cross sections and exported Blender vertices share actual heights (94.2121ms)
+✔ source additions preserve every old record and reject edits, removal and duplicate IDs (0.6284ms)
+✔ western model preserves metric topology, has one ground sheet and joins the actual A boundary (334.1748ms)
+✔ three regions and detachable upper structure remain C with separate reference and model dimensions (1.2384ms)
+✔ recorded eight model cells include the short southern connection seen in raw GLB (55.8266ms)
+✔ display cutout removes only whole aligned context triangles without altering source vertices (0.6166ms)
+✔ A moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (13.998ms)
+✔ A rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (11.5713ms)
+✔ C moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (57.9809ms)
+✔ C rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (38.4983ms)
+✔ triangle interior, shared diagonal, endpoints, overlap top face, gaps, outside and vertical faces (1.0522ms)
+✔ regional: all Blender-exported positions match GIS heights and metric axes (45.8469ms)
+✔ castle: all Blender-exported positions match GIS heights and metric axes (31.657ms)
+✔ projected/local conversion preserves cardinal orientation and 1 metre scale (0.6667ms)
+✔ bilinear terrain sampler interpolates independent known plane (0.1286ms)
+✔ every observation anchor remains inside castle and regional measured bounds (10.2397ms)
+✔ inferred study cuts the terrain, meets the boundary and has no A category (285.2387ms)
+✔ triangle-surface negative control rejects a bilinear raised patch and an excessive cut (0.6228ms)
+✔ perspective scale preserves actual projected length through narrow/wide, rotation and zoom (2.1135ms)
+✔ GIS metadata reports fallback and no missing heights without implying measurement precision (0.9407ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2312.3647

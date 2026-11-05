@@ -1,0 +1,653 @@
+{
+  "head": "56ce3a1a1098d8852ebbb6ca829f53dbf15d9973",
+  "hashes": {
+    "src/main.js": "a1f47547e861f0995872d479e158f13d10578ddfb8dafee5400b699d6e916907",
+    "src/phase3b.js": "9abd612af9fe4d9c34c0c463efb237841672b20cd0fdff63721bff52e2ded2a0",
+    "src/style.css": "3b65a993e0d609382a0856c6f999fff31b6032cf884e33ac42e5acd6beb30dc8",
+    "public/data/phase3b.json": "419b9f69c5b694060e02d308660e7c3b44fa421cc18e530d67609958ad00a248",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+  },
+  "utc": "2026-11-05T11:01:38.074Z",
+  "scope": "Independent targeted browser/visual review; station IDs explicitly awaited. Automated WebKit is not hardware Safari. No product code or response rewriting except one optional GLB 404.",
+  "rows": [
+    {
+      "name": "chrome",
+      "width": 1280,
+      "checks": [
+        {
+          "station": "wb-gate",
+          "selection": "wb-gate",
+          "camera": [
+            -197,
+            549.3080932617188,
+            35
+          ],
+          "target": [
+            -191,
+            550.4580932617188,
+            35
+          ],
+          "fov": 60
+        },
+        {
+          "station": "wb-moat",
+          "selection": "wb-moat",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-bailey",
+          "selection": "wb-bailey",
+          "camera": [
+            -143,
+            554.7239868164063,
+            -2
+          ],
+          "target": [
+            -131,
+            554.5739868164063,
+            -7
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-earth",
+          "selection": "wb-moat",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-wood",
+          "selection": "wb-gate",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "fov": 38
+        },
+        "ArrowRight turns at fixed eye",
+        "A mode preserves fixed eye, look, selection, FOV",
+        "building hide retains C/unknown explanation",
+        "balanced shadows disable and enable on responsive resize"
+      ],
+      "resize": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "wb-moat",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "phase3b": {
+          "visible": true,
+          "unavailable": false,
+          "objects": [
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-moat",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": true
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-bailey",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-gate",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            },
+            {
+              "id": "wb-building",
+              "category": "C",
+              "surface": false
+            }
+          ],
+          "quality": "balanced",
+          "finish": true,
+          "building": true,
+          "bounds": [
+            -205,
+            -55,
+            -80,
+            55
+          ],
+          "shadows": false
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "cameraFov": 38,
+        "camera": [
+          -206.99999999999997,
+          582.1799926757812,
+          43.00000000000001
+        ],
+        "target": [
+          -168.99999999999997,
+          543.1799926757812,
+          -5
+        ],
+        "scale": {
+          "metres": 10,
+          "pixels": 92.02204587496331,
+          "start": [
+            -168.99999999999997,
+            543.1799926757812,
+            -5
+          ],
+          "end": [
+            -161.15954175538235,
+            543.1799926757812,
+            1.2070294436556104
+          ]
+        },
+        "triangles": 355389,
+        "drawCalls": 18,
+        "geometries": 41,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              3.526966651280426,
+              1.673877361473675,
+              0.9978199547107411
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              3.2025705192654432,
+              1.6365369424082774,
+              0.9973634242632791
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              3.4143597850897844,
+              1.7205198696603592,
+              0.9975180332747758
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              4.6705268502438475,
+              1.6389017926120437,
+              0.9976491369273259
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              1.5818636103308712,
+              1.4399658119762178,
+              0.997792050337555
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              3.8606422982860567,
+              1.9617499777904581,
+              0.9977787949167369
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -0.26570157368459946,
+              1.205678705158272,
+              0.9971495419213763
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -34.07885525867522,
+              3.622625480030935,
+              1.0046595599536474
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              9.040034365084981,
+              1.5668021152344107,
+              0.9982788239360451
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "chrome",
+      "width": 390,
+      "checks": [
+        {
+          "station": "wb-gate",
+          "selection": "wb-gate",
+          "camera": [
+            -197,
+            549.3080932617188,
+            35
+          ],
+          "target": [
+            -191,
+            550.4580932617188,
+            35
+          ],
+          "fov": 60
+        },
+        {
+          "station": "wb-moat",
+          "selection": "wb-moat",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-bailey",
+          "selection": "wb-bailey",
+          "camera": [
+            -143,
+            554.7239868164063,
+            -2
+          ],
+          "target": [
+            -131,
+            554.5739868164063,
+            -7
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-earth",
+          "selection": "wb-moat",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-wood",
+          "selection": "wb-gate",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "fov": 38
+        },
+        "ArrowRight turns at fixed eye",
+        "A mode preserves fixed eye, look, selection, FOV",
+        "building hide retains C/unknown explanation"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "webkit",
+      "width": 390,
+      "checks": [
+        {
+          "station": "wb-gate",
+          "selection": "wb-gate",
+          "camera": [
+            -197,
+            549.3080932617188,
+            35
+          ],
+          "target": [
+            -191,
+            550.4580932617188,
+            35
+          ],
+          "fov": 60
+        },
+        {
+          "station": "wb-moat",
+          "selection": "wb-moat",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-bailey",
+          "selection": "wb-bailey",
+          "camera": [
+            -143,
+            554.7239868164063,
+            -2
+          ],
+          "target": [
+            -131,
+            554.5739868164063,
+            -7
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-earth",
+          "selection": "wb-moat",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "fov": 38
+        },
+        {
+          "station": "wb-wood",
+          "selection": "wb-gate",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "fov": 38
+        },
+        "ArrowRight turns at fixed eye",
+        "A mode preserves fixed eye, look, selection, FOV",
+        "building hide retains C/unknown explanation"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "chrome",
+      "kind": "optional model 404 and recovery",
+      "requests": 2,
+      "status": "PASS"
+    }
+  ]
+}

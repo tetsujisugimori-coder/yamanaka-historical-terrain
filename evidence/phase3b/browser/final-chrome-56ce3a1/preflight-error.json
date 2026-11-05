@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "stage": "QA raw gate framing oracle before browser launch",
+  "reason": "Extend gate framing oracle for new transforms",
+  "detail": "Door and rail nodes use glTF quaternion rotations, not supported by first framing oracle. No browser verification occurred in this attempt.",
+  "runnerSha256": "ccd3afa06909677c244d7437e81f1d2c233251e1b4e0bcf2b6a25bc13b362627",
+  "utc": "2026-11-05T11:03:40.218Z"
+}

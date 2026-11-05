@@ -5,13 +5,18 @@
 <header><a href="./" class="brand"><span class="brand-mark" aria-hidden="true">山</span><span>歴史地形図録<small>LANDSCAPE / ARCHIVE 01</small></span></a><span class="edition">山中城跡 · 静岡県三島市<br><b>研究プロトタイプ / 検証版（未完成）</b></span><button id="sources-open" class="quiet">資料と精度 ↗</button></header>
 <main>
 <div class="intro"><div><p class="eyebrow">YAMANAKA CASTLE · HAKONE WESTERN SLOPES</p><h1>地形から、<br class="mobile-break">城を読む。</h1></div><p>谷が守り、尾根がつなぎ、道を押さえる。<br>山中城が「ここ」にある理由を、実際の土地から探る。</p></div>
-<section class="landscape-entry" aria-label="1590年景観の入口"><div><p class="eyebrow">EXPERIENCE / 1590</p><h2>西ノ丸に、立ってみる。</h2><p>土塁の向こう、畝の連なる堀へ。C 推定復元と D 創作演出で見る景観です。史実確定の復元ではありません。</p></div><button id="landscape-enter" class="primary">1590年の景観へ →</button></section>
+<section class="landscape-entry" aria-label="1590年景観の入口"><div><p class="eyebrow">EXPERIENCE / 1590 · WESTERN DEFENCES</p><h2>西ノ丸から、西櫓へ。</h2><p>赤土の畝堀、尾根を守る板塀と西木戸口。C 推定復元と D 創作演出で見る景観です。史実確定の復元ではありません。</p></div><button id="landscape-enter" class="primary">1590年の景観へ →</button></section>
 <section id="landscape-toolbar" class="landscape-toolbar" aria-label="1590年景観の操作" hidden>
 <p><b>1590年 推定景観</b>　<span>C 推定 ／ D 創作演出 ／ B形状0</span><br>配置・植生・門・木柵は仮説。人物と旗は創作。史実確定ではありません。</p>
 <div class="segmented"><button data-landscape-mode="cd" aria-pressed="false">C＋D 景観</button><button data-landscape-mode="c" aria-pressed="false">Cのみ（Dを隠す）</button><button data-landscape-mode="a" aria-pressed="false">A 現況と比較</button></div>
 <p id="landscape-asset-status" class="accuracy-note" role="status" hidden></p>
+<p id="western-asset-status" class="accuracy-note" role="status" hidden></p>
 <p id="landscape-selection-status" role="status"></p>
 <div class="segmented station-buttons"><button data-station="bailey">曲輪に立つ</button><button data-station="bank">土塁の内側</button><button data-station="moat">障子堀を見下ろす</button><button data-station="passage">虎口の通路</button><button id="landscape-overview">俯瞰へ</button></div>
+<p><b>西方の防御をたどる</b>　配置は未測量のC候補。西櫓堀は単列畝堀、西ノ丸は複列障子堀です。</p>
+<div class="segmented"><button data-western-overview="wb-bailey">西櫓の俯瞰</button><button data-western-overview="wb-gate">西木戸口の俯瞰</button><button data-western-overview="wb-moat">西櫓堀の俯瞰</button></div>
+<div id="western-stations" class="segmented station-buttons"></div>
+<div class="western-options"><label class="check"><input id="western-building" type="checkbox" checked>C 西櫓の建物候補を表示（上部構造は未確定）</label><label class="check"><input id="surface-finish" type="checkbox" checked>D 質感・日照の演出（C＋Dで適用：木目・色むら・凹凸・霞）</label><label>描画品質 <select id="quality"><option value="balanced">標準（画面幅に応じた影）</option><option value="light">軽量（影なし）</option><option value="high">高品質（影あり）</option></select></label></div>
 <p id="station-status">低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。</p>
 </section>
 <div class="workspace">

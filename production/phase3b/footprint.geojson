@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "phase3b-surface",
+        "category": "C",
+        "accuracy": "UNKNOWN: candidate footprint, not surveyed"
+      }
+    }
+  ]
+}

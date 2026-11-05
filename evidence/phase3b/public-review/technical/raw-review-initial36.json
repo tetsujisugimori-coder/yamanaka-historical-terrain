@@ -1,0 +1,560 @@
+{
+  "status": "PASS",
+  "head": "36d8417df3a70f9530db3df92fd3f46015b0bb68",
+  "scope": "Independent Python stdlib raw GLB accessor, axis transform, barycentric query, source/native proximity and Git blob preservation. No product geometry/height helper imported.",
+  "blender": "4.5.9 LTS",
+  "preservedNativeMeshes": 281,
+  "nativeSourceObjects": 412,
+  "glbObjects": 412,
+  "triangles": 45432,
+  "sourceGlbMaximumPointDifferenceMetres": 2.7560744999822484e-05,
+  "boundaryPoints": 470,
+  "boundaryMaximumErrorMetres": 2.4414062522737368e-05,
+  "surfaceTriangles": 27500,
+  "surfaceAreaSquareMetres": 13750.0,
+  "duplicateSurfaceTriangles": 0,
+  "contextRemovedTriangles": 1100,
+  "contextStraddlingTriangles": 0,
+  "contextRemovedAreaSquareMetres": 13750.0,
+  "stations": [
+    {
+      "id": "wb-bailey",
+      "a": 549.0839965820312,
+      "new": 553.0239868164062,
+      "caption": 553.0239868164062
+    },
+    {
+      "id": "wb-gate",
+      "a": 542.1639892578125,
+      "new": 547.6080932617188,
+      "caption": 547.6080932617188
+    },
+    {
+      "id": "wb-moat",
+      "a": 548.14599609375,
+      "new": 552.1508178710938,
+      "caption": 552.1508178710938
+    },
+    {
+      "id": "wb-earth",
+      "a": 547.2680175781251,
+      "new": 551.47314453125,
+      "caption": 551.47314453125
+    },
+    {
+      "id": "wb-wood",
+      "a": 542.6939819335937,
+      "new": 548.416015625,
+      "caption": 548.416015625
+    }
+  ],
+  "centralMoatProfile": [
+    {
+      "north": -24,
+      "height": 545.4320068359375
+    },
+    {
+      "north": -23,
+      "height": 544.3773193359375
+    },
+    {
+      "north": -22,
+      "height": 543.8560180664062
+    },
+    {
+      "north": -21,
+      "height": 543.8679809570312
+    },
+    {
+      "north": -20,
+      "height": 543.8800048828125
+    },
+    {
+      "north": -19,
+      "height": 543.8920288085938
+    },
+    {
+      "north": -18,
+      "height": 543.9039916992188
+    },
+    {
+      "north": -17,
+      "height": 544.4493408203125
+    },
+    {
+      "north": -16,
+      "height": 545.5280151367188
+    },
+    {
+      "north": -15,
+      "height": 544.4733276367188
+    },
+    {
+      "north": -14,
+      "height": 543.9520263671875
+    },
+    {
+      "north": -13,
+      "height": 543.9639892578125
+    },
+    {
+      "north": -12,
+      "height": 543.9760131835938
+    },
+    {
+      "north": -11,
+      "height": 543.9879760742188
+    },
+    {
+      "north": -10,
+      "height": 544.0
+    },
+    {
+      "north": -9,
+      "height": 544.5453491210938
+    },
+    {
+      "north": -8,
+      "height": 545.6240234375
+    },
+    {
+      "north": -7,
+      "height": 544.5693359375
+    },
+    {
+      "north": -6,
+      "height": 544.0479736328125
+    },
+    {
+      "north": -5,
+      "height": 544.0599975585938
+    },
+    {
+      "north": -4,
+      "height": 544.072021484375
+    },
+    {
+      "north": -3,
+      "height": 544.083984375
+    },
+    {
+      "north": -2,
+      "height": 544.0960083007812
+    },
+    {
+      "north": -1,
+      "height": 544.641357421875
+    },
+    {
+      "north": 0,
+      "height": 545.719970703125
+    },
+    {
+      "north": 1,
+      "height": 544.6653442382812
+    },
+    {
+      "north": 2,
+      "height": 544.1439819335938
+    },
+    {
+      "north": 3,
+      "height": 544.156005859375
+    },
+    {
+      "north": 4,
+      "height": 544.1680297851562
+    },
+    {
+      "north": 5,
+      "height": 544.1799926757812
+    },
+    {
+      "north": 6,
+      "height": 544.1920166015625
+    },
+    {
+      "north": 7,
+      "height": 544.7373046875
+    },
+    {
+      "north": 8,
+      "height": 545.8159790039062
+    },
+    {
+      "north": 9,
+      "height": 544.7613525390625
+    },
+    {
+      "north": 10,
+      "height": 544.239990234375
+    },
+    {
+      "north": 11,
+      "height": 544.2520141601562
+    },
+    {
+      "north": 12,
+      "height": 544.2639770507812
+    },
+    {
+      "north": 13,
+      "height": 544.2760009765625
+    },
+    {
+      "north": 14,
+      "height": 544.2880249023438
+    },
+    {
+      "north": 15,
+      "height": 544.8333129882812
+    },
+    {
+      "north": 16,
+      "height": 545.9119873046875
+    },
+    {
+      "north": 17,
+      "height": 544.8573608398438
+    },
+    {
+      "north": 18,
+      "height": 544.3359985351562
+    },
+    {
+      "north": 19,
+      "height": 544.3480224609375
+    },
+    {
+      "north": 20,
+      "height": 544.3599853515625
+    },
+    {
+      "north": 21,
+      "height": 544.3720092773438
+    },
+    {
+      "north": 22,
+      "height": 544.3839721679688
+    },
+    {
+      "north": 23,
+      "height": 544.9293212890625
+    },
+    {
+      "north": 24,
+      "height": 546.0079956054688
+    }
+  ],
+  "existingProtectedFilesChanged": [
+    "public/data/sources.json"
+  ],
+  "notes": [
+    "Tolerance 1mm is internal numeric agreement, not historic or survey precision.",
+    "No new B objects. Historical georeferencing remains UNKNOWN."
+  ],
+  "supportedPosts": [
+    {
+      "name": "wb-bailey.north.post.0",
+      "maximumBottomClearance": -0.10933225112603395,
+      "minimumBottomClearance": -0.12246091375709511
+    },
+    {
+      "name": "wb-bailey.north.post.1",
+      "maximumBottomClearance": -0.11793820849925396,
+      "minimumBottomClearance": -0.11906888481371425
+    },
+    {
+      "name": "wb-bailey.north.post.2",
+      "maximumBottomClearance": -0.11838681691551756,
+      "minimumBottomClearance": -0.11906888481371425
+    },
+    {
+      "name": "wb-bailey.north.post.3",
+      "maximumBottomClearance": -0.1188400029686818,
+      "minimumBottomClearance": -0.11906888481371425
+    },
+    {
+      "name": "wb-bailey.north.post.4",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.11951749322997784
+    },
+    {
+      "name": "wb-bailey.north.post.5",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.11996610164624144
+    },
+    {
+      "name": "wb-bailey.north.post.6",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12041928769940569
+    },
+    {
+      "name": "wb-bailey.north.post.7",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12086789611566928
+    },
+    {
+      "name": "wb-bailey.north.post.8",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12132108216883353
+    },
+    {
+      "name": "wb-bailey.north.post.9",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12176969058509712
+    },
+    {
+      "name": "wb-bailey.north.post.10",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12222287663826137
+    },
+    {
+      "name": "wb-bailey.north.post.11",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12267148505452496
+    },
+    {
+      "name": "wb-bailey.north.post.12",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12312467110768921
+    },
+    {
+      "name": "wb-bailey.north.post.13",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12357785716085345
+    },
+    {
+      "name": "wb-bailey.north.post.14",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12402646557711705
+    },
+    {
+      "name": "wb-bailey.north.post.15",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.1244796516302813
+    },
+    {
+      "name": "wb-bailey.north.post.16",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12492826004654489
+    },
+    {
+      "name": "wb-bailey.north.post.17",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12538144609970914
+    },
+    {
+      "name": "wb-bailey.north.post.18",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12583005451597273
+    },
+    {
+      "name": "wb-bailey.north.post.19",
+      "maximumBottomClearance": -0.11906888481371425,
+      "minimumBottomClearance": -0.12628324056913698
+    },
+    {
+      "name": "wb-bailey.north.post.20",
+      "maximumBottomClearance": -0.11342923615211475,
+      "minimumBottomClearance": -0.1365554577741932
+    },
+    {
+      "name": "wb-bailey.north.post.21",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.14772489181177662
+    },
+    {
+      "name": "wb-bailey.east.post.0",
+      "maximumBottomClearance": -0.09554440878127934,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.1",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.2",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.3",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.4",
+      "maximumBottomClearance": -0.09554440878127934,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.5",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.6",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.7",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.8",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.14952390311373165
+    },
+    {
+      "name": "wb-bailey.east.post.9",
+      "maximumBottomClearance": -0.09554440878127934,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.10",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.11",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.12",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.13",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.14952390311373165
+    },
+    {
+      "name": "wb-bailey.east.post.14",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.15",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.16",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.17",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.18",
+      "maximumBottomClearance": -0.09554440878127934,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-bailey.east.post.19",
+      "maximumBottomClearance": -0.09554898641817999,
+      "minimumBottomClearance": -0.149519325476831
+    },
+    {
+      "name": "wb-gate.gate.post.0",
+      "maximumBottomClearance": -0.16127959714685858,
+      "minimumBottomClearance": -0.18833373405504972
+    },
+    {
+      "name": "wb-gate.gate.post.1",
+      "maximumBottomClearance": -0.21170283935498446,
+      "minimumBottomClearance": -0.2387569762631756
+    },
+    {
+      "name": "wb-gate.side.post.0",
+      "maximumBottomClearance": -0.07810121846523543,
+      "minimumBottomClearance": -0.15055605532870686
+    },
+    {
+      "name": "wb-gate.side.post.1",
+      "maximumBottomClearance": -0.10400698121338792,
+      "minimumBottomClearance": -0.12740236788522452
+    },
+    {
+      "name": "wb-gate.side.post.2",
+      "maximumBottomClearance": -0.1126367422984913,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-gate.side.post.3",
+      "maximumBottomClearance": -0.1126367422984913,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-gate.side.post.4",
+      "maximumBottomClearance": -0.11264223546277208,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-gate.side.post.5",
+      "maximumBottomClearance": -0.1126367422984913,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-gate.side.post.6",
+      "maximumBottomClearance": -0.11264223546277208,
+      "minimumBottomClearance": -0.12740236788522452
+    },
+    {
+      "name": "wb-gate.side.post.7",
+      "maximumBottomClearance": -0.11264223546277208,
+      "minimumBottomClearance": -0.12740236788522452
+    },
+    {
+      "name": "wb-gate.side.post.8",
+      "maximumBottomClearance": -0.1126367422984913,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-gate.side.post.9",
+      "maximumBottomClearance": -0.1126367422984913,
+      "minimumBottomClearance": -0.12739687472094374
+    },
+    {
+      "name": "wb-building.post.-135.4",
+      "maximumBottomClearance": -0.11262578008063429,
+      "minimumBottomClearance": -0.11538426401739343
+    },
+    {
+      "name": "wb-building.post.-135.10",
+      "maximumBottomClearance": -0.1846402454125382,
+      "minimumBottomClearance": -0.18740574839239343
+    },
+    {
+      "name": "wb-building.post.-131.4",
+      "maximumBottomClearance": -0.11262578008063429,
+      "minimumBottomClearance": -0.11538426401739343
+    },
+    {
+      "name": "wb-building.post.-131.10",
+      "maximumBottomClearance": -0.1846402454125382,
+      "minimumBottomClearance": -0.18740574839239343
+    },
+    {
+      "name": "wb-building.post.-127.4",
+      "maximumBottomClearance": -0.11262578008063429,
+      "minimumBottomClearance": -0.11538426401739343
+    },
+    {
+      "name": "wb-building.post.-127.10",
+      "maximumBottomClearance": -0.1846402454125382,
+      "minimumBottomClearance": -0.18740574839239343
+    }
+  ],
+  "rasterSamples": 49,
+  "rasterGlbMaximumDifferenceMetres": 0.0
+}
