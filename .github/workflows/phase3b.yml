@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -27,6 +29,7 @@ jobs:
           done
           export PHASE3B_EVIDENCE="evidence/phase3b/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           node scripts/phase3b-browser.mjs
+          bash scripts/phase3b-separation-red-green.sh
           node scripts/phase3b-browser.mjs --mutation=gate-sightline
           node scripts/phase3b-browser.mjs --mutation=gate-framing
       - uses: actions/upload-artifact@v4
@@ -34,4 +37,43 @@ jobs:
         with:
           name: phase3b-browser-evidence
           path: evidence/phase3b/
+          if-no-files-found: error
+  independent-ad-separation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Independent baseline, candidate and fault browser review
+        run: |
+          BASE=5fca33c5f1bf7be66e8b44e33b057b2fea4c5c31
+          REPO="$PWD"
+          git worktree add --detach /tmp/yamanaka-review-baseline "$BASE"
+          ln -s "$PWD/node_modules" /tmp/yamanaka-review-baseline/node_modules
+          (cd /tmp/yamanaka-review-baseline && "$REPO/node_modules/.bin/vite" --host 127.0.0.1 --port 4318 --strictPort) >/tmp/review-old-vite.log 2>&1 &
+          old_pid=$!
+          npm run dev -- --port 4317 --strictPort >/tmp/review-new-vite.log 2>&1 &
+          new_pid=$!
+          trap 'kill "$old_pid" "$new_pid"' EXIT
+          for port in 4317 4318; do
+            for n in $(seq 1 30); do
+              if curl --fail --silent http://127.0.0.1:$port > /dev/null; then break; fi
+              sleep 1
+            done
+            curl --fail --silent http://127.0.0.1:$port > /dev/null
+          done
+          REVIEW_HEAD="$BASE" REVIEW_ROOT=http://127.0.0.1:4318 REVIEW_EXPECT_BAD=1 REVIEW_OUT=evidence/phase3b-p2/independent/red node independent-review/browser-ad.mjs
+          REVIEW_HEAD="$(git rev-parse HEAD)" REVIEW_ROOT=http://127.0.0.1:4317 REVIEW_OUT=evidence/phase3b-p2/independent/green node independent-review/browser-ad.mjs
+          REVIEW_HEAD="$(git rev-parse HEAD)" REVIEW_ROOT=http://127.0.0.1:4317 REVIEW_MUTATION=1 REVIEW_EXPECT_BAD=1 REVIEW_OUT=evidence/phase3b-p2/independent/negative node independent-review/browser-ad.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: independent-ad-separation
+          path: evidence/phase3b-p2/independent/
           if-no-files-found: error

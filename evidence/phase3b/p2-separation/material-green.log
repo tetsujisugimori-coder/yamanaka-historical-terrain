@@ -1,0 +1,11 @@
+✔ finish restores base without source mutation, appearance=false (12.907116ms)
+✔ finish restores base without source mutation, appearance=true (4.142485ms)
+✔ existing UV and non-default shadow flags restore exactly (4.308803ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 136.480083

@@ -30,3 +30,7 @@
 最新main6a84b95から専用clone・branchで西方3区域と交換可能な西櫓建物候補を制作。全形状C、独自素材・光影はD演出。既存A/C・固定2断面・制作正本と過去証拠を保全。Blender/QGISの実制作・別名保存・再読込、raw GLB境界/単位/ID・31単体とbuildを確認。門定点の地面遮蔽P2を自己視覚検査で検出し、元画像を保存して定点を修正。最終ブラウザ/性能・固定HEAD独立レビュー・CIはevidence/phase3b/README.mdへ記録。Draft解除、merge、auto-merge、本番deployなし。
 
 最終自己検証は33単体、28ブラウザ条件、負対照4、性能48試行。別担当の史料・3D技術・視覚でP2を修正・再確認し、限定範囲の取り込み支持を得た。模型区画数は実GLBに合わせ標準7＋南端接続1＝8に訂正。歴史位置/実機はPARTIAL、反復texture P3・過去timeout根本原因UNKNOWNを継続。最終HEADのCIとtree照合はPR #12へ外部記録する。
+
+## 2026-11-05 第3期B P2-01 分離修正
+
+PR #12の追加独立レビューを受け、現況AにDの材質・照明が残る条件と、finish無効時にも元material/shadow flagsを変更する経路を修正。A/C/C+D/終了の許可条件、material所有権と復元を局所改善した。同一3単体は旧FAIL→新PASS。旧/新/変異を両engineで確認するCIと新証拠を追加し、実行完了前には閉鎖扱いにしない。詳細はdocs/phase3b-p2-separation.md。旧証拠・原本・史料分類と全Issue OPENを維持。

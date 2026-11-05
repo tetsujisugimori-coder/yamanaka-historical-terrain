@@ -63,8 +63,9 @@ async function initialize(features){
   westernGroup.traverse(o=>{if(o.isMesh)o.visible=o.userData.elementId!=='wb-building'||$('#western-building').checked;});
   const warning=$('#western-asset-status');warning.hidden=!active||!westernUnavailable;warning.textContent=warning.hidden?'':'西方3区域の追加GLBを読み込めませんでした。既存地形・西ノ丸景観と解説を利用できます。表示切替で再取得します。';
   if(currentModel)currentModel.traverse(o=>{if(!o.isMesh||o.userData.facilityId!=='nm-context')return;if(!contextGeometry.has(o)){const cut=contextOutsidePatch(o.geometry,westernMeta.bounds);contextGeometry.set(o,{base:o.geometry.index,cut:cut.index});}const pair=contextGeometry.get(o);o.geometry.setIndex(visible?pair.cut:pair.base);});
-  const enabled=active&&state.drama&&$('#surface-finish').checked,quality=$('#quality').value,shadows=enabled&&quality!=='light'&&(quality==='high'||viewport.clientWidth>=700);
-  $('#surface-finish').disabled=!active||!state.drama;
+  const allowed=active&&comparison==='restored'&&state.drama;
+  const enabled=allowed&&$('#surface-finish').checked,quality=$('#quality').value,shadows=enabled&&quality!=='light'&&(quality==='high'||viewport.clientWidth>=700);
+  $('#surface-finish').disabled=!allowed;$('#quality').disabled=!allowed;
   renderer.shadowMap.enabled=shadows;light.castShadow=shadows;
   light.position.set(...(enabled?[-250,850,150]:[-1500,3000,-1500]));light.target.position.set(...(enabled?[-120,550,0]:[0,0,0]));light.intensity=enabled?2.6:2;ambient.intensity=enabled?1.35:2.1;
   for(const group of [terrainGroup,sceneryGroup,westernGroup])group.traverse(o=>finish.apply(o,enabled));

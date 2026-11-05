@@ -1,0 +1,39 @@
+{
+  "scope": "Independent synthetic MeshStandardMaterial runtime test. Not browser or GLB proof.",
+  "target": "/workspace/scratch/e622c1e9421e/yamanaka-p2-fix-20261105/src/phase3b.js",
+  "expectBad": false,
+  "results": [
+    {
+      "name": "disabled first call does not mutate original material",
+      "status": "PASS"
+    },
+    {
+      "name": "disabled first call keeps original shadow flags",
+      "status": "PASS"
+    },
+    {
+      "name": "enabled uses independent material",
+      "status": "PASS"
+    },
+    {
+      "name": "enabled does not mutate shared original material",
+      "status": "PASS"
+    },
+    {
+      "name": "untouched sibling material remains original",
+      "status": "PASS"
+    },
+    {
+      "name": "disable removes all finish texture maps",
+      "status": "PASS"
+    },
+    {
+      "name": "disable restores original shadow flags",
+      "status": "PASS"
+    },
+    {
+      "name": "repeated 20 toggles preserve source material",
+      "status": "PASS"
+    }
+  ]
+}

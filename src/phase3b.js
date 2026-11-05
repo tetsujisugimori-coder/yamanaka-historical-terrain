@@ -31,21 +31,35 @@ export function createSurfaceFinish(){
  function apply(mesh,enabled){
   if(!mesh.isMesh)return;
   if(!saved.has(mesh)){
-   const base=mesh.material,mat=base.clone(),g=mesh.geometry,p=g.attributes.position;
-   const role=mesh.userData.materialRole??(mesh.userData.surface||mesh.userData.facilityId?'earth':'wood');
-   if(!g.attributes.uv){const uv=new Float32Array(p.count*2);for(let i=0;i<p.count;i++){
-    uv[i*2]=role==='wood'?p.getX(i)*2:p.getX(i)*.18;
-    uv[i*2+1]=role==='wood'?p.getY(i)*.4:p.getZ(i)*.18;
-   }g.setAttribute('uv',new THREE.BufferAttribute(uv,2));}
+   const original=mesh.material;
+   // Exported appearance vertex colours are D. The neutral C presentation is
+   // a separate material, never a mutation of the imported source material.
+   const base=mesh.userData.appearanceEvidence?original.clone():original;
+   if(mesh.userData.appearanceEvidence){base.vertexColors=false;base.needsUpdate=true;}
+   saved.set(mesh,{base,finish:null,castShadow:mesh.castShadow,receiveShadow:mesh.receiveShadow,uv:mesh.geometry.attributes.uv});
+  }
+  const pair=saved.get(mesh),g=mesh.geometry;
+  if(!enabled){
+   mesh.material=pair.base;mesh.castShadow=pair.castShadow;mesh.receiveShadow=pair.receiveShadow;
+   if(pair.uv)g.setAttribute('uv',pair.uv);else g.deleteAttribute('uv');
+   return;
+  }
+  const role=mesh.userData.materialRole??(mesh.userData.surface||mesh.userData.facilityId?'earth':'wood');
+  if(!pair.finish){
+   const mat=pair.base.clone();
+   // Only the D material uses the exported appearance colours.
+   if(mesh.userData.appearanceEvidence)mat.vertexColors=true;
    if(!['cloth','leaf','skin'].includes(role)){
     mat.bumpMap=role==='wood'?wood:soil;mat.bumpScale=role==='wood'?.035:.12;mat.map=role==='wood'?wood:soil;
     mat.roughnessMap=role==='wood'?wood:soil;mat.roughness=.95;mat.metalness=0;
    }
-   if(mesh.userData.appearanceEvidence){base.vertexColors=false;base.needsUpdate=true;}
-   saved.set(mesh,{base,finish:mat});
+   pair.finish=mat;
   }
-  const pair=saved.get(mesh);mesh.material=enabled?pair.finish:pair.base;
-  mesh.receiveShadow=true;mesh.castShadow=!mesh.userData.surface&&!mesh.userData.facilityId;
+  if(!g.attributes.uv){const p=g.attributes.position,uv=new Float32Array(p.count*2);for(let i=0;i<p.count;i++){
+   uv[i*2]=role==='wood'?p.getX(i)*2:p.getX(i)*.18;uv[i*2+1]=role==='wood'?p.getY(i)*.4:p.getZ(i)*.18;
+  }g.setAttribute('uv',new THREE.BufferAttribute(uv,2));}
+  if(!mesh.userData.appearanceEvidence)pair.finish.vertexColors=pair.base.vertexColors;
+  mesh.material=pair.finish;mesh.receiveShadow=true;mesh.castShadow=!mesh.userData.surface&&!mesh.userData.facilityId;
  }
  return{apply};
 }
