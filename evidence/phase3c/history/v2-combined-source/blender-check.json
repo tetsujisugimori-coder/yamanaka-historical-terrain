@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "blender": "4.3.2",
+  "reread": true,
+  "preservedMeshes": 693,
+  "newObjects": 7,
+  "ids": [
+    "ic-bridge",
+    "ic-koguchi",
+    "ic-lookout"
+  ],
+  "meshHashes": {
+    "ic-bridge.surface.earth": "449fca30a2ed9e270f9d78738c1d39bd09e04727f5d72636de828f796854783c",
+    "ic-bridge.surface.grass": "dff0ab43bf16ceab138e95acd6009d996b178a4f289636a1f4ec37f2f54ba7a9",
+    "ic-bridge.surface.path": "f44006d89ee3b35df456723359f1cf3c3f23f50938882a00a7b36b135391dbeb",
+    "ic-koguchi.surface.earth": "a453bd58060b27c5f41cfdb1730a32aaafe67b849dceb7506a81eeb8cda0e219",
+    "ic-koguchi.surface.path": "ecf41f47e43ceb19122620888d5c0fa822c7e56bef53f43a67442513fdbb4d88",
+    "ic-lookout.surface.earth": "235b146058736795ec6c6d59969a18d06a878632d0539e2f43dbf31c5ddb2470",
+    "ic-lookout.surface.grass": "92424a0e1df870d392a846f8824b6b009a29390ec14ef23f56976de87441b366"
+  },
+  "externalImages": 0,
+  "metresPerUnit": 1
+}

@@ -1,0 +1,12 @@
+{
+  "v1BridgeMaxGrade": 2.37628173828125,
+  "v1RejectedAgainst0_5Grade": true,
+  "ridgeReintroducedRay": {
+    "scale": 1,
+    "minClearance": -9.182090671090236,
+    "fraction": 0.3388429752,
+    "visible": false,
+    "segments": 24
+  },
+  "ridgeRejected": true
+}

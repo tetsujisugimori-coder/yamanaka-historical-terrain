@@ -1,0 +1,69 @@
+{
+  "head": "c71edbf440ddada2acf0e74501c47afad1772adc",
+  "results": [
+    {
+      "station": "ic-lookout",
+      "scale": 1,
+      "targetY": 564.0849487304688,
+      "independentRayExpectedY": 564.0849487304688,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 0
+    },
+    {
+      "station": "ic-bridge",
+      "scale": 1,
+      "targetY": 569.7643432617188,
+      "independentRayExpectedY": 569.7643432617188,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 0
+    },
+    {
+      "station": "ic-koguchi",
+      "scale": 1,
+      "targetY": 567.4686279296875,
+      "independentRayExpectedY": 567.4686279296875,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 0
+    },
+    {
+      "station": "ic-koguchi-inside",
+      "scale": 1,
+      "targetY": 568.2340087890625,
+      "independentRayExpectedY": 568.2340087890625,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 0
+    },
+    {
+      "station": "ic-lookout",
+      "scale": 2,
+      "targetY": 1127.9698974609375,
+      "independentRayExpectedY": 1127.9698974609375,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 10.80787963867192
+    },
+    {
+      "station": "ic-bridge",
+      "scale": 2,
+      "targetY": 1138.5286865234375,
+      "independentRayExpectedY": 1138.5286865234375,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 9.2708740234375
+    },
+    {
+      "station": "ic-koguchi",
+      "scale": 2,
+      "targetY": 1133.937255859375,
+      "independentRayExpectedY": 1133.937255859375,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 2.09576416015625
+    },
+    {
+      "station": "ic-koguchi-inside",
+      "scale": 2,
+      "targetY": 1135.468017578125,
+      "independentRayExpectedY": 1135.468017578125,
+      "delta": 0,
+      "oldUnscaledTargetDelta": 1.2120361328125
+    }
+  ]
+}

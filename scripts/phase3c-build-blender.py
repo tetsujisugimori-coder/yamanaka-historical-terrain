@@ -57,5 +57,6 @@ for o in bpy.context.scene.objects:
 bpy.context.scene['phase3cOldGeometryHashes']=json.dumps(old);bpy.context.scene['phase3cBounds']=b
 bpy.context.scene['phase3cEvidence']='C terrain hypotheses, no B, no tower. Original collections preserved hidden; use web display clipping for context.'
 bpy.context.scene.unit_settings.system='METRIC';bpy.context.scene.unit_settings.scale_length=1
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'production/yamanaka-phase3c.blend'),compress=True)
-(out/'blender-build.json').write_text(json.dumps(dict(status='PASS',blender=bpy.app.version_string,preservedMeshes=old,objects=[o.name for o in objects],triangles=sum(len(f) for f in groups.values()),vertices=len(verts),bounds=b,units=1,compressed=True,modelVersion='phase3c-v2'),indent=2))
+# Verify the old source in memory, then package only the new editable collection.
+runpy.run_path(str(ROOT/'scripts/phase3c-package-blender.py'))
+(out/'blender-build.json').write_text(json.dumps(dict(status='PASS',blender=bpy.app.version_string,preservedMeshes=old,objects=[o.name for o in objects],triangles=sum(len(f) for f in groups.values()),vertices=len(verts),bounds=b,units=1,compressed=True,modelVersion='phase3c-v2',sourcePackaging='standalone new meshes only',priorMeshesStoredInNewSource=0),indent=2))

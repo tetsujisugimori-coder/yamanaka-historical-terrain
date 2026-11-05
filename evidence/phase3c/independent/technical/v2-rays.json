@@ -1,0 +1,157 @@
+{
+  "head": "c71edbf440ddada2acf0e74501c47afad1772adc",
+  "slopes": [
+    {
+      "north": -31,
+      "maxGrade": 0.49761962890625,
+      "segments": 32
+    },
+    {
+      "north": -30,
+      "maxGrade": 0.492431640625,
+      "segments": 32
+    },
+    {
+      "north": -29,
+      "maxGrade": 0.48797607421875,
+      "segments": 32
+    },
+    {
+      "north": -28,
+      "maxGrade": 0.4835205078125,
+      "segments": 32
+    },
+    {
+      "north": -27,
+      "maxGrade": 0.49334716796875,
+      "segments": 32
+    }
+  ],
+  "rays": [
+    {
+      "stationId": "ic-lookout",
+      "target": [
+        -77,
+        -29
+      ],
+      "targetOffset": 0.2,
+      "expected": "visible",
+      "results": [
+        {
+          "scale": 1,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 24
+        },
+        {
+          "scale": 2,
+          "minClearance": 0.09540591906466034,
+          "fraction": 0.2561983471,
+          "visible": true,
+          "segments": 24
+        }
+      ]
+    },
+    {
+      "stationId": "ic-lookout",
+      "target": [
+        -85,
+        -29
+      ],
+      "targetOffset": 0.2,
+      "expected": "visible",
+      "results": [
+        {
+          "scale": 1,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 24
+        },
+        {
+          "scale": 2,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 24
+        }
+      ]
+    },
+    {
+      "stationId": "ic-lookout",
+      "target": [
+        -92,
+        -29
+      ],
+      "targetOffset": 0.2,
+      "expected": "visible",
+      "results": [
+        {
+          "scale": 1,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 31
+        },
+        {
+          "scale": 2,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 31
+        }
+      ]
+    },
+    {
+      "stationId": "ic-koguchi",
+      "target": [
+        -75,
+        -35
+      ],
+      "targetOffset": 0.2,
+      "expected": "occluded",
+      "results": [
+        {
+          "scale": 1,
+          "minClearance": -0.5503458661407876,
+          "fraction": 0.6666666667,
+          "visible": false,
+          "segments": 12
+        },
+        {
+          "scale": 2,
+          "minClearance": -1.8006917322315985,
+          "fraction": 0.6666666667,
+          "visible": false,
+          "segments": 12
+        }
+      ]
+    },
+    {
+      "stationId": "ic-koguchi-inside",
+      "target": [
+        -75,
+        -35
+      ],
+      "targetOffset": 0.2,
+      "expected": "visible",
+      "results": [
+        {
+          "scale": 1,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 12
+        },
+        {
+          "scale": 2,
+          "minClearance": 0.20000000000004547,
+          "fraction": 1.0,
+          "visible": true,
+          "segments": 12
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,9 @@
   "status": "PASS",
   "blender": "4.3.2",
   "reread": true,
-  "preservedMeshes": 693,
+  "sourcePackaging": "standalone new meshes only",
+  "priorMeshesStored": 0,
+  "priorMeshesVerifiedDuringBuild": 693,
   "newObjects": 7,
   "ids": [
     "ic-bridge",

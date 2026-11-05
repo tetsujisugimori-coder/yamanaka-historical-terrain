@@ -1,0 +1,145 @@
+{
+  "targetHEAD": "c71edbf440ddada2acf0e74501c47afad1772adc",
+  "glbSHA256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+  "manifestSHA256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+  "features": {
+    "ic-bridge": {
+      "triangles": 4105,
+      "boundsEastNorthHeight": [
+        [
+          -100.0,
+          -68.0
+        ],
+        [
+          -45.0,
+          50.0
+        ],
+        [
+          554.9099731445312,
+          572.9199829101562
+        ]
+      ]
+    },
+    "ic-koguchi": {
+      "triangles": 495,
+      "boundsEastNorthHeight": [
+        [
+          -82.0,
+          -68.0
+        ],
+        [
+          -37.0,
+          -22.0
+        ],
+        [
+          562.7188720703125,
+          572.6231079101562
+        ]
+      ]
+    },
+    "ic-lookout": {
+      "triangles": 2742,
+      "boundsEastNorthHeight": [
+        [
+          -84.0,
+          -68.0
+        ],
+        [
+          -22.0,
+          50.0
+        ],
+        [
+          560.2544555664062,
+          574.9559936523438
+        ]
+      ]
+    }
+  },
+  "anchorChecks": [
+    {
+      "id": "ic-lookout",
+      "height": 574.9559936523438,
+      "ledgerDelta": 0.0
+    },
+    {
+      "id": "ic-bridge",
+      "height": 560.957275390625,
+      "ledgerDelta": 0.0
+    },
+    {
+      "id": "ic-koguchi",
+      "height": 566.3246459960938,
+      "ledgerDelta": 0.0
+    }
+  ],
+  "lookoutKoguchiDistanceMetres": 13.038404810405298,
+  "bridgeCentrelineSamples": [
+    {
+      "east": -99,
+      "north": -29,
+      "height": 555.5899047851562
+    },
+    {
+      "east": -95,
+      "north": -29,
+      "height": 557.5416870117188
+    },
+    {
+      "east": -91,
+      "north": -29,
+      "height": 559.4934692382812
+    },
+    {
+      "east": -88,
+      "north": -29,
+      "height": 560.957275390625
+    },
+    {
+      "east": -85,
+      "north": -29,
+      "height": 562.421142578125
+    },
+    {
+      "east": -82,
+      "north": -29,
+      "height": 563.8849487304688
+    },
+    {
+      "east": -79,
+      "north": -29,
+      "height": 565.3487548828125
+    },
+    {
+      "east": -77,
+      "north": -29,
+      "height": 566.3246459960938
+    },
+    {
+      "east": -73,
+      "north": -29,
+      "height": 568.2764282226562
+    },
+    {
+      "east": -69,
+      "north": -29,
+      "height": 570.2282104492188
+    }
+  ],
+  "tests": {
+    "threeUniqueCIDs": true,
+    "legacyGateIDsNotReused": true,
+    "noTowerNodes": true,
+    "sourceDimensionsSeparate": true
+  },
+  "neckPlaneGradeCheck": {
+    "triangleCount": 296,
+    "maxLongitudinalGrade": 0.49761962890625
+  },
+  "tree": "f49d1348354df2a147609e43558f42ac9c06c498",
+  "reviewedFileHashes": {
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "public/data/phase3c.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+    "production/phase3c/recipe.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+    "docs/phase3c-production.md": "87aaacc838141952bae17cb08f6cb9581c111b8a2904ce361506295719f51328"
+  }
+}
