@@ -1,0 +1,25 @@
+import * as THREE from 'three';
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+import {writeFileSync,mkdirSync} from 'node:fs';
+const target=process.argv[2]??'./src/phase3b.js',expectBad=process.argv.includes('--expect-bad');
+globalThis.document={createElement(){return {width:0,height:0,getContext(){return {createImageData(w,h){return {data:new Uint8ClampedArray(w*h*4)}},putImageData(){}}}}}};
+const {createSurfaceFinish}=await import(pathToFileURL(new URL(target,pathToFileURL(process.cwd()+'/')).pathname));
+const results=[];function run(name,fn){try{fn();results.push({name,status:'PASS'});}catch(e){results.push({name,status:'FAIL',message:e.message});}}
+const base=new THREE.MeshStandardMaterial({vertexColors:true,color:0x6b7a55,roughness:.7});
+const make=()=>{const m=new THREE.Mesh(new THREE.BoxGeometry(),base);m.userData.appearanceEvidence='D';m.userData.materialRole='earth';m.castShadow=false;m.receiveShadow=false;return m;};
+const a=make(),b=make(),finish=createSurfaceFinish();const original=base.toJSON();
+finish.apply(a,false);
+run('disabled first call does not mutate original material',()=>assert.deepEqual(base.toJSON(),original));
+run('disabled first call keeps original shadow flags',()=>{assert.equal(a.castShadow,false);assert.equal(a.receiveShadow,false);});
+finish.apply(a,true);run('enabled uses independent material',()=>assert.notEqual(a.material,base));
+run('enabled does not mutate shared original material',()=>assert.deepEqual(base.toJSON(),original));
+run('untouched sibling material remains original',()=>assert.equal(b.material,base));
+finish.apply(a,false);
+run('disable removes all finish texture maps',()=>{assert.equal(a.material.map,null);assert.equal(a.material.bumpMap,null);assert.equal(a.material.roughnessMap,null);});
+run('disable restores original shadow flags',()=>{assert.equal(a.castShadow,false);assert.equal(a.receiveShadow,false);});
+run('repeated 20 toggles preserve source material',()=>{for(let i=0;i<20;i++){finish.apply(a,true);finish.apply(a,false);}assert.deepEqual(base.toJSON(),original);});
+run('generated UV removed after D without source UV mutation',()=>{const mesh=make();mesh.geometry.deleteAttribute('uv');const own=createSurfaceFinish();own.apply(mesh,true);assert.ok(mesh.geometry.attributes.uv);own.apply(mesh,false);assert.equal(mesh.geometry.attributes.uv,undefined);});
+run('existing UV attribute restored by identity and bytes',()=>{const mesh=make(),uv=mesh.geometry.attributes.uv,before=Array.from(uv.array),own=createSurfaceFinish();own.apply(mesh,true);own.apply(mesh,false);assert.equal(mesh.geometry.attributes.uv,uv);assert.deepEqual(Array.from(uv.array),before);});
+const report={scope:'Independent synthetic MeshStandardMaterial runtime test. Not browser or GLB proof.',target,expectBad,results};console.log(JSON.stringify(report,null,2));
+if(expectBad){assert.ok(results.some(r=>r.name==='disabled first call does not mutate original material'&&r.status==='FAIL'));}else assert.ok(results.every(r=>r.status==='PASS'),'material independent assertions failed');

@@ -30,3 +30,19 @@ Chromium/WebKit × 375/390/765/1280 × 通常/reduced motion。Aへの遷移直�
 P3の反復texture、広画面WebKit負荷増、初期timeout原因UNKNOWN、史実位置・構法UNKNOWNを維持。実機Safari・VoiceOver・現地照合NOT_TESTED。Bへの昇格なし。Draft維持、merge/auto-merge/deploy/Issue閉鎖なし。
 
 独立レビュー・最終HEAD CI・artifactの結果はPRと新しい証拠へ追記する。実装・独立検証完了まではP2閉鎖NO、マージ推奨NO。
+
+## 候補7e7e9f9の独立ブラウザ初回実測
+
+実装とは別担当が作成した `independent-review/browser-ad.mjs` をGitHub Actions Ubuntuで新規実行した。旧固定HEADのREDは16条件で80件の想定違反、新版GREENは16条件×9項目＝144 PASS、D照明/霞をAへ戻す故障は16条件で48件の想定違反。全条件の後続工程到達とexecution失敗0を原票から別途確認した。
+
+同一Aモデル・同一カメラ・同一canvas寸法で、Dの設定ON/OFFに起因する旧画像の差は153,424〜518,823画素。新版の16組はdecoded pixel差0、許容差0。PNG生成の成否を画面正しさと取り違えず、実material、灯光、影、霧、背景と合わせて判定した。入力は自動ブラウザのclick/keyboard/mouse API、実機タッチではない。
+
+候補HEAD `7e7e9f94992d862f23470fed57c8e9de328a51e0` のtreeは `39a3de0b189eba4a0939203651b1f5e4e65f4a3e`。PR仮merge `365df0f7` と同treeであることを独立照合した。これはこの候補の結果であり、後続の最終HEADに対する成功を先取りしない。
+
+独立Node所有権検査の当初8項目原票を保持し、追加2項目を含む10項目は別名 `material-ad-10.mjs` と `material-*-10.json` に保存した。固定候補に対する原票は `material-green-fixed-7e7e9f9.json`。自己3単体やブラウザ144項目と混ぜて数えない。
+
+## 検査コード自体の修正と留保
+
+初回の独立ブラウザexpected-failure集約は、意図したA判定失敗の後に処理が中断されても、期待拒否を成功扱いしうる契約の穴があった。初回原票は実際には全後続工程へ到達しexecution失敗0だったため、上記観測は保持できる。独立担当は期待拒否にも必須工程の完了・例外なしを要求するよう集約を補強した。製品の新しい表示不具合とは区別し、初回版はcommit履歴とartifactに残す。補強版を含む最終HEADのCIで再実行する。
+
+自己側の旧/故障検査はA shadowMapの意図した違反を検出した時点でその条件を終了する設計。後続回帰まで実施したとは数えない。新版のみ全工程の成功を要求する。自己CI、補強した独立CI、最終HEAD/artifactの確認が終わるまでは、P2閉鎖と限定取り込みYESを確定しない。最終判断・実行URLはPRへ対象HEADとともに記録する。
