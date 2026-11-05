@@ -6,6 +6,35 @@ on:
 permissions:
   contents: read
 jobs:
+  fixed-view-controls:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Fixed viewpoint controls, guidance, safety and negative controls
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/fixed-view-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for n in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4317 > /dev/null; then break; fi
+            sleep 1
+          done
+          export P3_EVIDENCE="evidence/landscape/p3-fixed-controls/ci-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          node scripts/landscape-fixed-controls.mjs --label=green
+          node scripts/landscape-fixed-controls.mjs --label=mutation-zoom --mutation=zoom
+          node scripts/landscape-fixed-controls.mjs --label=mutation-guidance --mutation=guidance
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fixed-view-controls-evidence
+          path: evidence/landscape/p3-fixed-controls/
+          if-no-files-found: error
   landscape-1590:
     runs-on: ubuntu-24.04
     steps:

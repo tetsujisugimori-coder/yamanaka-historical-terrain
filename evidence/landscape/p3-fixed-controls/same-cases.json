@@ -1,0 +1,266 @@
+{
+  "scope": "Same-condition implementation self comparison",
+  "redHead": "fbdeac1646d7e51a345b96c9e2830052a22f88df",
+  "sourceHashes": {
+    "red": "b1d046879ae10ecd543ffdeb5e5e377942c30f645e6c6eecc3ff6fe01bd807da",
+    "green": "e7c42ddb7c8c7ad784bc5c459571f85a45430b6171f7e11e767f2d90356ae12b"
+  },
+  "rows": [
+    {
+      "case": "chromium/390/1/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/1/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/1/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/1/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/2/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/2/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/2/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/390/2/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/1/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/1/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/1/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/1/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/2/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/2/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/2/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "chromium/1280/2/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/1/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/1/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/1/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/1/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/2/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/2/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/2/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/390/2/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/1/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/1/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/1/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/1/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/2/bailey",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/2/bank",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/2/moat",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    },
+    {
+      "case": "webkit/1280/2/passage",
+      "before": "FAIL",
+      "after": "PASS",
+      "enabledNoOp": true,
+      "eyeUnchanged": true,
+      "targetUnchanged": true
+    }
+  ]
+}

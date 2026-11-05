@@ -1,0 +1,5487 @@
+{
+  "scope": "Implementation self-verification, not independent re-review. Automated engines/viewport, not real iPhone/VoiceOver.",
+  "head": "fbdeac1646d7e51a345b96c9e2830052a22f88df",
+  "sourceHashes": {
+    "src/main.js": "e7c42ddb7c8c7ad784bc5c459571f85a45430b6171f7e11e767f2d90356ae12b",
+    "index.html": "69eec7f6a876cff9f72cdb6e26f887f6613f69a03d0f48664daadd7b1993054e",
+    "src/style.css": "3b50e354622063d3428c423c512e525cc831b89f8a11d6bb8cdea1a162be53fe",
+    "scripts/landscape-fixed-controls.mjs": "4206e416bd0fb08d8491458a4a64eb10792c811a158ee19701c50520474f1c22",
+    "public/data/landscape.json": "c8bc5b4767fef0d3c03989a20667685f2195a7b02986082f6f984cebb87d6e87",
+    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  "utc": "2026-11-05T05:41:02.042Z",
+  "label": "green",
+  "rows": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 1,
+      "station": "bailey",
+      "eye": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "expectedEye": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "initialTarget": [
+        5,
+        576.5900024414063,
+        22
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "touchLook": "PASS trusted CDP touch sequence",
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 1,
+      "station": "bank",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 1,
+      "station": "moat",
+      "eye": [
+        -39,
+        577.6033813476563,
+        10
+      ],
+      "expectedEye": [
+        -39,
+        577.6033813476563,
+        10
+      ],
+      "initialTarget": [
+        -56,
+        574.4033813476562,
+        10
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "touchLook": "PASS trusted CDP touch sequence",
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762406,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279742842347,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914594543971882,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.28288145279963517,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7723360416885751,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3548464454785405,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.3252270300548136,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -3.2382936467373016,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -180.10858400534647,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.902192360102278,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 1,
+      "station": "passage",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 2,
+      "station": "bailey",
+      "eye": [
+        -18,
+        1152.0800048828125,
+        -5
+      ],
+      "expectedEye": [
+        -18,
+        1152.0800048828125,
+        -5
+      ],
+      "initialTarget": [
+        5,
+        1151.7800048828126,
+        22
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "touchLook": "PASS trusted CDP touch sequence",
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 2,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 2,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 2,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          1245.340087890625,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          1150.340087890625,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762402,
+          "start": [
+            -20,
+            1150.340087890625,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            1150.340087890625,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          726.760009765625,
+          -450,
+          650,
+          1220.3800048828125,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279015933503,
+              0.07040091884834553,
+              0.9983781822332122
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914196201885796,
+              -0.19973384025519964,
+              0.9981312206453562
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.2851573301432953,
+              -0.02263269615462187,
+              0.9981982653673203
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7704770137640362,
+              -0.05185857268157498,
+              0.9982943517486889
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3191957113951958,
+              -0.24842640665206464,
+              0.9983951442763433
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.32462163829394053,
+              0.2539874570470872,
+              0.998360024492858
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -2.9749683839280463,
+              -0.9501047845017296,
+              0.9981652614446075
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              163.5568704413267,
+              -49.182359456962345,
+              0.972116897927241
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.686931851181389,
+              0.0729679734864969,
+              0.9987358649090983
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 2,
+      "station": "bank",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 2,
+      "station": "moat",
+      "eye": [
+        -39,
+        1153.5067626953125,
+        10
+      ],
+      "expectedEye": [
+        -39,
+        1153.5067626953125,
+        10
+      ],
+      "initialTarget": [
+        -56,
+        1150.3067626953125,
+        10
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "touchLook": "PASS trusted CDP touch sequence",
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 2,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 2,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 2,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          1245.340087890625,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          1150.340087890625,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 75.54179848762402,
+          "start": [
+            -20,
+            1150.340087890625,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            1150.340087890625,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          726.760009765625,
+          -450,
+          650,
+          1220.3800048828125,
+          650
+        ],
+        "canvas": [
+          349,
+          460
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.12737279015933503,
+              0.07040091884834553,
+              0.9983781822332122
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.5914196201885796,
+              -0.19973384025519964,
+              0.9981312206453562
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.2851573301432953,
+              -0.02263269615462187,
+              0.9981982653673203
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.7704770137640362,
+              -0.05185857268157498,
+              0.9982943517486889
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -1.3191957113951958,
+              -0.24842640665206464,
+              0.9983951442763433
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.32462163829394053,
+              0.2539874570470872,
+              0.998360024492858
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -2.9749683839280463,
+              -0.9501047845017296,
+              0.9981652614446075
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              163.5568704413267,
+              -49.182359456962345,
+              0.972116897927241
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              4.686931851181389,
+              0.0729679734864969,
+              0.9987358649090983
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "ve": 2,
+      "station": "passage",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 30000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "ve": 1,
+      "station": "bailey",
+      "eye": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "expectedEye": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "initialTarget": [
+        5,
+        576.5900024414063,
+        22
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 98.5327806360314,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.06698317697444515,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.3110384172048877,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.14876252071258794,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.4061583227238113,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.7124905871811809,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.1710313359748309,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -1.702963276413225,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -94.71602571833509,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              2.5779791686213582,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "ve": 1,
+      "station": "bank",
+      "eye": [
+        -28,
+        578.4159912109376,
+        -12
+      ],
+      "expectedEye": [
+        -28,
+        578.4159912109376,
+        -12
+      ],
+      "initialTarget": [
+        -36,
+        578.1159912109376,
+        -15
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 98.5327806360314,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.06698317697444515,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.3110384172048877,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.14876252071258794,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.4061583227238113,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.7124905871811809,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.1710313359748309,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -1.702963276413225,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -94.71602571833509,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              2.5779791686213582,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "ve": 1,
+      "station": "moat",
+      "eye": [
+        -39,
+        577.6033813476563,
+        10
+      ],
+      "expectedEye": [
+        -39,
+        577.6033813476563,
+        10
+      ],
+      "initialTarget": [
+        -56,
+        574.4033813476562,
+        10
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 98.5327806360314,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.06698317697444515,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.3110384172048877,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.14876252071258794,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.4061583227238113,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.7124905871811809,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.1710313359748309,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -1.702963276413225,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -94.71602571833509,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              2.5779791686213582,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "ve": 1,
+      "station": "passage",
+      "eye": [
+        5,
+        575.314013671875,
+        30
+      ],
+      "expectedEye": [
+        5,
+        575.314013671875,
+        30
+      ],
+      "initialTarget": [
+        5,
+        575.0140136718751,
+        18
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 1,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 1,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 1,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          670.1700439453125,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          575.1700439453125,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 98.5327806360314,
+          "start": [
+            -20,
+            575.1700439453125,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            575.1700439453125,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          363.3800048828125,
+          -450,
+          650,
+          610.1900024414062,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.06698317697444515,
+              0.07040118310533819,
+              0.9983781821400853
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.3110384172048877,
+              -0.19944015753861472,
+              0.998131094102901
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.14876252071258794,
+              -0.05884640292526048,
+              0.9982127250549425
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.4061583227238113,
+              -0.04098108699635995,
+              0.9982902121857379
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.7124905871811809,
+              -0.13190652681061985,
+              0.9983515034478657
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.1710313359748309,
+              0.262965226618078,
+              0.9983569474287004
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -1.702963276413225,
+              -0.6305754654862011,
+              0.9980019769267942
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              -94.71602571833509,
+              44.57797242883642,
+              1.0307258428836947
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              2.5779791686213582,
+              0.28575230985263445,
+              0.9986773466742331
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "ve": 2,
+      "station": "bailey",
+      "eye": [
+        -18,
+        1152.0800048828125,
+        -5
+      ],
+      "expectedEye": [
+        -18,
+        1152.0800048828125,
+        -5
+      ],
+      "initialTarget": [
+        5,
+        1151.7800048828126,
+        22
+      ],
+      "controls": {
+        "zoomInDisabled": true,
+        "zoomOutDisabled": true,
+        "help": "定点観察：1本指・ドラッグ・矢印キーで見回す。足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。",
+        "aria": "山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。"
+      },
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointermove",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "pointerType": "mouse",
+          "trusted": true
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "mouse",
+          "trusted": true
+        }
+      ],
+      "overview": {
+        "state": {
+          "view": "reconstruction",
+          "mode": "terrain",
+          "selected": "nm-bailey",
+          "exaggeration": 2,
+          "route": false,
+          "features": true,
+          "ready": true,
+          "landscape": true,
+          "drama": true,
+          "station": null
+        },
+        "landscape": {
+          "visible": true,
+          "scale": 2,
+          "objects": [
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-palisade",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-gate",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-vegetation",
+              "category": "C"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-flags",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            },
+            {
+              "id": "sc-people",
+              "category": "D"
+            }
+          ],
+          "stations": [
+            {
+              "id": "bailey",
+              "name": "曲輪に立つ",
+              "eye": [
+                -18,
+                5
+              ],
+              "look": [
+                5,
+                -22
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "bank",
+              "name": "土塁の内側",
+              "eye": [
+                -28,
+                12
+              ],
+              "look": [
+                -36,
+                15
+              ],
+              "lookDown": 0.3
+            },
+            {
+              "id": "moat",
+              "name": "障子堀を見下ろす",
+              "eye": [
+                -39,
+                -10
+              ],
+              "look": [
+                -56,
+                -10
+              ],
+              "lookDown": 3.2
+            },
+            {
+              "id": "passage",
+              "name": "虎口の通路",
+              "eye": [
+                5,
+                -30
+              ],
+              "look": [
+                5,
+                -18
+              ],
+              "lookDown": 0.3
+            }
+          ]
+        },
+        "section": {
+          "status": "idle",
+          "point": 0,
+          "data": null,
+          "context": {
+            "ready": true,
+            "view": "reconstruction",
+            "comparison": "restored",
+            "exaggeration": 2,
+            "failed": false,
+            "visible": [
+              "nm-bailey",
+              "nm-moat",
+              "nm-rampart",
+              "nm-passage",
+              "nm-transition",
+              "nm-context"
+            ]
+          },
+          "markers": [],
+          "line": []
+        },
+        "camera": [
+          -115,
+          1245.340087890625,
+          115.00000000000001
+        ],
+        "target": [
+          -20,
+          1150.340087890625,
+          0
+        ],
+        "scale": {
+          "metres": 20,
+          "pixels": 98.53278063603133,
+          "start": [
+            -20,
+            1150.340087890625,
+            0
+          ],
+          "end": [
+            -4.5807649674582045,
+            1150.340087890625,
+            12.737628939925827
+          ]
+        },
+        "triangles": 462372,
+        "drawCalls": 20,
+        "geometries": 26,
+        "modelBounds": [
+          -350,
+          726.760009765625,
+          -450,
+          650,
+          1220.3800048828125,
+          650
+        ],
+        "canvas": [
+          865.625,
+          600
+        ],
+        "studyBounds": [
+          -160,
+          35,
+          -130,
+          65
+        ],
+        "facilityScreen": [
+          {
+            "id": "nm-bailey",
+            "ndc": [
+              0.0669831731517558,
+              0.07040091884834553,
+              0.9983781822332122
+            ]
+          },
+          {
+            "id": "nm-moat",
+            "ndc": [
+              -0.31101746907546973,
+              -0.19973384025519964,
+              0.9981312206453562
+            ]
+          },
+          {
+            "id": "nm-rampart",
+            "ndc": [
+              -0.14995936570586985,
+              -0.02263269615462187,
+              0.9981982653673203
+            ]
+          },
+          {
+            "id": "nm-passage",
+            "ndc": [
+              0.4051806917148057,
+              -0.05185857268157498,
+              0.9982943517486889
+            ]
+          },
+          {
+            "id": "nm-transition",
+            "ndc": [
+              -0.6937424755075287,
+              -0.24842640665206464,
+              0.9983951442763433
+            ]
+          }
+        ],
+        "reconstruction": {
+          "comparison": "restored",
+          "visible": [
+            "nm-bailey",
+            "nm-moat",
+            "nm-rampart",
+            "nm-passage",
+            "nm-transition",
+            "nm-context"
+          ],
+          "hidden": []
+        },
+        "markerScreen": [
+          {
+            "id": "castle",
+            "ndc": [
+              0.17071297079579634,
+              0.2539874570470872,
+              0.998360024492858
+            ]
+          },
+          {
+            "id": "west",
+            "ndc": [
+              -1.5644850217410966,
+              -0.9501047845017296,
+              0.9981652614446075
+            ]
+          },
+          {
+            "id": "south",
+            "ndc": [
+              86.01176247474825,
+              -49.182359456962345,
+              0.972116897927241
+            ]
+          },
+          {
+            "id": "route",
+            "ndc": [
+              2.464777346444534,
+              0.0729679734864969,
+              0.9987358649090983
+            ]
+          }
+        ]
+      },
+      "status": "PASS"
+    }
+  ]
+}

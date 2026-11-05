@@ -17,10 +17,17 @@ let landscapeMeta;
 const sourceDialog=$('#sources'); $('#sources-open').onclick=()=>sourceDialog.showModal();$('#sources-close').onclick=()=>sourceDialog.close();
 sourceDialog.addEventListener('close',()=>$('#sources-open').focus());
 const viewport=$('#viewport'),viewportLabel=viewport.getAttribute('aria-label');
+const mapHelp=$('.map-help'),mapHelpDefault=mapHelp.innerHTML;
+const fixedViewHelp='定点観察：1本指・ドラッグ・矢印キーで見回す。<br>足場は固定。移動・ズームはできません。「俯瞰へ」で通常操作に戻ります。';
 let renderer,reading,sectionExhibit,renderFailed=false,teardownTerrain=()=>{};
+function syncNavigationControls(enabled=state.ready&&!renderFailed){
+ const fixed=Boolean(state.station);for(const b of $$('#zoom-in, #zoom-out'))b.disabled=!enabled||fixed;
+ mapHelp.innerHTML=fixed?fixedViewHelp:mapHelpDefault;
+ viewport.setAttribute('aria-label',!enabled?'3D地形の状態':fixed?'山中城3D定点観察。1本指・ドラッグ・矢印キーで見回す。移動・ズームはできません。通常操作は俯瞰へ。':viewportLabel);
+}
 function setRenderControls(enabled){
  $$('.controls fieldset, #reconstruction-controls fieldset').forEach(el=>{el.disabled=!enabled;});$$('.map-tools button, #focus-feature, #landscape-enter, #landscape-toolbar button').forEach(el=>{el.disabled=!enabled;});
- viewport.tabIndex=enabled?0:-1;viewport.setAttribute('role',enabled?'application':'region');viewport.setAttribute('aria-label',enabled?viewportLabel:'3D地形の状態');
+ viewport.tabIndex=enabled?0:-1;viewport.setAttribute('role',enabled?'application':'region');syncNavigationControls(enabled);
 }
 function showError(message,error,kind='error'){
  renderFailed=true;state.ready=false;sectionExhibit?.fail();setRenderControls(false);reading?.setSelectionHandler(null);teardownTerrain();document.body.dataset.renderState=kind;
@@ -60,7 +67,7 @@ async function initialize(features){
   const f=features.find(f=>f.id===state.selected);$('#landscape-selection-status').textContent=f?.landscape?(comparison==='current'?'選択中の景観要素に現況Aの対応物はありません。解説を保持しています。':f.category==='D'&&!state.drama?'選択中のD要素は非表示です。創作の解説を保持しています。':'選択中：'+f.category+' '+f.name):'';
   scene.background=new THREE.Color(active?'#cfdee1':'#e2e9de');scene.fog=active?new THREE.Fog('#cfdee1',220,1300):null;
  }
- function leaveStation(){state.station=null;controls.enabled=true;$('#station-status').textContent='低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。';}
+ function leaveStation(){state.station=null;controls.enabled=true;syncNavigationControls();$('#station-status').textContent='低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。';}
  function applyLayers(){if(state.view!=='reconstruction'){syncLandscape();return;}currentModel.children.forEach(ob=>{ob.visible=!(comparison==='restored'&&ob.userData.facilityId&&ob.userData.facilityId!=='nm-context'&&(!$('#category-c').checked||hiddenFacilities.has(ob.userData.facilityId)));});syncLandscape();}
  $('#facility-layers').replaceChildren(...modelFeatures.map(f=>{const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.facility=f.id;input.onchange=()=>{if(input.checked)hiddenFacilities.delete(f.id);else hiddenFacilities.add(f.id);applyLayers();sectionExhibit?.sync();render();};label.append(input,document.createTextNode(`C ${f.shortLabel}`));return label;}));
  $('#category-c').onchange=()=>{applyLayers();sectionExhibit?.sync();render();};
@@ -170,7 +177,7 @@ async function initialize(features){
   const [a,c]=await Promise.all([getModel('reconstruction','current'),getModel('reconstruction','restored')]);if(!intent.canMoveCamera())return;
   const p=landscapeMeta.stations.find(x=>x.id===b.dataset.station),[e,n]=p.eye;
   const heights=[a,c].map(m=>sampleSurfaceHeight(m.children,e,n,m===currentModel?state.exaggeration:1));
-  const y=Math.max(...heights)*state.exaggeration+1.7;state.station=p.id;controls.enabled=false;
+  const y=Math.max(...heights)*state.exaggeration+1.7;state.station=p.id;controls.enabled=false;syncNavigationControls();
   camera.position.set(e,y,-n);controls.target.set(p.look[0],y-p.lookDown,-p.look[1]);camera.lookAt(controls.target);
   $('#station-status').textContent=p.name+'：固定観察、足場はA/Cの高い方＋1.7m。左右ドラッグ・矢印で周囲を見る。自由歩行なし。史実の経路ではありません。';render();
  }));

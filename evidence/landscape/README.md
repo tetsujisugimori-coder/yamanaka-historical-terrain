@@ -1,6 +1,6 @@
 # Issue #9 提出証拠
 
-総合 **PARTIAL**。C/D景観と定点観察を実装し、自己検証を保存した。独立担当レビュー、実機iPhone Safari、VoiceOver、現地照合は未実施。Draft解除・merge・auto-merge・本番deploy・Issue閉鎖は行わない。
+総合 **PARTIAL**。C/D景観と定点観察を実装し、自己検証を保存した。fbdeac1の独立レビューはPARTIAL（限定範囲merge YES、P1/P2なし、P3一件）。P3修正後の独立再確認、実機iPhone Safari、VoiceOver、現地照合は未実施。Draft解除・merge・auto-merge・本番deploy・Issue閉鎖は行わない。
 
 [Issue #9](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/9) / [Draft PR #10](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/10) / [制作・資料・再現・留保](../../docs/landscape-1590.md)。最終HEAD/treeと最新CIはPR本文を参照。基準mainは`7465eebc6667d471e35c1d2b37a0782ad654f18a`。
 
@@ -16,6 +16,7 @@
 
 | 票 | 結果・対象 |
 |---|---|
+| [定点操作P3修正](p3-fixed-controls/README.md) | 修正前32反例、同条件修正後32、別ページのtrusted touch見回し8、ズーム/案内の変異4。旧画像は旧UIの履歴、新しい定点画像と留保はこの記録を参照 |
 | [unit-final.txt](unit-final.txt) | 28単体試験。既存のGIS/GLB/固定断面と、全景観部品の座標・category・出典参照・観察点高さ |
 | [native-blender.json](native-blender.json)、[native-blender-check.json](native-blender-check.json) | Blender4.5.9、終了0。実生成と別プロセス再読込、旧10メッシュhash・271追加部品・C/D・外部画像0 |
 | [native-gis.json](native-gis.json) | QGIS3.44.10、終了0。原10＋2レイヤー、全12レイヤー有効・EPSG:6676・再読込 |
@@ -41,7 +42,7 @@
 
 ## 未確認と履歴
 
-独立レビューNOT_PERFORMED（親担当が別担当を手配）。実機iPhone Safari・VoiceOver・現地はNOT_TESTED。旧QGIS内部クラッシュ・過去ブラウザtimeout根本原因・地理参照残差・1590年位置/植生はUNKNOWN。新規B形状0。
+親担当が手配した独立レビューはfbdeac1で実施済み。景観のまとまり、独立168断面標本、幾何・native再読込・既存659ファイル保全を確認。追加の全62断面runnerは完走していない。自己検証/CIの全62条件と独立レビューを混同しない。P3修正HEADの独立再確認は未実施。実機iPhone Safari・VoiceOver・現地はNOT_TESTED。旧QGIS内部クラッシュ・過去ブラウザtimeout根本原因・地理参照残差・1590年位置/植生はUNKNOWN。新規B形状0。
 
 初回harnessのimport変換不足、依存取得競合、中間版配信中の失敗、765px初期ズーム上限、途中修正のモバイル幅0、旧Reset期待値のschema不一致、最初の画面外点のpick検査は、それぞれ別票で保存。成功票へ上書きせず、製品不具合と試験不備を分ける。`b9054a2-attempt`等の中間票は最終版の判定票ではない。
 
