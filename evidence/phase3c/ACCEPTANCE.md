@@ -15,7 +15,7 @@
 | 反復質感と同条件画像 | 多尺度土模様・木目、70m斜交UV | CI `phase3c-appearance-performance`。改善の定性的判定とA不変の0画素検査を混同しない |
 | 断面・旧施設・1x/2x | 既存の実GLBは無変更。内側targetの標高表示は1x/2xを明示計算 | `sections/`、独立 `v2-target.json`、既存回帰CI |
 | 404・遅延・連続切替・WebGL不能 | 独立遅延読込、旧西側地表依存、HTML説明 | 新旧ブラウザCI。欠落旧地表依存guardの故障再投入あり |
-| 性能 | 同一runner・画角・600px地形panel、2engine×2width×2version×3quality×3trial | CI `phase3c-appearance-performance`。72試行予定、実績件数は結果JSONで確認 |
+| 性能 | 同一runner・画角・600px地形panel、2engine×2width×2version×3quality×3trial | CI `phase3c-appearance-performance`。47b8の72試行を独立集計済み。ページ起動を別計測するv3は最終CIで追加確認 |
 | 独立レビュー | 史料、3D技術、ブラウザ視覚の3担当 | `independent/history/`、`technical/`、`visual/`。対象hashと適用範囲を個別記録 |
 
 ## 判定しないもの

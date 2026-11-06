@@ -1,0 +1,108 @@
+{
+  "head": "c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7",
+  "tree": "5e44d4b1a310a45c9de1176939c6c60fb16b76d1",
+  "hashChecks": {
+    "src/main.js": {
+      "recorded": "480f53e512968efa89af3f5af7a6284d8ec0bf3651d0cd68221656154ece2474",
+      "local": "480f53e512968efa89af3f5af7a6284d8ec0bf3651d0cd68221656154ece2474",
+      "equal": true
+    },
+    "src/phase3c.js": {
+      "recorded": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+      "local": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+      "equal": true
+    },
+    "src/phase3b.js": {
+      "recorded": "4242b367eb6f744d9e21104f7e3efa50cb9a2cf0180b3b5772f824efdcf369fd",
+      "local": "4242b367eb6f744d9e21104f7e3efa50cb9a2cf0180b3b5772f824efdcf369fd",
+      "equal": true
+    },
+    "src/reading.js": {
+      "recorded": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+      "local": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+      "equal": true
+    },
+    "src/style.css": {
+      "recorded": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+      "local": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+      "equal": true
+    },
+    "src/landscape.js": {
+      "recorded": "879deb021a976f02b5750878393913978b92c11e8a0508edf21a3738900683db",
+      "local": "879deb021a976f02b5750878393913978b92c11e8a0508edf21a3738900683db",
+      "equal": true
+    },
+    "src/surface.js": {
+      "recorded": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+      "local": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5",
+      "equal": true
+    },
+    "src/intent.js": {
+      "recorded": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+      "local": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+      "equal": true
+    },
+    "index.html": {
+      "recorded": "210b48b643d8af2e941307ce996dd83d3bbeb70146e5913597cb8e5b46368350",
+      "local": "210b48b643d8af2e941307ce996dd83d3bbeb70146e5913597cb8e5b46368350",
+      "equal": true
+    },
+    "scripts/phase3c-browser.mjs": {
+      "recorded": "d97452f192059244599451c6261f520081c8d0dad6dd533fc04fa4818fd1a903",
+      "local": "d97452f192059244599451c6261f520081c8d0dad6dd533fc04fa4818fd1a903",
+      "equal": true
+    },
+    "tests/section-oracle.mjs": {
+      "recorded": "3b17c27a3c1465402ce58bea3dcbe9684ff628c97737bd164e245ec7eceb230a",
+      "local": "3b17c27a3c1465402ce58bea3dcbe9684ff628c97737bd164e245ec7eceb230a",
+      "equal": true
+    },
+    "tests/glb-surface.mjs": {
+      "recorded": "1aea61e261dedd9c0d87d15b1428d9453e46d7819a8017fa7065e623c1963543",
+      "local": "1aea61e261dedd9c0d87d15b1428d9453e46d7819a8017fa7065e623c1963543",
+      "equal": true
+    },
+    "public/data/phase3c.json": {
+      "recorded": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+      "local": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+      "equal": true
+    },
+    "public/data/phase3c.glb": {
+      "recorded": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "local": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "equal": true
+    },
+    "public/data/phase3b.json": {
+      "recorded": "635a427a8f3897dae165415b0352437f77e4f70bf8058e5428d07cb84ee52ef5",
+      "local": "635a427a8f3897dae165415b0352437f77e4f70bf8058e5428d07cb84ee52ef5",
+      "equal": true
+    },
+    "public/data/phase3b.glb": {
+      "recorded": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "local": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "equal": true
+    },
+    "public/data/castle.glb": {
+      "recorded": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "local": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "equal": true
+    },
+    "public/data/nishinomaru.glb": {
+      "recorded": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "local": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "equal": true
+    },
+    "public/data/regional.glb": {
+      "recorded": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+      "local": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+      "equal": true
+    },
+    "public/data/moat-study.glb": {
+      "recorded": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+      "local": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+      "equal": true
+    }
+  },
+  "artifactRoot": "/workspace/scratch/e622c1e9421e/phase3c-artifacts/42152881096/phase3c-browser/browser",
+  "scope": "Producer images independently inspected, not independent runtime pass"
+}

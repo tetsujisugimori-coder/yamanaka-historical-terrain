@@ -18,7 +18,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/browser
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/browser/browser-install.log
       - run: python3 -m pip install numpy
       - name: Exported geometry and negative controls
         run: python3 scripts/phase3c-relationship-check.py
@@ -47,7 +53,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/performance
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/performance/browser-install.log
       - name: Same-pose before-after and measured performance
         run: |
           git worktree add --detach /tmp/phase3c-baseline ed22133f766aa1a2256dcebbb0413ec11d479106
@@ -80,7 +92,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/independent/visual
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/independent/visual/browser-install.log
       - name: Reviewer-authored independent browser evidence
         run: |
           npm run dev -- --port 4317 --strictPort >/tmp/independent-vite.txt 2>&1 &
@@ -105,7 +123,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps webkit
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/performance-diagnosis
+          npx playwright install --with-deps webkit 2>&1 | tee evidence/phase3c/performance-diagnosis/browser-install.log
       - name: Isolate camera redraw, optional mesh and D costs
         run: |
           npm run dev -- --port 4317 --strictPort >/tmp/diagnosis-vite.txt 2>&1 &
