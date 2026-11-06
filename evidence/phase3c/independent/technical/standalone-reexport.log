@@ -1,0 +1,22 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+07:58:37 | INFO: Starting glTF 2.0 export
+07:58:37 | INFO: Extracting primitive: ic-bridge.earth
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-koguchi.earth
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-bridge.path
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-koguchi.path
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-lookout.earth
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-bridge.grass
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Extracting primitive: ic-lookout.grass
+07:58:37 | INFO: Primitives created: 1
+07:58:37 | INFO: Finished glTF 2.0 export in 0.03581523895263672 s
+
+Blender 4.3.2
+Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/yamanaka-phase3c.blend"
+
+Blender quit

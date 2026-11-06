@@ -1,0 +1,37 @@
+[
+  {
+    "name": "ic-bridge.surface.earth",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-koguchi.surface.earth",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-bridge.surface.path",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-koguchi.surface.path",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-lookout.surface.earth",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-bridge.surface.grass",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  },
+  {
+    "name": "ic-lookout.surface.grass",
+    "maxCoordinateDelta": 0.0,
+    "extrasMatch": true
+  }
+]

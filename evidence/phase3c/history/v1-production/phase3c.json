@@ -1,0 +1,383 @@
+{
+  "version": 1,
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "axes": "Blender east,north,up; glTF east,up,south",
+  "bounds": [
+    -100,
+    -45,
+    -68,
+    50
+  ],
+  "license": "MIT project-original primitives; no external assets",
+  "placement": "C conceptual alternative on existing transition margins, no surveyed control points",
+  "ground": {
+    "bounds": [
+      -100,
+      -45,
+      -68,
+      50
+    ],
+    "step": 1.0,
+    "cols": 33,
+    "rows": 96,
+    "rasterStep": 0.25,
+    "boundaryStep": 0.25,
+    "triangulation": "1m interior SW-NE; boundary cell centre fans with .25m external segments",
+    "order": "south to north; diagonal SW-NE",
+    "replaces": [
+      "wb surface transition margin",
+      "nm-transition"
+    ]
+  },
+  "elements": [
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3c-v1",
+      "editor": "production/yamanaka-phase3c.blend / production/phase3c/recipe.json",
+      "sourceIds": [
+        "mishima-inner",
+        "plan"
+      ],
+      "accuracy": "UNKNOWN：基準点0。現地位置・向き・年代別形状を確定していない。",
+      "direction": "形状C。土色・草・凹凸・光影Dは別管理。",
+      "unknown": "実測座標、1590年の断面・勾配・材質・寸法、現地との図面対応はUNKNOWN。",
+      "referenceDimensions": {
+        "widthMetres": "UNKNOWN",
+        "heightMetres": "UNKNOWN",
+        "slopeDegrees": "UNKNOWN"
+      },
+      "supportScope": "1301の調査対象名称は存在・調査履歴の根拠。具体的な位置・形状・西櫓との接続形式の証明ではない。",
+      "sourcePage": "1301 HTML 発掘調査年度表; 保存活用計画 印刷p102（木橋接続不明）",
+      "dating": "昭和50・51年度調査対象として確認。個別形状の1590年帰属はUNKNOWN。",
+      "id": "ic-lookout",
+      "name": "西ノ丸見張台の高所候補",
+      "shortLabel": "西ノ丸見張台の高所候補",
+      "modelObject": "ic-lookout",
+      "local": [
+        -76,
+        36
+      ],
+      "height": 567.0759887695312,
+      "role": "高所と周囲の斜面が見通しを変える。見張台という名から櫓建物を置かない。",
+      "description": "高所と周囲の斜面が見通しを変える。見張台という名から櫓建物を置かない。",
+      "assumptions": "既存C余白に幅12m・奥行16m・中心追加高2.5mの土の高所を仮置き。",
+      "modelDimensions": {
+        "footprint": [
+          12,
+          16
+        ],
+        "centreAddedHeight": 2.5
+      }
+    },
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3c-v1",
+      "editor": "production/yamanaka-phase3c.blend / production/phase3c/recipe.json",
+      "sourceIds": [
+        "mishima-inner",
+        "plan"
+      ],
+      "accuracy": "UNKNOWN：基準点0。現地位置・向き・年代別形状を確定していない。",
+      "direction": "形状C。土色・草・凹凸・光影Dは別管理。",
+      "unknown": "実測座標、1590年の断面・勾配・材質・寸法、現地との図面対応はUNKNOWN。",
+      "referenceDimensions": {
+        "widthMetres": "UNKNOWN",
+        "heightMetres": "UNKNOWN",
+        "slopeDegrees": "UNKNOWN"
+      },
+      "supportScope": "1301の調査対象名称は存在・調査履歴の根拠。具体的な位置・形状・西櫓との接続形式の証明ではない。",
+      "sourcePage": "1301 HTML 発掘調査年度表; 保存活用計画 印刷p102（木橋接続不明）",
+      "dating": "昭和50・51年度調査対象として確認。個別形状の1590年帰属はUNKNOWN。",
+      "id": "ic-bridge",
+      "name": "西ノ丸・西櫓方面の土橋候補",
+      "shortLabel": "西ノ丸・西櫓方面の土橋候補",
+      "modelObject": "ic-bridge",
+      "local": [
+        -88,
+        -35
+      ],
+      "height": 557.2053833007812,
+      "role": "両側の切下げに挟まれた土の通路を観察する。西櫓への接続形式は確定していない。",
+      "description": "両側の切下げに挟まれた土の通路を観察する。西櫓への接続形式は確定していない。",
+      "assumptions": "西方への比較用通路候補。中心線N=-35m、模型上の平坦な通路幅6m、両側最大切下げ3m。東西の旧C高低差を維持。",
+      "modelDimensions": {
+        "cutLength": 26,
+        "clearNeckWidth": 6,
+        "maximumCut": 3,
+        "axis": "east-west"
+      }
+    },
+    {
+      "category": "C",
+      "landscape": true,
+      "reconstruction": true,
+      "modelVersion": "phase3c-v1",
+      "editor": "production/yamanaka-phase3c.blend / production/phase3c/recipe.json",
+      "sourceIds": [
+        "mishima-inner",
+        "plan"
+      ],
+      "accuracy": "UNKNOWN：基準点0。現地位置・向き・年代別形状を確定していない。",
+      "direction": "形状C。土色・草・凹凸・光影Dは別管理。",
+      "unknown": "実測座標、1590年の断面・勾配・材質・寸法、現地との図面対応はUNKNOWN。",
+      "referenceDimensions": {
+        "widthMetres": "UNKNOWN",
+        "heightMetres": "UNKNOWN",
+        "slopeDegrees": "UNKNOWN"
+      },
+      "supportScope": "1301の調査対象名称は存在・調査履歴の根拠。具体的な位置・形状・西櫓との接続形式の証明ではない。",
+      "sourcePage": "1301 HTML 発掘調査年度表; 保存活用計画 印刷p102（木橋接続不明）",
+      "dating": "昭和50・51年度調査対象として確認。個別形状の1590年帰属はUNKNOWN。",
+      "id": "ic-koguchi",
+      "name": "見張台側虎口の候補",
+      "shortLabel": "見張台側虎口の候補",
+      "modelObject": "ic-koguchi",
+      "local": [
+        -77,
+        -35
+      ],
+      "height": 571.2479858398438,
+      "role": "土塁で視線が狭まる入口を外側・内側から比べる。既存冠木門・西木戸口とは別の候補。",
+      "description": "土塁で視線が狭まる入口を外側・内側から比べる。既存冠木門・西木戸口とは別の候補。",
+      "assumptions": "模型の土橋東側に4m幅の開口と高さ最大2.3mの土塁を仮置き。位置・方向は史料で確定せず。",
+      "modelDimensions": {
+        "clearOpening": 4,
+        "maximumBankAddition": 2.3
+      }
+    }
+  ],
+  "stations": [
+    {
+      "id": "ic-station-nishinomaru",
+      "elementId": "nm-bailey",
+      "name": "西ノ丸の曲輪",
+      "eye": [
+        -20,
+        5
+      ],
+      "look": [
+        -36,
+        15
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 575.1900024414062,
+      "direction": "曲輪から土塁と堀の向こうを見比べる。",
+      "category": "C",
+      "support": "actual previous C surface; not new geometry",
+      "transition": "instant relocation, not walking"
+    },
+    {
+      "id": "ic-lookout",
+      "elementId": "ic-lookout",
+      "name": "見張台の土の高所",
+      "eye": [
+        -76,
+        36
+      ],
+      "look": [
+        -88,
+        30
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 567.0759887695312,
+      "direction": "高所の縁と西側の低地を見比べる。櫓の存在は未確定。",
+      "category": "C",
+      "support": "actual phase3c triangle mesh; selected eye slope checked separately",
+      "transition": "instant observation relocation; NOT a continuous walk or historic navigability claim"
+    },
+    {
+      "id": "ic-bridge",
+      "elementId": "ic-bridge",
+      "name": "土橋の西側",
+      "eye": [
+        -91,
+        -35
+      ],
+      "look": [
+        -72,
+        -35
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 555.6599731445312,
+      "direction": "両側の堀と狭い土の道。通行可能性は研究・戦闘データではない。",
+      "category": "C",
+      "support": "actual phase3c triangle mesh; selected eye slope checked separately",
+      "transition": "instant observation relocation; NOT a continuous walk or historic navigability claim"
+    },
+    {
+      "id": "ic-koguchi",
+      "elementId": "ic-koguchi",
+      "name": "虎口の外側",
+      "eye": [
+        -79,
+        -35
+      ],
+      "look": [
+        -76,
+        -35
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 571.7760009765625,
+      "direction": "両脇の土塁による見通しの絞りを見る。",
+      "category": "C",
+      "support": "actual phase3c triangle mesh; selected eye slope checked separately",
+      "transition": "instant observation relocation; NOT a continuous walk or historic navigability claim"
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "elementId": "ic-koguchi",
+      "name": "虎口の内側",
+      "eye": [
+        -73,
+        -35
+      ],
+      "look": [
+        -89,
+        -35
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 570.4840087890625,
+      "direction": "外側と逆向きに見て土塁の遮り方を比べる。",
+      "category": "C",
+      "support": "actual phase3c triangle mesh; selected eye slope checked separately",
+      "transition": "instant observation relocation; NOT a continuous walk or historic navigability claim"
+    },
+    {
+      "id": "ic-station-western",
+      "elementId": "wb-bailey",
+      "name": "西櫓の曲輪",
+      "eye": [
+        -143,
+        2
+      ],
+      "look": [
+        -131,
+        7
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 553.0239868164062,
+      "direction": "曲輪内から土塁と木造候補を観察する。",
+      "category": "C",
+      "support": "actual previous C surface; not new geometry",
+      "transition": "instant relocation, not walking"
+    },
+    {
+      "id": "ic-station-westgate",
+      "elementId": "wb-gate",
+      "name": "西木戸口",
+      "eye": [
+        -195,
+        -35
+      ],
+      "look": [
+        -191,
+        -35
+      ],
+      "lookDown": 0,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 548.3800048828125,
+      "direction": "西端の門候補による道幅の絞りを見る。",
+      "category": "C",
+      "support": "actual previous C surface; not new geometry",
+      "transition": "instant relocation, not walking"
+    },
+    {
+      "id": "ic-station-westmoat",
+      "elementId": "wb-moat",
+      "name": "西櫓堀の外縁",
+      "eye": [
+        -154,
+        5
+      ],
+      "look": [
+        -169,
+        5
+      ],
+      "lookDown": 4,
+      "eyeHeight": 1.7,
+      "fov": 60,
+      "groundHeight": 552.1508178710938,
+      "direction": "単列の畝と堀底の高低差を見る。",
+      "category": "C",
+      "support": "actual previous C surface; not new geometry",
+      "transition": "instant relocation, not walking"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mishima-inner",
+      "title": "三島市：山中城跡環境整備事業（西ノ丸見張台・土橋・見張台虎口の調査履歴）",
+      "url": "https://www.city.mishima.shizuoka.jp/page/1301.html",
+      "year": "更新2026-02-05 / 閲覧2026-11-05 UTC",
+      "use": "昭和50年度に見張台・土橋、51年度に見張台虎口が調査対象。名称と調査履歴のみを根拠にする。",
+      "terms": "事実の独自要約とリンクのみ。本文・写真・図面・PDFは再配布しない。",
+      "accuracy": "個別寸法、方位、接続形式、基準点対応はUNKNOWN。名称から上部建物を推定しない。"
+    }
+  ],
+  "overview": {
+    "target": [
+      -84,
+      570,
+      0
+    ],
+    "eye": [
+      -145,
+      625,
+      65
+    ]
+  },
+  "simulation": {
+    "exported": false,
+    "navigability": "UNKNOWN; observation supports are not walkability evidence"
+  },
+  "sourceCautions": [
+    "保存活用計画p102：西ノ丸・西櫓の木橋接続は橋脚柱穴未検出により不明。土橋名をこの接続形式の証拠にしない。",
+    "見張台は高所名称。櫓建物は追加しない。",
+    "保存活用計画p102では現地の見張台上・土塁は立入禁止。仮想観察は現地通行案内ではない。"
+  ],
+  "referenceDimensions": {
+    "all": "UNKNOWN; no dimension extracted for these three features"
+  },
+  "modelDimensions": {
+    "ic-lookout": {
+      "footprint": [
+        12,
+        16
+      ],
+      "centreAddedHeight": 2.5
+    },
+    "ic-bridge": {
+      "cutLength": 26,
+      "clearNeckWidth": 6,
+      "maximumCut": 3,
+      "axis": "east-west"
+    },
+    "ic-koguchi": {
+      "clearOpening": 4,
+      "maximumBankAddition": 2.3
+    }
+  }
+}

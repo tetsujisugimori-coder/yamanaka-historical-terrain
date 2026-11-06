@@ -1,0 +1,268 @@
+[
+  {
+    "file": "yamanaka-phase3b.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "name": "1590 elements / C-D hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/landscape/elements.geojson",
+        "features": 5
+      },
+      {
+        "name": "1590 stations / C-D hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/landscape/stations.geojson",
+        "features": 4
+      },
+      {
+        "name": "Approximate observation anchors",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/observation-anchors.geojson",
+        "features": 4
+      },
+      {
+        "name": "C 推定地表 0.5m計算格子 / 実測精度ではない",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase2a/inferred-surface-50cm.tif",
+        "features": null
+      },
+      {
+        "name": "C 仮定配置範囲 / accuracy UNKNOWN",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase2a/facilities.gpkg",
+        "features": 5
+      },
+      {
+        "name": "Phase3B C candidate heights / NOT measured DEM",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/surface-candidate-1m.tif",
+        "features": null
+      },
+      {
+        "name": "Phase3B C elements hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/elements.geojson",
+        "features": 4
+      },
+      {
+        "name": "Phase3B C stations hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/stations.geojson",
+        "features": 5
+      },
+      {
+        "name": "Phase3B C terrain footprint / not surveyed",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/footprint.geojson",
+        "features": 1
+      },
+      {
+        "name": "Regional DEM: 5A + explicitly masked 10B gaps",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-dem-20m.tif",
+        "features": null
+      },
+      {
+        "name": "Source provenance: 5=DEM5A, 10=DEM10B",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-source-mask.tif",
+        "features": null
+      },
+      {
+        "name": "castle-dem-1m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/castle-dem-1m.tif",
+        "features": null
+      },
+      {
+        "name": "hillshade",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/hillshade.tif",
+        "features": null
+      },
+      {
+        "name": "regional-10b-20m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-10b-20m.tif",
+        "features": null
+      },
+      {
+        "name": "regional-5a-20m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-5a-20m.tif",
+        "features": null
+      },
+      {
+        "name": "slope-degrees",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/slope-degrees.tif",
+        "features": null
+      }
+    ]
+  },
+  {
+    "file": "yamanaka-phase3c.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "name": "1590 elements / C-D hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/landscape/elements.geojson",
+        "features": 5
+      },
+      {
+        "name": "1590 stations / C-D hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/landscape/stations.geojson",
+        "features": 4
+      },
+      {
+        "name": "Approximate observation anchors",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/observation-anchors.geojson",
+        "features": 4
+      },
+      {
+        "name": "C 推定地表 0.5m計算格子 / 実測精度ではない",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase2a/inferred-surface-50cm.tif",
+        "features": null
+      },
+      {
+        "name": "C 仮定配置範囲 / accuracy UNKNOWN",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase2a/facilities.gpkg",
+        "features": 5
+      },
+      {
+        "name": "Phase3B C candidate heights / NOT measured DEM",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/surface-candidate-1m.tif",
+        "features": null
+      },
+      {
+        "name": "Phase3B C elements hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/elements.geojson",
+        "features": 4
+      },
+      {
+        "name": "Phase3B C stations hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/stations.geojson",
+        "features": 5
+      },
+      {
+        "name": "Phase3B C terrain footprint / not surveyed",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3b/footprint.geojson",
+        "features": 1
+      },
+      {
+        "name": "Phase3C C candidate heights / NOT measured DEM",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3c/surface-candidate-025m.tif",
+        "features": null
+      },
+      {
+        "name": "Phase3C C elements hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3c/elements.geojson",
+        "features": 3
+      },
+      {
+        "name": "Phase3C C stations hypotheses",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3c/stations.geojson",
+        "features": 8
+      },
+      {
+        "name": "Phase3C C terrain footprint / not surveyed",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/phase3c/footprint.geojson",
+        "features": 1
+      },
+      {
+        "name": "Regional DEM: 5A + explicitly masked 10B gaps",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-dem-20m.tif",
+        "features": null
+      },
+      {
+        "name": "Source provenance: 5=DEM5A, 10=DEM10B",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-source-mask.tif",
+        "features": null
+      },
+      {
+        "name": "castle-dem-1m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/castle-dem-1m.tif",
+        "features": null
+      },
+      {
+        "name": "hillshade",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/hillshade.tif",
+        "features": null
+      },
+      {
+        "name": "regional-10b-20m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-10b-20m.tif",
+        "features": null
+      },
+      {
+        "name": "regional-5a-20m",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/regional-5a-20m.tif",
+        "features": null
+      },
+      {
+        "name": "slope-degrees",
+        "valid": true,
+        "crs": "EPSG:6676",
+        "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/gis/slope-degrees.tif",
+        "features": null
+      }
+    ]
+  }
+]

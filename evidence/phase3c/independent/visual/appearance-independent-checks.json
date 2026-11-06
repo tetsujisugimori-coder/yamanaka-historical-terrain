@@ -1,0 +1,126 @@
+{
+  "artifact": "13462460071",
+  "run": "42125592154",
+  "sourceHashes": {
+    "src/phase3b.js": {
+      "artifactHash": "6332226b7d03757fdb74d982ea274e432fc42bc83cbebae911b69239b66e95a3",
+      "currentHash": "6332226b7d03757fdb74d982ea274e432fc42bc83cbebae911b69239b66e95a3",
+      "equal": true
+    },
+    "src/main.js": {
+      "artifactHash": "cb4b6cfef6e673bb0f80e6f8b37894aa8295c9b9a17eab0668032ac81b290797",
+      "currentHash": "cb4b6cfef6e673bb0f80e6f8b37894aa8295c9b9a17eab0668032ac81b290797",
+      "equal": true
+    }
+  },
+  "pairs": [
+    {
+      "before": "chromium-390-wb-earth-before.png",
+      "after": "chromium-390-wb-earth-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "831216e28e162d5058df8a3addcb2f7376fc978ec73e18b029503669aa21ad36",
+      "afterSHA256": "d6fed3d78c4b998641ec5fcdaa11cd889f1e6016f41a3212b5ee637bdf17b942"
+    },
+    {
+      "before": "chromium-390-wb-wood-before.png",
+      "after": "chromium-390-wb-wood-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "c34777050d1858f5b2add7b1d6f37329959112ac141bd7393f84895df4bd64cb",
+      "afterSHA256": "4d342402a3599558c4a9cd2e54c39fb4366411ec459018d3357dad4181e6794c"
+    },
+    {
+      "before": "chromium-390-wb-moat-before.png",
+      "after": "chromium-390-wb-moat-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "cd41b99833dc2b3287d918a463c325f77946fecbaaa72e62a54d95a1d24a32f9",
+      "afterSHA256": "38cc987cb33a1d047489db1e37d04742ab81454b700cced8fbb6644708b5ee5d"
+    },
+    {
+      "before": "chromium-1280-wb-earth-before.png",
+      "after": "chromium-1280-wb-earth-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "77823ed9abc4a512d27deb1dd015563ec1ca7ae404735cf95aed5a7cb3382564",
+      "afterSHA256": "70cf2f0fff06cff4f2f5d198db2df9c7da3d0f8de004bf408956c7f81457930d"
+    },
+    {
+      "before": "chromium-1280-wb-wood-before.png",
+      "after": "chromium-1280-wb-wood-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "72b8dfc67419f7458b5e61bb4a2b94b3219b9818a0ef09ecfd8d74a51c353d18",
+      "afterSHA256": "ceaefca4ff33e6ac5f135d440da5727abbf8120608994c8b05fc0a58cffbdbdb"
+    },
+    {
+      "before": "chromium-1280-wb-moat-before.png",
+      "after": "chromium-1280-wb-moat-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "d74bacf453feda57303b8896ed4d0cf54ca6337b6d461d019a999a70e327f4bb",
+      "afterSHA256": "f02269fe937830f01351718886f0d4b2f299d603b02cdf5914178af90cd035f6"
+    },
+    {
+      "before": "webkit-390-wb-earth-before.png",
+      "after": "webkit-390-wb-earth-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "5bab29605919ad7d21878a60ff618f5146ca5b94919328a08aecdcdf9101a478",
+      "afterSHA256": "b5567744c667928fb718d143ec50323801178742ecc6a691e693b374e0346e60"
+    },
+    {
+      "before": "webkit-390-wb-wood-before.png",
+      "after": "webkit-390-wb-wood-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "5ca0095a01310c13667e0423cc10f06214759f3b74ff26ff7222af2b0c3c8012",
+      "afterSHA256": "46a81ecd87b6683ad3d5413b4f02dcf4dbee3359d9a36a437ac877d16c715dc9"
+    },
+    {
+      "before": "webkit-390-wb-moat-before.png",
+      "after": "webkit-390-wb-moat-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "e8827e5cf8dfa29c44932e4b2818803c4f210e2de4bc0c88a121133d4030850d",
+      "afterSHA256": "31b5ff0b5175820a081e44fe797faefaa2fe2e6d9071800cd9163588af30a2ff"
+    },
+    {
+      "before": "webkit-1280-wb-earth-before.png",
+      "after": "webkit-1280-wb-earth-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "c330f7f40f5fd67fb713e0881dff4f7b6ffa0abe1a402eeacc8d3928a7f19352",
+      "afterSHA256": "87ee9b9fcee02577f09695a51dd55bbd5ef8e74f987ed188d1c54b4196acf58c"
+    },
+    {
+      "before": "webkit-1280-wb-wood-before.png",
+      "after": "webkit-1280-wb-wood-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "dfe39a375ce1cda5049ddf20b36750bdd2c6c7e5e4119ffc2b6b510bf0c5388f",
+      "afterSHA256": "42e3307a2611339a38afdc508e14c9e29a632285b753f279860cc645bfb07859"
+    },
+    {
+      "before": "webkit-1280-wb-moat-before.png",
+      "after": "webkit-1280-wb-moat-after.png",
+      "equalCamera": true,
+      "equalTarget": true,
+      "equalCanvas": true,
+      "beforeSHA256": "b5534df0531662c7a12dbadd879de29e94e927bf8e6b1397d7f25b28f77ec326",
+      "afterSHA256": "2fad0e1aa8743f0e99bf6b609123075bf4197dd263276f4b45b86a213727a1c0"
+    }
+  ]
+}

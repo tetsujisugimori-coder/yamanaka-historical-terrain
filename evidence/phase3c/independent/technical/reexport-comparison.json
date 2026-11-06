@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ic-bridge.surface.earth",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-koguchi.surface.earth",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-bridge.surface.path",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-koguchi.surface.path",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-bridge.surface.grass",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-koguchi.surface.grass",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  },
+  {
+    "name": "ic-lookout.surface.grass",
+    "triangleCountEqual": true,
+    "maxTriangleCoordinateDelta": 0.0,
+    "metadataEqual": true
+  }
+]

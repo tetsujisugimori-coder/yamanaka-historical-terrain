@@ -1,0 +1,10 @@
+{
+  "rawHead": "c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7",
+  "rawSha256": "2db950f48c1c583e30ac0be69eadb70dbd5110478500d9d08d4d1db440fe005c",
+  "groupVersionPairsChecked": 24,
+  "tableRowsChecked": 12,
+  "wrongOldArtifactRejected": true,
+  "wrongInputDidNotModifyAnyReport": true,
+  "oldReportSha256": "06e1ef828b5dcba91d1026f83585d48a5a22c01c945360ee270397b7989bb1f3",
+  "oldAnalysisSha256": "b2d079bce41cd772db95ca8f7daf935ea3dd54d0e34f2a4f23d5a3fce11fa2d3"
+}

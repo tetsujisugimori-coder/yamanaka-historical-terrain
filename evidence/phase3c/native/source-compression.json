@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "currentPackaging": "standalone new editable source, native compression enabled",
+  "currentFile": {
+    "bytes": 216261,
+    "sha256": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701"
+  },
+  "verificationReport": "evidence/phase3c/native/source-packaging.json",
+  "historicalCombinedCompressionRecord": "evidence/phase3c/history/v2-combined-source/source-compression.json"
+}

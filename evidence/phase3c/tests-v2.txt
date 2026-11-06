@@ -1,0 +1,58 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> yamanaka-historical-terrain@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ a later synchronous selection supersedes both successful and failed earlier work (5.100401ms)
+✔ initial camera input preserves model ownership and errors, but supersedes default camera effects (0.236163ms)
+✔ surface height uses triangle geometry and world scaling; missing geometry is an error (23.255311ms)
+✔ every exported scenery part maps to C/D ledger, exact metric recipe and original material (52.286925ms)
+✔ fixed observation points exist on both raw A/C triangles and keep metric origin; surfaces unchanged (532.473755ms)
+✔ printed PASS followed by nonzero native termination cannot be accepted (559.425374ms)
+✔ Windows access violation status is retained even if all internal assertions passed (0.542213ms)
+✔ native success also requires the worker completion contract (0.20524ms)
+✔ phase2a stable IDs, sources, confidence and model objects form a closed relation (1924.587374ms)
+✔ phase2a actual exported C faces cover one full patch and meet immutable A boundary (575.456521ms)
+✔ phase2a all split surface edges agree in height and coordinate orientation (431.486896ms)
+✔ phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces (137.85302ms)
+✔ negative controls detect a raised seam, missing facility and reassigned evidence ID (558.993767ms)
+✔ QGIS C cross sections and exported Blender vertices share actual heights (199.54256ms)
+✔ finish restores base without source mutation, appearance=false (419.29971ms)
+✔ finish restores base without source mutation, appearance=true (419.419103ms)
+✔ existing UV and non-default shadow flags restore exactly (318.017642ms)
+✔ source additions preserve every old record and reject edits, removal and duplicate IDs (1.386219ms)
+✔ western model preserves metric topology, has one ground sheet and joins the actual A boundary (1739.489597ms)
+✔ three regions and detachable upper structure remain C with separate reference and model dimensions (10.544179ms)
+✔ recorded eight model cells include the short southern connection seen in raw GLB (324.564595ms)
+✔ display cutout removes only whole aligned context triangles without altering source vertices (1.116929ms)
+✔ shared source geometry stays UV-free through staggered D activation and deactivation (660.157772ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (942.681767ms)
+✔ fixed observation sits on actual triangle plus human eye; no max A/C fabricated support (20.336661ms)
+✔ missing support rejects instead of extrapolating (0.95995ms)
+✔ 2x scales floor but not human eye offset (5.517215ms)
+✔ negative controls reject wrong category, ID and nonfinite coordinate (0.567132ms)
+✔ landscape synchronization orders western state before inner support validation (53.261925ms)
+✔ inner C patch requires western support; fault reintroduction loses the safety guard (12.824191ms)
+✔ metadata target scales relative model ground while physical eye and target offsets stay fixed (6.86436ms)
+✔ A moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (36.306827ms)
+✔ A rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (26.814902ms)
+✔ C moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (123.407482ms)
+✔ C rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm (88.00944ms)
+✔ triangle interior, shared diagonal, endpoints, overlap top face, gaps, outside and vertical faces (2.500799ms)
+✔ regional: all Blender-exported positions match GIS heights and metric axes (236.713629ms)
+✔ castle: all Blender-exported positions match GIS heights and metric axes (221.855689ms)
+✔ projected/local conversion preserves cardinal orientation and 1 metre scale (6.254987ms)
+✔ bilinear terrain sampler interpolates independent known plane (0.290844ms)
+✔ every observation anchor remains inside castle and regional measured bounds (39.1342ms)
+✔ inferred study cuts the terrain, meets the boundary and has no A category (716.691565ms)
+✔ triangle-surface negative control rejects a bilinear raised patch and an excessive cut (1.245938ms)
+✔ perspective scale preserves actual projected length through narrow/wide, rotation and zoom (2.561302ms)
+✔ GIS metadata reports fallback and no missing heights without implying measurement precision (0.572602ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7574.49922

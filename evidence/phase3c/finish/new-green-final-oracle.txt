@@ -1,0 +1,10 @@
+✔ shared source geometry stays UV-free through staggered D activation and deactivation (153.317378ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (278.331159ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 569.164603

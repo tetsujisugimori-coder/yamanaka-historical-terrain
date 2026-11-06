@@ -1,0 +1,489 @@
+{
+  "scope": "Same machine/browser/viewport/station/quality before PR12-merged main vs Phase3C. Images are appearance comparisons, not zero-pixel expectations or historic accuracy.",
+  "hashes": {
+    "src/phase3b.js": "6332226b7d03757fdb74d982ea274e432fc42bc83cbebae911b69239b66e95a3",
+    "src/main.js": "cb4b6cfef6e673bb0f80e6f8b37894aa8295c9b9a17eab0668032ac81b290797"
+  },
+  "rows": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "version": "before",
+      "images": [
+        {
+          "file": "chromium-390-wb-earth-before.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-wb-wood-before.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-wb-moat-before.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "version": "after",
+      "images": [
+        {
+          "file": "chromium-390-wb-earth-after.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-wb-wood-after.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-wb-moat-after.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "version": "before",
+      "images": [
+        {
+          "file": "chromium-1280-wb-earth-before.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-wb-wood-before.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-wb-moat-before.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "version": "after",
+      "images": [
+        {
+          "file": "chromium-1280-wb-earth-after.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-wb-wood-after.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-wb-moat-after.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "version": "before",
+      "images": [
+        {
+          "file": "webkit-390-wb-earth-before.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-wb-wood-before.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-wb-moat-before.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "version": "after",
+      "images": [
+        {
+          "file": "webkit-390-wb-earth-after.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-wb-wood-after.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-wb-moat-after.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 1280,
+      "version": "before",
+      "images": [
+        {
+          "file": "webkit-1280-wb-earth-before.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-wb-wood-before.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-wb-moat-before.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 1280,
+      "version": "after",
+      "images": [
+        {
+          "file": "webkit-1280-wb-earth-after.png",
+          "camera": [
+            -156,
+            553.17314453125,
+            10
+          ],
+          "target": [
+            -170,
+            549.17314453125,
+            10
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-wb-wood-after.png",
+          "camera": [
+            -195,
+            550.116015625,
+            32
+          ],
+          "target": [
+            -192,
+            550.3160156250001,
+            35
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-wb-moat-after.png",
+          "camera": [
+            -154,
+            553.8508178710938,
+            -5
+          ],
+          "target": [
+            -169,
+            547.8508178710938,
+            -5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "freshBuildFrom": "production/yamanaka-phase3b.blend",
+  "storedPriorMeshes": 0,
+  "newObjects": 7,
+  "allSevenMeshHashesEqual": true,
+  "glbByteIdentical": true,
+  "manifestByteIdentical": true,
+  "separateReopen": true,
+  "liveArtifactsUntouched": true
+}

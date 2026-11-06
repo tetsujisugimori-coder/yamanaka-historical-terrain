@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "modelVersion": "phase3c-v2",
+  "scope": "model-only relation and visual geometry, not historical walkability or quantified military effectiveness",
+  "lookoutStationGateHorizontalDistance": 12.110326172320878,
+  "lookoutFeatureGateHorizontalDistance": 13.038404810405298,
+  "bridgeProfiles": [
+    {
+      "north": -31,
+      "maxLongitudinalGrade": 0.49761962890625,
+      "rise": 15.9224853515625,
+      "length": 32.0
+    },
+    {
+      "north": -30,
+      "maxLongitudinalGrade": 0.492431640625,
+      "rise": 15.7564697265625,
+      "length": 32.0
+    },
+    {
+      "north": -29,
+      "maxLongitudinalGrade": 0.48797607421875,
+      "rise": 15.6141357421875,
+      "length": 32.0
+    },
+    {
+      "north": -28,
+      "maxLongitudinalGrade": 0.4835205078125,
+      "rise": 15.47174072265625,
+      "length": 32.0
+    },
+    {
+      "north": -27,
+      "maxLongitudinalGrade": 0.49334716796875,
+      "rise": 15.7867431640625,
+      "length": 32.0
+    }
+  ],
+  "entireBridgeNeckTriangleGradient": {
+    "triangles": 296,
+    "maximumLongitudinalGrade": 0.49761962890625
+  },
+  "lookoutSightlines": [
+    {
+      "fromStation": "ic-lookout",
+      "target": [
+        -77,
+        -29,
+        566.5246459960938
+      ],
+      "minimumVerticalClearance": 0.20000000000004547,
+      "atFraction": 1.0,
+      "visible": true,
+      "triangleIntervals": 29
+    },
+    {
+      "fromStation": "ic-lookout",
+      "target": [
+        -85,
+        -29,
+        562.621142578125
+      ],
+      "minimumVerticalClearance": 0.20000000000004547,
+      "atFraction": 1.0,
+      "visible": true,
+      "triangleIntervals": 29
+    },
+    {
+      "fromStation": "ic-lookout",
+      "target": [
+        -92,
+        -29,
+        559.2054931640625
+      ],
+      "minimumVerticalClearance": 0.20000000000004547,
+      "atFraction": 1.0,
+      "visible": true,
+      "triangleIntervals": 36
+    }
+  ],
+  "bridgeToGateSightline": {
+    "fromStation": "ic-bridge",
+    "target": [
+      -77,
+      -29,
+      566.5246459960938
+    ],
+    "minimumVerticalClearance": 0.20000000000004547,
+    "atFraction": 1.0,
+    "visible": true,
+    "triangleIntervals": 62
+  },
+  "gatewayInitialFraming": [
+    {
+      "station": "ic-koguchi",
+      "scale": 1,
+      "targets": [
+        {
+          "target": [
+            -77,
+            -29
+          ],
+          "horizontal": -20.784225682208675,
+          "vertical": -11.215317253888955
+        },
+        {
+          "target": [
+            -75,
+            -35
+          ],
+          "horizontal": 24.23955147152799,
+          "vertical": -7.337977845893301
+        }
+      ]
+    },
+    {
+      "station": "ic-koguchi",
+      "scale": 2,
+      "targets": [
+        {
+          "target": [
+            -77,
+            -29
+          ],
+          "horizontal": -17.624328707482174,
+          "vertical": -6.568900216266995
+        },
+        {
+          "target": [
+            -75,
+            -35
+          ],
+          "horizontal": 21.78005977834876,
+          "vertical": -9.399539371124051
+        }
+      ]
+    },
+    {
+      "station": "ic-koguchi-inside",
+      "scale": 1,
+      "targets": [
+        {
+          "target": [
+            -77,
+            -29
+          ],
+          "horizontal": 20.825601046038276,
+          "vertical": -25.10223597716885
+        },
+        {
+          "target": [
+            -75,
+            -35
+          ],
+          "horizontal": -23.429460489733508,
+          "vertical": -2.5420364342317203
+        }
+      ]
+    },
+    {
+      "station": "ic-koguchi-inside",
+      "scale": 2,
+      "targets": [
+        {
+          "target": [
+            -77,
+            -29
+          ],
+          "horizontal": 16.902176503264986,
+          "vertical": -28.729635342140867
+        },
+        {
+          "target": [
+            -75,
+            -35
+          ],
+          "horizontal": -22.330388673573054,
+          "vertical": -0.3337730151714559
+        }
+      ]
+    }
+  ],
+  "opposingGatewaySightlines": [
+    {
+      "fromStation": "ic-koguchi",
+      "target": [
+        -75,
+        -35,
+        567.5402099609375
+      ],
+      "minimumVerticalClearance": -0.5503458658853333,
+      "atFraction": 0.6666666666666666,
+      "visible": false,
+      "triangleIntervals": 42
+    },
+    {
+      "fromStation": "ic-koguchi-inside",
+      "target": [
+        -75,
+        -35,
+        567.5402099609375
+      ],
+      "minimumVerticalClearance": 0.20000000000004547,
+      "atFraction": 1.0,
+      "visible": true,
+      "triangleIntervals": 26
+    }
+  ],
+  "twoTimesExaggeration": {
+    "lookoutSightlines": [
+      {
+        "fromStation": "ic-lookout",
+        "target": [
+          -77,
+          -29,
+          1132.8492919921875
+        ],
+        "minimumVerticalClearance": 0.09540591909853902,
+        "atFraction": 0.2561983471074381,
+        "visible": true,
+        "triangleIntervals": 29
+      },
+      {
+        "fromStation": "ic-lookout",
+        "target": [
+          -85,
+          -29,
+          1125.04228515625
+        ],
+        "minimumVerticalClearance": 0.20000000000004547,
+        "atFraction": 1.0,
+        "visible": true,
+        "triangleIntervals": 29
+      },
+      {
+        "fromStation": "ic-lookout",
+        "target": [
+          -92,
+          -29,
+          1118.210986328125
+        ],
+        "minimumVerticalClearance": 0.20000000000004547,
+        "atFraction": 1.0,
+        "visible": true,
+        "triangleIntervals": 36
+      }
+    ],
+    "opposingGatewaySightlines": [
+      {
+        "fromStation": "ic-koguchi",
+        "minimumVerticalClearance": -1.800691731770712,
+        "atFraction": 0.6666666666666666,
+        "visible": false,
+        "triangleIntervals": 42
+      },
+      {
+        "fromStation": "ic-koguchi-inside",
+        "minimumVerticalClearance": 0.20000000000004547,
+        "atFraction": 1.0,
+        "visible": true,
+        "triangleIntervals": 26
+      }
+    ]
+  },
+  "framing": {
+    "nominalViewport": [
+      375,
+      520
+    ],
+    "verticalFov": 70,
+    "horizontalHalfFov": 26.791828914693834,
+    "targets": [
+      {
+        "target": [
+          -77,
+          -29,
+          566.5246459960938
+        ],
+        "horizontalAngle": -16.945679393631178,
+        "verticalAngle": 1.4736259660721085
+      },
+      {
+        "target": [
+          -85,
+          -29,
+          562.621142578125
+        ],
+        "horizontalAngle": 7.768189387673603,
+        "verticalAngle": -0.6598608726317348
+      },
+      {
+        "target": [
+          -92,
+          -29,
+          559.2054931640625
+        ],
+        "horizontalAngle": 20.409774473363598,
+        "verticalAngle": -1.799493214706896
+      }
+    ]
+  },
+  "oldRed": {
+    "status": "REJECTED",
+    "reason": "v1 experience defects, not historical truth error",
+    "lookoutGateDistance": 71.00704190430693,
+    "bridgeProfiles": [
+      {
+        "north": -37,
+        "maxLongitudinalGrade": 2.4510498046875,
+        "rise": 17.61712646484375,
+        "length": 32.0
+      },
+      {
+        "north": -36,
+        "maxLongitudinalGrade": 2.42352294921875,
+        "rise": 17.368408203125,
+        "length": 32.0
+      },
+      {
+        "north": -35,
+        "maxLongitudinalGrade": 2.37628173828125,
+        "rise": 17.1197509765625,
+        "length": 32.0
+      },
+      {
+        "north": -34,
+        "maxLongitudinalGrade": 2.41973876953125,
+        "rise": 16.6871337890625,
+        "length": 32.0
+      },
+      {
+        "north": -33,
+        "maxLongitudinalGrade": 2.391357421875,
+        "rise": 16.25445556640625,
+        "length": 32.0
+      }
+    ]
+  },
+  "newGreen": true,
+  "reintroducedFaults": {
+    "oldCliffRejected": true,
+    "loweredLookoutRejected": true
+  },
+  "glbSha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4"
+}

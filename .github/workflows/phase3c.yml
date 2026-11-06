@@ -1,0 +1,181 @@
+name: Validate inner observation
+on:
+  pull_request:
+concurrency:
+  group: phase3c-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  inner-observation:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/browser
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/browser/browser-install.log
+      - run: python3 -m pip install numpy
+      - name: Exported geometry and negative controls
+        run: python3 scripts/phase3c-relationship-check.py
+      - name: Guided observations, support and async regressions
+        run: |
+          npm run dev -- --port 4317 --strictPort >/tmp/inner-vite.txt 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3c-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-browser
+          path: |
+            evidence/phase3c/browser/
+            evidence/phase3c/geometry/
+  appearance-and-performance:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/performance
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/performance/browser-install.log
+      - name: Same-pose before-after and measured performance
+        run: |
+          git worktree add --detach /tmp/phase3c-baseline ed22133f766aa1a2256dcebbb0413ec11d479106
+          ln -s "$PWD/node_modules" /tmp/phase3c-baseline/node_modules
+          (cd /tmp/phase3c-baseline && node_modules/.bin/vite --host 127.0.0.1 --port 4319 --strictPort) >/tmp/old-vite.txt 2>&1 &
+          old=$!
+          npm run dev -- --port 4317 --strictPort >/tmp/new-vite.txt 2>&1 &
+          new=$!
+          trap 'kill "$old" "$new"' EXIT
+          for port in 4317 4319; do
+            for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done
+          done
+          node scripts/phase3c-appearance.mjs
+          PERF_TRIALS=3 node scripts/phase3c-performance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-appearance-performance
+          path: |
+            evidence/phase3c/appearance/
+            evidence/phase3c/performance/
+  independent-visual:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install browsers with bounded wait
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/independent/visual
+          npx playwright install --with-deps chromium webkit 2>&1 | tee evidence/phase3c/independent/visual/browser-install.log
+      - name: Reviewer-authored independent browser evidence
+        run: |
+          npm run dev -- --port 4317 --strictPort >/tmp/independent-vite.txt 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3c-independent-browser.mjs
+          INDEPENDENT_MUTATION=missing-color node scripts/phase3c-independent-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-independent-visual
+          path: evidence/phase3c/independent/visual/
+  diagnose-render-cost:
+    runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:f1e7e01021efd65dd1a2c56064be399f3e4de00fd021ac561325f2bfbb2b837a
+      options: --shm-size=1g
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Verify pinned preinstalled WebKit
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3c/performance-diagnosis
+          node --input-type=module -e "import {webkit} from '@playwright/test'; import {createRequire} from 'node:module'; const require=createRequire(import.meta.url); const version=require('@playwright/test/package.json').version; if(version!=='1.56.1')throw Error('Pinned image/package version mismatch'); const browser=await webkit.launch(); console.log(JSON.stringify({packageVersion:version,browserVersion:browser.version(),environment:'official Playwright v1.56.1 noble image pinned by digest'})); await browser.close();" 2>&1 | tee evidence/phase3c/performance-diagnosis/browser-install.log
+      - name: Isolate camera redraw, optional mesh and D costs
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="$GITHUB_WORKSPACE/evidence/phase3c/performance-diagnosis"
+          mkdir -p "$out"
+          diagnosis_root=$(mktemp -d /tmp/phase3c-diagnosis.XXXXXX)
+          server=
+          cleanup() {
+            status=$?
+            if [[ -n "$server" ]]; then
+              kill "$server" 2>/dev/null || true
+              wait "$server" 2>/dev/null || true
+            fi
+            rm -rf -- "$diagnosis_root"
+            exit "$status"
+          }
+          trap cleanup EXIT
+          # Container and mounted-checkout owners can differ. Copy, rather than
+          # relaxing Git trust or changing the mounted checkout's ownership.
+          # Include .git and node_modules so source/HEAD and dependencies match.
+          cp -R --no-preserve=ownership -- "$GITHUB_WORKSPACE/." "$diagnosis_root/checkout"
+          cd "$diagnosis_root/checkout"
+          node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 4317 --strictPort >"$out/vite.log" 2>&1 &
+          server=$!
+          ready=false
+          for n in $(seq 1 30); do
+            if ! kill -0 "$server" 2>/dev/null; then
+              cat "$out/vite.log"
+              echo 'Diagnosis Vite server exited before readiness.' >&2
+              exit 1
+            fi
+            if curl -fs http://127.0.0.1:4317 >/dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [[ "$ready" != true ]]; then
+            cat "$out/vite.log"
+            echo 'Diagnosis Vite server did not become ready within 30 attempts.' >&2
+            exit 1
+          fi
+          DIAGNOSIS_OUT="$out" node scripts/phase3c-performance-diagnosis.mjs 2>&1 | tee "$out/diagnosis.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-render-diagnosis
+          path: evidence/phase3c/performance-diagnosis/

@@ -1,0 +1,19 @@
+{
+  "base": "ed22133f766aa1a2256dcebbb0413ec11d479106",
+  "originalAuditPath": "evidence/phase3c/preservation.json",
+  "originalAuditSha256": "88e6ae768ea7db0be12e2ba8d79a0f414daa46cc960943255cbff60c73436563",
+  "originalAuditRows": 1263,
+  "checkedUnchanged": 1262,
+  "missing": 0,
+  "unexpectedChanges": 0,
+  "explicitCodeEdit": [
+    {
+      "path": "scripts/initial-camera-browser.mjs",
+      "baseSha256": "012a31d1b11db858d2fb73b1840333d4442341dfd88b05bc6773acb1227e7da3",
+      "currentSha256": "4022ad059cbb399877f5eefe6f83acd4f8d29f69df26db8dae7621cf834104f2",
+      "reason": "Repair the negative-control harness after the production camera-intent function changed; all prior evidence retained."
+    }
+  ],
+  "sourceRecordsPreserved": 6,
+  "scope": "Recomputed every original audit SHA256 from current bytes, except one explicitly repaired browser-test harness. Original GLB/native/data and past evidence remain unchanged. The initial 1263-file result stays historical, not overwritten."
+}

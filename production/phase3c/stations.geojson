@@ -1,0 +1,219 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44842.121277226666,
+          -93473.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-station-nishinomaru",
+        "name": "西ノ丸の曲輪",
+        "category": "C",
+        "modelHeight": 575.1900024414062,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-station-nishinomaru",
+        "elementId": "nm-bailey",
+        "lookEast": -36,
+        "lookNorth": 15,
+        "lookDown": 0,
+        "fov": 60,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": null,
+        "lookHeightOffset": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44785.621277226666,
+          -93494.97235405141
+        ]
+      },
+      "properties": {
+        "id": "ic-lookout",
+        "name": "見張台の土の高所",
+        "category": "C",
+        "modelHeight": 574.6928283691407,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-lookout",
+        "elementId": "ic-lookout",
+        "lookEast": -82,
+        "lookNorth": -29,
+        "lookDown": 12.30787963867192,
+        "fov": 70,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": 564.0849487304688,
+        "lookHeightOffset": 0.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44771.121277226666,
+          -93507.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-bridge",
+        "name": "土橋の西側",
+        "category": "C",
+        "modelHeight": 559.4934692382812,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-bridge",
+        "elementId": "ic-bridge",
+        "lookEast": -72,
+        "lookNorth": -29,
+        "lookDown": -8.570874023437455,
+        "fov": 60,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": 569.7643432617188,
+        "lookHeightOffset": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44781.121277226666,
+          -93507.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-koguchi",
+        "name": "虎口の外側",
+        "category": "C",
+        "modelHeight": 564.3728637695312,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-koguchi",
+        "elementId": "ic-koguchi",
+        "lookEast": -77,
+        "lookNorth": -30.5,
+        "lookDown": -1.3957641601562045,
+        "fov": 70,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": 567.4686279296875,
+        "lookHeightOffset": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44789.121277226666,
+          -93505.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-koguchi-inside",
+        "name": "虎口の内側",
+        "category": "C",
+        "modelHeight": 568.446044921875,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-koguchi-inside",
+        "elementId": "ic-koguchi",
+        "lookEast": -77,
+        "lookNorth": -32,
+        "lookDown": 1.9120361328125455,
+        "fov": 70,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": 568.2340087890625,
+        "lookHeightOffset": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44719.121277226666,
+          -93476.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-station-western",
+        "name": "西櫓の曲輪",
+        "category": "C",
+        "modelHeight": 553.0239868164062,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-station-western",
+        "elementId": "wb-bailey",
+        "lookEast": -131,
+        "lookNorth": 7,
+        "lookDown": 0,
+        "fov": 60,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": null,
+        "lookHeightOffset": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44667.121277226666,
+          -93513.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-station-westgate",
+        "name": "西木戸口",
+        "category": "C",
+        "modelHeight": 548.3800048828125,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-station-westgate",
+        "elementId": "wb-gate",
+        "lookEast": -191,
+        "lookNorth": -35,
+        "lookDown": 0,
+        "fov": 60,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": null,
+        "lookHeightOffset": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44708.121277226666,
+          -93473.07235405142
+        ]
+      },
+      "properties": {
+        "id": "ic-station-westmoat",
+        "name": "西櫓堀の外縁",
+        "category": "C",
+        "modelHeight": 552.1508178710938,
+        "accuracy": "UNKNOWN; conceptual placement, no control points",
+        "ledger": "public/data/phase3c.json#ic-station-westmoat",
+        "elementId": "wb-moat",
+        "lookEast": -169,
+        "lookNorth": 5,
+        "lookDown": 4,
+        "fov": 60,
+        "eyeHeight": 1.7,
+        "lookTargetHeight": null,
+        "lookHeightOffset": null
+      }
+    }
+  ]
+}

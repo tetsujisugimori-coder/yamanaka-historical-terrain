@@ -1,0 +1,345 @@
+{
+  "head": "c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7",
+  "tree": "5e44d4b1a310a45c9de1176939c6c60fb16b76d1",
+  "normalRows": 22,
+  "normalPass": 22,
+  "stationComparisons": 128,
+  "sourceChecks": [
+    {
+      "run": "normal",
+      "file": "src/main.js",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "src/phase3b.js",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "src/phase3c.js",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "src/reading.js",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "src/style.css",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "scripts/phase3c-independent-browser.mjs",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/phase3c.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/phase3c.json",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/regional.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/castle.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/nishinomaru.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/moat-study.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/phase3b.glb",
+      "equal": true
+    },
+    {
+      "run": "normal",
+      "file": "public/data/landscape.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "src/main.js",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "src/phase3b.js",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "src/phase3c.js",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "src/reading.js",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "src/style.css",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "scripts/phase3c-independent-browser.mjs",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/phase3c.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/phase3c.json",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/regional.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/castle.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/nishinomaru.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/moat-study.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/phase3b.glb",
+      "equal": true
+    },
+    {
+      "run": "negative",
+      "file": "public/data/landscape.glb",
+      "equal": true
+    }
+  ],
+  "independentRecalculationErrors": [],
+  "unsupportedAByStation": {
+    "ic-lookout": 16,
+    "ic-bridge": 16,
+    "ic-koguchi": 16,
+    "ic-koguchi-inside": 16,
+    "ic-station-western": 16,
+    "ic-station-westgate": 16,
+    "ic-station-westmoat": 16
+  },
+  "negative": [
+    {
+      "key": "chromium-390-reduce",
+      "status": "FAIL",
+      "signatureMatches": true,
+      "innerMeshes": 7,
+      "invalidCount": 19,
+      "allLackColor": true
+    },
+    {
+      "key": "webkit-390-reduce",
+      "status": "FAIL",
+      "signatureMatches": true,
+      "innerMeshes": 7,
+      "invalidCount": 19,
+      "allLackColor": true
+    }
+  ],
+  "representativeCenterRayHits": {
+    "ic-station-nishinomaru": [
+      {
+        "distance": 16.457847797140893,
+        "name": "nm-rampart",
+        "id": "nm-rampart",
+        "point": [
+          -33.95622701954936,
+          576.8900024414063,
+          -13.722641887218328
+        ]
+      },
+      {
+        "distance": 21.30717034239012,
+        "name": "nm-rampart",
+        "id": "nm-rampart",
+        "point": [
+          -38.068444313494346,
+          576.8900024414063,
+          -16.292777695933935
+        ]
+      }
+    ],
+    "ic-lookout": [
+      {
+        "distance": 18.462311030209424,
+        "name": "ic-bridge",
+        "id": "ic-bridge",
+        "point": [
+          -82.10552874748491,
+          563.8487968900217,
+          29.232163244467074
+        ]
+      }
+    ],
+    "ic-bridge": [
+      {
+        "distance": 26.680353570659506,
+        "name": "nm-transition",
+        "id": "nm-transition",
+        "point": [
+          -66.67962081580036,
+          572.164359037753,
+          29
+        ]
+      },
+      {
+        "distance": 26.680353570659506,
+        "name": "nm-transition",
+        "id": "nm-transition",
+        "point": [
+          -66.67962081580036,
+          572.164359037753,
+          29
+        ]
+      }
+    ],
+    "ic-koguchi": [
+      {
+        "distance": 11.459801998004641,
+        "name": "ic-koguchi",
+        "id": "ic-koguchi",
+        "point": [
+          -70.80044493091161,
+          569.6319071232738,
+          32.82483315090815
+        ]
+      },
+      {
+        "distance": 29.518091811403462,
+        "name": "nm-transition",
+        "id": "nm-transition",
+        "point": [
+          -54.728044950755766,
+          575.2402270882716,
+          38.85198314346658
+        ]
+      }
+    ],
+    "ic-koguchi-inside": [
+      {
+        "distance": 10.849066715836688,
+        "name": "ic-koguchi",
+        "id": "ic-koguchi",
+        "point": [
+          -79.49401121923358,
+          567.0418488973581,
+          35.11751402404192
+        ]
+      },
+      {
+        "distance": 19.45772326187824,
+        "name": "ic-bridge",
+        "id": "ic-bridge",
+        "point": [
+          -84.64696249668467,
+          564.5786916390804,
+          41.55870312085571
+        ]
+      }
+    ],
+    "ic-station-western": [
+      {
+        "distance": 35.82086884917542,
+        "name": "wb-bailey",
+        "id": "wb-bailey",
+        "point": [
+          -109.93458260076108,
+          554.7239868164063,
+          -15.777257249682654
+        ]
+      },
+      {
+        "distance": 149.1010884777999,
+        "name": "nm-context",
+        "id": "nm-context",
+        "point": [
+          -5.368226020492074,
+          554.7239868164063,
+          -59.346572491460684
+        ]
+      }
+    ],
+    "ic-station-westgate": [
+      {
+        "distance": 24.285789014821916,
+        "name": "wb-gate",
+        "id": "wb-gate",
+        "point": [
+          -170.71421098517808,
+          550.0800048828125,
+          35
+        ]
+      },
+      {
+        "distance": 24.285789014821916,
+        "name": "wb-gate",
+        "id": "wb-gate",
+        "point": [
+          -170.71421098517808,
+          550.0800048828125,
+          35
+        ]
+      }
+    ],
+    "ic-station-westmoat": [
+      {
+        "distance": 24.493796132693294,
+        "name": "wb-moat",
+        "id": "wb-moat",
+        "point": [
+          -177.66676162687767,
+          547.5396814372579,
+          -5
+        ]
+      },
+      {
+        "distance": 24.493796132693294,
+        "name": "wb-moat",
+        "id": "wb-moat",
+        "point": [
+          -177.66676162687767,
+          547.5396814372579,
+          -5
+        ]
+      }
+    ]
+  }
+}

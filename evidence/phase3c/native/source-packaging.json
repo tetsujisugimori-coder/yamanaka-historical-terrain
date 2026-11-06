@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "operation": "standalone source packaging; prior duplicated objects removed from NEW scene only",
+  "before": {
+    "bytes": 16683165,
+    "sha256": "976f7c2b78a829266f87d409cc68ec44b5cc4aaa50f6e4e18a4240020d919e9c"
+  },
+  "after": {
+    "bytes": 216261,
+    "sha256": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701"
+  },
+  "priorMeshesVerifiedBeforeRemoval": 693,
+  "storedPriorMeshes": 0,
+  "newObjects": 7,
+  "newMeshHashes": {
+    "ic-bridge.surface.earth": "449fca30a2ed9e270f9d78738c1d39bd09e04727f5d72636de828f796854783c",
+    "ic-bridge.surface.grass": "dff0ab43bf16ceab138e95acd6009d996b178a4f289636a1f4ec37f2f54ba7a9",
+    "ic-bridge.surface.path": "f44006d89ee3b35df456723359f1cf3c3f23f50938882a00a7b36b135391dbeb",
+    "ic-koguchi.surface.earth": "a453bd58060b27c5f41cfdb1730a32aaafe67b849dceb7506a81eeb8cda0e219",
+    "ic-koguchi.surface.path": "ecf41f47e43ceb19122620888d5c0fa822c7e56bef53f43a67442513fdbb4d88",
+    "ic-lookout.surface.earth": "235b146058736795ec6c6d59969a18d06a878632d0539e2f43dbf31c5ddb2470",
+    "ic-lookout.surface.grass": "92424a0e1df870d392a846f8824b6b009a29390ec14ef23f56976de87441b366"
+  },
+  "materials": {
+    "Phase3C earth neutral": [
+      0.47999998927116394,
+      0.27000001072883606,
+      0.15000000596046448,
+      1.0
+    ],
+    "Phase3C grass neutral": [
+      0.36000001430511475,
+      0.4300000071525574,
+      0.23999999463558197,
+      1.0
+    ],
+    "Phase3C path neutral": [
+      0.5299999713897705,
+      0.3799999952316284,
+      0.2199999988079071,
+      1.0
+    ],
+    "Phase3C earth neutral.001": [
+      0.47999998927116394,
+      0.27000001072883606,
+      0.15000000596046448,
+      1.0
+    ],
+    "Phase3C path neutral.001": [
+      0.5299999713897705,
+      0.3799999952316284,
+      0.2199999988079071,
+      1.0
+    ],
+    "Phase3C earth neutral.002": [
+      0.47999998927116394,
+      0.27000001072883606,
+      0.15000000596046448,
+      1.0
+    ],
+    "Phase3C grass neutral.001": [
+      0.36000001430511475,
+      0.4300000071525574,
+      0.23999999463558197,
+      1.0
+    ]
+  },
+  "protectedFileHashes": {
+    "public/data/castle.glb": {
+      "bytes": 1595392,
+      "sha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d"
+    },
+    "public/data/castle.json": {
+      "bytes": 307204,
+      "sha256": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd"
+    },
+    "public/data/features.json": {
+      "bytes": 2366,
+      "sha256": "d55ba4a43f8ebc4959237197e39618f243468a7668f8e12535c4aa1d1289422c"
+    },
+    "public/data/landscape.glb": {
+      "bytes": 593620,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    "public/data/landscape.json": {
+      "bytes": 9282,
+      "sha256": "c8bc5b4767fef0d3c03989a20667685f2195a7b02986082f6f984cebb87d6e87"
+    },
+    "public/data/moat-study.glb": {
+      "bytes": 3681212,
+      "sha256": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387"
+    },
+    "public/data/nishinomaru-layout.json": {
+      "bytes": 1900,
+      "sha256": "03a1a0c72241668bdf55b66878bb09dd63e56e8b8792a7d69cd2c31ecdcb0b16"
+    },
+    "public/data/nishinomaru.glb": {
+      "bytes": 24933760,
+      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+    },
+    "public/data/nishinomaru.json": {
+      "bytes": 8105,
+      "sha256": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca"
+    },
+    "public/data/phase3b.glb": {
+      "bytes": 4540236,
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    "public/data/phase3b.json": {
+      "bytes": 9012,
+      "sha256": "635a427a8f3897dae165415b0352437f77e4f70bf8058e5428d07cb84ee52ef5"
+    },
+    "public/data/phase3c.glb": {
+      "bytes": 507052,
+      "sha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4"
+    },
+    "public/data/phase3c.json": {
+      "bytes": 14893,
+      "sha256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9"
+    },
+    "public/data/regional.glb": {
+      "bytes": 1450940,
+      "sha256": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8"
+    },
+    "public/data/regional.json": {
+      "bytes": 279576,
+      "sha256": "17ef568fb7a1fd9d0c81c432f7f5208c71805ff972fd829c1dd19e805e883bc3"
+    },
+    "public/data/sources.json": {
+      "bytes": 4677,
+      "sha256": "21db2045aed2c2e5032245c9f1db0626122b6ef145b278beee66ad13cf03ef87"
+    },
+    "public/data/study.json": {
+      "bytes": 677,
+      "sha256": "e4b4702a42c234b17683cefb9e50654f612f76ee750f738e6906e9174dd981d1"
+    },
+    "production/yamanaka-1590.blend": {
+      "bytes": 44337382,
+      "sha256": "6d45ec6df4c0f820e238d2fcd0bda226b5791396070f760eb725847461c9cda1"
+    },
+    "production/yamanaka-phase2a.blend": {
+      "bytes": 42163408,
+      "sha256": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc"
+    },
+    "production/yamanaka-phase3b.blend": {
+      "bytes": 50521175,
+      "sha256": "b12d1ff362c4f3b04b3d90f365f541b68bbf70f2e6c5ef55ad2520da8da47765"
+    },
+    "production/yamanaka.blend": {
+      "bytes": 19087826,
+      "sha256": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d"
+    },
+    "production/yamanaka-1590.qgz": {
+      "bytes": 16622,
+      "sha256": "4a9dd4da1a79e9fb57264b2665e8589786e8aeb42abc107eac25cc5e8756140a"
+    },
+    "production/yamanaka-phase2a.qgz": {
+      "bytes": 15112,
+      "sha256": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8"
+    },
+    "production/yamanaka-phase3b.qgz": {
+      "bytes": 21234,
+      "sha256": "546b873ddde1d5614b23626e4b727759c7a8a50a78256427080f55a77e921b30"
+    },
+    "production/yamanaka-phase3c.qgz": {
+      "bytes": 26983,
+      "sha256": "610c0d2c03d733ca9b792eeb5748dcafa13976af082cdfadc05c5ad61158b3dc"
+    },
+    "production/yamanaka.qgz": {
+      "bytes": 11527,
+      "sha256": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653"
+    },
+    "production/phase3c/elements.geojson": {
+      "bytes": 1614,
+      "sha256": "d257b3fe765f6e871531119da97b4d064e59b036fe478ddfd2a4dd371d56c6ed"
+    },
+    "production/phase3c/footprint.geojson": {
+      "bytes": 926,
+      "sha256": "2c3bf8ef19cd8d7afc3ee31f4ad4cb4005eff3082351ff5b45e0c39fe5eff918"
+    },
+    "production/phase3c/recipe.json": {
+      "bytes": 14893,
+      "sha256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9"
+    },
+    "production/phase3c/sightlines.geojson": {
+      "bytes": 3142,
+      "sha256": "92ab122760a82a0576ba1da0e4eee81e8f57c3a67656b48ff6493f9f10758609"
+    },
+    "production/phase3c/stations.geojson": {
+      "bytes": 5915,
+      "sha256": "cb6cd073b9f7e7ca476d54c6237736375a1e48d799a632051afed5a5e26593a1"
+    },
+    "production/phase3c/surface-candidate-025m.tif": {
+      "bytes": 140508,
+      "sha256": "0287c329358b0c5b44d5d169533c8f3c2d20cfd289058dcf0f26caedeb027709"
+    },
+    "production/phase3c/surface-candidate-025m.tif.aux.xml": {
+      "bytes": 384,
+      "sha256": "43bc2ecba3ce805844c0b4fcb181d19ccf91416366ea4d3a5057f24e13f0562c"
+    }
+  },
+  "separateReopen": true,
+  "newMeshHashesEqualCombinedSource": true
+}

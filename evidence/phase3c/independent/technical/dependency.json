@@ -1,0 +1,20 @@
+{
+  "reviewedHead": "573dc70e90fb58f38271b1eff08efe4179ee3ccb",
+  "current": {
+    "mutation": false,
+    "innerVisible": false,
+    "contextHeight": 566.94599609375,
+    "bridgeHeight": 555.6599731445312,
+    "allOriginalIndicesRestored": true,
+    "warning": "城内の追加地形は接続先の西方地形が読み込めないため非表示です。現況・既存景観・解説は利用できます。景観の表示区分を切り替えて再取得してください。"
+  },
+  "faultReintroduced": {
+    "mutation": true,
+    "innerVisible": true,
+    "contextHeight": 566.94599609375,
+    "bridgeHeight": 555.6599731445312,
+    "allOriginalIndicesRestored": false,
+    "warning": "城内の追加地形は接続先の西方地形が読み込めないため非表示です。現況・既存景観・解説は利用できます。景観の表示区分を切り替えて再取得してください。"
+  },
+  "scope": "Extracted actual syncInner function against actual GLB Mesh objects in Node; no browser or screenshot claim."
+}

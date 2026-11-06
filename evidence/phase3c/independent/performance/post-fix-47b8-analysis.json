@@ -1,0 +1,510 @@
+{
+  "artifactHead": "c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7",
+  "base": "ed22133f766aa1a2256dcebbb0413ec11d479106",
+  "resultsSha256": "2db950f48c1c583e30ac0be69eadb70dbd5110478500d9d08d4d1db440fe005c",
+  "rows": 72,
+  "allExecutionStatusesPASS": true,
+  "comparisons": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1250.0,
+        "inputRangeMs": [
+          1232,
+          1277.6000000000058
+        ],
+        "readyMedianMs": 3879.0718479999996,
+        "switchMedianMs": 445.11253900000156,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 483.29999999998836,
+        "inputRangeMs": [
+          467.5,
+          500
+        ],
+        "readyMedianMs": 4409.778392000007,
+        "switchMedianMs": 971.4300710000098,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -61.33600000000092,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1249.9500000000116,
+        "inputRangeMs": [
+          1233.2000000000116,
+          1310.499999999971
+        ],
+        "readyMedianMs": 3826.6824650000053,
+        "switchMedianMs": 443.8658529999957,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 483.29999999998836,
+        "inputRangeMs": [
+          466,
+          500
+        ],
+        "readyMedianMs": 4410.572053000011,
+        "switchMedianMs": 958.6071629999788,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -61.33445337813641,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1716.5499999999884,
+        "inputRangeMs": [
+          1666.7000000000116,
+          1761.0999999999767
+        ],
+        "readyMedianMs": 3838.0794650000025,
+        "switchMedianMs": 959.482955000014,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 630.3499999999767,
+        "inputRangeMs": [
+          616.5,
+          662.7000000000116
+        ],
+        "readyMedianMs": 4389.091956999997,
+        "switchMedianMs": 1466.4242319999903,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -63.27808686027316,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 2607.1999999999825,
+        "inputRangeMs": [
+          2511.5,
+          2699.8000000000466
+        ],
+        "readyMedianMs": 5781.490722999995,
+        "switchMedianMs": 895.069908000005,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 941.6000000000349,
+        "inputRangeMs": [
+          899.4000000000233,
+          1000
+        ],
+        "readyMedianMs": 6475.8972710000235,
+        "switchMedianMs": 1798.2652710000984,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -63.884627186251876,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1917.25,
+        "inputRangeMs": [
+          1860.6999999999534,
+          1999.9000000000233
+        ],
+        "readyMedianMs": 5684.040753000008,
+        "switchMedianMs": 835.7208569999784,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 732.4500000000116,
+        "inputRangeMs": [
+          695.1000000000931,
+          783.3000000000466
+        ],
+        "readyMedianMs": 6428.30517200008,
+        "switchMedianMs": 1829.533694999991,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -61.7968444386485,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 2582.1500000000233,
+        "inputRangeMs": [
+          2498.4000000000233,
+          2698.5999999999767
+        ],
+        "readyMedianMs": 5700.191343999992,
+        "switchMedianMs": 896.8145910000312,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 941.8499999999185,
+        "inputRangeMs": [
+          892.6999999999534,
+          1010.5999999999767
+        ],
+        "readyMedianMs": 6396.970128000015,
+        "switchMedianMs": 1799.4755299999379,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -63.524582227991786,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 570.5,
+        "inputRangeMs": [
+          557,
+          592
+        ],
+        "readyMedianMs": 2564.6172540000407,
+        "switchMedianMs": 243.51736000005621,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 292.99999999999955,
+        "inputRangeMs": [
+          276,
+          304
+        ],
+        "readyMedianMs": 3251.162450999953,
+        "switchMedianMs": 520.1862799999071,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -48.641542506573266,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 571.9999999999998,
+        "inputRangeMs": [
+          560,
+          587.0000000000009
+        ],
+        "readyMedianMs": 2583.761014000047,
+        "switchMedianMs": 241.39148099999875,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 292.0000000000009,
+        "inputRangeMs": [
+          274.9999999999991,
+          298
+        ],
+        "readyMedianMs": 3230.4261610000394,
+        "switchMedianMs": 513.7577240000246,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -48.95104895104877,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 684.5,
+        "inputRangeMs": [
+          667.9999999999991,
+          714.0000000000018
+        ],
+        "readyMedianMs": 2562.745729999966,
+        "switchMedianMs": 314.8920759999892,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 326.00000000000045,
+        "inputRangeMs": [
+          316,
+          343
+        ],
+        "readyMedianMs": 3247.9441220000153,
+        "switchMedianMs": 587.4827539999969,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": -52.37399561723879,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1091.5,
+        "inputRangeMs": [
+          1061,
+          1159
+        ],
+        "readyMedianMs": 3235.5919599999906,
+        "switchMedianMs": 405.3662989999866,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 508.0,
+        "inputRangeMs": [
+          489.0000000000009,
+          525
+        ],
+        "readyMedianMs": 4167.544095000019,
+        "switchMedianMs": 853.4019360000966,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -53.45854328905176,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 918.5,
+        "inputRangeMs": [
+          891,
+          967
+        ],
+        "readyMedianMs": 3220.388355000061,
+        "switchMedianMs": 361.4029829999199,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 457.0,
+        "inputRangeMs": [
+          434,
+          526.9999999999982
+        ],
+        "readyMedianMs": 4197.517698000069,
+        "switchMedianMs": 827.3806099999929,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -50.2449646162221,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1094.5000000000005,
+        "inputRangeMs": [
+          1072,
+          1123
+        ],
+        "readyMedianMs": 3253.6210219999775,
+        "switchMedianMs": 412.8724490000168,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 507.00000000000045,
+        "inputRangeMs": [
+          481,
+          522.9999999999982
+        ],
+        "readyMedianMs": 4192.637614000007,
+        "switchMedianMs": 857.6727299999911,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": -53.67747830059386,
+      "sameInitialPose": true
+    }
+  ],
+  "productHashesVersusCurrent": {
+    "src/main.js": true,
+    "src/phase3c.js": true,
+    "src/reading.js": true,
+    "src/phase3b.js": true,
+    "src/style.css": true,
+    "src/landscape.js": true,
+    "index.html": true,
+    "public/data/phase3b.json": true,
+    "public/data/phase3b.glb": true,
+    "public/data/phase3c.glb": true,
+    "public/data/phase3c.json": true,
+    "public/data/nishinomaru.glb": true,
+    "public/data/castle.glb": true,
+    "public/data/regional.glb": true,
+    "public/data/moat-study.glb": true,
+    "public/data/landscape.glb": true
+  },
+  "bytes": {
+    "nishinomaru.glb": 24933760,
+    "landscape.glb": 593620,
+    "phase3b.glb": 4540236,
+    "phase3c.glb": 507052
+  },
+  "capacityAdditionPercent": 1.6863724746251914,
+  "metadataVersion": 2,
+  "artifactTree": "5e44d4b1a310a45c9de1176939c6c60fb16b76d1",
+  "artifactURL": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096/artifacts/13473804018",
+  "zipSha256ReportedByParent": "e5425c90db8fe4ceb50c6eb3754a409f6b8db920a06765d66eb6ba48a3576ef0",
+  "allFov38": true,
+  "allQualityMatches": true,
+  "notStartupMeasured": true,
+  "rawCopiedToGit": false
+}

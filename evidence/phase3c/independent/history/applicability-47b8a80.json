@@ -1,0 +1,21 @@
+{
+  "previousHEAD": "05a0df3bf6bba6b90b5b61bbfa16bc85069c9776",
+  "targetHEAD": "47b8a80d2f7f08a50a0e0cfe9b4d89d7b2d07700",
+  "tree": "5e44d4b1a310a45c9de1176939c6c60fb16b76d1",
+  "comparedFiles": 66,
+  "changed": [],
+  "phase3cHashes": {
+    "production/phase3c/elements.geojson": "d257b3fe765f6e871531119da97b4d064e59b036fe478ddfd2a4dd371d56c6ed",
+    "production/phase3c/footprint.geojson": "2c3bf8ef19cd8d7afc3ee31f4ad4cb4005eff3082351ff5b45e0c39fe5eff918",
+    "production/phase3c/recipe.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+    "production/phase3c/sightlines.geojson": "92ab122760a82a0576ba1da0e4eee81e8f57c3a67656b48ff6493f9f10758609",
+    "production/phase3c/stations.geojson": "cb6cd073b9f7e7ca476d54c6237736375a1e48d799a632051afed5a5e26593a1",
+    "production/phase3c/surface-candidate-025m.tif": "0287c329358b0c5b44d5d169533c8f3c2d20cfd289058dcf0f26caedeb027709",
+    "production/phase3c/surface-candidate-025m.tif.aux.xml": "43bc2ecba3ce805844c0b4fcb181d19ccf91416366ea4d3a5057f24e13f0562c",
+    "production/yamanaka-phase3c.blend": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701",
+    "production/yamanaka-phase3c.qgz": "610c0d2c03d733ca9b792eeb5748dcafa13976af082cdfadc05c5ad61158b3dc",
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "public/data/phase3c.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+    "docs/phase3c-production.md": "ef3754e8bcdbc5ed427b4ad4ddf1509b1babb0ef7cf5787eaa8a8b72a22e4766"
+  }
+}

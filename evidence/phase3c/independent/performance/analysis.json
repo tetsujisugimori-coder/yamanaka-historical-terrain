@@ -1,0 +1,495 @@
+{
+  "artifactHead": "a366ec5d73616ec0ef1281a462b5d9c32a7749e5",
+  "base": "ed22133f766aa1a2256dcebbb0413ec11d479106",
+  "resultsSha256": "e25455ff14f947afb89cc2b0e78f5fce07117a22a50e63d553925a908a8e6709",
+  "rows": 72,
+  "allExecutionStatusesPASS": true,
+  "comparisons": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 629.0500000000029,
+        "inputRangeMs": [
+          616.5,
+          655.5
+        ],
+        "readyMedianMs": 2026.379653,
+        "switchMedianMs": 230.08707200000026,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 751.6499999999942,
+        "inputRangeMs": [
+          733,
+          832.9000000000233
+        ],
+        "readyMedianMs": 2474.2257360000076,
+        "switchMedianMs": 519.2161550000019,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 19.48970670057877,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 640.9499999999971,
+        "inputRangeMs": [
+          616.6999999999825,
+          683.3000000000175
+        ],
+        "readyMedianMs": 2035.1628859999983,
+        "switchMedianMs": 234.07013000000006,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 749.9500000000116,
+        "inputRangeMs": [
+          729.2000000000116,
+          773.0999999999767
+        ],
+        "readyMedianMs": 2386.8463579999952,
+        "switchMedianMs": 536.058023000005,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 17.006006708793976,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 835.25,
+        "inputRangeMs": [
+          799.9000000000233,
+          883.2999999999884
+        ],
+        "readyMedianMs": 2074.9390949999943,
+        "switchMedianMs": 505.4324190000043,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 921.4000000000233,
+        "inputRangeMs": [
+          883.4000000000233,
+          966.6000000000349
+        ],
+        "readyMedianMs": 2347.0974860000133,
+        "switchMedianMs": 774.3389460000035,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 10.314277162528974,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1266.5499999999884,
+        "inputRangeMs": [
+          1199.5,
+          1533.4000000000233
+        ],
+        "readyMedianMs": 2874.0325280000106,
+        "switchMedianMs": 432.3958149999962,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 1367.0,
+        "inputRangeMs": [
+          1303.2000000000116,
+          1448.0999999999767
+        ],
+        "readyMedianMs": 3289.914147000003,
+        "switchMedianMs": 905.9035579999909,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 7.930993644152418,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 999.7999999999884,
+        "inputRangeMs": [
+          949.9000000000233,
+          1050
+        ],
+        "readyMedianMs": 2966.17015000002,
+        "switchMedianMs": 476.7242719999922,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 1164.75,
+        "inputRangeMs": [
+          1071.7999999999302,
+          1349.9000000000233
+        ],
+        "readyMedianMs": 3246.658175999997,
+        "switchMedianMs": 955.7351930000004,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 16.498299659933345,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 1250.4499999999825,
+        "inputRangeMs": [
+          1195.2999999999884,
+          1316.5
+        ],
+        "readyMedianMs": 2857.826024000009,
+        "switchMedianMs": 426.4004699999932,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 1374.9500000000116,
+        "inputRangeMs": [
+          1306.4000000000233,
+          1483.0999999999767
+        ],
+        "readyMedianMs": 3297.5270099999616,
+        "switchMedianMs": 925.1571070000064,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 9.956415690353948,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 342.0,
+        "inputRangeMs": [
+          327,
+          345
+        ],
+        "readyMedianMs": 1505.8172389999963,
+        "switchMedianMs": 148.244011999981,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 509.0,
+        "inputRangeMs": [
+          490,
+          570
+        ],
+        "readyMedianMs": 1998.542642000015,
+        "switchMedianMs": 312.8609249999863,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 48.830409356725134,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 341.0,
+        "inputRangeMs": [
+          331.00000000000045,
+          347
+        ],
+        "readyMedianMs": 1502.5240960000083,
+        "switchMedianMs": 137.15819699998247,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 506.0000000000007,
+        "inputRangeMs": [
+          488.9999999999991,
+          556
+        ],
+        "readyMedianMs": 1961.88753800001,
+        "switchMedianMs": 321.25387199997203,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 48.38709677419375,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 406.0,
+        "inputRangeMs": [
+          391,
+          426.99999999999955
+        ],
+        "readyMedianMs": 1523.548974000034,
+        "switchMedianMs": 205.68695499998285,
+        "triangles": [
+          485332
+        ],
+        "drawCalls": [
+          22
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 572.9999999999995,
+        "inputRangeMs": [
+          554,
+          587.0000000000009
+        ],
+        "readyMedianMs": 1971.0149979999987,
+        "switchMedianMs": 382.0132469999953,
+        "triangles": [
+          450462
+        ],
+        "drawCalls": [
+          24
+        ]
+      },
+      "inputChangePercent": 41.13300492610825,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "balanced",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 665.5,
+        "inputRangeMs": [
+          638,
+          837
+        ],
+        "readyMedianMs": 1942.5031220000237,
+        "switchMedianMs": 256.42508999991696,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 866.5000000000009,
+        "inputRangeMs": [
+          827,
+          914.0000000000018
+        ],
+        "readyMedianMs": 2492.711746999994,
+        "switchMedianMs": 502.9900020000059,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 30.202854996243556,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "light",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 561.5,
+        "inputRangeMs": [
+          537.0000000000005,
+          593
+        ],
+        "readyMedianMs": 1996.1677099999506,
+        "switchMedianMs": 241.4265679999953,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 766.0,
+        "inputRangeMs": [
+          725,
+          802
+        ],
+        "readyMedianMs": 2497.9981879999395,
+        "switchMedianMs": 498.83879499998875,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 36.420302760463045,
+      "sameInitialPose": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "quality": "high",
+      "base": {
+        "trials": 3,
+        "inputMedianMs": 648.5,
+        "inputRangeMs": [
+          632.9999999999995,
+          665
+        ],
+        "readyMedianMs": 1911.978673000005,
+        "switchMedianMs": 248.71552099997643,
+        "triangles": [
+          503836
+        ],
+        "drawCalls": [
+          31
+        ]
+      },
+      "phase3c": {
+        "trials": 3,
+        "inputMedianMs": 859.9999999999995,
+        "inputRangeMs": [
+          817,
+          881.0000000000009
+        ],
+        "readyMedianMs": 2489.640325999935,
+        "switchMedianMs": 506.70819700008724,
+        "triangles": [
+          470898
+        ],
+        "drawCalls": [
+          38
+        ]
+      },
+      "inputChangePercent": 32.61372397841165,
+      "sameInitialPose": true
+    }
+  ],
+  "productHashesVersusCurrent": {
+    "src/main.js": true,
+    "src/phase3b.js": true,
+    "src/style.css": true,
+    "src/landscape.js": true,
+    "index.html": true,
+    "public/data/phase3b.json": true,
+    "public/data/phase3b.glb": true,
+    "public/data/phase3c.glb": true,
+    "public/data/phase3c.json": true
+  },
+  "bytes": {
+    "nishinomaru.glb": 24933760,
+    "landscape.glb": 593620,
+    "phase3b.glb": 4540236,
+    "phase3c.glb": 507052
+  },
+  "capacityAdditionPercent": 1.6863724746251914
+}

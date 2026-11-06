@@ -1,0 +1,121 @@
+✖ shared source geometry stays UV-free through staggered D activation and deactivation (11.418115ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (8.430666ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 141.882578
+
+✖ failing tests:
+
+test at tests/phase3c-finish.test.mjs:6:1
+✖ shared source geometry stays UV-free through staggered D activation and deactivation (11.418115ms)
+  AssertionError [ERR_ASSERTION]: D must never write to shared source geometry
+  + actual - expected
+  
+  + BufferAttribute {
+  +   array: Float32Array(48) [
+  +     1,
+  +     0.20000000298023224,
+  +     1,
+  +     0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     1,
+  +     0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     1,
+  +     0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     1,
+  +     0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     1,
+  +     0.20000000298023224,
+  +     -1,
+  +     0.20000000298023224,
+  +     1,
+  +     -0.20000000298023224,
+  +     -1,
+  +     -0.20000000298023224
+  +   ],
+  +   count: 24,
+  +   gpuType: 1015,
+  +   isBufferAttribute: true,
+  +   itemSize: 2,
+  +   name: '',
+  +   normalized: false,
+  +   updateRanges: [],
+  +   usage: 35044,
+  +   version: 0
+  + }
+  - undefined
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-finish.test.mjs:11:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: {
+      isBufferAttribute: true,
+      name: '',
+      array: Float32Array(48) [
+                           1,  0.20000000298023224,                    1,
+         0.20000000298023224,                    1, -0.20000000298023224,
+                           1, -0.20000000298023224,                   -1,
+         0.20000000298023224,                   -1,  0.20000000298023224,
+                          -1, -0.20000000298023224,                   -1,
+        -0.20000000298023224,                   -1,  0.20000000298023224,
+                           1,  0.20000000298023224,                   -1,
+         0.20000000298023224,                    1,  0.20000000298023224,
+                          -1, -0.20000000298023224,                    1,
+        -0.20000000298023224,                   -1, -0.20000000298023224,
+                           1, -0.20000000298023224,                   -1,
+         0.20000000298023224,                    1,  0.20000000298023224,
+                          -1, -0.20000000298023224,                    1,
+        -0.20000000298023224,                    1,  0.20000000298023224,
+                          -1,  0.20000000298023224,                    1,
+        -0.20000000298023224,                   -1, -0.20000000298023224
+      ],
+      itemSize: 2,
+      count: 24,
+      normalized: false,
+      usage: 35044,
+      updateRanges: [],
+      gpuType: 1015,
+      version: 0
+    },
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

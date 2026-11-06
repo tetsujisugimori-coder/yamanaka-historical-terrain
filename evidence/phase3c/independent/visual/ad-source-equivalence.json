@@ -1,0 +1,62 @@
+{
+  "executionHead": "5fbbfeb937c8bc224456187cec118d076cb023f1",
+  "executionTree": "045d123847c692e160b24edf56ff13505a88d2db",
+  "submissionHead": "05a0df3bf6bba6b90b5b61bbfa16bc85069c9776",
+  "productDiffEmpty": true,
+  "sha256": [
+    {
+      "file": "src/main.js",
+      "executionSha256": "cb4b6cfef6e673bb0f80e6f8b37894aa8295c9b9a17eab0668032ac81b290797",
+      "currentSha256": "cb4b6cfef6e673bb0f80e6f8b37894aa8295c9b9a17eab0668032ac81b290797",
+      "equal": true
+    },
+    {
+      "file": "src/phase3b.js",
+      "executionSha256": "6332226b7d03757fdb74d982ea274e432fc42bc83cbebae911b69239b66e95a3",
+      "currentSha256": "6332226b7d03757fdb74d982ea274e432fc42bc83cbebae911b69239b66e95a3",
+      "equal": true
+    },
+    {
+      "file": "src/phase3c.js",
+      "executionSha256": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+      "currentSha256": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+      "equal": true
+    },
+    {
+      "file": "src/reading.js",
+      "executionSha256": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+      "currentSha256": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+      "equal": true
+    },
+    {
+      "file": "src/style.css",
+      "executionSha256": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+      "currentSha256": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+      "equal": true
+    },
+    {
+      "file": "public/data/phase3c.glb",
+      "executionSha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "currentSha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "equal": true
+    },
+    {
+      "file": "public/data/phase3c.json",
+      "executionSha256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+      "currentSha256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+      "equal": true
+    },
+    {
+      "file": "public/data/castle.glb",
+      "executionSha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "currentSha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "equal": true
+    },
+    {
+      "file": "public/data/nishinomaru.glb",
+      "executionSha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "currentSha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "equal": true
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "head": "ed22133f766aa1a2256dcebbb0413ec11d479106",
+  "actualGLB": "d966fde9c320fe8bed4919ceb965ab4a49700a83f29b7eb02f9c3e4209b3c0bd",
+  "results": [
+    {
+      "name": "ic-bridgesurfaceearth",
+      "cycles": 5,
+      "sourceHash": "1710b52cf98586186da192675e17186fea0193a78aaa5834f208e33ed8a639ec",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-koguchisurfaceearth",
+      "cycles": 5,
+      "sourceHash": "4108712eeeb0dcd94fca0ebfac99c450c0db96b44de663799d8a1a3a2897d7b7",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-bridgesurfacepath",
+      "cycles": 5,
+      "sourceHash": "e420890281e6d2b2338f51a5b6135e0988d092a25fe33a5fcff6d1505a324d3f",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-koguchisurfacepath",
+      "cycles": 5,
+      "sourceHash": "f4ed6eace7d9caa3f5d53a9707e96fafb9c08be41e2aa4d3a2662b1311c0eb71",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-bridgesurfacegrass",
+      "cycles": 5,
+      "sourceHash": "08b960779eccb0c278f99632fec965c958008788e28a202826a31d7e26db7f88",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-koguchisurfacegrass",
+      "cycles": 5,
+      "sourceHash": "851b426b0e6cb64eecffb2d6971208d395ed3af274b7cb813beb3d897d8eed0f",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    },
+    {
+      "name": "ic-lookoutsurfacegrass",
+      "cycles": 5,
+      "sourceHash": "8c4e0a75098edcaf7ff4b594c96c8710d2ba9c6b5270b5985d8c8353e0e9d20a",
+      "privateGeometry": true,
+      "sourceUnchanged": true,
+      "uvRestored": true,
+      "neutralMaterialRestored": true
+    }
+  ]
+}

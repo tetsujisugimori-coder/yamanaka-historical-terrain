@@ -1,0 +1,14 @@
+# P2 VISUAL-03: black inner-castle patch in D presentation
+
+Independent visual confirmation: opened original images from run 42125592154, `appearance-performance/performance/performance-images/chromium-1280-phase3c-light.png` and `webkit-1280-phase3c-balanced.png`. Both show a large nearly black patch entering the lower-left foreground, sharply unlike the adjacent terrain. Chromium light also exhibits it, so ordinary cast-shadow darkness is not a sufficient explanation. This interferes with reading the new terrain and is P2, not merely the existing P3 texture-quality limitation.
+
+Technical review reported seven new GLB meshes lack COLOR attributes while createSurfaceFinish enables vertexColors based only on appearanceEvidence. Independently inspected source and confirmed the enabling line exists: `if(mesh.userData.appearanceEvidence)mat.vertexColors=true;`. Product fix belongs to UI implementer, not this reviewer.
+
+Independent browser oracle now reads actual visible mesh material.vertexColors and geometry color/position attribute counts. Every probe rejects with VERTEX_COLOR_WITHOUT_ATTRIBUTE if vertex colors are enabled without matching per-vertex data. This avoids using the product's enabling predicate as the expected answer.
+
+Negative reintroduction path: `INDEPENDENT_MUTATION=missing-color TEST_URL=http://127.0.0.1:4317 node scripts/phase3c-independent-browser.mjs`. This intercepts only the appearanceEvidence material enabling line and restores old `true` logic. It requires a distinct fixed baseline, exact single anchor, and two Chromium/WebKit cases rejecting specifically with the independent oracle signature; any other failure is not accepted as successful negative detection. Outputs go to `negative-missing-color` with a separate verdict. Normal mode still runs full matrix and uses same oracle.
+
+Status: OPEN pending executed fixed-code browser evidence, expected negative rejection, and new screenshots showing the patch correctly rendered. Script syntax check passed; no browser execution has occurred locally. Prior narrow western-view texture review remains scoped to those views and does not negate this new whole-scene finding. Final visual acceptance/merge recommendation is NO until this P2 is resolved and verified.
+
+## Final closure update
+For HEAD 47b8a80 / tree 5e44d4b, VISUAL-03 is CLOSED. See FINAL-47b8a80.md and final-artifact-audit.json: independent normal22 PASS, exact missing-color negative2 rejection, matching source manifests, and actual corrected counterexample images. The earlier OPEN assessment above remains historical.

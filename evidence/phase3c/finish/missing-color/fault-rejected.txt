@@ -1,0 +1,33 @@
+✔ shared source geometry stays UV-free through staggered D activation and deactivation (141.910275ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (270.890044ms)
+✖ real inner GLB without COLOR never enables vertex colors; old western colors are preserved (147.658303ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 672.219082
+
+✖ failing tests:
+
+test at tests/phase3c-finish.test.mjs:26:1
+✖ real inner GLB without COLOR never enables vertex colors; old western colors are preserved (147.658303ms)
+  AssertionError [ERR_ASSERTION]: VERTEX_COLOR_WITHOUT_ATTRIBUTE ic-bridgesurfaceearth
+
+  true !== false
+
+      at file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-finish.test.mjs:34:35
+      at Mesh.traverse (file:///workspace/scratch/e622c1e9421e/yamanaka-p2-fix-20261105/node_modules/three/build/three.core.js:14200:3)
+      at Group.traverse (file:///workspace/scratch/e622c1e9421e/yamanaka-p2-fix-20261105/node_modules/three/build/three.core.js:14206:18)
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-finish.test.mjs:32:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

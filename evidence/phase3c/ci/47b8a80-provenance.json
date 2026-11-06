@@ -1,0 +1,179 @@
+{
+  "candidateHead": "47b8a80d2f7f08a50a0e0cfe9b4d89d7b2d07700",
+  "candidateTree": "5e44d4b1a310a45c9de1176939c6c60fb16b76d1",
+  "workflowRun": 42152881096,
+  "checkoutMerge": "c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7",
+  "checkoutParents": [
+    "ed22133f766aa1a2256dcebbb0413ec11d479106",
+    "47b8a80d2f7f08a50a0e0cfe9b4d89d7b2d07700"
+  ],
+  "checkoutTreeEqualsCandidate": true,
+  "verification": "Downloaded official Actions ZIP; SHA256 equals API digest; safe ZIP path check; each report head/tree and every source fingerprint compared with immutable git show candidate:path. Execution PASS is not visual or performance acceptance.",
+  "artifacts": [
+    {
+      "id": 13473804018,
+      "name": "phase3c-appearance-performance",
+      "bytes": 12020534,
+      "zipSha256": "e5425c90db8fe4ceb50c6eb3754a409f6b8db920a06765d66eb6ba48a3576ef0",
+      "expiresAt": "2027-02-04T02:50:45Z",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096/artifacts/13473804018"
+    },
+    {
+      "id": 13472749491,
+      "name": "phase3c-browser",
+      "bytes": 4140867,
+      "zipSha256": "7a4809cab9e989c00c9c96c29e1952fdaef7a8510dadcc3fb0feddfa4fecdbb7",
+      "expiresAt": "2027-02-04T02:50:45Z",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096/artifacts/13472749491"
+    },
+    {
+      "id": 13473859588,
+      "name": "phase3c-independent-visual",
+      "bytes": 3017701,
+      "zipSha256": "5b62dc797e8f0866bcb86d43634829fbdf2830b75aa3ec2eb30f5b2b77f47d1a",
+      "expiresAt": "2027-02-04T02:50:45Z",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096/artifacts/13473859588"
+    }
+  ],
+  "reports": [
+    {
+      "pathWithinExtractedArtifacts": "phase3c-appearance-performance/appearance/results.json",
+      "sha256": "023eff219fa7bc3b1760662813d7776b8b3e05f87d6ef974f3caaa125d090da7",
+      "rows": 8,
+      "executionStatusCounts": {
+        "PASS": 8
+      },
+      "matchingSourceFiles": [
+        "src/main.js",
+        "src/phase3c.js",
+        "src/phase3b.js",
+        "src/reading.js",
+        "src/style.css",
+        "src/landscape.js",
+        "index.html",
+        "scripts/phase3c-appearance.mjs",
+        "public/data/phase3c.json",
+        "public/data/phase3c.glb",
+        "public/data/phase3b.json",
+        "public/data/phase3b.glb",
+        "public/data/nishinomaru.glb",
+        "public/data/castle.glb",
+        "public/data/regional.glb",
+        "public/data/moat-study.glb",
+        "public/data/landscape.glb"
+      ]
+    },
+    {
+      "pathWithinExtractedArtifacts": "phase3c-appearance-performance/performance/results.json",
+      "sha256": "2db950f48c1c583e30ac0be69eadb70dbd5110478500d9d08d4d1db440fe005c",
+      "rows": 72,
+      "executionStatusCounts": {
+        "PASS": 72
+      },
+      "matchingSourceFiles": [
+        "src/main.js",
+        "src/phase3c.js",
+        "src/reading.js",
+        "src/phase3b.js",
+        "src/style.css",
+        "src/landscape.js",
+        "index.html",
+        "public/data/phase3b.json",
+        "public/data/phase3b.glb",
+        "scripts/phase3c-performance.mjs",
+        "public/data/phase3c.glb",
+        "public/data/phase3c.json",
+        "public/data/nishinomaru.glb",
+        "public/data/castle.glb",
+        "public/data/regional.glb",
+        "public/data/moat-study.glb",
+        "public/data/landscape.glb"
+      ]
+    },
+    {
+      "pathWithinExtractedArtifacts": "phase3c-browser/browser/results.json",
+      "sha256": "cafa3f854ba0f21c116ff3b1d34c0586432ff2601cf3f7e9f2bd91ee9734c9c4",
+      "rows": 31,
+      "executionStatusCounts": {
+        "PASS": 31
+      },
+      "matchingSourceFiles": [
+        "src/main.js",
+        "src/phase3c.js",
+        "src/phase3b.js",
+        "src/reading.js",
+        "src/style.css",
+        "src/landscape.js",
+        "src/surface.js",
+        "src/intent.js",
+        "index.html",
+        "scripts/phase3c-browser.mjs",
+        "tests/section-oracle.mjs",
+        "tests/glb-surface.mjs",
+        "public/data/phase3c.json",
+        "public/data/phase3c.glb",
+        "public/data/phase3b.json",
+        "public/data/phase3b.glb",
+        "public/data/castle.glb",
+        "public/data/nishinomaru.glb",
+        "public/data/regional.glb",
+        "public/data/moat-study.glb"
+      ]
+    },
+    {
+      "pathWithinExtractedArtifacts": "phase3c-independent-visual/results.json",
+      "sha256": "577eac7495e565e66dd1b0c89545a6542148aac177eec68460d6cacd54619a24",
+      "rows": 22,
+      "executionStatusCounts": {
+        "PASS": 22
+      },
+      "matchingSourceFiles": [
+        "src/main.js",
+        "src/phase3b.js",
+        "src/phase3c.js",
+        "src/reading.js",
+        "src/style.css",
+        "scripts/phase3c-independent-browser.mjs",
+        "public/data/phase3c.glb",
+        "public/data/phase3c.json",
+        "public/data/regional.glb",
+        "public/data/castle.glb",
+        "public/data/nishinomaru.glb",
+        "public/data/moat-study.glb",
+        "public/data/phase3b.glb",
+        "public/data/landscape.glb"
+      ],
+      "mutation": null
+    },
+    {
+      "pathWithinExtractedArtifacts": "phase3c-independent-visual/negative-missing-color/results.json",
+      "sha256": "efa93d494742eae674424f8defc0018a785fedc0a8800097fac3e28f7f95bf4d",
+      "rows": 2,
+      "executionStatusCounts": {
+        "FAIL": 2
+      },
+      "matchingSourceFiles": [
+        "src/main.js",
+        "src/phase3b.js",
+        "src/phase3c.js",
+        "src/reading.js",
+        "src/style.css",
+        "scripts/phase3c-independent-browser.mjs",
+        "public/data/phase3c.glb",
+        "public/data/phase3c.json",
+        "public/data/regional.glb",
+        "public/data/castle.glb",
+        "public/data/nishinomaru.glb",
+        "public/data/moat-study.glb",
+        "public/data/phase3b.glb",
+        "public/data/landscape.glb"
+      ],
+      "mutation": "missing-color"
+    }
+  ],
+  "independentNegativeVerdict": {
+    "mutation": "missing-color",
+    "status": "EXPECTED_REJECTION",
+    "rows": 2
+  }
+}

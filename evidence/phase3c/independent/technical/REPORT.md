@@ -1,0 +1,25 @@
+# Independent 3D / implementation review
+
+Reviewed product HEAD: `573dc70e90fb58f38271b1eff08efe4179ee3ccb`. Technical scope: PASS after P2 correction. Whole-task/browser outcome: PARTIAL / not independently tested here. No open P1/P2 identified in tested technical scope.
+
+Reviewer ran separate GLB binary parser, barycentric vertical rays, triangle edge counting, projected polygon clipping, native Blender/QGIS processes and actual-GLB shared-geometry state checks. Production elevation helpers and producer PASS logs were not used as oracles.
+
+## Results
+- Adaptive GLB SHA256 d966fde9c320fe8bed4919ceb965ab4a49700a83f29b7eb02f9c3e4209b3c0bd: 7,342 triangles, 3,040 m² projected area, no degenerate projected triangles, all interior edges paired, 1,016 perimeter edges, no interior boundary edges. Maximum perimeter height discrepancy to actual previous C GLB triangles: 0.000030517578125 m. Retained western/transition triangles have zero projected overlap inside patch. IDs: ic-bridge, ic-koguchi, ic-lookout; all C; exported coordinate bounds and 1m metadata agree with east/up/south convention.
+- Actual imported source geometry shared by two meshes survives five D→C cycles without source UV/position/index mutation. Per-mesh geometry containers remain distinct. UV, material and shadow flags restored. Same independent test against ed22133 phase3b implementation exits 1 (ownership defect RED). Current implementation exits 0. This is state verification, not pixel-identical GPU rendering verification.
+- Independent Blender background reopen of old and new native files: 693 prior meshes byte-equivalent in coordinates, face topology and transforms; 7 new C meshes; scene scale 1m. Separate QGIS project reread: old 16 and new 20 layers all valid, project EPSG:6676. Logs include environment/font/network warnings; processes exited successfully and layers validated. Raster/vector registration to surveyed reality remains UNKNOWN.
+- All six pre-existing GLBs, eight prior Blender/QGIS native sources, section logic and section exhibit source byte-identical to baseline. Fixed section horizontal ranges E=-66..-38 and E=-45..-15 do not intersect new patch ending E=-68. Their actual reference GLBs are unchanged.
+- Independent fault injection rejects +1m easting shift, false wb-gate ID, A-category mixing and +0.5m seam height corruption. These checks have limited mutation scope; they do not claim exhaustive mesh intersection proof.
+
+## P2 found, correction under review
+Reproduction: fail phase3b.glb request; load phase3c successfully; enter C landscape / bridge observation. Previously syncWestern restored nm-context while syncInner did not clip it. Actual prior context at E=-91,N=-35 is 566.94599609375m, whereas new bridge is 555.6599731445312m (11.286m buried). Root cause: optional inner patch depended on western C cutout without enforcing dependency. Producer/UI implementer adopted explicit dependency gating rather than cutting unrelated A-derived context and creating discontinuous boundaries. Correction independently verified at frozen HEAD: extracted actual `syncInner` function executed against actual imported GLB meshes, failed western dependency hides inner group, restores every prior terrain index and displays dependency warning. Removing the guard reproduces visible buried inner geometry and non-restored transition indices. See dependency.json and dependency.mjs. Guided station entry also explicitly refuses restored-mode entry while inner group is unavailable. This is scene-state execution, not a browser network or screenshot claim. Original failure retained here.
+
+## Limits / not tested
+Browser/WebGL screenshot rendering, Chromium/WebKit matrix, sustained FPS, GPU memory, actual Safari and VoiceOver are not independently verified by this reviewer. Independent topology/height tests do not certify historic position, accuracy, navigability, or visual quality. Whole recipe rerun was not performed to avoid overwriting shared producer artifacts; editable-file reopening and independent selected-object GLB re-export provide narrower reproducibility evidence.
+
+## Commands
+Run from repository root: `/usr/bin/python3 evidence/phase3c/independent/technical/mesh_review.py`; `node evidence/phase3c/independent/technical/ownership.mjs`; Blender background with `native_blender.py` (file path after `--`); `QT_QPA_PLATFORM=offscreen /usr/bin/python3 evidence/phase3c/independent/technical/native_qgis.py`. Actual raw results accompany this report.
+
+## Final revalidation
+
+`final-geometry.json` and `final-ownership.json` were rerun at the reviewed HEAD with latest metadata (including west-gate eye E=-195,N=-35). Independent selected-object GLB re-export from saved Blender file has zero coordinate delta for every triangle, same triangle counts and matching extras for all seven meshes. Independent QGIS reread repeated after final station update; all20 layers valid. No product files were edited by reviewer. Re-export proves native→GLB geometry reproducibility, not full recipe portability.

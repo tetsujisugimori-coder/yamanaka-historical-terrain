@@ -1,0 +1,38 @@
+{
+  "scope": "Working source hashes; GPU pixel result and CI diagnosis pending",
+  "hashes": {
+    "src/main.js": "480f53e512968efa89af3f5af7a6284d8ec0bf3651d0cd68221656154ece2474",
+    "src/phase3b.js": "4242b367eb6f744d9e21104f7e3efa50cb9a2cf0180b3b5772f824efdcf369fd",
+    "scripts/phase3c-performance-diagnosis.mjs": "1518762d702b9aad18ce50f1b572a79e3d8b30fa4ec3d13d43c85f50018de57c"
+  },
+  "rows": [
+    {
+      "file": "phase3b",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "count": 412,
+      "withColor": 3,
+      "withoutColor": 409,
+      "oldTruthinessGuardWouldEnableMissingAttribute": 409
+    },
+    {
+      "file": "phase3c",
+      "sha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "count": 7,
+      "withColor": 0,
+      "withoutColor": 7,
+      "oldTruthinessGuardWouldEnableMissingAttribute": 7
+    }
+  ],
+  "cameraIntentTests": [
+    {
+      "ready": true,
+      "generation": 1,
+      "restore": 0
+    },
+    {
+      "ready": false,
+      "generation": 1,
+      "restore": 1
+    }
+  ]
+}

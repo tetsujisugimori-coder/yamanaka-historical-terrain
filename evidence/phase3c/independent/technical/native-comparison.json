@@ -1,0 +1,59 @@
+{
+  "priorCount": 693,
+  "newCount": 700,
+  "oldMissing": [],
+  "oldChanged": [],
+  "added": {
+    "ic-bridge.surface.earth": {
+      "sha256": "c4ed7dcfae6d2290046d476be064696898747daf235a2a39caaea1b6f196085b",
+      "vertices": 500,
+      "polygons": 785,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-bridge.surface.grass": {
+      "sha256": "def86d2e1a35c14eb168a7dea8e00326931aa16f4801206b929ba6fdd0d0982b",
+      "vertices": 1614,
+      "polygons": 2853,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-bridge.surface.path": {
+      "sha256": "2e0e1258931f5ad0b17fb5951d3d4138b734ae9abc3f7e815a549b32d0ef6527",
+      "vertices": 111,
+      "polygons": 164,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-koguchi.surface.earth": {
+      "sha256": "6ad4c37c3916eef1b4906bbf22933f44ee9d049c1c8a0096a666a84b0e21af90",
+      "vertices": 408,
+      "polygons": 629,
+      "category": "C",
+      "id": "ic-koguchi"
+    },
+    "ic-koguchi.surface.grass": {
+      "sha256": "398a2f94933d548301916516c7b106b3267197ef0381000feaf9e6a0eb7750b7",
+      "vertices": 34,
+      "polygons": 33,
+      "category": "C",
+      "id": "ic-koguchi"
+    },
+    "ic-koguchi.surface.path": {
+      "sha256": "ad01cf50111e06afb67ac6fc985606345d0d9266d3f0bc987c7991ace893b152",
+      "vertices": 91,
+      "polygons": 132,
+      "category": "C",
+      "id": "ic-koguchi"
+    },
+    "ic-lookout.surface.grass": {
+      "sha256": "97c35ecab309b505f4ec0e1956b88b59bf84d9832363d8df523b2ff1b2b3a5d2",
+      "vertices": 1594,
+      "polygons": 2746,
+      "category": "C",
+      "id": "ic-lookout"
+    }
+  },
+  "priorUnits": 1.0,
+  "newUnits": 1.0
+}

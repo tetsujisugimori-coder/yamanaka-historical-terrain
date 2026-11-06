@@ -1,6 +1,7 @@
 import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {canonicalSha256,sha256,normalization} from './evidence-hash.mjs';
+import {mutateInitialCamera,initialCameraResultsAccepted} from './initial-camera-mutation.mjs';
 const label=process.argv.find(x=>x.startsWith('--label='))?.split('=')[1]??'fixed';
 if(!['legacy','defect','fixed','mutation'].includes(label))throw Error('Unknown label');
 const root=process.env.TEST_URL??'http://127.0.0.1:4317',sourceRoot=process.env.SOURCE_ROOT??'.';
@@ -8,14 +9,16 @@ const body=await readFile(`${sourceRoot}/public/data/regional.glb`),sourceHashes
 for(const file of ['src/main.js','public/data/regional.glb'])sourceHashes[file]=canonicalSha256(file,await readFile(`${sourceRoot}/${file}`));
 if(label!=='legacy')sourceHashes['src/intent.js']=canonicalSha256('src/intent.js',await readFile(`${sourceRoot}/src/intent.js`));
 const response=await fetch(root+'/src/main.js');if(!response.ok)throw Error('Cannot load real module');let main=await response.text();
+const servedModuleSha256=sha256(main);let mutation=null;
 if(label==='mutation'){
- const key='function beginCameraIntent(){if(currentModel)return beginIntent();intents.adjustCamera();}';
- if(!main.includes(key))throw Error('Initial-input mutation did not apply');main=main.replace(key,'function beginCameraIntent(){return beginIntent();}');
+ const result=mutateInitialCamera(main);main=result.source;
+ mutation={target:'beginCameraIntent',originalFunctionSha256:sha256(result.originalFunction),mutatedFunctionSha256:sha256(result.mutatedFunction),mutatedModuleSha256:sha256(main)};
 }
 const marker='async function setView(view,';if(!main.includes(marker))throw Error('Missing completion instrumentation anchor');
 main=main.replace(marker,'async function setView(...args){window.__activeViews=(window.__activeViews??0)+1;try{return await measuredView(...args);}finally{window.__activeViews--;}} async function measuredView(view,');
+const routedModuleSha256=sha256(main);
 const results=[];await mkdir('evidence/initial-camera',{recursive:true});
-const snapshot=p=>p.evaluate(()=>({d:window.__terrainDiagnostics(),renderState:document.body.dataset.renderState,status:document.querySelector('#app-status').textContent,heading:document.querySelector('#detail h2')?.textContent,inputs:window.__trustedInputs}));
+const snapshot=p=>p.evaluate(()=>({d:window.__terrainDiagnostics(),activeViews:window.__activeViews,renderState:document.body.dataset.renderState,status:document.querySelector('#app-status').textContent,heading:document.querySelector('#detail h2')?.textContent,inputs:window.__trustedInputs}));
 for(const [engine,type]of [['chromium',chromium],['webkit',webkit]]){
  const browser=await type.launch();
  const cases=[];
@@ -50,9 +53,8 @@ for(const [engine,type]of [['chromium',chromium],['webkit',webkit]]){
    expect(row.pageerrors).toEqual([]);row.status='PASS';
   }catch(e){row.status='FAIL';row.reason=e.message;}
   release();results.push(row);console.log(`${label} ${row.status} ${engine} ${spec.input} ${spec.outcome} ${spec.width}/${spec.motion}`);await context.close();
-  await writeFile(`evidence/initial-camera/${label}.json`,JSON.stringify({label,sourceHashes,hashNormalization:normalization,actualGlbSha256:sha256(body),scope:'Windows implementation self-verification; explicit response gate; actual GLB; trusted Playwright input; only view-completion counter instrumented',results},null,2));
+  await writeFile(`evidence/initial-camera/${label}.json`,JSON.stringify({label,sourceHashes,hashNormalization:normalization,actualGlbSha256:sha256(body),servedModuleSha256,routedModuleSha256,mutation,scope:'Implementation self-verification; explicit response gate; actual GLB; trusted Playwright input; view-completion counter instrumented; initial-input negative control only for mutation label',results},null,2));
  }
  await browser.close();
 }
-const count=['legacy','defect'].includes(label)?8:72;
-if(results.length!==count||results.some(r=>r.status!==(['defect','mutation'].includes(label)?'FAIL':'PASS')))process.exitCode=1;
+if(!initialCameraResultsAccepted(label,results))process.exitCode=1;

@@ -1,0 +1,55 @@
+{
+  "input": "/workspace/scratch/e622c1e9421e/yamanaka-phase3c/production/yamanaka-phase3c.blend",
+  "units": 1.0,
+  "meshes": {
+    "ic-bridge.surface.earth": {
+      "sha256": "868bbfad49df412855a6b5eb741cb8c2540f5f0e48031f69fe3d1a8258af48ac",
+      "vertices": 780,
+      "polygons": 1236,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-bridge.surface.grass": {
+      "sha256": "98ce3430347a80d96e9de2f0ba6b0a8a50222f63381fdf6985742cd074007afc",
+      "vertices": 1571,
+      "polygons": 2705,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-bridge.surface.path": {
+      "sha256": "86f90abfd295625028267ab72753b49eb06636637dafad1203f36efe1ae889e5",
+      "vertices": 111,
+      "polygons": 164,
+      "category": "C",
+      "id": "ic-bridge"
+    },
+    "ic-koguchi.surface.earth": {
+      "sha256": "23a920f5b7e2c890c149cb1c4c5c207487e512d3e68c0548ac5378de9e4a44ce",
+      "vertices": 239,
+      "polygons": 363,
+      "category": "C",
+      "id": "ic-koguchi"
+    },
+    "ic-koguchi.surface.path": {
+      "sha256": "52a1cdd9aef50110dfe0d5348afcc94d53494d74045589c1937781f7742dc679",
+      "vertices": 91,
+      "polygons": 132,
+      "category": "C",
+      "id": "ic-koguchi"
+    },
+    "ic-lookout.surface.earth": {
+      "sha256": "7fe673e3780b3d64e601d63a95ce15079891652675a4706cea6631bfbd6caddc",
+      "vertices": 38,
+      "polygons": 37,
+      "category": "C",
+      "id": "ic-lookout"
+    },
+    "ic-lookout.surface.grass": {
+      "sha256": "ccca152bd6c1f843eeb6a4af42bc8ad3c456bc45fa3364355ecbdf90c1c77b0e",
+      "vertices": 1571,
+      "polygons": 2705,
+      "category": "C",
+      "id": "ic-lookout"
+    }
+  }
+}

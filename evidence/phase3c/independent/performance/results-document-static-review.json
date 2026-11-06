@@ -1,0 +1,24 @@
+{
+  "reviewScope": "Numerical/performance/native facts within own review; history/browser-wide counts rely on their separate reviewers",
+  "documentSha256": "a278cbbfaea6e2b5ff0c9c91fd353bad29131a9ce9694187170ea782546b6720",
+  "performanceScriptSha256": "4d423e8d67b947dec8dcbe2e8aa9478bed18186ac74bd12aba0b8a956a42c6f5",
+  "webkit1280": {
+    "balanced": {
+      "documentContains": true,
+      "aggregate": "1091.5\u2192508.0"
+    },
+    "light": {
+      "documentContains": true,
+      "aggregate": "918.5\u2192457.0"
+    },
+    "high": {
+      "documentContains": true,
+      "aggregate": "1094.5\u2192507.0"
+    }
+  },
+  "p3ResidualClassificationConsistent": true,
+  "ciPendingNoRecommendationConsistent": true,
+  "v3NaturalInitialLayoutAnd2to1Disclosed": true,
+  "v3NavigationPoseCapturedBeforeCSS": true,
+  "newFindings": []
+}

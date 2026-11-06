@@ -1,0 +1,11 @@
+Source: https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42125216853/job/127587538869
+Purpose: distinguish PR14 synthetic merge from historical artifacts. Source/tree binding is checked separately.
+
+2026-11-05T22:54:52.8416255Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +5fbbfeb937c8bc224456187cec118d076cb023f1:refs/remotes/pull/14/merge
+2026-11-05T22:54:57.1835092Z HEAD is now at 5fbbfeb Merge 7443d1dee919d2c1f46006a599f3d65b525206a6 into ed22133f766aa1a2256dcebbb0413ec11d479106
+2026-11-05T22:55:49.9303532Z [36;1mREVIEW_HEAD="$BASE" REVIEW_ROOT=http://127.0.0.1:4318 REVIEW_EXPECT_BAD=1 REVIEW_OUT=evidence/phase3b-p2/independent/red node independent-review/browser-ad.mjs[0m
+2026-11-05T22:55:49.9304331Z [36;1mREVIEW_HEAD="$(git rev-parse HEAD)" REVIEW_ROOT=http://127.0.0.1:4317 REVIEW_OUT=evidence/phase3b-p2/independent/green node independent-review/browser-ad.mjs[0m
+2026-11-05T22:55:49.9305208Z [36;1mREVIEW_HEAD="$(git rev-parse HEAD)" REVIEW_ROOT=http://127.0.0.1:4317 REVIEW_MUTATION=1 REVIEW_EXPECT_BAD=1 REVIEW_OUT=evidence/phase3b-p2/independent/negative node independent-review/browser-ad.mjs[0m
+2026-11-05T23:06:34.9375296Z Artifact independent-ad-separation.zip successfully finalized. Artifact ID 13462090829
+2026-11-05T23:06:34.9376446Z Artifact independent-ad-separation has been successfully uploaded! Final size is 11759521 bytes. Artifact ID is 13462090829
+2026-11-05T23:06:34.9380311Z Artifact download URL: https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42125216853/artifacts/13462090829
