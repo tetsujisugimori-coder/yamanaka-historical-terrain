@@ -134,12 +134,46 @@ jobs:
           mkdir -p evidence/phase3c/performance-diagnosis
           node --input-type=module -e "import {webkit} from '@playwright/test'; import {createRequire} from 'node:module'; const require=createRequire(import.meta.url); const version=require('@playwright/test/package.json').version; if(version!=='1.56.1')throw Error('Pinned image/package version mismatch'); const browser=await webkit.launch(); console.log(JSON.stringify({packageVersion:version,browserVersion:browser.version(),environment:'official Playwright v1.56.1 noble image pinned by digest'})); await browser.close();" 2>&1 | tee evidence/phase3c/performance-diagnosis/browser-install.log
       - name: Isolate camera redraw, optional mesh and D costs
+        shell: bash
         run: |
-          npm run dev -- --port 4317 --strictPort >/tmp/diagnosis-vite.txt 2>&1 &
+          set -euo pipefail
+          out="$GITHUB_WORKSPACE/evidence/phase3c/performance-diagnosis"
+          mkdir -p "$out"
+          diagnosis_root=$(mktemp -d /tmp/phase3c-diagnosis.XXXXXX)
+          server=
+          cleanup() {
+            status=$?
+            if [[ -n "$server" ]]; then
+              kill "$server" 2>/dev/null || true
+              wait "$server" 2>/dev/null || true
+            fi
+            rm -rf -- "$diagnosis_root"
+            exit "$status"
+          }
+          trap cleanup EXIT
+          # Container and mounted-checkout owners can differ. Copy, rather than
+          # relaxing Git trust or changing the mounted checkout's ownership.
+          # Include .git and node_modules so source/HEAD and dependencies match.
+          cp -R --no-preserve=ownership -- "$GITHUB_WORKSPACE/." "$diagnosis_root/checkout"
+          cd "$diagnosis_root/checkout"
+          node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 4317 --strictPort >"$out/vite.log" 2>&1 &
           server=$!
-          trap 'kill "$server"' EXIT
-          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
-          node scripts/phase3c-performance-diagnosis.mjs
+          ready=false
+          for n in $(seq 1 30); do
+            if ! kill -0 "$server" 2>/dev/null; then
+              cat "$out/vite.log"
+              echo 'Diagnosis Vite server exited before readiness.' >&2
+              exit 1
+            fi
+            if curl -fs http://127.0.0.1:4317 >/dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          if [[ "$ready" != true ]]; then
+            cat "$out/vite.log"
+            echo 'Diagnosis Vite server did not become ready within 30 attempts.' >&2
+            exit 1
+          fi
+          DIAGNOSIS_OUT="$out" node scripts/phase3c-performance-diagnosis.mjs 2>&1 | tee "$out/diagnosis.log"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
