@@ -1,0 +1,31 @@
+{
+  "scope": "Independent static review of repaired negative-control acceptance and diagnostic runner; full browser verification pending next CI.",
+  "candidateParent": "b3cd76a53abfc8137861a2506bd1000c797622c2",
+  "files": {
+    "scripts/initial-camera-browser.mjs": "4022ad059cbb399877f5eefe6f83acd4f8d29f69df26db8dae7621cf834104f2",
+    "scripts/initial-camera-mutation.mjs": "59600b6a2e6c66d1e71f20635994745fcbc82d077a8edb7d3fe654503c14d5c1",
+    "tests/initial-camera-mutation.test.mjs": "aafdf7967d3b8be089bcbea262e189ba29e0b0090a8f1d017f09b4ca5afc5981",
+    ".github/workflows/phase3c.yml": "fccf9480e314dcbc0083fa843590d436cab06635fe70cddc1305d1a0b452fe7b"
+  },
+  "initialCamera": {
+    "independentTests": 63,
+    "result": "PASS",
+    "notes": [
+      "AST mutation targets a genuine initial-camera completion-loss defect.",
+      "Expected negative rejects arbitrary failures, missing observations, timeout and page errors.",
+      "Normal and mutation browser matrix counts stay 72 each."
+    ]
+  },
+  "diagnosticContainer": {
+    "result": "STATIC PASS; runtime pending",
+    "image": "mcr.microsoft.com/playwright:v1.56.1-noble@sha256:f1e7e01021efd65dd1a2c56064be399f3e4de00fd021ac561325f2bfbb2b837a",
+    "officialManifestHttpStatus": 200,
+    "notes": [
+      "Pinned image matches Playwright npm 1.56.1 and real WebKit launch is required.",
+      "Launch step timeout five minutes and bash pipefail preserve failures.",
+      "Image pull and npm ci are outside the five minute launch bound.",
+      "Current and old-handler variants run in the same container; absolute milliseconds must not be compared with earlier host runs.",
+      "No privileged or host IPC setting."
+    ]
+  }
+}

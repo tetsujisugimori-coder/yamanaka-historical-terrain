@@ -114,6 +114,9 @@ jobs:
           path: evidence/phase3c/independent/visual/
   diagnose-render-cost:
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble@sha256:f1e7e01021efd65dd1a2c56064be399f3e4de00fd021ac561325f2bfbb2b837a
+      options: --shm-size=1g
     steps:
       - uses: actions/checkout@v4
         with:
@@ -123,13 +126,13 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - name: Install browsers with bounded wait
-        timeout-minutes: 15
+      - name: Verify pinned preinstalled WebKit
+        timeout-minutes: 5
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p evidence/phase3c/performance-diagnosis
-          npx playwright install --with-deps webkit 2>&1 | tee evidence/phase3c/performance-diagnosis/browser-install.log
+          node --input-type=module -e "import {webkit} from '@playwright/test'; import {createRequire} from 'node:module'; const require=createRequire(import.meta.url); const version=require('@playwright/test/package.json').version; if(version!=='1.56.1')throw Error('Pinned image/package version mismatch'); const browser=await webkit.launch(); console.log(JSON.stringify({packageVersion:version,browserVersion:browser.version(),environment:'official Playwright v1.56.1 noble image pinned by digest'})); await browser.close();" 2>&1 | tee evidence/phase3c/performance-diagnosis/browser-install.log
       - name: Isolate camera redraw, optional mesh and D costs
         run: |
           npm run dev -- --port 4317 --strictPort >/tmp/diagnosis-vite.txt 2>&1 &

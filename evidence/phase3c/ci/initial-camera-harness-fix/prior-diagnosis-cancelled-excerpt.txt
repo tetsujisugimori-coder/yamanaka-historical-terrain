@@ -1,0 +1,18 @@
+Original workflow: https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096
+Original downloaded job log SHA256: f9b26431ce40a9b4453d6aec1e6ad530ec1d20960690d040aae4f4f82f67f056
+2026-11-06T03:34:21.6912688Z Fetched 114 MB in 43min 3s (44.2 kB/s)
+2026-11-06T03:36:04.3369912Z ##[error]The operation was canceled.
+2026-11-06T03:36:04.3452975Z ##[group]Run actions/upload-artifact@v4
+2026-11-06T03:36:04.3453323Z with:
+2026-11-06T03:36:04.3453581Z   name: phase3c-render-diagnosis
+2026-11-06T03:36:04.3453961Z   path: evidence/phase3c/performance-diagnosis/
+2026-11-06T03:36:04.3454345Z   if-no-files-found: warn
+2026-11-06T03:36:04.3454647Z   compression-level: 6
+2026-11-06T03:36:04.3454926Z   overwrite: false
+2026-11-06T03:36:04.3455215Z   include-hidden-files: false
+2026-11-06T03:36:04.3455519Z ##[endgroup]
+2026-11-06T03:36:04.6036770Z (node:6011) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T03:36:04.6118234Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T03:36:04.6379486Z With the provided path, there will be 5 files uploaded
+2026-11-06T03:36:04.6380159Z Artifact name is valid!
+2026-11-06T03:36:04.6380579Z Root directory input is valid!

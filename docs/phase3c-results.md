@@ -29,7 +29,7 @@
 - [Web GLB](../public/data/phase3c.glb): 507,052 bytes、7,342 三角形。[JSON](../public/data/phase3c.json)、GeoJSON、派生標高、recipe と整合。
 - EPSG:6676 由来のローカル m、既存原点・方位・1 unit = 1 m を維持。
 - Blender 4.3.2 と QGIS 3.40.6 を実行し、**別プロセスで再読込**。独立再 export の座標差は 0。隔離した再制作でも新 7 メッシュと GLB/JSON の一致を確認。
-- 旧 1,263 ファイルは byte 不変、旧出典 6 レコードを保持。固定 2 断面は別の raw GLB 計算で一致。
+- 初回の旧 1,263 ファイル byte 不変照合を保持。最終 CI の負対照対応で既存ブラウザ検査 1 本だけを更新し、残る 1,262 ファイルの不変を再照合した（[差分票](../evidence/phase3c/ci/initial-camera-harness-fix/final-preservation.json)）。旧正本・過去証拠と旧出典 6 レコードを保持。固定 2 断面は別の raw GLB 計算で一致。
 
 [制作レシピ・再現手順](phase3c-production.md)、[native 証拠](../evidence/phase3c/native/)、[独立技術レビュー](../evidence/phase3c/independent/technical/REPORT-v2.md)。旧 QGIS 版の警告、初回過密版、v1 の距離・急勾配不備と修正履歴は残している。
 
@@ -51,9 +51,10 @@ Chromium と自動 WebKit、375/390/765/1280 px、通常/reduced motion を検�
 
 ## F. 既存回帰・負対照・性能
 
-- 単体 49/49、build 成功。座標ずれ・誤 ID・B 混入・地表の割れ・旧急勾配・低すぎる目線を検査が拒否。
+- 単体 112/112、build 成功（初期カメラ負対照の AST 変異・受入識別 63 件を追加）。座標ずれ・誤 ID・B 混入・地表の割れ・旧急勾配・低すぎる目線を検査が拒否。
 - 共有 geometry の UV 残留を旧 RED、新 GREEN、故障再投入で検証。表示用 geometry コンテナをメッシュ別にし、元属性・index を書き換えない。
 - COLOR 属性がない新地形・旧木材等で頂点色を有効にした黒化を修正。実 419 メッシュの独立属性確認、修正後画像、旧コード再投入の Chromium/WebKit 各 1 件で専用署名による期待拒否を確認。
+- 初期カメラの正常 72 件は成功したが、旧関数全文を探す負対照の仕込みが最終 CI で失敗した。AST で実関数だけを変異し、timeout 等ではなく初期 completion 破棄の固有署名を全 72 件に要求するよう修正。[故障原票・修正](../evidence/phase3c/ci/initial-camera-harness-fix/README.md)。修正後ブラウザは再 CI 待ちであり、まだ閉鎖しない。
 - 404→再試行、古い成功/失敗応答、必要な旧地表の欠落、WebGL 不能時の HTML 解説、固定断面、倍率、既存施設を回帰。
 - 同一 run 内・同じ camera/target/canvas/品質の 72 性能試行で、全 12 条件の合成キー＋2 RAF 中央値が改善。WebKit 1280 は標準 1091.5→508.0 ms、軽量 918.5→457.0 ms、高品質 1094.5→507.0 ms。**別 run の絶対 ms を直接比較しない。**
 - 景観入りは WebKit 1280 で約 3.22–3.25→4.17–4.20 秒。追加モデル読込を含む操作で、ページ起動時間ではない。品質切替も約 361–413→827–858 ms と増加し、P3 として残す。
@@ -83,12 +84,12 @@ Chromium と自動 WebKit、375/390/765/1280 px、通常/reduced motion を検�
 - 証拠固定候補 HEAD: 47b8a80d2f7f08a50a0e0cfe9b4d89d7b2d07700。
 - tree: 5e44d4b1a310a45c9de1176939c6c60fb16b76d1。
 - CI checkout は PR synthetic merge c239f2b36f9aa119b7c4eaf156bf47d7aa16a2e7。候補と tree が完全一致することを Git オブジェクトで確認。
-- [城内観察・外観・性能・独立検査](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096)、[既存回帰](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881170)、[西側施設・A/D 分離](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881174)。第3期Cの成功3ジョブは原票取得済み。残る描画診断はブラウザ導入で長時間待機し、次候補の同時実行制御により自動中止される。未完了の診断をPASSと扱わず、導入15分上限・pipefail・ログ保存を追加して取り直す。既存回帰の一部も完了待ち。
+- [城内観察・外観・性能・独立検査](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881096)、[既存回帰](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881170)、[西側施設・A/D 分離](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881174)。第3期Cの成功3ジョブは原票取得済み。描画診断は APT が 114 MB を 43 分 3 秒かけて取得した後、2026-11-06 03:36:04 UTC に次候補の同時実行制御で自動中止された。未完了の診断を PASS と扱わない。通常検査には導入 15 分上限・pipefail・ログ保存を追加。診断だけは公式 Playwright image の digest 固定と実 WebKit 起動確認へ変更し、同じ container 内で新旧経路を測り直す。image 取得と npm ci は起動確認 5 分上限の対象外。旧 host 実行との絶対 ms 比較には使わない。[中止原票・独立確認](../evidence/phase3c/ci/initial-camera-harness-fix/)。既存回帰の一部も完了待ち。
 - [Pages build](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42152881185) 成功、deploy は skipped。
 - [Issue #13](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/13)、branch feat/phase3c-inner-observation、[Draft PR #14](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/14)。最終提出 HEAD と CI は PR 本文へ追記する。
 
 ## J. 今回の変更範囲に限定したマージ推奨
 
-**NO（残る CI・描画因果診断の完了前）。** Draft を維持し、Draft 解除、merge、auto-merge、本番 deploy、既存 Issue の閉鎖は行わない。
+**NO（残る CI・描画因果診断・初期カメラ負対照の再確認前）。** Draft を維持し、Draft 解除、merge、auto-merge、本番 deploy、既存 Issue の閉鎖は行わない。
 
 途中段階の報告は [履歴](../evidence/phase3c/history/results-before-final-review.md)に保持。過去の pending や P2 はその時点の記録であり、本書の更新後判定と混同しない。
