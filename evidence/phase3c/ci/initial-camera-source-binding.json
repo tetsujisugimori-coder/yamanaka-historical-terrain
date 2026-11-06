@@ -1,0 +1,21 @@
+{
+  "observedCandidateHead": "05a0df3bf6bba6b90b5b61bbfa16bc85069c9776",
+  "executedHead": "7443d1dee919d2c1f46006a599f3d65b525206a6",
+  "job": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42125216840/job/127587538108",
+  "artifactId": 13460906381,
+  "artifactZipSha256": "9a41c5593ead9b60de3fc338a298ab95498dabb0edd8000e122733e03cfb6e87",
+  "currentResultFile": "fixed.json",
+  "caseCounts": {
+    "PASS": 72
+  },
+  "matchedSourceHashes": {
+    "src/main.js": true,
+    "public/data/regional.glb": true,
+    "src/intent.js": true
+  },
+  "scope": "Initial camera completion regression only; source hashes match candidate. Other files in artifact include retained historical summaries and are not current acceptance results. The script contains inherited Windows label, but this job actually runs GitHub Actions Ubuntu.",
+  "overallPhase3cStatus": "NOT_ASSESSED",
+  "executedPullRequestMerge": "5fbbfeb937c8bc224456187cec118d076cb023f1",
+  "executedTree": "045d123847c692e160b24edf56ff13505a88d2db",
+  "treeNote": "Actions PR checkout uses synthetic merge with unchanged main; its tree equals the branch tree. Product src/public/index.html are unchanged at05a0df3."
+}

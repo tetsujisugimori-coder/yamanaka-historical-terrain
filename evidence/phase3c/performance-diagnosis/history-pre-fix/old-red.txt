@@ -1,0 +1,60 @@
+✖ ready camera input invalidates stale views without presentation resync or render (2.28154ms)
+✔ camera input during pending view restores current model, while initial load preserves completion (0.261336ms)
+✖ orbital arrow controls rely on one OrbitControls change render, not a duplicate explicit draw (4.006294ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.018513
+
+✖ failing tests:
+
+test at tests/phase3c-camera-cost.test.mjs:7:1
+✖ ready camera input invalidates stale views without presentation resync or render (2.28154ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    {
+      calls: [
+        'begin',
+  +     'restore'
+      ],
+      result: 'token'
+    }
+
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-camera-cost.test.mjs:7:101)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { result: 'token', calls: [ 'begin', 'restore' ] },
+    expected: { result: 'token', calls: [ 'begin' ] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/phase3c-camera-cost.test.mjs:9:1
+✖ orbital arrow controls rely on one OrbitControls change render, not a duplicate explicit draw (4.006294ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(!line.includes('controls.update();render();'))
+
+      at TestContext.<anonymous> (file:///workspace/scratch/e622c1e9421e/yamanaka-phase3c/tests/phase3c-camera-cost.test.mjs:9:253)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

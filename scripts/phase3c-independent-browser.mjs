@@ -4,7 +4,9 @@ import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const out=process.env.INDEPENDENT_OUT??'evidence/phase3c/independent/visual';
+const mutation=process.env.INDEPENDENT_MUTATION??null;
+if(mutation&&!['missing-color'].includes(mutation))throw Error('Unknown independent mutation');
+const out=process.env.INDEPENDENT_OUT??('evidence/phase3c/independent/visual'+(mutation?'/negative-missing-color':''));
 const url=process.env.TEST_URL??'http://127.0.0.1:4317';
 const meta=JSON.parse(await readFile('public/data/phase3c.json','utf8'));
 const rows=[];await mkdir(out,{recursive:true});
@@ -25,19 +27,19 @@ const probe=String.raw`
  const center=new THREE.Raycaster();center.setFromCamera(new THREE.Vector2(0,0),camera);
  const seen=center.intersectObjects(meshes,false).slice(0,8).map(h=>({distance:h.distance,name:h.object.name,id:h.object.userData.elementId??h.object.userData.facilityId,point:h.point.toArray()}));
  function hash(a){if(!a)return null;let h=2166136261;for(const n of a){const s=String(n);for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);}return (h>>>0).toString(16);}
- function signature(o){const m=o.material;return {name:o.name,id:o.userData.elementId??o.userData.facilityId,index:hash(o.geometry.index?.array),uv:hash(o.geometry.attributes.uv?.array),position:hash(o.geometry.attributes.position.array),map:m.map?.uuid??null,normal:m.normalMap?.uuid??null,bump:m.bumpMap?.uuid??null,color:m.color?.getHex(),roughness:m.roughness,cast:o.castShadow,receive:o.receiveShadow};}
+ function signature(o){const m=o.material;return {name:o.name,id:o.userData.elementId??o.userData.facilityId,index:hash(o.geometry.index?.array),uv:hash(o.geometry.attributes.uv?.array),position:hash(o.geometry.attributes.position.array),map:m.map?.uuid??null,normal:m.normalMap?.uuid??null,bump:m.bumpMap?.uuid??null,color:m.color?.getHex(),roughness:m.roughness,vertexColors:Boolean(m.vertexColors),colorAttributeCount:o.geometry.attributes.color?.count??0,positionAttributeCount:o.geometry.attributes.position.count,cast:o.castShadow,receive:o.receiveShadow};}
  return {eye:camera.position.toArray(),target:controls.target.toArray(),support,seen,visible:meshes.map(signature),base:currentModel?.children.filter(o=>o.isMesh).map(signature),canvasVisibility:getComputedStyle(renderer.domElement).visibility,background:scene.background?.getHex(),fog:scene.fog?{color:scene.fog.color.getHex(),near:scene.fog.near,far:scene.fog.far}:null,shadows:renderer.shadowMap.enabled,light:light.position.toArray().concat(light.intensity),ambient:ambient.intensity,controls:controls.enabled};
  };
 `;
-async function instrument(p){await p.route('**/src/main.js*',async r=>{const res=await r.fetch();const body=await res.text();if(!body.includes('window.__terrainDiagnostics='))throw Error('Probe anchor missing');await r.fulfill({response:res,body:body.replace('window.__terrainDiagnostics=',probe+'\n window.__terrainDiagnostics=')});});}
-const read=p=>p.evaluate(()=>window.__independentRead());
+async function instrument(p){if(mutation==='missing-color')await p.route('**/src/phase3b.js*',async r=>{const res=await r.fetch(),body=await res.text();const pattern=/if\(mesh\.userData\.appearanceEvidence\)mat\.vertexColors=[^;]+;/g;const matches=body.match(pattern);if(matches?.length!==1)throw Error('Missing-color mutation anchor missing or ambiguous');const replacement='if(mesh.userData.appearanceEvidence)mat.vertexColors=true;';const changed=body.replace(pattern,replacement);if(changed===body)throw Error('Missing-color mutation is already present; baseline is not fixed');await r.fulfill({response:res,body:changed});});await p.route('**/src/main.js*',async r=>{const res=await r.fetch();const body=await res.text();if(!body.includes('window.__terrainDiagnostics='))throw Error('Probe anchor missing');await r.fulfill({response:res,body:body.replace('window.__terrainDiagnostics=',probe+'\n window.__terrainDiagnostics=')});});}
+const read=async p=>{const d=await p.evaluate(()=>window.__independentRead());const bad=d.visible.filter(m=>m.vertexColors&&m.colorAttributeCount!==m.positionAttributeCount);if(bad.length)throw Error('VERTEX_COLOR_WITHOUT_ATTRIBUTE '+JSON.stringify(bad.map(m=>({name:m.name,id:m.id,color:m.colorAttributeCount,position:m.positionAttributeCount}))));return d;};
 const ready=p=>p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
 async function start(p){await instrument(p);await p.goto(url);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>document.querySelectorAll('[data-inner-station]').length>0);}
 async function mode(p,m){await p.locator(`[data-landscape-mode=${m}]`).click();await ready(p);}
-async function save(){await writeFile(`${out}/results.json`,JSON.stringify({head,tree,sha256,worktreeStatus,startedAt,scope:'Independent live object raycasts and state hashes; screenshots require separate human visual inspection. Automated WebKit is not hardware Safari. No production pass predicate used.',rows},null,2));}
+async function save(){await writeFile(`${out}/results.json`,JSON.stringify({head,tree,sha256,worktreeStatus,startedAt,mutation,scope:'Independent live object raycasts and state hashes; screenshots require separate human visual inspection. Automated WebKit is not hardware Safari. No production pass predicate used.',rows},null,2));}
 for(const [engine,type]of Object.entries({chromium,webkit})){
  let browser;try{browser=await type.launch(process.env[`${engine.toUpperCase()}_PATH`]?{executablePath:process.env[`${engine.toUpperCase()}_PATH`]}:{});}catch(e){rows.push({engine,status:'NOT_TESTED',kind:'launch',reason:e.message});await save();continue;}
- for(const width of [375,390,765,1280])for(const reducedMotion of ['no-preference','reduce']){
+ for(const width of (mutation?[390]:[375,390,765,1280]))for(const reducedMotion of (mutation?['reduce']:['no-preference','reduce'])){
   const key=`${engine}-${width}-${reducedMotion}`,row={key,engine,width,reducedMotion,version:browser.version(),stations:[],images:[]};
   const ctx=await browser.newContext({viewport:{width,height:960},hasTouch:width<800,reducedMotion,deviceScaleFactor:1});const p=await ctx.newPage();p.setDefaultTimeout(60000);const errors=[];p.on('pageerror',e=>errors.push(e.message));
   try{
@@ -70,7 +72,7 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
   rows.push(row);await save();console.log(key,row.status,row.reason??'');await ctx.close();
  }
  // Independent failures: reject missing support while retaining old landscape and HTML.
- for(const fault of ['asset404','missing-support','webgl']){
+ for(const fault of (mutation?[]:['asset404','missing-support','webgl'])){
   const row={engine,fault};const p=await browser.newPage({viewport:{width:390,height:960}});p.setDefaultTimeout(60000);
   try{
    if(fault==='asset404')await p.route('**/data/phase3c.glb',r=>r.fulfill({status:404,body:'independent fault'}));
@@ -84,4 +86,4 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
  }
  await browser.close();
 }
-if(rows.some(r=>r.status!=='PASS'))process.exitCode=1;
+if(mutation){const rejected=rows.length===2&&rows.every(r=>r.status==='FAIL'&&r.reason?.includes('VERTEX_COLOR_WITHOUT_ATTRIBUTE'));await writeFile(`${out}/negative-verdict.json`,JSON.stringify({mutation,status:rejected?'EXPECTED_REJECTION':'FAIL',rows:rows.length},null,2));if(!rejected)process.exitCode=1;}else if(rows.some(r=>r.status!=='PASS'))process.exitCode=1;

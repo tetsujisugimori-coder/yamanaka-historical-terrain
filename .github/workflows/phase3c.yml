@@ -88,8 +88,33 @@ jobs:
           trap 'kill "$server"' EXIT
           for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
           node scripts/phase3c-independent-browser.mjs
+          INDEPENDENT_MUTATION=missing-color node scripts/phase3c-independent-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: phase3c-independent-visual
           path: evidence/phase3c/independent/visual/
+  diagnose-render-cost:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps webkit
+      - name: Isolate camera redraw, optional mesh and D costs
+        run: |
+          npm run dev -- --port 4317 --strictPort >/tmp/diagnosis-vite.txt 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3c-performance-diagnosis.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3c-render-diagnosis
+          path: evidence/phase3c/performance-diagnosis/

@@ -1,0 +1,11 @@
+✔ shared source geometry stays UV-free through staggered D activation and deactivation (144.393068ms)
+✔ two finish controllers cannot contaminate a shared source UV reference (270.256373ms)
+✔ real inner GLB without COLOR never enables vertex colors; old western colors are preserved (249.867313ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 778.059792

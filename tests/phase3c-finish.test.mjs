@@ -22,3 +22,19 @@ test('two finish controllers cannot contaminate a shared source UV reference',()
   assert.notEqual(a.geometry,source);assert.notEqual(b.geometry,source);assert.notEqual(a.geometry,b.geometry);assert.equal(a.geometry.attributes.uv,source.attributes.uv);assert.equal(b.geometry.attributes.uv,source.attributes.uv);assert.equal(source.attributes.uv,uv);assert.deepEqual(uv.array,old);
  }
 });
+
+test('real inner GLB without COLOR never enables vertex colors; old western colors are preserved',async()=>{
+ const {readFile}=await import('node:fs/promises');const {GLTFLoader}=await import('three/addons/loaders/GLTFLoader.js');
+ const finish=createSurfaceFinish();let inner=0,western=0;
+ for(const file of ['phase3c','phase3b']){
+  const bytes=await readFile(new URL(`../public/data/${file}.glb`,import.meta.url));
+  const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+  gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;const color=mesh.geometry.attributes.color,original=mesh.material;
+   if(file==='phase3c'){inner++;assert.equal(color,undefined,'fixture must exercise the absent-color path');}else if(color)western++;
+   finish.apply(mesh,true);assert.equal(mesh.material.vertexColors,Boolean(color),'VERTEX_COLOR_WITHOUT_ATTRIBUTE '+mesh.name);
+   if(color)assert.equal(mesh.geometry.attributes.color,color,'existing authored vertex colors must be retained');
+   finish.apply(mesh,false);assert.equal(mesh.material.vertexColors,false,'C-neutral appearance must not contain D vertex colors');assert.deepEqual(mesh.material.color,original.color);
+  });
+ }
+ assert.equal(inner,7);assert.ok(western>0);
+});

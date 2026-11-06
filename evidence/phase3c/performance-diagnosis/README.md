@@ -1,0 +1,7 @@
+# Camera redraw cost isolation
+
+The pre-fix72-trial artifact showed a real latency increase despite fewer triangles. WebKit1280 balanced synthetic ArrowRight+twoRAF median increased approximately666 to867ms. These are software-rendered CI observations, not hardware FPS.
+
+Static inspection identified the ready camera input path: beginCameraIntent -> beginIntent -> restoreCurrentPresentation -> syncLandscape + sectionExhibit.sync(render), followed by OrbitControls.update(change/render) and explicit render. The corrected camera path still invalidates stale view intents, but restores presentation only while the view is not ready; initial no-model input still adjusts only the camera token. The duplicate explicit orbital-key render is removed.
+
+The diagnosis script reintroduces only the exact two prior camera-handler lines from05a0df3, retaining the corrected material code. It measures current/prior x optional inner patch unloaded/loaded x D surface-finish/lighting off/on (state.drama remains true, so flags/people are not removed), three independent contexts each, same1280x960 viewport/600px terrain panel/initial pose, WebKit light(no shadows). Dispatch time, renderer wall time/count, synchronization count and twoRAF wait are recorded separately. Assertions require one versus three renders and zero versus one synchronization per ready orbital key. No magnitude of improvement is assumed until CI runs.

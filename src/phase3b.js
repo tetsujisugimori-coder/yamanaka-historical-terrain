@@ -67,7 +67,9 @@ export function createSurfaceFinish(){
   const role=mesh.userData.materialRole??(mesh.userData.surface||mesh.userData.facilityId?'earth':'wood');
   if(!pair.finish){
    const mat=pair.base.clone();
-   if(mesh.userData.appearanceEvidence)mat.vertexColors=true;
+   // Evidence labels describe provenance, not a supplied GPU color attribute.
+   // The new neutral patch has no COLOR_0; enabling USE_COLOR would make it black.
+   if(mesh.userData.appearanceEvidence)mat.vertexColors=Boolean(g.attributes.color);
    if(!['cloth','leaf','skin'].includes(role)){
     mat.bumpMap=role==='wood'?wood:soil;mat.bumpScale=role==='wood'?.022:.065;mat.map=role==='wood'?wood:soil;
     mat.roughnessMap=role==='wood'?wood:soil;mat.roughness=.95;mat.metalness=0;
