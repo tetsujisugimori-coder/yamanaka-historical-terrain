@@ -8,9 +8,11 @@ await mkdir('evidence/review-fixes',{recursive:true});
 const original=JSON.parse(await readFile('public/data/features.json','utf8')),facilities=JSON.parse(await readFile('public/data/nishinomaru.json','utf8')).facilities;
 const realGlb=await readFile('public/data/phase3f.glb');
 const aMesh=meshData(readGlb('public/data/castle.glb'),'A_castle_current'),aHeight=triangleSurface(aMesh.positions,aMesh.indices);
+// The preserved metadata describes the preserved Phase2A mesh, not the new C candidate.
+const metadataGlb=readGlb('public/data/nishinomaru.glb'),metadataHeight=new Map(facilities.map(f=>{const m=meshData(metadataGlb,f.id);return[f.id,triangleSurface(m.positions,m.indices)];}));
 const cGlb=readGlb('public/data/phase3f.glb'),cHeight=new Map(facilities.map(f=>{const m=meshData(cGlb,f.id);return[f.id,triangleSurface(m.positions,m.indices)];}));
 const sourceRoot=baseline?(process.env.BASELINE_DIR??'.'):'.';
-const hashes={};for(const file of ['src/main.js','src/coordinates.js','src/reading.js','public/data/phase3f.glb','public/data/castle.glb','public/data/nishinomaru.json',...(!baseline?['src/intent.js','src/surface.js']:[])])hashes[file]=canonicalSha256(file,await readFile(`${sourceRoot}/${file}`));
+const hashes={};for(const file of ['src/main.js','src/coordinates.js','src/reading.js','public/data/phase3f.glb','public/data/castle.glb','public/data/nishinomaru.json','public/data/nishinomaru.glb','tests/glb-surface.mjs',...(!baseline?['src/intent.js','src/surface.js']:[])])hashes[file]=canonicalSha256(file,await readFile(`${sourceRoot}/${file}`));
 const rawHashes={};for(const file of Object.keys(hashes))rawHashes[file]=sha256(await readFile(`${sourceRoot}/${file}`));
 const servedMain=await (await fetch(new URL('src/main.js',root.endsWith('/')?root:root+'/'))).text();
 const servedIntent=mutation==='intent'?await (await fetch(new URL('src/intent.js',root.endsWith('/')?root:root+'/'))).text():null;
@@ -60,7 +62,8 @@ async function heights(browser,engine){
     await page.locator(`#reconstruction-list [data-id="${f.id}"]`).click();await page.locator('#focus-feature').click();await settled(page);
     const d=(await snapshot(page)).diagnostics,ground=variant==='restored'?cHeight.get(f.id)(f.local[0],-f.local[1]):aHeight(f.local[0],-f.local[1]);
     row.metadataHeight=f.height;row.glbHeight=ground;row.expectedTarget=[f.local[0],ground*scale,-f.local[1]];row.actualTarget=d.target;row.errorMetres=Math.abs(d.target[1]-ground*scale);row.toleranceMetres=.001*scale;
-    if(variant==='restored')expect(Math.abs(f.height-ground)).toBeLessThan(.001);
+    if(variant==='restored'){row.metadataSource='public/data/nishinomaru.glb';row.metadataGlbHeight=metadataHeight.get(f.id)(f.local[0],-f.local[1]);row.metadataErrorMetres=Math.abs(f.height-row.metadataGlbHeight);expect(row.metadataErrorMetres).toBeLessThan(.001);}
+    row.displayedSurfaceSource=variant==='restored'?'public/data/phase3f.glb':'public/data/castle.glb';
     expect(row.errorMetres).toBeLessThanOrEqual(row.toleranceMetres);expect(Math.abs(d.target[0]-f.local[0])).toBeLessThan(1e-8);expect(Math.abs(d.target[2]+f.local[1])).toBeLessThan(1e-8);row.status='PASS';
    }catch(e){row.status='FAIL';row.reason=e.message;}
    results.push(row);console.log(`${phase} ${row.status} ${engine} P3 ${f.id} ${variant} ${scale}x Δ=${row.errorMetres}`);

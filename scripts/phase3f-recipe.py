@@ -1,4 +1,4 @@
-"""C-only, local, topology-preserving terrain edits. No new historical claims."""
+"""C-only local edits: fixed Nishinomaru topology, conforming inner subdivision. No new historical claims."""
 import json, math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -15,7 +15,7 @@ PARAMETERS={
  'provenance':'Project-original C refinements of existing C meshes. Prior source ledgers support names/context only. No new archaeological, measured or historical dimensional evidence introduced.',
  'uncertainty':'All patch placement, crest widths, slopes, crown and depths are C assumptions. True 1590 dimensions, registration and access remain UNKNOWN. B count 0.',
  'appearance':'Geometry is C. Neutral inherited material only; D lighting, vegetation and appearance remain separate.',
- 'preservation':'Old files immutable; copied mesh topology and XY unchanged. Vertices outside open patch rectangles and all patch perimeter vertices bit-identical.'}
+ 'preservation':'Old files immutable. Nishinomaru retains copied topology and XY; only Z changes inside its two patches. The inner earthbridge patch uses conforming local triangle subdivision, with interpolated new XY/Z vertices before Z refinement. Original vertices outside open patch rectangles and on patch perimeters stay bit-identical; triangles outside the declared edit regions of each model stay exact.'}
 def clamp(x):return max(0,min(1,x))
 def smooth(x):
  t=clamp(x);return t*t*(3-2*t)
