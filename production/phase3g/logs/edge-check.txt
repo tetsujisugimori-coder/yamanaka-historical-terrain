@@ -1,0 +1,1 @@
+{"status": "PASS", "innerProjectedArea": 3039.999991595745, "expectedArea": 3040, "edges": 26182, "badEdgeValenceCount": 0, "maxSharedVertexHeightGap": 0, "meaning": "no T-junctions or open internal edges in exported full inner surface"}

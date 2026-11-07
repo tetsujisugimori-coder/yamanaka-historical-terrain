@@ -55,3 +55,4 @@ body[data-landscape=true] .map-help,body[data-landscape=true] .map-bottom{backgr
 
 /* Keep walk controls above the existing elevation/help strip. */
 #walk-pad{bottom:100px}#walk-pad output{max-width:180px}
+#parts-detail {white-space:pre-wrap;overflow-wrap:anywhere;max-height:18rem;overflow:auto;font-size:.8rem} #library-parts label {display:inline-block;margin:.3rem}

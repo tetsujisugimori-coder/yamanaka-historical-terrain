@@ -2,7 +2,7 @@ import {chromium,webkit,expect} from '@playwright/test';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {canonicalSha256,normalization} from './evidence-hash.mjs';
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','public/data/phase3f.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','public/data/phase3g.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 const sourceHashesAtExecution={...sourceHashes};for(const file of Object.keys(sourceHashes))sourceHashes[file]=canonicalSha256(file,await readFile(file));
 const baseline=process.argv.includes('--negative-control');const results=[];
 for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
@@ -15,7 +15,7 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
    await page.route('**/src/intent.js*',async route=>{const response=await route.fetch(),before=await response.text(),code=before.replace('token===revision','true');if(code===before)throw Error('intent mutation did not apply');row.mutationApplied=true;await route.fulfill({response,body:code});});
   }
   if(scenario==='no-webgl')await page.addInitScript(()=>{const old=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return type.includes('webgl')?null:old.call(this,type,...args);};});
-  if(['new-model-404','superseded-load'].includes(scenario))await page.route('**/data/phase3f.glb',async route=>{if(scenario==='superseded-load')await gate;await route.fulfill({status:404,body:'deliberate missing reconstruction'});});
+  if(['new-model-404','superseded-load'].includes(scenario))await page.route('**/data/phase3g.glb',async route=>{if(scenario==='superseded-load')await gate;await route.fulfill({status:404,body:'deliberate missing reconstruction'});});
   if(scenario==='new-reading-404')await page.route('**/data/nishinomaru.json',r=>r.fulfill({status:404,body:'deliberate missing reading'}));
   try{
    await page.goto('http://127.0.0.1:4317');
@@ -28,8 +28,8 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
      row.lossKind=await page.evaluate(()=>{const c=document.querySelector('canvas'),gl=c.getContext('webgl2'),ext=gl.getExtension('WEBGL_lose_context');if(ext){ext.loseContext();return 'native extension';}c.dispatchEvent(new Event('webglcontextlost',{cancelable:true}));return 'synthetic event';});await expect(page.locator('body')).toHaveAttribute('data-render-state','error');
     }
     if(scenario==='superseded-load'){
-     const requested=page.waitForRequest('**/data/phase3f.glb');await page.locator('[data-view=reconstruction]').click();await requested;await page.locator('[data-view=regional]').click();
-     await page.waitForFunction(()=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().state.view==='regional');const response=page.waitForResponse('**/data/phase3f.glb');release();await response;await page.waitForTimeout(250);await expect(page.locator('body')).toHaveAttribute('data-render-state','ready');expect((await page.evaluate(()=>window.__terrainDiagnostics())).state.view).toBe('regional');
+     const requested=page.waitForRequest('**/data/phase3g.glb');await page.locator('[data-view=reconstruction]').click();await requested;await page.locator('[data-view=regional]').click();
+     await page.waitForFunction(()=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().state.view==='regional');const response=page.waitForResponse('**/data/phase3g.glb');release();await response;await page.waitForTimeout(250);await expect(page.locator('body')).toHaveAttribute('data-render-state','ready');expect((await page.evaluate(()=>window.__terrainDiagnostics())).state.view).toBe('regional');
     }else if(scenario==='hidden-pick'){
      await page.locator('[data-view=reconstruction]').click();await page.waitForFunction(()=>window.__terrainDiagnostics().state.ready&&window.__terrainDiagnostics().state.view==='reconstruction');
      async function pick(){await page.locator('#viewport').scrollIntoViewIfNeeded();const d=await page.evaluate(()=>window.__terrainDiagnostics()),box=await page.locator('#viewport').boundingBox(),ndc=d.facilityScreen.find(f=>f.id==='nm-moat').ndc;await page.mouse.click(box.x+(ndc[0]+1)*box.width/2,box.y+(1-ndc[1])*box.height/2);}

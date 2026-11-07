@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "repository": "tetsujisugimori-coder/castle-3d-parts",
+  "commit": "742567b505240934d851c1e2c33a47cc08051470",
+  "id": "wooden-palisade-late-sengoku-v0",
+  "version": "0.1.0",
+  "definition": "parts/wooden-palisade-v0.json",
+  "sourcePath": "catalog/wooden-palisade-v0.json",
+  "sha256": "65f0b948edd837445708940d1ca9d9731a847f8b2441fc8386b24d01d2e6c118",
+  "glb": null,
+  "glbSha256": null,
+  "status": "procedural-prototype-not-CAD",
+  "units": "metres",
+  "axes": "east,up,south",
+  "category": "C",
+  "placement": {"east": -20, "north": 0, "yawDegrees": 0, "scale": 1, "embedDepth": 0},
+  "sourceRefs": [{"source_id":"SRC-0001","location_id":"L01","role":"context-only-not-placement-proof"}],
+  "observationRefs": [],
+  "uncertainty": "試験配置。位置・形状・寸法未確定。地中深さ0は接地表示用仮定で根入れの史実ではない。OBS台帳は未提出のため参照なし。"
+}

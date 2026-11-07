@@ -6,10 +6,10 @@ import {oracle} from '../tests/section-oracle.mjs';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317',dir=process.env.LANDSCAPE_EVIDENCE??'evidence/landscape/browser';
 const mutation=process.argv.find(a=>a.startsWith('--mutation='))?.split('=')[1];
 await mkdir(dir,{recursive:true});const rows=[],meta=JSON.parse(await readFile('public/data/landscape.json','utf8'));
-const hashFiles=['index.html','src/main.js','src/reading.js','src/style.css','src/landscape.js','public/data/landscape.json','public/data/landscape.glb','public/data/castle.glb','public/data/phase3f.glb','scripts/landscape-browser.mjs'];
+const hashFiles=['index.html','src/main.js','src/reading.js','src/style.css','src/landscape.js','public/data/landscape.json','public/data/landscape.glb','public/data/castle.glb','public/data/phase3g.glb','scripts/landscape-browser.mjs'];
 const hashes={};for(const f of hashFiles)hashes[f]=canonicalSha256(f,await readFile(f));
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
-console.log('landscape: preparing raw GLB oracle');const qA=oracle('public/data/castle.glb'),qC=oracle('public/data/phase3f.glb');
+console.log('landscape: preparing raw GLB oracle');const qA=oracle('public/data/castle.glb'),qC=oracle('public/data/phase3g.glb');
 async function save(){await writeFile(`${dir}/${mutation??'matrix'}.json`,JSON.stringify({scope:'Implementation self-verification. Automated WebKit is not real iPhone Safari. No independent reviewer claim.',head,sourceHashes:hashes,utc:new Date().toISOString(),root,mutation,rows},null,2));}
 async function snap(p){return p.evaluate(()=>window.__terrainDiagnostics());}
 async function ready(p){await p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready,{timeout:30000});}
