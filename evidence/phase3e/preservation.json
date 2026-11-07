@@ -1,0 +1,14 @@
+{
+  "base": "04e7563fcea7e9a67a1a4edf7935ab203294f400",
+  "head": "bfea9138b5d973180a9da665484aef1a44f2f8b2",
+  "status": "PASS",
+  "count": 1595,
+  "allowedExistingChanges": [
+    "src/main.js",
+    "src/style.css",
+    "README.md",
+    "LOG.md"
+  ],
+  "manifestSha256": "dae8f38cb5d1aaaf4d0b3b69b92fdd6c4756b6cb6d465d272ea459ec367fb894",
+  "manifestReproduction": "git ls-tree -r 04e7563fcea7e9a67a1a4edf7935ab203294f400; exclude allowedExistingChanges, hash-object every remaining path"
+}

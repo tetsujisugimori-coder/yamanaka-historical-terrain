@@ -1,4 +1,4 @@
-import {Box3,Raycaster,Vector3,Matrix3} from 'three';
+import {Box3,Vector3} from 'three';
 
 export const WALK={eyeHeight:1.7,radius:.28,maxSlope:38,maxStep:.3,substep:.12,speed:1.4};
 // Bounds are a simulation permission envelope, never a historic route claim.
@@ -7,8 +7,15 @@ export const GUIDE_IDS=['ic-station-nishinomaru','ic-lookout','ic-bridge','ic-ko
 const forbidden=new Set(['nm-moat','nm-rampart','nm-context','wb-moat']);
 export function inWalkZone(x,z){return WALK_ZONES.some(([w,s,e,n])=>x>=w&&x<=e&&-z>=s&&-z<=n);}
 export function createWalkWorld(surfaces,obstacles){
- const bounds=new Box3();for(const o of surfaces){o.updateWorldMatrix(true,false);bounds.expandByObject(o);}
- const ray=new Raycaster(),normalMatrix=new Matrix3();
+ const groundCells=new Map();
+ // Freeze displayed world-space triangles for this walking session. Visibility,
+ // exaggeration and model changes stop the session before rebuilding this index.
+ for(const mesh of surfaces){mesh.updateWorldMatrix(true,false);const p=mesh.geometry.attributes.position,index=mesh.geometry.index;
+  for(let i=0;i<(index?.count??p.count);i+=3){const [a,b,c]=[0,1,2].map(k=>new Vector3().fromBufferAttribute(p,index?index.getX(i+k):i+k).applyMatrix4(mesh.matrixWorld));const det=(b.z-c.z)*(a.x-c.x)+(c.x-b.x)*(a.z-c.z);if(Math.abs(det)<1e-10)continue;
+   const normal=b.clone().sub(a).cross(c.clone().sub(a)).normalize(),tri={a,b,c,det,slope:Math.acos(Math.min(1,Math.abs(normal.y)))*180/Math.PI,id:mesh.userData.elementId??mesh.userData.facilityId,name:mesh.name,face:i/3};
+   for(let x=Math.max(-102,Math.floor(Math.min(a.x,b.x,c.x)/2));x<=Math.min(8,Math.floor(Math.max(a.x,b.x,c.x)/2));x++)for(let z=Math.max(-26,Math.floor(Math.min(a.z,b.z,c.z)/2));z<=Math.min(24,Math.floor(Math.max(a.z,b.z,c.z)/2));z++){const key=x+','+z;if(!groundCells.has(key))groundCells.set(key,[]);groundCells.get(key).push(tri);}
+  }
+ }
  // Imported meshes batch disconnected fence parts. A whole-mesh box would
  // incorrectly fill the empty courtyard. Conservative per-triangle boxes
  // preserve gaps, with a spatial grid for bounded per-step collision cost.
@@ -19,10 +26,7 @@ export function createWalkWorld(surfaces,obstacles){
   }
  }
  function sample(x,z){
-  ray.set(new Vector3(x,bounds.max.y+10,z),new Vector3(0,-1,0));
-  const hit=ray.intersectObjects(surfaces,false)[0];if(!hit)return null;
-  const normal=hit.face.normal.clone().applyMatrix3(normalMatrix.getNormalMatrix(hit.object.matrixWorld)).normalize();
-  return {height:hit.point.y,slope:Math.acos(Math.min(1,Math.abs(normal.y)))*180/Math.PI,id:hit.object.userData.elementId??hit.object.userData.facilityId,name:hit.object.name,face:hit.faceIndex};
+  let hit=null;for(const t of groundCells.get(Math.floor(x/2)+','+Math.floor(z/2))??[]){const {a,b,c,det}=t,u=((b.z-c.z)*(x-c.x)+(c.x-b.x)*(z-c.z))/det,v=((c.z-a.z)*(x-c.x)+(a.x-c.x)*(z-c.z))/det,w=1-u-v;if(u< -1e-8||v< -1e-8||w< -1e-8)continue;const height=u*a.y+v*b.y+w*c.y;if(!hit||height>hit.height)hit={height,slope:t.slope,id:t.id,name:t.name,face:t.face};}return hit;
  }
  function check(x,z){
   if(!inWalkZone(x,z))return {ok:false,reason:'通行範囲の外'};
@@ -83,12 +87,13 @@ export function createWalkInput({viewport,canvas,camera,target,render,onExit,sta
  function startFrame(){if(!raf){last=0;raf=requestAnimationFrame(frame);}}
  listen(viewport,'keydown',e=>{if(!active||editable(e))return;if(e.key==='Escape'){e.preventDefault();onExit();return;}const key=e.key.length===1?e.key.toLowerCase():e.key;if(['w','a','s','d','q','e','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(key)){e.preventDefault();e.stopImmediatePropagation();keys.add(key);record('keydown',{key,trusted:e.isTrusted});startFrame();}}, {capture:true});
  listen(window,'keyup',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;keys.delete(k);record('keyup',{key:k,trusted:e.isTrusted});});
+ const sizeObserver=new ResizeObserver(()=>{if(viewport.clientWidth===0||viewport.clientHeight===0)clear();});sizeObserver.observe(viewport);
  listen(window,'blur',clear);listen(document,'visibilitychange',clear);listen(viewport,'focusout',()=>{keys.clear();});
  listen(canvas,'pointerdown',e=>{if(!active||look||e.button!==0)return;look={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);record('look-start',{pointerType:e.pointerType,trusted:e.isTrusted});});
  listen(canvas,'pointermove',e=>{if(!active||look?.id!==e.pointerId)return;lookBy(-(e.clientX-look.x)*.004,-(e.clientY-look.y)*.004);look={...look,x:e.clientX,y:e.clientY};});
  for(const type of ['pointerup','pointercancel','lostpointercapture'])listen(canvas,type,e=>{if(look?.id===e.pointerId)look=null;});
  for(const b of pad.querySelectorAll('[data-walk]')){
-  listen(b,'pointerdown',e=>{if(!active||heldPointer!==null)return;e.preventDefault();heldPointer=e.pointerId;b.setPointerCapture(e.pointerId);keys.add(b.dataset.walk);record('pad-down',{key:b.dataset.walk,pointerType:e.pointerType,trusted:e.isTrusted});startFrame();});
+  listen(b,'pointerdown',e=>{if(!active||heldPointer!==null)return;e.preventDefault();heldPointer=e.pointerId;b.setPointerCapture(e.pointerId);keys.add(b.dataset.walk);record('pad-down',{key:b.dataset.walk,pointerId:e.pointerId,pointerType:e.pointerType,trusted:e.isTrusted});startFrame();});
   for(const type of ['pointerup','pointercancel','lostpointercapture'])listen(b,type,e=>{if(heldPointer!==e.pointerId)return;keys.delete(b.dataset.walk);heldPointer=null;record(type,{key:b.dataset.walk,trusted:e.isTrusted});});
   listen(b,'keydown',e=>{if(active&&[' ','Enter'].includes(e.key)){e.preventDefault();keys.add(b.dataset.walk);startFrame();}});
   listen(b,'keyup',()=>keys.delete(b.dataset.walk));
@@ -97,7 +102,7 @@ export function createWalkInput({viewport,canvas,camera,target,render,onExit,sta
   get active(){return active;},
   start(newWorld,ground){clear();world=newWorld;position=[...ground];const check=world.check(position[0],position[2]);if(!check.ok)throw Error(check.reason);active=true;frames=[];trace=[];blocked=null;pad.hidden=false;record('start',{position});status.textContent='自由歩行中：実地表＋1.7m。移動制限は模型上の設定です。';viewport.focus({preventScroll:true});},
   stop(){const was=active;active=false;clear();pad.hidden=true;if(was)record('stop');},
-  dispose(){active=false;clear();abort.abort();},
+  dispose(){active=false;clear();sizeObserver.disconnect();abort.abort();},
   diagnostics(){return {active,position:position&&[...position],eyeHeight:WALK.eyeHeight,blocked,obstacleCount:world?.obstacleCount??0,support:position?world?.sample(position[0],position[2]):null,frames:[...frames],trace:[...trace]};}
  };
 }
