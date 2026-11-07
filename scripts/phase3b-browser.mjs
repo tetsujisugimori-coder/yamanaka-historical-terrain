@@ -19,7 +19,7 @@ const oldMeta=JSON.parse(await readFile('public/data/landscape.json','utf8'));
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const hashes={};for(const file of ['src/main.js','src/phase3b.js','src/style.css','src/reading.js','src/landscape.js','index.html','public/data/phase3b.json','public/data/phase3b.glb','scripts/phase3b-browser.mjs'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 await mkdir(dir,{recursive:true});
-const qA=oracle('public/data/castle.glb'),qC=oracle('public/data/nishinomaru.glb');
+const qA=oracle('public/data/castle.glb'),qC=oracle('public/data/phase3f.glb');
 
 // Raw GLB accessor + metric transforms + barycentric oracle, separate from product
 // surface/interpolation helpers. Only new ground meshes count as a supporting floor.

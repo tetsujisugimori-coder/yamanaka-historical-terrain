@@ -1,0 +1,21 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+22:10:46 | INFO: Starting glTF 2.0 export
+22:10:47 | INFO: Extracting primitive: nm-transition
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Extracting primitive: nm-rampart
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Extracting primitive: nm-passage
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Extracting primitive: nm-moat
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Extracting primitive: nm-context
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Extracting primitive: nm-bailey
+22:10:47 | INFO: Primitives created: 1
+22:10:47 | INFO: Finished glTF 2.0 export in 0.26596713066101074 s
+
+{"status": "EXPORTED_REVERIFY_REQUIRED", "blender": "4.3.2", "before": {"bytes": 25540264, "sha256": "76eb5905ea9a0695e18ba0df02717b1a027dacd969f7e6fdede9fe9e6a558c5d"}, "after": {"bytes": 6869184, "sha256": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0"}, "geometry": "unchanged native vertices/faces; omit redundant NORMAL attribute only; no quantization", "inner": "unchanged; keep normals for landscapeModel loader", "nativeMaster": "not modified or re-saved"}
+Blender 4.3.2
+Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-phase3f/production/phase3f/yamanaka-phase3f.blend"
+
+Blender quit

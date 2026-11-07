@@ -8,12 +8,14 @@ const startedAt=new Date().toISOString();
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
 const worktreeStatusAtStart=execFileSync('git',['status','--porcelain=v1'],{encoding:'utf8'}).trim();
-const fingerprintPaths=['src/main.js','src/phase3c.js','src/phase3b.js','src/reading.js','src/style.css','src/landscape.js','src/surface.js','src/intent.js','index.html','scripts/phase3c-browser.mjs','tests/section-oracle.mjs','tests/glb-surface.mjs','public/data/phase3c.json','public/data/phase3c.glb','public/data/phase3b.json','public/data/phase3b.glb','public/data/castle.glb','public/data/nishinomaru.glb','public/data/regional.glb','public/data/moat-study.glb'];
+const fingerprintPaths=['src/main.js','src/refined-observation.js','src/phase3c.js','src/phase3b.js','src/reading.js','src/style.css','src/landscape.js','src/surface.js','src/intent.js','index.html','scripts/phase3c-browser.mjs','tests/section-oracle.mjs','tests/glb-surface.mjs','public/data/phase3c.json','public/data/phase3f.json','public/data/phase3f-inner.glb','public/data/phase3b.json','public/data/phase3b.glb','public/data/castle.glb','public/data/phase3f.glb','public/data/regional.glb','public/data/moat-study.glb'];
 async function fingerprints(){const hashes={};for(const path of fingerprintPaths)hashes[path]=createHash('sha256').update(await readFile(path)).digest('hex');return hashes;}
 const hashes=await fingerprints();
 await mkdir(dir,{recursive:true});
 const meta=JSON.parse(await readFile('public/data/phase3c.json','utf8'));
-const q=oracle('public/data/phase3c.glb');
+const q=oracle('public/data/phase3f-inner.glb'),qBase=oracle('public/data/phase3f.glb');
+// Independent target expectation follows the changed display triangles, not stale metadata.
+for(const station of meta.stations)if(station.lookTargetHeight!==undefined){station.groundHeight=q(...station.eye)??qBase(...station.eye);station.lookTargetHeight=(q(...station.look)??qBase(...station.look))+station.lookHeightOffset;}
 const snap=p=>p.evaluate(()=>window.__terrainDiagnostics());
 const ready=p=>p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
 async function enter(p){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded);}
@@ -41,14 +43,18 @@ for(const name of process.env.PHASE3C_ENGINE?[process.env.PHASE3C_ENGINE]:['chro
   }catch(e){row.status='FAIL';row.reason=e.message;row.errors=errors;row.diagnostics=await snap(p).catch(()=>null);await p.screenshot({path:`${dir}/${key}-failure.png`,fullPage:true}).catch(()=>{});}
   row.completedAt=new Date().toISOString();rows.push(row);console.log(row.status,key,row.reason??'');await save();await ctx.close();
  }
- for(const kind of ['western404','dependency-negative','404-retry','stale-success','stale-failure','webgl','missing-support']){
+ for(const kind of ['western404','dependency-negative','404-retry','stale-success','stale-failure','webgl','missing-support','metadata-mismatch']){
   const row={kind,engine:name,browserVersion:browser.version(),startedAt:new Date().toISOString()},ctx=await browser.newContext({viewport:{width:390,height:960}}),p=await ctx.newPage();p.setDefaultTimeout(45000);let release,failed=true;const gate=new Promise(r=>release=r);
   if(kind==='webgl')await p.addInitScript(()=>{const get=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(k,...args){return /webgl/i.test(k)?null:get.call(this,k,...args);};});
   if(['western404','dependency-negative'].includes(kind))await p.route('**/data/phase3b.glb',r=>failed?r.fulfill({status:404,body:'missing required western ground'}):r.continue());
   if(kind==='dependency-negative')await p.route('**/src/main.js*',async r=>{const response=await r.fetch();let code=await response.text();const guard='&&!westernUnavailable&&westernGroup.children.length>0&&Boolean(innerMeta)';if(!code.includes(guard))throw Error('Dependency mutation target missing');code=code.replace(guard,'&&Boolean(innerMeta)');await r.fulfill({response,body:code});});
-  if(kind==='404-retry')await p.route('**/data/phase3c.glb',r=>failed?r.fulfill({status:404,body:'negative control'}):r.continue());
-  if(kind.startsWith('stale'))await p.route('**/data/phase3c.glb',async r=>{await gate;await r.fulfill(kind==='stale-success'?{status:200,body:await readFile('public/data/phase3c.glb'),contentType:'model/gltf-binary'}:{status:404,body:'negative control'});});
-  if(kind==='missing-support'){const broken=structuredClone(meta);broken.stations[0].eye=[1e6,1e6];await p.route('**/data/phase3c.json',r=>r.fulfill({status:200,body:JSON.stringify(broken),contentType:'application/json'}));}
+  if(kind==='404-retry')await p.route('**/data/phase3f-inner.glb',r=>failed?r.fulfill({status:404,body:'negative control'}):r.continue());
+  if(kind.startsWith('stale'))await p.route('**/data/phase3f-inner.glb',async r=>{await gate;await r.fulfill(kind==='stale-success'?{status:200,body:await readFile('public/data/phase3f-inner.glb'),contentType:'model/gltf-binary'}:{status:404,body:'negative control'});});
+  if(['missing-support','metadata-mismatch'].includes(kind)){
+   const broken=structuredClone(meta);broken.stations[0].eye=[1e6,1e6];await p.route('**/data/phase3c.json',r=>r.fulfill({status:200,body:JSON.stringify(broken),contentType:'application/json'}));
+   if(kind==='missing-support'){const support=JSON.parse(await readFile('public/data/phase3f.json','utf8'));const update=support.stationSupport.find(s=>s.id===broken.stations[0].id);expect(update).toBeDefined();update.eye=[...broken.stations[0].eye];await p.route('**/data/phase3f.json',r=>r.fulfill({status:200,body:JSON.stringify(support),contentType:'application/json'}));row.injectedSources=['phase3c.json station eye','phase3f.json matching stationSupport eye'];}
+   else row.injectedSources=['phase3c.json station eye only'];
+  }
   try{
    if(kind==='webgl'){await p.goto(root);await p.waitForFunction(()=>document.body.dataset.renderState==='unavailable');for(const f of meta.elements){await p.locator(`[data-id="${f.id}"]`).click();await expect(p.locator('#detail h2')).toHaveText(f.name);}}
    else if(['western404','dependency-negative'].includes(kind)){
@@ -57,8 +63,15 @@ for(const name of process.env.PHASE3C_ENGINE?[process.env.PHASE3C_ENGINE]:['chro
     else{expect(d.phase3c.objects).toEqual([]);await expect(p.locator('#inner-asset-status')).toContainText('接続先');await p.locator('[data-station=bailey]').click();await p.waitForFunction(()=>window.__terrainDiagnostics().state.station==='bailey');expect((await snap(p)).state.ready).toBe(true);failed=false;await p.locator('[data-landscape-mode=c]').click();await ready(p);expect((await snap(p)).phase3c.visible).toBe(true);expect((await snap(p)).phase3c.objects.length).toBeGreaterThan(0);await expect(p.locator('#inner-asset-status')).not.toContainText('読み込めない');}
    }
    else if(kind==='404-retry'){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.unavailable);expect((await snap(p)).landscape.objects.length).toBeGreaterThan(0);failed=false;await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded&&!window.__terrainDiagnostics().phase3c.unavailable);}
-   else if(kind.startsWith('stale')){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);const request=p.waitForRequest('**/data/phase3c.glb');await p.locator('#inner-load').click();await request;await p.locator('[data-view=castle]').click();await ready(p);const before=await snap(p);release();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded||window.__terrainDiagnostics().phase3c.unavailable);const after=await snap(p);expect(after.state).toEqual(before.state);expect(after.camera).toEqual(before.camera);expect(after.target).toEqual(before.target);expect(after.phase3c.objects).toEqual([]);}
-   else{await enter(p);const before=await snap(p);await p.locator(`[data-inner-station="${meta.stations[0].id}"]`).click();await expect(p.locator('#inner-comparison')).toContainText('観察不可');expect((await snap(p)).camera).toEqual(before.camera);}
+   else if(kind.startsWith('stale')){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);const request=p.waitForRequest('**/data/phase3f-inner.glb');await p.locator('#inner-load').click();await request;await p.locator('[data-view=castle]').click();await ready(p);const before=await snap(p);release();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded||window.__terrainDiagnostics().phase3c.unavailable);const after=await snap(p);expect(after.state).toEqual(before.state);expect(after.camera).toEqual(before.camera);expect(after.target).toEqual(before.target);expect(after.phase3c.objects).toEqual([]);}
+   else if(kind==='metadata-mismatch'){
+    await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);const before=await snap(p);await p.locator('#inner-load').click();
+    await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.unavailable&&document.body.dataset.innerReadingState==='unavailable');const rejected=await snap(p);
+    expect(rejected.phase3c.loaded).toBe(false);expect(rejected.phase3c.objects).toEqual([]);expect(rejected.camera).toEqual(before.camera);expect(rejected.target).toEqual(before.target);expect(rejected.state.ready).toBe(true);expect(rejected.landscape.objects.length).toBeGreaterThan(0);await expect(p.locator('#inner-asset-status')).toContainText('読み込めません');
+    row.rejection={innerUnavailable:rejected.phase3c.unavailable,readingState:await p.evaluate(()=>document.body.dataset.innerReadingState),cameraUnchanged:true,targetUnchanged:true};
+    await p.locator('[data-station=bailey]').click();await p.waitForFunction(()=>window.__terrainDiagnostics().state.station==='bailey');expect((await snap(p)).state.ready).toBe(true);row.existingTerrainUsable=true;
+   }
+   else{await enter(p);const before=await snap(p);expect(before.phase3c.loaded).toBe(true);expect(before.phase3c.unavailable).toBe(false);await p.locator(`[data-inner-station="${meta.stations[0].id}"]`).click();await expect(p.locator('#inner-comparison')).toContainText('観察不可');expect((await snap(p)).camera).toEqual(before.camera);expect((await snap(p)).target).toEqual(before.target);row.supportGuardRejected=true;}
    row.status='PASS';
   }catch(e){row.status='FAIL';row.reason=e.message;}release();row.completedAt=new Date().toISOString();rows.push(row);console.log(row.status,name,kind,row.reason??'');await save();await ctx.close();
  }

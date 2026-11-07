@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "execution": "installed Blender background CLI; no GUI claim",
+  "blender": "4.3.2",
+  "objects": [
+    {
+      "name": "nm-transition",
+      "model": "phase3f.glb",
+      "sourceVertices": 113214,
+      "sourceTriangles": 222585,
+      "vertices": 113214,
+      "triangles": 222585,
+      "changedVertices": 0,
+      "outsideUnchanged": 112502,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "nm-rampart",
+      "model": "phase3f.glb",
+      "sourceVertices": 17436,
+      "sourceTriangles": 33735,
+      "vertices": 17436,
+      "triangles": 33735,
+      "changedVertices": 5921,
+      "outsideUnchanged": 10341,
+      "maxDisplacement": 0.24169921875
+    },
+    {
+      "name": "nm-passage",
+      "model": "phase3f.glb",
+      "sourceVertices": 11737,
+      "sourceTriangles": 23040,
+      "vertices": 11737,
+      "triangles": 23040,
+      "changedVertices": 0,
+      "outsideUnchanged": 11737,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "nm-moat",
+      "model": "phase3f.glb",
+      "sourceVertices": 18873,
+      "sourceTriangles": 37120,
+      "vertices": 18873,
+      "triangles": 37120,
+      "changedVertices": 15200,
+      "outsideUnchanged": 2520,
+      "maxDisplacement": 0.75537109375
+    },
+    {
+      "name": "nm-context",
+      "model": "phase3f.glb",
+      "sourceVertices": 44421,
+      "sourceTriangles": 87076,
+      "vertices": 44421,
+      "triangles": 87076,
+      "changedVertices": 0,
+      "outsideUnchanged": 44361,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "nm-bailey",
+      "model": "phase3f.glb",
+      "sourceVertices": 26901,
+      "sourceTriangles": 53120,
+      "vertices": 26901,
+      "triangles": 53120,
+      "changedVertices": 0,
+      "outsideUnchanged": 26901,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "ic-lookout.surface.grass",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 1571,
+      "sourceTriangles": 2705,
+      "vertices": 1703,
+      "triangles": 2930,
+      "changedVertices": 0,
+      "outsideUnchanged": 1559,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "ic-lookout.surface.earth",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 38,
+      "sourceTriangles": 37,
+      "vertices": 206,
+      "triangles": 298,
+      "changedVertices": 0,
+      "outsideUnchanged": 14,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "ic-koguchi.surface.path",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 91,
+      "sourceTriangles": 132,
+      "vertices": 561,
+      "triangles": 1000,
+      "changedVertices": 440,
+      "outsideUnchanged": 41,
+      "maxDisplacement": 0.239990234375
+    },
+    {
+      "name": "ic-koguchi.surface.earth",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 239,
+      "sourceTriangles": 363,
+      "vertices": 1509,
+      "triangles": 2750,
+      "changedVertices": 880,
+      "outsideUnchanged": 109,
+      "maxDisplacement": 0.3499755859375
+    },
+    {
+      "name": "ic-bridge.surface.path",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 111,
+      "sourceTriangles": 164,
+      "vertices": 769,
+      "triangles": 1384,
+      "changedVertices": 616,
+      "outsideUnchanged": 41,
+      "maxDisplacement": 0.239990234375
+    },
+    {
+      "name": "ic-bridge.surface.grass",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 1571,
+      "sourceTriangles": 2705,
+      "vertices": 1703,
+      "triangles": 2930,
+      "changedVertices": 0,
+      "outsideUnchanged": 1559,
+      "maxDisplacement": 0
+    },
+    {
+      "name": "ic-bridge.surface.earth",
+      "model": "phase3f-inner.glb",
+      "sourceVertices": 780,
+      "sourceTriangles": 1236,
+      "vertices": 3170,
+      "triangles": 5824,
+      "changedVertices": 1232,
+      "outsideUnchanged": 554,
+      "maxDisplacement": 0.3499755859375
+    }
+  ],
+  "protectedFileHashes": {
+    "public/data/phase3d.glb": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/moat-study.glb": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+    "production/yamanaka-phase3b.blend": "b12d1ff362c4f3b04b3d90f365f541b68bbf70f2e6c5ef55ad2520da8da47765",
+    "production/yamanaka-1590.blend": "6d45ec6df4c0f820e238d2fcd0bda226b5791396070f760eb725847461c9cda1",
+    "production/yamanaka-phase3c.blend": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701",
+    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+    "production/yamanaka-phase3b.qgz": "546b873ddde1d5614b23626e4b727759c7a8a50a78256427080f55a77e921b30",
+    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+    "production/yamanaka-phase3c.qgz": "610c0d2c03d733ca9b792eeb5748dcafa13976af082cdfadc05c5ad61158b3dc",
+    "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+    "production/yamanaka-1590.qgz": "4a9dd4da1a79e9fb57264b2665e8589786e8aeb42abc107eac25cc5e8756140a"
+  },
+  "changedTriangles": 52342,
+  "topology": "NM: unchanged .25m topology; inner: conforming local centre-fan subdivision with .25 parametric edge spacing, perimeter edges unchanged; vertex Z profiles only",
+  "B": 0
+}

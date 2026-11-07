@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "qgis": "3.40.6-Bratislava",
+  "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage",
+  "triangleFeatures": 52342,
+  "maxAbsoluteCoordinateError": 0,
+  "render": "phase3f-qgis-map.png, native QGIS map export, NOT GUI screenshot",
+  "layerValidity": true,
+  "gpkgSha256": "08b323717a03088d29355ea541cbc9f08b339554236c1f930d10f83b729785bf"
+}

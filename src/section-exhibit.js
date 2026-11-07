@@ -13,7 +13,7 @@ export function createSectionExhibit({getModel,context,scene,render,open}){
  <p id="section-point-definition"><strong>代表点はCで選んだ対応位置です。</strong>Aは同じ水平座標で測った現況モデルの高さで、A自身の最深部・最高部や実遺構を示す点ではありません。下の比高も、この共通2点間の値です。</p>
  <div id="section-points"></div><p id="section-value" role="status"></p><dl id="section-dimensions"></dl>
  <details><summary>根拠・仮定と測り方</summary><p>資料記載：三島市郷土資料館「山中城跡の障子堀」第453号の発掘断面の一例は、畝上部約0.35m・深さ1.8m・法面約58度。全域の寸法ではありません。<a href="https://www.city.mishima.shizuoka.jp/site/kyoudoshiryoukan/36489.html" target="_blank" rel="noopener">出典</a></p>
- <p>現況A：国土地理院DEM由来のWeb5m三角形面。現地の細かい堀形や1590年の面を示すものではありません。推定C：phase2a-v1の制作仮定（堀周期7m、最大切下げ1.8m、土塁立上がり2.5m・基底幅8m・天端幅2m）。基底の傾斜により、測定点間の比高と設計パラメータは一致するとは限りません。</p>
+ <p>現況A：国土地理院DEM由来のWeb5m三角形面。現地の細かい堀形や1590年の面を示すものではありません。推定C：第3期Fの局所形状改訂。旧phase2a-v1の仮定（堀周期7m、最大切下げ1.8m、土塁立上がり2.5m）を基準に堀底・土塁断面を再造形。形状は測量復元ではなくC推定で、表示中の新版GLBから再計算します。基底の傾斜により、測定点間の比高と設計パラメータは一致するとは限りません。</p>
  <p>下の値は今回の表示モデルから測定した値です。地理座標はEPSG:6676、単位m。ローカル東・北原点は E=44862.121277、N=-93478.072354。高さはモデルの基準高（原点高0）。個別の標高基準補正状況が未確認のため絶対標高と断定しません。小数1桁は表示丸めで、測量精度ではありません。</p>
  <p>実GLB三角形面と垂直断面平面の交線を表示。平滑化なし。重なる地表面は最上面、鉛直面・面外・欠損は高さ未定義で接続しません。3Dで非表示の施設もグラフでは全モデルを比較し、その状態を明記します。寸法の整合は歴史的復元の正確さを証明しません。断面だけでは実際の視界は判断できません。</p></details></div>`;
  const $=s=>root.querySelector(s),group=new THREE.Group();scene.add(group);

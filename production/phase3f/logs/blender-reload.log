@@ -1,0 +1,5 @@
+{"status": "PASS", "execution": "separate installed Blender background process reopened saved .blend", "blender": "4.3.2", "objects": 13, "nativeAndGLBTrianglesExactlyEqual": 473792, "protectedFilesUnchanged": 18, "B": 0, "glbSha256": {"phase3f.glb": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0", "phase3f-inner.glb": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7"}}
+Blender 4.3.2
+Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-phase3f/production/phase3f/yamanaka-phase3f.blend"
+
+Blender quit
