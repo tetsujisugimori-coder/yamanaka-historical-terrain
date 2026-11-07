@@ -7,7 +7,7 @@ const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
 const worktreeStatusAtStart=execFileSync('git',['status','--porcelain=v1'],{encoding:'utf8'}).trim(),startedAt=new Date().toISOString();
 const base='ed22133f766aa1a2256dcebbb0413ec11d479106'; // Before server's configured PR12-merged baseline.
-const hashes={};for(const file of ['src/main.js','src/phase3c.js','src/phase3b.js','src/reading.js','src/style.css','src/landscape.js','index.html','scripts/phase3c-appearance.mjs','public/data/phase3c.json','public/data/phase3c.glb','public/data/phase3b.json','public/data/phase3b.glb','public/data/nishinomaru.glb','public/data/castle.glb','public/data/regional.glb','public/data/moat-study.glb','public/data/landscape.glb'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const hashes={};for(const file of ['src/main.js','src/phase3c.js','src/phase3b.js','src/reading.js','src/style.css','src/landscape.js','index.html','scripts/phase3c-appearance.mjs','public/data/phase3c.json','public/data/phase3f-inner.glb','public/data/phase3b.json','public/data/phase3b.glb','public/data/phase3f.glb','public/data/castle.glb','public/data/regional.glb','public/data/moat-study.glb','public/data/landscape.glb'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 await mkdir(out,{recursive:true});
 for(const [engine,type]of Object.entries({chromium,webkit})){
  const browser=await type.launch(engine==='chromium'&&process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox']}:{});

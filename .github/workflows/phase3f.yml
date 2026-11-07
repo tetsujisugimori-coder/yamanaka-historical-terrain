@@ -1,0 +1,37 @@
+name: Validate physical terrain refinement
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  physical-terrain:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test && npm run build
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Physical terrain matrix and preservation
+        run: |
+          npm run dev -- --port 4317 --strictPort > /tmp/terrain-vite.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
+          node scripts/phase3f-browser.mjs
+          node scripts/phase3f-evidence.mjs
+          node scripts/phase3f-preservation.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3f-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3f
+          if-no-files-found: error
+          retention-days: 30

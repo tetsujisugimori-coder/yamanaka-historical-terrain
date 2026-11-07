@@ -1,0 +1,78 @@
+{
+  "version": "phase3f-v1",
+  "category": "C",
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "axes": {
+    "native": "east,north,up",
+    "glTF": "east,up,south"
+  },
+  "patches": [
+    {
+      "id": "shoji-moat",
+      "model": "phase3f.glb",
+      "bounds": [
+        -62,
+        -23,
+        -42,
+        29
+      ],
+      "feather": 2.5,
+      "pitch": 7.0,
+      "ridgeCrownHalfWidth": 0.3,
+      "slopeRun": 1.9,
+      "depth": 2.05,
+      "description": "Round ridge shoulders and bowl toes, deepen cell floors locally; retain all grid cells and perimeter heights."
+    },
+    {
+      "id": "rampart",
+      "model": "phase3f.glb",
+      "bounds": [
+        -41,
+        -21,
+        -31,
+        27
+      ],
+      "feather": 2.5,
+      "crestHalfWidth": 0.8,
+      "slopeRun": 3.2,
+      "height": 2.65,
+      "description": "Round the C rampart crest and toe using continuous zero-slope shoulders; no additional wall sheet."
+    },
+    {
+      "id": "earthbridge",
+      "model": "phase3f-inner.glb",
+      "bounds": [
+        -96,
+        -39,
+        -72,
+        -20
+      ],
+      "feather": 3.0,
+      "axisNorth": -29,
+      "halfWidth": 2.0,
+      "crownAddition": 0.24,
+      "sideToeLowering": 0.35,
+      "description": "Add a slight earth crown and rounded side-toe depression to the existing four-metre C neck; no wood or new access claim."
+    }
+  ],
+  "sourceIds": [
+    "plan",
+    "mishima-moat",
+    "mishima-works",
+    "mishima-inner"
+  ],
+  "sourceLedgers": [
+    "public/data/nishinomaru-layout.json",
+    "public/data/phase3c.json"
+  ],
+  "provenance": "Project-original C refinements of existing C meshes. Prior source ledgers support names/context only. No new archaeological, measured or historical dimensional evidence introduced.",
+  "uncertainty": "All patch placement, crest widths, slopes, crown and depths are C assumptions. True 1590 dimensions, registration and access remain UNKNOWN. B count 0.",
+  "appearance": "Geometry is C. Neutral inherited material only; D lighting, vegetation and appearance remain separate.",
+  "preservation": "Old files immutable; copied mesh topology and XY unchanged. Vertices outside open patch rectangles and all patch perimeter vertices bit-identical."
+}

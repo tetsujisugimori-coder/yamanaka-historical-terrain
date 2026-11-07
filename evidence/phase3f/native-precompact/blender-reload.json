@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "execution": "separate installed Blender background process reopened saved .blend",
+  "blender": "4.3.2",
+  "objects": 13,
+  "nativeAndGLBTrianglesExactlyEqual": 473792,
+  "protectedFilesUnchanged": 18,
+  "B": 0
+}

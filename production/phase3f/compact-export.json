@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "blender": "4.3.2",
+  "before": {
+    "bytes": 25540264,
+    "sha256": "76eb5905ea9a0695e18ba0df02717b1a027dacd969f7e6fdede9fe9e6a558c5d"
+  },
+  "after": {
+    "bytes": 6869184,
+    "sha256": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0"
+  },
+  "geometry": "unchanged native vertices/faces; omit redundant NORMAL attribute only; no quantization",
+  "inner": "unchanged; keep normals for landscapeModel loader",
+  "nativeMaster": "not modified or re-saved",
+  "independentPrecompactComparison": [
+    {
+      "name": "nm-transition",
+      "triangles": 222585,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    },
+    {
+      "name": "nm-rampart",
+      "triangles": 33735,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    },
+    {
+      "name": "nm-passage",
+      "triangles": 23040,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    },
+    {
+      "name": "nm-moat",
+      "triangles": 37120,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    },
+    {
+      "name": "nm-context",
+      "triangles": 87076,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    },
+    {
+      "name": "nm-bailey",
+      "triangles": 53120,
+      "exactTriangleCoordinateSetEqual": true,
+      "extrasEqual": true
+    }
+  ],
+  "sourceCommit": "2f94614",
+  "precompactGLBSha256": "76eb5905ea9a0695e18ba0df02717b1a027dacd969f7e6fdede9fe9e6a558c5d"
+}
