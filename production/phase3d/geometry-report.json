@@ -3,12 +3,12 @@
   "measurement": {
     "parts": 63,
     "connectedPartBounds": 63,
-    "postSamples": 550,
+    "postSamples": 2662,
     "routeSamples": 451,
     "exactRouteVertices": 40,
-    "maxPostInteriorEmbedDeviation": 0.061676595706958326,
+    "maxPostInteriorEmbedDeviation": 0.000031279572285713986,
     "maxPostCornerError": 0.000031279572285713986,
-    "minRailClearance": 0.5241299942135811,
+    "minRailClearance": 0.5237049115821719,
     "minLintelClearance": 3.299983208067715
   },
   "negativeControls": {

@@ -27,7 +27,7 @@ for(const engine of process.env.PHASE3D_ENGINE?[process.env.PHASE3D_ENGINE]:['ch
    }
    const fixed=await snap(p);await p.locator('[data-landscape-mode=a]').click();await ready(p);const a=await snap(p);expect(a.camera).toEqual(fixed.camera);expect(a.target).toEqual(fixed.target);expect(a.phase3d.objects).toEqual([]);expect(a.phase3d.ray).toBeNull();
    await p.locator('[data-landscape-mode=cd]').click();await ready(p);await p.locator('#connected-visible').uncheck();expect((await snap(p)).phase3d.objects).toEqual([]);await p.locator('#connected-visible').check();expect((await snap(p)).phase3d.objects.length).toBeGreaterThan(0);
-   await p.locator('#exaggeration').check();expect((await snap(p)).phase3c.pose.clearance).toBeCloseTo(1.7,6);await p.locator('#exaggeration').uncheck();
+   await p.locator('#exaggeration').check();await p.locator('[data-defence-pair=bridge][data-side=defender]').click();expect((await snap(p)).phase3c.pose.clearance).toBeCloseTo(1.7,6);await p.locator('#exaggeration').uncheck();
    expect(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);expect(errors).toEqual([]);
    row.metrics=await snap(p);if([390,1280].includes(width)&&reducedMotion==='reduce')await p.locator('#viewport').screenshot({path:dir+'/'+key+'.png'});
    row.status='PASS';

@@ -254,6 +254,7 @@ async function initialize(features){
  });}
 
  function syncConnected(){
+  if(connectedPair&&![connectedPair.attacker,connectedPair.defender].includes(state.station))connectedPair=null;
   connectedGroup.visible=Boolean(connectedMeta)&&innerGroup.visible&&$('#connected-visible').checked;
   connectedGroup.scale.y=state.exaggeration;
   for(const line of [...sightlineGroup.children]){sightlineGroup.remove(line);line.geometry.dispose();line.material.dispose();}

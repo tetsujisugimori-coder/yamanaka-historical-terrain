@@ -1687,7 +1687,7 @@
       0,
       0.13
     ],
-    "method": "Bottom corners sample immutable exported phase3c triangles"
+    "method": "Bottom meshes clip immutable exported phase3c triangles; full bottom follows surface minus 0.06m"
   },
   "appearance": {
     "category": "D",

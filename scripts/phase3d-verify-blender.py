@@ -5,7 +5,11 @@ ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'production/phase3d';r=json.lo
 objects=[o for o in bpy.data.objects if o.type=='MESH'];assert len(objects)==len(r['parts'])==63
 for o in objects:
  assert o.get('evidenceCategory')=='C' and o.get('materialRole')=='wood'
- assert len(o.data.vertices)==8 and len(o.data.polygons)==6
+ assert len(o.data.vertices)>=8 and len(o.data.polygons)>=6
+ edge_use={}
+ for face in o.data.polygons:
+  for edge in face.edge_keys:edge_use[edge]=edge_use.get(edge,0)+1
+ assert edge_use and all(count==2 for count in edge_use.values()), 'non-manifold timber source'
  assert not o.modifiers and not o.data.shape_keys
 assert bpy.context.scene.unit_settings.scale_length==1
 for p,h in r['immutableInputs'].items():assert hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==h
