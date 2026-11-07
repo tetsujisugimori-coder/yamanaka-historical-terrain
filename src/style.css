@@ -49,3 +49,6 @@ body[data-landscape=true] .map-help,body[data-landscape=true] .map-bottom{backgr
 .inner-unavailable[hidden] {display:none;}
 
 .inner-observation [hidden] {display:none;}
+/* Phase 3E: controls occupy one corner, never consume the whole touch canvas. */
+#exploration{border-top:3px solid #626f4e}#exploration label{display:inline-flex;align-items:center;gap:.5rem;margin:.4rem .8rem .4rem 0;flex-wrap:wrap}#exploration select{max-width:100%}
+#walk-pad{position:absolute;bottom:1rem;left:.6rem;z-index:5;background:#edf0e8ed;border:1px solid #697754;padding:.35rem;border-radius:8px;text-align:center;max-width:calc(100% - 1.2rem);touch-action:none}#walk-pad[hidden]{display:none}#walk-pad button{min-width:44px;min-height:44px;padding:.3rem;margin:.1rem;touch-action:none}#walk-pad output{display:block;font-size:.72rem;max-width:240px}#walk-stop-overlay{font-size:.75rem}#walk-pad div{white-space:nowrap}#exploration-guide button{font-size:.85rem}
