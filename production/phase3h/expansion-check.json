@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "models": [
+    {
+      "model": "phase3h.glb",
+      "changedTriangles": 51410,
+      "changedTriangleCentresOutsideGBounds": 14292,
+      "projectedAreaOfThoseTriangles": 446.625,
+      "maxVertexHeightChange": 0.10968017578125
+    },
+    {
+      "model": "phase3h-inner.glb",
+      "changedTriangles": 11450,
+      "changedTriangleCentresOutsideGBounds": 1249,
+      "projectedAreaOfThoseTriangles": 624.5,
+      "maxVertexHeightChange": 0.19000244140625
+    }
+  ],
+  "fiveFixedPosts": [
+    {
+      "east": -22.4,
+      "north": 0,
+      "G": 575.1500244140625,
+      "H": 575.1500244140625,
+      "delta": 0.0
+    },
+    {
+      "east": -21.2,
+      "north": 0,
+      "G": 575.1500244140625,
+      "H": 575.1500244140625,
+      "delta": 0.0
+    },
+    {
+      "east": -20.0,
+      "north": 0,
+      "G": 575.1500244140625,
+      "H": 575.1500244140625,
+      "delta": 0.0
+    },
+    {
+      "east": -18.8,
+      "north": 0,
+      "G": 575.1500244140625,
+      "H": 575.1500244140625,
+      "delta": 0.0
+    },
+    {
+      "east": -17.6,
+      "north": 0,
+      "G": 575.1500244140625,
+      "H": 575.1500244140625,
+      "delta": 0.0
+    }
+  ],
+  "existingPathSlopes": [
+    {
+      "object": "ic-bridge.surface.path",
+      "triangles": 1384,
+      "maxSlope": 33.74221190073366,
+      "medianSlope": 27.047836971365427,
+      "trianglesAtOrBelowWalk38Degrees": 1384,
+      "interpretation": "surface geometry only; browser collision and foot-radius checks separate"
+    },
+    {
+      "object": "ic-koguchi.surface.path",
+      "triangles": 1000,
+      "maxSlope": 32.0509521172863,
+      "medianSlope": 25.902830806363564,
+      "trianglesAtOrBelowWalk38Degrees": 1000,
+      "interpretation": "surface geometry only; browser collision and foot-radius checks separate"
+    }
+  ],
+  "negativeControls": [
+    {
+      "case": "noExpansion",
+      "result": "REJECT"
+    },
+    {
+      "case": "postMoved",
+      "result": "REJECT"
+    },
+    {
+      "case": "unknownSupport",
+      "result": "REJECT"
+    }
+  ],
+  "limits": "Projected areas count triangles by centroid and are not surveyed archaeology. No assertion of full castle route continuity."
+}

@@ -12,7 +12,7 @@ const meta=JSON.parse(await readFile('public/data/phase3c.json','utf8'));
 const rows=[];await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
-const evidenceFiles=['src/main.js','src/refined-observation.js','src/phase3b.js','src/phase3c.js','src/reading.js','src/style.css','scripts/phase3c-independent-browser.mjs','public/data/phase3g-inner.glb','public/data/phase3c.json','public/data/phase3g.json','public/data/regional.glb','public/data/castle.glb','public/data/phase3g.glb','public/data/moat-study.glb','public/data/phase3b.glb','public/data/landscape.glb'];
+const evidenceFiles=['src/main.js','src/refined-observation.js','src/phase3b.js','src/phase3c.js','src/reading.js','src/style.css','scripts/phase3c-independent-browser.mjs','public/data/phase3h-inner.glb','public/data/phase3c.json','public/data/phase3g.json','public/data/regional.glb','public/data/castle.glb','public/data/phase3h.glb','public/data/moat-study.glb','public/data/phase3b.glb','public/data/landscape.glb'];
 const sha256=Object.fromEntries(await Promise.all(evidenceFiles.map(async file=>[file,createHash('sha256').update(await readFile(file)).digest('hex')])));
 const worktreeStatus=execFileSync('git',['status','--porcelain','--',...evidenceFiles],{encoding:'utf8'}).trim();
 const startedAt=new Date().toISOString();
@@ -75,7 +75,7 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
  for(const fault of (mutation?[]:['asset404','missing-support','webgl'])){
   const row={engine,fault};const p=await browser.newPage({viewport:{width:390,height:960}});p.setDefaultTimeout(60000);
   try{
-   if(fault==='asset404')await p.route('**/data/phase3g-inner.glb',r=>r.fulfill({status:404,body:'independent fault'}));
+   if(fault==='asset404')await p.route('**/data/phase3h-inner.glb',r=>r.fulfill({status:404,body:'independent fault'}));
    if(fault==='missing-support'){
     const broken=structuredClone(meta);broken.stations[0].eye=[1e6,1e6];await p.route('**/data/phase3c.json',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(broken)}));
     // Keep the two metadata generations mutually consistent so this tests the

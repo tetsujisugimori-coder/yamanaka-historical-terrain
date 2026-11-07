@@ -1,0 +1,75 @@
+{
+  "version": "phase3h-v1",
+  "category": "C",
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "axes": {
+    "native": "east,north,up",
+    "glTF": "east,up,south"
+  },
+  "base": {
+    "commit": "3b08613682c794f50d90ef81b8a41170f40f8476",
+    "native": "production/phase3g/yamanaka-phase3g.blend",
+    "glb": [
+      "public/data/phase3g.glb",
+      "public/data/phase3g-inner.glb"
+    ]
+  },
+  "patches": [
+    {
+      "id": "moat-expanded-shoulders",
+      "model": "phase3h.glb",
+      "bounds": [
+        -66,
+        -27,
+        -40,
+        33
+      ],
+      "feather": 3,
+      "description": "C expanded ridge shoulder and toe joins beyond G bounds; inherited 7m grid and defensive step remain. Not measured dimensions."
+    },
+    {
+      "id": "rampart-expanded-toes",
+      "model": "phase3h.glb",
+      "bounds": [
+        -43,
+        -25,
+        -29,
+        31
+      ],
+      "feather": 3,
+      "description": "C slightly wider slope-to-ground blend extending G bank extremities, preserving crest and moat relief."
+    },
+    {
+      "id": "bridge-bailey-koguchi-link",
+      "model": "phase3h-inner.glb",
+      "bounds": [
+        -99,
+        -43,
+        -69,
+        5
+      ],
+      "feather": 3,
+      "description": "C continuous extension from bridge to inner approach: eased shoulders and bounded low crown, no new route or gate created."
+    }
+  ],
+  "sourceIds": [
+    "plan",
+    "mishima-moat",
+    "mishima-works",
+    "mishima-inner"
+  ],
+  "sourceLedgers": [
+    "public/data/nishinomaru-layout.json",
+    "public/data/phase3c.json"
+  ],
+  "provenance": "Project-original bounded extension of G hypotheses. Source references are context, not evidence of newly chosen dimensions.",
+  "uncertainty": "1590 shape, dimension, vegetation and real-site route remain UNKNOWN. No B promotion.",
+  "appearance": "Separate H procedural D surface/low vegetation recipe; native C geometry has inherited neutral material.",
+  "preservation": "All A/G originals immutable. XY and topology fixed. Only Z inside open rectangles changes. Fence supports near E=-20,N=0 outside edits. Continuous existing coverage; no invented pathway."
+}

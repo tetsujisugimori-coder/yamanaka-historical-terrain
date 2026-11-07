@@ -1,0 +1,19 @@
+{
+  "package": {
+    "format": "gzip",
+    "file": "phase3h-editable.gpkg",
+    "archive": "phase3h-editable.gpkg.gz",
+    "bytes": 14159872,
+    "sha256": "b9f6bbe0c5d0c0aee9b058eba183fad6523ac62d33aae30b1e979b35b4dba769",
+    "archiveBytes": 1417241,
+    "archiveSha256": "7dd77c3905f2414384e826528b2a87a5569b0313ec5a1a00c5d5fea608a2dfa9"
+  },
+  "status": "PASS",
+  "qgis": "3.40.6-Bratislava",
+  "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage",
+  "triangleFeatures": 62860,
+  "maxAbsoluteCoordinateError": 0,
+  "render": "phase3h-qgis-map.png, native QGIS map export, NOT GUI screenshot",
+  "layerValidity": true,
+  "gpkgSha256": "b9f6bbe0c5d0c0aee9b058eba183fad6523ac62d33aae30b1e979b35b4dba769"
+}

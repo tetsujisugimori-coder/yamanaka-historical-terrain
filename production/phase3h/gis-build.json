@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "qgis": "3.40.6-Bratislava",
+  "execution": "installed QGIS Python bindings, offscreen/headless; no GUI claim",
+  "editableTriangleFeatures": 62860,
+  "layers": {
+    "C_actual_mesh_sections": 4,
+    "C_changed_triangles": 62860,
+    "C_edit_bounds": 3
+  },
+  "crs": "EPSG:6676",
+  "reopened": true,
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142
+  ],
+  "vertical": "copied native mesh model Z, metres; no new vertical datum claim",
+  "A": "not loaded or modified; standalone editable C overlay project"
+}
