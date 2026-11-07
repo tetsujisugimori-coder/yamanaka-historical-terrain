@@ -1,0 +1,3 @@
+// Optional materialization from an explicitly supplied local clone. Never fetch main at runtime.
+import{readFileSync,writeFileSync}from'node:fs';import{execFileSync}from'node:child_process';import{createHash}from'node:crypto';import assert from'node:assert/strict';
+const m=JSON.parse(readFileSync('public/parts/manifest.json'));assert.match(m.commit,/^[a-f0-9]{40}$/);const bytes=process.argv[2]?execFileSync('git',['-C',process.argv[2],'show',m.commit+':'+m.sourcePath]):readFileSync('public/'+m.definition);assert.equal(createHash('sha256').update(bytes).digest('hex'),m.sha256,'fixed source hash');if(process.argv[2])writeFileSync('public/'+m.definition,bytes);console.log('Fixed definition bytes verified',m.commit,m.sha256);

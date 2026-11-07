@@ -4,8 +4,8 @@ import {execFileSync} from 'node:child_process';
 import {canonicalSha256} from './evidence-hash.mjs';
 import {oracle} from '../tests/section-oracle.mjs';
 const label=process.argv.find(a=>a.startsWith('--label='))?.split('=')[1]??'green',mutation=process.argv.find(a=>a.startsWith('--mutation='))?.split('=')[1],root=process.env.TEST_URL??'http://127.0.0.1:4317',dir=process.env.P3_EVIDENCE??'evidence/landscape/p3-fixed-controls';
-await mkdir(dir,{recursive:true});const meta=JSON.parse(await readFile('public/data/landscape.json','utf8')),qA=oracle('public/data/castle.glb'),qC=oracle('public/data/phase3f.glb'),rows=[],touchRows=[],hashes={};
-for(const f of ['src/main.js','index.html','src/style.css','scripts/landscape-fixed-controls.mjs','public/data/landscape.json','public/data/landscape.glb','public/data/castle.glb','public/data/phase3f.glb'])hashes[f]=canonicalSha256(f,await readFile(f));
+await mkdir(dir,{recursive:true});const meta=JSON.parse(await readFile('public/data/landscape.json','utf8')),qA=oracle('public/data/castle.glb'),qC=oracle('public/data/phase3g.glb'),rows=[],touchRows=[],hashes={};
+for(const f of ['src/main.js','index.html','src/style.css','scripts/landscape-fixed-controls.mjs','public/data/landscape.json','public/data/landscape.glb','public/data/castle.glb','public/data/phase3g.glb'])hashes[f]=canonicalSha256(f,await readFile(f));
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();let served=await(await fetch(root+'/src/main.js')).text();if(mutation){const before=served;if(mutation==='zoom')served=served.replace('!enabled||fixed','!enabled');if(mutation==='guidance')served=served.replace('mapHelp.innerHTML=fixed?fixedViewHelp:mapHelpDefault;','mapHelp.innerHTML=mapHelpDefault;');if(served===before)throw Error('Mutation anchor missing');}
 const snap=p=>p.evaluate(()=>window.__terrainDiagnostics()),ready=p=>p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
 function foot(d,s){const expected=[s.eye[0],Math.max(qA(...s.eye),qC(...s.eye))*d.state.exaggeration+1.7,-s.eye[1]];for(let k=0;k<3;k++)expect(Math.abs(d.camera[k]-expected[k])).toBeLessThan(.001);return expected;}

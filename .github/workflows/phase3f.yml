@@ -1,4 +1,4 @@
-name: Validate physical terrain refinement
+name: Validate terrain and fixed parts integration
 on:
   pull_request:
 permissions:
@@ -25,13 +25,13 @@ jobs:
           server=$!
           trap 'kill "$server"' EXIT
           for n in $(seq 1 30); do curl -fs http://127.0.0.1:4317 >/dev/null && break || sleep 1; done
-          node scripts/phase3f-browser.mjs
-          node scripts/phase3f-evidence.mjs
-          node scripts/phase3f-preservation.mjs
+          node scripts/phase3g-browser.mjs
+          node scripts/phase3g-evidence.mjs
+          node scripts/phase3g-preservation.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: phase3f-${{ github.event.pull_request.head.sha }}
-          path: evidence/phase3f
+          name: phase3g-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3g
           if-no-files-found: error
           retention-days: 30

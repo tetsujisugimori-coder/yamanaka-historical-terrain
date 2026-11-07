@@ -3,7 +3,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {canonicalSha256,normalization} from './evidence-hash.mjs';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317';
-const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','src/style.css','public/data/phase3f.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
+const sourceHashes={};for(const file of ['index.html','src/main.js','src/intent.js','src/surface.js','src/reading.js','src/style.css','public/data/phase3g.glb','public/data/nishinomaru.json'])sourceHashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
 const sourceHashesAtExecution={...sourceHashes};for(const file of Object.keys(sourceHashes))sourceHashes[file]=canonicalSha256(file,await readFile(file));
 const results=[];await mkdir('evidence/phase2a/browser',{recursive:true});
 const meta=JSON.parse(await readFile('public/data/nishinomaru.json','utf8'));

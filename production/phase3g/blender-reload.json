@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "execution": "separate installed Blender background process reopened saved .blend",
+  "blender": "4.3.2",
+  "objects": 13,
+  "nativeAndGLBTrianglesExactlyEqual": 473792,
+  "protectedFilesUnchanged": 35,
+  "negativeControls": [
+    {
+      "case": "missingTriangle",
+      "expected": "REJECT",
+      "actual": "REJECT"
+    },
+    {
+      "case": "empty",
+      "expected": "REJECT",
+      "actual": "REJECT"
+    },
+    {
+      "case": "height",
+      "expected": "REJECT",
+      "actual": "REJECT"
+    },
+    {
+      "case": "axis",
+      "expected": "REJECT",
+      "actual": "REJECT"
+    },
+    {
+      "case": "units",
+      "expected": "REJECT",
+      "actual": "REJECT"
+    }
+  ],
+  "B": 0,
+  "glbSha256": {
+    "phase3g.glb": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
+    "phase3g-inner.glb": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69"
+  }
+}

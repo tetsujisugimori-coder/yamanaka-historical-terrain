@@ -6,13 +6,13 @@ const baseline=process.argv.includes('--baseline'),mutation=process.argv.find(x=
 const phase=baseline?'red':mutation?'mutation-'+mutation:'green',root=process.env.TEST_URL??'http://127.0.0.1:4317';
 await mkdir('evidence/review-fixes',{recursive:true});
 const original=JSON.parse(await readFile('public/data/features.json','utf8')),facilities=JSON.parse(await readFile('public/data/nishinomaru.json','utf8')).facilities;
-const realGlb=await readFile('public/data/phase3f.glb');
+const realGlb=await readFile('public/data/phase3g.glb');
 const aMesh=meshData(readGlb('public/data/castle.glb'),'A_castle_current'),aHeight=triangleSurface(aMesh.positions,aMesh.indices);
 // The preserved metadata describes the preserved Phase2A mesh, not the new C candidate.
 const metadataGlb=readGlb('public/data/nishinomaru.glb'),metadataHeight=new Map(facilities.map(f=>{const m=meshData(metadataGlb,f.id);return[f.id,triangleSurface(m.positions,m.indices)];}));
-const cGlb=readGlb('public/data/phase3f.glb'),cHeight=new Map(facilities.map(f=>{const m=meshData(cGlb,f.id);return[f.id,triangleSurface(m.positions,m.indices)];}));
+const cGlb=readGlb('public/data/phase3g.glb'),cHeight=new Map(facilities.map(f=>{const m=meshData(cGlb,f.id);return[f.id,triangleSurface(m.positions,m.indices)];}));
 const sourceRoot=baseline?(process.env.BASELINE_DIR??'.'):'.';
-const hashes={};for(const file of ['src/main.js','src/coordinates.js','src/reading.js','public/data/phase3f.glb','public/data/castle.glb','public/data/nishinomaru.json','public/data/nishinomaru.glb','tests/glb-surface.mjs',...(!baseline?['src/intent.js','src/surface.js']:[])])hashes[file]=canonicalSha256(file,await readFile(`${sourceRoot}/${file}`));
+const hashes={};for(const file of ['src/main.js','src/coordinates.js','src/reading.js','public/data/phase3g.glb','public/data/castle.glb','public/data/nishinomaru.json','public/data/nishinomaru.glb','tests/glb-surface.mjs',...(!baseline?['src/intent.js','src/surface.js']:[])])hashes[file]=canonicalSha256(file,await readFile(`${sourceRoot}/${file}`));
 const rawHashes={};for(const file of Object.keys(hashes))rawHashes[file]=sha256(await readFile(`${sourceRoot}/${file}`));
 const servedMain=await (await fetch(new URL('src/main.js',root.endsWith('/')?root:root+'/'))).text();
 const servedIntent=mutation==='intent'?await (await fetch(new URL('src/intent.js',root.endsWith('/')?root:root+'/'))).text():null;
@@ -33,15 +33,15 @@ async function race(browser,engine,target,outcome,width=390,motion='reduce',matr
  const row={kind:'P2-01',engine,target,outcome,width,motion,matrix,status:'RUNNING',pageerrors:[]};
  const context=await browser.newContext({viewport:{width,height:960},hasTouch:width<800,isMobile:width<700,reducedMotion:motion}),page=await context.newPage();page.on('pageerror',e=>row.pageerrors.push(e.message));
  let release;const gate=new Promise(r=>release=r);let intercepted=0;
- await instrument(page,row);await page.route('**/data/phase3f.glb',async route=>{intercepted++;await gate;await route.fulfill(outcome==='success'?{status:200,contentType:'model/gltf-binary',body:realGlb}:{status:404,body:'deliberate gated model 404'});});
+ await instrument(page,row);await page.route('**/data/phase3g.glb',async route=>{intercepted++;await gate;await route.fulfill(outcome==='success'?{status:200,contentType:'model/gltf-binary',body:realGlb}:{status:404,body:'deliberate gated model 404'});});
  try{
   await page.goto(root);await ready(page,'regional');row.before=await snapshot(page);
-  const request=page.waitForRequest('**/data/phase3f.glb');await page.locator('#reconstruction-list [data-id=nm-moat]').click();await request;
+  const request=page.waitForRequest('**/data/phase3g.glb');await page.locator('#reconstruction-list [data-id=nm-moat]').click();await request;
   if(target.startsWith('view:')){await page.locator(`[data-view=${target.slice(5)}]`).click();await ready(page,target.slice(5));}
   else if(target==='reset'){await page.locator('#reset').click();await ready(page,'regional');}
   else await page.locator(`[data-id="${target}"]`).click();
   row.afterIntent=await snapshot(page);
-  const response=page.waitForResponse('**/data/phase3f.glb');release();await response;await settled(page);row.actual=await snapshot(page);row.realGlbResponses=intercepted;
+  const response=page.waitForResponse('**/data/phase3g.glb');release();await response;await settled(page);row.actual=await snapshot(page);row.realGlbResponses=intercepted;
   const expectedId=target==='reset'?'castle':target==='view:study'?'west':target.startsWith('view:')?row.afterIntent.diagnostics.state.selected:target;
   row.expected={id:expectedId,renderState:target.startsWith('nm-')&&outcome==='404'?'error':'ready',view:target.startsWith('nm-')&&outcome==='success'?'reconstruction':target.startsWith('view:')?target.slice(5):'regional'};
   const expectedFeature=[...original,...facilities].find(f=>f.id===expectedId);
@@ -63,7 +63,7 @@ async function heights(browser,engine){
     const d=(await snapshot(page)).diagnostics,ground=variant==='restored'?cHeight.get(f.id)(f.local[0],-f.local[1]):aHeight(f.local[0],-f.local[1]);
     row.metadataHeight=f.height;row.glbHeight=ground;row.expectedTarget=[f.local[0],ground*scale,-f.local[1]];row.actualTarget=d.target;row.errorMetres=Math.abs(d.target[1]-ground*scale);row.toleranceMetres=.001*scale;
     if(variant==='restored'){row.metadataSource='public/data/nishinomaru.glb';row.metadataGlbHeight=metadataHeight.get(f.id)(f.local[0],-f.local[1]);row.metadataErrorMetres=Math.abs(f.height-row.metadataGlbHeight);expect(row.metadataErrorMetres).toBeLessThan(.001);}
-    row.displayedSurfaceSource=variant==='restored'?'public/data/phase3f.glb':'public/data/castle.glb';
+    row.displayedSurfaceSource=variant==='restored'?'public/data/phase3g.glb':'public/data/castle.glb';
     expect(row.errorMetres).toBeLessThanOrEqual(row.toleranceMetres);expect(Math.abs(d.target[0]-f.local[0])).toBeLessThan(1e-8);expect(Math.abs(d.target[2]+f.local[1])).toBeLessThan(1e-8);row.status='PASS';
    }catch(e){row.status='FAIL';row.reason=e.message;}
    results.push(row);console.log(`${phase} ${row.status} ${engine} P3 ${f.id} ${variant} ${scale}x Δ=${row.errorMetres}`);

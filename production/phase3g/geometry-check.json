@@ -1,0 +1,185 @@
+{
+  "status": "PASS",
+  "reader": "independent raw GLB parser, no recipe imports",
+  "models": {
+    "phase3g.glb": [
+      {
+        "name": "nm-transition",
+        "beforeTriangles": 222585,
+        "afterTriangles": 222585,
+        "exactUnchangedTriangles": 222585,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "nm-rampart",
+        "beforeTriangles": 33735,
+        "afterTriangles": 33735,
+        "exactUnchangedTriangles": 23755,
+        "addedOrChanged": 9980,
+        "removedOrChanged": 9980
+      },
+      {
+        "name": "nm-passage",
+        "beforeTriangles": 23040,
+        "afterTriangles": 23040,
+        "exactUnchangedTriangles": 23040,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "nm-moat",
+        "beforeTriangles": 37120,
+        "afterTriangles": 37120,
+        "exactUnchangedTriangles": 11048,
+        "addedOrChanged": 26072,
+        "removedOrChanged": 26072
+      },
+      {
+        "name": "nm-context",
+        "beforeTriangles": 87076,
+        "afterTriangles": 87076,
+        "exactUnchangedTriangles": 87076,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "nm-bailey",
+        "beforeTriangles": 53120,
+        "afterTriangles": 53120,
+        "exactUnchangedTriangles": 53120,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      }
+    ],
+    "phase3g-inner.glb": [
+      {
+        "name": "ic-lookout.surface.grass",
+        "beforeTriangles": 2930,
+        "afterTriangles": 2930,
+        "exactUnchangedTriangles": 2930,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "ic-lookout.surface.earth",
+        "beforeTriangles": 298,
+        "afterTriangles": 298,
+        "exactUnchangedTriangles": 298,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "ic-koguchi.surface.path",
+        "beforeTriangles": 1000,
+        "afterTriangles": 1000,
+        "exactUnchangedTriangles": 52,
+        "addedOrChanged": 948,
+        "removedOrChanged": 948
+      },
+      {
+        "name": "ic-koguchi.surface.earth",
+        "beforeTriangles": 2750,
+        "afterTriangles": 2750,
+        "exactUnchangedTriangles": 854,
+        "addedOrChanged": 1896,
+        "removedOrChanged": 1896
+      },
+      {
+        "name": "ic-bridge.surface.path",
+        "beforeTriangles": 1384,
+        "afterTriangles": 1384,
+        "exactUnchangedTriangles": 52,
+        "addedOrChanged": 1332,
+        "removedOrChanged": 1332
+      },
+      {
+        "name": "ic-bridge.surface.grass",
+        "beforeTriangles": 2930,
+        "afterTriangles": 2930,
+        "exactUnchangedTriangles": 2930,
+        "addedOrChanged": 0,
+        "removedOrChanged": 0
+      },
+      {
+        "name": "ic-bridge.surface.earth",
+        "beforeTriangles": 5824,
+        "afterTriangles": 5824,
+        "exactUnchangedTriangles": 3160,
+        "addedOrChanged": 2664,
+        "removedOrChanged": 2664
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "moat",
+      "samples": 225,
+      "maxAbsoluteHeightChange": 0.33306884765625
+    },
+    {
+      "id": "rampart",
+      "samples": 241,
+      "maxAbsoluteHeightChange": 0.31378173828125
+    },
+    {
+      "id": "bridge-transverse",
+      "samples": 153,
+      "maxAbsoluteHeightChange": 0.03997802734375
+    },
+    {
+      "id": "bridge-longitudinal",
+      "samples": 257,
+      "maxAbsoluteHeightChange": 0.03997802734375
+    }
+  ],
+  "stationSupport": [
+    {
+      "id": "ic-station-nishinomaru",
+      "groundHeight": 575.1900024414062,
+      "lookTargetHeight": 578.9200439453125,
+      "eye": [
+        -20,
+        5
+      ]
+    },
+    {
+      "id": "ic-lookout",
+      "groundHeight": 574.6928283691407,
+      "lookTargetHeight": 564.2849609375,
+      "eye": [
+        -76.5,
+        -16.9
+      ]
+    },
+    {
+      "id": "ic-bridge",
+      "groundHeight": 559.6934814453125,
+      "lookTargetHeight": 569.7643432617188,
+      "eye": [
+        -91,
+        -29
+      ]
+    },
+    {
+      "id": "ic-koguchi",
+      "groundHeight": 564.5728759765625,
+      "lookTargetHeight": 567.4893188476562,
+      "eye": [
+        -81,
+        -29
+      ]
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "groundHeight": 568.446044921875,
+      "lookTargetHeight": 568.2340087890625,
+      "eye": [
+        -73,
+        -27
+      ]
+    }
+  ],
+  "outsideTriangles": "EXACT identical coordinate triples",
+  "nativeReload": "separate verification script required"
+}
