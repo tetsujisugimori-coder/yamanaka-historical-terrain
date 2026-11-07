@@ -1,0 +1,1 @@
+Viewport fix: use floor(CSS dimension * renderer pixel ratio) / pixel ratio for renderer size and camera aspect. This prevents shadow pass restoring a different GL viewport. Independently reproduced on base main; current candidate required A-image roundtrip failed. No tolerance relaxation.

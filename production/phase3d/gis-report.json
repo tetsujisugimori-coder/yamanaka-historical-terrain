@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "qgis": "3.40.6-Bratislava",
+  "crs": "EPSG:6676",
+  "layers": [
+    {
+      "name": "elements / C hypotheses; historical layout UNKNOWN",
+      "features": 5,
+      "source": "elements.geojson"
+    },
+    {
+      "name": "parts / C hypotheses; historical layout UNKNOWN",
+      "features": 63,
+      "source": "parts.geojson"
+    },
+    {
+      "name": "route / C hypotheses; historical layout UNKNOWN",
+      "features": 1,
+      "source": "route.geojson"
+    }
+  ],
+  "reopened": true,
+  "terrainAltered": false
+}

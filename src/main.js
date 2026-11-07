@@ -11,7 +11,8 @@ import {createSectionExhibit} from './section-exhibit.js';
 import {landscapeModel,landscapeColor} from './landscape.js';
 import {contextOutsidePatch,createSurfaceFinish} from './phase3b.js';
 import {supportedPose,validateInnerMetadata,createInnerPanel} from './phase3c.js';
-createInnerPanel();
+import {DEFENCE_PAIRS,validateConnectedMetadata,createConnectedPanel} from './phase3d.js';
+createInnerPanel();createConnectedPanel();
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const assetPath=path=>`${import.meta.env.BASE_URL}${path}`;
@@ -60,6 +61,7 @@ async function initialize(features){
  renderer.shadowMap.type=THREE.PCFSoftShadowMap;light.shadow.mapSize.set(1024,1024);Object.assign(light.shadow.camera,{left:-130,right:130,top:100,bottom:-100,near:1,far:650});light.shadow.camera.updateProjectionMatrix();light.shadow.normalBias=.12;light.shadow.bias=-.00015;
  const terrainGroup=new THREE.Group();scene.add(terrainGroup);const sceneryGroup=new THREE.Group();scene.add(sceneryGroup);let sceneryUnavailable=false;const markerGroup=new THREE.Group();scene.add(markerGroup);const routeGroup=new THREE.Group();scene.add(routeGroup);
  const innerGroup=new THREE.Group();scene.add(innerGroup);let innerMeta=null,innerPending=null,innerUnavailable=false,innerRequested=false,innerEpoch=0,innerPose=null;
+ const connectedGroup=new THREE.Group(),sightlineGroup=new THREE.Group();scene.add(connectedGroup,sightlineGroup);let connectedMeta=null,connectedPending=null,connectedError=null,connectedPair=null,connectedRay=null;
  const innerCuts=new WeakMap();const comparisonNotice=document.createElement('p');comparisonNotice.className='inner-unavailable';comparisonNotice.hidden=true;comparisonNotice.setAttribute('role','status');viewport.append(comparisonNotice);
  const westernGroup=new THREE.Group();scene.add(westernGroup);let westernUnavailable=false;const finish=createSurfaceFinish(),contextGeometry=new WeakMap();
  function syncWestern(active){
@@ -73,7 +75,7 @@ async function initialize(features){
   $('#surface-finish').disabled=!allowed;$('#quality').disabled=!allowed;
   renderer.shadowMap.enabled=shadows;light.castShadow=shadows;
   light.position.set(...(enabled?[-250,850,150]:[-1500,3000,-1500]));light.target.position.set(...(enabled?[-120,550,0]:[0,0,0]));light.intensity=enabled?2.6:2;ambient.intensity=enabled?1.35:2.1;
-  for(const group of [terrainGroup,sceneryGroup,westernGroup,innerGroup])group.traverse(o=>finish.apply(o,enabled));
+  for(const group of [terrainGroup,sceneryGroup,westernGroup,innerGroup,connectedGroup])group.traverse(o=>finish.apply(o,enabled));
   scene.background=new THREE.Color(enabled?'#cfdee1':'#e2e9de');scene.fog=enabled?new THREE.Fog('#cfdee1',220,1300):null;
  }
  const loader=new GLTFLoader(),models=new Map(),grids={regional,castle};let currentModel,routeLine;const intents=createIntentController();
@@ -88,11 +90,11 @@ async function initialize(features){
   if(active)$('#extent').textContent=comparison==='current'?'現況 A（1590年地表ではない）':sceneryUnavailable?'1590 C地形のみ（追加景観の読込失敗）':state.drama?'1590 C推定＋D創作（史実未確定）':'1590 C推定（史実未確定）';
   else setBaseExtent();
   // Update western visibility/scale and private geometry ownership before support queries.
-  syncWestern(active);syncInner(active);sceneryGroup.traverse(o=>{if(o.isMesh&&o.userData.westernOverlap)o.visible=o.visible&&!westernGroup.visible;});
+  syncWestern(active);syncInner(active);syncConnected();sceneryGroup.traverse(o=>{if(o.isMesh&&o.userData.westernOverlap)o.visible=o.visible&&!westernGroup.visible;});
   $$('[data-landscape-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.landscapeMode===(comparison==='current'?'a':state.drama?'cd':'c'))));
   const f=features.find(f=>f.id===state.selected);$('#landscape-selection-status').textContent=f?.landscape?(comparison==='current'?'選択中の景観要素に現況Aの対応物はありません。解説を保持しています。':f.category==='D'&&!state.drama?'選択中のD要素は非表示です。創作の解説を保持しています。':f.id==='wb-building'&&!$('#western-building').checked?'選択中の建物候補は非表示です。推定の解説を保持しています。':'選択中：'+f.category+' '+f.name):'';
  }
- function leaveStation(){state.station=null;innerPose=null;comparisonNotice.hidden=true;renderer.domElement.style.visibility='';$('#inner-location').textContent='現在地：未選択';$('#inner-comparison').textContent='';controls.enabled=true;camera.fov=38;camera.updateProjectionMatrix();syncNavigationControls();$('#station-status').textContent='低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。';}
+ function leaveStation(){state.station=null;connectedPair=null;syncConnected();innerPose=null;comparisonNotice.hidden=true;renderer.domElement.style.visibility='';$('#inner-location').textContent='現在地：未選択';$('#inner-comparison').textContent='';controls.enabled=true;camera.fov=38;camera.updateProjectionMatrix();syncNavigationControls();$('#station-status').textContent='低視点は定点観察。左右ドラッグ・矢印キーで周囲を見る。観察地点は史実の通行経路ではありません。';}
  function applyLayers(){if(state.view!=='reconstruction'){syncLandscape();return;}currentModel.children.forEach(ob=>{ob.visible=!(comparison==='restored'&&ob.userData.facilityId&&ob.userData.facilityId!=='nm-context'&&(!$('#category-c').checked||hiddenFacilities.has(ob.userData.facilityId)));});syncLandscape();}
  $('#facility-layers').replaceChildren(...modelFeatures.map(f=>{const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.facility=f.id;input.onchange=()=>{if(input.checked)hiddenFacilities.delete(f.id);else hiddenFacilities.add(f.id);applyLayers();sectionExhibit?.sync();render();};label.append(input,document.createTextNode(`C ${f.shortLabel}`));return label;}));
  $('#category-c').onchange=()=>{applyLayers();sectionExhibit?.sync();render();};
@@ -133,12 +135,12 @@ async function initialize(features){
  async function getModel(view,variant){
   const file=view==='reconstruction'?(variant==='current'?'castle':'nishinomaru'):view==='study'?'moat-study':view;
   if(models.has(file))return models.get(file);
-  const pending=loader.loadAsync(assetPath(`data/${file}.glb`)).then(gltf=>{if(['landscape','phase3b','phase3c'].includes(file))return landscapeModel(gltf,westernMeta.bounds);gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});return group;});
+  const pending=loader.loadAsync(assetPath(`data/${file}.glb`)).then(gltf=>{if(['landscape','phase3b','phase3c','phase3d'].includes(file))return landscapeModel(gltf,westernMeta.bounds);gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});return group;});
   models.set(file,pending);try{return await pending;}catch(error){if(models.get(file)===pending)models.delete(file);throw error;}
  }
  sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{leaveStation();if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
- function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;renderer.render(scene,camera);updateLabels();updateScale();}
- function resize(){const r=viewport.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();syncWestern(state.landscape&&state.view==='reconstruction');render();}
+ function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;syncConnected();renderer.render(scene,camera);updateLabels();updateScale();}
+ function resize(){const r=viewport.getBoundingClientRect(),ratio=renderer.getPixelRatio(),width=Math.max(1,Math.floor(r.width*ratio))/ratio,height=Math.max(1,Math.floor(r.height*ratio))/ratio;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();syncWestern(state.landscape&&state.view==='reconstruction');render();}
  const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
  function fitTerrain(g){
   const direction=camera.position.clone().sub(controls.target).normalize();let distance=camera.position.distanceTo(controls.target);
@@ -200,7 +202,7 @@ async function initialize(features){
  renderer.domElement.addEventListener('pointercancel',()=>{pointerStart=null;});
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();showError('3Dの描画接続が失われました。施設一覧から解説と出典は利用できます。3Dを再開する場合はページを再読込してください。',new Error('WebGL context lost'));});
  // Read-only diagnostics for reproducible QA. Tests exercise UI, not these setters.
- window.__terrainDiagnostics=()=>({state:{...state},landscape:{visible:sceneryGroup.visible,scale:sceneryGroup.scale.y,objects:sceneryGroup.children.flatMap(g=>g.children).filter(o=>sceneryGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory})),stations:landscapeMeta.stations},phase3c:{dependencyUnavailable:westernUnavailable||westernGroup.children.length===0,visible:innerGroup.visible,unavailable:innerUnavailable,loaded:Boolean(innerMeta),pose:innerPose,stations:innerMeta?.stations??[],objects:innerGroup.children.flatMap(g=>g.children).filter(o=>innerGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)}))},phase3b:{visible:westernGroup.visible,unavailable:westernUnavailable,objects:westernGroup.children.flatMap(g=>g.children).filter(o=>westernGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)})),quality:$('#quality').value,finish:$('#surface-finish').checked,building:$('#western-building').checked,bounds:westernMeta.bounds,shadows:renderer.shadowMap.enabled},section:sectionExhibit?.diagnostics(),cameraFov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
+ window.__terrainDiagnostics=()=>({phase3d:{loaded:Boolean(connectedMeta),error:connectedError,visible:connectedGroup.visible,ray:connectedRay,objects:connectedGroup.children.flatMap(g=>g.children).filter(o=>connectedGroup.visible&&o.visible).map(o=>({name:o.name,id:o.userData.elementId,category:o.userData.evidenceCategory}))},state:{...state},landscape:{visible:sceneryGroup.visible,scale:sceneryGroup.scale.y,objects:sceneryGroup.children.flatMap(g=>g.children).filter(o=>sceneryGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory})),stations:landscapeMeta.stations},phase3c:{dependencyUnavailable:westernUnavailable||westernGroup.children.length===0,visible:innerGroup.visible,unavailable:innerUnavailable,loaded:Boolean(innerMeta),pose:innerPose,stations:innerMeta?.stations??[],objects:innerGroup.children.flatMap(g=>g.children).filter(o=>innerGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)}))},phase3b:{visible:westernGroup.visible,unavailable:westernUnavailable,objects:westernGroup.children.flatMap(g=>g.children).filter(o=>westernGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)})),quality:$('#quality').value,finish:$('#surface-finish').checked,building:$('#western-building').checked,bounds:westernMeta.bounds,shadows:renderer.shadowMap.enabled},section:sectionExhibit?.diagnostics(),cameraFov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
 
 
  function syncInnerNavigation(){const stationIndex=innerMeta?.stations.findIndex(p=>p.id===state.station)??-1;$('#inner-previous').disabled=stationIndex<=0;$('#inner-next').disabled=stationIndex<0||stationIndex===innerMeta.stations.length-1;}
@@ -245,11 +247,51 @@ async function initialize(features){
   const p=innerMeta.stations.find(s=>s.id===id);if(!p)return;
   if(comparison==='restored'&&!innerGroup.visible){$('#inner-comparison').textContent='観察不可：接続先の西方地形を読み込めないため、城内の追加地形は非表示です。既存の観察地点は利用できます。';return;}
   let pose;try{pose=supportedPose(p,stationSurfaces(),state.exaggeration);}catch(e){$('#inner-comparison').textContent='観察不可：支持する地表データがありません。補間せず停止しました。';return;}
-  state.station=p.id;innerPose={...pose,id:p.id,category:comparison==='current'?'A':'C'};controls.enabled=false;camera.fov=p.fov??60;camera.updateProjectionMatrix();camera.position.fromArray(pose.eye);controls.target.fromArray(pose.target);camera.lookAt(controls.target);syncNavigationControls();select(p.elementId);
+  state.station=p.id;connectedPair=DEFENCE_PAIRS.find(pair=>pair.attacker===p.id||pair.defender===p.id)??null;innerPose={...pose,id:p.id,category:comparison==='current'?'A':'C'};controls.enabled=false;camera.fov=p.fov??60;camera.updateProjectionMatrix();camera.position.fromArray(pose.eye);controls.target.fromArray(pose.target);camera.lookAt(controls.target);syncNavigationControls();select(p.elementId);
   $('#inner-direction').textContent=p.direction??p.description??'地表の高低差と、土塁によって隠れる方向を見比べてください。';
   $('#station-status').textContent=p.name+'：表示中の実三角形面＋1.7mの静止観察。ドラッグ・矢印キーで見回す。自由歩行なし。';
   $$('[data-inner-station]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.innerStation===id)));const i=innerMeta.stations.indexOf(p);$('#inner-previous').disabled=i===0;$('#inner-next').disabled=i===innerMeta.stations.length-1;render();
  });}
+
+ function syncConnected(){
+  if(connectedPair&&![connectedPair.attacker,connectedPair.defender].includes(state.station))connectedPair=null;
+  connectedGroup.visible=Boolean(connectedMeta)&&innerGroup.visible&&$('#connected-visible').checked;
+  connectedGroup.scale.y=state.exaggeration;
+  for(const line of [...sightlineGroup.children]){sightlineGroup.remove(line);line.geometry.dispose();line.material.dispose();}
+  connectedRay=null;
+  if(!connectedGroup.visible||!connectedPair||!state.station||!$('#connected-rays').checked){
+   $('#connected-ray-result').textContent='視線表示は停止中。模型上の一点との交差であり、射程・戦闘力を示しません。';return;
+  }
+  try{
+   scene.updateMatrixWorld(true);
+   const [e,n]=connectedPair.target,height=sampleSurfaceHeight(stationSurfaces(),e,n,state.exaggeration)*state.exaggeration;
+   if(!Number.isFinite(height))throw Error('target surface unavailable');
+   const start=camera.position.clone(),end=new THREE.Vector3(e,height+.2,-n),distance=start.distanceTo(end);
+   const ray=new THREE.Raycaster(start,end.clone().sub(start).normalize(),.03,Math.max(.03,distance-.03));
+   const meshes=[];for(const group of [terrainGroup,sceneryGroup,westernGroup,innerGroup,connectedGroup])if(group.visible)group.traverseVisible(o=>{if(o.isMesh)meshes.push(o);});
+   const hit=ray.intersectObjects(meshes,false)[0];
+   connectedRay={pair:connectedPair.id,station:state.station,start:start.toArray(),end:end.toArray(),distance,blocked:Boolean(hit),hit:hit?{name:hit.object.name,id:hit.object.userData.elementId??hit.object.userData.facilityId,distance:hit.distance,point:hit.point.toArray()}:null};
+   sightlineGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([start,end]),new THREE.LineBasicMaterial({color:hit?0xd85b40:0x24844d,depthTest:true})));
+   $('#connected-ray-result').textContent=hit?'この模型では対象点の手前に地形・構造物が交差します。史実の射程・勝敗の証明ではありません。':'この模型では対象点まで遮蔽物を検出しません。史実の見通しを保証しません。';
+  }catch(error){connectedRay={status:'UNKNOWN',reason:String(error)};$('#connected-ray-result').textContent='視線の交差を確認できませんでした。UNKNOWNとして扱います。';}
+ }
+ async function loadConnected(){
+  if(connectedMeta)return true;if(connectedPending)return connectedPending;
+  $('#connected-status').textContent='接続候補を読込み中。現在の視点・表示区分は維持します。';connectedError=null;
+  connectedPending=(async()=>{try{
+   if(!await loadInner())throw Error('城内地形が利用できません');
+   const [meta,model]=await Promise.all([json(assetPath('data/phase3d.json')).then(validateConnectedMetadata),getModel('phase3d')]);
+   if(renderFailed)return false;
+   connectedMeta=meta;connectedGroup.clear();connectedGroup.add(model);reading.addFeatures(meta.elements);
+   $('#connected-status').textContent='C 推定門・柵候補。位置・構法・寸法は未確定。既存地形を変えずに接続関係を観察します。';
+   syncLandscape();render();return true;
+  }catch(error){connectedError=String(error);$('#connected-status').textContent='接続候補を読込めません。既存展示は利用可能です。同じボタンで再試行できます。';syncConnected();return false;}
+  finally{connectedPending=null;}})();return connectedPending;
+ }
+ $('#connected-load').onclick=()=>loadConnected();
+ for(const selector of ['#connected-visible','#connected-rays'])$(selector).onchange=()=>{syncConnected();render();};
+ $$('[data-defence-pair]').forEach(b=>b.onclick=async()=>{const pair=DEFENCE_PAIRS.find(p=>p.id===b.dataset.defencePair);await enterInnerStation(pair[b.dataset.side]);syncConnected();render();});
+
  $('#inner-load').onclick=()=>loadInner();
  for(const selector of ['#inner-building','#inner-fence'])$(selector).onchange=()=>{syncLandscape();render();};
  for(const [selector,step]of [['#inner-previous',-1],['#inner-next',1]])$(selector).onclick=()=>{const i=innerMeta?.stations.findIndex(p=>p.id===state.station)??-1,p=innerMeta?.stations[i+step];if(p)enterInnerStation(p.id);};

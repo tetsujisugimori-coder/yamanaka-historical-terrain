@@ -1,0 +1,324 @@
+{
+  "status": "PASS",
+  "method": "Every pre-existing public/data and production file compared as Git blob against baseline; added phase3d assets excluded by baseline enumeration.",
+  "baseline": "988735123024650c8ae44e6a69f73b14b4669fc6",
+  "head": "7765ea12658613c9117c203b1bdcd5ed5b950eef",
+  "count": 63,
+  "files": [
+    {
+      "path": "production/gis/castle-dem-1m.tif",
+      "blob": "1c4ec3ceb17e2971c699150d8ed3ca803406759b",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/castle-dem-1m.tif.aux.xml",
+      "blob": "1813ccebf8ae9fb3ffd7fc88a5afd3a6132693b2",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/hillshade.tif",
+      "blob": "1c8ada8e99e9370811f61f5436e68364ed8761c1",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/hillshade.tif.aux.xml",
+      "blob": "5d5aadc3466164bb7933a04ae20fe9b280e86491",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/observation-anchors.geojson",
+      "blob": "a98578690c34360ee53ea8249086e93cd226609e",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-10b-20m.tif",
+      "blob": "49ca870ccf6e774d98b671d7b2e84e651b2982ae",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-10b-20m.tif.aux.xml",
+      "blob": "8fe9825ccfd99936f89f3106bf0ae96ff5f5a964",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-5a-20m.tif",
+      "blob": "5bad053d60074d8578feecf0777cd436f23bac7c",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-5a-20m.tif.aux.xml",
+      "blob": "3e19b7ecfb76025cdf28a99235cbf63810086cb0",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-dem-20m.tif",
+      "blob": "0712184b23aab1dea3c55ed185e00e6973fce160",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-dem-20m.tif.aux.xml",
+      "blob": "24f76477a6519a3d92c611ef738c9597f20a6e30",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-source-mask.tif",
+      "blob": "a7300a99f8cf37f917501a95b79dda8171ef9111",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/regional-source-mask.tif.aux.xml",
+      "blob": "4bb7cba3025f722fba63978f3df8bd7ede2d08c4",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/slope-degrees.tif",
+      "blob": "a082d5a716ab3b843c3ca3b5ae3f5a989c81c82f",
+      "unchanged": true
+    },
+    {
+      "path": "production/gis/slope-degrees.tif.aux.xml",
+      "blob": "9cab46cd3fd60e1d8eb461a4928e0775611e0504",
+      "unchanged": true
+    },
+    {
+      "path": "production/landscape/elements.geojson",
+      "blob": "ed3623d5d1d5d674cbdb5afdf982eb3c4b3856aa",
+      "unchanged": true
+    },
+    {
+      "path": "production/landscape/recipe.json",
+      "blob": "d113d78cf7fad9c2c84e893d942b42865ecaaca8",
+      "unchanged": true
+    },
+    {
+      "path": "production/landscape/stations.geojson",
+      "blob": "d6bb38b3c1e93a238a40906d67b2182c9eb938c6",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase2a/facilities.gpkg",
+      "blob": "98bee491f62f2e149e786031278e2201029c209b",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase2a/inferred-surface-50cm.tif",
+      "blob": "d417179f7e06633a8e49eab51245bd3beab8379c",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase2a/inferred-surface-50cm.tif.aux.xml",
+      "blob": "d4e211338a0dd1dc9951898665673f26ee71f53f",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase2a/profiles.json",
+      "blob": "1365f500c726a4790660c129bc6da6a0bf39a24c",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/README.md",
+      "blob": "f9cc3c13ff9632dd6e2fd66763d8cf271101a8a5",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/elements.geojson",
+      "blob": "87e0536064e409b327414b01b157b593a97e5359",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/footprint.geojson",
+      "blob": "5535268ff9df783cd3a9703399b07fe3ddd0fcdf",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/recipe.json",
+      "blob": "d0d25206f215dfdd61de7ff42141dddd5b3f1bb4",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/stations.geojson",
+      "blob": "01459ca445fd30366e2e3d20367376e6dcc2d1a5",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/surface-candidate-1m.tif",
+      "blob": "944c20c4d8672eeef198b2260c14152fa3bbdb00",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3b/surface-candidate-1m.tif.aux.xml",
+      "blob": "cc382897fa96c42d97a85071af0ac2c6d08d7fe0",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/elements.geojson",
+      "blob": "93df73f258d8b385a069279d7129458936bb8296",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/footprint.geojson",
+      "blob": "0e4e6e5d39faf851b0ba7e06b096e8d0077a9c3e",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/recipe.json",
+      "blob": "fa37bada36be67a270e2ebef230b8e82768c8caa",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/sightlines.geojson",
+      "blob": "c99a111e3c662f8680b86822a20a6ae3258b0a58",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/stations.geojson",
+      "blob": "1e403ae0fe9f7cd98fecbceee137d67a25fc16f7",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/surface-candidate-025m.tif",
+      "blob": "2dcbadf9eb9610d0f68663cc353e31bc759ba273",
+      "unchanged": true
+    },
+    {
+      "path": "production/phase3c/surface-candidate-025m.tif.aux.xml",
+      "blob": "50bd6cf62962862f507d297a2e0015e96a10c165",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-1590.blend",
+      "blob": "562b56f0b97637221f27a51fe93961b5727cbb49",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-1590.qgz",
+      "blob": "c9395acc902917c71e5521419b02a1d40f487cb9",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase2a.blend",
+      "blob": "40fdb9dfe32dd9bedaf95c93e10d81de49f8eddc",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase2a.qgz",
+      "blob": "06a1343ce0417cb85233db4599b59847565f0baf",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase3b.blend",
+      "blob": "8002893c455dffac28c189cf6a1abf080766b139",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase3b.qgz",
+      "blob": "f23e35cfaeaf76154dd3266690a59344d92d9c58",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase3c.blend",
+      "blob": "1e1b9297344176f6d46ed9957341c52d2604353a",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka-phase3c.qgz",
+      "blob": "884fabbd1f41d09ee728067764c8cb7b9193068f",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka.blend",
+      "blob": "2c9bfbe83b7405fd01e9af418b5e260debc30569",
+      "unchanged": true
+    },
+    {
+      "path": "production/yamanaka.qgz",
+      "blob": "446e6d41572b311daf1810a70e5a4ae8759f0bf4",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/castle.glb",
+      "blob": "51c597bf46327944be7570329e68727361f830aa",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/castle.json",
+      "blob": "c4929c6e1726f279c231aa599749f5cba767ec2a",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/features.json",
+      "blob": "43fcf55b39d22d2d6bcf8649744a4d18484892ef",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/landscape.glb",
+      "blob": "02f81e1f90b9885dcb4f0761671bee4bae5f86d4",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/landscape.json",
+      "blob": "33245e6442686a8a4332fcd2d08c0f52df5b568e",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/moat-study.glb",
+      "blob": "3034fb7a592cafbd5729e75eabf850f260a191a8",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/nishinomaru-layout.json",
+      "blob": "bc6508deb13d28fe4d71307531f4b26f8b51c0c5",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/nishinomaru.glb",
+      "blob": "1b3b5e3e9f63ac82fbaa263f6c2f5b4686969850",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/nishinomaru.json",
+      "blob": "b185b231b9e8b70e814493e61c3f7182503a034c",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/phase3b.glb",
+      "blob": "ee869e1f0f6463991ead5c6ed275eaa8328fcad7",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/phase3b.json",
+      "blob": "d0d25206f215dfdd61de7ff42141dddd5b3f1bb4",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/phase3c.glb",
+      "blob": "bc3f071bbf46c2d8d6dd7fd584e8d8fc8f491ae1",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/phase3c.json",
+      "blob": "fa37bada36be67a270e2ebef230b8e82768c8caa",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/regional.glb",
+      "blob": "7c78a53c2bc3abc324d2a128470139aed419563d",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/regional.json",
+      "blob": "220d1fe47345c544ad865dfcc9f6d679db0956c2",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/sources.json",
+      "blob": "f9cf6e9d64cf253609c9163f4995c0e2f570f2e6",
+      "unchanged": true
+    },
+    {
+      "path": "public/data/study.json",
+      "blob": "575627578bc35fc27249a45db75cc8c073738f0d",
+      "unchanged": true
+    }
+  ]
+}

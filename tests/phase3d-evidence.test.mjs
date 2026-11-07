@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateEvidence} from '../scripts/phase3d-evidence.mjs';
+function valid(){const rows=[];for(const e of ['chromium','webkit'])for(const w of [375,390,765,1280])for(const m of ['no-preference','reduce'])rows.push({key:e+'-'+w+'-'+m,status:'PASS',pairs:[1,2,3,4],browserVersion:'test fixture',metrics:{phase3d:{loaded:true}}});rows.push({kind:'source-stability',status:'PASS'});return {head:'fixed',tree:'tree',hashes:{file:'hash'},rows};}
+const expected={head:'fixed',tree:'tree',hashes:{file:'hash'}};
+test('Evidence synthetic complete control accepted',()=>assert(validateEvidence(valid(),expected)));
+test('Evidence rejects empty, stale, incomplete, failure and missing operations',()=>{for(const mutate of [r=>r.rows=[],r=>r.head='old',r=>r.tree='old',r=>r.hashes.file='changed',r=>r.rows.pop(),r=>r.rows[0].status='FAIL',r=>r.rows[0].pairs=[],r=>r.rows[1]=r.rows[0]]){const r=valid();mutate(r);assert.throws(()=>validateEvidence(r,expected));}});

@@ -1,0 +1,450 @@
+{
+  "status": "PASS",
+  "version": "4.3.2",
+  "file": "/workspace/scratch/e622c1e9421e/yamanaka-phase3d-rebuild/production/phase3d/yamanaka-phase3d.blend",
+  "sha256": "3ef69c5272a85c7f61ab3e950168d88fbf4668839e56d7be928ce85aea2cf959",
+  "method": "Separate-process reopen, 63 editable objects compared directly to shipped GLB vertices under E,N,U -> E,U,-N. No producer report reused.",
+  "rows": [
+    {
+      "name": "dc-fence-north.post.0",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.1",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.2",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.3",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.4",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.5",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.6",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.7",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.8",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-north.post.9",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-rail-north.rail.0.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.0.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.1.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.1.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.2.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.2.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.3.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.3.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.4.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.4.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.5.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.5.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.6.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.6.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.7.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.7.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.8.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.8.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.9.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-north.rail.9.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-fence-south.post.0",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.1",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.2",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.3",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.4",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.5",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.6",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.7",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.8",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-fence-south.post.9",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-rail-south.rail.0.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.0.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.1.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.1.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.2.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.2.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.3.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.3.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.4.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.4.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.5.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.5.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.6.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.6.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.7.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.7.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.8.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.8.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.9.0.75",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-rail-south.rail.9.1.35",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    },
+    {
+      "name": "dc-gate.post.north",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-gate.post.south",
+      "vertices": 12,
+      "faces": 14,
+      "glbUniqueVertices": 12,
+      "closedMeshEdges": 24
+    },
+    {
+      "name": "dc-gate.lintel",
+      "vertices": 8,
+      "faces": 6,
+      "glbUniqueVertices": 8,
+      "closedMeshEdges": 12
+    }
+  ]
+}

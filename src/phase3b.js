@@ -30,7 +30,8 @@ function texture(kind){
    const fibre=noise(u*128,v*8,128),pores=hash(x,y)>.986?20:0;
    value=184+17*rings+17*(fibre-.5)+14*(broad-.5)-pores;
   }else value=203+34*(broad-.5)+22*(patch-.5)+17*(grain-.5)+10*(hash(x,y)-.5);
-  const i=(y*size+x)*4;data.data[i]=data.data[i+1]=data.data[i+2]=value;data.data[i+3]=255;
+  const i=(y*size+x)*4,grass=kind==='soil'?Math.max(0,patch-.53)*35:0;
+  data.data[i]=value+(kind==='soil'?8-grass:0);data.data[i+1]=value+grass;data.data[i+2]=value-(kind==='soil'?12:0);data.data[i+3]=255;
  }
  ctx.putImageData(data,0,0);const t=new THREE.CanvasTexture(canvas);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.colorSpace=THREE.NoColorSpace;t.anisotropy=2;return t;
 }

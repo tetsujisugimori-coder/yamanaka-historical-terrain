@@ -1,0 +1,70 @@
+{
+  "comparisons": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "before": "chromium-390-ic-koguchi-before.png",
+      "after": "chromium-390-ic-koguchi-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "before": "chromium-390-ic-lookout-before.png",
+      "after": "chromium-390-ic-lookout-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "before": "chromium-1280-ic-koguchi-before.png",
+      "after": "chromium-1280-ic-koguchi-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "before": "chromium-1280-ic-lookout-before.png",
+      "after": "chromium-1280-ic-lookout-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "before": "webkit-390-ic-koguchi-before.png",
+      "after": "webkit-390-ic-koguchi-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "before": "webkit-390-ic-lookout-before.png",
+      "after": "webkit-390-ic-lookout-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "before": "webkit-1280-ic-koguchi-before.png",
+      "after": "webkit-1280-ic-koguchi-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "before": "webkit-1280-ic-lookout-before.png",
+      "after": "webkit-1280-ic-lookout-after.png",
+      "camera_equal": true,
+      "target_equal": true
+    }
+  ],
+  "status": "PASS",
+  "scope": "Camera and target equality only; appearance uses separate visual inspection."
+}

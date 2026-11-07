@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "method": "Separate-process native QGIS reopen; relative sources, CRS, category and feature counts.",
+  "sha256": "a747142a5fe1ddcbd2e3a9b43cf53e0cf0afde1d396683869d67105980ba5a45",
+  "rows": [
+    {
+      "name": "elements / C hypotheses; historical layout UNKNOWN",
+      "count": 5,
+      "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3d-rebuild/production/phase3d/elements.geojson",
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "parts / C hypotheses; historical layout UNKNOWN",
+      "count": 63,
+      "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3d-rebuild/production/phase3d/parts.geojson",
+      "crs": "EPSG:6676"
+    },
+    {
+      "name": "route / C hypotheses; historical layout UNKNOWN",
+      "count": 1,
+      "source": "/workspace/scratch/e622c1e9421e/yamanaka-phase3d-rebuild/production/phase3d/route.geojson",
+      "crs": "EPSG:6676"
+    }
+  ]
+}

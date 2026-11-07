@@ -1,0 +1,29 @@
+{
+  "method": "UI-only recheck explicitly waits for requested bailey station and ready state before reading ray identity.",
+  "rows": [
+    {
+      "engine": "chromium",
+      "status": "PASS",
+      "signature": null,
+      "station": "bailey",
+      "camera": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "ray": null
+    },
+    {
+      "engine": "webkit",
+      "status": "PASS",
+      "signature": null,
+      "station": "bailey",
+      "camera": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "ray": null
+    }
+  ]
+}

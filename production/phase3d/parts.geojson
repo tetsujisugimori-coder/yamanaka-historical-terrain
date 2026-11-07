@@ -1,0 +1,2468 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44766.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44766.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44766.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44766.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.0",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 556.9634912109375,
+        "maximumTop": 558.7817944335937,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44768.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44768.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44768.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44768.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.1",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 557.6575537109375,
+        "maximumTop": 559.5559033203125,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44770.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44770.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44770.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44770.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.2",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 558.3515625,
+        "maximumTop": 560.3795361328124,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44772.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44772.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44772.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44772.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.3",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 559.3256372070313,
+        "maximumTop": 561.3593530273437,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44774.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44774.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44774.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44774.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.4",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 560.3354028320313,
+        "maximumTop": 562.3668115234374,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44776.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44776.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44776.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44776.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.5",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 561.4045727539062,
+        "maximumTop": 563.4121191406249,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44778.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44778.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44778.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44778.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.6",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 562.5088134765625,
+        "maximumTop": 564.4775927734374,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44780.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44780.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44780.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44780.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.7",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 563.608271484375,
+        "maximumTop": 565.536240234375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44782.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44782.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44782.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44782.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.8",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 564.6533959960938,
+        "maximumTop": 566.60078125,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.001277226664,
+              -93504.59235405142
+            ],
+            [
+              44784.24127722667,
+              -93504.59235405142
+            ],
+            [
+              44784.24127722667,
+              -93504.35235405141
+            ],
+            [
+              44784.001277226664,
+              -93504.35235405141
+            ],
+            [
+              44784.001277226664,
+              -93504.59235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-north.post.9",
+        "elementId": "dc-fence-north",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 566.0784594726563,
+        "maximumTop": 568.061630859375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44768.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44766.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44766.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.0.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 557.8336157226563,
+        "maximumTop": 558.77265625,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44768.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44766.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44766.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.0.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 558.4336157226563,
+        "maximumTop": 559.37265625,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44770.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44768.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.1.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 558.543935546875,
+        "maximumTop": 559.5479443359375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44770.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44768.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44768.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.1.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.143935546875,
+        "maximumTop": 560.1479443359375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44772.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44770.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.2.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.2541943359375,
+        "maximumTop": 560.5255297851562,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44772.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44770.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44770.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.2.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.8541943359376,
+        "maximumTop": 561.1255297851562,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44774.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44772.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.3.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 560.2289770507813,
+        "maximumTop": 561.52888671875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44774.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44772.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44772.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.3.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 560.8289770507813,
+        "maximumTop": 562.12888671875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44776.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44774.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.4.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 561.2374609375,
+        "maximumTop": 562.5751245117186,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44776.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44774.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44774.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.4.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 561.8374609375,
+        "maximumTop": 563.1751245117186,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44778.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44776.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.5.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 562.3020385742187,
+        "maximumTop": 563.64671875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44778.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44776.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44776.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.5.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 562.9020385742188,
+        "maximumTop": 564.24671875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44780.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44778.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.6.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 563.399755859375,
+        "maximumTop": 564.714853515625,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44780.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44778.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44778.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.6.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 563.999755859375,
+        "maximumTop": 565.314853515625,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44782.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44780.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.7.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 564.49294921875,
+        "maximumTop": 565.74373046875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44782.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44780.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44780.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.7.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 565.09294921875,
+        "maximumTop": 566.34373046875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44784.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44782.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.8.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 565.53482421875,
+        "maximumTop": 567.1986157226562,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44784.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44782.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44782.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.8.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 566.13482421875,
+        "maximumTop": 567.7986157226562,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44785.621277226666,
+              -93504.55235405141
+            ],
+            [
+              44785.621277226666,
+              -93504.39235405142
+            ],
+            [
+              44784.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.9.0.75",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 566.9658520507812,
+        "maximumTop": 568.0039575195312,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ],
+            [
+              44785.621277226666,
+              -93504.55235405141
+            ],
+            [
+              44785.621277226666,
+              -93504.39235405142
+            ],
+            [
+              44784.121277226666,
+              -93504.39235405142
+            ],
+            [
+              44784.121277226666,
+              -93504.55235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-north.rail.9.1.35",
+        "elementId": "dc-rail-north",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 567.5658520507812,
+        "maximumTop": 568.6039575195313,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44766.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44766.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44766.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44766.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.0",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 556.9029541015626,
+        "maximumTop": 558.7465185546874,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44768.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44768.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44768.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44768.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.1",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 557.6308642578125,
+        "maximumTop": 559.542119140625,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44770.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44770.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44770.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44770.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.2",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 558.3092163085938,
+        "maximumTop": 560.3377319335938,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44772.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44772.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44772.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44772.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.3",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 559.2704760742188,
+        "maximumTop": 561.3200122070313,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44774.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44774.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44774.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44774.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.4",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 560.2808154296876,
+        "maximumTop": 562.3285498046876,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44776.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44776.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44776.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44776.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.5",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 561.3569677734375,
+        "maximumTop": 563.3810375976561,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44778.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44778.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44778.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44778.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.6",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 562.47052734375,
+        "maximumTop": 564.4564233398437,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44780.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44780.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44780.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44780.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.7",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 563.5783300781251,
+        "maximumTop": 565.52560546875,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44782.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44782.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44782.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44782.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.8",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 564.6243432617188,
+        "maximumTop": 566.5501733398437,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.001277226664,
+              -93509.79235405142
+            ],
+            [
+              44784.24127722667,
+              -93509.79235405142
+            ],
+            [
+              44784.24127722667,
+              -93509.55235405141
+            ],
+            [
+              44784.001277226664,
+              -93509.55235405141
+            ],
+            [
+              44784.001277226664,
+              -93509.79235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-fence-south.post.9",
+        "elementId": "dc-fence-south",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 566.025517578125,
+        "maximumTop": 567.9815307617188,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44768.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44766.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44766.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.0.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 557.773681640625,
+        "maximumTop": 558.7231567382812,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44768.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44766.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44766.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.0.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 558.373681640625,
+        "maximumTop": 559.3231567382812,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44770.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44768.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.1.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 558.4861352539062,
+        "maximumTop": 559.5021362304688,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44770.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44768.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44768.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.1.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.0861352539063,
+        "maximumTop": 560.1021362304688,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44772.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44770.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.2.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.1986108398438,
+        "maximumTop": 560.483349609375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44772.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44770.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44770.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.2.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 559.7986108398438,
+        "maximumTop": 561.083349609375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44774.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44772.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.3.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 560.17552734375,
+        "maximumTop": 561.4930004882813,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44774.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44772.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44772.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.3.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 560.77552734375,
+        "maximumTop": 562.0930004882813,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44776.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44774.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.4.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 561.1896313476562,
+        "maximumTop": 562.5502612304688,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44776.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44774.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44774.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.4.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 561.7896313476563,
+        "maximumTop": 563.1502612304688,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44778.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44776.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.5.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 562.2660131835937,
+        "maximumTop": 563.6323388671874,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44778.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44776.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44776.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.5.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 562.8660131835937,
+        "maximumTop": 564.2323388671874,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44780.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44778.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.6.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 563.3748291015626,
+        "maximumTop": 564.7076879882812,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44780.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44778.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44778.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.6.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 563.9748291015626,
+        "maximumTop": 565.3076879882813,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44782.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44780.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.7.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 564.4748461914062,
+        "maximumTop": 565.7347021484375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44782.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44780.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44780.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.7.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 565.0748461914062,
+        "maximumTop": 566.3347021484375,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44784.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44782.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.8.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 565.5116748046875,
+        "maximumTop": 567.168095703125,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44784.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44782.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44782.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.8.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 566.1116748046875,
+        "maximumTop": 567.768095703125,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44785.621277226666,
+              -93509.75235405141
+            ],
+            [
+              44785.621277226666,
+              -93509.59235405142
+            ],
+            [
+              44784.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.9.0.75",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 566.95318359375,
+        "maximumTop": 568.0910607910156,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ],
+            [
+              44785.621277226666,
+              -93509.75235405141
+            ],
+            [
+              44785.621277226666,
+              -93509.59235405142
+            ],
+            [
+              44784.121277226666,
+              -93509.59235405142
+            ],
+            [
+              44784.121277226666,
+              -93509.75235405141
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-rail-south.rail.9.1.35",
+        "elementId": "dc-rail-south",
+        "role": "rail",
+        "category": "C",
+        "minimumBottom": 567.5531835937501,
+        "maximumTop": 568.6910607910156,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44785.42127722667,
+              -93504.67235405142
+            ],
+            [
+              44785.82127722666,
+              -93504.67235405142
+            ],
+            [
+              44785.82127722666,
+              -93504.27235405141
+            ],
+            [
+              44785.42127722667,
+              -93504.27235405141
+            ],
+            [
+              44785.42127722667,
+              -93504.67235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-gate.post.north",
+        "elementId": "dc-gate",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 566.7787817382813,
+        "maximumTop": 570.4206115722656,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44785.42127722667,
+              -93509.87235405142
+            ],
+            [
+              44785.82127722666,
+              -93509.87235405142
+            ],
+            [
+              44785.82127722666,
+              -93509.47235405141
+            ],
+            [
+              44785.42127722667,
+              -93509.47235405141
+            ],
+            [
+              44785.42127722667,
+              -93509.87235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-gate.post.south",
+        "elementId": "dc-gate",
+        "role": "ground-post",
+        "category": "C",
+        "minimumBottom": 566.8962561035156,
+        "maximumTop": 570.4206115722656,
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44785.42127722667,
+              -93509.87235405142
+            ],
+            [
+              44785.82127722666,
+              -93509.87235405142
+            ],
+            [
+              44785.82127722666,
+              -93504.27235405141
+            ],
+            [
+              44785.42127722667,
+              -93504.27235405141
+            ],
+            [
+              44785.42127722667,
+              -93509.87235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "dc-gate.lintel",
+        "elementId": "dc-gate",
+        "role": "lintel",
+        "category": "C",
+        "minimumBottom": 570.1706115722656,
+        "maximumTop": 570.4706115722655,
+        "historicalDimensions": "UNKNOWN"
+      }
+    }
+  ]
+}

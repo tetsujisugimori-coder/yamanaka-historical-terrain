@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "head": "1945791afb91353ec073a03f5a3bbf33e8093cdd",
+  "tree": "ab0166341c5cecbcaa6cb53dba451e77bb3280a8",
+  "sourceStableThroughoutBrowserRun": true,
+  "negative": [
+    {
+      "kind": "old-head",
+      "status": "EXPECTED_REJECTION",
+      "signature": "STALE_HEAD"
+    },
+    {
+      "kind": "old-source-hash",
+      "status": "EXPECTED_REJECTION",
+      "signature": "STALE_SOURCE_HASH src/main.js"
+    }
+  ],
+  "sha256": {
+    "production/phase3d/README.md": "17900db3ef1b31f3bc306ace7fc87518a46a5eaf39c4e9ac17ce865630eff77b",
+    "production/phase3d/build-report.json": "982b3d96c12d1f2f986488d62ab1c31a8f885a19358ec96d98fc39a112c9856f",
+    "production/phase3d/design.json": "a3fe9ffc9f3b47aa331c08d088d509684135d61aa8bec2606192ec16b9dec91c",
+    "production/phase3d/elements.geojson": "95cbb98a7af0b97aaa7aacdc3b71ccb9638d40aaed84491b1689b0a4dfbfcbf5",
+    "production/phase3d/geometry-report.json": "f40074e78df0b4a8927152861411dc0d97d390212079a4a4c94221d5b7cf9f59",
+    "production/phase3d/gis-report.json": "fe4a1d7a1465a1f97f84b9782e3f45f142e584aa3ef8b0608d5a5f9c19084ff8",
+    "production/phase3d/native-report.json": "ec3e1048377c6a4f82bc4797db32830b1e781db082b107726fb98c1153c06a73",
+    "production/phase3d/parts.geojson": "afefe3e853c25f1f82a52bdad98f1dcd3715e6a367aad641563f8ea639d0b9b1",
+    "production/phase3d/recipe.json": "ef53621df163f0c346090410b5448d081c3a7b1e75707c0cc6253ce804d80b32",
+    "production/phase3d/route.geojson": "afe84848e9434cca276ea2b46f2446d23efc41ef492273ac29656539892d3254",
+    "production/phase3d/yamanaka-phase3d.blend": "9894c7677712ebe26b9c57fd785e80877d039eb849989ea063fb32f0fa0e0b98",
+    "production/phase3d/yamanaka-phase3d.qgz": "a747142a5fe1ddcbd2e3a9b43cf53e0cf0afde1d396683869d67105980ba5a45",
+    "public/data/phase3d.glb": "6b3bc46d6246f9c586ae9b9b6d5c92fd7b289b189d00759ac52e93dea441d3b4",
+    "public/data/phase3d.json": "ef53621df163f0c346090410b5448d081c3a7b1e75707c0cc6253ce804d80b32",
+    "src/coordinates.js": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7",
+    "src/intent.js": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e",
+    "src/landscape.js": "879deb021a976f02b5750878393913978b92c11e8a0508edf21a3738900683db",
+    "src/main.js": "ab84b35a7e6aca26e957e01f6c8b2d3b67510a15348f7553c421a599749e4d72",
+    "src/phase3b.js": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5",
+    "src/phase3c.js": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+    "src/phase3d.js": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595",
+    "src/reading.js": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+    "src/scale.js": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad",
+    "src/section-exhibit.js": "56d037a9c169009fa6ec832d3cae5e256fe89cd99569bc2b4d10056e569c5237",
+    "src/sections.js": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6",
+    "src/style.css": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+    "src/surface.js": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+  }
+}
