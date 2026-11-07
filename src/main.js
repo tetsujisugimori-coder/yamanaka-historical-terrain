@@ -323,7 +323,7 @@ async function initialize(features){
  renderer.domElement.addEventListener('pointermove',e=>{if(!state.station||!lookPointer)return;const [x,y]=lookPointer;lookPointer=[e.clientX,e.clientY];lookAround(-(e.clientX-x)*.005,-(e.clientY-y)*.005);});
  for(const event of ['pointerup','pointercancel','pointerleave'])renderer.domElement.addEventListener(event,()=>lookPointer=null);
 
- function stopWalk(){if(!walk?.active)return;walk.stop();controls.enabled=true;$('#walk-exit').disabled=true;$('#walk-status').textContent='歩行を停止。通常観察に戻りました。';syncNavigationControls();}
+ function stopWalk(){if(!walk?.active)return;walk.stop();controls.enabled=true;$('#walk-exit').disabled=true;$('#walk-status').textContent='歩行を停止。通常観察に戻りました。';if(!renderFailed)reportReady();syncNavigationControls();}
  function walkObstacles(){const out=[];for(const g of [sceneryGroup,westernGroup,innerGroup,connectedGroup])if(g.visible)g.traverseVisible(o=>{if(o.isMesh&&!o.userData.surface&&o.userData.evidenceCategory==='C'&&!['leaf','cloth','skin'].includes(o.userData.materialRole))out.push(o);});return out;}
  walk=createWalkInput({viewport,canvas:renderer.domElement,camera,target:controls.target,render,onExit:()=>{stopWalk();focusPreset('reconstruction');},status:$('#walk-status')});
  async function startWalk(){return runAction(async intent=>{

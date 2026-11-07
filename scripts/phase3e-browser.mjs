@@ -1,7 +1,8 @@
+import {EXPLORATION_SOURCE_FILES} from './phase3e-evidence.mjs';
 import {chromium,webkit,expect} from '@playwright/test';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
 const root=process.env.TEST_URL??'http://127.0.0.1:4317',dir=process.env.PHASE3E_EVIDENCE??'evidence/phase3e/browser';await mkdir(dir,{recursive:true});
-const files=['src/main.js','src/exploration.js','src/close-detail.js','src/style.css','scripts/phase3e-browser.mjs','public/data/nishinomaru.glb','public/data/phase3b.glb','public/data/phase3c.glb','public/data/phase3d.glb'];
+const files=EXPLORATION_SOURCE_FILES;
 const hashes=async()=>Object.fromEntries(await Promise.all(files.map(async f=>[f,createHash('sha256').update(await readFile(f)).digest('hex')])));
 const report={head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree:execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim(),hashes:await hashes(),input:'Playwright real browser delivery; cancel event is synthetic. Not physical devices.',rows:[],startedAt:new Date().toISOString()};
 const save=()=>writeFile(dir+'/results.json',JSON.stringify(report,null,2));await save();
@@ -13,7 +14,7 @@ for(const engine of process.env.PHASE3E_ENGINE?[process.env.PHASE3E_ENGINE]:['ch
   try{
    await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await p.waitForFunction(()=>window.__terrainDiagnostics().state.landscape&&window.__terrainDiagnostics().state.ready);
    await p.locator('#walk-start').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3e.active);const start=await snap(p);expect(start.phase3e.obstacleCount).toBeGreaterThan(0);expect(start.camera[1]-start.phase3e.support.height).toBeCloseTo(1.7,7);
-   await p.locator('#viewport').focus();await p.keyboard.down('w');await p.waitForFunction(()=>window.__terrainDiagnostics().phase3e.trace.filter(e=>e.type==='move').length>=8);await p.keyboard.up('w');await frames(p);const moved=await snap(p);expect(Math.hypot(moved.camera[0]-start.camera[0],moved.camera[2]-start.camera[2])).toBeGreaterThan(.05);expect(moved.camera[1]-moved.phase3e.support.height).toBeCloseTo(1.7,7);expect(moved.phase3e.trace.some(e=>e.type==='keydown'&&e.trusted)).toBe(true);row.checks.push('delivered keyboard movement / actual triangle + 1.7m');
+   await p.locator('#viewport').focus();await p.keyboard.down('w');await p.waitForFunction(()=>window.__terrainDiagnostics().phase3e.trace.filter(e=>e.type==='move').length>=8);await p.keyboard.up('w');await frames(p);const moved=await snap(p);row.initialCamera=start.camera;row.movedCamera=moved.camera;row.movement=moved.phase3e;expect(Math.hypot(moved.camera[0]-start.camera[0],moved.camera[2]-start.camera[2])).toBeGreaterThan(.05);expect(moved.camera[1]-moved.phase3e.support.height).toBeCloseTo(1.7,7);expect(moved.phase3e.trace.some(e=>e.type==='keydown'&&e.trusted)).toBe(true);row.checks.push('delivered keyboard movement / actual triangle + 1.7m');
    await frames(p);expect((await snap(p)).camera).toEqual(moved.camera);
    const rect=await p.locator('#viewport canvas').boundingBox();await p.mouse.move(rect.x+rect.width*.6,rect.y+rect.height*.35);await p.mouse.down();await p.mouse.move(rect.x+rect.width*.7,rect.y+rect.height*.3,{steps:4});await p.mouse.up();expect((await snap(p)).target).not.toEqual(moved.target);row.checks.push('delivered pointer look / no translational inertia');
    await p.locator('#walk-speed').selectOption('0.7');await p.locator('#walk-speed').focus();await p.keyboard.press('ArrowDown');expect((await snap(p)).camera).toEqual(moved.camera);row.checks.push('form focus does not move character');
