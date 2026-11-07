@@ -47,3 +47,10 @@ PR #12 merge済みmain ed22133から専用branchで見張台・土橋・虎口�
 - Acceptance/review ongoing; no merge/publication.
 
 第3期D再制作の独立検査で接地と比較視線のP2を修正。既存mainでも再現するviewport端数問題を最小修正し、最終製品の16ブラウザ条件と独立8条件、負例を再確認。総合PARTIAL、限定ソフトPASS。CIは提出SHA別に確認し、公開・mergeはしない。詳細docs/phase3d-results.md。
+
+## 2026-11-07 第3期E（Issue17、実装中）
+- PR16統合main 04e7563を確認し独立ブランチを作成。
+- 模型の実三角形を使う自由歩行、障害物/急斜面の保守的制限、8案内地点、入力取消とモード競合防止を追加。
+- 最初のバッチ全体AABBが中庭を塞ぐ反例を得て、三角形単位＋空間グリッドへ修正。元失敗記録はevidence/phase3eへ保全。
+- 近距離D材質を局所追加。A/C原形状、既存Blender/QGIS/GLB・固定断面は不変。C造形再制作は未実施。
+- 自己検証/独立レビュー/CIは別々に結果を記録する。Draft・未公開を維持。

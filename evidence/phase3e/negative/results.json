@@ -1,0 +1,30 @@
+{
+  "head": "bfea9138b5d973180a9da665484aef1a44f2f8b2",
+  "kind": "deliberately introduced regression; not a past product claim",
+  "results": [
+    {
+      "id": "omit-obstacles",
+      "redExit": 1,
+      "greenExit": 0,
+      "sourceHash": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c",
+      "mutantHash": "ec9ca73326b7920450e82082cdcab87c1257c04a384a9cecf481a6c5f3eb5399",
+      "expectation": "obstacle blocks swept movement"
+    },
+    {
+      "id": "permit-moats",
+      "redExit": 1,
+      "greenExit": 0,
+      "sourceHash": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c",
+      "mutantHash": "5a8e0492ac67394d2ac821b4736fcba700533b972583727f18b2d162b2660a9b",
+      "expectation": "moat and earthwork are forbidden"
+    },
+    {
+      "id": "skip-edge-probes",
+      "redExit": 1,
+      "greenExit": 0,
+      "sourceHash": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c",
+      "mutantHash": "2f8d34dedb9e97f621a30cf1ec43e60eecfe38a422a687aad0a2ee1d4b7feea6",
+      "expectation": "ground edge and radius"
+    }
+  ]
+}
