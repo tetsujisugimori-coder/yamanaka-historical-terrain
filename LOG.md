@@ -39,3 +39,11 @@ PR #12の追加独立レビューを受け、現況AにDの材質・照明が残
 
 ## 2026-11-05 第3期C（Issue #13）
 PR #12 merge済みmain ed22133から専用branchで見張台・土橋・虎口候補、誘導低視点、表示用geometry所有権と質感を追加。旧原本・証拠を保持。旧共有UV反例を再現して局所修正。詳細・CIと独立レビューの進行判定はdocs/phase3c-results.mdに集約。Draft解除・merge・公開なし。
+
+## 2026-11-07 Phase3D reconstruction
+- Lost unpublished originals not counted as current evidence. Rebuilt on main9887351.
+- C connecting gate/fences, paired views, visible mesh ray intersection; no source terrain edits.
+- 1356 original files unchanged. Space checkpoints restored and verified.
+- Acceptance/review ongoing; no merge/publication.
+
+第3期D再制作の独立検査で接地と比較視線のP2を修正。既存mainでも再現するviewport端数問題を最小修正し、最終製品の16ブラウザ条件と独立8条件、負例を再確認。総合PARTIAL、限定ソフトPASS。CIは提出SHA別に確認し、公開・mergeはしない。詳細docs/phase3d-results.md。

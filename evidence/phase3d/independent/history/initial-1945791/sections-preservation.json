@@ -1,0 +1,88 @@
+{
+  "rows": [
+    {
+      "browser": "chromium-375-support-material-ray-sections",
+      "section": "moat",
+      "samples": 357,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "chromium-375-support-material-ray-sections",
+      "section": "rampart",
+      "samples": 378,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "chromium-390-support-material-ray-sections",
+      "section": "moat",
+      "samples": 357,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "chromium-390-support-material-ray-sections",
+      "section": "rampart",
+      "samples": 378,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "webkit-375-support-material-ray-sections",
+      "section": "moat",
+      "samples": 357,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "webkit-375-support-material-ray-sections",
+      "section": "rampart",
+      "samples": 378,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "webkit-390-support-material-ray-sections",
+      "section": "moat",
+      "samples": 357,
+      "maximumError": 1.1368683772161603e-13
+    },
+    {
+      "browser": "webkit-390-support-material-ray-sections",
+      "section": "rampart",
+      "samples": 378,
+      "maximumError": 1.1368683772161603e-13
+    }
+  ],
+  "status": "PASS",
+  "priorTerrainNativeAndSourceRecordsUnchanged": true,
+  "baselineChanges": [
+    "A\tproduction/phase3d/README.md",
+    "A\tproduction/phase3d/build-report.json",
+    "A\tproduction/phase3d/design.json",
+    "A\tproduction/phase3d/elements.geojson",
+    "A\tproduction/phase3d/geometry-report.json",
+    "A\tproduction/phase3d/gis-report.json",
+    "A\tproduction/phase3d/native-report.json",
+    "A\tproduction/phase3d/parts.geojson",
+    "A\tproduction/phase3d/recipe.json",
+    "A\tproduction/phase3d/route.geojson",
+    "A\tproduction/phase3d/yamanaka-phase3d.blend",
+    "A\tproduction/phase3d/yamanaka-phase3d.qgz",
+    "A\tpublic/data/phase3d.glb",
+    "A\tpublic/data/phase3d.json",
+    "A\tscripts/phase3d-browser.mjs",
+    "A\tscripts/phase3d-build-blender.py",
+    "A\tscripts/phase3d-build-gis.py",
+    "A\tscripts/phase3d-geometry-check.mjs",
+    "A\tscripts/phase3d-verify-blender.py",
+    "M\tsrc/main.js",
+    "M\tsrc/phase3b.js",
+    "A\tsrc/phase3d.js",
+    "A\ttests/phase3d-geometry.mjs",
+    "A\ttests/phase3d-geometry.test.mjs",
+    "A\ttests/phase3d.test.mjs"
+  ],
+  "head": "1945791afb91353ec073a03f5a3bbf33e8093cdd",
+  "hashes": {
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "public/data/phase3d.glb": "6b3bc46d6246f9c586ae9b9b6d5c92fd7b289b189d00759ac52e93dea441d3b4"
+  }
+}

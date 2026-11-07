@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "head": "7765ea12658613c9117c203b1bdcd5ed5b950eef",
+  "tree": "f81edeb770b7728ad9c6a236dc6af9bc89a6327f",
+  "checkedAt": "2026-11-07T00:45:18.771032+00:00",
+  "sha256": {
+    "src/main.js": "f128c96bb1da522a687863856c6e29129c2407202a499bd2f4649c0d60983789",
+    "src/phase3b.js": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5",
+    "src/phase3c.js": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+    "src/phase3d.js": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595",
+    "public/data/phase3d.glb": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "public/data/phase3d.json": "282e1ec723c9d1f73ee6efa9fb46a8175b1268906a75222f207903aa9f21d9b1",
+    "evidence/phase3d/independent/pixels-final.mjs": "6f35dcb3aafcc10fad3859498f6fa522318ea8e750e61f18946d7c60f947355a"
+  },
+  "unchangedSinceFinalStart": true
+}

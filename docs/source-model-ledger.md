@@ -19,3 +19,6 @@
 保存活用計画は三島市教育委員会、2023年3月10日発行（原本奥付確認）。p63の立地、p65–67の施設説明を参照。市の画像・PDF・本文全文をWebやリポジトリへ配布しない。
 
 出典URL・年・条件は `public/data/sources.json` と `ATTRIBUTION.md`。地形処理したファイルと原URL・SHAは `evidence/gis-build.json` で追跡する。
+
+## Phase3D candidates (2026-11-07)
+dc-gate, dc-fence-north/south and dc-rail-north/south are C design assumptions. Existing exported triangles are read-only. Positions, dimensions, joinery and historical existence remain UNKNOWN. No new primary evidence. Bounds/clearances are model constraints only. Finish is D, disabled for A. See production/phase3d/design.json and docs/phase3d-results.md.

@@ -1,0 +1,381 @@
+{
+  "scope": "Same machine/browser/viewport/station/quality before main9887351 vs reconstructed Phase3D. Images are appearance comparisons, not zero-pixel expectations or historic accuracy.",
+  "metadataVersion": 2,
+  "head": "7765ea12658613c9117c203b1bdcd5ed5b950eef",
+  "tree": "f81edeb770b7728ad9c6a236dc6af9bc89a6327f",
+  "base": "988735123024650c8ae44e6a69f73b14b4669fc6",
+  "worktreeStatusAtStart": "M LOG.md\n M README.md\n M docs/source-model-ledger.md\n?? docs/phase3d-results.md\n?? evidence/phase3d-rebuild/\n?? evidence/phase3d/",
+  "startedAt": "2026-11-07T00:35:10.247Z",
+  "utc": "2026-11-07T00:37:02.759Z",
+  "urls": {
+    "before": "http://127.0.0.1:4319",
+    "after": "http://127.0.0.1:4317"
+  },
+  "hashes": {
+    "src/main.js": "f128c96bb1da522a687863856c6e29129c2407202a499bd2f4649c0d60983789",
+    "src/phase3c.js": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7",
+    "src/phase3b.js": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5",
+    "src/reading.js": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2",
+    "src/style.css": "858c19916087f48a9f7c65a4abbf8bf5afb18ff9ceb50907eca6747137fd0b12",
+    "src/landscape.js": "879deb021a976f02b5750878393913978b92c11e8a0508edf21a3738900683db",
+    "index.html": "210b48b643d8af2e941307ce996dd83d3bbeb70146e5913597cb8e5b46368350",
+    "scripts/phase3d-appearance.mjs": "e3f7985db9cea4aab6f31f21f637256863c06bba3ed4a15f9428238a60e19e3d",
+    "src/phase3d.js": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595",
+    "public/data/phase3d.glb": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "public/data/phase3c.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9",
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "public/data/phase3b.json": "635a427a8f3897dae165415b0352437f77e4f70bf8058e5428d07cb84ee52ef5",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "public/data/moat-study.glb": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+  },
+  "rows": [
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "version": "before",
+      "images": [
+        {
+          "file": "chromium-390-ic-koguchi-before.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-ic-lookout-before.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 390,
+      "version": "after",
+      "images": [
+        {
+          "file": "chromium-390-ic-koguchi-after.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "chromium-390-ic-lookout-after.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "version": "before",
+      "images": [
+        {
+          "file": "chromium-1280-ic-koguchi-before.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-ic-lookout-before.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "browser": "141.0.7390.37",
+      "width": 1280,
+      "version": "after",
+      "images": [
+        {
+          "file": "chromium-1280-ic-koguchi-after.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            865,
+            600
+          ]
+        },
+        {
+          "file": "chromium-1280-ic-lookout-after.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            865,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "version": "before",
+      "images": [
+        {
+          "file": "webkit-390-ic-koguchi-before.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-ic-lookout-before.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 390,
+      "version": "after",
+      "images": [
+        {
+          "file": "webkit-390-ic-koguchi-after.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        },
+        {
+          "file": "webkit-390-ic-lookout-after.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            349,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 1280,
+      "version": "before",
+      "images": [
+        {
+          "file": "webkit-1280-ic-koguchi-before.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-ic-lookout-before.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            865.625,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "browser": "26.0",
+      "width": 1280,
+      "version": "after",
+      "images": [
+        {
+          "file": "webkit-1280-ic-koguchi-after.png",
+          "camera": [
+            -81,
+            566.0728637695313,
+            29
+          ],
+          "target": [
+            -77,
+            567.4686279296875,
+            30.5
+          ],
+          "canvas": [
+            865,
+            600
+          ]
+        },
+        {
+          "file": "webkit-1280-ic-lookout-after.png",
+          "camera": [
+            -76.5,
+            576.3928283691407,
+            16.9
+          ],
+          "target": [
+            -82,
+            564.0849487304688,
+            29
+          ],
+          "canvas": [
+            865,
+            600
+          ]
+        }
+      ],
+      "status": "PASS"
+    }
+  ]
+}

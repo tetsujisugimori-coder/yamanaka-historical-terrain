@@ -1,0 +1,79 @@
+{
+  "method": "UI-only recheck explicitly waits for requested bailey station and ready state before reading ray identity.",
+  "rows": [
+    {
+      "engine": "chromium",
+      "status": "FAIL",
+      "signature": "STALE_PAIR_AFTER_LEGACY_STATION",
+      "station": "bailey",
+      "camera": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "ray": {
+        "pair": "entrance",
+        "station": "bailey",
+        "start": [
+          -18,
+          576.8900024414063,
+          -5
+        ],
+        "end": [
+          -75,
+          567.5402099609375,
+          35
+        ],
+        "distance": 70.25965143258135,
+        "blocked": true,
+        "hit": {
+          "name": "nm-bailey",
+          "id": "nm-bailey",
+          "distance": 13.227417259783774,
+          "point": [
+            -28.73109200564638,
+            575.1297658915535,
+            2.530590881155356
+          ]
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "status": "FAIL",
+      "signature": "STALE_PAIR_AFTER_LEGACY_STATION",
+      "station": "bailey",
+      "camera": [
+        -18,
+        576.8900024414063,
+        -5
+      ],
+      "ray": {
+        "pair": "entrance",
+        "station": "bailey",
+        "start": [
+          -18,
+          576.8900024414063,
+          -5
+        ],
+        "end": [
+          -75,
+          567.5402099609375,
+          35
+        ],
+        "distance": 70.25965143258135,
+        "blocked": true,
+        "hit": {
+          "name": "nm-bailey",
+          "id": "nm-bailey",
+          "distance": 13.227417259783774,
+          "point": [
+            -28.73109200564638,
+            575.1297658915535,
+            2.530590881155356
+          ]
+        }
+      }
+    }
+  ]
+}
