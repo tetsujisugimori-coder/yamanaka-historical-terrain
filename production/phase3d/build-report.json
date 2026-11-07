@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "blender": "4.3.2",
+  "parts": 63,
+  "immutableInputs": {
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/castle.json": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd",
+    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "public/data/phase3c.json": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9"
+  },
+  "triangles": 756
+}

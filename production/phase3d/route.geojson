@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44762.121277226666,
+              -93509.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93509.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93505.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93505.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93509.07235405142
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "dc-model-route",
+        "clearHeight": 2.5,
+        "category": "C",
+        "scope": "model clearance only; historic and real-world navigability UNKNOWN"
+      }
+    }
+  ]
+}

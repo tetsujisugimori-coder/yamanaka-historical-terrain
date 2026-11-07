@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44785.621277226666,
+          -93507.07235405142,
+          566.5686340332031
+        ]
+      },
+      "properties": {
+        "id": "dc-gate",
+        "name": "見張台側の門候補",
+        "category": "C",
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44775.121277226666,
+          -93504.47235405141,
+          561.0758544921874
+        ]
+      },
+      "properties": {
+        "id": "dc-fence-north",
+        "name": "接続路北側の柵候補",
+        "category": "C",
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44775.121277226666,
+          -93509.67235405142,
+          561.0391967773437
+        ]
+      },
+      "properties": {
+        "id": "dc-fence-south",
+        "name": "接続路南側の柵候補",
+        "category": "C",
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44775.121277226666,
+          -93504.47235405141,
+          561.0758544921874
+        ]
+      },
+      "properties": {
+        "id": "dc-rail-north",
+        "name": "北側の横木候補",
+        "category": "C",
+        "historicalDimensions": "UNKNOWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44775.121277226666,
+          -93509.67235405142,
+          561.0391967773437
+        ]
+      },
+      "properties": {
+        "id": "dc-rail-south",
+        "name": "南側の横木候補",
+        "category": "C",
+        "historicalDimensions": "UNKNOWN"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "measurement": {
+    "parts": 63,
+    "connectedPartBounds": 63,
+    "postSamples": 550,
+    "routeSamples": 451,
+    "exactRouteVertices": 40,
+    "maxPostInteriorEmbedDeviation": 0.061676595706958326,
+    "maxPostCornerError": 0.000031279572285713986,
+    "minRailClearance": 0.5241299942135811,
+    "minLintelClearance": 3.299983208067715
+  },
+  "negativeControls": {
+    "floating-post": {
+      "rejected": true,
+      "reason": "corner embed mismatch"
+    },
+    "buried-post": {
+      "rejected": true,
+      "reason": "corner embed mismatch"
+    },
+    "route-obstruction": {
+      "rejected": true,
+      "reason": "dc-fence-north.post.0 route collision -0.05999999999994543"
+    },
+    "low-lintel": {
+      "rejected": true,
+      "reason": "exact lintel route collision"
+    },
+    "false-B": {
+      "rejected": true,
+      "reason": "classification\n\n'B' !== 'C'\n"
+    }
+  }
+}
