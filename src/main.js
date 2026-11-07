@@ -12,6 +12,7 @@ import {landscapeModel,landscapeColor} from './landscape.js';
 import {contextOutsidePatch,createSurfaceFinish} from './phase3b.js';
 import {supportedPose,validateInnerMetadata,createInnerPanel} from './phase3c.js';
 import {DEFENCE_PAIRS,validateConnectedMetadata,createConnectedPanel} from './phase3d.js';
+import {createCloseDetail} from './close-detail.js';
 import {createExplorationPanel,createWalkInput,createWalkWorld,GUIDE_IDS,WALK} from './exploration.js';
 createInnerPanel();createConnectedPanel();createExplorationPanel();
 
@@ -64,7 +65,7 @@ async function initialize(features){
  const innerGroup=new THREE.Group();scene.add(innerGroup);let innerMeta=null,innerPending=null,innerUnavailable=false,innerRequested=false,innerEpoch=0,innerPose=null;
  const connectedGroup=new THREE.Group(),sightlineGroup=new THREE.Group();scene.add(connectedGroup,sightlineGroup);let connectedMeta=null,connectedPending=null,connectedError=null,connectedPair=null,connectedRay=null;
  const innerCuts=new WeakMap();const comparisonNotice=document.createElement('p');comparisonNotice.className='inner-unavailable';comparisonNotice.hidden=true;comparisonNotice.setAttribute('role','status');viewport.append(comparisonNotice);
- const westernGroup=new THREE.Group();scene.add(westernGroup);let westernUnavailable=false;const finish=createSurfaceFinish(),contextGeometry=new WeakMap();
+ const westernGroup=new THREE.Group();scene.add(westernGroup);let westernUnavailable=false;const finish=createSurfaceFinish(),closeDetail=createCloseDetail(),contextGeometry=new WeakMap();
  function syncWestern(active){
   const visible=active&&!westernUnavailable&&comparison==='restored'&&$('#category-c').checked;
   westernGroup.visible=visible;westernGroup.scale.y=state.exaggeration;
@@ -76,7 +77,7 @@ async function initialize(features){
   $('#surface-finish').disabled=!allowed;$('#quality').disabled=!allowed;
   renderer.shadowMap.enabled=shadows;light.castShadow=shadows;
   light.position.set(...(enabled?[-250,850,150]:[-1500,3000,-1500]));light.target.position.set(...(enabled?[-120,550,0]:[0,0,0]));light.intensity=enabled?2.6:2;ambient.intensity=enabled?1.35:2.1;
-  for(const group of [terrainGroup,sceneryGroup,westernGroup,innerGroup,connectedGroup])group.traverse(o=>finish.apply(o,enabled));
+  for(const group of [terrainGroup,sceneryGroup,westernGroup,innerGroup,connectedGroup])group.traverse(o=>{finish.apply(o,enabled);closeDetail.apply(o,enabled&&quality!=='light');});
   scene.background=new THREE.Color(enabled?'#cfdee1':'#e2e9de');scene.fog=enabled?new THREE.Fog('#cfdee1',220,1300):null;
  }
  const loader=new GLTFLoader(),models=new Map(),grids={regional,castle};let currentModel,routeLine;const intents=createIntentController();
@@ -142,7 +143,7 @@ async function initialize(features){
  sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{leaveStation();if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
  function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;syncConnected();renderer.render(scene,camera);updateLabels();updateScale();}
  function resize(){const r=viewport.getBoundingClientRect(),ratio=renderer.getPixelRatio(),width=Math.max(1,Math.floor(r.width*ratio))/ratio,height=Math.max(1,Math.floor(r.height*ratio))/ratio;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();syncWestern(state.landscape&&state.view==='reconstruction');render();}
- const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{walk?.dispose();sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
+ const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{walk?.dispose();closeDetail.dispose();sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
  function fitTerrain(g){
   const direction=camera.position.clone().sub(controls.target).normalize();let distance=camera.position.distanceTo(controls.target);
   for(let i=0;i<15;i++){camera.position.copy(controls.target).addScaledVector(direction,distance);camera.lookAt(controls.target);camera.updateMatrixWorld();let fits=true;for(const x of [g.bounds[0],g.bounds[2]])for(const n of [g.bounds[1],g.bounds[3]])for(const h of [g.min,g.max]){const p=new THREE.Vector3(x,h*state.exaggeration,-n).project(camera);if(Math.abs(p.x)>.86||Math.abs(p.y)>.76||p.z>1)fits=false;}if(fits)break;distance*=1.12;}
@@ -332,7 +333,7 @@ async function initialize(features){
   leaveStation();scene.updateMatrixWorld(true);const world=createWalkWorld(stationSurfaces(),walkObstacles()),hit=world.check(p.eye[0],-p.eye[1]);
   if(!hit.ok){$('#walk-status').textContent='この観察地点は歩行開始不可：'+hit.reason+'。案内の西ノ丸を選んでください。';return;}
   camera.fov=65;camera.updateProjectionMatrix();camera.position.set(p.eye[0],hit.hit.height+WALK.eyeHeight,-p.eye[1]);controls.target.set(p.look[0],camera.position.y,-p.look[1]);camera.lookAt(controls.target);controls.enabled=false;
-  walk.start(world,[p.eye[0],hit.hit.height,-p.eye[1]]);$('#walk-exit').disabled=false;syncNavigationControls();mapHelp.textContent='自由歩行：WASD/方向キーで移動、ドラッグで見回す。Q/Eで左右を見る。Escapeで終了。';viewport.setAttribute('aria-label','城内自由歩行。WASDと方向キーで移動、QとEで見回す。Escapeで終了。');viewport.scrollIntoView({block:'center',behavior:'instant'});render();
+  walk.start(world,[p.eye[0],hit.hit.height,-p.eye[1]]);$('#app-status').textContent='自由歩行中 · C推定模型 · 入力中だけ描画更新 · 実際の史跡の安全案内ではありません';$('#walk-exit').disabled=false;syncNavigationControls();mapHelp.textContent='自由歩行：WASD/方向キーで移動、ドラッグで見回す。Q/Eで左右を見る。Escapeで終了。';viewport.setAttribute('aria-label','城内自由歩行。WASDと方向キーで移動、QとEで見回す。Escapeで終了。');viewport.scrollIntoView({block:'center',behavior:'instant'});render();
  });}
  $('#walk-start').onclick=startWalk;$('#walk-exit').onclick=()=>{stopWalk();focusPreset('reconstruction');};$('#walk-stop-overlay').onclick=$('#walk-exit').onclick;
  $('#walk-input').onchange=()=>{viewport.focus({preventScroll:true});$('#walk-status').textContent=walk.active?($('#walk-input').value==='touch'?'画面ボタンを押して移動、画面をスワイプして見回す。':'WASD/方向キーで移動、ドラッグ/Q/Eで見回す。'):'歩行を開始して操作してください。';};

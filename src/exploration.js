@@ -9,7 +9,15 @@ export function inWalkZone(x,z){return WALK_ZONES.some(([w,s,e,n])=>x>=w&&x<=e&&
 export function createWalkWorld(surfaces,obstacles){
  const bounds=new Box3();for(const o of surfaces){o.updateWorldMatrix(true,false);bounds.expandByObject(o);}
  const ray=new Raycaster(),normalMatrix=new Matrix3();
- const boxes=obstacles.map(mesh=>{mesh.updateWorldMatrix(true,false);return {name:mesh.name,box:new Box3().setFromObject(mesh)};});
+ // Imported meshes batch disconnected fence parts. A whole-mesh box would
+ // incorrectly fill the empty courtyard. Conservative per-triangle boxes
+ // preserve gaps, with a spatial grid for bounded per-step collision cost.
+ const boxes=[],cells=new Map();
+ for(const mesh of obstacles){mesh.updateWorldMatrix(true,false);const p=mesh.geometry.attributes.position,index=mesh.geometry.index;
+  for(let i=0;i<(index?.count??p.count);i+=3){const box=new Box3();for(let k=0;k<3;k++)box.expandByPoint(new Vector3().fromBufferAttribute(p,index?index.getX(i+k):i+k).applyMatrix4(mesh.matrixWorld));const entry={name:mesh.name,box};boxes.push(entry);
+   for(let x=Math.floor((box.min.x-WALK.radius)/2);x<=Math.floor((box.max.x+WALK.radius)/2);x++)for(let z=Math.floor((box.min.z-WALK.radius)/2);z<=Math.floor((box.max.z+WALK.radius)/2);z++){const key=x+','+z;if(!cells.has(key))cells.set(key,[]);cells.get(key).push(entry);}
+  }
+ }
  function sample(x,z){
   ray.set(new Vector3(x,bounds.max.y+10,z),new Vector3(0,-1,0));
   const hit=ray.intersectObjects(surfaces,false)[0];if(!hit)return null;
@@ -25,7 +33,7 @@ export function createWalkWorld(surfaces,obstacles){
    const a=i*Math.PI/4,px=x+Math.cos(a)*WALK.radius,pz=z+Math.sin(a)*WALK.radius,h=sample(px,pz);
    if(!inWalkZone(px,pz)||!h||forbidden.has(h.id)||h.slope>WALK.maxSlope||Math.abs(h.height-hit.height)>WALK.radius*Math.tan(WALK.maxSlope*Math.PI/180)+.025)return {ok:false,reason:'足元の端・斜面',hit};
   }
-  for(const {box,name} of boxes)if(x+WALK.radius>box.min.x&&x-WALK.radius<box.max.x&&z+WALK.radius>box.min.z&&z-WALK.radius<box.max.z&&hit.height+.12<box.max.y&&hit.height+WALK.eyeHeight>box.min.y)return {ok:false,reason:'構造物 '+name,hit};
+  for(const {box,name} of cells.get(Math.floor(x/2)+','+Math.floor(z/2))??[])if(x+WALK.radius>box.min.x&&x-WALK.radius<box.max.x&&z+WALK.radius>box.min.z&&z-WALK.radius<box.max.z&&hit.height+.12<box.max.y&&hit.height+WALK.eyeHeight>box.min.y)return {ok:false,reason:'構造物 '+name,hit};
   return {ok:true,hit};
  }
  return {sample,check,obstacleCount:boxes.length};
@@ -90,6 +98,6 @@ export function createWalkInput({viewport,canvas,camera,target,render,onExit,sta
   start(newWorld,ground){clear();world=newWorld;position=[...ground];const check=world.check(position[0],position[2]);if(!check.ok)throw Error(check.reason);active=true;frames=[];trace=[];blocked=null;pad.hidden=false;record('start',{position});status.textContent='自由歩行中：実地表＋1.7m。移動制限は模型上の設定です。';viewport.focus({preventScroll:true});},
   stop(){const was=active;active=false;clear();pad.hidden=true;if(was)record('stop');},
   dispose(){active=false;clear();abort.abort();},
-  diagnostics(){return {active,position:position&&[...position],eyeHeight:WALK.eyeHeight,blocked,obstacleCount:world?.obstacleCount??0,frames:[...frames],trace:[...trace]};}
+  diagnostics(){return {active,position:position&&[...position],eyeHeight:WALK.eyeHeight,blocked,obstacleCount:world?.obstacleCount??0,support:position?world?.sample(position[0],position[2]):null,frames:[...frames],trace:[...trace]};}
  };
 }
