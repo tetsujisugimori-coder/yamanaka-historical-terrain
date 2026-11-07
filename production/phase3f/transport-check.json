@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "maxJSONBytes": 16777216,
+  "files": {
+    "public/data/phase3f.glb": {
+      "bytes": 6869184,
+      "base64Bytes": 9158912,
+      "sha256": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0"
+    },
+    "public/data/phase3f-inner.glb": {
+      "bytes": 1178168,
+      "base64Bytes": 1570892,
+      "sha256": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7"
+    },
+    "production/phase3f/yamanaka-phase3f.blend": {
+      "bytes": 8955011,
+      "base64Bytes": 11940016,
+      "sha256": "be2b383c91744b47d603fcf52d94afc7c044eef77f41aa52c96dfdfb4f4476f6"
+    },
+    "production/phase3f/phase3f-editable.gpkg": {
+      "bytes": 11636736,
+      "base64Bytes": 15515648,
+      "sha256": "08b323717a03088d29355ea541cbc9f08b339554236c1f930d10f83b729785bf"
+    },
+    "production/phase3f/changed-triangles.json.gz": {
+      "bytes": 1033542,
+      "base64Bytes": 1378056,
+      "sha256": "b6b3d6b1dccdf7d053c0454c294d7359ea2d121beae77e17610aeae6a45788a9"
+    }
+  },
+  "innerAndNativeMasterByteIdentical": true
+}

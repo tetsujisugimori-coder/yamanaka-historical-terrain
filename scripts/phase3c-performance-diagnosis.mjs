@@ -8,7 +8,7 @@ await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
 const prior=execFileSync('git',['show','05a0df3bf6bba6b90b5b61bbfa16bc85069c9776:src/main.js'],{encoding:'utf8'});
 const source=await readFile('src/main.js','utf8'),oldCamera=prior.split('\n').find(l=>l.startsWith(' function beginCameraIntent()')),oldKey=prior.split('\n').find(l=>l.startsWith(" viewport.addEventListener('keydown'"));
-const paths=['src/main.js','src/phase3b.js','scripts/phase3c-performance-diagnosis.mjs','public/data/phase3c.glb','public/data/phase3c.json'];
+const paths=['src/main.js','src/phase3b.js','scripts/phase3c-performance-diagnosis.mjs','public/data/phase3f-inner.glb','public/data/phase3c.json'];
 const hashes=Object.fromEntries(await Promise.all(paths.map(async f=>[f,createHash('sha256').update(await readFile(f)).digest('hex')])));
 const rows=[];const save=()=>writeFile(out+'/results.json',JSON.stringify({head,tree,hashes,priorCameraSource:'05a0df3bf6bba6b90b5b61bbfa16bc85069c9776',scope:'Linux automated WebKit1280x960, identical600px terrain panel and initial camera, light(no shadows), newcontext percase. finish toggles only surface-finish textures/lighting/fog; C+D flags/people remain because state.drama stays true. Prior variant restores only the exact previous camera-intent and key handler, retaining current fixed materials and geometry. Dispatch CPU+renderer wall time and twoRAF wait are separate. No sustained FPS/GPU memory/real Safari claim.',rows},null,2));
 const browser=await webkit.launch();

@@ -9,7 +9,7 @@ await mkdir(path.dirname(output),{recursive:true});
 const imageDir=path.join(path.dirname(output),'performance-images');await mkdir(imageDir,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),base=process.env.BASE_HEAD??'6a84b95';
 const hashes={};for(const file of ['src/main.js','src/phase3b.js','src/style.css','src/landscape.js','index.html','public/data/phase3b.json','public/data/phase3b.glb','scripts/phase3b-performance.mjs'])hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');
-const bytes={};for(const file of ['nishinomaru.glb','landscape.glb','phase3b.glb'])bytes[file]=(await stat('public/data/'+file)).size;
+const bytes={};for(const file of ['phase3f.glb','landscape.glb','phase3b.glb'])bytes[file]=(await stat('public/data/'+file)).size;
 const engines=[[channel?'chrome':'chromium',chromium],['webkit',webkit]].filter(([name])=>!process.env.PERF_ENGINE||name===process.env.PERF_ENGINE);
 const variants=[{version:'base',quality:'baseline'},...['balanced','light','high'].map(quality=>({version:'phase3b',quality}))];
 async function save(){await writeFile(output,JSON.stringify({scope:'Same Windows PC, loopback, new context and identical 600px terrain panel. Ready time uses initial balanced mode; quality switching is timed separately before each input sample. First trial screenshots are saved at identical initial camera before input samples. Synthetic keyboard dispatch + two animation frames; not physical input latency or sustained FPS. Endpoint JS heap excludes GPU/peak/total memory. Automated WebKit is not iPhone Safari hardware.',head,base,hashes,channel:channel??null,utc:new Date().toISOString(),urls,bytes,rows},null,2));}

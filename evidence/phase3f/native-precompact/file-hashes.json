@@ -1,0 +1,18 @@
+{
+  "public/data/phase3f.glb": {
+    "bytes": 25540264,
+    "sha256": "76eb5905ea9a0695e18ba0df02717b1a027dacd969f7e6fdede9fe9e6a558c5d"
+  },
+  "public/data/phase3f-inner.glb": {
+    "bytes": 1178168,
+    "sha256": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7"
+  },
+  "production/phase3f/phase3f-editable.gpkg": {
+    "bytes": 15667200,
+    "sha256": "2cf843e7216517137e9e575dcfa287a959a30e5dd19c14af1ea26645fb5a1091"
+  },
+  "production/phase3f/yamanaka-phase3f.blend": {
+    "bytes": 8955011,
+    "sha256": "be2b383c91744b47d603fcf52d94afc7c044eef77f41aa52c96dfdfb4f4476f6"
+  }
+}
