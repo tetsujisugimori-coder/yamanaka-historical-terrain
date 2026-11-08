@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {union,validate} from '../scripts/phase3j-report.mjs';
+test('interval union rejects double-counting nested and overlapping stages',()=>{assert.equal(union([{start:0,end:10},{start:2,end:8},{start:7,end:15},{start:18,end:22}],0,20),17);assert.equal(union([{start:-10,end:30}],0,20),20);assert.equal(union([],0,20),0);});
+test('empty, incomplete and malformed trials cannot pass',()=>{assert.throws(()=>validate({conditions:{count:10},rows:[]}));assert.throws(()=>validate({conditions:{count:0},rows:[]}));assert.throws(()=>validate({conditions:{count:1},rows:Array(4).fill({status:'PASS'})}));});

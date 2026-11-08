@@ -1,0 +1,46 @@
+name: Phase J measured preparation comparison
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  comparison:
+    if: github.head_ref == 'feat/phase3j-performance'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Preserve source identity and run alternating comparison
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3j/ci
+          git rev-parse HEAD HEAD^{tree} > evidence/phase3j/ci/head-tree.txt
+          sha256sum src/*.js public/data/*.glb scripts/phase3j-*.mjs > evidence/phase3j/ci/sha256.txt
+          git worktree add --detach ../phase-j-baseline 3ffc75f334cfdaf21e7481f44572d009b3693ac2
+          (cd ../phase-j-baseline && npm ci && npm run build)
+          npm run build
+          (cd ../phase-j-baseline && npx vite preview --host 127.0.0.1 --port 4384 --strictPort) >/tmp/j-baseline.log 2>&1 &
+          b=$!
+          npx vite preview --host 127.0.0.1 --port 4383 --strictPort >/tmp/j-candidate.log 2>&1 &
+          j=$!
+          trap 'cp /tmp/j-baseline.log /tmp/j-candidate.log evidence/phase3j/ci/; kill "$b" "$j" 2>/dev/null || true' EXIT
+          for port in 4383 4384; do for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done; done
+          BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/comparison.json node scripts/phase3j-benchmark.mjs
+          node scripts/phase3j-report.mjs evidence/phase3j/ci/comparison.json > evidence/phase3j/ci/summary.json
+          PROFILE=1 TRIALS=3 BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/detailed.json node scripts/phase3j-benchmark.mjs
+          node scripts/phase3j-report.mjs evidence/phase3j/ci/detailed.json > evidence/phase3j/ci/accounting.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3j-comparison-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3j/ci
+          if-no-files-found: error
