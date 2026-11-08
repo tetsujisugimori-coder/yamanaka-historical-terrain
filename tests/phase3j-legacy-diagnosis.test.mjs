@@ -19,3 +19,18 @@ test('legacy diagnosis continues supporting original zero-argument render',()=>{
  assert.equal(box.calls,1);assert.equal(box.__perf.renderCount,1);assert.equal(box.result,9);
 });
 test('legacy diagnosis missing anchor still fails closed',()=>{assert.throws(()=>instrument('function unrelated(){}'),/anchor missing/);});
+
+const heightRunner=fs.readFileSync(new URL('../scripts/review-fixes-browser.mjs',import.meta.url),'utf8');
+const heightTransform=heightRunner.split('\n').find(l=>l.includes("if(mutation==='height')"));
+test('legacy height fault injection targets original or measured implementation exactly once',()=>{
+ for(const code of ['function displayedHeight(f){return 8;}', 'function displayedHeightImpl(f){return 8;}']){
+  const box={code,mutation:'height',row:{}};vm.runInNewContext(heightTransform,box);
+  assert.equal(box.row.mutationApplied,true);assert.ok(box.code.includes('return sampleHeight(castle,...f.local);'));
+ }
+ const box={code:main,mutation:'height',row:{}};vm.runInNewContext(heightTransform,box);
+ assert.equal(box.row.mutationApplied,true);assert.ok(box.code.includes('function displayedHeightImpl(f){return sampleHeight(castle,...f.local);'));
+ assert.equal(main.includes('function displayedHeight(f){'),false);
+});
+test('legacy height fault injection rejects absent or ambiguous targets',()=>{
+ for(const code of ['function other(){}','function displayedHeight(f){} function displayedHeightImpl(f){}'])assert.throws(()=>vm.runInNewContext(heightTransform,{code,mutation:'height',row:{}}),/anchor missing or ambiguous/);
+});

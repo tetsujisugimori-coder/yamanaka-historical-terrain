@@ -24,7 +24,7 @@ async function instrument(page,row){
   let code=servedMain;
   const marker='async function setView(view,';if(!code.includes(marker))throw Error('setView instrumentation anchor missing');
   code=code.replace(marker,"async function setView(...args){window.__viewActive=(window.__viewActive??0)+1;try{return await measuredView(...args);}finally{window.__viewActive--;}} async function measuredView(view,");
-  if(mutation==='height'){const key='function displayedHeight(f){';if(!code.includes(key))throw Error('height mutation anchor missing');code=code.replace(key,key+'return sampleHeight(castle,...f.local);');row.mutationApplied=true;}
+  if(mutation==='height'){const keys=['function displayedHeight(f){','function displayedHeightImpl(f){'].filter(k=>code.includes(k));if(keys.length!==1)throw Error('height mutation anchor missing or ambiguous');const key=keys[0];code=code.replace(key,key+'return sampleHeight(castle,...f.local);');row.mutationApplied=true;}
   await route.fulfill({status:200,contentType:'application/javascript',body:code}).catch(error=>{if(!row.closing)throw error;});
  });
  if(mutation==='intent')await page.route('**/src/intent.js*',async route=>{const code=servedIntent.replace('token===revision','true');if(code===servedIntent)throw Error('intent mutation anchor missing');row.mutationApplied=true;await route.fulfill({status:200,contentType:'application/javascript',body:code}).catch(error=>{if(!row.closing)throw error;});});
