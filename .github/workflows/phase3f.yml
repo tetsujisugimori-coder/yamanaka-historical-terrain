@@ -35,3 +35,45 @@ jobs:
           path: evidence/phase3h
           if-no-files-found: error
           retention-days: 30
+  phase-h-controlled-comparison:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: G and H same-environment comparison
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/phase3h/comparison
+          git worktree add --detach ../yamanaka-phase3g 3b08613682c794f50d90ef81b8a41170f40f8476
+          ln -s "$PWD/node_modules" ../yamanaka-phase3g/node_modules
+          (cd ../yamanaka-phase3g && node_modules/.bin/vite --host 127.0.0.1 --port 4371 --strictPort) >/tmp/g-vite.log 2>&1 &
+          g=$!
+          npm run dev -- --port 4372 --strictPort >/tmp/h-vite.log 2>&1 &
+          h=$!
+          trap 'kill "$g" "$h" 2>/dev/null || true' EXIT
+          for port in 4371 4372; do
+            for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done
+          done
+          for trial in 0 1 2; do
+            for version in G H; do VERSION=$version TRIAL=$trial node scripts/phase3h-compare.mjs; done
+          done
+          for version in G H; do
+            for mode in c cd; do MODE=images VERSION=$version LANDSCAPE_MODE=$mode node scripts/phase3h-compare.mjs; done
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3h-controlled-comparison-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3h/comparison
+          if-no-files-found: error
+          retention-days: 30

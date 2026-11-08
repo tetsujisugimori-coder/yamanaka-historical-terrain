@@ -22,3 +22,5 @@ test('stale G triangle oracle fails unchanged 1mm comparison against H',async()=
  const g=oracle('public/data/phase3g.glb')(-39,-10),h=oracle(ACTIVE_TERRAIN.glb)(-39,-10);
  assert.ok(Math.abs(g-h)>.001);assert.equal(Math.abs(g-h),0.03680419921875);
 });
+
+test('model selector and actual mapped request cannot diverge silently',()=>{const source=readFileSync('src/main.js','utf8');assert.throws(()=>activeTerrainContract(source.replace("const file=view==='reconstruction'","const file=view==='regional'")),/mismatch/);assert.throws(()=>activeTerrainContract(source.replace("map(path=>json(assetPath(path)))","map(path=>json(assetPath('data/phase3g.json')))")),/mismatch/);});

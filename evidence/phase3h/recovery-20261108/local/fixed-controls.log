@@ -1,0 +1,45 @@
+green PASS chromium 390 1 bailey 
+green PASS chromium 390 1 bank 
+green PASS chromium 390 1 moat 
+green PASS chromium 390 1 passage 
+green PASS chromium 390 2 bailey 
+green PASS chromium 390 2 bank 
+green PASS chromium 390 2 moat 
+green PASS chromium 390 2 passage 
+green PASS chromium 1280 1 bailey 
+green PASS chromium 1280 1 bank 
+green PASS chromium 1280 1 moat 
+green PASS chromium 1280 1 passage 
+green PASS chromium 1280 2 bailey 
+green PASS chromium 1280 2 bank 
+green PASS chromium 1280 2 moat 
+green PASS chromium 1280 2 passage 
+touch-look PASS 1 bailey 
+touch-look PASS 1 bank 
+touch-look PASS 1 moat 
+touch-look PASS 1 passage 
+touch-look PASS 2 bailey 
+touch-look PASS 2 bank 
+touch-look PASS 2 moat 
+touch-look PASS 2 passage 
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browserType.launch: 
+╔══════════════════════════════════════════════════════╗
+║ Host system is missing dependencies to run browsers. ║
+║ Missing libraries:                                   ║
+║     libgtk-4.so.1                                    ║
+║     libgraphene-1.0.so.0                             ║
+║     libwoff2dec.so.1.0.2                             ║
+║     libharfbuzz-icu.so.0                             ║
+║     libhyphen.so.0                                   ║
+║     libmanette-0.2.so.0                              ║
+║     libGLESv2.so.2                                   ║
+╚══════════════════════════════════════════════════════╝
+    at /tmp/yamanaka-h-resume/repo/scripts/landscape-fixed-controls.mjs:14:89 {
+  name: 'Error'
+}
+
+Node.js v24.22.1

@@ -1,0 +1,192 @@
+{
+  "source_sha256": "d5c8e3eadbd0eb92a45e4e4ee814bfc6976cb7547c0df0be39dbfdf86e25902e",
+  "scope": "Local Chromium subset only. Full run exit 1 because WebKit OS libraries missing; not full matrix PASS. Original full JSON retained in isolated workspace, not committed due to size.",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 1,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 1,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 1,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 1,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 2,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 2,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 2,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "ve": 2,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 1,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 1,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 1,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 1,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 2,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 2,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 2,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "ve": 2,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    }
+  ],
+  "touchRows": [
+    {
+      "engine": "chromium",
+      "ve": 1,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 1,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 1,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 1,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 2,
+      "station": "bailey",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 2,
+      "station": "bank",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 2,
+      "station": "moat",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "engine": "chromium",
+      "ve": 2,
+      "station": "passage",
+      "status": "PASS",
+      "reason": null
+    }
+  ]
+}

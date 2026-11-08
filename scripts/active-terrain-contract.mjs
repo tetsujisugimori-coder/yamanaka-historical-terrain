@@ -5,8 +5,8 @@ function walk(node,visit){if(!node||typeof node!=='object')return;visit(node);fo
 export function activeTerrainContract(source=readFileSync('src/main.js','utf8')) {
  const ast=parseAst(source),models=[],metadata=[];
  walk(ast,node=>{
-  if(node.type==='FunctionDeclaration'&&node.id?.name==='getModel')walk(node.body,n=>{if(n.type==='VariableDeclarator'&&n.id?.name==='file')models.push(n.init?.consequent?.alternate?.value);});
-  if(node.type==='FunctionDeclaration'&&node.id?.name==='bootstrap')walk(node.body,n=>{if(n.type==='VariableDeclarator'&&n.id?.type==='ArrayPattern'&&n.id.elements.at(-1)?.name==='refinement')metadata.push(n.init?.argument?.arguments?.[0]?.callee?.object?.elements?.at(-1)?.value);});
+  if(node.type==='FunctionDeclaration'&&node.id?.name==='getModel')walk(node.body,n=>{if(n.type==='VariableDeclarator'&&n.id?.name==='file'){if(source.slice(n.init.test.start,n.init.test.end).replace(/\s/g,'')!=="view==='reconstruction'"||source.slice(n.init.consequent.test.start,n.init.consequent.test.end).replace(/\s/g,'')!=="variant==='current'")throw Error('Active model selection contract mismatch');models.push(n.init?.consequent?.alternate?.value);}});
+  if(node.type==='FunctionDeclaration'&&node.id?.name==='bootstrap')walk(node.body,n=>{if(n.type==='VariableDeclarator'&&n.id?.type==='ArrayPattern'&&n.id.elements.at(-1)?.name==='refinement'){const call=n.init?.argument,map=call?.arguments?.[0];if(source.slice(call.callee.start,call.callee.end)!=='Promise.all'||map?.callee?.property?.name!=='map'||source.slice(map.arguments[0].start,map.arguments[0].end).replace(/\s/g,'')!=='path=>json(assetPath(path))')throw Error('Active metadata loader contract mismatch');metadata.push(map?.callee?.object?.elements?.at(-1)?.value);}});
  });
  if(models.length!==1||!/^phase3[a-z]+$/.test(models[0]??''))throw Error('Active terrain GLB must be uniquely identified');
  const stem=models[0];
