@@ -21,6 +21,7 @@ jobs:
       - name: Same host H and I cold and warm trials
         run: |
           set -euo pipefail
+          mkdir -p evidence/phase3i/ci-comparison
           git worktree add --detach ../phase-i-baseline 42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8
           (cd ../phase-i-baseline && npm ci)
           cp scripts/phase3i-performance.mjs ../phase-i-baseline/scripts/
@@ -28,7 +29,7 @@ jobs:
           h=$!
           npm run dev -- --port 4381 --strictPort >/tmp/i-server.log 2>&1 &
           i=$!
-          trap 'kill "$h" "$i" 2>/dev/null || true' EXIT
+          trap 'cp ../phase-i-baseline/evidence/phase3i/performance-H.json evidence/phase3i/ci-comparison/ 2>/dev/null || true; cp /tmp/h-server.log /tmp/i-server.log evidence/phase3i/ci-comparison/ 2>/dev/null || true; kill "$h" "$i" 2>/dev/null || true' EXIT
           for port in 4381 4382; do
             for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done
           done
