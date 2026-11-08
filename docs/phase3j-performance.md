@@ -33,3 +33,9 @@
 詳細観測の残差を分けるため、試験runnerがpassive/captureで実際のtrusted click配送時刻を記録する。操作開始→clickは自動操作のactionability/scroll/配送待機区間として別表示し、アプリCPU時間へ混入しない。最後の2RAF待機も別区間。これらもGPU完了の証拠ではない。
 
 最初の40試行は中央値cold I2620.8→J2540.9ms、reload2737.6→2678.35ms。各10対中6対が改善、分散大。全体改善確証とはしない。共有ホストで他処理との競合があり、詳細pilot収集中に単体試験も重なったので独立した正式再測定を要する。
+
+## Observer correction after failed final comparison
+
+Run42521001762 at6002c65 preserved40 raw trials but strict validation failed: I trial2 cold renderCPU start369.1999999999971 exceeded end367.6999999999971, reported ms0.6999999999970896. The I observer sampled clock twice; the second call was delayed. No summary or detailed12 exists for that run. Do not repair its raw intervals or retry until green.
+
+New separate I baseline49ef2246e573ca0585763486cd8f9afbede23ba1 (parent3ffc75f334cfdaf21e7481f44572d009b3693ac2, tree93855b5fbbc27d63a6dd060e86e42685f29c65d6) changes only the observational logger to use one clock sample, matching J. The workflow and validator now require this new baseline. Fresh paired runs are a separate experiment and must not be pooled with prior3ffc results. Historical main task wall measurements remain raw observations but did not have fully identical observer implementations; historical internal coverage is arithmetic on recorded spans, not pristine observer parity. The old baseline, failure ZIP13632529700 and every prior result remain preserved. Candidate application bytes are unchanged by this correction; no acceptance relaxation occurs.

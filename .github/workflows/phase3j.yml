@@ -25,7 +25,7 @@ jobs:
           mkdir -p evidence/phase3j/ci
           git rev-parse HEAD HEAD^{tree} > evidence/phase3j/ci/head-tree.txt
           sha256sum src/*.js public/data/*.glb scripts/phase3j-*.mjs > evidence/phase3j/ci/sha256.txt
-          git worktree add --detach ../phase-j-baseline 3ffc75f334cfdaf21e7481f44572d009b3693ac2
+          git worktree add --detach ../phase-j-baseline 49ef2246e573ca0585763486cd8f9afbede23ba1
           (cd ../phase-j-baseline && npm ci && npm run build)
           npm run build
           (cd ../phase-j-baseline && npx vite preview --host 127.0.0.1 --port 4384 --strictPort) >/tmp/j-baseline.log 2>&1 &
