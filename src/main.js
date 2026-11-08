@@ -1,4 +1,4 @@
-import {createPerformanceLog,timedGLB,createFrameScheduler} from './performance.js';
+import {createPerformanceLog,timedGLB} from './performance.js';
 import './style.css';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
@@ -163,8 +163,7 @@ async function initialize(features){
   models.set(file,pending);try{return await pending;}catch(error){if(models.get(file)===pending)models.delete(file);throw error;}
  }
  sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{leaveStation();if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
- const scheduleFrame=createFrameScheduler(()=>{if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;const start=performance.now();syncConnected();renderer.render(scene,camera);updateLabels();updateScale();performanceLog.submitted(performance.now()-start);});
- function render(){performanceLog.request();scheduleFrame();}
+ function render(){performanceLog.request();if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;const start=performance.now();syncConnected();renderer.render(scene,camera);updateLabels();updateScale();performanceLog.submitted(performance.now()-start);}
  function resize(){const r=viewport.getBoundingClientRect(),ratio=renderer.getPixelRatio(),width=Math.max(1,Math.floor(r.width*ratio))/ratio,height=Math.max(1,Math.floor(r.height*ratio))/ratio;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();syncWestern(state.landscape&&state.view==='reconstruction');render();}
  const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{walk?.dispose();disposePart(partsGroup);nature.dispose();clearNature();closeDetail.dispose();sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
  function fitTerrain(g){
