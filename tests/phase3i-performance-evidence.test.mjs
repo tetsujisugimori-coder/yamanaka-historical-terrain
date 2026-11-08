@@ -1,5 +1,5 @@
 import test from'node:test';import assert from'node:assert/strict';import{verifyPerformance}from'../scripts/phase3i-performance-report.mjs';
-const fixture=()=>({conditions:{trials:3},rows:[1,2,3].flatMap(trial=>['cold','warm'].map(cache=>({trial,cache,status:'PASS',errors:[],httpErrors:[],initialReadyMs:1,facilityReadyMs:2,resources:Array.from({length:5},()=>({encodedBodySize:100,transferSize:0}))})))});
+const fixture=()=>({conditions:{trials:3},rows:[1,2,3].flatMap(trial=>['cold','warm'].map(cache=>({trial,cache,status:'PASS',walk:{wallMs:1,requiredMoves:30},frameProxy:{intervalsMs:Array(60).fill(16)},errors:[],httpErrors:[],initialReadyMs:1,facilityReadyMs:2,resources:Array.from({length:5},()=>({encodedBodySize:100,transferSize:0}))})))});
 test('performance six distinct trials accepted',()=>verifyPerformance(fixture()));
 for(const [name,mutate]of Object.entries({missing:r=>r.rows.pop(),duplicate:r=>r.rows[5]=r.rows[0],failure:r=>r.rows[0].status='FAIL',NaN:r=>r.rows[0].facilityReadyMs=NaN,error:r=>r.rows[0].errors.push('error'),http:r=>r.rows[0].httpErrors.push('404'),resource:r=>r.rows[0].resources=[],denominator:r=>r.conditions.trials=2}))test('reject performance '+name,()=>{const f=fixture();mutate(f);assert.throws(()=>verifyPerformance(f));});
 import{verifyComparison}from'../scripts/phase3i-performance-report.mjs';
