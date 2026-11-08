@@ -34,10 +34,10 @@ jobs:
           j=$!
           trap 'cp /tmp/j-baseline.log /tmp/j-candidate.log evidence/phase3j/ci/; kill "$b" "$j" 2>/dev/null || true' EXIT
           for port in 4383 4384; do for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done; done
-          BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/comparison.json node scripts/phase3j-benchmark.mjs
-          node scripts/phase3j-report.mjs evidence/phase3j/ci/comparison.json > evidence/phase3j/ci/summary.json
-          PROFILE=1 TRIALS=3 BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/detailed.json node scripts/phase3j-benchmark.mjs
-          node scripts/phase3j-report.mjs evidence/phase3j/ci/detailed.json > evidence/phase3j/ci/accounting.json
+          BASELINE_DIR=../phase-j-baseline BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/comparison.json node scripts/phase3j-benchmark.mjs
+          node scripts/phase3j-report.mjs evidence/phase3j/ci/comparison.json evidence/phase3j/ci/comparison.json.identity.json > evidence/phase3j/ci/summary.json
+          PROFILE=1 TRIALS=3 BASELINE_DIR=../phase-j-baseline BASELINE_URL=http://127.0.0.1:4384 CANDIDATE_URL=http://127.0.0.1:4383 OUT=evidence/phase3j/ci/detailed.json node scripts/phase3j-benchmark.mjs
+          node scripts/phase3j-report.mjs evidence/phase3j/ci/detailed.json evidence/phase3j/ci/detailed.json.identity.json > evidence/phase3j/ci/accounting.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

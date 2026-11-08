@@ -25,3 +25,11 @@
 ## 未検証
 
 最終CI、独立レビュー、16条件回帰、同条件独立性能再測定は進行中。GPU内部時間、実機Safari、物理入力はNOT_TESTED。景観品質や史実の認定は今回の性能判定とは別。
+
+## 独立一次レビューと修正中の経過
+
+初期HEAD fd5fc11の比較検証器にP2：HTTP失敗/終了状態/重複資源/来歴欠測の誤受理、非有限区間による偽100%説明率を検出。原票はpilotとして保全し、正式受入には使わない。runner・validatorを修正し、外部expected identity、必要6GLBの一意性と正バイト数、final ready/loaded/walk停止、HTTP失敗、完了時刻、profile有無・有限区間を検証する。新規同一反例RED→GREENは独立再確認待ち。cacheにはlayers.maskも追加。
+
+詳細観測の残差を分けるため、試験runnerがpassive/captureで実際のtrusted click配送時刻を記録する。操作開始→clickは自動操作のactionability/scroll/配送待機区間として別表示し、アプリCPU時間へ混入しない。最後の2RAF待機も別区間。これらもGPU完了の証拠ではない。
+
+最初の40試行は中央値cold I2620.8→J2540.9ms、reload2737.6→2678.35ms。各10対中6対が改善、分散大。全体改善確証とはしない。共有ホストで他処理との競合があり、詳細pilot収集中に単体試験も重なったので独立した正式再測定を要する。
