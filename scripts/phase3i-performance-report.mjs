@@ -1,0 +1,14 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{pathToFileURL}from'node:url';
+export function verifyPerformance(r){assert.equal(r.rows.length,6,'trial denominator');assert.equal(r.conditions.trials,3);for(let n=1;n<=3;n++)for(const cache of['cold','warm']){const rows=r.rows.filter(x=>x.trial===n&&x.cache===cache);assert.equal(rows.length,1,'missing or duplicate trial');const row=rows[0];assert.equal(row.status,'PASS');assert.deepEqual(row.errors,[]);assert.deepEqual(row.httpErrors,[]);for(const key of['initialReadyMs','facilityReadyMs'])assert(Number.isFinite(row[key])&&row[key]>0,key);assert(row.resources.length>=5,'missing resources');for(const q of row.resources)assert(q.encodedBodySize>0&&q.transferSize>=0);}}
+export function verifyComparison(h,i,expected){
+ assert(expected?.head&&/^[a-f0-9]{40}$/.test(expected.head),'expected I HEAD required');
+ assert(expected?.mainSha256&&/^[a-f0-9]{64}$/.test(expected.mainSha256),'expected I source hash required');
+ assert.equal(h.label,'H','baseline label');assert.equal(i.label,'I','candidate label');
+ assert.equal(h.head,'42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8','baseline HEAD');
+ assert.equal(h.mainSha256,'66ddee062ecbcd81261d376e91064f00f074c1528dc968c862c02b3dae2c7bb1','baseline source');
+ assert.equal(i.head,expected.head,'candidate HEAD');assert.notEqual(i.head,h.head,'candidate cannot be baseline');assert.equal(i.mainSha256,expected.mainSha256,'candidate source');
+ assert.match(h.runnerSha256,/^[a-f0-9]{64}$/);assert.equal(i.runnerSha256,h.runnerSha256,'runner identity');
+ assert.deepEqual(h.conditions,i.conditions,'conditions mismatch');assert.equal(h.browser,i.browser,'browser version');verifyPerformance(h);verifyPerformance(i);
+}
+export function summary(r){verifyPerformance(r);return Object.fromEntries(['cold','warm'].map(cache=>{const rows=r.rows.filter(x=>x.cache===cache),numbers=rows.map(x=>x.facilityReadyMs).sort((a,b)=>a-b);return [cache,{n:3,medianMs:numbers[1],minMs:numbers[0],maxMs:numbers[2],allMs:numbers,GLBBodyBytes:rows.map(x=>x.resources.reduce((a,q)=>a+q.encodedBodySize,0)),GLBTransferBytes:rows.map(x=>x.resources.reduce((a,q)=>a+q.transferSize,0))}];}));}
+if(import.meta.url===pathToFileURL(process.argv[1]??'').href){const [hp,ip,head,mainSha256]=process.argv.slice(2);const h=JSON.parse(fs.readFileSync(hp)),i=JSON.parse(fs.readFileSync(ip));verifyComparison(h,i,{head,mainSha256});const H=summary(h),I=summary(i);console.log(JSON.stringify({H,I,verifiedIdentity:{baseline:h.head,candidate:i.head,runner:h.runnerSha256},changePercent:Object.fromEntries(['cold','warm'].map(c=>[c,100*(I[c].medianMs/H[c].medianMs-1)])),scope:'same-host non-interleaved pilot; H before I, not population inference; RAF proxy not GPU; cache classification requires actual transfer sizes'},null,2));}

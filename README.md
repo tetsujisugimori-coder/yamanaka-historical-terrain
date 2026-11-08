@@ -82,3 +82,6 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 
 ## 第3期H（推定C・景観Dの限定拡張）
 土橋から曲輪・虎口への連続地表と西ノ丸堀・土塁の実形状をGより拡張。QGIS/Blender原本、生成・再読込、区域外保全は [制作記録](production/phase3h/README.md)、D材質・低木と木柵交換契約は [設計](docs/phase3h-terrain-landscape.md) を参照。新規寸法と植生は歴史的確証ではありません。正式CAD部品は未連携です。
+
+## 第3期I（Draft、公開前）
+西側innerアプローチの限定C地形とD景観を改良し、重複描画要求を集約。性能はHと同条件の冷間/再読込みで比較し、GPU完了・実機Safariとは区別します。[範囲・計測・制約](docs/phase3i-design.md)、[編集原本と再生成](docs/phase3i-production.md)。正式CAD採用・史実確証ではありません。

@@ -1,0 +1,6 @@
+import test from'node:test';import assert from'node:assert/strict';
+import{createFrameScheduler,createPerformanceLog,timedGLB}from'../src/performance.js';
+test('multiple requests coalesce; next frame may render again',()=>{const queue=[];let n=0;const request=createFrameScheduler(()=>n++,f=>queue.push(f));request();request();assert.equal(queue.length,1);queue.shift()();assert.equal(n,1);request();assert.equal(queue.length,1);queue.shift()();assert.equal(n,2);});
+test('latest state is drawn, not captured stale state',()=>{const queue=[],seen=[];let state='A';const request=createFrameScheduler(()=>seen.push(state),f=>queue.push(f));request();state='C';request();queue.shift()();assert.deepEqual(seen,['C']);});
+test('performance entries bounded and defensive copies',()=>{const log=createPerformanceLog(()=>1);for(let i=0;i<200;i++)log.add({ms:i});assert.equal(log.snapshot().entries.length,128);log.snapshot().entries[0].ms=-1;assert.equal(log.snapshot().entries[0].ms,72);});
+test('failed HTTP never parsed or reported successful fetch',async()=>{const log=createPerformanceLog();let parsed=false;await assert.rejects(timedGLB({parseAsync(){parsed=true;}},'/missing.glb',log,async()=>({ok:false,status:404})),/404/);assert.equal(parsed,false);assert.deepEqual(log.snapshot().entries,[]);});

@@ -1,0 +1,432 @@
+{
+  "label": "H",
+  "startedAt": "2026-11-08T10:23:12.048Z",
+  "head": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+  "mainSha256": "66ddee062ecbcd81261d376e91064f00f074c1528dc968c862c02b3dae2c7bb1",
+  "conditions": {
+    "engine": "Chromium",
+    "viewport": [
+      1280,
+      900
+    ],
+    "dpr": 1,
+    "trials": 3,
+    "order": "each fresh browser context cold navigation then same-context warm reload",
+    "cache": "HTTP resource entries retained; cache claim requires actual transfer sizes",
+    "scope": "localhost CPU-rendered browser; ready plus two RAF is a presentation proxy, not GPU completion",
+    "gpu": "NOT_TESTED: no GPU timer-query measurement",
+    "parse": "NOT_TESTED for baseline; Resource Timing excludes parsing"
+  },
+  "rows": [
+    {
+      "trial": 1,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 851.928766,
+      "facilityReadyMs": 7524.103136,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 415,
+          "duration": 8.099999999627471,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 946.8999999985099,
+          "duration": 15.300000000745058,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 947.1999999992549,
+          "duration": 136.90000000037253,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 947.2999999988824,
+          "duration": 185.59999999962747,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 4253.799999998882,
+          "duration": 6.599999999627471,
+          "transferSize": 1239824,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 5078.5,
+          "duration": 3.099999999627471,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 1,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 692.8944019999999,
+      "facilityReadyMs": 7524.3555609999985,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 283.5,
+          "duration": 2.599999999627471,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 724.2999999988824,
+          "duration": 6.800000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 724.5,
+          "duration": 154.2999999988824,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 724.7999999988824,
+          "duration": 218.60000000149012,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 4000.5,
+          "duration": 3.199999999254942,
+          "transferSize": 300,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 4834.799999998882,
+          "duration": 2.600000001490116,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 2,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 802.2320589999981,
+      "facilityReadyMs": 7377.507815000001,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 390.09999999962747,
+          "duration": 7.900000000372529,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 846,
+          "duration": 11,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 846.3999999985099,
+          "duration": 119.40000000037253,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 846.6999999992549,
+          "duration": 167.5,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 4067.2999999988824,
+          "duration": 10.5,
+          "transferSize": 1239824,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 4880.0999999996275,
+          "duration": 3.5,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 2,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 628.3616790000015,
+      "facilityReadyMs": 7657.549298000002,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 278,
+          "duration": 2.699999999254942,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 699.3999999985099,
+          "duration": 6.100000001490116,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 699.5999999996275,
+          "duration": 172.59999999962747,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 699.6999999992549,
+          "duration": 195.80000000074506,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 4029.5,
+          "duration": 2.399999998509884,
+          "transferSize": 300,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 4898,
+          "duration": 2.699999999254942,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 3,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 787.9025570000013,
+      "facilityReadyMs": 8365.267276999999,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 378.5,
+          "duration": 7.399999998509884,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 832.6999999992549,
+          "duration": 9.699999999254942,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 832.7999999988824,
+          "duration": 121.80000000074506,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 833,
+          "duration": 222.5,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 4040.0999999996275,
+          "duration": 5.599999999627471,
+          "transferSize": 1239824,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 4853.799999998882,
+          "duration": 3.200000001117587,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 3,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 869.9074700000056,
+      "facilityReadyMs": 14498.118851000007,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": null
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 376.7000000011176,
+          "duration": 2.299999998882413,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 909.3000000007451,
+          "duration": 6.300000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 909.5,
+          "duration": 141.80000000074506,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3h.glb",
+          "startTime": 909.6000000014901,
+          "duration": 211.09999999962747,
+          "transferSize": 6870736,
+          "encodedBodySize": 6870436,
+          "decodedBodySize": 6870436
+        },
+        {
+          "file": "phase3h-inner.glb",
+          "startTime": 6421.10000000149,
+          "duration": 3.199999999254942,
+          "transferSize": 300,
+          "encodedBodySize": 1239524,
+          "decodedBodySize": 1239524
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 7718.300000000745,
+          "duration": 6.800000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    }
+  ],
+  "browser": "141.0.7390.37",
+  "completedAt": "2026-11-08T10:24:09.868Z"
+}

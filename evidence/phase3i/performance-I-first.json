@@ -1,0 +1,1290 @@
+{
+  "label": "I",
+  "startedAt": "2026-11-08T10:26:16.950Z",
+  "head": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+  "mainSha256": "016f6a8cf23370368a542aad7d00db4c00a76a6da38e4d804ddc6de626029372",
+  "conditions": {
+    "engine": "Chromium",
+    "viewport": [
+      1280,
+      900
+    ],
+    "dpr": 1,
+    "trials": 3,
+    "order": "each fresh browser context cold navigation then same-context warm reload",
+    "cache": "HTTP resource entries retained; cache claim requires actual transfer sizes",
+    "scope": "localhost CPU-rendered browser; ready plus two RAF is a presentation proxy, not GPU completion",
+    "gpu": "NOT_TESTED: no GPU timer-query measurement",
+    "parse": "NOT_TESTED for baseline; Resource Timing excludes parsing"
+  },
+  "rows": [
+    {
+      "trial": 1,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 702.8470239999999,
+      "facilityReadyMs": 4523.292325,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 17.800000000745058
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 1.1000000014901161
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 72,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 5.699999999254942
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 30.40000000037253
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 13.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 1.400000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 86.09999999962747,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 16.299999998882413
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 10.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 149.5,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 22.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 36.90000000037253
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 209,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 7.399999998509884
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 77.40000000037253
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 155
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 16.799999998882413,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 2.200000001117587
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 10.900000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 10.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 7.700000001117587
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 437.90000000037253,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 3.399999998509884
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 0.900000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 9.400000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.599999999627471
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 408.5,
+          "duration": 8.299999998882413,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 734.2999999988824,
+          "duration": 12.5,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 734.4000000003725,
+          "duration": 117.5,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 734.4000000003725,
+          "duration": 134.69999999925494,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2499.5,
+          "duration": 5.699999999254942,
+          "transferSize": 1245972,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3307.699999999255,
+          "duration": 3.400000000372529,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 1,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 552.6643240000003,
+      "facilityReadyMs": 4438.1328379999995,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 4.800000000745058
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.7000000011175871
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 53.90000000037253,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 2.599999999627471
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 36.40000000037253
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 4
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 129.09999999962747,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 12.900000000372529
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 8.700000001117587
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 163,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 16.40000000037253
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 26.40000000037253
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 221.39999999850988,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 6.400000000372529
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 76.40000000037253
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 110
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 17.899999998509884,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 1.800000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 9.400000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8.600000001490116
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 7
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 431.69999999925494,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 2.600000001490116
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 0.7999999988824129
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 6.799999998882413
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.199999999254942
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 277.59999999962747,
+          "duration": 2.800000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 611.5999999996275,
+          "duration": 2.800000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 611.7000000011176,
+          "duration": 116,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 611.8000000007451,
+          "duration": 207.7999999988824,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2261.800000000745,
+          "duration": 4.099999999627471,
+          "transferSize": 300,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3069.4000000003725,
+          "duration": 3.099999999627471,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 2,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 621.8601490000001,
+      "facilityReadyMs": 4484.75252,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 10.900000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 64.40000000037253,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 5.099999999627471
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 30.199999999254942
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 4.900000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 3.200000001117587
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 79.19999999925494,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 14.800000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 12.5
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 140.19999999925494,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 27.300000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 46.19999999925494
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 214,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 8.100000001490116
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 77.89999999850988
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 116
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 16.90000000037253,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 2.400000000372529
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 10.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8.299999998882413
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 439.7000000011176,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 3.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 1.799999998882413
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 10.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.599999999627471
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 352.3999999985099,
+          "duration": 5.900000000372529,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 647.1999999992549,
+          "duration": 11.800000000745058,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 647.3999999985099,
+          "duration": 111.40000000037253,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 647.3999999985099,
+          "duration": 125.20000000111759,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2312.89999999851,
+          "duration": 7.200000001117587,
+          "transferSize": 1245972,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3125.39999999851,
+          "duration": 4.400000000372529,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 2,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 544.7063969999999,
+      "facilityReadyMs": 4532.781325,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 6
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.8000000007450581
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 56.59999999962747,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 2.799999998882413
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 32.30000000074506
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 4.100000001490116
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.8000000007450581
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 114.80000000074506,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 20.800000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 8.099999999627471
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 154.40000000037253,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 17
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 27.199999999254942
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 213.90000000037253,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 5.699999999254942
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 72.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 106.70000000111759
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 17,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 2.099999999627471
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 10.099999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 6.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 437.5,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 2.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 1
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.099999999627471
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 285.40000000037253,
+          "duration": 2,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 598.7000000011176,
+          "duration": 4.799999998882413,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 598.9000000003725,
+          "duration": 110.40000000037253,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 599,
+          "duration": 200.7000000011176,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2365.300000000745,
+          "duration": 2.5,
+          "transferSize": 300,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3151.2000000011176,
+          "duration": 2.099999999627471,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 167000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 3,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 638.8671219999997,
+      "facilityReadyMs": 5457.680109000001,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 8.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.7999999988824129
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 60.59999999962747,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 4.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 30
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.900000000372529
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 3.400000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 219.7000000011176,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 14.199999999254942
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 10.5
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 292.59999999962747,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 22.800000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 35.29999999888241
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 351.40000000037253,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 10.099999999627471
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 69
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 176.60000000149012
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 15.200000001117587,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 2.199999999254942
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 9.800000000745058
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 10.099999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8.5
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 649.2000000011176,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 4.099999999627471
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 1.800000000745058
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 10.699999999254942
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.900000000372529
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 347.6000000014901,
+          "duration": 5.799999998882413,
+          "transferSize": 1451240,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 670.3000000007451,
+          "duration": 13.699999999254942,
+          "transferSize": 593920,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 670.5,
+          "duration": 268,
+          "transferSize": 4540536,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 670.5,
+          "duration": 279.40000000037253,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2772.800000000745,
+          "duration": 9.599999999627471,
+          "transferSize": 1245972,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3635.10000000149,
+          "duration": 4.399999998509884,
+          "transferSize": 100748,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 177000000
+      },
+      "status": "PASS"
+    },
+    {
+      "trial": 3,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "initialReadyMs": 539.1512509999993,
+      "facilityReadyMs": 5195.863449999997,
+      "snapshot": {
+        "triangles": 478204,
+        "drawCalls": 38,
+        "geometries": 53,
+        "phase3i": {
+          "entries": [
+            {
+              "stage": "renderCPU",
+              "ms": 5.599999999627471
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 1.400000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/regional.glb",
+              "ms": 57.09999999962747,
+              "bytes": 1450940
+            },
+            {
+              "stage": "parse",
+              "url": "/data/regional.glb",
+              "ms": 2.900000000372529
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "regional",
+              "ms": 31.799999998882413
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 4.899999998509884
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.5
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 0.5
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/landscape.glb",
+              "ms": 74.59999999962747,
+              "bytes": 593620
+            },
+            {
+              "stage": "parse",
+              "url": "/data/landscape.glb",
+              "ms": 11.900000000372529
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "landscape",
+              "ms": 8.900000000372529
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3b.glb",
+              "ms": 127.5,
+              "bytes": 4540236
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3b.glb",
+              "ms": 17.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3b",
+              "ms": 29.800000000745058
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i.glb",
+              "ms": 175,
+              "bytes": 6871164
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i.glb",
+              "ms": 7.699999999254942
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i",
+              "ms": 97.09999999962747
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 122.19999999925494
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 18.09999999962747,
+              "bytes": 1245672
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3i-inner.glb",
+              "ms": 2.5
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3i-inner",
+              "ms": 10.699999999254942
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 8
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 11.300000000745058
+            },
+            {
+              "stage": "fetch",
+              "url": "/data/phase3d.glb",
+              "ms": 534.1999999992549,
+              "bytes": 100448
+            },
+            {
+              "stage": "parse",
+              "url": "/data/phase3d.glb",
+              "ms": 3.300000000745058
+            },
+            {
+              "stage": "geometryMaterials",
+              "file": "phase3d",
+              "ms": 1
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 18.199999999254942
+            },
+            {
+              "stage": "renderCPU",
+              "ms": 2.600000001490116
+            }
+          ],
+          "renderRequests": 27,
+          "renderSubmissions": 10,
+          "gpuCompletion": "NOT_TESTED",
+          "scope": "monotonic CPU wall timings; renderCPU includes command submission, not GPU duration"
+        }
+      },
+      "resources": [
+        {
+          "file": "regional.glb",
+          "startTime": 283.59999999962747,
+          "duration": 2.699999999254942,
+          "transferSize": 300,
+          "encodedBodySize": 1450940,
+          "decodedBodySize": 1450940
+        },
+        {
+          "file": "landscape.glb",
+          "startTime": 562.7999999988824,
+          "duration": 5.300000000745058,
+          "transferSize": 300,
+          "encodedBodySize": 593620,
+          "decodedBodySize": 593620
+        },
+        {
+          "file": "phase3b.glb",
+          "startTime": 562.7999999988824,
+          "duration": 72.60000000149012,
+          "transferSize": 300,
+          "encodedBodySize": 4540236,
+          "decodedBodySize": 4540236
+        },
+        {
+          "file": "phase3i.glb",
+          "startTime": 562.9000000003725,
+          "duration": 112.5,
+          "transferSize": 6871464,
+          "encodedBodySize": 6871164,
+          "decodedBodySize": 6871164
+        },
+        {
+          "file": "phase3i-inner.glb",
+          "startTime": 2296.2999999988824,
+          "duration": 3.100000001490116,
+          "transferSize": 300,
+          "encodedBodySize": 1245672,
+          "decodedBodySize": 1245672
+        },
+        {
+          "file": "phase3d.glb",
+          "startTime": 3096,
+          "duration": 2.900000000372529,
+          "transferSize": 300,
+          "encodedBodySize": 100448,
+          "decodedBodySize": 100448
+        }
+      ],
+      "memory": {
+        "usedJSHeapSize": 177000000
+      },
+      "status": "PASS"
+    }
+  ],
+  "browser": "141.0.7390.37",
+  "completedAt": "2026-11-08T10:26:49.445Z"
+}
