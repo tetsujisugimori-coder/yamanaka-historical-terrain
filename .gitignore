@@ -7,3 +7,6 @@ data/raw/
 .cache/
 __pycache__/
 *.qgz~
+
+# Lossless archive is tracked; editable original is restored by prepare script.
+/production/phase3h/phase3h-editable.gpkg

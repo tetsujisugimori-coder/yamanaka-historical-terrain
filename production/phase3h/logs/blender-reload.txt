@@ -1,0 +1,5 @@
+{"status": "PASS", "execution": "separate installed Blender background process reopened saved .blend", "blender": "4.3.2", "objects": 13, "nativeAndGLBTrianglesExactlyEqual": 473792, "protectedFilesUnchanged": 37, "negativeControls": [{"case": "missingTriangle", "expected": "REJECT", "actual": "REJECT"}, {"case": "empty", "expected": "REJECT", "actual": "REJECT"}, {"case": "height", "expected": "REJECT", "actual": "REJECT"}, {"case": "axis", "expected": "REJECT", "actual": "REJECT"}, {"case": "units", "expected": "REJECT", "actual": "REJECT"}], "B": 0, "glbSha256": {"phase3h.glb": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2", "phase3h-inner.glb": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f"}}
+Blender 4.3.2
+Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-phase3h/production/phase3h/yamanaka-phase3h.blend"
+
+Blender quit

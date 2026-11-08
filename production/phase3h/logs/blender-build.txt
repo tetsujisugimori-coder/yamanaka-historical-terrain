@@ -1,0 +1,38 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+07:56:12 | INFO: Starting glTF 2.0 export
+07:56:12 | INFO: Extracting primitive: nm-transition
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Extracting primitive: nm-rampart
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Extracting primitive: nm-passage
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Extracting primitive: nm-moat
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Extracting primitive: nm-context
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Extracting primitive: nm-bailey
+07:56:12 | INFO: Primitives created: 1
+07:56:12 | INFO: Finished glTF 2.0 export in 0.2737915515899658 s
+
+07:56:13 | INFO: Starting glTF 2.0 export
+07:56:13 | INFO: Extracting primitive: ic-lookout.surface.grass.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-lookout.surface.earth.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-koguchi.surface.path.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-koguchi.surface.earth.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-bridge.surface.path.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-bridge.surface.grass.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Extracting primitive: ic-bridge.surface.earth.phase3f-refined
+07:56:13 | INFO: Primitives created: 1
+07:56:13 | INFO: Finished glTF 2.0 export in 0.035991668701171875 s
+
+Info: Saved "yamanaka-phase3h.blend"
+{"status": "PASS", "execution": "installed Blender background CLI; no GUI claim", "blender": "4.3.2", "objects": [{"name": "nm-transition", "model": "phase3h.glb", "sourceVertices": 113214, "sourceTriangles": 222585, "vertices": 113214, "triangles": 222585, "changedVertices": 5714, "outsideUnchanged": 105882, "maxDisplacement": 0.10968017578125}, {"name": "nm-rampart", "model": "phase3h.glb", "sourceVertices": 17436, "sourceTriangles": 33735, "vertices": 17436, "triangles": 33735, "changedVertices": 4098, "outsideUnchanged": 8719, "maxDisplacement": 0.0999755859375}, {"name": "nm-passage", "model": "phase3h.glb", "sourceVertices": 11737, "sourceTriangles": 23040, "vertices": 11737, "triangles": 23040, "changedVertices": 0, "outsideUnchanged": 11737, "maxDisplacement": 0}, {"name": "nm-moat", "model": "phase3h.glb", "sourceVertices": 18873, "sourceTriangles": 37120, "vertices": 18873, "triangles": 37120, "changedVertices": 14832, "outsideUnchanged": 0, "maxDisplacement": 0.10968017578125}, {"name": "nm-context", "model": "phase3h.glb", "sourceVertices": 44421, "sourceTriangles": 87076, "vertices": 44421, "triangles": 87076, "changedVertices": 0, "outsideUnchanged": 44328, "maxDisplacement": 0}, {"name": "nm-bailey", "model": "phase3h.glb", "sourceVertices": 26901, "sourceTriangles": 53120, "vertices": 26901, "triangles": 53120, "changedVertices": 0, "outsideUnchanged": 26177, "maxDisplacement": 0}, {"name": "ic-lookout.surface.grass", "model": "phase3h-inner.glb", "sourceVertices": 1703, "sourceTriangles": 2930, "vertices": 1703, "triangles": 2930, "changedVertices": 404, "outsideUnchanged": 1181, "maxDisplacement": 0.1199951171875}, {"name": "ic-lookout.surface.earth", "model": "phase3h-inner.glb", "sourceVertices": 206, "sourceTriangles": 298, "vertices": 206, "triangles": 298, "changedVertices": 173, "outsideUnchanged": 8, "maxDisplacement": 0.1199951171875}, {"name": "ic-koguchi.surface.path", "model": "phase3h-inner.glb", "sourceVertices": 561, "sourceTriangles": 1000, "vertices": 561, "triangles": 1000, "changedVertices": 459, "outsideUnchanged": 26, "maxDisplacement": 0.1146240234375}, {"name": "ic-koguchi.surface.earth", "model": "phase3h-inner.glb", "sourceVertices": 1509, "sourceTriangles": 2750, "vertices": 1509, "triangles": 2750, "changedVertices": 1364, "outsideUnchanged": 70, "maxDisplacement": 0.18463134765625}, {"name": "ic-bridge.surface.path", "model": "phase3h-inner.glb", "sourceVertices": 769, "sourceTriangles": 1384, "vertices": 769, "triangles": 1384, "changedVertices": 667, "outsideUnchanged": 26, "maxDisplacement": 0.1199951171875}, {"name": "ic-bridge.surface.grass", "model": "phase3h-inner.glb", "sourceVertices": 1703, "sourceTriangles": 2930, "vertices": 1703, "triangles": 2930, "changedVertices": 404, "outsideUnchanged": 1181, "maxDisplacement": 0.1199951171875}, {"name": "ic-bridge.surface.earth", "model": "phase3h-inner.glb", "sourceVertices": 3170, "sourceTriangles": 5824, "vertices": 3170, "triangles": 5824, "changedVertices": 2517, "outsideUnchanged": 387, "maxDisplacement": 0.19000244140625}], "changedTriangles": 62860, "topology": "NM and inner: unchanged G vertices XY and triangle topology; bounded vertex Z edits only", "B": 0}
+Blender 4.3.2
+
+Blender quit

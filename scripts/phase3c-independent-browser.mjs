@@ -1,3 +1,4 @@
+import {ACTIVE_TERRAIN,ACTIVE_CONTRACT_SHA256} from './active-terrain-contract.mjs';
 // Independent reviewer: reads actual Three.js objects via a test-only closure probe.
 // No production support/visibility predicate or implementation test result is an oracle.
 import {chromium,webkit,expect} from '@playwright/test';
@@ -12,7 +13,7 @@ const meta=JSON.parse(await readFile('public/data/phase3c.json','utf8'));
 const rows=[];await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
-const evidenceFiles=['src/main.js','src/refined-observation.js','src/phase3b.js','src/phase3c.js','src/reading.js','src/style.css','scripts/phase3c-independent-browser.mjs','public/data/phase3g-inner.glb','public/data/phase3c.json','public/data/phase3g.json','public/data/regional.glb','public/data/castle.glb','public/data/phase3g.glb','public/data/moat-study.glb','public/data/phase3b.glb','public/data/landscape.glb'];
+const evidenceFiles=['src/main.js','src/refined-observation.js','src/phase3b.js','src/phase3c.js','src/reading.js','src/style.css','scripts/phase3c-independent-browser.mjs','public/data/phase3h-inner.glb','public/data/phase3c.json',`public/data/${ACTIVE_TERRAIN.stem}.json`,'public/data/regional.glb','public/data/castle.glb','public/data/phase3h.glb','public/data/moat-study.glb','public/data/phase3b.glb','public/data/landscape.glb'];
 const sha256=Object.fromEntries(await Promise.all(evidenceFiles.map(async file=>[file,createHash('sha256').update(await readFile(file)).digest('hex')])));
 const worktreeStatus=execFileSync('git',['status','--porcelain','--',...evidenceFiles],{encoding:'utf8'}).trim();
 const startedAt=new Date().toISOString();
@@ -36,7 +37,7 @@ const read=async p=>{const d=await p.evaluate(()=>window.__independentRead());co
 const ready=p=>p.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
 async function start(p){await instrument(p);await p.goto(url);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>document.querySelectorAll('[data-inner-station]').length>0);}
 async function mode(p,m){await p.locator(`[data-landscape-mode=${m}]`).click();await ready(p);}
-async function save(){await writeFile(`${out}/results.json`,JSON.stringify({head,tree,sha256,worktreeStatus,startedAt,mutation,scope:'Independent live object raycasts and state hashes; screenshots require separate human visual inspection. Automated WebKit is not hardware Safari. No production pass predicate used.',rows},null,2));}
+async function save(){await writeFile(`${out}/results.json`,JSON.stringify({activeContractSha256:ACTIVE_CONTRACT_SHA256,head,tree,sha256,worktreeStatus,startedAt,mutation,scope:'Independent live object raycasts and state hashes; screenshots require separate human visual inspection. Automated WebKit is not hardware Safari. No production pass predicate used.',rows},null,2));}
 for(const [engine,type]of Object.entries({chromium,webkit})){
  let browser;try{browser=await type.launch(process.env[`${engine.toUpperCase()}_PATH`]?{executablePath:process.env[`${engine.toUpperCase()}_PATH`]}:{});}catch(e){rows.push({engine,status:'NOT_TESTED',kind:'launch',reason:e.message});await save();continue;}
  for(const width of (mutation?[390]:[375,390,765,1280]))for(const reducedMotion of (mutation?['reduce']:['no-preference','reduce'])){
@@ -73,19 +74,19 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
  }
  // Independent failures: reject missing support while retaining old landscape and HTML.
  for(const fault of (mutation?[]:['asset404','missing-support','webgl'])){
-  const row={engine,fault};const p=await browser.newPage({viewport:{width:390,height:960}});p.setDefaultTimeout(60000);
+  const row={engine,fault,injectionHits:[]};const p=await browser.newPage({viewport:{width:390,height:960}});p.setDefaultTimeout(60000);
   try{
-   if(fault==='asset404')await p.route('**/data/phase3g-inner.glb',r=>r.fulfill({status:404,body:'independent fault'}));
+   if(fault==='asset404')await p.route('**/data/phase3h-inner.glb',r=>r.fulfill({status:404,body:'independent fault'}));
    if(fault==='missing-support'){
     const broken=structuredClone(meta);broken.stations[0].eye=[1e6,1e6];await p.route('**/data/phase3c.json',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(broken)}));
     // Keep the two metadata generations mutually consistent so this tests the
     // actual missing-surface guard, not an earlier metadata-mismatch rejection.
-    const support=JSON.parse(await readFile('public/data/phase3g.json','utf8')),update=support.stationSupport.find(s=>s.id===broken.stations[0].id);expect(update).toBeDefined();update.eye=[...broken.stations[0].eye];await p.route('**/data/phase3g.json',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(support)}));
+    const support=JSON.parse(await readFile(`public/data/${ACTIVE_TERRAIN.stem}.json`,'utf8')),update=support.stationSupport.find(s=>s.id===broken.stations[0].id);expect(update).toBeDefined();update.eye=[...broken.stations[0].eye];await p.route(`**/data/${ACTIVE_TERRAIN.stem}.json`,r=>{row.injectionHits.push(r.request().url());return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(support)});});
    }
    if(fault==='webgl'){await p.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(kind,...args){return /webgl/i.test(kind)?null:original.call(this,kind,...args);};});await p.goto(url);await p.waitForFunction(()=>document.body.dataset.renderState==='unavailable');for(const f of meta.elements){await p.locator(`[data-id="${f.id}"]`).click();await expect(p.locator('#detail h2')).toHaveText(f.name);}}
    else if(fault==='missing-support'){await start(p);const before=await read(p);await p.locator(`[data-inner-station="${meta.stations[0].id}"]`).click();await expect(p.locator('#inner-comparison')).toContainText('観察不可');expect((await read(p)).eye).toEqual(before.eye);expect((await read(p)).target).toEqual(before.target);}
    else{await instrument(p);await p.goto(url);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await expect(p.locator('#inner-asset-status')).toContainText('読み込めません');const d=await read(p);expect(d.visible.length).toBeGreaterThan(5);expect(d.canvasVisibility).toBe('visible');}
-   row.status='PASS';
+   if(fault==='missing-support')expect(row.injectionHits.length,'matching active support metadata injected').toBeGreaterThan(0);row.status='PASS';
   }catch(e){row.status='FAIL';row.reason=e.stack;}
   rows.push(row);await save();await p.close();
  }

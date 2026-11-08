@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "fresh extraction exact original bytes",
+    "identical existing original accepted",
+    "edited original rejected without overwrite",
+    "archive corruption rejected before extraction",
+    "original hash mismatch rejected before write"
+  ]
+}

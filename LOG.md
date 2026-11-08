@@ -63,3 +63,10 @@ PR #12 merge済みmain ed22133から専用branchで見張台・土橋・虎口�
 
 ## 第3期G
 Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を追加。固定版木柵v0のSHA256検査、柱別支持高・寸法・向き・選択・衝突を追加。独立レビュー斜面法線/定点状態の反例を保存して局所修正。CAD連携未完了、史実/実機未検証。マージ・公開なし。
+
+## Phase3H
+- Base main 3b08613682c794f50d90ef81b8a41170f40f8476, Issue23.
+- Expanded bounded actual C mesh from saved G; preserved A/old originals and fence definition/support.
+- Added project-original D slope/path colors and sparse low shrubs, isolated from A and C-only presentation.
+- QGIS/Blender regeneration and reload, numerical expansion/negative controls, browser/artifact validation.
+- No merge or publication. Final execution evidence and independent assessment recorded in PR.
