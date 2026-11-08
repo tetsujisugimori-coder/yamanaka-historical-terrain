@@ -2,18 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {activeTerrainContract,ACTIVE_TERRAIN} from '../scripts/active-terrain-contract.mjs';
-test('active terrain contract pins displayed H mesh and metadata',()=>{assert.equal(ACTIVE_TERRAIN.stem,'phase3h');});
+test('active terrain contract pins displayed I mesh and metadata',()=>{assert.equal(ACTIVE_TERRAIN.stem,'phase3i');});
 test('stale or ambiguous metadata contract rejects instead of false success',()=>{
  const source=readFileSync('src/main.js','utf8');
- assert.throws(()=>activeTerrainContract(source.replace("'data/phase3h.json'","'data/phase3g.json'")),/mismatch/);
+ assert.throws(()=>activeTerrainContract(source.replace("'data/phase3i.json'","'data/phase3g.json'")),/mismatch/);
  assert.throws(()=>activeTerrainContract(source.replace("async function getModel", "async function changedModel")),/uniquely/);
 });
 
-test('metadata string decoy cannot hide stale actual load',()=>{const source=readFileSync('src/main.js','utf8').replace("'data/phase3h.json'","'data/phase3g.json'")+"\n// 'data/phase3h.json'";assert.throws(()=>activeTerrainContract(source),/mismatch/);});
+test('metadata string decoy cannot hide stale actual load',()=>{const source=readFileSync('src/main.js','utf8').replace("'data/phase3i.json'","'data/phase3g.json'")+"\n// 'data/phase3i.json'";assert.throws(()=>activeTerrainContract(source),/mismatch/);});
 
 test('same comment-decoy input reproduces draft RED and repaired GREEN',async()=>{
  const {activeTerrainContract:before}=await import('../evidence/phase3h/recovery-20261108/contract-before-review.mjs');
- const input=readFileSync('src/main.js','utf8').replace("'data/phase3h.json'","'data/phase3g.json'")+"\n// 'data/phase3h.json'";
+ const input=readFileSync('evidence/phase3i/baseline-H-main.js','utf8').replace("'data/phase3h.json'","'data/phase3g.json'")+"\n// 'data/phase3h.json'";
  assert.equal(before(input).stem,'phase3h','preserved draft erroneously accepts this input');
  assert.throws(()=>activeTerrainContract(input),/mismatch/);
 });

@@ -1,0 +1,75 @@
+{
+  "version": "phase3i-v1",
+  "category": "C",
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "units": "metres",
+  "axes": {
+    "native": "east,north,up",
+    "glTF": "east,up,south"
+  },
+  "base": {
+    "commit": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+    "native": "production/phase3h/yamanaka-phase3h.blend",
+    "glb": [
+      "public/data/phase3h.glb",
+      "public/data/phase3h-inner.glb"
+    ]
+  },
+  "patches": [
+    {
+      "id": "moat-expanded-shoulders",
+      "model": "phase3i.glb",
+      "bounds": [
+        -66,
+        -27,
+        -40,
+        33
+      ],
+      "feather": 3,
+      "description": "Preserved H moat region; no I displacement. Retained comparison extent, not a new edit."
+    },
+    {
+      "id": "rampart-expanded-toes",
+      "model": "phase3i.glb",
+      "bounds": [
+        -43,
+        -25,
+        -29,
+        31
+      ],
+      "feather": 3,
+      "description": "Preserved H rampart region; no I displacement. Retained comparison extent, not a new edit."
+    },
+    {
+      "id": "west-approach-short-extension",
+      "model": "phase3i-inner.glb",
+      "bounds": [
+        -99,
+        2,
+        -87,
+        23
+      ],
+      "feather": 3,
+      "description": "C short west-side inner approach beyond H northern edit boundary. Existing mesh only, no claimed historical path."
+    }
+  ],
+  "sourceIds": [
+    "plan",
+    "mishima-moat",
+    "mishima-works",
+    "mishima-inner"
+  ],
+  "sourceLedgers": [
+    "public/data/nishinomaru-layout.json",
+    "public/data/phase3c.json"
+  ],
+  "provenance": "Project-original bounded extension of H hypotheses. Source references are context, not evidence of newly chosen dimensions.",
+  "uncertainty": "1590 shape, dimension, vegetation and real-site route remain UNKNOWN. No B promotion.",
+  "appearance": "Separate I procedural D surface/low vegetation recipe; native C geometry has inherited neutral material.",
+  "preservation": "All A/H originals immutable. XY and topology fixed. Only Z inside open rectangles changes. Fence supports near E=-20,N=0 outside edits. Continuous existing coverage; no invented pathway."
+}

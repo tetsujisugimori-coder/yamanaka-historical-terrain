@@ -1,0 +1,72 @@
+{
+  "label": "H",
+  "startedAt": "2026-11-08T10:22:53.406Z",
+  "head": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+  "mainSha256": "66ddee062ecbcd81261d376e91064f00f074c1528dc968c862c02b3dae2c7bb1",
+  "conditions": {
+    "engine": "Chromium",
+    "viewport": [
+      1280,
+      900
+    ],
+    "dpr": 1,
+    "trials": 3,
+    "order": "each fresh browser context cold navigation then same-context warm reload",
+    "cache": "HTTP resource entries retained; cache claim requires actual transfer sizes",
+    "scope": "localhost CPU-rendered browser; ready plus two RAF is a presentation proxy, not GPU completion",
+    "gpu": "NOT_TESTED: no GPU timer-query measurement",
+    "parse": "NOT_TESTED for baseline; Resource Timing excludes parsing"
+  },
+  "rows": [
+    {
+      "trial": 1,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4381/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4381/\", waiting until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:55"
+    },
+    {
+      "trial": 1,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.reload: Protocol error (Page.reload): Not attached to an active page\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:78"
+    },
+    {
+      "trial": 2,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4381/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4381/\", waiting until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:55"
+    },
+    {
+      "trial": 2,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.reload: Protocol error (Page.reload): Not attached to an active page\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:78"
+    },
+    {
+      "trial": 3,
+      "cache": "cold",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4381/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4381/\", waiting until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:55"
+    },
+    {
+      "trial": 3,
+      "cache": "warm",
+      "errors": [],
+      "httpErrors": [],
+      "status": "FAIL",
+      "reason": "page.reload: Protocol error (Page.reload): Not attached to an active page\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n    at /workspace/shared/yamanaka-stage-i/scripts/phase3i-performance.mjs:9:78"
+    }
+  ],
+  "browser": "141.0.7390.37",
+  "completedAt": "2026-11-08T10:22:53.601Z"
+}

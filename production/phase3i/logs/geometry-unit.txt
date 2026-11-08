@@ -1,0 +1,13 @@
+✔ I short approach has actual bounded height edit outside H patch (2.18786ms)
+✔ I main terrain and five original post support points stay identical (5.571575ms)
+✔ I public support metadata matches exported triangles (12.299789ms)
+✔ I D palette output parameter matches independent fresh result without mutating previous outputs (1.058961ms)
+✔ I D six shrubs retain existing placement but have bounded individual size and tint (2.867224ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2396.004909

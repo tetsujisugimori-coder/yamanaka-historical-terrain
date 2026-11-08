@@ -21,13 +21,14 @@ export function landscapeModel(gltf,westernBounds){
 }
 
 // Vertex colors only: never change the position/index arrays used by sections.
+const landscapePalette=Object.fromEntries(['#9e8059','#78814c','#ac9670','#a99672','#8b925b','#9a8559','#7d8950','#687f55'].map(hex=>[hex,new THREE.Color(hex)]));
 export function landscapeColor(id,e,h,s,slope){
  const noise=(Math.sin(e*.23+s*.17)*Math.sin(e*.073-s*.267)+Math.sin(e*.61-s*.39)*.25)*.045;
  let color;
- if(id==='nm-moat')color=new THREE.Color(slope>24?'#9e8059':'#78814c');
- else if(id==='nm-passage')color=new THREE.Color('#ac9670');
- else if(id==='nm-bailey'){const track=Math.abs(e+12+Math.sin(s*.09)*3)<3; color=new THREE.Color(track?'#a99672':'#8b925b');}
- else if(id==='nm-rampart')color=new THREE.Color(slope>30?'#9a8559':'#7d8950');
- else color=new THREE.Color('#687f55');
+ if(id==='nm-moat')color=landscapePalette[slope>24?'#9e8059':'#78814c'].clone();
+ else if(id==='nm-passage')color=landscapePalette['#ac9670'].clone();
+ else if(id==='nm-bailey'){const track=Math.abs(e+12+Math.sin(s*.09)*3)<3; color=landscapePalette[track?'#a99672':'#8b925b'].clone();}
+ else if(id==='nm-rampart')color=landscapePalette[slope>30?'#9a8559':'#7d8950'].clone();
+ else color=landscapePalette['#687f55'].clone();
  return color.multiplyScalar(1+noise);
 }

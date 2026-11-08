@@ -82,3 +82,10 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 
 ## 第3期H（推定C・景観Dの限定拡張）
 土橋から曲輪・虎口への連続地表と西ノ丸堀・土塁の実形状をGより拡張。QGIS/Blender原本、生成・再読込、区域外保全は [制作記録](production/phase3h/README.md)、D材質・低木と木柵交換契約は [設計](docs/phase3h-terrain-landscape.md) を参照。新規寸法と植生は歴史的確証ではありません。正式CAD部品は未連携です。
+
+## 第3期I（Draft、公開前・総合PARTIAL）
+西側innerアプローチの小区間を推定C地形として改訂し、赤土・草・踏み跡・既存低木のD景観を限定改良。QGIS/Blender編集原本と再生成手順、およびGLB処理・CPU描画の計測基盤を追加しました。**標高2倍時の同期描画契約を壊した描画要求集約案は撤回し、最終版では同期描画を維持しています。** 初期候補の約49%高速化は最終成果の性能値ではありません。
+
+最終同条件CIでの施設準備の冷間中央値はH13.2967秒→I13.1923秒（約0.8%短縮）、再読込みはH13.2364秒→I13.1901秒（約0.35%短縮）。各3回・H先行の非交互計測で、差の有意性と目標11.61秒の達成を立証できず、歩行30moveの壁時計時間も冷間で約1.66%増加しました。**性能改善は未達**であり、GPU描画完了・実機Safariの性能は未検証です。景観・計測基盤の限定採用と性能改善の合否は分けて扱います。
+
+[景観・計測基盤の限定受入 Issue #27](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/27)／[負荷分解・性能再検証 Issue #28](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/28)／[西木戸口本体・光影・遠景の別工程 Issue #29](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/29)。[範囲・計測・制約](docs/phase3i-design.md)、[編集原本と再生成](docs/phase3i-production.md)。史実確証・正式CAD連携ではありません。PR #26はDraft・未マージ・未公開を維持します。

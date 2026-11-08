@@ -1,0 +1,132 @@
+[
+  { name: '(program)', url: '', line: -1, selfMs: 9999.891 },
+  {
+    name: 'createWalkWorld',
+    url: 'http://127.0.0.1:4381/src/exploration.js',
+    line: 8,
+    selfMs: 331.008
+  },
+  { name: '(garbage collector)', url: '', line: -1, selfMs: 247.619 },
+  {
+    name: 'setStyle',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 9248,
+    selfMs: 127.963
+  },
+  { name: 'getProgramInfoLog', url: '', line: -1, selfMs: 105.34 },
+  {
+    name: 'contextOutsidePatch',
+    url: 'http://127.0.0.1:4381/src/phase3b.js',
+    line: 4,
+    selfMs: 87.285
+  },
+  { name: '(idle)', url: '', line: -1, selfMs: 82.702 },
+  {
+    name: 'getZ',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10576,
+    selfMs: 75.418
+  },
+  {
+    name: 'getX',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10530,
+    selfMs: 75.198
+  },
+  {
+    name: '',
+    url: 'http://127.0.0.1:4381/src/main.js',
+    line: 348,
+    selfMs: 74.156
+  },
+  {
+    name: 'getX',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10530,
+    selfMs: 73.391
+  },
+  {
+    name: 'SRGBToLinear',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 3488,
+    selfMs: 67.591
+  },
+  {
+    name: 'apply',
+    url: 'http://127.0.0.1:4381/src/nature-finish.js',
+    line: 14,
+    selfMs: 58.5
+  },
+  {
+    name: '',
+    url: 'http://127.0.0.1:4381/src/main.js',
+    line: 142,
+    selfMs: 52.42
+  },
+  {
+    name: 'getX',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10530,
+    selfMs: 52.226
+  },
+  {
+    name: 'getZ',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10576,
+    selfMs: 46.326
+  },
+  {
+    name: '',
+    url: 'http://127.0.0.1:4381/src/exploration.js',
+    line: 13,
+    selfMs: 42.544
+  },
+  {
+    name: 'surfaceTint',
+    url: 'http://127.0.0.1:4381/src/nature-finish.js',
+    line: 3,
+    selfMs: 41.971
+  },
+  {
+    name: 'crossVectors',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 2537,
+    selfMs: 40.791
+  },
+  {
+    name: 'getX',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10530,
+    selfMs: 39.519
+  },
+  {
+    name: 'getX',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 10530,
+    selfMs: 39.143
+  },
+  {
+    name: 'setStyle',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 9248,
+    selfMs: 37.965
+  },
+  {
+    name: 'getVertexPosition',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 11739,
+    selfMs: 37.014
+  },
+  {
+    name: 'fromBufferAttribute',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 2785,
+    selfMs: 36.99
+  },
+  {
+    name: 'subVectors',
+    url: 'http://127.0.0.1:4381/node_modules/.vite/deps/chunk-XQM6KNR4.js?v=658fc0e7',
+    line: 2131,
+    selfMs: 35.201
+  }
+]
