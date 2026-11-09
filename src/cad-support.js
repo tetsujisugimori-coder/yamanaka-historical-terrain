@@ -25,23 +25,23 @@ function indexCompatible(meshes){
  });
 }
 export function createCadSupportCache(){
- let previous=null,sampler=null,builds=0,hits=0,fallbackQueries=0,mode=null;
+ let previous=null,sampler=null,builds=0,hits=0,fallbackQueries=0,mode=null,indexedTriangleCount=0,groundCellCount=0;
  return {
   get(meshes){
    const next=signature(meshes);
    if(previous&&next.length===previous.length&&next.every((v,i)=>v===previous[i])){hits++;return sampler;}
-   previous=null;sampler=null;mode=null;
+   previous=null;sampler=null;mode=null;indexedTriangleCount=0;groundCellCount=0;
    const ray=triangleSampler(meshes);
    if(!indexCompatible(meshes)){previous=next;builds++;mode='ray-fallback';sampler=(x,z)=>{fallbackQueries++;return ray(x,z)};return sampler;}
-   const world=createWalkWorld(meshes,[]);previous=next;builds++;mode='indexed-world-triangles';
+   const world=createWalkWorld(meshes,[],{groundCellBounds:[-14,-6,-4,4]});indexedTriangleCount=world.indexedTriangleCount;groundCellCount=world.groundCellCount;previous=next;builds++;mode='indexed-world-triangles';
    sampler=(x,z)=>{
     if(!Number.isFinite(x)||!Number.isFinite(z))return null;
-    if(x< -204||x>=18||z< -52||z>=50){fallbackQueries++;return ray(x,z);}
+    if(x< -28||x>=-10||z< -8||z>=10){fallbackQueries++;return ray(x,z);}
     return world.sample(x,z);
    };
    return sampler;
   },
-  clear(){previous=null;sampler=null;mode=null;},
-  diagnostics(){return {builds,hits,fallbackQueries,mode};}
+  clear(){previous=null;sampler=null;mode=null;indexedTriangleCount=0;groundCellCount=0;},
+  diagnostics(){return {builds,hits,fallbackQueries,mode,indexedTriangleCount,groundCellCount};}
  };
 }

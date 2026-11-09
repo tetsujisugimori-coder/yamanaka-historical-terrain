@@ -49,3 +49,18 @@ test('failed cache rebuild never returns a previous geometry snapshot',()=>{
  assert.throws(()=>c.get([m]));assert.throws(()=>c.get([m]));
  m.geometry.attributes.position=position;const repaired=c.get([m]);assert.notEqual(repaired,old);assert.equal(repaired(-20,0).height,0);
 });
+test('optional ground cell bounds preserve default walking and same actual triangle/face in retained cells',async()=>{
+ const {createWalkWorld}=await import('../src/exploration.js');
+ const mesh=surface(3),full=createWalkWorld([mesh],[]),explicit=createWalkWorld([mesh],[],{groundCellBounds:[-102,8,-26,24]}),small=createWalkWorld([mesh],[],{groundCellBounds:[-14,-6,-4,4]});
+ assert.equal(full.groundCellCount,explicit.groundCellCount);assert.equal(full.indexedTriangleCount,explicit.indexedTriangleCount);
+ for(const [x,z] of [[-20,0],[-25,4],[-12,-6]]){assert.deepEqual(full.sample(x,z),explicit.sample(x,z));assert.deepEqual(full.sample(x,z),small.sample(x,z));}
+ assert.ok(full.sample(-29,0));assert.equal(small.sample(-29,0),null);
+ assert.ok(small.groundCellCount<full.groundCellCount);assert.equal(small.indexedTriangleCount,2);
+ for(const bounds of [null,[],[0,1,0],[2,1,0,1],[0,1,2,1],[0,Infinity,0,1],[0,.5,0,1],[0,1,NaN,2]])assert.throws(()=>createWalkWorld([mesh],[],{groundCellBounds:bounds}),/bounds/);
+});
+test('CAD cache rays outside its small footprint even inside the walking grid',()=>{
+ const m=surface(6),c=createCadSupportCache(),sample=c.get([m]);
+ assert.equal(sample(-29,0).height,6);assert.equal(c.diagnostics().fallbackQueries,1);
+ assert.equal(sample(-20,0).height,6);assert.equal(c.diagnostics().groundCellCount,81);
+ assert.equal(c.diagnostics().indexedTriangleCount,2);
+});
