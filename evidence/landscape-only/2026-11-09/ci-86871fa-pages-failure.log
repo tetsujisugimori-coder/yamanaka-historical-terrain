@@ -1,0 +1,2196 @@
+﻿2026-11-09T12:55:50.2022708Z Current runner version: '2.338.2'
+2026-11-09T12:55:50.2043746Z ##[group]Runner Image Provisioner
+2026-11-09T12:55:50.2044543Z Hosted Compute Agent
+2026-11-09T12:55:50.2045073Z Version: 20261028.624
+2026-11-09T12:55:50.2045612Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-09T12:55:50.2046259Z Build Date: 2026-10-28T21:51:42Z
+2026-11-09T12:55:50.2046848Z Worker ID: {832f75c0-cdd2-44af-a799-f71f3ad43fc9}
+2026-11-09T12:55:50.2047461Z Region: westus3
+2026-11-09T12:55:50.2047993Z Cloud: Azure
+2026-11-09T12:55:50.2048458Z ##[endgroup]
+2026-11-09T12:55:50.2049932Z ##[group]Operating System
+2026-11-09T12:55:50.2050540Z Ubuntu
+2026-11-09T12:55:50.2051268Z 24.04.5
+2026-11-09T12:55:50.2051782Z LTS
+2026-11-09T12:55:50.2052233Z ##[endgroup]
+2026-11-09T12:55:50.2052724Z ##[group]Runner Image
+2026-11-09T12:55:50.2053256Z Image: ubuntu-24.04
+2026-11-09T12:55:50.2053779Z Version: 20261101.360.1
+2026-11-09T12:55:50.2054883Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-09T12:55:50.2056135Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-09T12:55:50.2056993Z ##[endgroup]
+2026-11-09T12:55:50.2057954Z ##[group]GITHUB_TOKEN Permissions
+2026-11-09T12:55:50.2059593Z Contents: read
+2026-11-09T12:55:50.2060100Z Metadata: read
+2026-11-09T12:55:50.2060694Z ##[endgroup]
+2026-11-09T12:55:50.2062738Z Secret source: Actions
+2026-11-09T12:55:50.2063588Z Cache mode: write
+2026-11-09T12:55:50.2064177Z Prepare workflow directory
+2026-11-09T12:55:50.2346534Z Prepare all required actions
+2026-11-09T12:55:50.2400650Z Getting action download info
+2026-11-09T12:55:50.5378494Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-09T12:55:50.6621535Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-11-09T12:55:51.2198546Z Download action repository 'actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d' (SHA:45bfe0192ca1faeb007ade9deae92b16b8254a0d)
+2026-11-09T12:55:51.7950563Z Download action repository 'actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9' (SHA:fc324d3547104276b827a68afc52ff2a11cc49c9)
+2026-11-09T12:55:52.1674930Z Getting action download info
+2026-11-09T12:55:52.2855234Z Download action repository 'actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f' (SHA:bbbca2ddaa5d8feaa63e36b76fdaad77386f024f)
+2026-11-09T12:55:52.4516524Z Complete job name: build
+2026-11-09T12:55:52.5148528Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-09T12:55:52.5149061Z with:
+2026-11-09T12:55:52.5149315Z   repository: tetsujisugimori-coder/yamanaka-historical-terrain
+2026-11-09T12:55:52.5151485Z   token: ***
+2026-11-09T12:55:52.5151669Z   ssh-strict: true
+2026-11-09T12:55:52.5151852Z   ssh-user: git
+2026-11-09T12:55:52.5152041Z   persist-credentials: true
+2026-11-09T12:55:52.5152276Z   clean: true
+2026-11-09T12:55:52.5152472Z   sparse-checkout-cone-mode: true
+2026-11-09T12:55:52.5152694Z   fetch-depth: 1
+2026-11-09T12:55:52.5152871Z   fetch-tags: false
+2026-11-09T12:55:52.5153050Z   show-progress: true
+2026-11-09T12:55:52.5153236Z   lfs: false
+2026-11-09T12:55:52.5153406Z   submodules: false
+2026-11-09T12:55:52.5153591Z   set-safe-directory: true
+2026-11-09T12:55:52.5153806Z   allow-unsafe-pr-checkout: false
+2026-11-09T12:55:52.5154519Z ##[endgroup]
+2026-11-09T12:55:52.8325705Z Syncing repository: tetsujisugimori-coder/yamanaka-historical-terrain
+2026-11-09T12:55:52.8327152Z ##[group]Getting Git version info
+2026-11-09T12:55:52.8327796Z Working directory is '/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain'
+2026-11-09T12:55:52.8328414Z [command]/usr/bin/git version
+2026-11-09T12:55:52.8339578Z git version 2.56.0
+2026-11-09T12:55:52.8358568Z ##[endgroup]
+2026-11-09T12:55:52.8368585Z Temporarily overriding HOME='/home/runner/work/_temp/00068bf8-20cb-42dd-9052-6e776e3e492a' before making global git config changes
+2026-11-09T12:55:52.8370171Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T12:55:52.8374314Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain
+2026-11-09T12:55:52.8418094Z Deleting the contents of '/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain'
+2026-11-09T12:55:52.8420479Z ##[group]Determining repository object format
+2026-11-09T12:55:52.8421989Z ##[endgroup]
+2026-11-09T12:55:52.8422472Z ##[group]Initializing the repository
+2026-11-09T12:55:52.8425450Z [command]/usr/bin/git init /home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain
+2026-11-09T12:55:52.8535899Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T12:55:52.8537384Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T12:55:52.8538146Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T12:55:52.8538652Z hint: call:
+2026-11-09T12:55:52.8538896Z hint:
+2026-11-09T12:55:52.8539304Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T12:55:52.8539709Z hint:
+2026-11-09T12:55:52.8540117Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T12:55:52.8541076Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T12:55:52.8541656Z hint:
+2026-11-09T12:55:52.8541984Z hint: 	git branch -m <name>
+2026-11-09T12:55:52.8542409Z hint:
+2026-11-09T12:55:52.8543107Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T12:55:52.8544373Z Initialized empty Git repository in /home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git/
+2026-11-09T12:55:52.8552270Z [command]/usr/bin/git remote add origin https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain
+2026-11-09T12:55:52.8596483Z ##[endgroup]
+2026-11-09T12:55:52.8597054Z ##[group]Disabling automatic garbage collection
+2026-11-09T12:55:52.8599984Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-09T12:55:52.8630480Z ##[endgroup]
+2026-11-09T12:55:52.8631341Z ##[group]Setting up auth
+2026-11-09T12:55:52.8631718Z Removing SSH command configuration
+2026-11-09T12:55:52.8636404Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T12:55:52.8668775Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T12:55:52.8984763Z Removing HTTP extra header
+2026-11-09T12:55:52.8989842Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T12:55:52.9031268Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T12:55:52.9234430Z Removing includeIf entries pointing to credentials config files
+2026-11-09T12:55:52.9238745Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T12:55:52.9276221Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-09T12:55:52.9481826Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-09T12:55:52.9522933Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git.path /home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:55:52.9559283Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:55:52.9596533Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:55:52.9633713Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:55:52.9668252Z ##[endgroup]
+2026-11-09T12:55:52.9668798Z ##[group]Fetching the repository
+2026-11-09T12:55:52.9673753Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8e3f49935204c9f1b833c34c7872afe18475f21e:refs/remotes/pull/36/merge
+2026-11-09T12:56:00.6651782Z From https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain
+2026-11-09T12:56:00.6652395Z  * [new ref]         8e3f49935204c9f1b833c34c7872afe18475f21e -> pull/36/merge
+2026-11-09T12:56:00.6655218Z ##[endgroup]
+2026-11-09T12:56:00.6656247Z ##[group]Determining the checkout info
+2026-11-09T12:56:00.6656606Z ##[endgroup]
+2026-11-09T12:56:00.6661660Z [command]/usr/bin/git sparse-checkout disable
+2026-11-09T12:56:00.6716121Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-09T12:56:00.6755746Z ##[group]Checking out the ref
+2026-11-09T12:56:00.6756359Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/36/merge
+2026-11-09T12:56:01.6879856Z Updating files:  87% (1600/1821)
+2026-11-09T12:56:01.6980302Z Updating files:  88% (1603/1821)
+2026-11-09T12:56:01.6987471Z Updating files:  89% (1621/1821)
+2026-11-09T12:56:01.6996857Z Updating files:  90% (1639/1821)
+2026-11-09T12:56:01.7006896Z Updating files:  91% (1658/1821)
+2026-11-09T12:56:01.7017135Z Updating files:  92% (1676/1821)
+2026-11-09T12:56:01.7026656Z Updating files:  93% (1694/1821)
+2026-11-09T12:56:01.7034989Z Updating files:  94% (1712/1821)
+2026-11-09T12:56:01.7061321Z Updating files:  95% (1730/1821)
+2026-11-09T12:56:01.7091494Z Updating files:  96% (1749/1821)
+2026-11-09T12:56:01.7092246Z Updating files:  97% (1767/1821)
+2026-11-09T12:56:01.7121392Z Updating files:  98% (1785/1821)
+2026-11-09T12:56:01.7151307Z Updating files:  99% (1803/1821)
+2026-11-09T12:56:01.7181415Z Updating files: 100% (1821/1821)
+2026-11-09T12:56:01.7181994Z Updating files: 100% (1821/1821), done.
+2026-11-09T12:56:01.7609770Z Note: switching to 'refs/remotes/pull/36/merge'.
+2026-11-09T12:56:01.7610120Z 
+2026-11-09T12:56:01.7610702Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-09T12:56:01.7651992Z changes and commit them, and you can discard any commits you make in this
+2026-11-09T12:56:01.7652759Z state without impacting any branches by switching back to a branch.
+2026-11-09T12:56:01.7653139Z 
+2026-11-09T12:56:01.7653392Z If you want to create a new branch to retain commits you create, you may
+2026-11-09T12:56:01.7653955Z do so (now or later) by using -c with the switch command. Example:
+2026-11-09T12:56:01.7654333Z 
+2026-11-09T12:56:01.7654509Z   git switch -c <new-branch-name>
+2026-11-09T12:56:01.7654762Z 
+2026-11-09T12:56:01.7654890Z Or undo this operation with:
+2026-11-09T12:56:01.7655069Z 
+2026-11-09T12:56:01.7655180Z   git switch -
+2026-11-09T12:56:01.7655321Z 
+2026-11-09T12:56:01.7655575Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-09T12:56:01.7655923Z 
+2026-11-09T12:56:01.7656346Z HEAD is now at 8e3f499 Merge 86871faac10a07b56552aa76aa846e6f228ae83b into 42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8
+2026-11-09T12:56:01.7772694Z ##[endgroup]
+2026-11-09T12:56:01.7833290Z [command]/usr/bin/git log -1 --format=%H
+2026-11-09T12:56:01.7851469Z 8e3f49935204c9f1b833c34c7872afe18475f21e
+2026-11-09T12:56:01.9586775Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-11-09T12:56:01.9587104Z with:
+2026-11-09T12:56:01.9587272Z   node-version: 22
+2026-11-09T12:56:01.9587451Z   cache: npm
+2026-11-09T12:56:01.9587775Z   check-latest: false
+2026-11-09T12:56:01.9589765Z   token: ***
+2026-11-09T12:56:01.9589963Z   package-manager-cache: true
+2026-11-09T12:56:01.9590172Z ##[endgroup]
+2026-11-09T12:56:02.0662046Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+2026-11-09T12:56:02.0665024Z ##[group]Environment details
+2026-11-09T12:56:03.3493789Z node: v22.23.4
+2026-11-09T12:56:03.3494028Z npm: 10.9.9
+2026-11-09T12:56:03.3494193Z yarn: 1.22.22
+2026-11-09T12:56:03.3495120Z ##[endgroup]
+2026-11-09T12:56:03.3508466Z [command]/opt/hostedtoolcache/node/22.23.4/x64/bin/npm config get cache
+2026-11-09T12:56:03.4379892Z /home/runner/.npm
+2026-11-09T12:56:03.6879552Z Cache hit for: node-cache-Linux-x64-npm-5c38f6f189641e0c25798375e5346c97d8382d1185c0974d954e4348ea6df503
+2026-11-09T12:56:04.8571596Z Received 18325524 of 18325524 (100.0%), 19.7 MBs/sec
+2026-11-09T12:56:04.8572006Z Cache Size: ~17 MB (18325524 B)
+2026-11-09T12:56:04.8591391Z [command]/usr/bin/tar -xf /home/runner/work/_temp/722642a9-38f1-47d0-a1b9-885cc816dccd/cache.tzst -P -C /home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain --use-compress-program unzstd
+2026-11-09T12:56:04.8926444Z Cache restored successfully
+2026-11-09T12:56:04.8937929Z Cache restored from key: node-cache-Linux-x64-npm-5c38f6f189641e0c25798375e5346c97d8382d1185c0974d954e4348ea6df503
+2026-11-09T12:56:04.9101190Z ##[group]Run npm ci
+2026-11-09T12:56:04.9101455Z [36;1mnpm ci[0m
+2026-11-09T12:56:04.9127263Z shell: /usr/bin/bash -e {0}
+2026-11-09T12:56:04.9127493Z ##[endgroup]
+2026-11-09T12:56:06.4258038Z 
+2026-11-09T12:56:06.4266182Z added 18 packages, and audited 19 packages in 1s
+2026-11-09T12:56:06.4266570Z 
+2026-11-09T12:56:06.4266813Z 5 packages are looking for funding
+2026-11-09T12:56:06.4267219Z   run `npm fund` for details
+2026-11-09T12:56:06.4461188Z 
+2026-11-09T12:56:06.4461952Z 1 high severity vulnerability
+2026-11-09T12:56:06.4462523Z 
+2026-11-09T12:56:06.4462927Z To address all issues, run:
+2026-11-09T12:56:06.4463338Z   npm audit fix --force
+2026-11-09T12:56:06.4463589Z 
+2026-11-09T12:56:06.4463765Z Run `npm audit` for details.
+2026-11-09T12:56:06.4878192Z ##[group]Run npm test
+2026-11-09T12:56:06.4878430Z [36;1mnpm test[0m
+2026-11-09T12:56:06.4895909Z shell: /usr/bin/bash -e {0}
+2026-11-09T12:56:06.4896126Z ##[endgroup]
+2026-11-09T12:56:06.5862746Z 
+2026-11-09T12:56:06.5863182Z > yamanaka-historical-terrain@0.1.0 test
+2026-11-09T12:56:06.5863522Z > node --test tests/*.test.mjs
+2026-11-09T12:56:06.5863671Z 
+2026-11-09T12:56:06.6343605Z TAP version 13
+2026-11-09T12:56:09.7895401Z # Subtest: active terrain contract pins displayed I mesh and metadata
+2026-11-09T12:56:09.7932964Z ok 1 - active terrain contract pins displayed I mesh and metadata
+2026-11-09T12:56:09.7933422Z   ---
+2026-11-09T12:56:09.7951562Z   duration_ms: 0.615031
+2026-11-09T12:56:09.7952114Z   type: 'test'
+2026-11-09T12:56:09.7952413Z   ...
+2026-11-09T12:56:09.7961687Z # Subtest: stale or ambiguous metadata contract rejects instead of false success
+2026-11-09T12:56:09.7962466Z ok 2 - stale or ambiguous metadata contract rejects instead of false success
+2026-11-09T12:56:09.7963018Z   ---
+2026-11-09T12:56:09.7963257Z   duration_ms: 31.025682
+2026-11-09T12:56:09.7963534Z   type: 'test'
+2026-11-09T12:56:09.7963760Z   ...
+2026-11-09T12:56:09.7964162Z # Subtest: metadata string decoy cannot hide stale actual load
+2026-11-09T12:56:09.7964702Z ok 3 - metadata string decoy cannot hide stale actual load
+2026-11-09T12:56:09.7965056Z   ---
+2026-11-09T12:56:09.7965284Z   duration_ms: 20.496908
+2026-11-09T12:56:09.7965576Z   type: 'test'
+2026-11-09T12:56:09.7965797Z   ...
+2026-11-09T12:56:09.7966247Z # Subtest: same comment-decoy input reproduces draft RED and repaired GREEN
+2026-11-09T12:56:09.7966916Z ok 4 - same comment-decoy input reproduces draft RED and repaired GREEN
+2026-11-09T12:56:09.7967336Z   ---
+2026-11-09T12:56:09.7967558Z   duration_ms: 21.164327
+2026-11-09T12:56:09.7967834Z   type: 'test'
+2026-11-09T12:56:09.7968056Z   ...
+2026-11-09T12:56:09.7968515Z # Subtest: stale G triangle oracle fails unchanged 1mm comparison against H
+2026-11-09T12:56:09.7969480Z ok 5 - stale G triangle oracle fails unchanged 1mm comparison against H
+2026-11-09T12:56:09.7969890Z   ---
+2026-11-09T12:56:09.7970117Z   duration_ms: 2988.991652
+2026-11-09T12:56:09.7970380Z   type: 'test'
+2026-11-09T12:56:09.7970680Z   ...
+2026-11-09T12:56:09.7971265Z # Subtest: model selector and actual mapped request cannot diverge silently
+2026-11-09T12:56:09.7971916Z ok 6 - model selector and actual mapped request cannot diverge silently
+2026-11-09T12:56:09.7972334Z   ---
+2026-11-09T12:56:09.7972558Z   duration_ms: 12.588004
+2026-11-09T12:56:09.7972819Z   type: 'test'
+2026-11-09T12:56:09.7973043Z   ...
+2026-11-09T12:56:09.8445210Z # Subtest: fine texture is deterministic, opaque, and material-specific
+2026-11-09T12:56:09.8471872Z ok 7 - fine texture is deterministic, opaque, and material-specific
+2026-11-09T12:56:09.8492832Z   ---
+2026-11-09T12:56:09.8493354Z   duration_ms: 21.001579
+2026-11-09T12:56:09.8493867Z   type: 'test'
+2026-11-09T12:56:09.8494319Z   ...
+2026-11-09T12:56:09.8495045Z # Subtest: D detail restores original material and never changes source geometry
+2026-11-09T12:56:09.8496010Z ok 8 - D detail restores original material and never changes source geometry
+2026-11-09T12:56:09.8496654Z   ---
+2026-11-09T12:56:09.8497059Z   duration_ms: 3.3285
+2026-11-09T12:56:09.8497511Z   type: 'test'
+2026-11-09T12:56:09.8497919Z   ...
+2026-11-09T12:56:09.8498553Z # Subtest: new base selection A cannot be overwritten by stale D cache
+2026-11-09T12:56:09.8499396Z ok 9 - new base selection A cannot be overwritten by stale D cache
+2026-11-09T12:56:09.8499997Z   ---
+2026-11-09T12:56:09.8500400Z   duration_ms: 3.883881
+2026-11-09T12:56:09.8501191Z   type: 'test'
+2026-11-09T12:56:09.8501578Z   ...
+2026-11-09T12:56:09.8502221Z # Subtest: complete synthetic evidence control accepted, not a browser claim
+2026-11-09T12:56:09.8503084Z ok 10 - complete synthetic evidence control accepted, not a browser claim
+2026-11-09T12:56:09.8503879Z   ---
+2026-11-09T12:56:09.8514463Z   duration_ms: 3.958813
+2026-11-09T12:56:09.8515419Z   type: 'test'
+2026-11-09T12:56:09.8515847Z   ...
+2026-11-09T12:56:09.8516355Z # Subtest: reject arbitraryChecks
+2026-11-09T12:56:09.8516929Z ok 11 - reject arbitraryChecks
+2026-11-09T12:56:09.8517395Z   ---
+2026-11-09T12:56:09.8517808Z   duration_ms: 5.545748
+2026-11-09T12:56:09.8518256Z   type: 'test'
+2026-11-09T12:56:09.8518821Z   ...
+2026-11-09T12:56:09.8519467Z # Subtest: reject arbitraryGuide
+2026-11-09T12:56:09.8561540Z ok 12 - reject arbitraryGuide
+2026-11-09T12:56:09.8591392Z   ---
+2026-11-09T12:56:09.8621268Z   duration_ms: 0.887588
+2026-11-09T12:56:09.8621794Z   type: 'test'
+2026-11-09T12:56:09.8651393Z   ...
+2026-11-09T12:56:09.8681302Z # Subtest: reject wrongEngine
+2026-11-09T12:56:09.8711319Z ok 13 - reject wrongEngine
+2026-11-09T12:56:09.8711869Z   ---
+2026-11-09T12:56:09.8741488Z   duration_ms: 0.472917
+2026-11-09T12:56:09.8751491Z   type: 'test'
+2026-11-09T12:56:09.8780591Z   ...
+2026-11-09T12:56:09.8781445Z # Subtest: reject sourceOmission
+2026-11-09T12:56:09.8781996Z ok 14 - reject sourceOmission
+2026-11-09T12:56:09.8782454Z   ---
+2026-11-09T12:56:09.8782979Z   duration_ms: 0.495932
+2026-11-09T12:56:09.8783383Z   type: 'test'
+2026-11-09T12:56:09.8783789Z   ...
+2026-11-09T12:56:09.8784198Z # Subtest: reject noInput
+2026-11-09T12:56:09.8784648Z ok 15 - reject noInput
+2026-11-09T12:56:09.8785058Z   ---
+2026-11-09T12:56:09.8785423Z   duration_ms: 0.340219
+2026-11-09T12:56:09.8785819Z   type: 'test'
+2026-11-09T12:56:09.8786190Z   ...
+2026-11-09T12:56:09.8786585Z # Subtest: reject noMotion
+2026-11-09T12:56:09.8787112Z ok 16 - reject noMotion
+2026-11-09T12:56:09.8787505Z   ---
+2026-11-09T12:56:09.8787881Z   duration_ms: 0.408651
+2026-11-09T12:56:09.8788275Z   type: 'test'
+2026-11-09T12:56:09.8788641Z   ...
+2026-11-09T12:56:09.8789026Z # Subtest: reject empty
+2026-11-09T12:56:09.8789442Z ok 17 - reject empty
+2026-11-09T12:56:09.8789841Z   ---
+2026-11-09T12:56:09.8790221Z   duration_ms: 0.312407
+2026-11-09T12:56:09.8791230Z   type: 'test'
+2026-11-09T12:56:09.8791619Z   ...
+2026-11-09T12:56:09.8792039Z # Subtest: reject missing
+2026-11-09T12:56:09.8792465Z ok 18 - reject missing
+2026-11-09T12:56:09.8792854Z   ---
+2026-11-09T12:56:09.8793224Z   duration_ms: 0.579347
+2026-11-09T12:56:09.8793616Z   type: 'test'
+2026-11-09T12:56:09.8793974Z   ...
+2026-11-09T12:56:09.8794367Z # Subtest: reject duplicate
+2026-11-09T12:56:09.8794811Z ok 19 - reject duplicate
+2026-11-09T12:56:09.8795212Z   ---
+2026-11-09T12:56:09.8795580Z   duration_ms: 1.373205
+2026-11-09T12:56:09.8795969Z   type: 'test'
+2026-11-09T12:56:09.8796331Z   ...
+2026-11-09T12:56:09.8796716Z # Subtest: reject stale
+2026-11-09T12:56:09.8797129Z ok 20 - reject stale
+2026-11-09T12:56:09.8797511Z   ---
+2026-11-09T12:56:09.8797882Z   duration_ms: 0.38807
+2026-11-09T12:56:09.8798272Z   type: 'test'
+2026-11-09T12:56:09.8798633Z   ...
+2026-11-09T12:56:09.8799014Z # Subtest: reject tree
+2026-11-09T12:56:09.8799420Z ok 21 - reject tree
+2026-11-09T12:56:09.8799794Z   ---
+2026-11-09T12:56:09.8800174Z   duration_ms: 0.322643
+2026-11-09T12:56:09.8800563Z   type: 'test'
+2026-11-09T12:56:09.8801044Z   ...
+2026-11-09T12:56:09.8801434Z # Subtest: reject hash
+2026-11-09T12:56:09.8801841Z ok 22 - reject hash
+2026-11-09T12:56:09.8802216Z   ---
+2026-11-09T12:56:09.8802579Z   duration_ms: 0.582782
+2026-11-09T12:56:09.8802967Z   type: 'test'
+2026-11-09T12:56:09.8803337Z   ...
+2026-11-09T12:56:09.8803710Z # Subtest: reject midrun
+2026-11-09T12:56:09.8804136Z ok 23 - reject midrun
+2026-11-09T12:56:09.8804519Z   ---
+2026-11-09T12:56:09.8804879Z   duration_ms: 0.357504
+2026-11-09T12:56:09.8805284Z   type: 'test'
+2026-11-09T12:56:09.8805649Z   ...
+2026-11-09T12:56:09.8806028Z # Subtest: reject failure
+2026-11-09T12:56:09.8806458Z ok 24 - reject failure
+2026-11-09T12:56:09.8806845Z   ---
+2026-11-09T12:56:09.8807211Z   duration_ms: 0.296814
+2026-11-09T12:56:09.8807606Z   type: 'test'
+2026-11-09T12:56:09.8807963Z   ...
+2026-11-09T12:56:09.8808641Z # Subtest: reject pageerror
+2026-11-09T12:56:09.8809093Z ok 25 - reject pageerror
+2026-11-09T12:56:09.8809515Z   ---
+2026-11-09T12:56:09.8810111Z   duration_ms: 0.290685
+2026-11-09T12:56:09.8810525Z   type: 'test'
+2026-11-09T12:56:09.8811037Z   ...
+2026-11-09T12:56:09.8811426Z # Subtest: reject untested
+2026-11-09T12:56:09.8811865Z ok 26 - reject untested
+2026-11-09T12:56:09.8812254Z   ---
+2026-11-09T12:56:09.8812612Z   duration_ms: 0.317946
+2026-11-09T12:56:09.8813009Z   type: 'test'
+2026-11-09T12:56:09.8813369Z   ...
+2026-11-09T12:56:09.8813739Z # Subtest: reject eye
+2026-11-09T12:56:09.8814150Z ok 27 - reject eye
+2026-11-09T12:56:09.8814559Z   ---
+2026-11-09T12:56:09.8814919Z   duration_ms: 0.262563
+2026-11-09T12:56:09.8815335Z   type: 'test'
+2026-11-09T12:56:09.8815778Z   ...
+2026-11-09T12:56:09.8816174Z # Subtest: reject png
+2026-11-09T12:56:09.8816591Z ok 28 - reject png
+2026-11-09T12:56:09.8816959Z   ---
+2026-11-09T12:56:09.8817324Z   duration_ms: 0.30051
+2026-11-09T12:56:09.8817731Z   type: 'test'
+2026-11-09T12:56:09.8818095Z   ...
+2026-11-09T12:56:09.8818473Z # Subtest: reject frames
+2026-11-09T12:56:09.8818942Z ok 29 - reject frames
+2026-11-09T12:56:09.8819355Z   ---
+2026-11-09T12:56:09.8819736Z   duration_ms: 0.318176
+2026-11-09T12:56:09.8820143Z   type: 'test'
+2026-11-09T12:56:09.8820656Z   ...
+2026-11-09T12:56:09.8821147Z # Subtest: reject guide
+2026-11-09T12:56:09.8821577Z ok 30 - reject guide
+2026-11-09T12:56:09.8821960Z   ---
+2026-11-09T12:56:09.8822339Z   duration_ms: 0.439447
+2026-11-09T12:56:09.8822732Z   type: 'test'
+2026-11-09T12:56:09.8823106Z   ...
+2026-11-09T12:56:09.8823641Z # Subtest: exploration preserves eight unique station IDs
+2026-11-09T12:56:09.8824418Z ok 31 - exploration preserves eight unique station IDs
+2026-11-09T12:56:09.8824918Z   ---
+2026-11-09T12:56:09.8825279Z   duration_ms: 0.971053
+2026-11-09T12:56:09.8825688Z   type: 'test'
+2026-11-09T12:56:09.8826052Z   ...
+2026-11-09T12:56:09.8826573Z # Subtest: actual triangles provide support at scaled height
+2026-11-09T12:56:09.8827261Z ok 32 - actual triangles provide support at scaled height
+2026-11-09T12:56:09.8833882Z   ---
+2026-11-09T12:56:09.8834329Z   duration_ms: 3.431374
+2026-11-09T12:56:09.8834772Z   type: 'test'
+2026-11-09T12:56:09.8835140Z   ...
+2026-11-09T12:56:09.8835805Z # Subtest: walk changes horizontal position without touching input and follows ground
+2026-11-09T12:56:09.8836740Z ok 33 - walk changes horizontal position without touching input and follows ground
+2026-11-09T12:56:09.8837397Z   ---
+2026-11-09T12:56:09.8837766Z   duration_ms: 3.646886
+2026-11-09T12:56:09.8838169Z   type: 'test'
+2026-11-09T12:56:09.8838554Z   ...
+2026-11-09T12:56:09.8839176Z # Subtest: obstacle blocks swept movement rather than letting large frame tunnel
+2026-11-09T12:56:09.8840032Z ok 34 - obstacle blocks swept movement rather than letting large frame tunnel
+2026-11-09T12:56:09.8840630Z   ---
+2026-11-09T12:56:09.8841124Z   duration_ms: 2.812598
+2026-11-09T12:56:09.8841525Z   type: 'test'
+2026-11-09T12:56:09.8841895Z   ...
+2026-11-09T12:56:09.8842447Z # Subtest: moat and earthwork are forbidden even with level surfaces
+2026-11-09T12:56:09.8843206Z ok 35 - moat and earthwork are forbidden even with level surfaces
+2026-11-09T12:56:09.8843750Z   ---
+2026-11-09T12:56:09.8844105Z   duration_ms: 7.275732
+2026-11-09T12:56:09.8844498Z   type: 'test'
+2026-11-09T12:56:09.8844993Z   ...
+2026-11-09T12:56:09.8845615Z # Subtest: uncovered triangles and finite permission envelopes fail closed
+2026-11-09T12:56:09.8846428Z ok 36 - uncovered triangles and finite permission envelopes fail closed
+2026-11-09T12:56:09.8846988Z   ---
+2026-11-09T12:56:09.8847378Z   duration_ms: 0.184796
+2026-11-09T12:56:09.8847800Z   type: 'test'
+2026-11-09T12:56:09.8848174Z   ...
+2026-11-09T12:56:09.8848639Z # Subtest: steep actual plane rejects walking
+2026-11-09T12:56:09.8849211Z ok 37 - steep actual plane rejects walking
+2026-11-09T12:56:09.8849667Z   ---
+2026-11-09T12:56:09.8850034Z   duration_ms: 1.267446
+2026-11-09T12:56:09.8850433Z   type: 'test'
+2026-11-09T12:56:09.8850927Z   ...
+2026-11-09T12:56:09.8851557Z # Subtest: step and drop reject even when destination reports permitted ground
+2026-11-09T12:56:09.8852699Z ok 38 - step and drop reject even when destination reports permitted ground
+2026-11-09T12:56:09.8853284Z   ---
+2026-11-09T12:56:09.8853661Z   duration_ms: 0.229514
+2026-11-09T12:56:09.8854053Z   type: 'test'
+2026-11-09T12:56:09.8854418Z   ...
+2026-11-09T12:56:09.8855000Z # Subtest: nonfinite and unbounded movement cannot be treated as success
+2026-11-09T12:56:09.8855782Z ok 39 - nonfinite and unbounded movement cannot be treated as success
+2026-11-09T12:56:09.8856331Z   ---
+2026-11-09T12:56:09.8856689Z   duration_ms: 0.560579
+2026-11-09T12:56:09.8857079Z   type: 'test'
+2026-11-09T12:56:09.8857449Z   ...
+2026-11-09T12:56:09.8857992Z # Subtest: overhead beam does not block person while low rail does
+2026-11-09T12:56:09.8858713Z ok 40 - overhead beam does not block person while low rail does
+2026-11-09T12:56:09.8859238Z   ---
+2026-11-09T12:56:09.8859595Z   duration_ms: 3.964301
+2026-11-09T12:56:09.8859989Z   type: 'test'
+2026-11-09T12:56:09.8860359Z   ...
+2026-11-09T12:56:09.8861042Z # Subtest: ground edge and radius are part of collision, not just centre
+2026-11-09T12:56:09.8861839Z ok 41 - ground edge and radius are part of collision, not just centre
+2026-11-09T12:56:09.8862408Z   ---
+2026-11-09T12:56:09.8862776Z   duration_ms: 0.326479
+2026-11-09T12:56:09.8863177Z   type: 'test'
+2026-11-09T12:56:09.8863557Z   ...
+2026-11-09T12:56:09.8864191Z # Subtest: batched disconnected fence geometry does not seal the entire courtyard
+2026-11-09T12:56:09.8865075Z ok 42 - batched disconnected fence geometry does not seal the entire courtyard
+2026-11-09T12:56:09.8865669Z   ---
+2026-11-09T12:56:09.8866034Z   duration_ms: 5.579418
+2026-11-09T12:56:09.8866427Z   type: 'test'
+2026-11-09T12:56:09.8866795Z   ...
+2026-11-09T12:56:09.8867530Z # Subtest: indexed triangle sampler matches independent Three ray intersections with scale and tilt
+2026-11-09T12:56:09.8868571Z ok 43 - indexed triangle sampler matches independent Three ray intersections with scale and tilt
+2026-11-09T12:56:09.8869419Z   ---
+2026-11-09T12:56:09.8869791Z   duration_ms: 7.588815
+2026-11-09T12:56:09.8870178Z   type: 'test'
+2026-11-09T12:56:09.8870548Z   ...
+2026-11-09T12:56:09.8871389Z # Subtest: actual src/main.js: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8872494Z ok 44 - actual src/main.js: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8873155Z   ---
+2026-11-09T12:56:09.8873521Z   duration_ms: 52.588476
+2026-11-09T12:56:09.8873924Z   type: 'test'
+2026-11-09T12:56:09.8874295Z   ...
+2026-11-09T12:56:09.8874911Z # Subtest: actual src/main.js: mutation really cancels initial success completion
+2026-11-09T12:56:09.8875773Z ok 45 - actual src/main.js: mutation really cancels initial success completion
+2026-11-09T12:56:09.8876346Z   ---
+2026-11-09T12:56:09.8876717Z   duration_ms: 21.29356
+2026-11-09T12:56:09.8877115Z   type: 'test'
+2026-11-09T12:56:09.8877482Z   ...
+2026-11-09T12:56:09.8878072Z # Subtest: actual src/main.js: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8878894Z ok 46 - actual src/main.js: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8879470Z   ---
+2026-11-09T12:56:09.8879860Z   duration_ms: 26.938687
+2026-11-09T12:56:09.8880390Z   type: 'test'
+2026-11-09T12:56:09.8880908Z   ...
+2026-11-09T12:56:09.8881626Z # Subtest: legacy fixture: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8882647Z ok 47 - legacy fixture: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8883301Z   ---
+2026-11-09T12:56:09.8883666Z   duration_ms: 4.290555
+2026-11-09T12:56:09.8884072Z   type: 'test'
+2026-11-09T12:56:09.8884439Z   ...
+2026-11-09T12:56:09.8885040Z # Subtest: legacy fixture: mutation really cancels initial success completion
+2026-11-09T12:56:09.8885873Z ok 48 - legacy fixture: mutation really cancels initial success completion
+2026-11-09T12:56:09.8886460Z   ---
+2026-11-09T12:56:09.8886830Z   duration_ms: 0.399387
+2026-11-09T12:56:09.8887232Z   type: 'test'
+2026-11-09T12:56:09.8887785Z   ...
+2026-11-09T12:56:09.8888378Z # Subtest: legacy fixture: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8889172Z ok 49 - legacy fixture: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8889722Z   ---
+2026-11-09T12:56:09.8890099Z   duration_ms: 0.389863
+2026-11-09T12:56:09.8890494Z   type: 'test'
+2026-11-09T12:56:09.8890964Z   ...
+2026-11-09T12:56:09.8891698Z # Subtest: formatted fixture: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8892739Z ok 50 - formatted fixture: replace exactly the camera function and leave surrounding source intact
+2026-11-09T12:56:09.8893405Z   ---
+2026-11-09T12:56:09.8893776Z   duration_ms: 0.312107
+2026-11-09T12:56:09.8894168Z   type: 'test'
+2026-11-09T12:56:09.8894531Z   ...
+2026-11-09T12:56:09.8895172Z # Subtest: formatted fixture: mutation really cancels initial success completion
+2026-11-09T12:56:09.8896047Z ok 51 - formatted fixture: mutation really cancels initial success completion
+2026-11-09T12:56:09.8896631Z   ---
+2026-11-09T12:56:09.8896997Z   duration_ms: 0.35425
+2026-11-09T12:56:09.8897390Z   type: 'test'
+2026-11-09T12:56:09.8897757Z   ...
+2026-11-09T12:56:09.8898354Z # Subtest: formatted fixture: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8899162Z ok 52 - formatted fixture: mutation really cancels initial 404 completion
+2026-11-09T12:56:09.8899725Z   ---
+2026-11-09T12:56:09.8900085Z   duration_ms: 0.5075
+2026-11-09T12:56:09.8900474Z   type: 'test'
+2026-11-09T12:56:09.8900932Z   ...
+2026-11-09T12:56:09.8901633Z # Subtest: actual source retains distinct ready/pending loaded-model behavior before mutation
+2026-11-09T12:56:09.8902604Z ok 53 - actual source retains distinct ready/pending loaded-model behavior before mutation
+2026-11-09T12:56:09.8903248Z   ---
+2026-11-09T12:56:09.8903619Z   duration_ms: 19.376332
+2026-11-09T12:56:09.8904018Z   type: 'test'
+2026-11-09T12:56:09.8904752Z   ...
+2026-11-09T12:56:09.8905341Z # Subtest: comments and strings do not count as extra camera functions
+2026-11-09T12:56:09.8906097Z ok 54 - comments and strings do not count as extra camera functions
+2026-11-09T12:56:09.8906647Z   ---
+2026-11-09T12:56:09.8907027Z   duration_ms: 0.409202
+2026-11-09T12:56:09.8907421Z   type: 'test'
+2026-11-09T12:56:09.8907788Z   ...
+2026-11-09T12:56:09.8908210Z # Subtest: reject missing function
+2026-11-09T12:56:09.8908710Z ok 55 - reject missing function
+2026-11-09T12:56:09.8909145Z   ---
+2026-11-09T12:56:09.8909508Z   duration_ms: 0.281411
+2026-11-09T12:56:09.8909899Z   type: 'test'
+2026-11-09T12:56:09.8910270Z   ...
+2026-11-09T12:56:09.8910702Z # Subtest: reject comment-only function
+2026-11-09T12:56:09.8911371Z ok 56 - reject comment-only function
+2026-11-09T12:56:09.8911851Z   ---
+2026-11-09T12:56:09.8912209Z   duration_ms: 0.152949
+2026-11-09T12:56:09.8912598Z   type: 'test'
+2026-11-09T12:56:09.8912957Z   ...
+2026-11-09T12:56:09.8913398Z # Subtest: reject string-only function
+2026-11-09T12:56:09.8913918Z ok 57 - reject string-only function
+2026-11-09T12:56:09.8914351Z   ---
+2026-11-09T12:56:09.8914821Z   duration_ms: 0.119199
+2026-11-09T12:56:09.8915275Z   type: 'test'
+2026-11-09T12:56:09.8915710Z   ...
+2026-11-09T12:56:09.8916133Z # Subtest: reject ambiguous functions
+2026-11-09T12:56:09.8916646Z ok 58 - reject ambiguous functions
+2026-11-09T12:56:09.8917085Z   ---
+2026-11-09T12:56:09.8917458Z   duration_ms: 0.18721
+2026-11-09T12:56:09.8917851Z   type: 'test'
+2026-11-09T12:56:09.8918220Z   ...
+2026-11-09T12:56:09.8918631Z # Subtest: reject already mutated
+2026-11-09T12:56:09.8919121Z ok 59 - reject already mutated
+2026-11-09T12:56:09.8919540Z   ---
+2026-11-09T12:56:09.8919901Z   duration_ms: 0.119919
+2026-11-09T12:56:09.8920290Z   type: 'test'
+2026-11-09T12:56:09.8920659Z   ...
+2026-11-09T12:56:09.8921223Z # Subtest: reject missing initial adjustment
+2026-11-09T12:56:09.8921787Z ok 60 - reject missing initial adjustment
+2026-11-09T12:56:09.8922258Z   ---
+2026-11-09T12:56:09.8922622Z   duration_ms: 0.125057
+2026-11-09T12:56:09.8923215Z   type: 'test'
+2026-11-09T12:56:09.8923582Z   ...
+2026-11-09T12:56:09.8924018Z # Subtest: reject comment-only adjustment
+2026-11-09T12:56:09.8924548Z ok 61 - reject comment-only adjustment
+2026-11-09T12:56:09.8925001Z   ---
+2026-11-09T12:56:09.8925378Z   duration_ms: 0.164846
+2026-11-09T12:56:09.8925770Z   type: 'test'
+2026-11-09T12:56:09.8926135Z   ...
+2026-11-09T12:56:09.8926573Z # Subtest: reject string-only adjustment
+2026-11-09T12:56:09.8927095Z ok 62 - reject string-only adjustment
+2026-11-09T12:56:09.8927533Z   ---
+2026-11-09T12:56:09.8927900Z   duration_ms: 0.128102
+2026-11-09T12:56:09.8928290Z   type: 'test'
+2026-11-09T12:56:09.8928649Z   ...
+2026-11-09T12:56:09.8929091Z # Subtest: reject unreachable adjustment
+2026-11-09T12:56:09.8929614Z ok 63 - reject unreachable adjustment
+2026-11-09T12:56:09.8930043Z   ---
+2026-11-09T12:56:09.8930406Z   duration_ms: 0.128362
+2026-11-09T12:56:09.8930899Z   type: 'test'
+2026-11-09T12:56:09.8931274Z   ...
+2026-11-09T12:56:09.8931712Z # Subtest: reject conditional adjustment
+2026-11-09T12:56:09.8932232Z ok 64 - reject conditional adjustment
+2026-11-09T12:56:09.8932665Z   ---
+2026-11-09T12:56:09.8933032Z   duration_ms: 0.128843
+2026-11-09T12:56:09.8933417Z   type: 'test'
+2026-11-09T12:56:09.8933775Z   ...
+2026-11-09T12:56:09.8934198Z # Subtest: reject wrong model guard
+2026-11-09T12:56:09.8934697Z ok 65 - reject wrong model guard
+2026-11-09T12:56:09.8935124Z   ---
+2026-11-09T12:56:09.8935493Z   duration_ms: 0.131176
+2026-11-09T12:56:09.8935884Z   type: 'test'
+2026-11-09T12:56:09.8936246Z   ...
+2026-11-09T12:56:09.8936662Z # Subtest: reject alternate branch
+2026-11-09T12:56:09.8937163Z ok 66 - reject alternate branch
+2026-11-09T12:56:09.8937580Z   ---
+2026-11-09T12:56:09.8937939Z   duration_ms: 0.128342
+2026-11-09T12:56:09.8938336Z   type: 'test'
+2026-11-09T12:56:09.8938702Z   ...
+2026-11-09T12:56:09.8939105Z # Subtest: reject wrong receiver
+2026-11-09T12:56:09.8939588Z ok 67 - reject wrong receiver
+2026-11-09T12:56:09.8940162Z   ---
+2026-11-09T12:56:09.8940529Z   duration_ms: 0.147812
+2026-11-09T12:56:09.8941031Z   type: 'test'
+2026-11-09T12:56:09.8941395Z   ...
+2026-11-09T12:56:09.8941798Z # Subtest: reject wrong method
+2026-11-09T12:56:09.8942255Z ok 68 - reject wrong method
+2026-11-09T12:56:09.8942760Z   ---
+2026-11-09T12:56:09.8943189Z   duration_ms: 0.124336
+2026-11-09T12:56:09.8943616Z   type: 'test'
+2026-11-09T12:56:09.8943981Z   ...
+2026-11-09T12:56:09.8971488Z # Subtest: reject unexpected arguments
+2026-11-09T12:56:09.9001351Z ok 69 - reject unexpected arguments
+2026-11-09T12:56:09.9031344Z   ---
+2026-11-09T12:56:09.9032454Z   duration_ms: 0.134001
+2026-11-09T12:56:09.9061359Z   type: 'test'
+2026-11-09T12:56:09.9089605Z   ...
+2026-11-09T12:56:09.9090135Z # Subtest: reject optional adjustment
+2026-11-09T12:56:09.9090698Z ok 70 - reject optional adjustment
+2026-11-09T12:56:09.9091373Z   ---
+2026-11-09T12:56:09.9091752Z   duration_ms: 0.124026
+2026-11-09T12:56:09.9092150Z   type: 'test'
+2026-11-09T12:56:09.9092541Z   ...
+2026-11-09T12:56:09.9092973Z # Subtest: reject missing loaded return
+2026-11-09T12:56:09.9093502Z ok 71 - reject missing loaded return
+2026-11-09T12:56:09.9093940Z   ---
+2026-11-09T12:56:09.9094289Z   duration_ms: 0.121452
+2026-11-09T12:56:09.9094678Z   type: 'test'
+2026-11-09T12:56:09.9095038Z   ...
+2026-11-09T12:56:09.9095460Z # Subtest: reject unexpected parameter
+2026-11-09T12:56:09.9095979Z ok 72 - reject unexpected parameter
+2026-11-09T12:56:09.9096417Z   ---
+2026-11-09T12:56:09.9096774Z   duration_ms: 0.120831
+2026-11-09T12:56:09.9097165Z   type: 'test'
+2026-11-09T12:56:09.9097525Z   ...
+2026-11-09T12:56:09.9097928Z # Subtest: reject async function
+2026-11-09T12:56:09.9098377Z ok 73 - reject async function
+2026-11-09T12:56:09.9098793Z   ---
+2026-11-09T12:56:09.9099142Z   duration_ms: 0.119579
+2026-11-09T12:56:09.9099516Z   type: 'test'
+2026-11-09T12:56:09.9099873Z   ...
+2026-11-09T12:56:09.9100275Z # Subtest: reject generator function
+2026-11-09T12:56:09.9100928Z ok 74 - reject generator function
+2026-11-09T12:56:09.9101389Z   ---
+2026-11-09T12:56:09.9102064Z   duration_ms: 0.141232
+2026-11-09T12:56:09.9102491Z   type: 'test'
+2026-11-09T12:56:09.9102879Z   ...
+2026-11-09T12:56:09.9103328Z # Subtest: reject named function expression
+2026-11-09T12:56:09.9103906Z ok 75 - reject named function expression
+2026-11-09T12:56:09.9104377Z   ---
+2026-11-09T12:56:09.9104751Z   duration_ms: 0.212368
+2026-11-09T12:56:09.9105162Z   type: 'test'
+2026-11-09T12:56:09.9105554Z   ...
+2026-11-09T12:56:09.9106260Z # Subtest: reject malformed JavaScript rather than mutating a partial match
+2026-11-09T12:56:09.9107137Z ok 76 - reject malformed JavaScript rather than mutating a partial match
+2026-11-09T12:56:09.9107757Z   ---
+2026-11-09T12:56:09.9108142Z   duration_ms: 0.30699
+2026-11-09T12:56:09.9108565Z   type: 'test'
+2026-11-09T12:56:09.9108939Z   ...
+2026-11-09T12:56:09.9109676Z # Subtest: accept exactly 72 completed initial-discard failures across success and 404 outcomes
+2026-11-09T12:56:09.9110748Z ok 77 - accept exactly 72 completed initial-discard failures across success and 404 outcomes
+2026-11-09T12:56:09.9111586Z   ---
+2026-11-09T12:56:09.9111965Z   duration_ms: 0.459618
+2026-11-09T12:56:09.9112398Z   type: 'test'
+2026-11-09T12:56:09.9112786Z   ...
+2026-11-09T12:56:09.9113449Z # Subtest: reject entire mutation run with one timeout before completion snapshot
+2026-11-09T12:56:09.9114364Z ok 78 - reject entire mutation run with one timeout before completion snapshot
+2026-11-09T12:56:09.9114973Z   ---
+2026-11-09T12:56:09.9115358Z   duration_ms: 0.197246
+2026-11-09T12:56:09.9115843Z   type: 'test'
+2026-11-09T12:56:09.9116216Z   ...
+2026-11-09T12:56:09.9116778Z # Subtest: reject entire mutation run with one missing snapshot
+2026-11-09T12:56:09.9117524Z ok 79 - reject entire mutation run with one missing snapshot
+2026-11-09T12:56:09.9118064Z   ---
+2026-11-09T12:56:09.9118435Z   duration_ms: 0.165027
+2026-11-09T12:56:09.9118847Z   type: 'test'
+2026-11-09T12:56:09.9119212Z   ...
+2026-11-09T12:56:09.9119980Z # Subtest: reject entire mutation run with one null snapshot
+2026-11-09T12:56:09.9120697Z ok 80 - reject entire mutation run with one null snapshot
+2026-11-09T12:56:09.9121360Z   ---
+2026-11-09T12:56:09.9121732Z   duration_ms: 0.156644
+2026-11-09T12:56:09.9122153Z   type: 'test'
+2026-11-09T12:56:09.9122528Z   ...
+2026-11-09T12:56:09.9123097Z # Subtest: reject entire mutation run with one unrelated pageerror
+2026-11-09T12:56:09.9123872Z ok 81 - reject entire mutation run with one unrelated pageerror
+2026-11-09T12:56:09.9145558Z   ---
+2026-11-09T12:56:09.9145993Z   duration_ms: 0.174471
+2026-11-09T12:56:09.9146416Z   type: 'test'
+2026-11-09T12:56:09.9146792Z   ...
+2026-11-09T12:56:09.9147390Z # Subtest: reject entire mutation run with one missing pageerror record
+2026-11-09T12:56:09.9148195Z ok 82 - reject entire mutation run with one missing pageerror record
+2026-11-09T12:56:09.9148734Z   ---
+2026-11-09T12:56:09.9149099Z   duration_ms: 0.159849
+2026-11-09T12:56:09.9149497Z   type: 'test'
+2026-11-09T12:56:09.9149871Z   ...
+2026-11-09T12:56:09.9150394Z # Subtest: reject entire mutation run with one successful row
+2026-11-09T12:56:09.9151247Z ok 83 - reject entire mutation run with one successful row
+2026-11-09T12:56:09.9151753Z   ---
+2026-11-09T12:56:09.9152106Z   duration_ms: 0.186819
+2026-11-09T12:56:09.9152497Z   type: 'test'
+2026-11-09T12:56:09.9152847Z   ...
+2026-11-09T12:56:09.9153359Z # Subtest: reject entire mutation run with one unfinished row
+2026-11-09T12:56:09.9154044Z ok 84 - reject entire mutation run with one unfinished row
+2026-11-09T12:56:09.9154535Z   ---
+2026-11-09T12:56:09.9154892Z   duration_ms: 0.800648
+2026-11-09T12:56:09.9155290Z   type: 'test'
+2026-11-09T12:56:09.9155651Z   ...
+2026-11-09T12:56:09.9156231Z # Subtest: reject entire mutation run with one mutation not applied
+2026-11-09T12:56:09.9156964Z ok 85 - reject entire mutation run with one mutation not applied
+2026-11-09T12:56:09.9157405Z   ---
+2026-11-09T12:56:09.9157666Z   duration_ms: 0.231887
+2026-11-09T12:56:09.9157963Z   type: 'test'
+2026-11-09T12:56:09.9158201Z   ...
+2026-11-09T12:56:09.9158900Z # Subtest: reject entire mutation run with one missing mutation record
+2026-11-09T12:56:09.9159607Z ok 86 - reject entire mutation run with one missing mutation record
+2026-11-09T12:56:09.9160049Z   ---
+2026-11-09T12:56:09.9160318Z   duration_ms: 0.171196
+2026-11-09T12:56:09.9160608Z   type: 'test'
+2026-11-09T12:56:09.9161023Z   ...
+2026-11-09T12:56:09.9161454Z # Subtest: reject entire mutation run with one unfinished view
+2026-11-09T12:56:09.9162052Z ok 87 - reject entire mutation run with one unfinished view
+2026-11-09T12:56:09.9162454Z   ---
+2026-11-09T12:56:09.9162706Z   duration_ms: 0.160741
+2026-11-09T12:56:09.9162994Z   type: 'test'
+2026-11-09T12:56:09.9163238Z   ...
+2026-11-09T12:56:09.9163681Z # Subtest: reject entire mutation run with one missing view counter
+2026-11-09T12:56:09.9164406Z ok 88 - reject entire mutation run with one missing view counter
+2026-11-09T12:56:09.9164815Z   ---
+2026-11-09T12:56:09.9165069Z   duration_ms: 0.18016
+2026-11-09T12:56:09.9165359Z   type: 'test'
+2026-11-09T12:56:09.9165610Z   ...
+2026-11-09T12:56:09.9166060Z # Subtest: reject entire mutation run with one malformed view counter
+2026-11-09T12:56:09.9166695Z ok 89 - reject entire mutation run with one malformed view counter
+2026-11-09T12:56:09.9167123Z   ---
+2026-11-09T12:56:09.9167367Z   duration_ms: 0.179939
+2026-11-09T12:56:09.9167644Z   type: 'test'
+2026-11-09T12:56:09.9167898Z   ...
+2026-11-09T12:56:09.9168274Z # Subtest: reject entire mutation run with one no input
+2026-11-09T12:56:09.9168802Z ok 90 - reject entire mutation run with one no input
+2026-11-09T12:56:09.9169187Z   ---
+2026-11-09T12:56:09.9169437Z   duration_ms: 0.179538
+2026-11-09T12:56:09.9169718Z   type: 'test'
+2026-11-09T12:56:09.9169966Z   ...
+2026-11-09T12:56:09.9170424Z # Subtest: reject entire mutation run with one missing input record
+2026-11-09T12:56:09.9171226Z ok 91 - reject entire mutation run with one missing input record
+2026-11-09T12:56:09.9171839Z   ---
+2026-11-09T12:56:09.9172095Z   duration_ms: 0.167701
+2026-11-09T12:56:09.9172380Z   type: 'test'
+2026-11-09T12:56:09.9172616Z   ...
+2026-11-09T12:56:09.9173033Z # Subtest: reject entire mutation run with one untrusted input
+2026-11-09T12:56:09.9173554Z ok 92 - reject entire mutation run with one untrusted input
+2026-11-09T12:56:09.9173809Z   ---
+2026-11-09T12:56:09.9173973Z   duration_ms: 0.188752
+2026-11-09T12:56:09.9174157Z   type: 'test'
+2026-11-09T12:56:09.9174321Z   ...
+2026-11-09T12:56:09.9174609Z # Subtest: reject entire mutation run with one nonboolean trusted flag
+2026-11-09T12:56:09.9175016Z ok 93 - reject entire mutation run with one nonboolean trusted flag
+2026-11-09T12:56:09.9175290Z   ---
+2026-11-09T12:56:09.9175457Z   duration_ms: 0.205547
+2026-11-09T12:56:09.9175654Z   type: 'test'
+2026-11-09T12:56:09.9175824Z   ...
+2026-11-09T12:56:09.9176107Z # Subtest: reject entire mutation run with one missing trusted flag
+2026-11-09T12:56:09.9176490Z ok 94 - reject entire mutation run with one missing trusted flag
+2026-11-09T12:56:09.9176764Z   ---
+2026-11-09T12:56:09.9176941Z   duration_ms: 0.186699
+2026-11-09T12:56:09.9177131Z   type: 'test'
+2026-11-09T12:56:09.9177306Z   ...
+2026-11-09T12:56:09.9177612Z # Subtest: reject entire mutation run with one missing input entry
+2026-11-09T12:56:09.9177999Z ok 95 - reject entire mutation run with one missing input entry
+2026-11-09T12:56:09.9178283Z   ---
+2026-11-09T12:56:09.9178451Z   duration_ms: 0.165237
+2026-11-09T12:56:09.9178636Z   type: 'test'
+2026-11-09T12:56:09.9178804Z   ...
+2026-11-09T12:56:09.9179083Z # Subtest: reject entire mutation run with one missing diagnostics
+2026-11-09T12:56:09.9179455Z ok 96 - reject entire mutation run with one missing diagnostics
+2026-11-09T12:56:09.9179710Z   ---
+2026-11-09T12:56:09.9179878Z   duration_ms: 0.155373
+2026-11-09T12:56:09.9180059Z   type: 'test'
+2026-11-09T12:56:09.9180221Z   ...
+2026-11-09T12:56:09.9180493Z # Subtest: reject entire mutation run with one missing ready flag
+2026-11-09T12:56:09.9181283Z ok 97 - reject entire mutation run with one missing ready flag
+2026-11-09T12:56:09.9181881Z   ---
+2026-11-09T12:56:09.9182142Z   duration_ms: 0.149073
+2026-11-09T12:56:09.9182425Z   type: 'test'
+2026-11-09T12:56:09.9182670Z   ...
+2026-11-09T12:56:09.9183078Z # Subtest: reject entire mutation run with one model ready
+2026-11-09T12:56:09.9183640Z ok 98 - reject entire mutation run with one model ready
+2026-11-09T12:56:09.9184030Z   ---
+2026-11-09T12:56:09.9184281Z   duration_ms: 0.182784
+2026-11-09T12:56:09.9184562Z   type: 'test'
+2026-11-09T12:56:09.9184808Z   ...
+2026-11-09T12:56:09.9185255Z # Subtest: reject entire mutation run with one loaded model bounds
+2026-11-09T12:56:09.9185900Z ok 99 - reject entire mutation run with one loaded model bounds
+2026-11-09T12:56:09.9186329Z   ---
+2026-11-09T12:56:09.9186572Z   duration_ms: 0.164596
+2026-11-09T12:56:09.9186853Z   type: 'test'
+2026-11-09T12:56:09.9187112Z   ...
+2026-11-09T12:56:09.9187568Z # Subtest: reject entire mutation run with one missing model bounds
+2026-11-09T12:56:09.9188249Z ok 100 - reject entire mutation run with one missing model bounds
+2026-11-09T12:56:09.9188707Z   ---
+2026-11-09T12:56:09.9188963Z   duration_ms: 0.151367
+2026-11-09T12:56:09.9189252Z   type: 'test'
+2026-11-09T12:56:09.9189507Z   ...
+2026-11-09T12:56:09.9189984Z # Subtest: reject entire mutation run with one successful render state
+2026-11-09T12:56:09.9190667Z ok 101 - reject entire mutation run with one successful render state
+2026-11-09T12:56:09.9191244Z   ---
+2026-11-09T12:56:09.9191513Z   duration_ms: 0.150836
+2026-11-09T12:56:09.9191798Z   type: 'test'
+2026-11-09T12:56:09.9192053Z   ...
+2026-11-09T12:56:09.9192523Z # Subtest: reject entire mutation run with one other error render state
+2026-11-09T12:56:09.9193226Z ok 102 - reject entire mutation run with one other error render state
+2026-11-09T12:56:09.9193650Z   ---
+2026-11-09T12:56:09.9193903Z   duration_ms: 0.140089
+2026-11-09T12:56:09.9194182Z   type: 'test'
+2026-11-09T12:56:09.9194427Z   ...
+2026-11-09T12:56:09.9194871Z # Subtest: reject entire mutation run with one missing render state
+2026-11-09T12:56:09.9195713Z ok 103 - reject entire mutation run with one missing render state
+2026-11-09T12:56:09.9196124Z   ---
+2026-11-09T12:56:09.9196367Z   duration_ms: 0.152739
+2026-11-09T12:56:09.9196660Z   type: 'test'
+2026-11-09T12:56:09.9196910Z   ...
+2026-11-09T12:56:09.9197369Z # Subtest: reject missing, extra, empty and sparse mutation results
+2026-11-09T12:56:09.9198034Z ok 104 - reject missing, extra, empty and sparse mutation results
+2026-11-09T12:56:09.9198455Z   ---
+2026-11-09T12:56:09.9198771Z   duration_ms: 0.223474
+2026-11-09T12:56:09.9199067Z   type: 'test'
+2026-11-09T12:56:09.9199309Z   ...
+2026-11-09T12:56:09.9199755Z # Subtest: fixed acceptance still requires exactly 72 PASS rows
+2026-11-09T12:56:09.9200388Z ok 105 - fixed acceptance still requires exactly 72 PASS rows
+2026-11-09T12:56:09.9200945Z   ---
+2026-11-09T12:56:09.9201199Z   duration_ms: 0.155773
+2026-11-09T12:56:09.9201485Z   type: 'test'
+2026-11-09T12:56:09.9201791Z   ...
+2026-11-09T12:56:09.9202332Z # Subtest: legacy and defect acceptance retain their existing eight-case contracts
+2026-11-09T12:56:09.9203106Z ok 106 - legacy and defect acceptance retain their existing eight-case contracts
+2026-11-09T12:56:09.9203591Z   ---
+2026-11-09T12:56:09.9203835Z   duration_ms: 0.201041
+2026-11-09T12:56:09.9204112Z   type: 'test'
+2026-11-09T12:56:09.9204354Z   ...
+2026-11-09T12:56:09.9204944Z # Subtest: a later synchronous selection supersedes both successful and failed earlier work
+2026-11-09T12:56:09.9205812Z ok 107 - a later synchronous selection supersedes both successful and failed earlier work
+2026-11-09T12:56:09.9206327Z   ---
+2026-11-09T12:56:09.9206576Z   duration_ms: 0.785375
+2026-11-09T12:56:09.9206849Z   type: 'test'
+2026-11-09T12:56:09.9207093Z   ...
+2026-11-09T12:56:09.9207760Z # Subtest: initial camera input preserves model ownership and errors, but supersedes default camera effects
+2026-11-09T12:56:09.9208784Z ok 108 - initial camera input preserves model ownership and errors, but supersedes default camera effects
+2026-11-09T12:56:09.9209384Z   ---
+2026-11-09T12:56:09.9209814Z   duration_ms: 0.137336
+2026-11-09T12:56:09.9210102Z   type: 'test'
+2026-11-09T12:56:09.9210350Z   ...
+2026-11-09T12:56:09.9211201Z # Subtest: surface height uses triangle geometry and world scaling; missing geometry is an error
+2026-11-09T12:56:09.9212099Z ok 109 - surface height uses triangle geometry and world scaling; missing geometry is an error
+2026-11-09T12:56:09.9212617Z   ---
+2026-11-09T12:56:09.9212844Z   duration_ms: 2.480943
+2026-11-09T12:56:09.9213109Z   type: 'test'
+2026-11-09T12:56:09.9213339Z   ...
+2026-11-09T12:56:09.9213640Z # fatal: invalid object name '42ed7bbe'.
+2026-11-09T12:56:09.9214044Z # fatal: invalid object name '42ed7bbe'.
+2026-11-09T12:56:09.9214729Z # Subtest: landscape-only keeps exact synchronous render and original loader without new observer
+2026-11-09T12:56:09.9215711Z not ok 110 - landscape-only keeps exact synchronous render and original loader without new observer
+2026-11-09T12:56:09.9216277Z   ---
+2026-11-09T12:56:09.9216512Z   duration_ms: 6.732854
+2026-11-09T12:56:09.9216777Z   type: 'test'
+2026-11-09T12:56:09.9217553Z   location: '/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/tests/landscape-only-separation.test.mjs:7:1'
+2026-11-09T12:56:09.9218341Z   failureType: 'testCodeFailure'
+2026-11-09T12:56:09.9218665Z   error: |-
+2026-11-09T12:56:09.9218985Z     Command failed: git show 42ed7bbe:src/main.js
+2026-11-09T12:56:09.9219401Z     fatal: invalid object name '42ed7bbe'.
+2026-11-09T12:56:09.9219886Z     
+2026-11-09T12:56:09.9220303Z   code: 'ERR_TEST_FAILURE'
+2026-11-09T12:56:09.9220989Z   stack: |-
+2026-11-09T12:56:09.9221504Z     genericNodeError (node:internal/errors:983:15)
+2026-11-09T12:56:09.9222127Z     wrappedFn (node:internal/errors:537:14)
+2026-11-09T12:56:09.9222732Z     checkExecSyncError (node:child_process:916:11)
+2026-11-09T12:56:09.9223383Z     execFileSync (node:child_process:952:15)
+2026-11-09T12:56:09.9224737Z     separated (file:///home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/tests/landscape-only-separation.test.mjs:6:247)
+2026-11-09T12:56:09.9226418Z     TestContext.<anonymous> (file:///home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/tests/landscape-only-separation.test.mjs:7:100)
+2026-11-09T12:56:09.9227656Z     Test.runInAsyncScope (node:async_hooks:214:14)
+2026-11-09T12:56:09.9228320Z     Test.run (node:internal/test_runner/test:1047:25)
+2026-11-09T12:56:09.9228913Z     Test.start (node:internal/test_runner/test:944:17)
+2026-11-09T12:56:09.9229799Z     startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+2026-11-09T12:56:09.9230419Z   ...
+2026-11-09T12:56:09.9231068Z # Subtest: reject leaked performanceLog
+2026-11-09T12:56:09.9231763Z ok 111 - reject leaked performanceLog
+2026-11-09T12:56:09.9232264Z   ---
+2026-11-09T12:56:09.9232662Z   duration_ms: 8.956581
+2026-11-09T12:56:09.9249582Z   type: 'test'
+2026-11-09T12:56:09.9249850Z   ...
+2026-11-09T12:56:09.9250182Z # Subtest: reject leaked timedGLB
+2026-11-09T12:56:09.9250570Z ok 112 - reject leaked timedGLB
+2026-11-09T12:56:09.9251551Z   ---
+2026-11-09T12:56:09.9251795Z   duration_ms: 0.80204
+2026-11-09T12:56:09.9252076Z   type: 'test'
+2026-11-09T12:56:09.9252317Z   ...
+2026-11-09T12:56:09.9252612Z # Subtest: reject leaked renderCPU
+2026-11-09T12:56:09.9252999Z ok 113 - reject leaked renderCPU
+2026-11-09T12:56:09.9253300Z   ---
+2026-11-09T12:56:09.9253533Z   duration_ms: 0.729982
+2026-11-09T12:56:09.9253803Z   type: 'test'
+2026-11-09T12:56:09.9254044Z   ...
+2026-11-09T12:56:09.9254367Z # Subtest: reject deferred render replacement
+2026-11-09T12:56:09.9254810Z ok 114 - reject deferred render replacement
+2026-11-09T12:56:09.9255149Z   ---
+2026-11-09T12:56:09.9255378Z   duration_ms: 5.199891
+2026-11-09T12:56:09.9255640Z   type: 'test'
+2026-11-09T12:56:09.9255877Z   ...
+2026-11-09T12:56:09.9256337Z # Subtest: I evidence verifier retains independent negative controls
+2026-11-09T12:56:09.9257001Z ok 115 - I evidence verifier retains independent negative controls
+2026-11-09T12:56:09.9257706Z   ---
+2026-11-09T12:56:09.9257958Z   duration_ms: 0.229093
+2026-11-09T12:56:09.9258231Z   type: 'test'
+2026-11-09T12:56:09.9258468Z   ...
+2026-11-09T12:56:09.9259077Z # Subtest: every exported scenery part maps to C/D ledger, exact metric recipe and original material
+2026-11-09T12:56:09.9259975Z ok 116 - every exported scenery part maps to C/D ledger, exact metric recipe and original material
+2026-11-09T12:56:09.9260502Z   ---
+2026-11-09T12:56:09.9260749Z   duration_ms: 53.579448
+2026-11-09T12:56:09.9261188Z   type: 'test'
+2026-11-09T12:56:09.9261417Z   ...
+2026-11-09T12:56:09.9262118Z # Subtest: fixed observation points exist on both raw A/C triangles and keep metric origin; surfaces unchanged
+2026-11-09T12:56:09.9263123Z ok 117 - fixed observation points exist on both raw A/C triangles and keep metric origin; surfaces unchanged
+2026-11-09T12:56:09.9263689Z   ---
+2026-11-09T12:56:09.9263927Z   duration_ms: 306.284247
+2026-11-09T12:56:09.9264216Z   type: 'test'
+2026-11-09T12:56:09.9264449Z   ...
+2026-11-09T12:56:09.9264817Z # Subtest: fixed definition exact bytes and dimensions
+2026-11-09T12:56:09.9265329Z ok 118 - fixed definition exact bytes and dimensions
+2026-11-09T12:56:09.9265692Z   ---
+2026-11-09T12:56:09.9265925Z   duration_ms: 4.955164
+2026-11-09T12:56:09.9266202Z   type: 'test'
+2026-11-09T12:56:09.9266433Z   ...
+2026-11-09T12:56:09.9266717Z # Subtest: support and size 1/0.5
+2026-11-09T12:56:09.9267084Z ok 119 - support and size 1/0.5
+2026-11-09T12:56:09.9267379Z   ---
+2026-11-09T12:56:09.9267604Z   duration_ms: 0.224296
+2026-11-09T12:56:09.9267865Z   type: 'test'
+2026-11-09T12:56:09.9268102Z   ...
+2026-11-09T12:56:09.9268378Z # Subtest: support and size 1/1
+2026-11-09T12:56:09.9268700Z ok 120 - support and size 1/1
+2026-11-09T12:56:09.9268989Z   ---
+2026-11-09T12:56:09.9269211Z   duration_ms: 0.144687
+2026-11-09T12:56:09.9269473Z   type: 'test'
+2026-11-09T12:56:09.9269703Z   ...
+2026-11-09T12:56:09.9269988Z # Subtest: support and size 1/1.5
+2026-11-09T12:56:09.9270509Z ok 121 - support and size 1/1.5
+2026-11-09T12:56:09.9270920Z   ---
+2026-11-09T12:56:09.9271160Z   duration_ms: 0.102594
+2026-11-09T12:56:09.9271435Z   type: 'test'
+2026-11-09T12:56:09.9271667Z   ...
+2026-11-09T12:56:09.9271949Z # Subtest: support and size 2/0.5
+2026-11-09T12:56:09.9272314Z ok 122 - support and size 2/0.5
+2026-11-09T12:56:09.9272589Z   ---
+2026-11-09T12:56:09.9272813Z   duration_ms: 0.088503
+2026-11-09T12:56:09.9273080Z   type: 'test'
+2026-11-09T12:56:09.9273307Z   ...
+2026-11-09T12:56:09.9273580Z # Subtest: support and size 2/1
+2026-11-09T12:56:09.9273892Z ok 123 - support and size 2/1
+2026-11-09T12:56:09.9274179Z   ---
+2026-11-09T12:56:09.9274401Z   duration_ms: 0.077175
+2026-11-09T12:56:09.9274654Z   type: 'test'
+2026-11-09T12:56:09.9274889Z   ...
+2026-11-09T12:56:09.9275167Z # Subtest: support and size 2/1.5
+2026-11-09T12:56:09.9275523Z ok 124 - support and size 2/1.5
+2026-11-09T12:56:09.9275798Z   ---
+2026-11-09T12:56:09.9276037Z   duration_ms: 0.066329
+2026-11-09T12:56:09.9276298Z   type: 'test'
+2026-11-09T12:56:09.9276534Z   ...
+2026-11-09T12:56:09.9276828Z # Subtest: reject manifest units
+2026-11-09T12:56:09.9277178Z ok 125 - reject manifest units
+2026-11-09T12:56:09.9277460Z   ---
+2026-11-09T12:56:09.9277690Z   duration_ms: 0.25366
+2026-11-09T12:56:09.9277945Z   type: 'test'
+2026-11-09T12:56:09.9278166Z   ...
+2026-11-09T12:56:09.9278437Z # Subtest: reject manifest axes
+2026-11-09T12:56:09.9278757Z ok 126 - reject manifest axes
+2026-11-09T12:56:09.9279033Z   ---
+2026-11-09T12:56:09.9279257Z   duration_ms: 0.229083
+2026-11-09T12:56:09.9279522Z   type: 'test'
+2026-11-09T12:56:09.9279748Z   ...
+2026-11-09T12:56:09.9280031Z # Subtest: reject manifest commit
+2026-11-09T12:56:09.9280382Z ok 127 - reject manifest commit
+2026-11-09T12:56:09.9280672Z   ---
+2026-11-09T12:56:09.9281028Z   duration_ms: 0.276143
+2026-11-09T12:56:09.9281301Z   type: 'test'
+2026-11-09T12:56:09.9281538Z   ...
+2026-11-09T12:56:09.9281820Z # Subtest: reject manifest sha256
+2026-11-09T12:56:09.9282174Z ok 128 - reject manifest sha256
+2026-11-09T12:56:09.9282631Z   ---
+2026-11-09T12:56:09.9282866Z   duration_ms: 0.122773
+2026-11-09T12:56:09.9283134Z   type: 'test'
+2026-11-09T12:56:09.9283365Z   ...
+2026-11-09T12:56:09.9283634Z # Subtest: reject manifest id
+2026-11-09T12:56:09.9283962Z ok 129 - reject manifest id
+2026-11-09T12:56:09.9284251Z   ---
+2026-11-09T12:56:09.9284500Z   duration_ms: 0.065769
+2026-11-09T12:56:09.9284772Z   type: 'test'
+2026-11-09T12:56:09.9285010Z   ...
+2026-11-09T12:56:09.9285318Z # Subtest: reject manifest category
+2026-11-09T12:56:09.9285727Z ok 130 - reject manifest category
+2026-11-09T12:56:09.9286038Z   ---
+2026-11-09T12:56:09.9286278Z   duration_ms: 0.05355
+2026-11-09T12:56:09.9286563Z   type: 'test'
+2026-11-09T12:56:09.9286800Z   ...
+2026-11-09T12:56:09.9287081Z # Subtest: reject manifest glb
+2026-11-09T12:56:09.9287418Z ok 131 - reject manifest glb
+2026-11-09T12:56:09.9287704Z   ---
+2026-11-09T12:56:09.9287940Z   duration_ms: 0.049484
+2026-11-09T12:56:09.9288210Z   type: 'test'
+2026-11-09T12:56:09.9288451Z   ...
+2026-11-09T12:56:09.9288757Z # Subtest: reject dimension count
+2026-11-09T12:56:09.9289127Z ok 132 - reject dimension count
+2026-11-09T12:56:09.9289431Z   ---
+2026-11-09T12:56:09.9289674Z   duration_ms: 0.103695
+2026-11-09T12:56:09.9289946Z   type: 'test'
+2026-11-09T12:56:09.9290185Z   ...
+2026-11-09T12:56:09.9290501Z # Subtest: reject dimension height
+2026-11-09T12:56:09.9291056Z ok 133 - reject dimension height
+2026-11-09T12:56:09.9291368Z   ---
+2026-11-09T12:56:09.9291618Z   duration_ms: 0.069374
+2026-11-09T12:56:09.9291897Z   type: 'test'
+2026-11-09T12:56:09.9292140Z   ...
+2026-11-09T12:56:09.9292461Z # Subtest: reject dimension spacing
+2026-11-09T12:56:09.9292860Z ok 134 - reject dimension spacing
+2026-11-09T12:56:09.9293168Z   ---
+2026-11-09T12:56:09.9293404Z   duration_ms: 0.056896
+2026-11-09T12:56:09.9293674Z   type: 'test'
+2026-11-09T12:56:09.9293913Z   ...
+2026-11-09T12:56:09.9294226Z # Subtest: reject dimension post_width
+2026-11-09T12:56:09.9294827Z ok 135 - reject dimension post_width
+2026-11-09T12:56:09.9295149Z   ---
+2026-11-09T12:56:09.9295387Z   duration_ms: 0.097887
+2026-11-09T12:56:09.9295665Z   type: 'test'
+2026-11-09T12:56:09.9295917Z   ...
+2026-11-09T12:56:09.9296225Z # Subtest: reject dimension rails
+2026-11-09T12:56:09.9296609Z ok 136 - reject dimension rails
+2026-11-09T12:56:09.9296922Z   ---
+2026-11-09T12:56:09.9297168Z   duration_ms: 0.077385
+2026-11-09T12:56:09.9297449Z   type: 'test'
+2026-11-09T12:56:09.9297702Z   ...
+2026-11-09T12:56:09.9298083Z # Subtest: reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9298608Z ok 137 - reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9298987Z   ---
+2026-11-09T12:56:09.9299248Z   duration_ms: 0.117265
+2026-11-09T12:56:09.9299526Z   type: 'test'
+2026-11-09T12:56:09.9299766Z   ...
+2026-11-09T12:56:09.9300148Z # Subtest: reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9300662Z ok 138 - reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9301174Z   ---
+2026-11-09T12:56:09.9301416Z   duration_ms: 0.096585
+2026-11-09T12:56:09.9301700Z   type: 'test'
+2026-11-09T12:56:09.9301945Z   ...
+2026-11-09T12:56:09.9302311Z # Subtest: reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9302809Z ok 139 - reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9303177Z   ---
+2026-11-09T12:56:09.9303424Z   duration_ms: 0.101712
+2026-11-09T12:56:09.9303708Z   type: 'test'
+2026-11-09T12:56:09.9303952Z   ...
+2026-11-09T12:56:09.9304320Z # Subtest: reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9304816Z ok 140 - reject missing/invalid/slope/step support
+2026-11-09T12:56:09.9305180Z   ---
+2026-11-09T12:56:09.9305414Z   duration_ms: 0.126168
+2026-11-09T12:56:09.9305684Z   type: 'test'
+2026-11-09T12:56:09.9305928Z   ...
+2026-11-09T12:56:09.9306232Z # Subtest: reject invalid placement
+2026-11-09T12:56:09.9306624Z ok 141 - reject invalid placement
+2026-11-09T12:56:09.9306947Z   ---
+2026-11-09T12:56:09.9307185Z   duration_ms: 0.101392
+2026-11-09T12:56:09.9307466Z   type: 'test'
+2026-11-09T12:56:09.9307702Z   ...
+2026-11-09T12:56:09.9308183Z # Subtest: reject invalid placement
+2026-11-09T12:56:09.9308578Z ok 142 - reject invalid placement
+2026-11-09T12:56:09.9308889Z   ---
+2026-11-09T12:56:09.9309131Z   duration_ms: 0.077036
+2026-11-09T12:56:09.9309409Z   type: 'test'
+2026-11-09T12:56:09.9309661Z   ...
+2026-11-09T12:56:09.9309967Z # Subtest: reject invalid placement
+2026-11-09T12:56:09.9310358Z ok 143 - reject invalid placement
+2026-11-09T12:56:09.9310668Z   ---
+2026-11-09T12:56:09.9311078Z   duration_ms: 0.107551
+2026-11-09T12:56:09.9311337Z   type: 'test'
+2026-11-09T12:56:09.9311563Z   ...
+2026-11-09T12:56:09.9311853Z # Subtest: reject invalid placement
+2026-11-09T12:56:09.9312216Z ok 144 - reject invalid placement
+2026-11-09T12:56:09.9312506Z   ---
+2026-11-09T12:56:09.9312734Z   duration_ms: 0.081492
+2026-11-09T12:56:09.9312999Z   type: 'test'
+2026-11-09T12:56:09.9313230Z   ...
+2026-11-09T12:56:09.9313623Z # Subtest: north yaw and original definition non-destructive
+2026-11-09T12:56:09.9314208Z ok 145 - north yaw and original definition non-destructive
+2026-11-09T12:56:09.9314585Z   ---
+2026-11-09T12:56:09.9314804Z   duration_ms: 0.143585
+2026-11-09T12:56:09.9315066Z   type: 'test'
+2026-11-09T12:56:09.9315295Z   ...
+2026-11-09T12:56:09.9315875Z # Subtest: printed PASS followed by nonzero native termination cannot be accepted
+2026-11-09T12:56:09.9316628Z ok 146 - printed PASS followed by nonzero native termination cannot be accepted
+2026-11-09T12:56:09.9317084Z   ---
+2026-11-09T12:56:09.9317312Z   duration_ms: 36.569337
+2026-11-09T12:56:09.9317579Z   type: 'test'
+2026-11-09T12:56:09.9317812Z   ...
+2026-11-09T12:56:09.9318373Z # Subtest: Windows access violation status is retained even if all internal assertions passed
+2026-11-09T12:56:09.9319229Z ok 147 - Windows access violation status is retained even if all internal assertions passed
+2026-11-09T12:56:09.9319742Z   ---
+2026-11-09T12:56:09.9319970Z   duration_ms: 0.211587
+2026-11-09T12:56:09.9320393Z   type: 'test'
+2026-11-09T12:56:09.9320626Z   ...
+2026-11-09T12:56:09.9321186Z # Subtest: native success also requires the worker completion contract
+2026-11-09T12:56:09.9321824Z ok 148 - native success also requires the worker completion contract
+2026-11-09T12:56:09.9322244Z   ---
+2026-11-09T12:56:09.9322466Z   duration_ms: 0.192709
+2026-11-09T12:56:09.9322719Z   type: 'test'
+2026-11-09T12:56:09.9322942Z   ...
+2026-11-09T12:56:09.9323393Z # Subtest: D material separates slope and passage without random source
+2026-11-09T12:56:09.9324038Z ok 149 - D material separates slope and passage without random source
+2026-11-09T12:56:09.9324450Z   ---
+2026-11-09T12:56:09.9324686Z   duration_ms: 1.230632
+2026-11-09T12:56:09.9324942Z   type: 'test'
+2026-11-09T12:56:09.9325169Z   ...
+2026-11-09T12:56:09.9325637Z # Subtest: D restores exact color/material and preserves positions/index
+2026-11-09T12:56:09.9326297Z ok 150 - D restores exact color/material and preserves positions/index
+2026-11-09T12:56:09.9326733Z   ---
+2026-11-09T12:56:09.9326965Z   duration_ms: 1.396229
+2026-11-09T12:56:09.9327240Z   type: 'test'
+2026-11-09T12:56:09.9327481Z   ...
+2026-11-09T12:56:09.9327876Z # Subtest: new A material is never overwritten by D restore
+2026-11-09T12:56:09.9328434Z ok 151 - new A material is never overwritten by D restore
+2026-11-09T12:56:09.9328799Z   ---
+2026-11-09T12:56:09.9329029Z   duration_ms: 0.581099
+2026-11-09T12:56:09.9329305Z   type: 'test'
+2026-11-09T12:56:09.9329535Z   ...
+2026-11-09T12:56:09.9330034Z # Subtest: D shrubs reject missing/steep/nonfinite support, no implied collision
+2026-11-09T12:56:09.9330906Z ok 152 - D shrubs reject missing/steep/nonfinite support, no implied collision
+2026-11-09T12:56:09.9331372Z   ---
+2026-11-09T12:56:09.9331599Z   duration_ms: 2.704387
+2026-11-09T12:56:09.9331860Z   type: 'test'
+2026-11-09T12:56:09.9332096Z   ...
+2026-11-09T12:56:09.9332562Z # Subtest: changed baseline colors remain authoritative on next D toggle
+2026-11-09T12:56:09.9333217Z ok 153 - changed baseline colors remain authoritative on next D toggle
+2026-11-09T12:56:09.9333660Z   ---
+2026-11-09T12:56:09.9334080Z   duration_ms: 0.470123
+2026-11-09T12:56:09.9334356Z   type: 'test'
+2026-11-09T12:56:09.9334582Z   ...
+2026-11-09T12:56:09.9335026Z # Subtest: normal uses inverse transpose under vertical exaggeration
+2026-11-09T12:56:09.9335648Z ok 154 - normal uses inverse transpose under vertical exaggeration
+2026-11-09T12:56:09.9336051Z   ---
+2026-11-09T12:56:09.9336281Z   duration_ms: 3.133047
+2026-11-09T12:56:09.9336538Z   type: 'test'
+2026-11-09T12:56:09.9336768Z   ...
+2026-11-09T12:56:11.7182310Z # Subtest: phase2a stable IDs, sources, confidence and model objects form a closed relation
+2026-11-09T12:56:11.7183202Z ok 155 - phase2a stable IDs, sources, confidence and model objects form a closed relation
+2026-11-09T12:56:11.7191286Z   ---
+2026-11-09T12:56:11.7201321Z   duration_ms: 1006.043389
+2026-11-09T12:56:11.7203423Z   type: 'test'
+2026-11-09T12:56:11.7205673Z   ...
+2026-11-09T12:56:11.7236616Z # Subtest: phase2a actual exported C faces cover one full patch and meet immutable A boundary
+2026-11-09T12:56:11.7247982Z ok 156 - phase2a actual exported C faces cover one full patch and meet immutable A boundary
+2026-11-09T12:56:11.7248652Z   ---
+2026-11-09T12:56:11.7248928Z   duration_ms: 481.351382
+2026-11-09T12:56:11.7249178Z   type: 'test'
+2026-11-09T12:56:11.7249349Z   ...
+2026-11-09T12:56:11.7250022Z # Subtest: phase2a all split surface edges agree in height and coordinate orientation
+2026-11-09T12:56:11.7250724Z ok 157 - phase2a all split surface edges agree in height and coordinate orientation
+2026-11-09T12:56:11.7251290Z   ---
+2026-11-09T12:56:11.7251549Z   duration_ms: 271.049662
+2026-11-09T12:56:11.7251892Z   type: 'test'
+2026-11-09T12:56:11.7252174Z   ...
+2026-11-09T12:56:11.7252745Z # Subtest: phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces
+2026-11-09T12:56:11.7253351Z ok 158 - phase2a distinguish moat depth, bank crest, flat bailey and rising passage using exported faces
+2026-11-09T12:56:11.7254283Z   ---
+2026-11-09T12:56:11.7254548Z   duration_ms: 115.384623
+2026-11-09T12:56:11.7254891Z   type: 'test'
+2026-11-09T12:56:11.7255153Z   ...
+2026-11-09T12:56:11.7255759Z # Subtest: negative controls detect a raised seam, missing facility and reassigned evidence ID
+2026-11-09T12:56:11.7256315Z ok 159 - negative controls detect a raised seam, missing facility and reassigned evidence ID
+2026-11-09T12:56:11.7256651Z   ---
+2026-11-09T12:56:11.7256817Z   duration_ms: 572.099001
+2026-11-09T12:56:11.7257006Z   type: 'test'
+2026-11-09T12:56:11.7257166Z   ...
+2026-11-09T12:56:11.7257538Z # Subtest: QGIS C cross sections and exported Blender vertices share actual heights
+2026-11-09T12:56:11.7258050Z ok 160 - QGIS C cross sections and exported Blender vertices share actual heights
+2026-11-09T12:56:11.7258358Z   ---
+2026-11-09T12:56:11.7258557Z   duration_ms: 222.762574
+2026-11-09T12:56:11.7258772Z   type: 'test'
+2026-11-09T12:56:11.7258956Z   ...
+2026-11-09T12:56:11.7777270Z # Subtest: finish restores base without source mutation, appearance=false
+2026-11-09T12:56:11.7810677Z ok 161 - finish restores base without source mutation, appearance=false
+2026-11-09T12:56:11.7843412Z   ---
+2026-11-09T12:56:11.7865070Z   duration_ms: 212.903763
+2026-11-09T12:56:11.7871659Z   type: 'test'
+2026-11-09T12:56:11.7872096Z   ...
+2026-11-09T12:56:11.7872804Z # Subtest: finish restores base without source mutation, appearance=true
+2026-11-09T12:56:11.7873743Z ok 162 - finish restores base without source mutation, appearance=true
+2026-11-09T12:56:11.7874362Z   ---
+2026-11-09T12:56:11.7874789Z   duration_ms: 229.719308
+2026-11-09T12:56:11.7875244Z   type: 'test'
+2026-11-09T12:56:11.7875651Z   ...
+2026-11-09T12:56:11.7876282Z # Subtest: existing UV and non-default shadow flags restore exactly
+2026-11-09T12:56:11.7877115Z ok 163 - existing UV and non-default shadow flags restore exactly
+2026-11-09T12:56:11.7877788Z   ---
+2026-11-09T12:56:11.7878197Z   duration_ms: 213.687325
+2026-11-09T12:56:11.7878678Z   type: 'test'
+2026-11-09T12:56:11.7879077Z   ...
+2026-11-09T12:56:11.7880302Z # Subtest: source additions preserve every old record and reject edits, removal and duplicate IDs
+2026-11-09T12:56:11.7881642Z ok 164 - source additions preserve every old record and reject edits, removal and duplicate IDs
+2026-11-09T12:56:11.7882397Z   ---
+2026-11-09T12:56:11.7882814Z   duration_ms: 0.933416
+2026-11-09T12:56:11.7883257Z   type: 'test'
+2026-11-09T12:56:11.7883666Z   ...
+2026-11-09T12:56:11.7884501Z # Subtest: western model preserves metric topology, has one ground sheet and joins the actual A boundary
+2026-11-09T12:56:11.7885681Z ok 165 - western model preserves metric topology, has one ground sheet and joins the actual A boundary
+2026-11-09T12:56:11.7886432Z   ---
+2026-11-09T12:56:11.7886839Z   duration_ms: 581.478775
+2026-11-09T12:56:11.7887288Z   type: 'test'
+2026-11-09T12:56:11.7887693Z   ...
+2026-11-09T12:56:11.7888550Z # Subtest: three regions and detachable upper structure remain C with separate reference and model dimensions
+2026-11-09T12:56:11.7889804Z ok 166 - three regions and detachable upper structure remain C with separate reference and model dimensions
+2026-11-09T12:56:11.7890596Z   ---
+2026-11-09T12:56:11.7891104Z   duration_ms: 1.21596
+2026-11-09T12:56:11.7891546Z   type: 'test'
+2026-11-09T12:56:11.7891948Z   ...
+2026-11-09T12:56:11.7892687Z # Subtest: recorded eight model cells include the short southern connection seen in raw GLB
+2026-11-09T12:56:11.7893743Z ok 167 - recorded eight model cells include the short southern connection seen in raw GLB
+2026-11-09T12:56:11.7894437Z   ---
+2026-11-09T12:56:11.7894835Z   duration_ms: 84.18442
+2026-11-09T12:56:11.7895270Z   type: 'test'
+2026-11-09T12:56:11.7895680Z   ...
+2026-11-09T12:56:11.7896483Z # Subtest: display cutout removes only whole aligned context triangles without altering source vertices
+2026-11-09T12:56:11.7897653Z ok 168 - display cutout removes only whole aligned context triangles without altering source vertices
+2026-11-09T12:56:11.7898612Z   ---
+2026-11-09T12:56:11.7899094Z   duration_ms: 1.00932
+2026-11-09T12:56:11.7899541Z   type: 'test'
+2026-11-09T12:56:11.7899957Z   ...
+2026-11-09T12:56:11.7900721Z # Subtest: ready camera input invalidates stale views without presentation resync or render
+2026-11-09T12:56:11.7901970Z ok 169 - ready camera input invalidates stale views without presentation resync or render
+2026-11-09T12:56:11.7902670Z   ---
+2026-11-09T12:56:11.7903074Z   duration_ms: 1.905291
+2026-11-09T12:56:11.7903530Z   type: 'test'
+2026-11-09T12:56:11.7903937Z   ...
+2026-11-09T12:56:11.7904791Z # Subtest: camera input during pending view restores current model, while initial load preserves completion
+2026-11-09T12:56:11.7906016Z ok 170 - camera input during pending view restores current model, while initial load preserves completion
+2026-11-09T12:56:11.7906796Z   ---
+2026-11-09T12:56:11.7907194Z   duration_ms: 0.351556
+2026-11-09T12:56:11.7907643Z   type: 'test'
+2026-11-09T12:56:11.7908059Z   ...
+2026-11-09T12:56:11.7908863Z # Subtest: orbital arrow controls rely on one OrbitControls change render, not a duplicate explicit draw
+2026-11-09T12:56:11.7910084Z ok 171 - orbital arrow controls rely on one OrbitControls change render, not a duplicate explicit draw
+2026-11-09T12:56:11.7910942Z   ---
+2026-11-09T12:56:11.7911349Z   duration_ms: 0.282413
+2026-11-09T12:56:11.7911790Z   type: 'test'
+2026-11-09T12:56:11.7912187Z   ...
+2026-11-09T12:56:11.7912986Z # Subtest: shared source geometry stays UV-free through staggered D activation and deactivation
+2026-11-09T12:56:11.7914078Z ok 172 - shared source geometry stays UV-free through staggered D activation and deactivation
+2026-11-09T12:56:11.7914787Z   ---
+2026-11-09T12:56:11.7915183Z   duration_ms: 191.188261
+2026-11-09T12:56:11.7915640Z   type: 'test'
+2026-11-09T12:56:11.7916170Z   ...
+2026-11-09T12:56:11.7916878Z # Subtest: two finish controllers cannot contaminate a shared source UV reference
+2026-11-09T12:56:11.7917836Z ok 173 - two finish controllers cannot contaminate a shared source UV reference
+2026-11-09T12:56:11.7918486Z   ---
+2026-11-09T12:56:11.7919070Z   duration_ms: 434.33195
+2026-11-09T12:56:11.7919516Z   type: 'test'
+2026-11-09T12:56:11.7919908Z   ...
+2026-11-09T12:56:11.7920711Z # Subtest: real inner GLB without COLOR never enables vertex colors; old western colors are preserved
+2026-11-09T12:56:11.7921986Z ok 174 - real inner GLB without COLOR never enables vertex colors; old western colors are preserved
+2026-11-09T12:56:11.7922715Z   ---
+2026-11-09T12:56:11.7923099Z   duration_ms: 342.273886
+2026-11-09T12:56:11.7923507Z   type: 'test'
+2026-11-09T12:56:11.7923861Z   ...
+2026-11-09T12:56:11.7924567Z # Subtest: fixed observation sits on actual triangle plus human eye; no max A/C fabricated support
+2026-11-09T12:56:11.7925517Z ok 175 - fixed observation sits on actual triangle plus human eye; no max A/C fabricated support
+2026-11-09T12:56:11.7926133Z   ---
+2026-11-09T12:56:11.7926521Z   duration_ms: 3.861778
+2026-11-09T12:56:11.7926947Z   type: 'test'
+2026-11-09T12:56:11.7927327Z   ...
+2026-11-09T12:56:11.7927895Z # Subtest: missing support rejects instead of extrapolating
+2026-11-09T12:56:11.7928647Z ok 176 - missing support rejects instead of extrapolating
+2026-11-09T12:56:11.7929204Z   ---
+2026-11-09T12:56:11.7929599Z   duration_ms: 0.546227
+2026-11-09T12:56:11.7930020Z   type: 'test'
+2026-11-09T12:56:11.7930403Z   ...
+2026-11-09T12:56:11.7931013Z # Subtest: 2x scales floor but not human eye offset
+2026-11-09T12:56:11.7931730Z ok 177 - 2x scales floor but not human eye offset
+2026-11-09T12:56:11.7932267Z   ---
+2026-11-09T12:56:11.7932674Z   duration_ms: 0.488551
+2026-11-09T12:56:11.7933102Z   type: 'test'
+2026-11-09T12:56:11.7933497Z   ...
+2026-11-09T12:56:11.7934140Z # Subtest: negative controls reject wrong category, ID and nonfinite coordinate
+2026-11-09T12:56:11.7935016Z ok 178 - negative controls reject wrong category, ID and nonfinite coordinate
+2026-11-09T12:56:11.7935643Z   ---
+2026-11-09T12:56:11.7936046Z   duration_ms: 0.371446
+2026-11-09T12:56:11.7936478Z   type: 'test'
+2026-11-09T12:56:11.7937037Z   ...
+2026-11-09T12:56:11.7937877Z # Subtest: landscape synchronization orders western state before inner support validation
+2026-11-09T12:56:11.7938941Z ok 179 - landscape synchronization orders western state before inner support validation
+2026-11-09T12:56:11.7939609Z   ---
+2026-11-09T12:56:11.7939993Z   duration_ms: 10.134893
+2026-11-09T12:56:11.7940413Z   type: 'test'
+2026-11-09T12:56:11.7940931Z   ...
+2026-11-09T12:56:11.7941649Z # Subtest: inner C patch requires western support; fault reintroduction loses the safety guard
+2026-11-09T12:56:11.7942689Z ok 180 - inner C patch requires western support; fault reintroduction loses the safety guard
+2026-11-09T12:56:11.7943383Z   ---
+2026-11-09T12:56:11.7943779Z   duration_ms: 2.713751
+2026-11-09T12:56:11.7944204Z   type: 'test'
+2026-11-09T12:56:11.7944599Z   ...
+2026-11-09T12:56:11.7945447Z # Subtest: metadata target scales relative model ground while physical eye and target offsets stay fixed
+2026-11-09T12:56:11.7946669Z ok 181 - metadata target scales relative model ground while physical eye and target offsets stay fixed
+2026-11-09T12:56:11.7947437Z   ---
+2026-11-09T12:56:11.7947827Z   duration_ms: 1.894134
+2026-11-09T12:56:11.7948257Z   type: 'test'
+2026-11-09T12:56:11.7948660Z   ...
+2026-11-09T12:56:11.7949169Z # Subtest: Evidence synthetic complete control accepted
+2026-11-09T12:56:11.7949820Z ok 182 - Evidence synthetic complete control accepted
+2026-11-09T12:56:11.7950359Z   ---
+2026-11-09T12:56:11.7950743Z   duration_ms: 1.652122
+2026-11-09T12:56:11.7951276Z   type: 'test'
+2026-11-09T12:56:11.7951661Z   ...
+2026-11-09T12:56:11.7952353Z # Subtest: Evidence rejects empty, stale, incomplete, failure and missing operations
+2026-11-09T12:56:11.7953371Z ok 183 - Evidence rejects empty, stale, incomplete, failure and missing operations
+2026-11-09T12:56:11.7954038Z   ---
+2026-11-09T12:56:11.7954431Z   duration_ms: 2.649865
+2026-11-09T12:56:11.7954973Z   type: 'test'
+2026-11-09T12:56:11.7955417Z   ...
+2026-11-09T12:56:11.7956080Z # Subtest: Phase3D actual GLB contact, clear route, connectivity and C ledger
+2026-11-09T12:56:11.7957211Z ok 184 - Phase3D actual GLB contact, clear route, connectivity and C ledger
+2026-11-09T12:56:11.7957857Z   ---
+2026-11-09T12:56:11.7958247Z   duration_ms: 82.009645
+2026-11-09T12:56:11.7958689Z   type: 'test'
+2026-11-09T12:56:11.7959076Z   ...
+2026-11-09T12:56:11.7959781Z # Subtest: Phase3D rejects floating/buried posts, blocked route, low lintel and false B
+2026-11-09T12:56:11.7960919Z ok 185 - Phase3D rejects floating/buried posts, blocked route, low lintel and false B
+2026-11-09T12:56:11.7961566Z   ---
+2026-11-09T12:56:11.7961953Z   duration_ms: 35.962479
+2026-11-09T12:56:11.7962385Z   type: 'test'
+2026-11-09T12:56:11.7962764Z   ...
+2026-11-09T12:56:11.7963296Z # Subtest: Phase3D fixed comparison pairs remain distinct
+2026-11-09T12:56:11.7963989Z ok 186 - Phase3D fixed comparison pairs remain distinct
+2026-11-09T12:56:11.7964509Z   ---
+2026-11-09T12:56:11.7964883Z   duration_ms: 0.836432
+2026-11-09T12:56:11.7965312Z   type: 'test'
+2026-11-09T12:56:11.7965694Z   ...
+2026-11-09T12:56:11.7966267Z # Subtest: Phase3D allows explicit C candidate
+2026-11-09T12:56:11.7966911Z ok 187 - Phase3D allows explicit C candidate
+2026-11-09T12:56:11.7967406Z   ---
+2026-11-09T12:56:11.7967794Z   duration_ms: 0.20715
+2026-11-09T12:56:11.7968239Z   type: 'test'
+2026-11-09T12:56:11.7968632Z   ...
+2026-11-09T12:56:11.7969265Z # Subtest: Phase3D rejects missing, invalid coordinates, false evidence B and duplicate IDs
+2026-11-09T12:56:11.7970109Z ok 188 - Phase3D rejects missing, invalid coordinates, false evidence B and duplicate IDs
+2026-11-09T12:56:11.7970757Z   ---
+2026-11-09T12:56:11.7971313Z   duration_ms: 0.359037
+2026-11-09T12:56:11.7971755Z   type: 'test'
+2026-11-09T12:56:11.7972147Z   ...
+2026-11-09T12:56:11.7972837Z # Subtest: F complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:11.7973807Z ok 189 - F complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:11.7974635Z   ---
+2026-11-09T12:56:11.7975019Z   duration_ms: 4.262197
+2026-11-09T12:56:11.7975459Z   type: 'test'
+2026-11-09T12:56:11.7975849Z   ...
+2026-11-09T12:56:11.7976262Z # Subtest: F rejects empty
+2026-11-09T12:56:11.7976746Z ok 190 - F rejects empty
+2026-11-09T12:56:11.7977180Z   ---
+2026-11-09T12:56:11.7977561Z   duration_ms: 1.412614
+2026-11-09T12:56:11.7977992Z   type: 'test'
+2026-11-09T12:56:11.7978386Z   ...
+2026-11-09T12:56:11.7978820Z # Subtest: F rejects missing
+2026-11-09T12:56:11.7979309Z ok 191 - F rejects missing
+2026-11-09T12:56:11.7979722Z   ---
+2026-11-09T12:56:11.7980093Z   duration_ms: 0.794348
+2026-11-09T12:56:11.7980566Z   type: 'test'
+2026-11-09T12:56:11.7981059Z   ...
+2026-11-09T12:56:11.7981488Z # Subtest: F rejects duplicate
+2026-11-09T12:56:11.7981973Z ok 192 - F rejects duplicate
+2026-11-09T12:56:11.7982395Z   ---
+2026-11-09T12:56:11.7982769Z   duration_ms: 0.707349
+2026-11-09T12:56:11.7983180Z   type: 'test'
+2026-11-09T12:56:11.7983555Z   ...
+2026-11-09T12:56:11.7983951Z # Subtest: F rejects stale
+2026-11-09T12:56:11.7984402Z ok 193 - F rejects stale
+2026-11-09T12:56:11.7984824Z   ---
+2026-11-09T12:56:11.7985205Z   duration_ms: 1.353355
+2026-11-09T12:56:11.7985625Z   type: 'test'
+2026-11-09T12:56:11.7986004Z   ...
+2026-11-09T12:56:11.7986425Z # Subtest: F rejects wrongTree
+2026-11-09T12:56:11.7986896Z ok 194 - F rejects wrongTree
+2026-11-09T12:56:11.7987401Z   ---
+2026-11-09T12:56:11.7987914Z   duration_ms: 0.674419
+2026-11-09T12:56:11.7988408Z   type: 'test'
+2026-11-09T12:56:11.7988820Z   ...
+2026-11-09T12:56:11.7989275Z # Subtest: F rejects missingSource
+2026-11-09T12:56:11.7989844Z ok 195 - F rejects missingSource
+2026-11-09T12:56:11.7990299Z   ---
+2026-11-09T12:56:11.7990685Z   duration_ms: 1.222549
+2026-11-09T12:56:11.7991247Z   type: 'test'
+2026-11-09T12:56:11.7991640Z   ...
+2026-11-09T12:56:11.7992086Z # Subtest: F rejects alteredSource
+2026-11-09T12:56:11.7992624Z ok 196 - F rejects alteredSource
+2026-11-09T12:56:11.7993070Z   ---
+2026-11-09T12:56:11.7993455Z   duration_ms: 0.945124
+2026-11-09T12:56:11.7993890Z   type: 'test'
+2026-11-09T12:56:11.7994272Z   ...
+2026-11-09T12:56:11.7994883Z # Subtest: F rejects unfinished
+2026-11-09T12:56:11.7995391Z ok 197 - F rejects unfinished
+2026-11-09T12:56:11.7995835Z   ---
+2026-11-09T12:56:11.7996218Z   duration_ms: 1.095289
+2026-11-09T12:56:11.7996647Z   type: 'test'
+2026-11-09T12:56:11.7997038Z   ...
+2026-11-09T12:56:11.7997442Z # Subtest: F rejects failed
+2026-11-09T12:56:11.7997918Z ok 198 - F rejects failed
+2026-11-09T12:56:11.7998349Z   ---
+2026-11-09T12:56:11.7998730Z   duration_ms: 1.28312
+2026-11-09T12:56:11.7999154Z   type: 'test'
+2026-11-09T12:56:11.7999538Z   ...
+2026-11-09T12:56:11.7999971Z # Subtest: F rejects pageerror
+2026-11-09T12:56:11.8000457Z ok 199 - F rejects pageerror
+2026-11-09T12:56:11.8001002Z   ---
+2026-11-09T12:56:11.8001435Z   duration_ms: 0.940747
+2026-11-09T12:56:11.8001864Z   type: 'test'
+2026-11-09T12:56:11.8002252Z   ...
+2026-11-09T12:56:11.8002705Z # Subtest: F rejects missingOperation
+2026-11-09T12:56:11.8003270Z ok 200 - F rejects missingOperation
+2026-11-09T12:56:11.8010280Z   ---
+2026-11-09T12:56:11.8010755Z   duration_ms: 1.050071
+2026-11-09T12:56:11.8011335Z   type: 'test'
+2026-11-09T12:56:11.8011740Z   ...
+2026-11-09T12:56:11.8012194Z # Subtest: F rejects missingSection
+2026-11-09T12:56:11.8012727Z ok 201 - F rejects missingSection
+2026-11-09T12:56:11.8013191Z   ---
+2026-11-09T12:56:11.8013572Z   duration_ms: 1.138604
+2026-11-09T12:56:11.8013994Z   type: 'test'
+2026-11-09T12:56:11.8014389Z   ...
+2026-11-09T12:56:11.8014834Z # Subtest: F rejects emptySection
+2026-11-09T12:56:11.8015361Z ok 202 - F rejects emptySection
+2026-11-09T12:56:11.8015811Z   ---
+2026-11-09T12:56:11.8016198Z   duration_ms: 7.845068
+2026-11-09T12:56:11.8016617Z   type: 'test'
+2026-11-09T12:56:11.8017111Z   ...
+2026-11-09T12:56:11.8017608Z # Subtest: F rejects wrongSection
+2026-11-09T12:56:11.8018140Z ok 203 - F rejects wrongSection
+2026-11-09T12:56:11.8018593Z   ---
+2026-11-09T12:56:11.8018970Z   duration_ms: 1.488928
+2026-11-09T12:56:11.8019568Z   type: 'test'
+2026-11-09T12:56:11.8019965Z   ...
+2026-11-09T12:56:11.8020384Z # Subtest: F rejects wrongEye
+2026-11-09T12:56:11.8021366Z ok 204 - F rejects wrongEye
+2026-11-09T12:56:11.8021818Z   ---
+2026-11-09T12:56:11.8022207Z   duration_ms: 4.287926
+2026-11-09T12:56:11.8022627Z   type: 'test'
+2026-11-09T12:56:11.8023029Z   ...
+2026-11-09T12:56:11.8023481Z # Subtest: F rejects missingGuide
+2026-11-09T12:56:11.8024020Z ok 205 - F rejects missingGuide
+2026-11-09T12:56:11.8024484Z   ---
+2026-11-09T12:56:11.8024870Z   duration_ms: 0.869581
+2026-11-09T12:56:11.8025293Z   type: 'test'
+2026-11-09T12:56:11.8025691Z   ...
+2026-11-09T12:56:11.8026123Z # Subtest: F rejects wrongGuide
+2026-11-09T12:56:11.8026609Z ok 206 - F rejects wrongGuide
+2026-11-09T12:56:11.8027066Z   ---
+2026-11-09T12:56:11.8027524Z   duration_ms: 0.919817
+2026-11-09T12:56:11.8027948Z   type: 'test'
+2026-11-09T12:56:11.8028364Z   ...
+2026-11-09T12:56:11.8028781Z # Subtest: F rejects noInput
+2026-11-09T12:56:11.8029268Z ok 207 - F rejects noInput
+2026-11-09T12:56:11.8029704Z   ---
+2026-11-09T12:56:11.8030100Z   duration_ms: 2.808693
+2026-11-09T12:56:11.8030520Z   type: 'test'
+2026-11-09T12:56:11.8031012Z   ...
+2026-11-09T12:56:11.8031427Z # Subtest: F rejects noPNG
+2026-11-09T12:56:11.8031899Z ok 208 - F rejects noPNG
+2026-11-09T12:56:11.8032319Z   ---
+2026-11-09T12:56:11.8032704Z   duration_ms: 0.799176
+2026-11-09T12:56:11.8033126Z   type: 'test'
+2026-11-09T12:56:11.8033513Z   ...
+2026-11-09T12:56:11.8033982Z # Subtest: F rejects missingQuality
+2026-11-09T12:56:11.8034538Z ok 209 - F rejects missingQuality
+2026-11-09T12:56:11.8035003Z   ---
+2026-11-09T12:56:11.8035393Z   duration_ms: 0.707138
+2026-11-09T12:56:11.8035809Z   type: 'test'
+2026-11-09T12:56:11.8036258Z   ...
+2026-11-09T12:56:18.0916316Z # Subtest: F moat: new exact sections and corrupted-profile rejection
+2026-11-09T12:56:18.0922016Z ok 210 - F moat: new exact sections and corrupted-profile rejection
+2026-11-09T12:56:18.0941193Z   ---
+2026-11-09T12:56:18.0957058Z   duration_ms: 187.764336
+2026-11-09T12:56:18.0957538Z   type: 'test'
+2026-11-09T12:56:18.0958042Z   ...
+2026-11-09T12:56:18.0959283Z # Subtest: F rampart: new exact sections and corrupted-profile rejection
+2026-11-09T12:56:18.0960275Z ok 211 - F rampart: new exact sections and corrupted-profile rejection
+2026-11-09T12:56:18.0961065Z   ---
+2026-11-09T12:56:18.0961487Z   duration_ms: 127.042624
+2026-11-09T12:56:18.0961975Z   type: 'test'
+2026-11-09T12:56:18.0962386Z   ...
+2026-11-09T12:56:18.0963098Z # Subtest: F local triangle walking surface follows same raw GLB at x1/x2
+2026-11-09T12:56:18.0964034Z ok 212 - F local triangle walking surface follows same raw GLB at x1/x2
+2026-11-09T12:56:18.0964679Z   ---
+2026-11-09T12:56:18.0965118Z   duration_ms: 1096.968852
+2026-11-09T12:56:18.0965580Z   type: 'test'
+2026-11-09T12:56:18.0965996Z   ...
+2026-11-09T12:56:18.0966578Z # Subtest: F original A and old C remain separate assets
+2026-11-09T12:56:18.0967317Z ok 213 - F original A and old C remain separate assets
+2026-11-09T12:56:18.0967880Z   ---
+2026-11-09T12:56:18.0968310Z   duration_ms: 3.919607
+2026-11-09T12:56:18.0968756Z   type: 'test'
+2026-11-09T12:56:18.0969181Z   ...
+2026-11-09T12:56:18.1788224Z # Subtest: Phase3F moat: bind old and current fixtures to their own raw triangles
+2026-11-09T12:56:18.1789422Z ok 214 - Phase3F moat: bind old and current fixtures to their own raw triangles
+2026-11-09T12:56:18.1790118Z   ---
+2026-11-09T12:56:18.1790527Z   duration_ms: 44.600873
+2026-11-09T12:56:18.1791381Z   type: 'test'
+2026-11-09T12:56:18.1791697Z   ...
+2026-11-09T12:56:18.1792618Z # {"id":"moat","old":{"count":336,"maxError":0},"current":{"count":672,"maxError":0},"crossGenerationRejected":true,"bothHeightMutationsRejected":true}
+2026-11-09T12:56:18.1793679Z # Subtest: Phase3F rampart: bind old and current fixtures to their own raw triangles
+2026-11-09T12:56:18.1794482Z ok 215 - Phase3F rampart: bind old and current fixtures to their own raw triangles
+2026-11-09T12:56:18.1794987Z   ---
+2026-11-09T12:56:18.1795262Z   duration_ms: 18.45331
+2026-11-09T12:56:18.1796056Z   type: 'test'
+2026-11-09T12:56:18.1796320Z   ...
+2026-11-09T12:56:18.1797234Z # {"id":"rampart","old":{"count":360,"maxError":0},"current":{"count":720,"maxError":0},"crossGenerationRejected":true,"bothHeightMutationsRejected":true}
+2026-11-09T12:56:18.1798325Z # Subtest: Phase3F preserved facility metadata remains bound to the original Nishinomaru GLB
+2026-11-09T12:56:18.1799203Z ok 216 - Phase3F preserved facility metadata remains bound to the original Nishinomaru GLB
+2026-11-09T12:56:18.1799759Z   ---
+2026-11-09T12:56:18.1800017Z   duration_ms: 0.892425
+2026-11-09T12:56:18.1800319Z   type: 'test'
+2026-11-09T12:56:18.1800579Z   ...
+2026-11-09T12:56:18.1801220Z # {"preservedMetadataChecks":5,"metadataMutationRejections":5}
+2026-11-09T12:56:18.1802059Z # Subtest: Section oracle rejects non-finite and degenerate evidence instead of returning a NaN success
+2026-11-09T12:56:18.1803017Z ok 217 - Section oracle rejects non-finite and degenerate evidence instead of returning a NaN success
+2026-11-09T12:56:18.1803611Z   ---
+2026-11-09T12:56:18.1803872Z   duration_ms: 1.367376
+2026-11-09T12:56:18.1804155Z   type: 'test'
+2026-11-09T12:56:18.1804420Z   ...
+2026-11-09T12:56:18.1804969Z # Subtest: G complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1805731Z ok 218 - G complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1806219Z   ---
+2026-11-09T12:56:18.1806454Z   duration_ms: 5.636534
+2026-11-09T12:56:18.1806729Z   type: 'test'
+2026-11-09T12:56:18.1806978Z   ...
+2026-11-09T12:56:18.1807280Z # Subtest: G rejects missingParts
+2026-11-09T12:56:18.1807662Z ok 219 - G rejects missingParts
+2026-11-09T12:56:18.1807962Z   ---
+2026-11-09T12:56:18.1808214Z   duration_ms: 1.382249
+2026-11-09T12:56:18.1808488Z   type: 'test'
+2026-11-09T12:56:18.1808726Z   ...
+2026-11-09T12:56:18.1809030Z # Subtest: G rejects badSupport
+2026-11-09T12:56:18.1809369Z ok 220 - G rejects badSupport
+2026-11-09T12:56:18.1809662Z   ---
+2026-11-09T12:56:18.1809907Z   duration_ms: 6.098965
+2026-11-09T12:56:18.1810182Z   type: 'test'
+2026-11-09T12:56:18.1810648Z   ...
+2026-11-09T12:56:18.1811078Z # Subtest: G rejects empty
+2026-11-09T12:56:18.1811451Z ok 221 - G rejects empty
+2026-11-09T12:56:18.1811781Z   ---
+2026-11-09T12:56:18.1812008Z   duration_ms: 1.237652
+2026-11-09T12:56:18.1812284Z   type: 'test'
+2026-11-09T12:56:18.1812508Z   ...
+2026-11-09T12:56:18.1812758Z # Subtest: G rejects missing
+2026-11-09T12:56:18.1813071Z ok 222 - G rejects missing
+2026-11-09T12:56:18.1813356Z   ---
+2026-11-09T12:56:18.1813578Z   duration_ms: 1.371392
+2026-11-09T12:56:18.1813838Z   type: 'test'
+2026-11-09T12:56:18.1814079Z   ...
+2026-11-09T12:56:18.1814350Z # Subtest: G rejects duplicate
+2026-11-09T12:56:18.1814675Z ok 223 - G rejects duplicate
+2026-11-09T12:56:18.1814944Z   ---
+2026-11-09T12:56:18.1815182Z   duration_ms: 1.293256
+2026-11-09T12:56:18.1815441Z   type: 'test'
+2026-11-09T12:56:18.1815670Z   ...
+2026-11-09T12:56:18.1815931Z # Subtest: G rejects stale
+2026-11-09T12:56:18.1816235Z ok 224 - G rejects stale
+2026-11-09T12:56:18.1816486Z   ---
+2026-11-09T12:56:18.1816711Z   duration_ms: 1.839462
+2026-11-09T12:56:18.1816957Z   type: 'test'
+2026-11-09T12:56:18.1817181Z   ...
+2026-11-09T12:56:18.1817447Z # Subtest: G rejects wrongTree
+2026-11-09T12:56:18.1817762Z ok 225 - G rejects wrongTree
+2026-11-09T12:56:18.1818025Z   ---
+2026-11-09T12:56:18.1818252Z   duration_ms: 1.05606
+2026-11-09T12:56:18.1818517Z   type: 'test'
+2026-11-09T12:56:18.1818736Z   ...
+2026-11-09T12:56:18.1819018Z # Subtest: G rejects missingSource
+2026-11-09T12:56:18.1819371Z ok 226 - G rejects missingSource
+2026-11-09T12:56:18.1819673Z   ---
+2026-11-09T12:56:18.1819898Z   duration_ms: 1.824149
+2026-11-09T12:56:18.1820166Z   type: 'test'
+2026-11-09T12:56:18.1820410Z   ...
+2026-11-09T12:56:18.1820702Z # Subtest: G rejects alteredSource
+2026-11-09T12:56:18.1841437Z ok 227 - G rejects alteredSource
+2026-11-09T12:56:18.1841778Z   ---
+2026-11-09T12:56:18.1842036Z   duration_ms: 2.881121
+2026-11-09T12:56:18.1842602Z   type: 'test'
+2026-11-09T12:56:18.1842842Z   ...
+2026-11-09T12:56:18.1843131Z # Subtest: G rejects unfinished
+2026-11-09T12:56:18.1843488Z ok 228 - G rejects unfinished
+2026-11-09T12:56:18.1843792Z   ---
+2026-11-09T12:56:18.1844049Z   duration_ms: 1.514727
+2026-11-09T12:56:18.1844333Z   type: 'test'
+2026-11-09T12:56:18.1844575Z   ...
+2026-11-09T12:56:18.1844847Z # Subtest: G rejects failed
+2026-11-09T12:56:18.1845168Z ok 229 - G rejects failed
+2026-11-09T12:56:18.1845446Z   ---
+2026-11-09T12:56:18.1845686Z   duration_ms: 1.826943
+2026-11-09T12:56:18.1845970Z   type: 'test'
+2026-11-09T12:56:18.1846208Z   ...
+2026-11-09T12:56:18.1846502Z # Subtest: G rejects pageerror
+2026-11-09T12:56:18.1846848Z ok 230 - G rejects pageerror
+2026-11-09T12:56:18.1847134Z   ---
+2026-11-09T12:56:18.1847367Z   duration_ms: 1.081849
+2026-11-09T12:56:18.1847646Z   type: 'test'
+2026-11-09T12:56:18.1847883Z   ...
+2026-11-09T12:56:18.1848191Z # Subtest: G rejects missingOperation
+2026-11-09T12:56:18.1848595Z ok 231 - G rejects missingOperation
+2026-11-09T12:56:18.1848925Z   ---
+2026-11-09T12:56:18.1849160Z   duration_ms: 1.253666
+2026-11-09T12:56:18.1849425Z   type: 'test'
+2026-11-09T12:56:18.1849679Z   ...
+2026-11-09T12:56:18.1849988Z # Subtest: G rejects missingSection
+2026-11-09T12:56:18.1850394Z ok 232 - G rejects missingSection
+2026-11-09T12:56:18.1850708Z   ---
+2026-11-09T12:56:18.1851164Z   duration_ms: 1.075109
+2026-11-09T12:56:18.1851454Z   type: 'test'
+2026-11-09T12:56:18.1851702Z   ...
+2026-11-09T12:56:18.1852011Z # Subtest: G rejects emptySection
+2026-11-09T12:56:18.1852384Z ok 233 - G rejects emptySection
+2026-11-09T12:56:18.1852685Z   ---
+2026-11-09T12:56:18.1852931Z   duration_ms: 2.159702
+2026-11-09T12:56:18.1853199Z   type: 'test'
+2026-11-09T12:56:18.1853440Z   ...
+2026-11-09T12:56:18.1853734Z # Subtest: G rejects wrongSection
+2026-11-09T12:56:18.1854152Z ok 234 - G rejects wrongSection
+2026-11-09T12:56:18.1854445Z   ---
+2026-11-09T12:56:18.1854687Z   duration_ms: 1.803338
+2026-11-09T12:56:18.1854974Z   type: 'test'
+2026-11-09T12:56:18.1855226Z   ...
+2026-11-09T12:56:18.1855697Z # Subtest: G rejects wrongEye
+2026-11-09T12:56:18.1856057Z ok 235 - G rejects wrongEye
+2026-11-09T12:56:18.1856356Z   ---
+2026-11-09T12:56:18.1856603Z   duration_ms: 2.457927
+2026-11-09T12:56:18.1856884Z   type: 'test'
+2026-11-09T12:56:18.1857139Z   ...
+2026-11-09T12:56:18.1857436Z # Subtest: G rejects missingGuide
+2026-11-09T12:56:18.1857785Z ok 236 - G rejects missingGuide
+2026-11-09T12:56:18.1858056Z   ---
+2026-11-09T12:56:18.1858294Z   duration_ms: 1.145744
+2026-11-09T12:56:18.1858570Z   type: 'test'
+2026-11-09T12:56:18.1858811Z   ...
+2026-11-09T12:56:18.1859130Z # Subtest: G rejects wrongGuide
+2026-11-09T12:56:18.1859463Z ok 237 - G rejects wrongGuide
+2026-11-09T12:56:18.1859778Z   ---
+2026-11-09T12:56:18.1860019Z   duration_ms: 1.676949
+2026-11-09T12:56:18.1860290Z   type: 'test'
+2026-11-09T12:56:18.1860525Z   ...
+2026-11-09T12:56:18.1860943Z # Subtest: G rejects noInput
+2026-11-09T12:56:18.1861279Z ok 238 - G rejects noInput
+2026-11-09T12:56:18.1861567Z   ---
+2026-11-09T12:56:18.1861802Z   duration_ms: 3.982018
+2026-11-09T12:56:18.1862087Z   type: 'test'
+2026-11-09T12:56:18.1862323Z   ...
+2026-11-09T12:56:18.1862585Z # Subtest: G rejects noPNG
+2026-11-09T12:56:18.1862913Z ok 239 - G rejects noPNG
+2026-11-09T12:56:18.1863195Z   ---
+2026-11-09T12:56:18.1863434Z   duration_ms: 1.227467
+2026-11-09T12:56:18.1863723Z   type: 'test'
+2026-11-09T12:56:18.1863962Z   ...
+2026-11-09T12:56:18.1864254Z # Subtest: G rejects missingQuality
+2026-11-09T12:56:18.1864634Z ok 240 - G rejects missingQuality
+2026-11-09T12:56:18.1864920Z   ---
+2026-11-09T12:56:18.1865138Z   duration_ms: 3.185186
+2026-11-09T12:56:18.1865388Z   type: 'test'
+2026-11-09T12:56:18.1865619Z   ...
+2026-11-09T12:56:18.1866091Z # Subtest: H complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1866833Z ok 241 - H complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1867306Z   ---
+2026-11-09T12:56:18.1867533Z   duration_ms: 9.207486
+2026-11-09T12:56:18.1868209Z   type: 'test'
+2026-11-09T12:56:18.1868462Z   ...
+2026-11-09T12:56:18.1868757Z # Subtest: H rejects missingNature
+2026-11-09T12:56:18.1869143Z ok 242 - H rejects missingNature
+2026-11-09T12:56:18.1869450Z   ---
+2026-11-09T12:56:18.1869676Z   duration_ms: 2.273301
+2026-11-09T12:56:18.1869925Z   type: 'test'
+2026-11-09T12:56:18.1870171Z   ...
+2026-11-09T12:56:18.1870434Z # Subtest: H rejects taintedA
+2026-11-09T12:56:18.1901242Z ok 243 - H rejects taintedA
+2026-11-09T12:56:18.1901701Z   ---
+2026-11-09T12:56:18.1901980Z   duration_ms: 1.912471
+2026-11-09T12:56:18.1902278Z   type: 'test'
+2026-11-09T12:56:18.1902533Z   ...
+2026-11-09T12:56:18.1902823Z # Subtest: H rejects badShrub
+2026-11-09T12:56:18.1903182Z ok 244 - H rejects badShrub
+2026-11-09T12:56:18.1903479Z   ---
+2026-11-09T12:56:18.1903730Z   duration_ms: 6.193016
+2026-11-09T12:56:18.1904018Z   type: 'test'
+2026-11-09T12:56:18.1904258Z   ...
+2026-11-09T12:56:18.1904575Z # Subtest: H rejects missingNaturePNG
+2026-11-09T12:56:18.1905019Z ok 245 - H rejects missingNaturePNG
+2026-11-09T12:56:18.1905354Z   ---
+2026-11-09T12:56:18.1905595Z   duration_ms: 1.246736
+2026-11-09T12:56:18.1905884Z   type: 'test'
+2026-11-09T12:56:18.1906126Z   ...
+2026-11-09T12:56:18.1906422Z # Subtest: H rejects missingParts
+2026-11-09T12:56:18.1906795Z ok 246 - H rejects missingParts
+2026-11-09T12:56:18.1907101Z   ---
+2026-11-09T12:56:18.1907338Z   duration_ms: 1.453956
+2026-11-09T12:56:18.1907615Z   type: 'test'
+2026-11-09T12:56:18.1907861Z   ...
+2026-11-09T12:56:18.1908160Z # Subtest: H rejects badSupport
+2026-11-09T12:56:18.1908493Z ok 247 - H rejects badSupport
+2026-11-09T12:56:18.1908774Z   ---
+2026-11-09T12:56:18.1909017Z   duration_ms: 2.007714
+2026-11-09T12:56:18.1909287Z   type: 'test'
+2026-11-09T12:56:18.1909522Z   ...
+2026-11-09T12:56:18.1909783Z # Subtest: H rejects empty
+2026-11-09T12:56:18.1910094Z ok 248 - H rejects empty
+2026-11-09T12:56:18.1910362Z   ---
+2026-11-09T12:56:18.1910604Z   duration_ms: 0.859797
+2026-11-09T12:56:18.1911008Z   type: 'test'
+2026-11-09T12:56:18.1911238Z   ...
+2026-11-09T12:56:18.1911766Z # Subtest: H rejects missing
+2026-11-09T12:56:18.1912107Z ok 249 - H rejects missing
+2026-11-09T12:56:18.1912391Z   ---
+2026-11-09T12:56:18.1912623Z   duration_ms: 1.164352
+2026-11-09T12:56:18.1912906Z   type: 'test'
+2026-11-09T12:56:18.1913149Z   ...
+2026-11-09T12:56:18.1913432Z # Subtest: H rejects duplicate
+2026-11-09T12:56:18.1913767Z ok 250 - H rejects duplicate
+2026-11-09T12:56:18.1914062Z   ---
+2026-11-09T12:56:18.1914308Z   duration_ms: 1.799092
+2026-11-09T12:56:18.1914575Z   type: 'test'
+2026-11-09T12:56:18.1914816Z   ...
+2026-11-09T12:56:18.1915067Z # Subtest: H rejects stale
+2026-11-09T12:56:18.1915384Z ok 251 - H rejects stale
+2026-11-09T12:56:18.1915660Z   ---
+2026-11-09T12:56:18.1915887Z   duration_ms: 1.246115
+2026-11-09T12:56:18.1916151Z   type: 'test'
+2026-11-09T12:56:18.1916386Z   ...
+2026-11-09T12:56:18.1916718Z # Subtest: H rejects wrongTree
+2026-11-09T12:56:18.1917037Z ok 252 - H rejects wrongTree
+2026-11-09T12:56:18.1917345Z   ---
+2026-11-09T12:56:18.1917627Z   duration_ms: 0.720258
+2026-11-09T12:56:18.1917907Z   type: 'test'
+2026-11-09T12:56:18.1918135Z   ...
+2026-11-09T12:56:18.1918429Z # Subtest: H rejects missingSource
+2026-11-09T12:56:18.1918760Z ok 253 - H rejects missingSource
+2026-11-09T12:56:18.1919033Z   ---
+2026-11-09T12:56:18.1919250Z   duration_ms: 1.159104
+2026-11-09T12:56:18.1919503Z   type: 'test'
+2026-11-09T12:56:18.1919725Z   ...
+2026-11-09T12:56:18.1920001Z # Subtest: H rejects alteredSource
+2026-11-09T12:56:18.1920347Z ok 254 - H rejects alteredSource
+2026-11-09T12:56:18.1920622Z   ---
+2026-11-09T12:56:18.1920955Z   duration_ms: 0.9293
+2026-11-09T12:56:18.1921227Z   type: 'test'
+2026-11-09T12:56:18.1921438Z   ...
+2026-11-09T12:56:18.1921705Z # Subtest: H rejects unfinished
+2026-11-09T12:56:18.1922028Z ok 255 - H rejects unfinished
+2026-11-09T12:56:18.1922314Z   ---
+2026-11-09T12:56:18.1922528Z   duration_ms: 0.957082
+2026-11-09T12:56:18.1922773Z   type: 'test'
+2026-11-09T12:56:18.1923150Z   ...
+2026-11-09T12:56:18.1923396Z # Subtest: H rejects failed
+2026-11-09T12:56:18.1923704Z ok 256 - H rejects failed
+2026-11-09T12:56:18.1923948Z   ---
+2026-11-09T12:56:18.1924171Z   duration_ms: 1.497391
+2026-11-09T12:56:18.1924420Z   type: 'test'
+2026-11-09T12:56:18.1924639Z   ...
+2026-11-09T12:56:18.1924928Z # Subtest: H rejects pageerror
+2026-11-09T12:56:18.1925265Z ok 257 - H rejects pageerror
+2026-11-09T12:56:18.1925528Z   ---
+2026-11-09T12:56:18.1925843Z   duration_ms: 1.231312
+2026-11-09T12:56:18.1926100Z   type: 'test'
+2026-11-09T12:56:18.1926321Z   ...
+2026-11-09T12:56:18.1926601Z # Subtest: H rejects missingOperation
+2026-11-09T12:56:18.1927025Z ok 258 - H rejects missingOperation
+2026-11-09T12:56:18.1927383Z   ---
+2026-11-09T12:56:18.1927636Z   duration_ms: 1.084413
+2026-11-09T12:56:18.1927936Z   type: 'test'
+2026-11-09T12:56:18.1928156Z   ...
+2026-11-09T12:56:18.1928425Z # Subtest: H rejects missingSection
+2026-11-09T12:56:18.1928777Z ok 259 - H rejects missingSection
+2026-11-09T12:56:18.1929061Z   ---
+2026-11-09T12:56:18.1929286Z   duration_ms: 1.670359
+2026-11-09T12:56:18.1929545Z   type: 'test'
+2026-11-09T12:56:18.1929758Z   ...
+2026-11-09T12:56:18.1930040Z # Subtest: H rejects emptySection
+2026-11-09T12:56:18.1930384Z ok 260 - H rejects emptySection
+2026-11-09T12:56:18.1930649Z   ---
+2026-11-09T12:56:18.1961151Z   duration_ms: 3.04044
+2026-11-09T12:56:18.1961471Z   type: 'test'
+2026-11-09T12:56:18.1961722Z   ...
+2026-11-09T12:56:18.1962083Z # Subtest: H rejects wrongSection
+2026-11-09T12:56:18.1962523Z ok 261 - H rejects wrongSection
+2026-11-09T12:56:18.1962830Z   ---
+2026-11-09T12:56:18.1963082Z   duration_ms: 1.833343
+2026-11-09T12:56:18.1963354Z   type: 'test'
+2026-11-09T12:56:18.1963591Z   ...
+2026-11-09T12:56:18.1963855Z # Subtest: H rejects wrongEye
+2026-11-09T12:56:18.1964191Z ok 262 - H rejects wrongEye
+2026-11-09T12:56:18.1964472Z   ---
+2026-11-09T12:56:18.1964707Z   duration_ms: 3.851783
+2026-11-09T12:56:18.1964981Z   type: 'test'
+2026-11-09T12:56:18.1965218Z   ...
+2026-11-09T12:56:18.1965525Z # Subtest: H rejects missingGuide
+2026-11-09T12:56:18.1966141Z ok 263 - H rejects missingGuide
+2026-11-09T12:56:18.1966448Z   ---
+2026-11-09T12:56:18.1966685Z   duration_ms: 1.121588
+2026-11-09T12:56:18.1966954Z   type: 'test'
+2026-11-09T12:56:18.1967200Z   ...
+2026-11-09T12:56:18.1967492Z # Subtest: H rejects wrongGuide
+2026-11-09T12:56:18.1967828Z ok 264 - H rejects wrongGuide
+2026-11-09T12:56:18.1968119Z   ---
+2026-11-09T12:56:18.1968359Z   duration_ms: 1.594516
+2026-11-09T12:56:18.1968628Z   type: 'test'
+2026-11-09T12:56:18.1968867Z   ...
+2026-11-09T12:56:18.1969134Z # Subtest: H rejects noInput
+2026-11-09T12:56:18.1969458Z ok 265 - H rejects noInput
+2026-11-09T12:56:18.1969730Z   ---
+2026-11-09T12:56:18.1969966Z   duration_ms: 2.253282
+2026-11-09T12:56:18.1970234Z   type: 'test'
+2026-11-09T12:56:18.1970466Z   ...
+2026-11-09T12:56:18.1970725Z # Subtest: H rejects noPNG
+2026-11-09T12:56:18.1971155Z ok 266 - H rejects noPNG
+2026-11-09T12:56:18.1971426Z   ---
+2026-11-09T12:56:18.1971656Z   duration_ms: 0.809061
+2026-11-09T12:56:18.1971936Z   type: 'test'
+2026-11-09T12:56:18.1972179Z   ...
+2026-11-09T12:56:18.1972472Z # Subtest: H rejects missingQuality
+2026-11-09T12:56:18.1972881Z ok 267 - H rejects missingQuality
+2026-11-09T12:56:18.1973221Z   ---
+2026-11-09T12:56:18.1973452Z   duration_ms: 0.962811
+2026-11-09T12:56:18.1973723Z   type: 'test'
+2026-11-09T12:56:18.1973965Z   ...
+2026-11-09T12:56:18.1974474Z # Subtest: H expands physical heights outside G edit bounds with unchanged fence supports
+2026-11-09T12:56:18.1975310Z ok 268 - H expands physical heights outside G edit bounds with unchanged fence supports
+2026-11-09T12:56:18.1975848Z   ---
+2026-11-09T12:56:18.1976097Z   duration_ms: 25.06297
+2026-11-09T12:56:18.1976372Z   type: 'test'
+2026-11-09T12:56:18.1976630Z   ...
+2026-11-09T12:56:18.1977099Z # Subtest: H metadata sections and station supports are actual GLB samples
+2026-11-09T12:56:18.1977813Z ok 269 - H metadata sections and station supports are actual GLB samples
+2026-11-09T12:56:18.1978456Z   ---
+2026-11-09T12:56:18.1978691Z   duration_ms: 15.069798
+2026-11-09T12:56:18.1978986Z   type: 'test'
+2026-11-09T12:56:18.1979226Z   ...
+2026-11-09T12:56:18.1979658Z # Subtest: H unchanged region remains numerically identical to G
+2026-11-09T12:56:18.1980260Z ok 270 - H unchanged region remains numerically identical to G
+2026-11-09T12:56:18.1980667Z   ---
+2026-11-09T12:56:18.1981090Z   duration_ms: 0.967288
+2026-11-09T12:56:18.1981366Z   type: 'test'
+2026-11-09T12:56:18.1981608Z   ...
+2026-11-09T12:56:18.1982144Z # Subtest: I complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1982908Z ok 271 - I complete synthetic evidence positive control (not browser execution)
+2026-11-09T12:56:18.1983397Z   ---
+2026-11-09T12:56:18.1983638Z   duration_ms: 5.792036
+2026-11-09T12:56:18.1983927Z   type: 'test'
+2026-11-09T12:56:18.1984172Z   ...
+2026-11-09T12:56:18.1984459Z # Subtest: I rejects missingNature
+2026-11-09T12:56:18.1984842Z ok 272 - I rejects missingNature
+2026-11-09T12:56:18.1985160Z   ---
+2026-11-09T12:56:18.1985402Z   duration_ms: 2.23942
+2026-11-09T12:56:18.1985697Z   type: 'test'
+2026-11-09T12:56:18.1985941Z   ...
+2026-11-09T12:56:18.1986215Z # Subtest: I rejects taintedA
+2026-11-09T12:56:18.1986561Z ok 273 - I rejects taintedA
+2026-11-09T12:56:18.1986863Z   ---
+2026-11-09T12:56:18.1987106Z   duration_ms: 1.928265
+2026-11-09T12:56:18.1987386Z   type: 'test'
+2026-11-09T12:56:18.1987639Z   ...
+2026-11-09T12:56:18.1987904Z # Subtest: I rejects badShrub
+2026-11-09T12:56:18.1988241Z ok 274 - I rejects badShrub
+2026-11-09T12:56:18.1988529Z   ---
+2026-11-09T12:56:18.1988781Z   duration_ms: 6.792944
+2026-11-09T12:56:18.1989061Z   type: 'test'
+2026-11-09T12:56:18.1989302Z   ...
+2026-11-09T12:56:18.1989620Z # Subtest: I rejects missingNaturePNG
+2026-11-09T12:56:18.1990021Z ok 275 - I rejects missingNaturePNG
+2026-11-09T12:56:18.1990330Z   ---
+2026-11-09T12:56:18.1990569Z   duration_ms: 1.736298
+2026-11-09T12:56:18.2021041Z   type: 'test'
+2026-11-09T12:56:18.2021352Z   ...
+2026-11-09T12:56:18.2021681Z # Subtest: I rejects missingParts
+2026-11-09T12:56:18.2022349Z ok 276 - I rejects missingParts
+2026-11-09T12:56:18.2022679Z   ---
+2026-11-09T12:56:18.2022917Z   duration_ms: 2.083908
+2026-11-09T12:56:18.2023212Z   type: 'test'
+2026-11-09T12:56:18.2023461Z   ...
+2026-11-09T12:56:18.2023749Z # Subtest: I rejects badSupport
+2026-11-09T12:56:18.2024089Z ok 277 - I rejects badSupport
+2026-11-09T12:56:18.2024391Z   ---
+2026-11-09T12:56:18.2024628Z   duration_ms: 3.256593
+2026-11-09T12:56:18.2024909Z   type: 'test'
+2026-11-09T12:56:18.2025159Z   ...
+2026-11-09T12:56:18.2025423Z # Subtest: I rejects empty
+2026-11-09T12:56:18.2025803Z ok 278 - I rejects empty
+2026-11-09T12:56:18.2026135Z   ---
+2026-11-09T12:56:18.2026373Z   duration_ms: 1.401107
+2026-11-09T12:56:18.2026646Z   type: 'test'
+2026-11-09T12:56:18.2026899Z   ...
+2026-11-09T12:56:18.2027149Z # Subtest: I rejects missing
+2026-11-09T12:56:18.2027478Z ok 279 - I rejects missing
+2026-11-09T12:56:18.2027761Z   ---
+2026-11-09T12:56:18.2027997Z   duration_ms: 1.843568
+2026-11-09T12:56:18.2028265Z   type: 'test'
+2026-11-09T12:56:18.2028508Z   ...
+2026-11-09T12:56:18.2028804Z # Subtest: I rejects duplicate
+2026-11-09T12:56:18.2029134Z ok 280 - I rejects duplicate
+2026-11-09T12:56:18.2029411Z   ---
+2026-11-09T12:56:18.2029646Z   duration_ms: 3.170123
+2026-11-09T12:56:18.2029917Z   type: 'test'
+2026-11-09T12:56:18.2030155Z   ...
+2026-11-09T12:56:18.2030400Z # Subtest: I rejects stale
+2026-11-09T12:56:18.2030718Z ok 281 - I rejects stale
+2026-11-09T12:56:18.2031130Z   ---
+2026-11-09T12:56:18.2031374Z   duration_ms: 2.073272
+2026-11-09T12:56:18.2031670Z   type: 'test'
+2026-11-09T12:56:18.2031957Z   ...
+2026-11-09T12:56:18.2032248Z # Subtest: I rejects wrongTree
+2026-11-09T12:56:18.2032602Z ok 282 - I rejects wrongTree
+2026-11-09T12:56:18.2032889Z   ---
+2026-11-09T12:56:18.2033127Z   duration_ms: 1.230532
+2026-11-09T12:56:18.2033395Z   type: 'test'
+2026-11-09T12:56:18.2033640Z   ...
+2026-11-09T12:56:18.2033960Z # Subtest: I rejects missingSource
+2026-11-09T12:56:18.2034535Z ok 283 - I rejects missingSource
+2026-11-09T12:56:18.2034848Z   ---
+2026-11-09T12:56:18.2035127Z   duration_ms: 1.869337
+2026-11-09T12:56:18.2035395Z   type: 'test'
+2026-11-09T12:56:18.2035615Z   ...
+2026-11-09T12:56:18.2035920Z # Subtest: I rejects alteredSource
+2026-11-09T12:56:18.2036318Z ok 284 - I rejects alteredSource
+2026-11-09T12:56:18.2036621Z   ---
+2026-11-09T12:56:18.2036859Z   duration_ms: 1.551662
+2026-11-09T12:56:18.2037113Z   type: 'test'
+2026-11-09T12:56:18.2037342Z   ...
+2026-11-09T12:56:18.2037617Z # Subtest: I rejects unfinished
+2026-11-09T12:56:18.2037943Z ok 285 - I rejects unfinished
+2026-11-09T12:56:18.2038219Z   ---
+2026-11-09T12:56:18.2038467Z   duration_ms: 1.332173
+2026-11-09T12:56:18.2038757Z   type: 'test'
+2026-11-09T12:56:18.2038993Z   ...
+2026-11-09T12:56:18.2039247Z # Subtest: I rejects failed
+2026-11-09T12:56:18.2039583Z ok 286 - I rejects failed
+2026-11-09T12:56:18.2039866Z   ---
+2026-11-09T12:56:18.2040101Z   duration_ms: 1.53721
+2026-11-09T12:56:18.2040379Z   type: 'test'
+2026-11-09T12:56:18.2040622Z   ...
+2026-11-09T12:56:18.2041075Z # Subtest: I rejects pageerror
+2026-11-09T12:56:18.2041427Z ok 287 - I rejects pageerror
+2026-11-09T12:56:18.2041690Z   ---
+2026-11-09T12:56:18.2041911Z   duration_ms: 1.422348
+2026-11-09T12:56:18.2042147Z   type: 'test'
+2026-11-09T12:56:18.2042373Z   ...
+2026-11-09T12:56:18.2042679Z # Subtest: I rejects missingOperation
+2026-11-09T12:56:18.2043046Z ok 288 - I rejects missingOperation
+2026-11-09T12:56:18.2043333Z   ---
+2026-11-09T12:56:18.2043570Z   duration_ms: 1.300937
+2026-11-09T12:56:18.2043835Z   type: 'test'
+2026-11-09T12:56:18.2044076Z   ...
+2026-11-09T12:56:18.2044385Z # Subtest: I rejects missingSection
+2026-11-09T12:56:18.2044768Z ok 289 - I rejects missingSection
+2026-11-09T12:56:18.2045071Z   ---
+2026-11-09T12:56:18.2045317Z   duration_ms: 1.36994
+2026-11-09T12:56:18.2045599Z   type: 'test'
+2026-11-09T12:56:18.2045837Z   ...
+2026-11-09T12:56:18.2046132Z # Subtest: I rejects emptySection
+2026-11-09T12:56:18.2046530Z ok 290 - I rejects emptySection
+2026-11-09T12:56:18.2046832Z   ---
+2026-11-09T12:56:18.2047271Z   duration_ms: 3.4154
+2026-11-09T12:56:18.2047563Z   type: 'test'
+2026-11-09T12:56:18.2047808Z   ...
+2026-11-09T12:56:18.2048104Z # Subtest: I rejects wrongSection
+2026-11-09T12:56:18.2048490Z ok 291 - I rejects wrongSection
+2026-11-09T12:56:18.2048798Z   ---
+2026-11-09T12:56:18.2049039Z   duration_ms: 2.524157
+2026-11-09T12:56:18.2049316Z   type: 'test'
+2026-11-09T12:56:18.2049566Z   ...
+2026-11-09T12:56:18.2049831Z # Subtest: I rejects wrongEye
+2026-11-09T12:56:18.2050164Z ok 292 - I rejects wrongEye
+2026-11-09T12:56:18.2050444Z   ---
+2026-11-09T12:56:18.2050695Z   duration_ms: 4.121847
+2026-11-09T12:56:18.2081340Z   type: 'test'
+2026-11-09T12:56:18.2081606Z   ...
+2026-11-09T12:56:18.2081925Z # Subtest: I rejects missingGuide
+2026-11-09T12:56:18.2082345Z ok 293 - I rejects missingGuide
+2026-11-09T12:56:18.2082648Z   ---
+2026-11-09T12:56:18.2082913Z   duration_ms: 1.199125
+2026-11-09T12:56:18.2083199Z   type: 'test'
+2026-11-09T12:56:18.2083459Z   ...
+2026-11-09T12:56:18.2083768Z # Subtest: I rejects wrongGuide
+2026-11-09T12:56:18.2084109Z ok 294 - I rejects wrongGuide
+2026-11-09T12:56:18.2084396Z   ---
+2026-11-09T12:56:18.2084628Z   duration_ms: 1.65794
+2026-11-09T12:56:18.2084916Z   type: 'test'
+2026-11-09T12:56:18.2085158Z   ...
+2026-11-09T12:56:18.2085520Z # Subtest: I rejects noInput
+2026-11-09T12:56:18.2085845Z ok 295 - I rejects noInput
+2026-11-09T12:56:18.2086094Z   ---
+2026-11-09T12:56:18.2086324Z   duration_ms: 2.509435
+2026-11-09T12:56:18.2086595Z   type: 'test'
+2026-11-09T12:56:18.2086839Z   ...
+2026-11-09T12:56:18.2087073Z # Subtest: I rejects noPNG
+2026-11-09T12:56:18.2087350Z ok 296 - I rejects noPNG
+2026-11-09T12:56:18.2087608Z   ---
+2026-11-09T12:56:18.2087817Z   duration_ms: 1.212144
+2026-11-09T12:56:18.2088058Z   type: 'test'
+2026-11-09T12:56:18.2088292Z   ...
+2026-11-09T12:56:18.2088602Z # Subtest: I rejects missingQuality
+2026-11-09T12:56:18.2088959Z ok 297 - I rejects missingQuality
+2026-11-09T12:56:18.2089465Z   ---
+2026-11-09T12:56:18.2089703Z   duration_ms: 1.26312
+2026-11-09T12:56:18.2090041Z   type: 'test'
+2026-11-09T12:56:18.2090281Z   ...
+2026-11-09T12:56:19.2032739Z # Subtest: I short approach has actual bounded height edit outside H patch
+2026-11-09T12:56:19.2033753Z ok 298 - I short approach has actual bounded height edit outside H patch
+2026-11-09T12:56:19.2034493Z   ---
+2026-11-09T12:56:19.2034798Z   duration_ms: 1.635584
+2026-11-09T12:56:19.2035112Z   type: 'test'
+2026-11-09T12:56:19.2035388Z   ...
+2026-11-09T12:56:19.2035928Z # Subtest: I main terrain and five original post support points stay identical
+2026-11-09T12:56:19.2036675Z ok 299 - I main terrain and five original post support points stay identical
+2026-11-09T12:56:19.2037152Z   ---
+2026-11-09T12:56:19.2037410Z   duration_ms: 10.498478
+2026-11-09T12:56:19.2037702Z   type: 'test'
+2026-11-09T12:56:19.2037963Z   ...
+2026-11-09T12:56:19.2038410Z # Subtest: I public support metadata matches exported triangles
+2026-11-09T12:56:19.2039076Z ok 300 - I public support metadata matches exported triangles
+2026-11-09T12:56:19.2039512Z   ---
+2026-11-09T12:56:19.2039778Z   duration_ms: 7.682861
+2026-11-09T12:56:19.2040073Z   type: 'test'
+2026-11-09T12:56:19.2040323Z   ...
+2026-11-09T12:56:19.2041179Z # Subtest: I D palette output parameter matches independent fresh result without mutating previous outputs
+2026-11-09T12:56:19.2042231Z ok 301 - I D palette output parameter matches independent fresh result without mutating previous outputs
+2026-11-09T12:56:19.2042855Z   ---
+2026-11-09T12:56:19.2043124Z   duration_ms: 0.746626
+2026-11-09T12:56:19.2043433Z   type: 'test'
+2026-11-09T12:56:19.2043692Z   ...
+2026-11-09T12:56:19.2044290Z # Subtest: I D six shrubs retain existing placement but have bounded individual size and tint
+2026-11-09T12:56:19.2045175Z ok 302 - I D six shrubs retain existing placement but have bounded individual size and tint
+2026-11-09T12:56:19.2045703Z   ---
+2026-11-09T12:56:19.2045970Z   duration_ms: 2.438534
+2026-11-09T12:56:19.2046273Z   type: 'test'
+2026-11-09T12:56:19.2046526Z   ...
+2026-11-09T12:56:19.2422441Z # Subtest: RED old unconditional target merge rejects a real horizontal station; GREEN preserves all eight pose contracts
+2026-11-09T12:56:19.2434362Z ok 303 - RED old unconditional target merge rejects a real horizontal station; GREEN preserves all eight pose contracts
+2026-11-09T12:56:19.2434844Z   ---
+2026-11-09T12:56:19.2435031Z   duration_ms: 7.511319
+2026-11-09T12:56:19.2435229Z   type: 'test'
+2026-11-09T12:56:19.2435401Z   ...
+2026-11-09T12:56:19.2435639Z # Subtest: support metadata rejects duplicate
+2026-11-09T12:56:19.2435941Z ok 304 - support metadata rejects duplicate
+2026-11-09T12:56:19.2436166Z   ---
+2026-11-09T12:56:19.2436334Z   duration_ms: 0.243774
+2026-11-09T12:56:19.2436528Z   type: 'test'
+2026-11-09T12:56:19.2436694Z   ...
+2026-11-09T12:56:19.2436916Z # Subtest: support metadata rejects wrongEye
+2026-11-09T12:56:19.2437206Z ok 305 - support metadata rejects wrongEye
+2026-11-09T12:56:19.2437424Z   ---
+2026-11-09T12:56:19.2437611Z   duration_ms: 0.258697
+2026-11-09T12:56:19.2437812Z   type: 'test'
+2026-11-09T12:56:19.2437976Z   ...
+2026-11-09T12:56:19.2438205Z # Subtest: support metadata rejects missingTarget
+2026-11-09T12:56:19.2438513Z ok 306 - support metadata rejects missingTarget
+2026-11-09T12:56:19.2438756Z   ---
+2026-11-09T12:56:19.2438915Z   duration_ms: 0.275232
+2026-11-09T12:56:19.2439096Z   type: 'test'
+2026-11-09T12:56:19.2439308Z   ...
+2026-11-09T12:56:19.2439615Z # Subtest: support metadata rejects nan
+2026-11-09T12:56:19.2440025Z ok 307 - support metadata rejects nan
+2026-11-09T12:56:19.2440347Z   ---
+2026-11-09T12:56:19.2440622Z   duration_ms: 0.284727
+2026-11-09T12:56:19.2441029Z   type: 'test'
+2026-11-09T12:56:19.2441282Z   ...
+2026-11-09T12:56:19.2441637Z # Subtest: support metadata rejects unknownId
+2026-11-09T12:56:19.2442112Z ok 308 - support metadata rejects unknownId
+2026-11-09T12:56:19.2442461Z   ---
+2026-11-09T12:56:19.2442701Z   duration_ms: 0.245648
+2026-11-09T12:56:19.2442984Z   type: 'test'
+2026-11-09T12:56:19.2443678Z   ...
+2026-11-09T12:56:20.0785634Z # Subtest: A moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0786810Z ok 309 - A moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0787265Z   ---
+2026-11-09T12:56:20.0787448Z   duration_ms: 25.728387
+2026-11-09T12:56:20.0787658Z   type: 'test'
+2026-11-09T12:56:20.0787826Z   ...
+2026-11-09T12:56:20.0796653Z # Subtest: A rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0799646Z ok 310 - A rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0813771Z   ---
+2026-11-09T12:56:20.0831410Z   duration_ms: 19.993127
+2026-11-09T12:56:20.0861246Z   type: 'test'
+2026-11-09T12:56:20.0894366Z   ...
+2026-11-09T12:56:20.0895988Z # Subtest: C moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0921699Z ok 311 - C moat: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.0951176Z   ---
+2026-11-09T12:56:20.0981176Z   duration_ms: 102.35888
+2026-11-09T12:56:20.0981685Z   type: 'test'
+2026-11-09T12:56:20.1011248Z   ...
+2026-11-09T12:56:20.1041657Z # Subtest: C rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.1071659Z ok 312 - C rampart: every exact face endpoint/interior matches independent raw GLB barycentric oracle within 1mm
+2026-11-09T12:56:20.1072519Z   ---
+2026-11-09T12:56:20.1101286Z   duration_ms: 71.625718
+2026-11-09T12:56:20.1131163Z   type: 'test'
+2026-11-09T12:56:20.1131663Z   ...
+2026-11-09T12:56:20.1161726Z # Subtest: triangle interior, shared diagonal, endpoints, overlap top face, gaps, outside and vertical faces
+2026-11-09T12:56:20.1191666Z ok 313 - triangle interior, shared diagonal, endpoints, overlap top face, gaps, outside and vertical faces
+2026-11-09T12:56:20.1200703Z   ---
+2026-11-09T12:56:20.1201290Z   duration_ms: 1.2582
+2026-11-09T12:56:20.1201575Z   type: 'test'
+2026-11-09T12:56:20.1201831Z   ...
+2026-11-09T12:56:20.1599797Z # Subtest: regional: all Blender-exported positions match GIS heights and metric axes
+2026-11-09T12:56:20.1600716Z ok 314 - regional: all Blender-exported positions match GIS heights and metric axes
+2026-11-09T12:56:20.1601436Z   ---
+2026-11-09T12:56:20.1601624Z   duration_ms: 60.710112
+2026-11-09T12:56:20.1601828Z   type: 'test'
+2026-11-09T12:56:20.1602003Z   ...
+2026-11-09T12:56:20.1602376Z # Subtest: castle: all Blender-exported positions match GIS heights and metric axes
+2026-11-09T12:56:20.1603002Z ok 315 - castle: all Blender-exported positions match GIS heights and metric axes
+2026-11-09T12:56:20.1603324Z   ---
+2026-11-09T12:56:20.1603495Z   duration_ms: 76.185518
+2026-11-09T12:56:20.1603697Z   type: 'test'
+2026-11-09T12:56:20.1603944Z   ...
+2026-11-09T12:56:20.1604370Z # Subtest: projected/local conversion preserves cardinal orientation and 1 metre scale
+2026-11-09T12:56:20.1604880Z ok 316 - projected/local conversion preserves cardinal orientation and 1 metre scale
+2026-11-09T12:56:20.1605195Z   ---
+2026-11-09T12:56:20.1605366Z   duration_ms: 1.036129
+2026-11-09T12:56:20.1605555Z   type: 'test'
+2026-11-09T12:56:20.1605718Z   ...
+2026-11-09T12:56:20.1606019Z # Subtest: bilinear terrain sampler interpolates independent known plane
+2026-11-09T12:56:20.1606443Z ok 317 - bilinear terrain sampler interpolates independent known plane
+2026-11-09T12:56:20.1606720Z   ---
+2026-11-09T12:56:20.1606882Z   duration_ms: 0.206789
+2026-11-09T12:56:20.1607071Z   type: 'test'
+2026-11-09T12:56:20.1607233Z   ...
+2026-11-09T12:56:20.1607566Z # Subtest: every observation anchor remains inside castle and regional measured bounds
+2026-11-09T12:56:20.1608071Z ok 318 - every observation anchor remains inside castle and regional measured bounds
+2026-11-09T12:56:20.1608732Z   ---
+2026-11-09T12:56:20.1608906Z   duration_ms: 30.098267
+2026-11-09T12:56:20.1609122Z   type: 'test'
+2026-11-09T12:56:20.1609291Z   ...
+2026-11-09T12:56:20.1609637Z # Subtest: inferred study cuts the terrain, meets the boundary and has no A category
+2026-11-09T12:56:20.1610111Z ok 319 - inferred study cuts the terrain, meets the boundary and has no A category
+2026-11-09T12:56:20.1610426Z   ---
+2026-11-09T12:56:20.1610591Z   duration_ms: 541.379334
+2026-11-09T12:56:20.1611202Z   type: 'test'
+2026-11-09T12:56:20.1611419Z   ...
+2026-11-09T12:56:20.1611855Z # Subtest: triangle-surface negative control rejects a bilinear raised patch and an excessive cut
+2026-11-09T12:56:20.1622195Z ok 320 - triangle-surface negative control rejects a bilinear raised patch and an excessive cut
+2026-11-09T12:56:20.1622849Z   ---
+2026-11-09T12:56:20.1623131Z   duration_ms: 0.784102
+2026-11-09T12:56:20.1623456Z   type: 'test'
+2026-11-09T12:56:20.1623732Z   ...
+2026-11-09T12:56:20.1624437Z # Subtest: perspective scale preserves actual projected length through narrow/wide, rotation and zoom
+2026-11-09T12:56:20.1625510Z ok 321 - perspective scale preserves actual projected length through narrow/wide, rotation and zoom
+2026-11-09T12:56:20.1626180Z   ---
+2026-11-09T12:56:20.1626463Z   duration_ms: 3.364508
+2026-11-09T12:56:20.1626766Z   type: 'test'
+2026-11-09T12:56:20.1627023Z   ...
+2026-11-09T12:56:20.1627705Z # Subtest: GIS metadata reports fallback and no missing heights without implying measurement precision
+2026-11-09T12:56:20.1628734Z ok 322 - GIS metadata reports fallback and no missing heights without implying measurement precision
+2026-11-09T12:56:20.1629324Z   ---
+2026-11-09T12:56:20.1629591Z   duration_ms: 0.747897
+2026-11-09T12:56:20.1629889Z   type: 'test'
+2026-11-09T12:56:20.1630152Z   ...
+2026-11-09T12:56:20.1630415Z 1..322
+2026-11-09T12:56:20.1630679Z # tests 322
+2026-11-09T12:56:20.1632654Z # suites 0
+2026-11-09T12:56:20.1632916Z # pass 321
+2026-11-09T12:56:20.1633178Z # fail 1
+2026-11-09T12:56:20.1633431Z # cancelled 0
+2026-11-09T12:56:20.1633702Z # skipped 0
+2026-11-09T12:56:20.1633954Z # todo 0
+2026-11-09T12:56:20.1634481Z # duration_ms 13544.703859
+2026-11-09T12:56:20.1735890Z ##[error]Process completed with exit code 1.
+2026-11-09T12:56:20.1851746Z Post job cleanup.
+2026-11-09T12:56:20.2566515Z [command]/usr/bin/git version
+2026-11-09T12:56:20.2607117Z git version 2.56.0
+2026-11-09T12:56:20.2640529Z Temporarily overriding HOME='/home/runner/work/_temp/29ab166a-3587-48d0-9e2d-76fa95e299c9' before making global git config changes
+2026-11-09T12:56:20.2641764Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T12:56:20.2645822Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain
+2026-11-09T12:56:20.2681554Z Removing SSH command configuration
+2026-11-09T12:56:20.2687722Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T12:56:20.2723425Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T12:56:20.2945736Z Removing HTTP extra header
+2026-11-09T12:56:20.2951346Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T12:56:20.2988340Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T12:56:20.3207571Z Removing includeIf entries pointing to credentials config files
+2026-11-09T12:56:20.3215322Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T12:56:20.3253944Z includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git.path
+2026-11-09T12:56:20.3255295Z includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git/worktrees/*.path
+2026-11-09T12:56:20.3256823Z includeif.gitdir:/github/workspace/.git.path
+2026-11-09T12:56:20.3257617Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-09T12:56:20.3269350Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git.path
+2026-11-09T12:56:20.3331093Z /home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:56:20.3343030Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-eae78f9c\-0d19\-41ae\-b998\-9adb5f675bab\.config
+2026-11-09T12:56:20.3387958Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git/worktrees/*.path
+2026-11-09T12:56:20.3422452Z /home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:56:20.3430500Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/yamanaka-historical-terrain/yamanaka-historical-terrain/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-eae78f9c\-0d19\-41ae\-b998\-9adb5f675bab\.config
+2026-11-09T12:56:20.3470958Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-09T12:56:20.3500632Z /github/runner_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:56:20.3508230Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-eae78f9c\-0d19\-41ae\-b998\-9adb5f675bab\.config
+2026-11-09T12:56:20.3547439Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-09T12:56:20.3576498Z /github/runner_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config
+2026-11-09T12:56:20.3583397Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-eae78f9c\-0d19\-41ae\-b998\-9adb5f675bab\.config
+2026-11-09T12:56:20.3621884Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-09T12:56:20.3833432Z Removing credentials config '/home/runner/work/_temp/git-credentials-eae78f9c-0d19-41ae-b998-9adb5f675bab.config'
+2026-11-09T12:56:20.3988634Z Cleaning up orphan processes
+
