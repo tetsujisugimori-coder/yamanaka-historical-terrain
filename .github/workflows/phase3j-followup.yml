@@ -45,3 +45,46 @@ jobs:
           path: evidence/phase3j-followup/ci-overhead
           if-no-files-found: error
           retention-days: 30
+  optimization:
+    if: github.head_ref == 'feat/phase3j-optimization-recheck'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Fixed A B A comparison and separate detailed accounting
+        run: |
+          set -euo pipefail
+          dir=evidence/phase3j-followup/ci-optimization
+          mkdir -p "$dir"
+          git rev-parse HEAD HEAD^{tree} > "$dir/head-tree.txt"
+          git worktree add --detach ../baseline-a b55431aa8a8407e9ddcf59e24b7fe8f11d6b0e1e
+          (cd ../baseline-a && npm ci && npm run build)
+          npm run build
+          (cd ../baseline-a && npx vite preview --host 127.0.0.1 --port 4391 --strictPort) >/tmp/j-a.log 2>&1 &
+          a=$!
+          npx vite preview --host 127.0.0.1 --port 4392 --strictPort >/tmp/j-b.log 2>&1 &
+          b=$!
+          trap 'cp /tmp/j-a.log /tmp/j-b.log "$dir/"; kill "$a" "$b" 2>/dev/null || true' EXIT
+          for port in 4391 4392; do for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done; done
+          for kind in optimization optimization-detailed; do
+            node scripts/phase3j-followup-config.mjs "$kind" ../baseline-a . http://127.0.0.1:4391 http://127.0.0.1:4392 "$dir/$kind-config.json"
+            node scripts/phase3j-followup-benchmark.mjs "$dir/$kind-config.json" "$dir/$kind-raw.json"
+            node scripts/phase3j-followup-report.mjs "$dir/$kind-raw.json" "$dir/$kind-raw.json.identity.json" > "$dir/$kind-reaggregate.json"
+          done
+          sha256sum "$dir"/* > "$dir/SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3j-B-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3j-followup/ci-optimization
+          if-no-files-found: error
+          retention-days: 30
