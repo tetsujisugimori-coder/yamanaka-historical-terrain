@@ -1,0 +1,14 @@
+✔ landscape-only keeps exact synchronous render and original loader without new observer (1.440879ms)
+✔ reject leaked performanceLog (10.183252ms)
+✔ reject leaked timedGLB (1.159193ms)
+✔ reject leaked renderCPU (1.434156ms)
+✔ reject deferred render replacement (1.464042ms)
+✔ I evidence verifier retains independent negative controls (0.738544ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.148904

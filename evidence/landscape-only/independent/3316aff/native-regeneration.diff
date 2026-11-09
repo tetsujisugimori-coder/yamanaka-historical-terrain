@@ -1,0 +1,314 @@
+diff --git a/production/phase3i/blender-build.json b/production/phase3i/blender-build.json
+index 928f0eb..fb660ec 100644
+--- a/production/phase3i/blender-build.json
++++ b/production/phase3i/blender-build.json
+@@ -148,47 +148,47 @@
+     }
+   ],
+   "protectedFileHashes": {
+-    "public/data/phase3g.glb": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
+-    "public/data/phase3f-inner.glb": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7",
+-    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+-    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+-    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
++    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+     "public/data/phase3f.glb": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0",
++    "public/data/landscape.glb": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
++    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+     "public/data/phase3h.glb": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2",
++    "public/data/phase3c.glb": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
++    "public/data/phase3g.glb": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
++    "public/data/phase3h-inner.glb": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f",
+     "public/data/phase3g-inner.glb": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69",
+-    "public/data/nishinomaru.glb": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+-    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+-    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
++    "public/data/phase3f-inner.glb": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7",
+     "public/data/phase3d.glb": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
++    "public/data/regional.glb": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
++    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+     "public/data/moat-study.glb": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+-    "public/data/phase3h-inner.glb": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f",
++    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+     "production/yamanaka-phase3c.blend": "e092e50962b9ba450013a754fa9fe9bcbe633f5a6b456170013c3bf01e0f6701",
+     "production/yamanaka-1590.blend": "6d45ec6df4c0f820e238d2fcd0bda226b5791396070f760eb725847461c9cda1",
+-    "production/yamanaka-phase3b.blend": "b12d1ff362c4f3b04b3d90f365f541b68bbf70f2e6c5ef55ad2520da8da47765",
+-    "production/yamanaka-phase2a.blend": "be02f21d26f3d61f1d7ba2e1ed75822f49b1e3834d89d2b92eecf546d363fbbc",
+     "production/yamanaka.blend": "019885b83cd830543a39f4d9b3cdcf08bbd96631618c012e363a20227859974d",
+-    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
++    "production/yamanaka-phase3b.blend": "b12d1ff362c4f3b04b3d90f365f541b68bbf70f2e6c5ef55ad2520da8da47765",
++    "production/yamanaka-phase3b.qgz": "546b873ddde1d5614b23626e4b727759c7a8a50a78256427080f55a77e921b30",
+     "production/yamanaka-phase3c.qgz": "610c0d2c03d733ca9b792eeb5748dcafa13976af082cdfadc05c5ad61158b3dc",
+-    "production/yamanaka-1590.qgz": "4a9dd4da1a79e9fb57264b2665e8589786e8aeb42abc107eac25cc5e8756140a",
++    "production/yamanaka.qgz": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+     "production/yamanaka-phase2a.qgz": "19fbdd2830d36c2bb5b20f905d04843b44edd6f62cd4e29ec3b4bedf98f634e8",
+-    "production/yamanaka-phase3b.qgz": "546b873ddde1d5614b23626e4b727759c7a8a50a78256427080f55a77e921b30",
+-    "production/phase3h/yamanaka-phase3h.blend": "0decfcb244a85432466e984e1ac601a399e3ac326b53532c811278a8f1f1cd7c",
+-    "production/phase3h/expansion-check.json": "bc0d75e6bf3c2fb12c74ad8a4abe9bd103aebca9e651c44689953ade3aea3508",
+-    "production/phase3h/edge-check.json": "d48f34698b90984e3a8cb6ef0665e065e6e60f27da071f5762c716dd69449de1",
+-    "production/phase3h/yamanaka-phase3h.qgz": "3eba193829c8cd4213873dd2e1b51b1c3e29f7c756e27a43b9c7fb91a2a5541b",
+-    "production/phase3h/geometry-check.json": "b901222f5f36ee4a769875b9bd1eb61d044630327034e300acd2a5378f11b651",
++    "production/yamanaka-1590.qgz": "4a9dd4da1a79e9fb57264b2665e8589786e8aeb42abc107eac25cc5e8756140a",
+     "production/phase3h/regeneration-repeat.json": "3d5fcf095ec624db60f5f367316224a2edacbc964533356db42d89815461d5a1",
+-    "production/phase3h/phase3h-qgis-map.png": "02f8c7e0aa4a99ec874faaed162c685ac359158be7bf8ab9f00b4a4f388c1139",
+-    "production/phase3h/blender-build.json": "b04869ae34f70884ffb24709acdebec133c405d688f58cf99ab1fc5028c3b998",
+-    "production/phase3h/changed-triangles.json.gz": "0c263cf56d74f0f163c330659965db73cbc994853a530daf22bd33f16b72b047",
+-    "production/phase3h/blender-reload.json": "d2aac74fb2ea68b8fd283c1947746b040f06a43ad1bfa90c3ef6b5b836db6198",
++    "production/phase3h/edge-check.json": "d48f34698b90984e3a8cb6ef0665e065e6e60f27da071f5762c716dd69449de1",
++    "production/phase3h/gis-package.json": "4db9c1c889198f21178c5b58bf778f4f894fc6903e176604b9f04bdba731aaca",
+     "production/phase3h/gis-build.json": "565d0e95a59838a12504b0694cc401ac11baa147f0448a086506b1f5a156206e",
+-    "production/phase3h/parameters.json": "5e022861ddaf76aac1168321d663c014d167b4f1f5fbb22a8b6dc3fa6824b4a5",
++    "production/phase3h/blender-reload.json": "d2aac74fb2ea68b8fd283c1947746b040f06a43ad1bfa90c3ef6b5b836db6198",
+     "production/phase3h/regeneration-before.json": "7537a222acbcdd5f8ceca68a4c8f70df895b0942e92348d039c6687ed16c82ec",
++    "production/phase3h/README.md": "c389cc7b8bc3020fb6a03bd31f7aea8d95cc50f31a3295254b4fdfe157d74552",
++    "production/phase3h/blender-build.json": "b04869ae34f70884ffb24709acdebec133c405d688f58cf99ab1fc5028c3b998",
++    "production/phase3h/geometry-check.json": "b901222f5f36ee4a769875b9bd1eb61d044630327034e300acd2a5378f11b651",
++    "production/phase3h/parameters.json": "5e022861ddaf76aac1168321d663c014d167b4f1f5fbb22a8b6dc3fa6824b4a5",
++    "production/phase3h/yamanaka-phase3h.qgz": "3eba193829c8cd4213873dd2e1b51b1c3e29f7c756e27a43b9c7fb91a2a5541b",
++    "production/phase3h/expansion-check.json": "bc0d75e6bf3c2fb12c74ad8a4abe9bd103aebca9e651c44689953ade3aea3508",
+     "production/phase3h/phase3h-editable.gpkg.gz": "7dd77c3905f2414384e826528b2a87a5569b0313ec5a1a00c5d5fea608a2dfa9",
++    "production/phase3h/phase3h-qgis-map.png": "02f8c7e0aa4a99ec874faaed162c685ac359158be7bf8ab9f00b4a4f388c1139",
++    "production/phase3h/changed-triangles.json.gz": "0c263cf56d74f0f163c330659965db73cbc994853a530daf22bd33f16b72b047",
+     "production/phase3h/gis-reload.json": "6c2d01a9ff23220872c0384785a6d074f25e04e152c3c73bd9384a2297e5412c",
+-    "production/phase3h/gis-package.json": "4db9c1c889198f21178c5b58bf778f4f894fc6903e176604b9f04bdba731aaca",
+-    "production/phase3h/README.md": "c389cc7b8bc3020fb6a03bd31f7aea8d95cc50f31a3295254b4fdfe157d74552"
++    "production/phase3h/yamanaka-phase3h.blend": "0decfcb244a85432466e984e1ac601a399e3ac326b53532c811278a8f1f1cd7c"
+   },
+   "changedTriangles": 418,
+   "topology": "NM and inner: unchanged H vertices XY and triangle topology; bounded vertex Z edits only",
+diff --git a/production/phase3i/gis-package.json b/production/phase3i/gis-package.json
+index 3e27758..f4a8e46 100644
+--- a/production/phase3i/gis-package.json
++++ b/production/phase3i/gis-package.json
+@@ -3,7 +3,7 @@
+   "file": "phase3i-editable.gpkg",
+   "archive": "phase3i-editable.gpkg.gz",
+   "bytes": 249856,
+-  "sha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0",
+-  "archiveBytes": 20527,
+-  "archiveSha256": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021"
++  "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a",
++  "archiveBytes": 20528,
++  "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"
+ }
+diff --git a/production/phase3i/gis-reload.json b/production/phase3i/gis-reload.json
+index a82b413..7922875 100644
+--- a/production/phase3i/gis-reload.json
++++ b/production/phase3i/gis-reload.json
+@@ -4,9 +4,9 @@
+     "file": "phase3i-editable.gpkg",
+     "archive": "phase3i-editable.gpkg.gz",
+     "bytes": 249856,
+-    "sha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0",
+-    "archiveBytes": 20527,
+-    "archiveSha256": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021"
++    "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a",
++    "archiveBytes": 20528,
++    "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"
+   },
+   "status": "PASS",
+   "qgis": "3.40.6-Bratislava",
+@@ -15,5 +15,5 @@
+   "maxAbsoluteCoordinateError": 0,
+   "render": "phase3i-qgis-map.png, native QGIS map export, NOT GUI screenshot",
+   "layerValidity": true,
+-  "gpkgSha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0"
++  "gpkgSha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a"
+ }
+diff --git a/production/phase3i/logs/blender-build.txt b/production/phase3i/logs/blender-build.txt
+index 3056def..4e0e1d9 100644
+--- a/production/phase3i/logs/blender-build.txt
++++ b/production/phase3i/logs/blender-build.txt
+@@ -1,35 +1,35 @@
+ ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+-19:25:47 | INFO: Starting glTF 2.0 export
+-19:25:47 | INFO: Extracting primitive: nm-transition
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Extracting primitive: nm-rampart
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Extracting primitive: nm-passage
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Extracting primitive: nm-moat
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Extracting primitive: nm-context
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Extracting primitive: nm-bailey
+-19:25:47 | INFO: Primitives created: 1
+-19:25:47 | INFO: Finished glTF 2.0 export in 0.18892121315002441 s
++21:45:34 | INFO: Starting glTF 2.0 export
++21:45:34 | INFO: Extracting primitive: nm-transition
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: nm-rampart
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: nm-passage
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: nm-moat
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: nm-context
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: nm-bailey
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Finished glTF 2.0 export in 0.44778966903686523 s
+ 
+-19:25:48 | INFO: Starting glTF 2.0 export
+-19:25:48 | INFO: Extracting primitive: ic-lookout.surface.grass.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-lookout.surface.earth.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-koguchi.surface.path.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-koguchi.surface.earth.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-bridge.surface.path.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-bridge.surface.grass.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Extracting primitive: ic-bridge.surface.earth.phase3f-refined
+-19:25:48 | INFO: Primitives created: 1
+-19:25:48 | INFO: Finished glTF 2.0 export in 0.03996634483337402 s
++21:45:35 | INFO: Starting glTF 2.0 export
++21:45:35 | INFO: Extracting primitive: ic-lookout.surface.grass.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-lookout.surface.earth.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-koguchi.surface.path.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-koguchi.surface.earth.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-bridge.surface.path.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-bridge.surface.grass.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Extracting primitive: ic-bridge.surface.earth.phase3f-refined
++21:45:35 | INFO: Primitives created: 1
++21:45:35 | INFO: Finished glTF 2.0 export in 0.0641319751739502 s
+ 
+ Info: Saved "yamanaka-phase3i.blend"
+ {"status": "PASS", "execution": "installed Blender background CLI; no GUI claim", "blender": "4.3.2", "objects": [{"name": "nm-transition", "model": "phase3i.glb", "sourceVertices": 113214, "sourceTriangles": 222585, "vertices": 113214, "triangles": 222585, "changedVertices": 0, "outsideUnchanged": 105882, "maxDisplacement": 0}, {"name": "nm-rampart", "model": "phase3i.glb", "sourceVertices": 17436, "sourceTriangles": 33735, "vertices": 17436, "triangles": 33735, "changedVertices": 0, "outsideUnchanged": 8719, "maxDisplacement": 0}, {"name": "nm-passage", "model": "phase3i.glb", "sourceVertices": 11737, "sourceTriangles": 23040, "vertices": 11737, "triangles": 23040, "changedVertices": 0, "outsideUnchanged": 11737, "maxDisplacement": 0}, {"name": "nm-moat", "model": "phase3i.glb", "sourceVertices": 18873, "sourceTriangles": 37120, "vertices": 18873, "triangles": 37120, "changedVertices": 0, "outsideUnchanged": 0, "maxDisplacement": 0}, {"name": "nm-context", "model": "phase3i.glb", "sourceVertices": 44421, "sourceTriangles": 87076, "vertices": 44421, "triangles": 87076, "changedVertices": 0, "outsideUnchanged": 44328, "maxDisplacement": 0}, {"name": "nm-bailey", "model": "phase3i.glb", "sourceVertices": 26901, "sourceTriangles": 53120, "vertices": 26901, "triangles": 53120, "changedVertices": 0, "outsideUnchanged": 26177, "maxDisplacement": 0}, {"name": "ic-lookout.surface.grass", "model": "phase3i-inner.glb", "sourceVertices": 1703, "sourceTriangles": 2930, "vertices": 1703, "triangles": 2930, "changedVertices": 0, "outsideUnchanged": 1703, "maxDisplacement": 0}, {"name": "ic-lookout.surface.earth", "model": "phase3i-inner.glb", "sourceVertices": 206, "sourceTriangles": 298, "vertices": 206, "triangles": 298, "changedVertices": 0, "outsideUnchanged": 206, "maxDisplacement": 0}, {"name": "ic-koguchi.surface.path", "model": "phase3i-inner.glb", "sourceVertices": 561, "sourceTriangles": 1000, "vertices": 561, "triangles": 1000, "changedVertices": 0, "outsideUnchanged": 561, "maxDisplacement": 0}, {"name": "ic-koguchi.surface.earth", "model": "phase3i-inner.glb", "sourceVertices": 1509, "sourceTriangles": 2750, "vertices": 1509, "triangles": 2750, "changedVertices": 0, "outsideUnchanged": 1509, "maxDisplacement": 0}, {"name": "ic-bridge.surface.path", "model": "phase3i-inner.glb", "sourceVertices": 769, "sourceTriangles": 1384, "vertices": 769, "triangles": 1384, "changedVertices": 0, "outsideUnchanged": 769, "maxDisplacement": 0}, {"name": "ic-bridge.surface.grass", "model": "phase3i-inner.glb", "sourceVertices": 1703, "sourceTriangles": 2930, "vertices": 1703, "triangles": 2930, "changedVertices": 180, "outsideUnchanged": 1483, "maxDisplacement": 0.07501220703125}, {"name": "ic-bridge.surface.earth", "model": "phase3i-inner.glb", "sourceVertices": 3170, "sourceTriangles": 5824, "vertices": 3170, "triangles": 5824, "changedVertices": 0, "outsideUnchanged": 3170, "maxDisplacement": 0}], "changedTriangles": 418, "topology": "NM and inner: unchanged H vertices XY and triangle topology; bounded vertex Z edits only", "B": 0}
+diff --git a/production/phase3i/logs/blender-reload.txt b/production/phase3i/logs/blender-reload.txt
+index 60a18a8..9431d7f 100644
+--- a/production/phase3i/logs/blender-reload.txt
++++ b/production/phase3i/logs/blender-reload.txt
+@@ -1,5 +1,5 @@
+ {"status": "PASS", "execution": "separate installed Blender background process reopened saved .blend", "blender": "4.3.2", "objects": 13, "nativeAndGLBTrianglesExactlyEqual": 473792, "protectedFilesUnchanged": 41, "negativeControls": [{"case": "missingTriangle", "expected": "REJECT", "actual": "REJECT"}, {"case": "empty", "expected": "REJECT", "actual": "REJECT"}, {"case": "height", "expected": "REJECT", "actual": "REJECT"}, {"case": "axis", "expected": "REJECT", "actual": "REJECT"}, {"case": "units", "expected": "REJECT", "actual": "REJECT"}], "B": 0, "glbSha256": {"phase3i.glb": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830", "phase3i-inner.glb": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"}}
+ Blender 4.3.2
+-Read blend: "/workspace/shared/yamanaka-stage-i/production/phase3i/yamanaka-phase3i.blend"
++Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-landscape-independent-final/production/phase3i/yamanaka-phase3i.blend"
+ 
+ Blender quit
+diff --git a/production/phase3i/logs/gis-build.txt b/production/phase3i/logs/gis-build.txt
+index c718922..4976198 100644
+--- a/production/phase3i/logs/gis-build.txt
++++ b/production/phase3i/logs/gis-build.txt
+@@ -1,6 +1,37 @@
+ /usr/lib/python3/dist-packages/osgeo/gdal.py:311: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+   warnings.warn(
+ QStandardPaths: wrong permissions on runtime directory /home/agent/.local/run, 0755 instead of 0700
++QFSFileEngine::open: No file name specified
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+diff --git a/production/phase3i/logs/gis-package.txt b/production/phase3i/logs/gis-package.txt
+index 3e27758..f4a8e46 100644
+--- a/production/phase3i/logs/gis-package.txt
++++ b/production/phase3i/logs/gis-package.txt
+@@ -3,7 +3,7 @@
+   "file": "phase3i-editable.gpkg",
+   "archive": "phase3i-editable.gpkg.gz",
+   "bytes": 249856,
+-  "sha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0",
+-  "archiveBytes": 20527,
+-  "archiveSha256": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021"
++  "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a",
++  "archiveBytes": 20528,
++  "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"
+ }
+diff --git a/production/phase3i/logs/gis-reload.txt b/production/phase3i/logs/gis-reload.txt
+index 518ed6c..7e7ae57 100644
+--- a/production/phase3i/logs/gis-reload.txt
++++ b/production/phase3i/logs/gis-reload.txt
+@@ -1,7 +1,38 @@
+ QStandardPaths: wrong permissions on runtime directory /home/agent/.local/run, 0755 instead of 0700
++QFSFileEngine::open: No file name specified
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
++Fontconfig error: No writable cache directories
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+ Could not create AF_NETLINK socket (Operation not permitted)
+-{"package": {"format": "gzip", "file": "phase3i-editable.gpkg", "archive": "phase3i-editable.gpkg.gz", "bytes": 249856, "sha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0", "archiveBytes": 20527, "archiveSha256": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021"}, "status": "PASS", "qgis": "3.40.6-Bratislava", "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage", "triangleFeatures": 418, "maxAbsoluteCoordinateError": 0, "render": "phase3i-qgis-map.png, native QGIS map export, NOT GUI screenshot", "layerValidity": true, "gpkgSha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0"}
++{"package": {"format": "gzip", "file": "phase3i-editable.gpkg", "archive": "phase3i-editable.gpkg.gz", "bytes": 249856, "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a", "archiveBytes": 20528, "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"}, "status": "PASS", "qgis": "3.40.6-Bratislava", "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage", "triangleFeatures": 418, "maxAbsoluteCoordinateError": 0, "render": "phase3i-qgis-map.png, native QGIS map export, NOT GUI screenshot", "layerValidity": true, "gpkgSha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a"}
+diff --git a/production/phase3i/phase3i-editable.gpkg b/production/phase3i/phase3i-editable.gpkg
+index 40b160a..2808836 100644
+Binary files a/production/phase3i/phase3i-editable.gpkg and b/production/phase3i/phase3i-editable.gpkg differ
+diff --git a/production/phase3i/phase3i-editable.gpkg.gz b/production/phase3i/phase3i-editable.gpkg.gz
+index e61c737..793b322 100644
+Binary files a/production/phase3i/phase3i-editable.gpkg.gz and b/production/phase3i/phase3i-editable.gpkg.gz differ
+diff --git a/production/phase3i/phase3i-qgis-map.png b/production/phase3i/phase3i-qgis-map.png
+index 7050c14..bc4d1ff 100644
+Binary files a/production/phase3i/phase3i-qgis-map.png and b/production/phase3i/phase3i-qgis-map.png differ
+diff --git a/production/phase3i/yamanaka-phase3i.blend b/production/phase3i/yamanaka-phase3i.blend
+index ccfdaec..f1d4622 100644
+Binary files a/production/phase3i/yamanaka-phase3i.blend and b/production/phase3i/yamanaka-phase3i.blend differ
+diff --git a/production/phase3i/yamanaka-phase3i.qgz b/production/phase3i/yamanaka-phase3i.qgz
+index 280cdec..63fbef4 100644
+Binary files a/production/phase3i/yamanaka-phase3i.qgz and b/production/phase3i/yamanaka-phase3i.qgz differ

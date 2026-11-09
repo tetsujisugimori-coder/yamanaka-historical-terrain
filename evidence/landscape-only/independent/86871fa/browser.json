@@ -1,0 +1,32 @@
+{
+  "head": "86871faac10a07b56552aa76aa846e6f228ae83b",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "pngSha256": "88856f218fe49a6092c365a2a6ed185a6b487924bccd51801d98c9979de5376d",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "pngSha256": "716aaa97452ea08b5bea33a1f487fcf9d1098734e7bfe91e925bd652be58cb02",
+      "status": "PASS"
+    }
+  ],
+  "runExit": 1,
+  "notExecuted": [
+    {
+      "engine": "webkit",
+      "width": 390,
+      "status": "NOT_TESTED",
+      "reason": "browser launch missing libgtk-4, libgraphene, libwoff2dec, libharfbuzz-icu, libhyphen, libmanette, libGLESv2"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "status": "NOT_TESTED",
+      "reason": "browser launch missing libgtk-4, libgraphene, libwoff2dec, libharfbuzz-icu, libhyphen, libmanette, libGLESv2"
+    }
+  ]
+}

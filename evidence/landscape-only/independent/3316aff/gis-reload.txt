@@ -1,0 +1,38 @@
+QStandardPaths: wrong permissions on runtime directory /home/agent/.local/run, 0755 instead of 0700
+QFSFileEngine::open: No file name specified
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+{"package": {"format": "gzip", "file": "phase3i-editable.gpkg", "archive": "phase3i-editable.gpkg.gz", "bytes": 249856, "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a", "archiveBytes": 20528, "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"}, "status": "PASS", "qgis": "3.40.6-Bratislava", "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage", "triangleFeatures": 418, "maxAbsoluteCoordinateError": 0, "render": "phase3i-qgis-map.png, native QGIS map export, NOT GUI screenshot", "layerValidity": true, "gpkgSha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a"}

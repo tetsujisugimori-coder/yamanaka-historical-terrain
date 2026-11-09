@@ -1,0 +1,24 @@
+diff --git a/docs/phase3i-landscape-only.md b/docs/phase3i-landscape-only.md
+index cebc66b..808947d 100644
+--- a/docs/phase3i-landscape-only.md
++++ b/docs/phase3i-landscape-only.md
+@@ -1,7 +1,7 @@
+ # 景観C/D限定切り出し
+ 基準main 42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8、移植元PR26 e67f1fc81c38986ccf8170d1942a1894992c0f3a。Issue27。
+ ## 採用
+-西側 E[-99,-87],N[2,23]m の既存180頂点・418三角形のZ変更（最大約.075m）。XY・indices・境界・現況A不変。
++西側 E[-99,-87],N[2,23]m の既存180頂点・418三角形のZ変更（最大約.075m）。XY・トポロジー・境界・現況A不変（glTFの頂点index番号は再配置される）。
+ 赤土/草/乾草/踏み跡、既存6低木の個体差はD。土・草・通路を区別。D無効時の材質・頂点色復元は既存apply/restoreで維持。
+ production/phase3i は移植元の編集可能Blender/QGIS/GPKG、生成パラメータと当時の制作記録をそのまま保全。古い制作ログは今回の実行証拠ではない。
+ 新規再生成は別checkoutで行い、今回の証拠はevidence/landscape-onlyに保存する。旧H原本・旧研究証拠は変更しない。
+diff --git a/scripts/phase3i-evidence.mjs b/scripts/phase3i-evidence.mjs
+index babfa19..6ed9f02 100644
+--- a/scripts/phase3i-evidence.mjs
++++ b/scripts/phase3i-evidence.mjs
+@@ -1,5 +1,5 @@
+ import assert from 'node:assert/strict';import{readFileSync}from'node:fs';import{createHash}from'node:crypto';import{execFileSync}from'node:child_process';import{pathToFileURL}from'node:url';
+-export const F_SOURCES=['src/main.js','src/library-parts.js','src/nature-finish.js','public/parts/manifest.json','public/parts/wooden-palisade-v0.json','src/refined-observation.js','src/exploration.js','src/sections.js','src/section-exhibit.js','scripts/phase3i-browser.mjs','scripts/phase3i-evidence.mjs','tests/section-oracle.mjs','tests/phase3f-ground-oracle.mjs','public/data/phase3i.json','public/data/phase3i.glb','public/data/phase3i-inner.glb','public/data/castle.glb','public/data/phase3b.glb','public/data/phase3d.glb'];
++export const F_SOURCES=['src/main.js','src/landscape.js','src/library-parts.js','src/nature-finish.js','public/parts/manifest.json','public/parts/wooden-palisade-v0.json','src/refined-observation.js','src/exploration.js','src/sections.js','src/section-exhibit.js','scripts/phase3i-browser.mjs','scripts/phase3i-evidence.mjs','tests/section-oracle.mjs','tests/phase3f-ground-oracle.mjs','public/data/phase3i.json','public/data/phase3i.glb','public/data/phase3i-inner.glb','public/data/castle.glb','public/data/phase3b.glb','public/data/phase3d.glb'];
+ export const F_CHECKS=['new physical mesh resources loaded','both fixed sections vs independent raw triangle oracle','eight guides actual triangle support','delivered keyboard walk and every recorded support','blur mode change and late pointer release stop','two times terrain plus unscaled 1.7m eye','quality and A C D isolation','PNG reset no overflow no pageerror'];
+ export function verify(r,e){assert.equal(r.head,e.head,'HEAD');assert.equal(r.tree,e.tree,'tree');assert.deepEqual(Object.keys(r.hashes).sort(),[...F_SOURCES].sort(),'sources');assert.deepEqual(r.hashes,e.hashes,'hash');assert.deepEqual(r.finalHashes,r.hashes,'changed source');assert.equal(r.rows.length,16,'matrix');
+  for(const engine of ['chromium','webkit'])for(const width of[375,390,765,1280])for(const motion of['no-preference','reduce']){const rows=r.rows.filter(x=>x.key===`${engine}-${width}-${motion}`);assert.equal(rows.length,1,'duplicate or missing');const x=rows[0];assert.equal(x.engine,engine);assert.equal(x.width,width);assert.equal(x.motion,motion);assert.equal(x.status,'PASS');assert.deepEqual(x.errors,[]);assert.deepEqual(x.checks,F_CHECKS,'checks');assert.equal(x.nature.cd.category,'D');assert.equal(x.nature.cd.visible,true);assert(x.nature.cd.supports.length>0);for(const p of x.nature.cd.supports)assert(Number.isFinite(p.ground));assert.equal(x.nature.a.visible,false);assert.deepEqual(x.nature.a.supports,[]);assert.equal(x.nature.c.visible,false);assert.match(x.nature.pngSha256,/^[a-f0-9]{64}$/);assert.equal(x.parts.length,4);for(const p of x.parts){assert.equal(p.visible,true);assert.equal(p.posts.length,5);for(const post of p.posts){assert(Number.isFinite(post.ground));assert.equal(post.base,post.ground);}}assert.equal(x.sections.length,4);assert.deepEqual(x.sections.map(s=>s.id+':'+s.key),['moat:A','moat:C','rampart:A','rampart:C']);for(const s of x.sections){assert(s.count>10);assert(s.maxError<.001);assert(s.data.segments.length>0);}assert.equal(x.supports.length,8);assert.deepEqual(x.supports.map(s=>s.id),['ic-station-nishinomaru','ic-lookout','ic-bridge','ic-koguchi','ic-koguchi-inside','ic-station-western','ic-station-westgate','ic-station-westmoat']);for(const s of x.supports)assert(Number.isFinite(s.error)&&Math.abs(s.error)<.001);assert(x.walk.trace.some(t=>t.type==='keydown'&&t.trusted===true));assert(x.walk.trace.filter(t=>t.type==='move').length>=10);assert.match(x.pngSha256,/^[a-f0-9]{64}$/);assert(x.browserVersion);assert.equal(x.quality.length,3);}

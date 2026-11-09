@@ -1,0 +1,48 @@
+{
+  "sections": [
+    {
+      "id": "moat",
+      "count": 225,
+      "maxError": 1.1368683772161603e-13
+    },
+    {
+      "id": "rampart",
+      "count": 241,
+      "maxError": 1.1368683772161603e-13
+    },
+    {
+      "id": "bridge-transverse",
+      "count": 153,
+      "maxError": 0.0
+    },
+    {
+      "id": "bridge-longitudinal",
+      "count": 257,
+      "maxError": 1.1368683772161603e-13
+    }
+  ],
+  "supports": [
+    {
+      "id": "ic-station-nishinomaru",
+      "error": 0.0
+    },
+    {
+      "id": "ic-lookout",
+      "error": 0.0
+    },
+    {
+      "id": "ic-bridge",
+      "error": 0.0
+    },
+    {
+      "id": "ic-koguchi",
+      "error": 0.0
+    },
+    {
+      "id": "ic-koguchi-inside",
+      "error": 1.1368683772161603e-13
+    }
+  ],
+  "status": "PASS",
+  "method": "Independent linear system barycentric solution over raw GLB triangles"
+}

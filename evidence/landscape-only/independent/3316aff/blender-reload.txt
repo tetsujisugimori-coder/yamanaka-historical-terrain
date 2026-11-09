@@ -1,0 +1,5 @@
+{"status": "PASS", "execution": "separate installed Blender background process reopened saved .blend", "blender": "4.3.2", "objects": 13, "nativeAndGLBTrianglesExactlyEqual": 473792, "protectedFilesUnchanged": 41, "negativeControls": [{"case": "missingTriangle", "expected": "REJECT", "actual": "REJECT"}, {"case": "empty", "expected": "REJECT", "actual": "REJECT"}, {"case": "height", "expected": "REJECT", "actual": "REJECT"}, {"case": "axis", "expected": "REJECT", "actual": "REJECT"}, {"case": "units", "expected": "REJECT", "actual": "REJECT"}], "B": 0, "glbSha256": {"phase3i.glb": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830", "phase3i-inner.glb": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"}}
+Blender 4.3.2
+Read blend: "/workspace/scratch/e622c1e9421e/yamanaka-landscape-independent-final/production/phase3i/yamanaka-phase3i.blend"
+
+Blender quit

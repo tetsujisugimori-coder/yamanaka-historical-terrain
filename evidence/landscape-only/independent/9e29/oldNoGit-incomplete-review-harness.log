@@ -1,0 +1,61 @@
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+✖ landscape-only keeps exact synchronous render and original loader without new observer (19.486785ms)
+✔ reject leaked performanceLog (17.344132ms)
+✔ reject leaked timedGLB (2.087152ms)
+✔ reject leaked renderCPU (2.596465ms)
+✔ reject deferred render replacement (12.78831ms)
+✖ I evidence verifier retains independent negative controls (1.056524ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 305.62334
+
+✖ failing tests:
+
+test at tests/landscape-only-separation.test.mjs:7:1
+✖ landscape-only keeps exact synchronous render and original loader without new observer (19.486785ms)
+  Error: Command failed: git show 42ed7bbe:src/main.js
+  fatal: not a git repository (or any parent up to mount point /)
+  Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:943:11)
+      at execFileSync (node:child_process:979:15)
+      at separated (file:///tmp/tmpkks5s1zr/tests/landscape-only-separation.test.mjs:6:247)
+      at TestContext.<anonymous> (file:///tmp/tmpkks5s1zr/tests/landscape-only-separation.test.mjs:7:100)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    status: 128,
+    signal: null,
+    output: [ null, '', 'fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n' ],
+    pid: 24,
+    stdout: '',
+    stderr: 'fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n'
+  }
+
+test at tests/landscape-only-separation.test.mjs:10:1
+✖ I evidence verifier retains independent negative controls (1.056524ms)
+  Error: ENOENT: no such file or directory, open 'tests/phase3h-evidence.test.mjs'
+      at readFileSync (node:fs:483:20)
+      at TestContext.<anonymous> (file:///tmp/tmpkks5s1zr/tests/landscape-only-separation.test.mjs:10:86)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'tests/phase3h-evidence.test.mjs'
+  }

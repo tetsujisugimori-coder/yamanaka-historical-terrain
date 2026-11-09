@@ -1,0 +1,9 @@
+{
+  "format": "gzip",
+  "file": "phase3i-editable.gpkg",
+  "archive": "phase3i-editable.gpkg.gz",
+  "bytes": 249856,
+  "sha256": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a",
+  "archiveBytes": 20528,
+  "archiveSha256": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"
+}

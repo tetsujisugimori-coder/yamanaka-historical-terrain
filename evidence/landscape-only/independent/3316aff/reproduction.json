@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "regenerationExit": 0,
+  "publicGLBAndMetadata": "BYTE_IDENTICAL",
+  "oldFilesPreserved": 1777,
+  "nativeOutputsMayVary": [
+    {
+      "path": "production/phase3i/blender-build.json",
+      "before": "3fbea7cbd9bf45d8000583c975cbbf1a8f21827e9e1a5cdd802922bca4eb1302",
+      "after": "d23b2d8be97e27a342ccab7d4934316262d73026194d5523d86579ff9fef9025"
+    },
+    {
+      "path": "production/phase3i/gis-package.json",
+      "before": "10cf250edeb98c116b11c3765effaf8dd112e7eba8685d70d10f9bc5a477bbfb",
+      "after": "4ad36e8c3887eb87a95671c8d5ad1bd28c408acedff2d669815db870383917b1"
+    },
+    {
+      "path": "production/phase3i/gis-reload.json",
+      "before": "116ad2a464c87ccab43a7d5526469f4f14d41f8a92172a5c2b2e17e22ab3e299",
+      "after": "be3dcd60e28d765eef2caee61a8e5783748cf4201533b91e0f2dc914e57e2e50"
+    },
+    {
+      "path": "production/phase3i/logs/blender-build.txt",
+      "before": "22b651371681c8abaebe7996ba2c7cb1c607ddb39ab98947267c73e27f09273e",
+      "after": "83c0a0bfc0b762e58bd622bfa5621bf62a9c228195ed2939099568f25eedc5b5"
+    },
+    {
+      "path": "production/phase3i/logs/blender-reload.txt",
+      "before": "cd3eeec9929ecbabd5488250b44757be5fa5bacb5da6cb3e406c9f85061df1c8",
+      "after": "ed3c28a405c73e4ed87cdb50c8834dd56f244506d60b0336c22d566352eb9590"
+    },
+    {
+      "path": "production/phase3i/logs/gis-build.txt",
+      "before": "d87e856c28506605805481a4bc02aeec97751e03914918c27f272949004cb123",
+      "after": "abd1b45d470d735accbf9c6764e18f3846c39ac224e011fbf59ad0a2783950bf"
+    },
+    {
+      "path": "production/phase3i/logs/gis-package.txt",
+      "before": "10cf250edeb98c116b11c3765effaf8dd112e7eba8685d70d10f9bc5a477bbfb",
+      "after": "4ad36e8c3887eb87a95671c8d5ad1bd28c408acedff2d669815db870383917b1"
+    },
+    {
+      "path": "production/phase3i/logs/gis-reload.txt",
+      "before": "93dd9385f250dfb5490b75e139b1f5af193f579e09b11dbc65c7bd2fbeb61963",
+      "after": "9aef2cdd276e8abf6923613bc854f93651c83312ad2bc0c7dc7c99769203fd98"
+    },
+    {
+      "path": "production/phase3i/phase3i-editable.gpkg",
+      "before": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0",
+      "after": "d08667f36fdb13c946d1053d56836db12b0af15ac37d2687cc5ae6ca2cd0147a"
+    },
+    {
+      "path": "production/phase3i/phase3i-editable.gpkg.gz",
+      "before": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021",
+      "after": "4b6cd51ce4fcf599c38a5d02d7d1f96a5a186e1fe7720ff80a76fdd2956586ee"
+    },
+    {
+      "path": "production/phase3i/phase3i-qgis-map.png",
+      "before": "70b26a81f23c22f9dbc6d8d12b0841112aaf94ffa726e049cc4fd50d36530d7b",
+      "after": "938dbcdf91bfdbaad15d401671e534e5a5dcc5b39cc80b570eb4e36a352a5233"
+    },
+    {
+      "path": "production/phase3i/yamanaka-phase3i.blend",
+      "before": "0697bf13ffb2bb54b1e1981c78cf6f9ed7a9bc83072faeda2bd2f7f08c618fa7",
+      "after": "05f76cc72987a993fe206103528ecb97876f9d03c5993d4a36fcb8dfad2d6aff"
+    },
+    {
+      "path": "production/phase3i/yamanaka-phase3i.qgz",
+      "before": "6402e1ea1f06bb7d6ab1fdf2a598b75dbd29f77f0af7756fcf3decd64663ba85",
+      "after": "191845cecbf753ba32476d407feaca0cbe5ffda77945c49e86b6e08467f0ee8b"
+    }
+  ]
+}

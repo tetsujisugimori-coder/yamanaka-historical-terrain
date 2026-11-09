@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "method": "independent GLB byte/stride/index reader and exact indexed comparison",
+  "totals": {
+    "triangles": 473792,
+    "changedTriangles": 418,
+    "uniqueChangedVertices": 180
+  },
+  "objects": [
+    {
+      "file": "phase3i.glb",
+      "node": "nm-transition",
+      "triangles": 222585,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i.glb",
+      "node": "nm-rampart",
+      "triangles": 33735,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i.glb",
+      "node": "nm-passage",
+      "triangles": 23040,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i.glb",
+      "node": "nm-moat",
+      "triangles": 37120,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i.glb",
+      "node": "nm-context",
+      "triangles": 87076,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i.glb",
+      "node": "nm-bailey",
+      "triangles": 53120,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-lookout.surface.grass",
+      "triangles": 2930,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-lookout.surface.earth",
+      "triangles": 298,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-koguchi.surface.path",
+      "triangles": 1000,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-koguchi.surface.earth",
+      "triangles": 2750,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-bridge.surface.path",
+      "triangles": 1384,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-bridge.surface.grass",
+      "triangles": 2930,
+      "changedTriangles": 418,
+      "changedVertices": 1080,
+      "maxHeightDelta": 0.07501220703125
+    },
+    {
+      "file": "phase3i-inner.glb",
+      "node": "ic-bridge.surface.earth",
+      "triangles": 5824,
+      "changedTriangles": 0,
+      "changedVertices": 0,
+      "maxHeightDelta": 0.0
+    }
+  ]
+}

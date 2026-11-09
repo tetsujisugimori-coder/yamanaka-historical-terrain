@@ -1,0 +1,9 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> yamanaka-historical-terrain@0.1.0 dev
+> vite --host 127.0.0.1 --port 4531 --strictPort
+
+
+  VITE v7.1.12  ready in 384 ms
+
+  ➜  Local:   http://127.0.0.1:4531/

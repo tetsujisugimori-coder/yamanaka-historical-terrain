@@ -1,0 +1,21 @@
+{
+  "head": "9e29d737f56f606df9688874b9510490dbce54e7",
+  "tree": "ee91f0f2742b9686ad40b001864b0408251dbbfa",
+  "baselineByteMatchesGitMain": true,
+  "baselineSha256": "66ddee062ecbcd81261d376e91064f00f074c1528dc968c862c02b3dae2c7bb1",
+  "runs": [
+    {
+      "mode": "oldNoGit",
+      "exit": 1
+    },
+    {
+      "mode": "newNoGit",
+      "exit": 0
+    },
+    {
+      "mode": "corruptBaseline",
+      "exit": 1
+    }
+  ],
+  "reviewHarnessFailure": "First reviewer harness omitted the existing phase3h test file; its ENOENT logs are retained separately, not attributed to product."
+}
