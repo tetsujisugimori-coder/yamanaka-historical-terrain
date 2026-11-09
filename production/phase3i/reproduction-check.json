@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Second installed Blender generation GLB bytes exactly match first generation; native QGIS/Blender reread verified separately",
+  "sha256": {
+    "public/data/phase3i.glb": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "public/data/phase3i-inner.glb": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+  }
+}
