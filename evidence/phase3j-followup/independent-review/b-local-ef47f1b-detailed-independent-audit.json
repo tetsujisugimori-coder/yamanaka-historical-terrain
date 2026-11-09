@@ -1,0 +1,1388 @@
+{
+  "label": "b-local-ef47f1b-detailed",
+  "kind": "optimization-detailed",
+  "rows": 18,
+  "rawSHA256": "9bc9c379d2ed784f985daa3cdfd8eeddbdb3f657fca0cdee76c2c15fb6b0b9ac",
+  "sourceChecks": [
+    {
+      "role": "Apre",
+      "file": "src/close-detail.js",
+      "sha256": "6d167cbb4de095345f7e14618a57194b39ee817104433f353dde9f812d70b8dd"
+    },
+    {
+      "role": "Apre",
+      "file": "src/coordinates.js",
+      "sha256": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7"
+    },
+    {
+      "role": "Apre",
+      "file": "src/exploration.js",
+      "sha256": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c"
+    },
+    {
+      "role": "Apre",
+      "file": "src/intent.js",
+      "sha256": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e"
+    },
+    {
+      "role": "Apre",
+      "file": "src/landscape.js",
+      "sha256": "fd08ea6972221b6eff5611d3b3ec3504af227d0eade625a7fc1dd6717cea2594"
+    },
+    {
+      "role": "Apre",
+      "file": "src/library-parts.js",
+      "sha256": "b64b80ab7432a56c6d7ad61f093a47c931bf4cff1f39dd4ed7e7701ca85f51bb"
+    },
+    {
+      "role": "Apre",
+      "file": "src/main.js",
+      "sha256": "ce4edc34228cc8bce4c2a1014787cc497e0a32711922bd46469c33ebc5722aee"
+    },
+    {
+      "role": "Apre",
+      "file": "src/nature-finish.js",
+      "sha256": "e485d2f4308f2c47a295622aadcf3e9c5e13710baa9b56c9cd2ce6bfdb9d035d"
+    },
+    {
+      "role": "Apre",
+      "file": "src/performance.js",
+      "sha256": "289fa73bb04626c3cb98211fec5eb890d310e48a6a42e62558b90457e08c4e4c"
+    },
+    {
+      "role": "Apre",
+      "file": "src/phase3b.js",
+      "sha256": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5"
+    },
+    {
+      "role": "Apre",
+      "file": "src/phase3c.js",
+      "sha256": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7"
+    },
+    {
+      "role": "Apre",
+      "file": "src/phase3d.js",
+      "sha256": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595"
+    },
+    {
+      "role": "Apre",
+      "file": "src/reading.js",
+      "sha256": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2"
+    },
+    {
+      "role": "Apre",
+      "file": "src/refined-observation.js",
+      "sha256": "a2324753dea465e8f044815df53b0bd2343e2de9e411d70f5adc4f5d5d322540"
+    },
+    {
+      "role": "Apre",
+      "file": "src/scale.js",
+      "sha256": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad"
+    },
+    {
+      "role": "Apre",
+      "file": "src/section-exhibit.js",
+      "sha256": "214255676967a27237545ac421aaa35d46d09396d8123900d8b229fc1d01ec54"
+    },
+    {
+      "role": "Apre",
+      "file": "src/sections.js",
+      "sha256": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6"
+    },
+    {
+      "role": "Apre",
+      "file": "src/surface.js",
+      "sha256": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+    },
+    {
+      "role": "B",
+      "file": "src/close-detail.js",
+      "sha256": "6d167cbb4de095345f7e14618a57194b39ee817104433f353dde9f812d70b8dd"
+    },
+    {
+      "role": "B",
+      "file": "src/coordinates.js",
+      "sha256": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7"
+    },
+    {
+      "role": "B",
+      "file": "src/exploration.js",
+      "sha256": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c"
+    },
+    {
+      "role": "B",
+      "file": "src/intent.js",
+      "sha256": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e"
+    },
+    {
+      "role": "B",
+      "file": "src/landscape.js",
+      "sha256": "fd08ea6972221b6eff5611d3b3ec3504af227d0eade625a7fc1dd6717cea2594"
+    },
+    {
+      "role": "B",
+      "file": "src/library-parts.js",
+      "sha256": "b64b80ab7432a56c6d7ad61f093a47c931bf4cff1f39dd4ed7e7701ca85f51bb"
+    },
+    {
+      "role": "B",
+      "file": "src/main.js",
+      "sha256": "0d71ba1289e985ecb5b7b7243cba5e57cacd5d05c35b8ccca94ac8494efac385"
+    },
+    {
+      "role": "B",
+      "file": "src/nature-finish.js",
+      "sha256": "e485d2f4308f2c47a295622aadcf3e9c5e13710baa9b56c9cd2ce6bfdb9d035d"
+    },
+    {
+      "role": "B",
+      "file": "src/performance.js",
+      "sha256": "289fa73bb04626c3cb98211fec5eb890d310e48a6a42e62558b90457e08c4e4c"
+    },
+    {
+      "role": "B",
+      "file": "src/phase3b.js",
+      "sha256": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5"
+    },
+    {
+      "role": "B",
+      "file": "src/phase3c.js",
+      "sha256": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7"
+    },
+    {
+      "role": "B",
+      "file": "src/phase3d.js",
+      "sha256": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595"
+    },
+    {
+      "role": "B",
+      "file": "src/reading.js",
+      "sha256": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2"
+    },
+    {
+      "role": "B",
+      "file": "src/refined-observation.js",
+      "sha256": "a2324753dea465e8f044815df53b0bd2343e2de9e411d70f5adc4f5d5d322540"
+    },
+    {
+      "role": "B",
+      "file": "src/scale.js",
+      "sha256": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad"
+    },
+    {
+      "role": "B",
+      "file": "src/section-exhibit.js",
+      "sha256": "214255676967a27237545ac421aaa35d46d09396d8123900d8b229fc1d01ec54"
+    },
+    {
+      "role": "B",
+      "file": "src/sections.js",
+      "sha256": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6"
+    },
+    {
+      "role": "B",
+      "file": "src/surface-support-cache.js",
+      "sha256": "760c9fbd1630dcb2245168b16d425ec6ca7d3b1e03bd97270b57655dd6568f4d"
+    },
+    {
+      "role": "B",
+      "file": "src/surface.js",
+      "sha256": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+    },
+    {
+      "role": "Apost",
+      "file": "src/close-detail.js",
+      "sha256": "6d167cbb4de095345f7e14618a57194b39ee817104433f353dde9f812d70b8dd"
+    },
+    {
+      "role": "Apost",
+      "file": "src/coordinates.js",
+      "sha256": "957ba53c015deaceb411d8051b9f3dd60fa9272c5f360e3a29791e59e6762fd7"
+    },
+    {
+      "role": "Apost",
+      "file": "src/exploration.js",
+      "sha256": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c"
+    },
+    {
+      "role": "Apost",
+      "file": "src/intent.js",
+      "sha256": "46e2848d4cb1055700e8acbb84e0f38b3e7fc0520eb45e9f8e368dd6ef752b7e"
+    },
+    {
+      "role": "Apost",
+      "file": "src/landscape.js",
+      "sha256": "fd08ea6972221b6eff5611d3b3ec3504af227d0eade625a7fc1dd6717cea2594"
+    },
+    {
+      "role": "Apost",
+      "file": "src/library-parts.js",
+      "sha256": "b64b80ab7432a56c6d7ad61f093a47c931bf4cff1f39dd4ed7e7701ca85f51bb"
+    },
+    {
+      "role": "Apost",
+      "file": "src/main.js",
+      "sha256": "ce4edc34228cc8bce4c2a1014787cc497e0a32711922bd46469c33ebc5722aee"
+    },
+    {
+      "role": "Apost",
+      "file": "src/nature-finish.js",
+      "sha256": "e485d2f4308f2c47a295622aadcf3e9c5e13710baa9b56c9cd2ce6bfdb9d035d"
+    },
+    {
+      "role": "Apost",
+      "file": "src/performance.js",
+      "sha256": "289fa73bb04626c3cb98211fec5eb890d310e48a6a42e62558b90457e08c4e4c"
+    },
+    {
+      "role": "Apost",
+      "file": "src/phase3b.js",
+      "sha256": "2bc38766d31bdac3b5ee9e410474e9832a5ebd19a06a0524c6890529076123d5"
+    },
+    {
+      "role": "Apost",
+      "file": "src/phase3c.js",
+      "sha256": "0729d985116d6406e9f146684be844c648924643324ed456699e797e29aba3e7"
+    },
+    {
+      "role": "Apost",
+      "file": "src/phase3d.js",
+      "sha256": "5b83debbd0a62a4f47ca3c6e885751b523061e73caf2bfa1137853da213a8595"
+    },
+    {
+      "role": "Apost",
+      "file": "src/reading.js",
+      "sha256": "58b60afb17f904797d5ccdf2e6615ed190bc41ceeb926a8262994b00478c3aa2"
+    },
+    {
+      "role": "Apost",
+      "file": "src/refined-observation.js",
+      "sha256": "a2324753dea465e8f044815df53b0bd2343e2de9e411d70f5adc4f5d5d322540"
+    },
+    {
+      "role": "Apost",
+      "file": "src/scale.js",
+      "sha256": "08ae80fb247eeeb32acf3584ec54df77a1bba14883758229ee7adff427bc1aad"
+    },
+    {
+      "role": "Apost",
+      "file": "src/section-exhibit.js",
+      "sha256": "214255676967a27237545ac421aaa35d46d09396d8123900d8b229fc1d01ec54"
+    },
+    {
+      "role": "Apost",
+      "file": "src/sections.js",
+      "sha256": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6"
+    },
+    {
+      "role": "Apost",
+      "file": "src/surface.js",
+      "sha256": "8b59f00bf63a6882c283b41c90a35a36bc88076dff28420798fe8b1dec2f2cd5"
+    },
+    {
+      "file": "public/data/castle.glb",
+      "sha256": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/moat-study.glb",
+      "sha256": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/nishinomaru.glb",
+      "sha256": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3c.glb",
+      "sha256": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3f-inner.glb",
+      "sha256": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3f.glb",
+      "sha256": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3g-inner.glb",
+      "sha256": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3g.glb",
+      "sha256": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3h-inner.glb",
+      "sha256": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3h.glb",
+      "sha256": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3i-inner.glb",
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "allVariants": true
+    },
+    {
+      "file": "public/data/regional.glb",
+      "sha256": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+      "allVariants": true
+    },
+    {
+      "file": "scripts/phase3j-followup-benchmark.mjs",
+      "sha256": "194a009d8f4cb9f800cf30ceb68a4d5713d5eeb088c5ddbbe9c8c83f27fb6bd4"
+    },
+    {
+      "file": "scripts/phase3j-followup-report.mjs",
+      "sha256": "c1f479aad3177eba99fc248fdb362a027dc35f98f42f6aedb02ae69b788f1512"
+    }
+  ],
+  "manifestMembersVerified": [
+    "baseline-server.txt",
+    "build.txt",
+    "candidate-server.txt",
+    "head-tree.txt",
+    "optimization-config.json",
+    "optimization-detailed-config.json",
+    "optimization-detailed-execution.txt",
+    "optimization-detailed-raw-Apost-cold.png",
+    "optimization-detailed-raw-Apost-reload-partial.png",
+    "optimization-detailed-raw-Apre-cold.png",
+    "optimization-detailed-raw-Apre-reload-partial.png",
+    "optimization-detailed-raw-B-cold.png",
+    "optimization-detailed-raw-B-reload-partial.png",
+    "optimization-detailed-raw.json",
+    "optimization-detailed-raw.json.identity.json",
+    "optimization-detailed-raw.json.summary.json",
+    "optimization-execution.txt",
+    "optimization-raw-Apost-cold.png",
+    "optimization-raw-Apost-reload-partial.png",
+    "optimization-raw-Apre-cold.png",
+    "optimization-raw-Apre-reload-partial.png",
+    "optimization-raw-B-cold.png",
+    "optimization-raw-B-reload-partial.png",
+    "optimization-raw.json",
+    "optimization-raw.json.identity.json",
+    "optimization-raw.json.summary.json",
+    "unit-tests.txt"
+  ],
+  "screenshotsVerified": [
+    {
+      "filename": "optimization-detailed-raw-Apre-cold.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    },
+    {
+      "filename": "optimization-detailed-raw-Apre-reload-partial.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    },
+    {
+      "filename": "optimization-detailed-raw-B-cold.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    },
+    {
+      "filename": "optimization-detailed-raw-B-reload-partial.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    },
+    {
+      "filename": "optimization-detailed-raw-Apost-cold.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    },
+    {
+      "filename": "optimization-detailed-raw-Apost-reload-partial.png",
+      "sha256": "583c5addae0040a1847ae71dc6fef51728851ea0974e4145abf1da3a16e39f57"
+    }
+  ],
+  "groups": {
+    "Apre/cold": {
+      "facility": {
+        "n": 3,
+        "min": 5363.5999999996275,
+        "median": 5754.4000000003725,
+        "q1": 5559.0,
+        "q3": 6985.4000000003725,
+        "max": 8216.400000000373,
+        "mean": 6444.800000000124,
+        "all": [
+          5754.4000000003725,
+          5363.5999999996275,
+          8216.400000000373
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 1231,
+        "median": 1281.3999999994412,
+        "q1": 1256.1999999997206,
+        "q3": 1393.9999999995343,
+        "max": 1506.5999999996275,
+        "mean": 1339.6666666663562,
+        "all": [
+          1281.3999999994412,
+          1231,
+          1506.5999999996275
+        ],
+        "exclusions": 0
+      }
+    },
+    "Apre/reload-partial": {
+      "facility": {
+        "n": 3,
+        "min": 5730.299999999814,
+        "median": 8157.399999999441,
+        "q1": 6943.8499999996275,
+        "q3": 9558.299999999814,
+        "max": 10959.200000000186,
+        "mean": 8282.299999999814,
+        "all": [
+          5730.299999999814,
+          8157.399999999441,
+          10959.200000000186
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 1448.7999999998137,
+        "median": 21740.10000000056,
+        "q1": 11594.450000000186,
+        "q3": 23507.900000000373,
+        "max": 25275.700000000186,
+        "mean": 16154.866666666852,
+        "all": [
+          1448.7999999998137,
+          21740.10000000056,
+          25275.700000000186
+        ],
+        "exclusions": 0
+      }
+    },
+    "B/cold": {
+      "facility": {
+        "n": 3,
+        "min": 4914.5999999996275,
+        "median": 6677,
+        "q1": 5795.799999999814,
+        "q3": 8459.649999999907,
+        "max": 10242.299999999814,
+        "mean": 7277.966666666481,
+        "all": [
+          10242.299999999814,
+          6677,
+          4914.5999999996275
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 1049,
+        "median": 1087.3999999994412,
+        "q1": 1068.1999999997206,
+        "q3": 1793.3999999994412,
+        "max": 2499.399999999441,
+        "mean": 1545.2666666662942,
+        "all": [
+          2499.399999999441,
+          1087.3999999994412,
+          1049
+        ],
+        "exclusions": 0
+      }
+    },
+    "B/reload-partial": {
+      "facility": {
+        "n": 3,
+        "min": 5686.4000000003725,
+        "median": 7152.9000000003725,
+        "q1": 6419.6500000003725,
+        "q3": 12115.950000000186,
+        "max": 17079,
+        "mean": 9972.766666666916,
+        "all": [
+          7152.9000000003725,
+          17079,
+          5686.4000000003725
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 680.7999999998137,
+        "median": 14803.299999999814,
+        "q1": 7742.049999999814,
+        "q3": 15838.94999999972,
+        "max": 16874.599999999627,
+        "mean": 10786.233333333084,
+        "all": [
+          680.7999999998137,
+          14803.299999999814,
+          16874.599999999627
+        ],
+        "exclusions": 0
+      }
+    },
+    "Apost/cold": {
+      "facility": {
+        "n": 3,
+        "min": 4962.5,
+        "median": 10843.299999999814,
+        "q1": 7902.899999999907,
+        "q3": 15076.299999999814,
+        "max": 19309.299999999814,
+        "mean": 11705.03333333321,
+        "all": [
+          10843.299999999814,
+          19309.299999999814,
+          4962.5
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 856.8000000007451,
+        "median": 1090.2000000001863,
+        "q1": 973.5000000004657,
+        "q3": 2146.25,
+        "max": 3202.2999999998137,
+        "mean": 1716.4333333335817,
+        "all": [
+          1090.2000000001863,
+          3202.2999999998137,
+          856.8000000007451
+        ],
+        "exclusions": 0
+      }
+    },
+    "Apost/reload-partial": {
+      "facility": {
+        "n": 3,
+        "min": 4613.5999999996275,
+        "median": 5543.199999999255,
+        "q1": 5078.399999999441,
+        "q3": 7852.449999999721,
+        "max": 10161.700000000186,
+        "mean": 6772.833333333023,
+        "all": [
+          10161.700000000186,
+          5543.199999999255,
+          4613.5999999996275
+        ],
+        "exclusions": 0
+      },
+      "initialReady": {
+        "n": 3,
+        "min": 2583.600000000559,
+        "median": 8819.899999999441,
+        "q1": 5701.75,
+        "q3": 15164.0,
+        "max": 21508.10000000056,
+        "mean": 10970.53333333352,
+        "all": [
+          2583.600000000559,
+          21508.10000000056,
+          8819.899999999441
+        ],
+        "exclusions": 0
+      }
+    }
+  },
+  "contrasts": {
+    "cold": {
+      "delta": {
+        "n": 3,
+        "min": -5659.449999999721,
+        "median": -1674.8500000005588,
+        "q1": -3667.1500000001397,
+        "q3": 134.2999999995809,
+        "max": 1943.4499999997206,
+        "mean": -1796.9500000001863,
+        "all": [
+          1943.4499999997206,
+          -5659.449999999721,
+          -1674.8500000005588
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -5659.449999999721,
+          1943.4499999997206
+        ]
+      },
+      "baselineMidpoint": {
+        "n": 3,
+        "min": 6589.450000000186,
+        "median": 8298.850000000093,
+        "q1": 7444.15000000014,
+        "q3": 10317.649999999907,
+        "max": 12336.44999999972,
+        "mean": 9074.916666666666,
+        "all": [
+          8298.850000000093,
+          12336.44999999972,
+          6589.450000000186
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 3,
+        "min": 4914.5999999996275,
+        "median": 6677,
+        "q1": 5795.799999999814,
+        "q3": 8459.649999999907,
+        "max": 10242.299999999814,
+        "mean": 7277.966666666481,
+        "all": [
+          10242.299999999814,
+          6677,
+          4914.5999999996275
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": -19.54306922043506,
+      "orderDrift": {
+        "n": 3,
+        "min": -3253.9000000003725,
+        "median": 5088.899999999441,
+        "q1": 917.4999999995343,
+        "q3": 9517.299999999814,
+        "max": 13945.700000000186,
+        "mean": 5260.233333333085,
+        "all": [
+          5088.899999999441,
+          13945.700000000186,
+          -3253.9000000003725
+        ],
+        "exclusions": 0,
+        "improved": 1,
+        "descriptiveBootstrap95": [
+          -3253.9000000003725,
+          13945.700000000186
+        ]
+      }
+    },
+    "reload-partial": {
+      "delta": {
+        "n": 3,
+        "min": -2099.9999999995343,
+        "median": -793.0999999996275,
+        "q1": -1446.549999999581,
+        "q3": 4717.800000000512,
+        "max": 10228.700000000652,
+        "mean": 2445.200000000497,
+        "all": [
+          -793.0999999996275,
+          10228.700000000652,
+          -2099.9999999995343
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -2099.9999999995343,
+          10228.700000000652
+        ]
+      },
+      "baselineMidpoint": {
+        "n": 3,
+        "min": 6850.299999999348,
+        "median": 7786.399999999907,
+        "q1": 7318.3499999996275,
+        "q3": 7866.199999999953,
+        "max": 7946.0,
+        "mean": 7527.566666666418,
+        "all": [
+          7946.0,
+          6850.299999999348,
+          7786.399999999907
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 3,
+        "min": 5686.4000000003725,
+        "median": 7152.9000000003725,
+        "q1": 6419.6500000003725,
+        "q3": 12115.950000000186,
+        "max": 17079,
+        "mean": 9972.766666666916,
+        "all": [
+          7152.9000000003725,
+          17079,
+          5686.4000000003725
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": -8.135980684264121,
+      "orderDrift": {
+        "n": 3,
+        "min": -6345.600000000559,
+        "median": -2614.2000000001863,
+        "q1": -4479.9000000003725,
+        "q3": 908.6000000000931,
+        "max": 4431.4000000003725,
+        "mean": -1509.4666666667908,
+        "all": [
+          4431.4000000003725,
+          -2614.2000000001863,
+          -6345.600000000559
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -6345.600000000559,
+          4431.4000000003725
+        ]
+      }
+    }
+  },
+  "accounting": [
+    {
+      "id": "optimization-detailed-1-0-Apre-cold",
+      "variant": "Apre",
+      "cache": "cold",
+      "wall": 5754.4000000003725,
+      "covered": 5599.000000002794,
+      "unknown": 155.39999999757856,
+      "inclusiveStageMs": {
+        "syncConnected": 9.900000001303852,
+        "rendererSubmission": 352.5000000009313,
+        "updateLabels": 1.400000000372529,
+        "updateScale": 8.299999999813735,
+        "render": 440.3000000016764,
+        "syncWestern": 198.70000000018626,
+        "syncParts": 0,
+        "geometryPreparation": 313.8999999994412,
+        "materialPreparation": 0.7000000001862645,
+        "paint": 219.20000000018626,
+        "syncInner": 247.90000000130385,
+        "syncNature": 1669.699999999255,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.40000000037252903,
+        "natureMaterials": 78.5,
+        "shrubSupport": 1580.1000000014901,
+        "shrubGeometryMaterials": 10.199999999254942,
+        "displayedHeight": 32.00000000093132,
+        "walkIndex": 1160.5,
+        "fetch": 804.2999999998137,
+        "parse": 190.00000000093132,
+        "geometryMaterials": 333.8999999994412,
+        "automationInputPreparation": 215.79999999981374,
+        "twoRAFPresentationProxyWait": 639.7999999998137
+      }
+    },
+    {
+      "id": "optimization-detailed-1-0-Apre-reload-partial",
+      "variant": "Apre",
+      "cache": "reload-partial",
+      "wall": 5730.299999999814,
+      "covered": 5586.600000003353,
+      "unknown": 143.69999999646097,
+      "inclusiveStageMs": {
+        "syncConnected": 3.1999999983236194,
+        "rendererSubmission": 335.10000000335276,
+        "updateLabels": 2.400000000372529,
+        "updateScale": 10.199999997392297,
+        "render": 449.79999999981374,
+        "syncWestern": 202.80000000074506,
+        "syncParts": 0,
+        "geometryPreparation": 410.699999996461,
+        "materialPreparation": 1.5000000018626451,
+        "paint": 206.1000000005588,
+        "syncInner": 230.50000000093132,
+        "syncNature": 2043.7999999998137,
+        "placeMarkers": 0,
+        "makeRoute": 0.5,
+        "natureMaterials": 100.49999999906868,
+        "shrubSupport": 1863.2000000001863,
+        "shrubGeometryMaterials": 72.40000000130385,
+        "displayedHeight": 20.700000000186265,
+        "walkIndex": 1199.6000000005588,
+        "fetch": 1036.6000000005588,
+        "parse": 184.69999999832362,
+        "geometryMaterials": 424.0000000009313,
+        "automationInputPreparation": 303.0000000009313,
+        "twoRAFPresentationProxyWait": 18.0
+      }
+    },
+    {
+      "id": "optimization-detailed-1-1-B-cold",
+      "variant": "B",
+      "cache": "cold",
+      "wall": 10242.299999999814,
+      "covered": 10097.999999999069,
+      "unknown": 144.30000000074506,
+      "inclusiveStageMs": {
+        "syncConnected": 1.6000000005587935,
+        "rendererSubmission": 606.3000000016764,
+        "updateLabels": 8.900000000372529,
+        "updateScale": 12.29999999795109,
+        "render": 837.7999999998137,
+        "syncWestern": 343.59999999869615,
+        "syncParts": 1.5,
+        "geometryPreparation": 803.2999999970198,
+        "materialPreparation": 9.700000001117587,
+        "paint": 270.7000000011176,
+        "syncInner": 305.40000000037253,
+        "syncNature": 890.2000000001863,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.40000000037252903,
+        "natureMaterials": 145.80000000167638,
+        "shrubSupport": 735.9000000003725,
+        "shrubGeometryMaterials": 6.7999999998137355,
+        "displayedHeight": 25.700000000186265,
+        "walkIndex": 1229.0999999996275,
+        "fetch": 3098.7000000011176,
+        "parse": 624.0999999986961,
+        "geometryMaterials": 968.0,
+        "automationInputPreparation": 619.2999999998137,
+        "twoRAFPresentationProxyWait": 3332.699999999255
+      }
+    },
+    {
+      "id": "optimization-detailed-1-1-B-reload-partial",
+      "variant": "B",
+      "cache": "reload-partial",
+      "wall": 7152.9000000003725,
+      "covered": 7009.899999997579,
+      "unknown": 143.00000000279397,
+      "inclusiveStageMs": {
+        "syncConnected": 0.900000000372529,
+        "rendererSubmission": 348.7999999988824,
+        "updateLabels": 2.300000000745058,
+        "updateScale": 9.999999998137355,
+        "render": 415.7999999979511,
+        "syncWestern": 165.89999999850988,
+        "geometryPreparation": 339.09999999962747,
+        "materialPreparation": 0.7999999979510903,
+        "paint": 276.40000000037253,
+        "syncInner": 221.70000000018626,
+        "syncParts": 0,
+        "syncNature": 788.5,
+        "placeMarkers": 0.2999999988824129,
+        "makeRoute": 0.5000000009313226,
+        "natureMaterials": 118.00000000093132,
+        "shrubSupport": 663.9999999990687,
+        "shrubGeometryMaterials": 5.500000000931323,
+        "displayedHeight": 31.5,
+        "walkIndex": 1140.7999999998137,
+        "fetch": 557.8000000007451,
+        "parse": 107.90000000037253,
+        "geometryMaterials": 358.7999999988824,
+        "automationInputPreparation": 650.5,
+        "twoRAFPresentationProxyWait": 2663.2000000001863
+      }
+    },
+    {
+      "id": "optimization-detailed-1-2-Apost-cold",
+      "variant": "Apost",
+      "cache": "cold",
+      "wall": 10843.299999999814,
+      "covered": 10655.399999995716,
+      "unknown": 187.90000000409782,
+      "inclusiveStageMs": {
+        "syncConnected": 0.6999999992549419,
+        "rendererSubmission": 701.8000000007451,
+        "updateLabels": 1.5,
+        "updateScale": 22.500000000931323,
+        "render": 785.5,
+        "syncWestern": 508.3999999994412,
+        "syncParts": 0.20000000018626451,
+        "geometryPreparation": 374.0,
+        "materialPreparation": 1.7000000020489097,
+        "paint": 231.0,
+        "syncInner": 360.5,
+        "syncNature": 3135.099999998696,
+        "placeMarkers": 0.20000000018626451,
+        "makeRoute": 0.7999999988824129,
+        "natureMaterials": 148.79999999981374,
+        "shrubSupport": 2965.7000000001863,
+        "shrubGeometryMaterials": 16.90000000037253,
+        "displayedHeight": 45.90000000037253,
+        "walkIndex": 1437.2999999998137,
+        "fetch": 869.8999999985099,
+        "parse": 124.00000000093132,
+        "geometryMaterials": 404.70000000018626,
+        "automationInputPreparation": 452.29999999981374,
+        "twoRAFPresentationProxyWait": 2852.399999999441
+      }
+    },
+    {
+      "id": "optimization-detailed-1-2-Apost-reload-partial",
+      "variant": "Apost",
+      "cache": "reload-partial",
+      "wall": 10161.700000000186,
+      "covered": 9997.999999999069,
+      "unknown": 163.7000000011176,
+      "inclusiveStageMs": {
+        "syncConnected": 1.2999999998137355,
+        "rendererSubmission": 401.80000000074506,
+        "updateLabels": 1.599999999627471,
+        "updateScale": 13.299999999813735,
+        "render": 446.59999999869615,
+        "syncWestern": 177.20000000018626,
+        "geometryPreparation": 440.20000000018626,
+        "materialPreparation": 2.699999999254942,
+        "paint": 233.79999999981374,
+        "syncInner": 387.1999999983236,
+        "syncParts": 0,
+        "syncNature": 1972.7000000011176,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.40000000037252903,
+        "natureMaterials": 116.69999999925494,
+        "shrubSupport": 1850.0000000018626,
+        "shrubGeometryMaterials": 5.0,
+        "displayedHeight": 31.799999999813735,
+        "walkIndex": 1454.0999999996275,
+        "fetch": 1268.9000000003725,
+        "parse": 214.80000000074506,
+        "geometryMaterials": 480.4999999990687,
+        "automationInputPreparation": 2057.300000000745,
+        "twoRAFPresentationProxyWait": 2104.7000000001863
+      }
+    },
+    {
+      "id": "optimization-detailed-2-0-Apre-cold",
+      "variant": "Apre",
+      "cache": "cold",
+      "wall": 5363.5999999996275,
+      "covered": 5258.5999999996275,
+      "unknown": 105.0,
+      "inclusiveStageMs": {
+        "syncConnected": 1.2000000001862645,
+        "rendererSubmission": 419.9999999990687,
+        "updateLabels": 0.6000000005587935,
+        "updateScale": 7.2999999998137355,
+        "render": 462.90000000037253,
+        "syncWestern": 220.19999999832362,
+        "geometryPreparation": 323.9999999990687,
+        "materialPreparation": 1.099999999627471,
+        "paint": 169.20000000018626,
+        "syncInner": 167.79999999981374,
+        "syncParts": 0.20000000018626451,
+        "syncNature": 1475.2000000011176,
+        "placeMarkers": 0,
+        "makeRoute": 0.5000000009313226,
+        "natureMaterials": 89.20000000111759,
+        "shrubSupport": 1374.8999999985099,
+        "shrubGeometryMaterials": 9.600000001490116,
+        "displayedHeight": 21.200000000186265,
+        "walkIndex": 1568.7000000001863,
+        "fetch": 809.7999999998137,
+        "parse": 108.79999999981374,
+        "geometryMaterials": 336.5,
+        "automationInputPreparation": 176.3999999994412,
+        "twoRAFPresentationProxyWait": 319.79999999981374
+      }
+    },
+    {
+      "id": "optimization-detailed-2-0-Apre-reload-partial",
+      "variant": "Apre",
+      "cache": "reload-partial",
+      "wall": 8157.399999999441,
+      "covered": 7974.800000001676,
+      "unknown": 182.59999999776483,
+      "inclusiveStageMs": {
+        "syncConnected": 0.6999999992549419,
+        "rendererSubmission": 620.9000000003725,
+        "updateLabels": 4.400000000372529,
+        "updateScale": 12.600000000558794,
+        "render": 690.0000000018626,
+        "syncWestern": 135.6000000005588,
+        "geometryPreparation": 309.19999999925494,
+        "materialPreparation": 2.3000000016763806,
+        "paint": 229.19999999925494,
+        "syncInner": 380.00000000186265,
+        "syncParts": 0.09999999962747097,
+        "syncNature": 3965.599999998696,
+        "placeMarkers": 0,
+        "makeRoute": 0.5,
+        "natureMaterials": 155.7999999988824,
+        "shrubSupport": 3784.0999999996275,
+        "shrubGeometryMaterials": 13.800000000745058,
+        "displayedHeight": 20.09999999962747,
+        "walkIndex": 792.5999999996275,
+        "fetch": 811.1999999992549,
+        "parse": 214.40000000037253,
+        "geometryMaterials": 342.0,
+        "automationInputPreparation": 233.1000000005588,
+        "twoRAFPresentationProxyWait": 736.2999999998137
+      }
+    },
+    {
+      "id": "optimization-detailed-2-1-B-cold",
+      "variant": "B",
+      "cache": "cold",
+      "wall": 6677,
+      "covered": 6579.000000000931,
+      "unknown": 97.99999999906868,
+      "inclusiveStageMs": {
+        "syncConnected": 2.099999997764826,
+        "rendererSubmission": 481.9999999990687,
+        "updateLabels": 5.2999999998137355,
+        "updateScale": 10.700000000186265,
+        "render": 525.4999999981374,
+        "syncWestern": 339.40000000037253,
+        "syncParts": 0.09999999962747097,
+        "geometryPreparation": 293.8000000026077,
+        "materialPreparation": 1.2000000001862645,
+        "paint": 232.00000000093132,
+        "syncInner": 179.2000000011176,
+        "syncNature": 845.3000000007451,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.8999999994412065,
+        "natureMaterials": 154.99999999906868,
+        "shrubSupport": 675.5,
+        "shrubGeometryMaterials": 13.099999999627471,
+        "displayedHeight": 27.000000000931323,
+        "walkIndex": 1037.5,
+        "fetch": 693.3999999994412,
+        "parse": 172.80000000074506,
+        "geometryMaterials": 309.1000000005588,
+        "automationInputPreparation": 429.1000000005588,
+        "twoRAFPresentationProxyWait": 2242.0
+      }
+    },
+    {
+      "id": "optimization-detailed-2-1-B-reload-partial",
+      "variant": "B",
+      "cache": "reload-partial",
+      "wall": 17079,
+      "covered": 16738.099999998696,
+      "unknown": 340.90000000130385,
+      "inclusiveStageMs": {
+        "syncConnected": 2.300000000745058,
+        "rendererSubmission": 1458.6000000005588,
+        "updateLabels": 10.099999999627471,
+        "updateScale": 83.79999999981374,
+        "render": 1636.7999999988824,
+        "syncWestern": 332.2000000011176,
+        "geometryPreparation": 559.0999999949709,
+        "materialPreparation": 1.4999999990686774,
+        "paint": 411.2000000011176,
+        "syncInner": 1117.0999999996275,
+        "syncParts": 0,
+        "syncNature": 1158.3999999985099,
+        "placeMarkers": 0.2999999998137355,
+        "makeRoute": 7.099999999627471,
+        "natureMaterials": 172.2000000011176,
+        "shrubSupport": 951.3999999985099,
+        "shrubGeometryMaterials": 29.59999999869615,
+        "displayedHeight": 37.299999999813735,
+        "walkIndex": 2725.600000000559,
+        "fetch": 1995.7000000001863,
+        "parse": 338.70000000018626,
+        "geometryMaterials": 585.8999999985099,
+        "automationInputPreparation": 2493.0,
+        "twoRAFPresentationProxyWait": 5281.5
+      }
+    },
+    {
+      "id": "optimization-detailed-2-2-Apost-cold",
+      "variant": "Apost",
+      "cache": "cold",
+      "wall": 19309.299999999814,
+      "covered": 18997.29999999795,
+      "unknown": 312.00000000186265,
+      "inclusiveStageMs": {
+        "syncConnected": 5.5,
+        "rendererSubmission": 1665.300000000745,
+        "updateLabels": 4.1000000005587935,
+        "updateScale": 42.79999999888241,
+        "render": 2084.0999999996275,
+        "syncWestern": 750.5,
+        "syncParts": 8.299999999813735,
+        "geometryPreparation": 856.8000000026077,
+        "materialPreparation": 24.499999998137355,
+        "paint": 663.9000000003725,
+        "syncInner": 749.0,
+        "syncNature": 5082.699999998324,
+        "placeMarkers": 0.2000000011175871,
+        "makeRoute": 2.699999999254942,
+        "natureMaterials": 500.1999999983236,
+        "shrubSupport": 4561.900000001304,
+        "shrubGeometryMaterials": 13.800000000745058,
+        "displayedHeight": 44.60000000055879,
+        "walkIndex": 1831.300000000745,
+        "fetch": 2191.2000000001863,
+        "parse": 492.5000000009313,
+        "geometryMaterials": 992.4999999990687,
+        "automationInputPreparation": 797.7999999988824,
+        "twoRAFPresentationProxyWait": 4893.0999999996275
+      }
+    },
+    {
+      "id": "optimization-detailed-2-2-Apost-reload-partial",
+      "variant": "Apost",
+      "cache": "reload-partial",
+      "wall": 5543.199999999255,
+      "covered": 5401.499999998137,
+      "unknown": 141.7000000011176,
+      "inclusiveStageMs": {
+        "syncConnected": 0.2999999998137355,
+        "rendererSubmission": 438.69999999925494,
+        "updateLabels": 1.7999999998137355,
+        "updateScale": 8.700000001117587,
+        "render": 469.2000000011176,
+        "syncWestern": 170.40000000037253,
+        "geometryPreparation": 877.1999999992549,
+        "materialPreparation": 7.399999996647239,
+        "paint": 274.29999999981374,
+        "syncInner": 188.29999999981374,
+        "syncParts": 0.09999999962747097,
+        "syncNature": 1497.300000000745,
+        "placeMarkers": 0,
+        "makeRoute": 0.39999999944120646,
+        "natureMaterials": 82.40000000037253,
+        "shrubSupport": 1405.8999999985099,
+        "shrubGeometryMaterials": 7.900000001303852,
+        "displayedHeight": 55.0,
+        "walkIndex": 1173.7000000001863,
+        "fetch": 855.4000000003725,
+        "parse": 178.3999999994412,
+        "geometryMaterials": 916.0,
+        "automationInputPreparation": 205.59999999869615,
+        "twoRAFPresentationProxyWait": 34.69999999925494
+      }
+    },
+    {
+      "id": "optimization-detailed-3-0-Apre-cold",
+      "variant": "Apre",
+      "cache": "cold",
+      "wall": 8216.400000000373,
+      "covered": 7801.399999999441,
+      "unknown": 415.0000000009313,
+      "inclusiveStageMs": {
+        "syncConnected": 3.499999998137355,
+        "rendererSubmission": 550.5999999996275,
+        "updateLabels": 0.599999999627471,
+        "updateScale": 26.0,
+        "render": 630.7999999988824,
+        "syncWestern": 224.2000000011176,
+        "syncParts": 0.2999999988824129,
+        "geometryPreparation": 379.6999999983236,
+        "materialPreparation": 2.7999999979510903,
+        "paint": 231.2000000011176,
+        "syncInner": 354.3999999994412,
+        "syncNature": 2577.8000000026077,
+        "placeMarkers": 0.10000000055879354,
+        "makeRoute": 0.599999999627471,
+        "natureMaterials": 135.90000000130385,
+        "shrubSupport": 2420.7999999988824,
+        "shrubGeometryMaterials": 18.59999999962747,
+        "displayedHeight": 56.09999999962747,
+        "walkIndex": 1311.5,
+        "fetch": 1063.0,
+        "parse": 163.09999999962747,
+        "geometryMaterials": 407.19999999925494,
+        "automationInputPreparation": 425.59999999869615,
+        "twoRAFPresentationProxyWait": 1080.6000000005588
+      }
+    },
+    {
+      "id": "optimization-detailed-3-0-Apre-reload-partial",
+      "variant": "Apre",
+      "cache": "reload-partial",
+      "wall": 10959.200000000186,
+      "covered": 10677.699999998324,
+      "unknown": 281.50000000186265,
+      "inclusiveStageMs": {
+        "syncConnected": 1.2999999979510903,
+        "rendererSubmission": 501.80000000074506,
+        "updateLabels": 0.7000000001862645,
+        "updateScale": 26.300000000745058,
+        "render": 563.7999999998137,
+        "syncWestern": 538.5,
+        "syncParts": 0.09999999962747097,
+        "geometryPreparation": 260.09999999869615,
+        "materialPreparation": 0.8000000026077032,
+        "paint": 237.5,
+        "syncInner": 185.59999999869615,
+        "syncNature": 3960.7000000011176,
+        "placeMarkers": 0.40000000037252903,
+        "makeRoute": 0.2999999998137355,
+        "natureMaterials": 171.19999999925494,
+        "shrubSupport": 3776.899999999441,
+        "shrubGeometryMaterials": 11.100000001490116,
+        "displayedHeight": 56.80000000074506,
+        "walkIndex": 3184.4000000003725,
+        "fetch": 597.0000000009313,
+        "parse": 104.0,
+        "geometryMaterials": 283.59999999869615,
+        "automationInputPreparation": 360.8999999985099,
+        "twoRAFPresentationProxyWait": 972.0
+      }
+    },
+    {
+      "id": "optimization-detailed-3-1-B-cold",
+      "variant": "B",
+      "cache": "cold",
+      "wall": 4914.5999999996275,
+      "covered": 4769.29999999702,
+      "unknown": 145.3000000026077,
+      "inclusiveStageMs": {
+        "syncConnected": 0.6999999992549419,
+        "rendererSubmission": 406.50000000186265,
+        "updateLabels": 0.6000000005587935,
+        "updateScale": 7.699999998323619,
+        "render": 452.2999999988824,
+        "syncWestern": 253.69999999925494,
+        "syncParts": 0.19999999925494194,
+        "geometryPreparation": 240.30000000167638,
+        "materialPreparation": 1.1000000014901161,
+        "paint": 148.29999999981374,
+        "syncInner": 196.80000000167638,
+        "syncNature": 733.0,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.7000000001862645,
+        "natureMaterials": 134.59999999962747,
+        "shrubSupport": 584.2999999998137,
+        "shrubGeometryMaterials": 11.800000000745058,
+        "displayedHeight": 18.90000000037253,
+        "walkIndex": 1240.7000000001863,
+        "fetch": 591.5999999996275,
+        "parse": 93.29999999888241,
+        "geometryMaterials": 248.90000000037253,
+        "automationInputPreparation": 266.8999999994412,
+        "twoRAFPresentationProxyWait": 901.2999999998137
+      }
+    },
+    {
+      "id": "optimization-detailed-3-1-B-reload-partial",
+      "variant": "B",
+      "cache": "reload-partial",
+      "wall": 5686.4000000003725,
+      "covered": 5584.699999996461,
+      "unknown": 101.70000000391155,
+      "inclusiveStageMs": {
+        "syncConnected": 0.5000000018626451,
+        "rendererSubmission": 459.8999999994412,
+        "updateLabels": 19.40000000037253,
+        "updateScale": 8.799999998882413,
+        "render": 538.7999999979511,
+        "syncWestern": 128.29999999981374,
+        "syncParts": 0.10000000055879354,
+        "geometryPreparation": 296.8000000016764,
+        "materialPreparation": 1.5999999959021807,
+        "paint": 255.49999999906868,
+        "syncInner": 192.40000000037253,
+        "syncNature": 691.3999999985099,
+        "placeMarkers": 0.10000000055879354,
+        "makeRoute": 0.599999999627471,
+        "natureMaterials": 113.29999999981374,
+        "shrubSupport": 566.6000000005588,
+        "shrubGeometryMaterials": 9.799999998882413,
+        "displayedHeight": 26.399999999441206,
+        "walkIndex": 1168.800000000745,
+        "fetch": 949.2000000001863,
+        "parse": 116.59999999869615,
+        "geometryMaterials": 309.5000000009313,
+        "automationInputPreparation": 191.09999999962747,
+        "twoRAFPresentationProxyWait": 1682.6000000005588
+      }
+    },
+    {
+      "id": "optimization-detailed-3-2-Apost-cold",
+      "variant": "Apost",
+      "cache": "cold",
+      "wall": 4962.5,
+      "covered": 4867.499999996275,
+      "unknown": 95.00000000372529,
+      "inclusiveStageMs": {
+        "syncConnected": 1.4000000022351742,
+        "rendererSubmission": 244.09999999869615,
+        "updateLabels": 1.099999999627471,
+        "updateScale": 6.000000000931323,
+        "render": 274.7999999988824,
+        "syncWestern": 122.09999999962747,
+        "syncParts": 0.10000000055879354,
+        "geometryPreparation": 240.2000000020489,
+        "materialPreparation": 1.400000000372529,
+        "paint": 128.8999999994412,
+        "syncInner": 274.99999999813735,
+        "syncNature": 1644.9999999990687,
+        "placeMarkers": 0.10000000055879354,
+        "makeRoute": 0.39999999944120646,
+        "natureMaterials": 77.8999999994412,
+        "shrubSupport": 1559.800000000745,
+        "shrubGeometryMaterials": 5.899999998509884,
+        "displayedHeight": 12.900000000372529,
+        "walkIndex": 1273.3999999994412,
+        "fetch": 590.6000000005588,
+        "parse": 111.60000000149012,
+        "geometryMaterials": 263.7999999988824,
+        "automationInputPreparation": 191.99999999906868,
+        "twoRAFPresentationProxyWait": 412.29999999981374
+      }
+    },
+    {
+      "id": "optimization-detailed-3-2-Apost-reload-partial",
+      "variant": "Apost",
+      "cache": "reload-partial",
+      "wall": 4613.5999999996275,
+      "covered": 4516.099999994971,
+      "unknown": 97.50000000465661,
+      "inclusiveStageMs": {
+        "syncConnected": 1.0,
+        "rendererSubmission": 350.40000000037253,
+        "updateLabels": 2.0,
+        "updateScale": 8.79999999795109,
+        "render": 392.8999999985099,
+        "syncWestern": 128.69999999925494,
+        "geometryPreparation": 470.0000000009313,
+        "materialPreparation": 2.599999999627471,
+        "paint": 245.8999999994412,
+        "syncInner": 121.29999999981374,
+        "syncParts": 0.40000000037252903,
+        "syncNature": 1636.0999999996275,
+        "placeMarkers": 0.09999999962747097,
+        "makeRoute": 0.599999999627471,
+        "natureMaterials": 114.79999999888241,
+        "shrubSupport": 1514.6000000005588,
+        "shrubGeometryMaterials": 4.900000000372529,
+        "displayedHeight": 19.299999999813735,
+        "walkIndex": 985.9000000003725,
+        "fetch": 532.1000000005588,
+        "parse": 99.3999999994412,
+        "geometryMaterials": 484.90000000037253,
+        "automationInputPreparation": 163.59999999962747,
+        "twoRAFPresentationProxyWait": 13.099999999627471
+      }
+    }
+  ],
+  "independentSummaryMatch": true,
+  "coverageRange": [
+    0.9494912613795686,
+    0.9859113675638531
+  ],
+  "limitations": "Build bytes recorded/served verified; independent fresh builds reproduced original I, A and B hashes. Browser automated Chromium SwiftShader only; real Safari, physical input, GPU internals NOT_TESTED. Bootstrap is descriptive. No intervention-equivalence claim."
+}

@@ -1,0 +1,24 @@
+{
+  "I": {
+    "head": "e67f1fc81c38986ccf8170d1942a1894992c0f3a",
+    "buildSha256": "ea70af5b7edf0afc93570e53a17e5f84f57ae7775c46691ab6bbcb82e45394f5"
+  },
+  "A": {
+    "head": "ee3c3def2565b088c978694469ed86d10d92c75c",
+    "buildSha256": "51e439959bfb525b44898609fe565bf583d2fda6366c35ea7a38f6c6e7bc192f",
+    "tests": 378,
+    "failed": 0
+  },
+  "B": {
+    "head": "ef47f1b43a9118f60e5b0f9a7f380ff49342282b",
+    "buildSha256": "ea7108f73345876de70f99c791997a92303111b728e4eb721ba76d70658bf17f",
+    "tests": 390,
+    "failed": 0
+  },
+  "commands": [
+    "npm test",
+    "npm run build",
+    "sha256sum dist/assets/*.js"
+  ],
+  "executor": "independent checkout, Node24.22.1; official CI Node22.23.4; package-lock unchanged"
+}

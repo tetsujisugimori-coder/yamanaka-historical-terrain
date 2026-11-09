@@ -1,0 +1,19 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> yamanaka-historical-terrain@0.1.0 build
+> vite build
+
+vite v7.1.12 building for production...
+transforming...
+✓ 26 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  12.32 kB │ gzip:   5.35 kB
+dist/assets/index-DhEdlCtI.css   16.56 kB │ gzip:   4.54 kB
+dist/assets/index-BA6NgZSL.js   694.47 kB │ gzip: 187.89 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.71s

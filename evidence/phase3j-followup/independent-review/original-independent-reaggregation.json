@@ -1,0 +1,207 @@
+{
+  "archiveSha256": "f5385164105865fde1d3bf42b9b645f141a9e8721f8224490eb6dbf09e1677b1",
+  "manifestFiles": 288,
+  "manifestFailures": [],
+  "experiments": {
+    "original-independent": {
+      "groups": {
+        "cold": {
+          "n": 10,
+          "median": {
+            "I": 2534.649999999441,
+            "J": 2495.4000000003725
+          },
+          "percentChange": -1.5485372733544,
+          "improvedPairs": 5,
+          "pairedDeltas": [
+            -1036.7999999988824,
+            -88.39999999850988,
+            86.29999999888241,
+            -494.30000000074506,
+            132.39999999850988,
+            -631.5999999996275,
+            -105.59999999962747,
+            145.0,
+            230.59999999962747,
+            169.2999999988824
+          ]
+        },
+        "reload-partial": {
+          "n": 10,
+          "median": {
+            "I": 2551.25,
+            "J": 2594.9999999990687
+          },
+          "percentChange": 1.7148456638537368,
+          "improvedPairs": 5,
+          "pairedDeltas": [
+            680.1999999992549,
+            115.59999999962747,
+            -525.0999999977648,
+            316.7999999988824,
+            -240.0,
+            -416.2999999988824,
+            254.2999999988824,
+            -507.40000000037253,
+            -519.9000000003725,
+            200.5
+          ]
+        }
+      },
+      "coverageRange": [
+        0.9775565745838676,
+        0.9892139632658263
+      ],
+      "maxEntryDurationError": 0,
+      "inclusiveMeans": {
+        "I": {
+          "syncConnected": 0.6333333334575096,
+          "updateLabels": 6.749999999068677,
+          "updateScale": 4.166666666356228,
+          "render": 165.45000000080702,
+          "syncWestern": 60.016666667535915,
+          "paint": 93.69999999956536,
+          "syncInner": 93.03333333289872,
+          "syncParts": 0.08333333395421505,
+          "syncNature": 928.1833333338923,
+          "placeMarkers": 0.05000000043461719,
+          "makeRoute": 0.316666666418314,
+          "shrubSupport": 871.5666666682812,
+          "displayedHeight": 11.949999999875825,
+          "walkIndex": 467.95000000018626,
+          "fetch": 346.04999999981385,
+          "parse": 75.26666666629414,
+          "geometryMaterials": 142.11666666685292,
+          "automationInputPreparation": 119.5666666664183,
+          "twoRAFPresentationProxyWait": 417.53333333320916
+        },
+        "J": {
+          "syncConnected": 0.6666666663562258,
+          "updateLabels": 0.8333333330228925,
+          "updateScale": 4.250000000931324,
+          "render": 184.88333333469924,
+          "syncWestern": 63.55000000074507,
+          "syncParts": 0.05000000012417634,
+          "paint": 108.16666666666667,
+          "syncInner": 115.71666666648039,
+          "syncNature": 316.36666666716326,
+          "placeMarkers": 0.033333333519597844,
+          "makeRoute": 0.33333333395421505,
+          "shrubSupport": 259.2500000003104,
+          "displayedHeight": 13.266666666294139,
+          "walkIndex": 462.0,
+          "fetch": 320.0000000006209,
+          "parse": 61.78333333258827,
+          "geometryMaterials": 157.71666666710126,
+          "automationInputPreparation": 158.99999999968955,
+          "twoRAFPresentationProxyWait": 769.6666666663563
+        }
+      },
+      "mainSha256": "dc773ab6d805c65e4bd2197a88fcd70754628ab7f32359095d153feafec9f242",
+      "detailSha256": "46fecbcd54363146a3e5ee31ccef127721badcd1541126e37014d7f006b02bd3"
+    },
+    "original-ci": {
+      "groups": {
+        "cold": {
+          "n": 10,
+          "median": {
+            "I": 3269.649999999994,
+            "J": 2886.25
+          },
+          "percentChange": -11.726025721407328,
+          "improvedPairs": 8,
+          "pairedDeltas": [
+            -1533.8999999999942,
+            -172.59999999999127,
+            -76.69999999998254,
+            -460.79999999998836,
+            -178.20000000001164,
+            368.70000000001164,
+            30.10000000000582,
+            -828.7000000000116,
+            -602.2000000000116,
+            -182.30000000004657
+          ]
+        },
+        "reload-partial": {
+          "n": 10,
+          "median": {
+            "I": 3280.9000000000015,
+            "J": 3081.199999999997
+          },
+          "percentChange": -6.086744490841056,
+          "improvedPairs": 7,
+          "pairedDeltas": [
+            -35.89999999999418,
+            699.5999999999913,
+            -222.1999999999971,
+            -269.80000000001746,
+            -233.39999999999418,
+            59.0,
+            258.0,
+            -220.5000000000291,
+            -143.20000000001164,
+            -183.80000000004657
+          ]
+        }
+      },
+      "coverageRange": [
+        0.9766484801246823,
+        0.9865865400578016
+      ],
+      "maxEntryDurationError": 0,
+      "inclusiveMeans": {
+        "I": {
+          "syncConnected": 0.6666666666569653,
+          "updateLabels": 0.5166666666433837,
+          "updateScale": 3.9999999999514912,
+          "render": 148.0999999999573,
+          "syncWestern": 66.48333333335664,
+          "paint": 129.7666666666628,
+          "syncInner": 94.81666666665114,
+          "syncParts": 0.04999999998835847,
+          "syncNature": 780.1666666666957,
+          "placeMarkers": 0.04999999999805975,
+          "makeRoute": 0.26666666666278616,
+          "shrubSupport": 724.0333333333253,
+          "displayedHeight": 11.299999999988358,
+          "walkIndex": 568.033333333345,
+          "fetch": 381.1666666666958,
+          "parse": 55.89999999997478,
+          "geometryMaterials": 152.45000000001167,
+          "automationInputPreparation": 322.916666666686,
+          "twoRAFPresentationProxyWait": 549.799999999998
+        },
+        "J": {
+          "syncConnected": 0.933333333300349,
+          "updateLabels": 0.5499999999883585,
+          "updateScale": 3.61666666671711,
+          "render": 157.366666666659,
+          "syncWestern": 65.6166666667074,
+          "syncParts": 0.04999999999805975,
+          "paint": 133.28333333334496,
+          "syncInner": 96.98333333332751,
+          "syncNature": 247.08333333330424,
+          "placeMarkers": 0.016666666672487434,
+          "makeRoute": 0.2666666666627861,
+          "shrubSupport": 194.41666666666666,
+          "displayedHeight": 14.03333333332557,
+          "walkIndex": 520.3166666666802,
+          "fetch": 426.4999999999903,
+          "parse": 59.53333333335467,
+          "geometryMaterials": 157.2333333333372,
+          "automationInputPreparation": 631.6499999999844,
+          "twoRAFPresentationProxyWait": 731.9833333333179
+        }
+      },
+      "mainSha256": "f31ccdd15332bd184129eb54a4a40dd87a5c1ee936fd89cea82e0dd755600cd1",
+      "detailSha256": "b8b90907f642a12032c4d60b2f8926fa394a312a51c1ce7f039ab8f5c07e54a2"
+    }
+  },
+  "HCPU": {
+    "programSelfMs": 9999.891,
+    "sampleTotalMs": 13889.129,
+    "percent": 71.99797049908602
+  },
+  "ciZipSha256": "9531e4869061ae86c4c336c2b9e791fe1a529e71210c8d7a13a8b7b6344ef92d"
+}

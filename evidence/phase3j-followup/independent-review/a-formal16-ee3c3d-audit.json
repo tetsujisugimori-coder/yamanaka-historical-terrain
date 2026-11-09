@@ -1,0 +1,1330 @@
+{
+  "head": "ee3c3def2565b088c978694469ed86d10d92c75c",
+  "tree": "93bd613ba8fb9614ed713d8dca661647208d286a",
+  "sourceHashes": {
+    "src/main.js": "ce4edc34228cc8bce4c2a1014787cc497e0a32711922bd46469c33ebc5722aee",
+    "src/library-parts.js": "b64b80ab7432a56c6d7ad61f093a47c931bf4cff1f39dd4ed7e7701ca85f51bb",
+    "src/nature-finish.js": "e485d2f4308f2c47a295622aadcf3e9c5e13710baa9b56c9cd2ce6bfdb9d035d",
+    "public/parts/manifest.json": "00afd6d3ec2736d994d3af22108586413e1e037733cc497df3050f0964935216",
+    "public/parts/wooden-palisade-v0.json": "65f0b948edd837445708940d1ca9d9731a847f8b2441fc8386b24d01d2e6c118",
+    "src/refined-observation.js": "a2324753dea465e8f044815df53b0bd2343e2de9e411d70f5adc4f5d5d322540",
+    "src/exploration.js": "59ba5859ea649ae8ad02930d8c38158a3fa81e4137eddadb8ded40e12155253c",
+    "src/sections.js": "faedc1c5580fbe9a1d82b9bb756347080f22573b8eeebddea8063311554a34e6",
+    "src/section-exhibit.js": "214255676967a27237545ac421aaa35d46d09396d8123900d8b229fc1d01ec54",
+    "scripts/phase3i-browser.mjs": "ccafb441e21e2a23c205420d15fa63fa936e0459196f755ff67069c4b143284a",
+    "scripts/phase3i-evidence.mjs": "779fb492421fe33cc914f69736cf0f797cce9cb1600aa0797162bc39a45a83af",
+    "tests/section-oracle.mjs": "1b0cff060c54d20b8b4db68c0d05b1ccdf75e258458e90ab896248ee8043ed35",
+    "tests/phase3f-ground-oracle.mjs": "aec202fd21687d0e5b6cf5e28f2841bdcf3ec5a13efe719ec7b923046d125f27",
+    "public/data/phase3i.json": "9a8ed0e9d1d4cfaf8d03ac11a718855c0aae487cd1fa39f4dd837455d2fd619a",
+    "public/data/phase3i.glb": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "public/data/phase3i-inner.glb": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "public/data/castle.glb": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "public/data/phase3b.glb": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "public/data/phase3d.glb": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+  },
+  "rawSHA256": "e29b011dfdf9c8519d58a62109d75b2237088b951f5e1f657eee7fbbb3aec9d7",
+  "startedAt": "2026-11-09T10:31:54.413Z",
+  "completedAt": "2026-11-09T10:42:50.172Z",
+  "rows": [
+    {
+      "key": "chromium-375-no-preference",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "dee4a8746831931337fa25c9de6eb33f138baf9127c1753b18d100be435141d6",
+        "3ae45bb243e7eb78a28e4c1a060e3b1c959c8d53f9d674c42dd37a37b312244b"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-375-reduce",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "dee4a8746831931337fa25c9de6eb33f138baf9127c1753b18d100be435141d6",
+        "3ae45bb243e7eb78a28e4c1a060e3b1c959c8d53f9d674c42dd37a37b312244b"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-390-no-preference",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "199f7f19c3ce69f67455c0491d29e1d612b4a716e4e172cf09d66d184dca385e",
+        "c85a3339f57ea308942b33b8bf21009ce2b5aa34e9d925af2c2c186a87973a8e"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-390-reduce",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "199f7f19c3ce69f67455c0491d29e1d612b4a716e4e172cf09d66d184dca385e",
+        "c85a3339f57ea308942b33b8bf21009ce2b5aa34e9d925af2c2c186a87973a8e"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-765-no-preference",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "648a03e93f3ebfe35eae45563a85c9228326ed849c95db875dd413ae557b9be5",
+        "ce52b4df80f21ff67fd0c9ad3fec36774a695f36bb22e013e51bd2feb9e54c26"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-765-reduce",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "648a03e93f3ebfe35eae45563a85c9228326ed849c95db875dd413ae557b9be5",
+        "ce52b4df80f21ff67fd0c9ad3fec36774a695f36bb22e013e51bd2feb9e54c26"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-1280-no-preference",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "69c1284ae76809fbdb04c8383c0a77f9f4962701bcb42ecf7c3432b5258a87e0",
+        "572e80227edd9874bf1efb1cc7ef14a204cf2684b1a01692ccbe752478aa1c05"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-1280-reduce",
+      "browser": "141.0.7390.37",
+      "pngHashes": [
+        "69c1284ae76809fbdb04c8383c0a77f9f4962701bcb42ecf7c3432b5258a87e0",
+        "572e80227edd9874bf1efb1cc7ef14a204cf2684b1a01692ccbe752478aa1c05"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-375-no-preference",
+      "browser": "26.0",
+      "pngHashes": [
+        "2688e2f458b8025e125c58f7baf30b1b65008ddf75c02a8885f6c9a840547795",
+        "e794ad490fb1c2488f63e33c363707c7c5f912bf8efdebc28592c5c3f8abeb36"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-375-reduce",
+      "browser": "26.0",
+      "pngHashes": [
+        "2688e2f458b8025e125c58f7baf30b1b65008ddf75c02a8885f6c9a840547795",
+        "e794ad490fb1c2488f63e33c363707c7c5f912bf8efdebc28592c5c3f8abeb36"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-390-no-preference",
+      "browser": "26.0",
+      "pngHashes": [
+        "114a907fb05ad0417cfdcaf72da3cd30cfe84c4fe60ee6ebe148ea0b0a032ac7",
+        "9f23cd24984cfe299dfed4b73db288db147e69a39ad0852597dfbf4dccfa2186"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-390-reduce",
+      "browser": "26.0",
+      "pngHashes": [
+        "114a907fb05ad0417cfdcaf72da3cd30cfe84c4fe60ee6ebe148ea0b0a032ac7",
+        "9f23cd24984cfe299dfed4b73db288db147e69a39ad0852597dfbf4dccfa2186"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-765-no-preference",
+      "browser": "26.0",
+      "pngHashes": [
+        "9dbd16aae6e87230b8f99a2a83833e45c3d10e916cfca1033f9832517655c876",
+        "719259417690518b0817de0581c99a2148e45d22ddea7594756d83972dfcba0e"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-765-reduce",
+      "browser": "26.0",
+      "pngHashes": [
+        "9dbd16aae6e87230b8f99a2a83833e45c3d10e916cfca1033f9832517655c876",
+        "719259417690518b0817de0581c99a2148e45d22ddea7594756d83972dfcba0e"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-1280-no-preference",
+      "browser": "26.0",
+      "pngHashes": [
+        "be3d9a51b28a857d2a49ab86aca0590dc30c9e145389adf330e67798685c8c99",
+        "dbf167bc2ea5b47ea56af3d20bd503434692ab76c4da3eb431c486b5338ce3c0"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-1280-reduce",
+      "browser": "26.0",
+      "pngHashes": [
+        "be3d9a51b28a857d2a49ab86aca0590dc30c9e145389adf330e67798685c8c99",
+        "dbf167bc2ea5b47ea56af3d20bd503434692ab76c4da3eb431c486b5338ce3c0"
+      ],
+      "sections": [
+        {
+          "id": "moat",
+          "key": "A",
+          "count": 21,
+          "maxError": 1.1368683772161603e-13
+        },
+        {
+          "id": "moat",
+          "key": "C",
+          "count": 336,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "A",
+          "count": 18,
+          "maxError": 0
+        },
+        {
+          "id": "rampart",
+          "key": "C",
+          "count": 360,
+          "maxError": 0
+        }
+      ],
+      "supports": [
+        {
+          "id": "ic-station-nishinomaru",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-lookout",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-bridge",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-koguchi-inside",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-western",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westgate",
+          "error": 4.551914400963142e-14
+        },
+        {
+          "id": "ic-station-westmoat",
+          "error": 4.551914400963142e-14
+        }
+      ],
+      "movementCount": 10,
+      "movementMaxAbsError": 0,
+      "checks": [
+        "new physical mesh resources loaded",
+        "both fixed sections vs independent raw triangle oracle",
+        "eight guides actual triangle support",
+        "delivered keyboard walk and every recorded support",
+        "blur mode change and late pointer release stop",
+        "two times terrain plus unscaled 1.7m eye",
+        "quality and A C D isolation",
+        "PNG reset no overflow no pageerror"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "rowsPassed": 16,
+  "pngHashesVerified": 32,
+  "geometryOracles": "Independent section/ground oracle modules use original GLB triangles, not the app support/cache paths",
+  "limitations": "Automated Chromium/WebKit, not actual Safari or physical input. GPU internals NOT_TESTED. Fresh independent browser matrix not rerun; original GitHub raw audited."
+}

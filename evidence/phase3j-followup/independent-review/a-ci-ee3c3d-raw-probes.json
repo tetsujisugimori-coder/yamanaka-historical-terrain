@@ -1,0 +1,101 @@
+{
+  "source": "a-ci-ee3c3d/raw/raw.json",
+  "kind": "overhead",
+  "rows": 36,
+  "results": [
+    {
+      "name": "normal",
+      "accepted": true
+    },
+    {
+      "name": "duration",
+      "accepted": false,
+      "error": "entry duration mismatch"
+    },
+    {
+      "name": "fullCoverage",
+      "accepted": false,
+      "error": "entry duration mismatch"
+    },
+    {
+      "name": "missingEntries",
+      "accepted": false,
+      "error": "The expression evaluated to a falsy value:"
+    },
+    {
+      "name": "missingRequests",
+      "accepted": false,
+      "error": "render counter missing"
+    },
+    {
+      "name": "missingSubmissions",
+      "accepted": false,
+      "error": "render counter missing"
+    },
+    {
+      "name": "missingDropped",
+      "accepted": false,
+      "error": "spans truncated"
+    },
+    {
+      "name": "missingEntryDropped",
+      "accepted": false,
+      "error": "coarse entries truncated"
+    },
+    {
+      "name": "unknownWholeTaskSpan",
+      "accepted": false,
+      "error": "unknown detailed stage"
+    },
+    {
+      "name": "missingRow",
+      "accepted": false,
+      "error": "complete expected row set"
+    },
+    {
+      "name": "reversedRows",
+      "accepted": false,
+      "error": "row 0 block"
+    },
+    {
+      "name": "failedRow",
+      "accepted": false,
+      "error": "Expected values to be strictly equal:"
+    },
+    {
+      "name": "http",
+      "accepted": false,
+      "error": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "name": "wrongBuild",
+      "accepted": false,
+      "error": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "name": "missingAsset",
+      "accepted": false,
+      "error": "required asset observation"
+    },
+    {
+      "name": "wrongRunner",
+      "accepted": false,
+      "error": "identity/plan mismatch"
+    },
+    {
+      "name": "wrongViewport",
+      "accepted": false,
+      "error": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "name": "wrongProfile",
+      "accepted": false,
+      "error": "Expected values to be strictly equal:"
+    },
+    {
+      "name": "wrongPlanCount",
+      "accepted": false,
+      "error": "preregistered plan"
+    }
+  ]
+}

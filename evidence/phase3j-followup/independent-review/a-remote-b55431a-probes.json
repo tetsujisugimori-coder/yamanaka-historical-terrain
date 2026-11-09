@@ -1,0 +1,92 @@
+{
+  "commit": "b55431aa8a8407e9ddcf59e24b7fe8f11d6b0e1e",
+  "tree": "ad61595d4017b3fb9c793d28fe59bbe4aab7b1de",
+  "source": "independent git fetch from GitHub into reviewer checkout",
+  "analyzerSha256": "c1f479aad3177eba99fc248fdb362a027dc35f98f42f6aedb02ae69b788f1512",
+  "results": [
+    {
+      "name": "normal",
+      "accepted": true
+    },
+    {
+      "name": "sameBuildSelfComparison",
+      "accepted": false,
+      "error": "Expected \"actual\" to be strictly unequal to:"
+    },
+    {
+      "name": "emptyEntries",
+      "accepted": false,
+      "error": "The expression evaluated to a falsy value:"
+    },
+    {
+      "name": "missingRequests",
+      "accepted": false,
+      "error": "render counter missing"
+    },
+    {
+      "name": "missingSubmissions",
+      "accepted": false,
+      "error": "render counter missing"
+    },
+    {
+      "name": "wrongProfileRoles",
+      "accepted": false,
+      "error": "Expected values to be strictly equal:"
+    },
+    {
+      "name": "unknownWholeTaskSpan",
+      "accepted": false,
+      "error": "unknown detailed stage"
+    },
+    {
+      "name": "inconsistentEntry",
+      "accepted": false,
+      "error": "entry duration mismatch"
+    },
+    {
+      "name": "missingDropped",
+      "accepted": false,
+      "error": "spans truncated"
+    },
+    {
+      "name": "missingEntryDropped",
+      "accepted": false,
+      "error": "coarse entries truncated"
+    },
+    {
+      "name": "missingRow",
+      "accepted": false,
+      "error": "complete expected row set"
+    },
+    {
+      "name": "reversedRows",
+      "accepted": false,
+      "error": "row 0 block"
+    },
+    {
+      "name": "failedRow",
+      "accepted": false,
+      "error": "Expected values to be strictly equal:"
+    },
+    {
+      "name": "missingAssetLog",
+      "accepted": false,
+      "error": "required asset observation"
+    },
+    {
+      "name": "changedViewport",
+      "accepted": false,
+      "error": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "name": "changedRunner",
+      "accepted": false,
+      "error": "identity/plan mismatch"
+    },
+    {
+      "name": "missingDetailStage",
+      "accepted": false,
+      "error": "required detailed stage walkIndex"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "normal",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "inconsistentEntryDuration",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "fullCoverageFabricatedInterval",
+    "accepted": true,
+    "firstCoverage": 1
+  },
+  {
+    "name": "missingDroppedCounter",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "unverifiedRunner",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "wrongViewport",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "wrongDpr",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "wrongOrder",
+    "accepted": true,
+    "firstCoverage": 0.9858691073403091
+  },
+  {
+    "name": "missingBasicEntries",
+    "accepted": true,
+    "firstCoverage": 0.8867471580904026
+  },
+  {
+    "name": "wrongRowCountContract",
+    "accepted": true,
+    "firstCoverage": 0.978606227496948
+  },
+  {
+    "name": "failedRaw",
+    "accepted": false,
+    "error": "Expected values to be strictly equal:"
+  },
+  {
+    "name": "missingRow",
+    "accepted": false,
+    "error": "Expected values to be strictly equal:"
+  },
+  {
+    "name": "wrongBuild",
+    "accepted": false,
+    "error": "served build identity"
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "item": "baseline source",
+    "expected": "b2c4bd38cd9e2196be396e68cb20353fd6f728a91147c2208fa163c8bdf8c37d",
+    "actual": "b2c4bd38cd9e2196be396e68cb20353fd6f728a91147c2208fa163c8bdf8c37d"
+  },
+  {
+    "item": "candidate source",
+    "expected": "3d93347071d788042efd4cd824406537d9b50643a7fb16de7cccfe1df3ed044b",
+    "actual": "3d93347071d788042efd4cd824406537d9b50643a7fb16de7cccfe1df3ed044b"
+  },
+  {
+    "item": "baseline asset castle.glb",
+    "expected": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "actual": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d"
+  },
+  {
+    "item": "candidate asset castle.glb",
+    "expected": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d",
+    "actual": "85ecb2cc61e1279dc11bcb5a1fdedeec3fc22c406cbdc163500ed8378949171d"
+  },
+  {
+    "item": "baseline asset landscape.glb",
+    "expected": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "actual": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+  },
+  {
+    "item": "candidate asset landscape.glb",
+    "expected": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "actual": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+  },
+  {
+    "item": "baseline asset moat-study.glb",
+    "expected": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+    "actual": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387"
+  },
+  {
+    "item": "candidate asset moat-study.glb",
+    "expected": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387",
+    "actual": "4bf1d4d67b6f7dbe12659b6eba83a6ab66a4b02d477a446ce8d7860087d57387"
+  },
+  {
+    "item": "baseline asset nishinomaru.glb",
+    "expected": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "actual": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  {
+    "item": "candidate asset nishinomaru.glb",
+    "expected": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea",
+    "actual": "7b42f25613aca129a2c61947c49b67f547871720f6355f51a369c7e3d514b0ea"
+  },
+  {
+    "item": "baseline asset phase3b.glb",
+    "expected": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "actual": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+  },
+  {
+    "item": "candidate asset phase3b.glb",
+    "expected": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "actual": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+  },
+  {
+    "item": "baseline asset phase3c.glb",
+    "expected": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "actual": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4"
+  },
+  {
+    "item": "candidate asset phase3c.glb",
+    "expected": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4",
+    "actual": "810c858a08259b85399530a07faa762da56921613d6c09ef60eaee72f77fbfc4"
+  },
+  {
+    "item": "baseline asset phase3d.glb",
+    "expected": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "actual": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+  },
+  {
+    "item": "candidate asset phase3d.glb",
+    "expected": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "actual": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+  },
+  {
+    "item": "baseline asset phase3f-inner.glb",
+    "expected": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7",
+    "actual": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7"
+  },
+  {
+    "item": "candidate asset phase3f-inner.glb",
+    "expected": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7",
+    "actual": "7186c8f40510aa032816550e2a892412d1ba50f8bc2f061a04f53dac2bdab4d7"
+  },
+  {
+    "item": "baseline asset phase3f.glb",
+    "expected": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0",
+    "actual": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0"
+  },
+  {
+    "item": "candidate asset phase3f.glb",
+    "expected": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0",
+    "actual": "f2008a904df8e7d692683b4ab22051fd2c634dfabb5299bf8c92ec4d6319a5c0"
+  },
+  {
+    "item": "baseline asset phase3g-inner.glb",
+    "expected": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69",
+    "actual": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69"
+  },
+  {
+    "item": "candidate asset phase3g-inner.glb",
+    "expected": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69",
+    "actual": "277237569e49bd99ae4cb80b98be40bcbf6071fde92a80fbab16604a73303c69"
+  },
+  {
+    "item": "baseline asset phase3g.glb",
+    "expected": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
+    "actual": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1"
+  },
+  {
+    "item": "candidate asset phase3g.glb",
+    "expected": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1",
+    "actual": "24fdc7df2dbbdea64beee7f1d777375b3ef84208107ff8a058fd4ebfd9a5a4f1"
+  },
+  {
+    "item": "baseline asset phase3h-inner.glb",
+    "expected": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f",
+    "actual": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f"
+  },
+  {
+    "item": "candidate asset phase3h-inner.glb",
+    "expected": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f",
+    "actual": "01ed965edd3e18f1b29b917817d8e11d47a9b7cd987dc615ee9bfda6b765d11f"
+  },
+  {
+    "item": "baseline asset phase3h.glb",
+    "expected": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2",
+    "actual": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2"
+  },
+  {
+    "item": "candidate asset phase3h.glb",
+    "expected": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2",
+    "actual": "aa0301de797da099ca11a19068db5927c69e054821c844e43c62994e9436efd2"
+  },
+  {
+    "item": "baseline asset phase3i-inner.glb",
+    "expected": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "actual": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+  },
+  {
+    "item": "candidate asset phase3i-inner.glb",
+    "expected": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "actual": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+  },
+  {
+    "item": "baseline asset phase3i.glb",
+    "expected": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "actual": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+  },
+  {
+    "item": "candidate asset phase3i.glb",
+    "expected": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "actual": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+  },
+  {
+    "item": "baseline asset regional.glb",
+    "expected": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "actual": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8"
+  },
+  {
+    "item": "candidate asset regional.glb",
+    "expected": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8",
+    "actual": "a7f43fc6b7b7efe3ee3855f0037e7962b8054d071a13f3fd55265897c7760da8"
+  },
+  {
+    "item": "runner",
+    "expected": "2fdb00e6667b1eabdd9fc9c36d7a2a89f4c068c68e0022838ff2bf747e517a59",
+    "actual": "2fdb00e6667b1eabdd9fc9c36d7a2a89f4c068c68e0022838ff2bf747e517a59"
+  }
+]
