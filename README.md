@@ -89,3 +89,7 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 最終同条件CIでの施設準備の冷間中央値はH13.2967秒→I13.1923秒（約0.8%短縮）、再読込みはH13.2364秒→I13.1901秒（約0.35%短縮）。各3回・H先行の非交互計測で、差の有意性と目標11.61秒の達成を立証できず、歩行30moveの壁時計時間も冷間で約1.66%増加しました。**性能改善は未達**であり、GPU描画完了・実機Safariの性能は未検証です。景観・計測基盤の限定採用と性能改善の合否は分けて扱います。
 
 [景観・計測基盤の限定受入 Issue #27](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/27)／[負荷分解・性能再検証 Issue #28](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/28)／[西木戸口本体・光影・遠景の別工程 Issue #29](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/29)。[範囲・計測・制約](docs/phase3i-design.md)、[編集原本と再生成](docs/phase3i-production.md)。史実確証・正式CAD連携ではありません。PR #26はDraft・未マージ・未公開を維持します。
+
+## 第3期J後続：計測と最適化の分離
+
+[工程A/B事前計画](docs/phase3j-followup/PLAN.md)・[変更棚卸し](docs/phase3j-followup/INVENTORY.md)。計測基盤の採用と最適化の採用を別判定する。旧「72%」はCPUサンプル比であり、施設準備全待ち時間の72%ではない。重複する段階時間を単純合計しない。詳細観測は `?profileJ` のときだけ有効で、負荷は通常経路と別に評価する。PR26依存、PR31 Draft維持、マージ/本番公開なし。
