@@ -1,0 +1,13 @@
+Focused Chromium smoke, 390 × 844, software WebGL (not physical iPhone).
+Implemented and executed by UI integration worker.
+Initial failure: cadPanel.bind synchronously called render before markers initialized.
+Fix: bind moved to end of initialize before first setView.
+Same smoke rerun:
+PASS: CAD B0 manifest/GLB/SVG loaded; terrain scene initialized; landscape enabled.
+PASS: B0 actual triangle placement, then B1 and B2 switch and placement.
+PASS: list selected 柱 / U01_Post_001 / B2.
+PASS: CAD projection SVG rendered (1), research records accessible (27).
+PASS: C-only parts.visible=false; C+D parts.visible=true.
+PASS: explicit retry reloads B2.
+No pageerror emitted by successful rerun.
+This focused smoke is not the full browser matrix or physical Safari verification.

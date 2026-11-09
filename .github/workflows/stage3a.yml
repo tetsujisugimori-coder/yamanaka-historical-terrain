@@ -1,0 +1,73 @@
+name: Stage 3-A pinned CAD integration
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test && npm run build
+      - run: npx playwright install --with-deps chromium webkit
+      - name: CAD matrix, faults, existing H regression
+        run: |
+          npm run dev -- --port 4391 --strictPort >/tmp/stage3a-vite.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for n in $(seq 1 30); do curl -fs http://127.0.0.1:4391 >/dev/null && break || sleep 1; done
+          export TEST_URL=http://127.0.0.1:4391
+          node scripts/stage3a-browser.mjs
+          node scripts/stage3a-faults.mjs
+          BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-ui-interactions.mjs
+          BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-touch-scroll.mjs
+          PHASE3H_EVIDENCE=evidence/stage3a/regression node scripts/phase3h-browser.mjs
+          node scripts/phase3h-evidence.mjs evidence/stage3a/regression
+          node scripts/stage3a-preservation.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3a-integration-${{ github.event.pull_request.head.sha }}
+          path: evidence/stage3a
+          if-no-files-found: error
+          retention-days: 30
+  controlled-comparison:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Same runner before and after comparison
+        run: |
+          git worktree add --detach ../stage3a-baseline 42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8
+          (cd ../stage3a-baseline && npm ci && npm run dev -- --port 4390 --strictPort) >/tmp/before-vite.log 2>&1 &
+          before=$!
+          npm run dev -- --port 4391 --strictPort >/tmp/after-vite.log 2>&1 &
+          after=$!
+          trap 'kill "$before" "$after" 2>/dev/null || true' EXIT
+          for port in 4390 4391; do for n in $(seq 1 60); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done; done
+          node scripts/stage3a-performance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3a-performance-${{ github.event.pull_request.head.sha }}
+          path: evidence/stage3a/performance
+          if-no-files-found: error
+          retention-days: 30

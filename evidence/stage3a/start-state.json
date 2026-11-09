@@ -1,0 +1,60 @@
+{
+  "yamanaka": {
+    "head": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+    "tree": "38d033ca9c00e996ac82403de23121d901ca59b4"
+  },
+  "parts": {
+    "head": "1cc50d1a6d1af8164cada51124cb02279dbe316c",
+    "tree": "9d6620277aead6021a3da070bbd41d8646916c08"
+  },
+  "unmergedPRs": [
+    {
+      "number": 36,
+      "title": "第3期I：景観C/Dの限定切り出し（計測・最適化を分離）",
+      "head": "9e29d737f56f606df9688874b9510490dbce54e7",
+      "base": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+      "draft": true,
+      "adopted": false
+    },
+    {
+      "number": 35,
+      "title": "第3期J後続B：低木支持点キャッシュの独立A/B/A再検証 (#33)",
+      "head": "ef47f1b43a9118f60e5b0f9a7f380ff49342282b",
+      "base": "b55431aa8a8407e9ddcf59e24b7fe8f11d6b0e1e",
+      "draft": true,
+      "adopted": false
+    },
+    {
+      "number": 34,
+      "title": "第3期J後続A：最適化なしの計測基盤と厳格な原票検査 (#32)",
+      "head": "ee3c3def2565b088c978694469ed86d10d92c75c",
+      "base": "e67f1fc81c38986ccf8170d1942a1894992c0f3a",
+      "draft": true,
+      "adopted": false
+    },
+    {
+      "number": 31,
+      "title": "第3期J：施設準備時間の分解計測と地表支持再利用候補 (#30)",
+      "head": "000fd77b6772ad628a4f0c4cfd2b74d1c5a1dc62",
+      "base": "e67f1fc81c38986ccf8170d1942a1894992c0f3a",
+      "draft": true,
+      "adopted": false
+    },
+    {
+      "number": 26,
+      "title": "第3期I：限定C景観拡張とH/I性能計測（性能改善未立証）",
+      "head": "e67f1fc81c38986ccf8170d1942a1894992c0f3a",
+      "base": "42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8",
+      "draft": true,
+      "adopted": false
+    }
+  ],
+  "sourceOpenPRs": [],
+  "issue": 37,
+  "dependencies": {
+    "three": "0.180.0",
+    "vite": "7.1.12",
+    "playwright": "1.56.1"
+  },
+  "AGENTS": "Both read. Preserve A/research, EPSG:6676 metres; Blender ENU / glTF EUS. No merge/deploy. Source originals remain canonical."
+}
