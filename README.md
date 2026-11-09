@@ -86,3 +86,9 @@ PR #6の独立指摘P2-01/P3-01への修正・実GLB反例と引継ぎは [再�
 
 ## Stage 3-A CAD 木柵連携（Draft）
 固定版B0/B1/B2、図面・根拠と実寸配置の実装・検証範囲は [Stage3-A文書](docs/stage3a-cad-integration.md) を参照。試作Dと配置仮説Cを区別し、史実確証はUNKNOWN。
+## 第3期I 景観C/D限定パッケージ（Draft）
+PR #26から西側小区域の推定Cと景観D、編集可能原本・再生成・回帰だけを切り出しました。
+施設GLBは同期描画・既存GLTFLoader経路を維持し、PR #26のtimedGLB/renderCPU計測、
+PR #34の計測器、PR #35の低木支持点キャッシュは含めません。
+性能改善は未立証、史実形態・樹種・分布・実機Safariは未検証です。
+[採用範囲と後続接続](docs/phase3i-landscape-only.md)。

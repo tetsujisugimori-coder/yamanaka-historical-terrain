@@ -1,0 +1,7 @@
+QStandardPaths: wrong permissions on runtime directory /home/agent/.local/run, 0755 instead of 0700
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+Could not create AF_NETLINK socket (Operation not permitted)
+{"package": {"format": "gzip", "file": "phase3i-editable.gpkg", "archive": "phase3i-editable.gpkg.gz", "bytes": 249856, "sha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0", "archiveBytes": 20527, "archiveSha256": "52af77a6e896faf50e0624278ec0b35c3ec2d7f289eed5a1754110094ef4a021"}, "status": "PASS", "qgis": "3.40.6-Bratislava", "execution": "separate offscreen QGIS process reopened .qgz and GeoPackage", "triangleFeatures": 418, "maxAbsoluteCoordinateError": 0, "render": "phase3i-qgis-map.png, native QGIS map export, NOT GUI screenshot", "layerValidity": true, "gpkgSha256": "577962f5b955b3b863d3c0b71cdf6497450514328ed0850ad8e23634954076b0"}

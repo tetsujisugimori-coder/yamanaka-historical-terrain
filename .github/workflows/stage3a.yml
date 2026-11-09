@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm test && npm run build
       - run: npx playwright install --with-deps chromium webkit
-      - name: CAD matrix, faults, existing H regression
+      - name: CAD matrix, faults, existing I regression
         run: |
           npm run dev -- --port 4391 --strictPort >/tmp/stage3a-vite.log 2>&1 &
           server=$!
@@ -30,8 +30,8 @@ jobs:
           node scripts/stage3a-faults.mjs
           BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-ui-interactions.mjs
           BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-touch-scroll.mjs
-          PHASE3H_EVIDENCE=evidence/stage3a/regression node scripts/phase3h-browser.mjs
-          node scripts/phase3h-evidence.mjs evidence/stage3a/regression
+          PHASE3I_EVIDENCE=evidence/stage3a/regression node scripts/phase3i-browser.mjs
+          node scripts/phase3i-evidence.mjs evidence/stage3a/regression
           node scripts/stage3a-preservation.mjs
       - uses: actions/upload-artifact@v4
         if: always()
@@ -56,7 +56,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - name: Same runner before and after comparison
         run: |
-          git worktree add --detach ../stage3a-baseline 42ed7bbe1b1f839535ed66c76c75d1ade2ce2cc8
+          git worktree add --detach ../stage3a-baseline 5adb7156acda3968827ff39d5e6f40c4ac837ec5
           (cd ../stage3a-baseline && npm ci && npm run dev -- --port 4390 --strictPort) >/tmp/before-vite.log 2>&1 &
           before=$!
           npm run dev -- --port 4391 --strictPort >/tmp/after-vite.log 2>&1 &

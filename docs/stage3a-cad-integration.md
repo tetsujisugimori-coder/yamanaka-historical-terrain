@@ -32,12 +32,15 @@ Existence, shape, dimension and placement grounds are separately explained. Tria
 - Start `npm run dev -- --port 4391 --strictPort`, set `TEST_URL=http://127.0.0.1:4391`.
 - `node scripts/stage3a-browser.mjs`: Chromium/WebKit ×375/390/765/1280×normal/reduced, revision/contact/list/SVG/URL/history/classification/exclusive-legacy checks and PNGs.
 - `node scripts/stage3a-faults.mjs`: missing/corrupt GLB, altered manifest/SVG, missing research, reversed load completion, retry, WebGL unavailable.
-- `PHASE3H_EVIDENCE=evidence/stage3a/regression node scripts/phase3h-browser.mjs`: prior H regression including eight guides, sections, walking and A/C/D. Explicit legacy mode preserves the original five-post comparison checks.
+- `PHASE3I_EVIDENCE=evidence/stage3a/regression node scripts/phase3i-browser.mjs`: current I regression including eight guides, sections, walking and A/C/D. Explicit legacy mode preserves the original five-post comparison checks.
 - `node scripts/stage3a-preservation.mjs`: all previous public/production/evidence blobs equal main.
-- Serve main42ed7bbe on4390 and current on4391; `node scripts/stage3a-performance.mjs` records alternating cold/partial reload 3-trial comparison. No performance improvement is asserted. JS heap endpoints are not peak/GPU memory; software browser rendering is not physical device FPS.
+- Serve main5adb7156 on4390 and current on4391; `node scripts/stage3a-performance.mjs` records alternating cold/partial reload 3-trial comparison. No performance improvement is asserted. JS heap endpoints are not peak/GPU memory; software browser rendering is not physical device FPS.
 
 CI runs against the PR head with raw artifacts. Independent reviewer must inspect the final head and raw CI artifacts, not just this document. Local focused checks are not the final16-condition acceptance.
 
 ## Current acceptance and scope
 
 Implementation submitted for validation. Final CI and independent evidence review are pending; limited merge recommendation **NO pending final gates**. Physical iPhone Safari, physical touch, GPU internals and historical configuration are NOT_TESTED/UNKNOWN. No merge, Draft release, formal review posting or Pages publication is performed. New gate/entrance components belong to Stage3-B.
+
+## Main advanced during implementation
+After initial submission, upstream main merged landscape-only PR #36 as `5adb7156acda3968827ff39d5e6f40c4ac837ec5` (tree `ee91f0f2742b9686ad40b001864b0408251dbbfa`). This already-adopted main is now integrated, preserving I assets/materials and synchronous renderer. It is not an adoption of an unmerged candidate. Final regression uses phase3i-browser/evidence and preservation compares current main. Controlled comparison uses this same I base to isolate CAD changes. Earlier H-local pilot results are historical and not final integrated acceptance.
