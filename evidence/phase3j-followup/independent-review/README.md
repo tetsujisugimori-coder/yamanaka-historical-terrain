@@ -37,4 +37,4 @@ The copied output reports retain their original experiment labels. Audit outputs
 - All 1,577 prior public/production/evidence files are unchanged. Independent A378/B390 tests and builds pass; independently rebuilt I/A/B entry hashes equal recorded served bytes.
 - Benchmark PNGs show controls, not terrain; formal16 PNGs are the terrain visual evidence. Representative desktop Chromium and mobile WebKit formal images were visually inspected.
 - Overlapping inclusive spans are never summed. H's historical 72% is a CPU-sampling denominator, not facility wall or GPU duration. Real Safari, physical input and GPU internal time remain NOT_TESTED. Shared-host noise and small-sample uncertainty remain.
-- B formal16 and final nine workflows pass. A remaining workflow status is recorded separately when available; no incomplete workflow is treated as passed.
+- Both A and B formal16 and final nine workflows pass. Pages deployment jobs are skipped. See A-REVIEW.md and B-REVIEW.md for separate final acceptance decisions. No merge or deployment was performed.

@@ -1,0 +1,51 @@
+[
+  {
+    "kind": "overhead",
+    "raw": "a-local-b55431a/raw.json",
+    "rows": 36,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "overhead",
+    "raw": "a-ci-b55431a/raw/raw.json",
+    "rows": 36,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "overhead",
+    "raw": "a-ci-ee3c3d/raw/raw.json",
+    "rows": 36,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "optimization",
+    "raw": "b-ci-ef47f1b/raw/optimization-raw.json",
+    "rows": 48,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "optimization-detailed",
+    "raw": "b-ci-ef47f1b/raw/optimization-detailed-raw.json",
+    "rows": 18,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "optimization",
+    "raw": "b-local-ef47f1b/evidence/phase3j-followup/local-optimization/optimization-raw.json",
+    "rows": 48,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  },
+  {
+    "kind": "optimization-detailed",
+    "raw": "b-local-ef47f1b/evidence/phase3j-followup/local-optimization/optimization-detailed-raw.json",
+    "rows": 18,
+    "allRenderSubmissionsHaveEntries": true,
+    "sixCompleteFetchParseGeometryObservationsPerRow": true
+  }
+]
