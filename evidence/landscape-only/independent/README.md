@@ -26,3 +26,8 @@ python audit_sections.py CHECKOUT SECTIONS.json
 Browser probe uses Playwright and an already running local Vite server on port4531; see independent-acd-review.mjs.
 
 CI artifact review is pending at this package checkpoint. Historical certainty, performance improvement, actual Safari/touch/GPU timing and native application GUI operation are NOT_TESTED or unproven. This package alone is not final acceptance.
+
+## Final-candidate supplement
+Final candidate advanced to 9e29d737f56f606df9688874b9510490dbce54e7 / tree ee91f0f2742b9686ad40b001864b0408251dbbfa. Only tests/landscape-only-separation.test.mjs changed: a pinned byte-identical baseline snapshot replaces git-show dependency in shallow CI. Independent no-Git RED/GREEN and corrupted-baseline rejection are in 9e29/. Reviewer harness's initial missing copied test input failure is explicitly retained and distinguished.
+
+Final9e29 unit322 PASS/build PASS repeated independently. Final formal CI artifact13678681247, run42621982317 ZIP SHA25610e73eb0e72ea726229ae73b5f2d6759f4116c3bd8927c70a11780fc61860594: audit_ci.py and product verifier both PASS, 16 conditions/32 PNGs/20source hashes/64 section records/128 support records/320 post measurements/1536 preserved paths. Old86871fa artifact is separately audited, not relabeled. Representative WebKit390 D screenshot viewed from final artifact. Remaining western regression CI was still in progress at this supplement; formal review awaits it.

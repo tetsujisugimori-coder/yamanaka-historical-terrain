@@ -1,0 +1,387 @@
+{
+  "head": "9e29d737f56f606df9688874b9510490dbce54e7",
+  "runs": [
+    {
+      "run": {
+        "id": 42621982564,
+        "name": "Validate prototype",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 167,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982564/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982564/logs",
+        "workflow_id": 405932096
+      },
+      "artifacts": [
+        {
+          "id": 13678465711,
+          "name": "fixed-view-controls-evidence",
+          "size_in_bytes": 1934370,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678465711",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678465711/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:21:25Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:21:25Z",
+          "digest": "sha256:3e00154376e271cd62f9a3a370d5b51886cd8f8cbc626b3524bd3b4bdf798b58",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13678350705,
+          "name": "browser-evidence",
+          "size_in_bytes": 18872476,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678350705",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678350705/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:18:36Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:18:36Z",
+          "digest": "sha256:ea45c37d9223e3e5a273cd5ee0194c52436816e08a5895cd9cdddd3ce94e48ab",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13678095886,
+          "name": "review-fixes-evidence",
+          "size_in_bytes": 1438011,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678095886",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678095886/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:17:27Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:17:27Z",
+          "digest": "sha256:cbd342ff69e5f9d834ef9406d8b828485fcf7b234509ad8e71b74e8b01e7c8ec",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13677985889,
+          "name": "landscape-1590-evidence",
+          "size_in_bytes": 21684781,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677985889",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677985889/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:17:20Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:17:20Z",
+          "digest": "sha256:7a624b207d061f02b04260c4065fa7026734fcff26355b81263bdb677243c01e",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13677786975,
+          "name": "initial-camera-evidence",
+          "size_in_bytes": 107173,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677786975",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677786975/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:19:54Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:19:54Z",
+          "digest": "sha256:bb6a34fc7e0121bd84d82f40f624618047e9f0aadf32304d2f7bc4da0c53e7f6",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13677373062,
+          "name": "fixed-sections-evidence",
+          "size_in_bytes": 82731128,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677373062",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677373062/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:22:02Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:22:02Z",
+          "digest": "sha256:62cf91064dd039b500a8c8723fbbf89cbda36a03d79fde5ed300b45f1052fca3",
+          "workflow_run": {
+            "id": 42621982564,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 42621982428,
+        "name": "Validate inner observation",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 43,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982428/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982428/logs",
+        "workflow_id": 408730618
+      },
+      "artifacts": [
+        {
+          "id": 13678506560,
+          "name": "phase3c-browser",
+          "size_in_bytes": 8137186,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678506560",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678506560/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:26:39Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:26:39Z",
+          "digest": "sha256:48864a8474899ea957ed7a3fa3de13a1237398287d13a86582a8f328e73d48dd",
+          "workflow_run": {
+            "id": 42621982428,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13678170275,
+          "name": "phase3c-independent-visual",
+          "size_in_bytes": 3822156,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678170275",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678170275/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:15:10Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:15:10Z",
+          "digest": "sha256:cf6bae2c2a3a9a795c270303716958afd1b60cfbc4e3ed4cfdfdf3604e87bb54",
+          "workflow_run": {
+            "id": 42621982428,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13677399067,
+          "name": "phase3c-appearance-performance",
+          "size_in_bytes": 14289849,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677399067",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677399067/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:28:06Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:28:06Z",
+          "digest": "sha256:60446b34caa9b730c86e5c35371886c72dc98d51e2cc721caf18512c4a889d0a",
+          "workflow_run": {
+            "id": 42621982428,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13677346605,
+          "name": "phase3c-render-diagnosis",
+          "size_in_bytes": 7075,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677346605",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677346605/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:15:40Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:15:40Z",
+          "digest": "sha256:254ef81a21217e17dc09a00174a3c25049c4c02497068b7b191e37fc9b8e0eb0",
+          "workflow_run": {
+            "id": 42621982428,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 42621982592,
+        "name": "Validate castle exploration",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 30,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982592/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982592/logs",
+        "workflow_id": 410235716
+      },
+      "artifacts": [
+        {
+          "id": 13676254324,
+          "name": "phase3e-9e29d737f56f606df9688874b9510490dbce54e7",
+          "size_in_bytes": 3093306,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13676254324",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13676254324/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:16:42Z",
+          "expires_at": "2026-12-09T13:16:41Z",
+          "updated_at": "2026-11-09T13:16:42Z",
+          "digest": "sha256:044d0941b574d5b5063c252374218d7b65ed05651da499b3a676cb34d51d8793",
+          "workflow_run": {
+            "id": 42621982592,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 42621982648,
+        "name": "Validate western defences",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 106,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982648/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982648/logs",
+        "workflow_id": 408008712
+      },
+      "artifacts": [
+        {
+          "id": 13678767898,
+          "name": "phase3b-browser-evidence",
+          "size_in_bytes": 79697416,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678767898",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678767898/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:39:44Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:39:44Z",
+          "digest": "sha256:a60b13ea968b8a779d423797df61347b746501034787f1111808ee8c3a1ae854",
+          "workflow_run": {
+            "id": 42621982648,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        },
+        {
+          "id": 13678327325,
+          "name": "independent-ad-separation",
+          "size_in_bytes": 11752291,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678327325",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678327325/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:27:11Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:27:11Z",
+          "digest": "sha256:c8532fbd32dd080b55ce4b5d03e4eb1af591de925ecbb5fe8850f054909a4d41",
+          "workflow_run": {
+            "id": 42621982648,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 42621982317,
+        "name": "Validate landscape-only C D extraction",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 27,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982317/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982317/logs",
+        "workflow_id": 410346217
+      },
+      "artifacts": [
+        {
+          "id": 13678681247,
+          "name": "phase3i-9e29d737f56f606df9688874b9510490dbce54e7",
+          "size_in_bytes": 4957540,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678681247",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13678681247/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:26:07Z",
+          "expires_at": "2026-12-09T13:26:06Z",
+          "updated_at": "2026-11-09T13:26:07Z",
+          "digest": "sha256:10e73eb0e72ea726229ae73b5f2d6759f4116c3bd8927c70a11780fc61860594",
+          "workflow_run": {
+            "id": 42621982317,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 42621982309,
+        "name": "Deploy research preview to GitHub Pages",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 79,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982309/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982309/logs",
+        "workflow_id": 406254904
+      },
+      "artifacts": []
+    },
+    {
+      "run": {
+        "id": 42621982382,
+        "name": "Validate connected defences",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 33,
+        "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982382/jobs",
+        "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42621982382/logs",
+        "workflow_id": 409932019
+      },
+      "artifacts": [
+        {
+          "id": 13677576018,
+          "name": "phase3d-current-head",
+          "size_in_bytes": 1492225,
+          "url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677576018",
+          "archive_download_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/artifacts/13677576018/zip",
+          "expired": false,
+          "created_at": "2026-11-09T13:13:01Z",
+          "expires_at": "2027-02-07T13:02:28Z",
+          "updated_at": "2026-11-09T13:13:01Z",
+          "digest": "sha256:2fcebee56920312387072271ae54909ff72599aa4e2f636892b348d1426b11fb",
+          "workflow_run": {
+            "id": 42621982382,
+            "repository_id": 1444513846,
+            "head_repository_id": 1444513846,
+            "head_branch": "feat/phase3i-landscape-only",
+            "head_sha": "9e29d737f56f606df9688874b9510490dbce54e7"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "head": "9e29d737f56f606df9688874b9510490dbce54e7",
+  "tree": "ee91f0f2742b9686ad40b001864b0408251dbbfa",
+  "zipSha256": "10e73eb0e72ea726229ae73b5f2d6759f4116c3bd8927c70a11780fc61860594",
+  "rows": 16,
+  "pngs": [
+    {
+      "file": "chromium-375-no-preference.png",
+      "sha256": "dee4a8746831931337fa25c9de6eb33f138baf9127c1753b18d100be435141d6"
+    },
+    {
+      "file": "chromium-375-no-preference-D.png",
+      "sha256": "3ae45bb243e7eb78a28e4c1a060e3b1c959c8d53f9d674c42dd37a37b312244b"
+    },
+    {
+      "file": "chromium-375-reduce.png",
+      "sha256": "dee4a8746831931337fa25c9de6eb33f138baf9127c1753b18d100be435141d6"
+    },
+    {
+      "file": "chromium-375-reduce-D.png",
+      "sha256": "3ae45bb243e7eb78a28e4c1a060e3b1c959c8d53f9d674c42dd37a37b312244b"
+    },
+    {
+      "file": "chromium-390-no-preference.png",
+      "sha256": "199f7f19c3ce69f67455c0491d29e1d612b4a716e4e172cf09d66d184dca385e"
+    },
+    {
+      "file": "chromium-390-no-preference-D.png",
+      "sha256": "c85a3339f57ea308942b33b8bf21009ce2b5aa34e9d925af2c2c186a87973a8e"
+    },
+    {
+      "file": "chromium-390-reduce.png",
+      "sha256": "199f7f19c3ce69f67455c0491d29e1d612b4a716e4e172cf09d66d184dca385e"
+    },
+    {
+      "file": "chromium-390-reduce-D.png",
+      "sha256": "c85a3339f57ea308942b33b8bf21009ce2b5aa34e9d925af2c2c186a87973a8e"
+    },
+    {
+      "file": "chromium-765-no-preference.png",
+      "sha256": "648a03e93f3ebfe35eae45563a85c9228326ed849c95db875dd413ae557b9be5"
+    },
+    {
+      "file": "chromium-765-no-preference-D.png",
+      "sha256": "ce52b4df80f21ff67fd0c9ad3fec36774a695f36bb22e013e51bd2feb9e54c26"
+    },
+    {
+      "file": "chromium-765-reduce.png",
+      "sha256": "648a03e93f3ebfe35eae45563a85c9228326ed849c95db875dd413ae557b9be5"
+    },
+    {
+      "file": "chromium-765-reduce-D.png",
+      "sha256": "ce52b4df80f21ff67fd0c9ad3fec36774a695f36bb22e013e51bd2feb9e54c26"
+    },
+    {
+      "file": "chromium-1280-no-preference.png",
+      "sha256": "69c1284ae76809fbdb04c8383c0a77f9f4962701bcb42ecf7c3432b5258a87e0"
+    },
+    {
+      "file": "chromium-1280-no-preference-D.png",
+      "sha256": "572e80227edd9874bf1efb1cc7ef14a204cf2684b1a01692ccbe752478aa1c05"
+    },
+    {
+      "file": "chromium-1280-reduce.png",
+      "sha256": "69c1284ae76809fbdb04c8383c0a77f9f4962701bcb42ecf7c3432b5258a87e0"
+    },
+    {
+      "file": "chromium-1280-reduce-D.png",
+      "sha256": "572e80227edd9874bf1efb1cc7ef14a204cf2684b1a01692ccbe752478aa1c05"
+    },
+    {
+      "file": "webkit-375-no-preference.png",
+      "sha256": "2688e2f458b8025e125c58f7baf30b1b65008ddf75c02a8885f6c9a840547795"
+    },
+    {
+      "file": "webkit-375-no-preference-D.png",
+      "sha256": "e794ad490fb1c2488f63e33c363707c7c5f912bf8efdebc28592c5c3f8abeb36"
+    },
+    {
+      "file": "webkit-375-reduce.png",
+      "sha256": "2688e2f458b8025e125c58f7baf30b1b65008ddf75c02a8885f6c9a840547795"
+    },
+    {
+      "file": "webkit-375-reduce-D.png",
+      "sha256": "e794ad490fb1c2488f63e33c363707c7c5f912bf8efdebc28592c5c3f8abeb36"
+    },
+    {
+      "file": "webkit-390-no-preference.png",
+      "sha256": "114a907fb05ad0417cfdcaf72da3cd30cfe84c4fe60ee6ebe148ea0b0a032ac7"
+    },
+    {
+      "file": "webkit-390-no-preference-D.png",
+      "sha256": "9f23cd24984cfe299dfed4b73db288db147e69a39ad0852597dfbf4dccfa2186"
+    },
+    {
+      "file": "webkit-390-reduce.png",
+      "sha256": "114a907fb05ad0417cfdcaf72da3cd30cfe84c4fe60ee6ebe148ea0b0a032ac7"
+    },
+    {
+      "file": "webkit-390-reduce-D.png",
+      "sha256": "9f23cd24984cfe299dfed4b73db288db147e69a39ad0852597dfbf4dccfa2186"
+    },
+    {
+      "file": "webkit-765-no-preference.png",
+      "sha256": "9dbd16aae6e87230b8f99a2a83833e45c3d10e916cfca1033f9832517655c876"
+    },
+    {
+      "file": "webkit-765-no-preference-D.png",
+      "sha256": "719259417690518b0817de0581c99a2148e45d22ddea7594756d83972dfcba0e"
+    },
+    {
+      "file": "webkit-765-reduce.png",
+      "sha256": "9dbd16aae6e87230b8f99a2a83833e45c3d10e916cfca1033f9832517655c876"
+    },
+    {
+      "file": "webkit-765-reduce-D.png",
+      "sha256": "719259417690518b0817de0581c99a2148e45d22ddea7594756d83972dfcba0e"
+    },
+    {
+      "file": "webkit-1280-no-preference.png",
+      "sha256": "be3d9a51b28a857d2a49ab86aca0590dc30c9e145389adf330e67798685c8c99"
+    },
+    {
+      "file": "webkit-1280-no-preference-D.png",
+      "sha256": "dbf167bc2ea5b47ea56af3d20bd503434692ab76c4da3eb431c486b5338ce3c0"
+    },
+    {
+      "file": "webkit-1280-reduce.png",
+      "sha256": "be3d9a51b28a857d2a49ab86aca0590dc30c9e145389adf330e67798685c8c99"
+    },
+    {
+      "file": "webkit-1280-reduce-D.png",
+      "sha256": "dbf167bc2ea5b47ea56af3d20bd503434692ab76c4da3eb431c486b5338ce3c0"
+    }
+  ],
+  "counts": {
+    "sections": 64,
+    "supports": 128,
+    "postMeasurements": 320,
+    "trustedKeydown": 16,
+    "walkMoves": 160
+  },
+  "sourceHashes": 20,
+  "preservedPaths": 1536,
+  "result": "PASS",
+  "scope": "Artifact results and hashes checked independently; not a new browser execution"
+}
