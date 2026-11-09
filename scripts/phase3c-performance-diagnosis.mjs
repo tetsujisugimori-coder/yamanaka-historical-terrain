@@ -19,8 +19,8 @@ try{for(const cameraPath of ['current','prior-reintroduced'])for(const inner of 
    const cameraLine=body.split('\n').find(l=>l.startsWith(' function beginCameraIntent()')),keyLine=body.split('\n').find(l=>l.startsWith(" viewport.addEventListener('keydown'"));
    if(!cameraLine||!keyLine||cameraLine===oldCamera||keyLine===oldKey)throw Error('Prior camera reintroduction anchor missing or unchanged');body=body.replace(cameraLine,oldCamera).replace(keyLine,oldKey);
   }
-  const renderLine=body.split('\n').find(l=>l.startsWith(' function render(){'));if(!renderLine)throw Error('Render instrumentation anchor missing');
-  body=body.replace(renderLine,renderLine.replace('function render(){','function measuredRenderBody(){')+'\n function render(){const t=performance.now();__perf.renderCount++;try{return measuredRenderBody();}finally{__perf.renderMs+=performance.now()-t;}}');
+  const renderLine=body.split('\n').find(l=>/^ function render\([^)]*\)\{/.test(l));if(!renderLine)throw Error('Render instrumentation anchor missing');
+  body=body.replace(renderLine,renderLine.replace(/^ function render\(/,' function measuredRenderBody(')+'\n function render(){const t=performance.now();__perf.renderCount++;try{return measuredRenderBody();}finally{__perf.renderMs+=performance.now()-t;}}');
   body=body.replace('function syncLandscape(){','function syncLandscape(){__perf.syncCount++;').replace('function restoreCurrentPresentation(){','function restoreCurrentPresentation(){__perf.restoreCount++;');
   body='const __perf={renderCount:0,renderMs:0,syncCount:0,restoreCount:0};window.__phase3cPerf=__perf;\n'+body;
   await r.fulfill({response,body});});

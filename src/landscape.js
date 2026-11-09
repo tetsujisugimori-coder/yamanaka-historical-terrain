@@ -3,20 +3,20 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 // Bake exported transforms and batch by stable element ID + material. The .blend
 // keeps every post, tree and person editable; the browser needs few draw calls.
-export function landscapeModel(gltf,westernBounds){
+export function landscapeModel(gltf,westernBounds,measure=(_stage,fn)=>fn()){
  const buckets=new Map();gltf.scene.updateMatrixWorld(true);
  gltf.scene.traverse(o=>{if(!o.isMesh)return;const id=o.userData.elementId,category=o.userData.evidenceCategory;
   if(!id||!['C','D'].includes(category))throw Error('Scenery missing ledger binding');
-  const geo=o.geometry.clone();geo.applyMatrix4(o.matrixWorld);
+  const geo=measure("geometryPreparation",()=>{const g=o.geometry.clone();g.applyMatrix4(o.matrixWorld);return g;});
   geo.computeBoundingBox();const center=geo.boundingBox.getCenter(new THREE.Vector3());
   const overlap=id==='sc-vegetation'&&westernBounds&&center.x>westernBounds[0]-4&&center.x<westernBounds[2]+4&&-center.z>westernBounds[1]-4&&-center.z<westernBounds[3]+4;
   const key=id+':'+o.material.uuid+':'+Boolean(overlap);
   const materialRole=o.userData.materialRole??({'sc-vegetation':'leaf','sc-flags':'cloth','sc-people':'skin'}[id]??'wood');
-  if(!buckets.has(key))buckets.set(key,{geometries:[],material:o.material.clone(),data:{...o.userData,materialRole,westernOverlap:Boolean(overlap)}});
+  if(!buckets.has(key))buckets.set(key,{geometries:[],material:measure("materialPreparation",()=>o.material.clone()),data:{...o.userData,materialRole,westernOverlap:Boolean(overlap)}});
   buckets.get(key).geometries.push(geo);
  });
  const group=new THREE.Group();
- for(const b of buckets.values()){const geometry=mergeGeometries(b.geometries);if(!geometry)throw Error('Scenery batching failed');b.geometries.forEach(g=>g.dispose());b.material.side=THREE.DoubleSide;const m=new THREE.Mesh(geometry,b.material);m.userData=b.data;m.name=b.data.elementId;group.add(m);}
+ for(const b of buckets.values()){const geometry=measure("geometryPreparation",()=>mergeGeometries(b.geometries));if(!geometry)throw Error('Scenery batching failed');b.geometries.forEach(g=>g.dispose());b.material.side=THREE.DoubleSide;const m=new THREE.Mesh(geometry,b.material);m.userData=b.data;m.name=b.data.elementId;group.add(m);}
  return group;
 }
 
