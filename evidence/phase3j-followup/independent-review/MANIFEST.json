@@ -1,8 +1,18 @@
 [
   {
+    "path": "B-REVIEW.md",
+    "bytes": 3910,
+    "sha256": "6b161eb749f2c95ac59b12b575e9aada78a7d67b92842e76b8f06dd9d9c0e107"
+  },
+  {
     "path": "README.md",
-    "bytes": 5123,
-    "sha256": "102271a2fa8cebb1eed36faf90840f36ce7fc011e405ea4c75fa74d7e83162fd"
+    "bytes": 5345,
+    "sha256": "67f2d31339b15d68b16023f6a07bcbaf3cf96eb9243d60af46b451e19c4c0b0c"
+  },
+  {
+    "path": "a-b-formal16-equivalence.json",
+    "bytes": 3471,
+    "sha256": "068070f5d5c08b8f42184db7333acc5058e35aaa7380c2961347b499cae39fea"
   },
   {
     "path": "a-b-preservation-independent.json",
@@ -98,6 +108,16 @@
     "path": "b-final-tests.txt",
     "bytes": 25224,
     "sha256": "20ffea42e75a8b4822997a473904878a44b149947f3b7bced8062bb7aab7f862"
+  },
+  {
+    "path": "b-final-workflows.json",
+    "bytes": 4333,
+    "sha256": "c3caa8c2c8d15a942bdead7c76433ae78e86cb739bf87bd8b22655ac94804d40"
+  },
+  {
+    "path": "b-formal16-ef47f1b-audit.json",
+    "bytes": 36302,
+    "sha256": "44352a93224e3bcfe27092c05cc993bc4278870581b42c5a9dad3a6109bec813"
   },
   {
     "path": "b-local-ef47f1b-default-independent-audit.json",

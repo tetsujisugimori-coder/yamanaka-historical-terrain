@@ -15,6 +15,7 @@ The reviewer fetched source and published evidence directly from GitHub into a s
 - B local48+18: GitHub evidence commit 0cb2766, ZIP SHA256 7accd9c7e0e447ed418237dbb144957d44bbe86751e0c5d63e21a0aef0ef3290. Its 36 manifest entries verify.
 - B CI48+18: run 42598198849, artifact 13666490123, ZIP SHA256 6a472e6710aad2c8f42aa2f544aa49c18a00efbee9847311371561b91a3684a1. The original ZIP is also permanently preserved on evidence commit 0cb2766.
 - A formal16: run 42599971927, artifact 13666517138, ZIP SHA256 7a9f2863c98b57a266198fcb84054154f888acef41af12d15209d1fc0fc078d7.
+- B formal16: run 42598198884, artifact 13665869204, ZIP SHA256 c17f382bd20f634e7ca59d03fa258223fd105f94abe9f98b7034b85f31ea3f95. All 16 deterministic geometry/support/quality records and all 32 PNGs match A.
 
 ## Reproduction
 
@@ -36,4 +37,4 @@ The copied output reports retain their original experiment labels. Audit outputs
 - All 1,577 prior public/production/evidence files are unchanged. Independent A378/B390 tests and builds pass; independently rebuilt I/A/B entry hashes equal recorded served bytes.
 - Benchmark PNGs show controls, not terrain; formal16 PNGs are the terrain visual evidence. Representative desktop Chromium and mobile WebKit formal images were visually inspected.
 - Overlapping inclusive spans are never summed. H's historical 72% is a CPU-sampling denominator, not facility wall or GPU duration. Real Safari, physical input and GPU internal time remain NOT_TESTED. Shared-host noise and small-sample uncertainty remain.
-- Final CI status and B formal16 are recorded separately when available. This README is not a claim that every workflow has already completed.
+- B formal16 and final nine workflows pass. A remaining workflow status is recorded separately when available; no incomplete workflow is treated as passed.

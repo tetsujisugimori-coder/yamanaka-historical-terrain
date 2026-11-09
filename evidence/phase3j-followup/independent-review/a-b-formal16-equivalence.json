@@ -1,0 +1,151 @@
+{
+  "A": "ee3c3def2565b088c978694469ed86d10d92c75c",
+  "B": "ef47f1b43a9118f60e5b0f9a7f380ff49342282b",
+  "comparison": "Recorded deterministic geometry, support, part and quality states; walking validated separately by raw triangle oracle",
+  "rows": [
+    {
+      "key": "chromium-375-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-375-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-390-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-390-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-765-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-765-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-1280-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "chromium-1280-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-375-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-375-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-390-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-390-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-765-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-765-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-1280-no-preference",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    },
+    {
+      "key": "webkit-1280-reduce",
+      "sections": true,
+      "supports": true,
+      "parts": true,
+      "natureSupports": true,
+      "PNGs": true,
+      "qualityGeometry": true
+    }
+  ]
+}

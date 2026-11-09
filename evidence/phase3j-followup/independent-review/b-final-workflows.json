@@ -1,0 +1,96 @@
+{
+  "head": "ef47f1b43a9118f60e5b0f9a7f380ff49342282b",
+  "source": "GitHub fetch_commit_workflow_runs; read after all nine completed",
+  "workflow_runs": [
+    {
+      "id": 42598199042,
+      "name": "Deploy research preview to GitHub Pages",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 75,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598199042/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598199042/logs",
+      "workflow_id": 406254904
+    },
+    {
+      "id": 42598198887,
+      "name": "Validate connected defences",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 29,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198887/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198887/logs",
+      "workflow_id": 409932019
+    },
+    {
+      "id": 42598198891,
+      "name": "Validate castle exploration",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 26,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198891/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198891/logs",
+      "workflow_id": 410235716
+    },
+    {
+      "id": 42598198812,
+      "name": "Validate inner observation",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 39,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198812/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198812/logs",
+      "workflow_id": 408730618
+    },
+    {
+      "id": 42598198814,
+      "name": "Phase I controlled H I performance",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 14,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198814/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198814/logs",
+      "workflow_id": 411076844
+    },
+    {
+      "id": 42598198849,
+      "name": "Phase J instrumentation and isolated optimization",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 2,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198849/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198849/logs",
+      "workflow_id": 411924349
+    },
+    {
+      "id": 42598198782,
+      "name": "Validate western defences",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 98,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198782/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198782/logs",
+      "workflow_id": 408008712
+    },
+    {
+      "id": 42598198884,
+      "name": "Validate expanded terrain and natural landscape",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 23,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198884/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198884/logs",
+      "workflow_id": 410346217
+    },
+    {
+      "id": 42598198868,
+      "name": "Validate prototype",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 159,
+      "jobs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198868/jobs",
+      "logs_url": "https://api.github.com/repos/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198868/logs",
+      "workflow_id": 405932096
+    }
+  ]
+}
