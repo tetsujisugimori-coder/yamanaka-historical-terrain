@@ -1,0 +1,32 @@
+{
+  "measuredHead": "b55431aa8a8407e9ddcf59e24b7fe8f11d6b0e1e",
+  "local": {
+    "file": "local-overhead-b55431a.zip",
+    "sha256": "3cc605c13155f44659dfdd0116c2bb000f13ba057db94315b2e1681d2a9e0999",
+    "bytes": 1027028,
+    "rows": 36,
+    "validation": "PASS"
+  },
+  "ci": {
+    "run": 42597854436,
+    "artifact": 13665501009,
+    "sha256": "73dc74b0867da7fc5b5ea61738a36c0e67abd5a552f1d8039a5b146980102c5a",
+    "expiresAt": "2026-12-09T10:15:16Z",
+    "rows": 36
+  },
+  "preservation": {
+    "baseline": "e67f1fc81c38986ccf8170d1942a1894992c0f3a",
+    "scopes": [
+      "public",
+      "production",
+      "evidence"
+    ],
+    "files": 1577,
+    "unchanged": 1577
+  },
+  "notes": [
+    "instrumentation overhead characterized, not proven negligible",
+    "A adoption independent of optimization",
+    "old CPU72% is not total wall-clock72%"
+  ]
+}
