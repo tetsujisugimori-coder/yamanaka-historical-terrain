@@ -44,3 +44,13 @@ Implementation submitted for validation. Final CI and independent evidence revie
 
 ## Main advanced during implementation
 After initial submission, upstream main merged landscape-only PR #36 as `5adb7156acda3968827ff39d5e6f40c4ac837ec5` (tree `ee91f0f2742b9686ad40b001864b0408251dbbfa`). This already-adopted main is now integrated, preserving I assets/materials and synchronous renderer. It is not an adoption of an unmerged candidate. Final regression uses phase3i-browser/evidence and preservation compares current main. Controlled comparison uses this same I base to isolate CAD changes. Earlier H-local pilot results are historical and not final integrated acceptance.
+
+## Independent P2: synchronous support-query stall and repair
+
+Candidate `57731b85` was not accepted: independent same-page change-handler measurements found CAD yaw handling blocked the main thread for 2443–3731 ms, compared with legacy 322–411 ms. Its original [CI performance artifact](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42684611495/artifacts/13706160154) is retained, SHA256 `61feec70c504d3e8bd89f20e2078c2a3004dba0a35521b8f682f726106a51807`. All six CI after-CAD yaw samples were approximately 3.13–3.20 seconds. A successful measurement job did not make the regression acceptable.
+
+The repair reuses the existing `createWalkWorld` actual-triangle index through a narrow CAD support cache. All 51 anchor/post/corner queries remain; no terrain, CAD geometry or contact precision is reduced. Cache identity includes ordered meshes, geometry/attribute/index references and versions, world transforms, visibility and material/draw semantics. Unsupported geometry or queries outside that existing index's extent use the original raycaster. Legacy placement and walking implementation are unchanged. This is not adoption of the unmerged optimization PR #35.
+
+Real-I prototype parity covered 918 queries (3 revisions × 3 yaws × 2 exaggerations × 51); maximum height error was below 1e-12 m and slope difference below 1e-10 degrees. At shared triangle diagonals, either adjacent valid face can be reported: face-index equality is not asserted where the surface has a tie. Reproducible parity verification and cache invalidation/fallback tests accompany the repair.
+
+Independent repetition of the exact handler counterexample after repair measured CAD 10.8–12.8 ms over six yaw changes. This specifically verifies the synchronous-handler P2 fix, not an overall loading/FPS improvement. The repaired HEAD's full CI, original artifacts and before/after loading costs still require separate final verification.

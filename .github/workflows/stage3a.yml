@@ -26,7 +26,9 @@ jobs:
           trap 'kill "$server"' EXIT
           for n in $(seq 1 30); do curl -fs http://127.0.0.1:4391 >/dev/null && break || sleep 1; done
           export TEST_URL=http://127.0.0.1:4391
+          node scripts/stage3a-support-parity.mjs
           node scripts/stage3a-browser.mjs
+          node scripts/stage3a-handler-budget.mjs
           node scripts/stage3a-faults.mjs
           BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-ui-interactions.mjs
           BASE_URL=http://127.0.0.1:4391 node scripts/stage3a-touch-scroll.mjs
