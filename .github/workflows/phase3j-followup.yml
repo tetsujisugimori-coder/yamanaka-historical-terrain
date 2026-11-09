@@ -1,0 +1,47 @@
+name: Phase J instrumentation and isolated optimization
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  instrumentation:
+    if: github.head_ref == 'feat/phase3j-metrics-only'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Fixed six block observer overhead experiment
+        run: |
+          set -euo pipefail
+          dir=evidence/phase3j-followup/ci-overhead
+          mkdir -p "$dir"
+          git rev-parse HEAD HEAD^{tree} > "$dir/head-tree.txt"
+          git worktree add --detach ../baseline-i e67f1fc81c38986ccf8170d1942a1894992c0f3a
+          (cd ../baseline-i && npm ci && npm run build)
+          npm run build
+          (cd ../baseline-i && npx vite preview --host 127.0.0.1 --port 4391 --strictPort) >/tmp/j-i.log 2>&1 &
+          i=$!
+          npx vite preview --host 127.0.0.1 --port 4392 --strictPort >/tmp/j-a.log 2>&1 &
+          a=$!
+          trap 'cp /tmp/j-i.log /tmp/j-a.log "$dir/"; kill "$i" "$a" 2>/dev/null || true' EXIT
+          for port in 4391 4392; do for n in $(seq 1 30); do curl -fs http://127.0.0.1:$port >/dev/null && break || sleep 1; done; done
+          node scripts/phase3j-followup-config.mjs overhead ../baseline-i . http://127.0.0.1:4391 http://127.0.0.1:4392 "$dir/config.json"
+          node scripts/phase3j-followup-benchmark.mjs "$dir/config.json" "$dir/raw.json"
+          node scripts/phase3j-followup-report.mjs "$dir/raw.json" "$dir/raw.json.identity.json" > "$dir/reaggregate.json"
+          sha256sum "$dir"/* > "$dir/SHA256SUMS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase3j-A-${{ github.event.pull_request.head.sha }}
+          path: evidence/phase3j-followup/ci-overhead
+          if-no-files-found: error
+          retention-days: 30
