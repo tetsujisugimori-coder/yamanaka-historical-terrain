@@ -1,0 +1,423 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-11-09T10:36:53.874079+00:00",
+  "measuredCandidateHead": "ef47f1b43a9118f60e5b0f9a7f380ff49342282b",
+  "measuredCandidateTree": "67fa39fa6eaa7964629822a7d80f6c9a5f443ee0",
+  "baselineHead": "b55431aa8a8407e9ddcf59e24b7fe8f11d6b0e1e",
+  "localArchive": {
+    "path": "local-optimization-ef47f1b.zip",
+    "bytes": 2275856,
+    "sha256": "7accd9c7e0e447ed418237dbb144957d44bbe86751e0c5d63e21a0aef0ef3290",
+    "members": 37
+  },
+  "ciArchive": {
+    "path": "ci-optimization-ef47f1b.zip",
+    "bytes": 2335888,
+    "sha256": "6a472e6710aad2c8f42aa2f544aa49c18a00efbee9847311371561b91a3684a1",
+    "runId": 42598198849,
+    "jobId": 129095928233,
+    "artifactId": 13666490123,
+    "expiresAt": "2026-12-09T10:30:50Z",
+    "runUrl": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42598198849"
+  },
+  "rawTrials": {
+    "localDefault": 48,
+    "localDetailed": 18,
+    "ciDefault": 48,
+    "ciDetailed": 18
+  },
+  "protectedPriorFiles": 1577,
+  "decision": "HOLD; merge recommendation NO for optimization; independent from A measurement adoption",
+  "localContrasts": {
+    "cold": {
+      "delta": {
+        "n": 8,
+        "min": -1653.2499999997672,
+        "median": -752.300000000163,
+        "q1": -1166.050000000163,
+        "q3": -180.24999999982538,
+        "max": 1282.299999999348,
+        "mean": -574.231250000099,
+        "all": [
+          -1653.2499999997672,
+          -1609.4499999999534,
+          -1018.2500000002328,
+          -898.0999999998603,
+          224.5999999998603,
+          -606.5000000004657,
+          1282.299999999348,
+          -315.1999999997206
+        ],
+        "exclusions": 0,
+        "improved": 6,
+        "descriptiveBootstrap95": [
+          -1175.9062499999418,
+          87.69374999968568
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      },
+      "baselineMidpoint": {
+        "n": 8,
+        "min": 4785.250000000233,
+        "median": 6253.450000000186,
+        "q1": 5098.087500000023,
+        "q3": 7714.687499999884,
+        "max": 9083.399999999907,
+        "mean": 6563.8937500000175,
+        "all": [
+          8608.649999999674,
+          5141.050000000047,
+          4785.250000000233,
+          4969.199999999953,
+          7416.699999999953,
+          9083.399999999907,
+          6959.300000000279,
+          5547.600000000093
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 8,
+        "min": 3531.600000000093,
+        "median": 6093.90000000014,
+        "q1": 3995.07500000007,
+        "q3": 7791.374999999767,
+        "max": 8476.899999999441,
+        "mean": 5989.6624999999185,
+        "all": [
+          6955.399999999907,
+          3531.600000000093,
+          3767,
+          4071.100000000093,
+          7641.299999999814,
+          8476.899999999441,
+          8241.599999999627,
+          5232.4000000003725
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": -2.5513916318198993,
+      "orderDrift": {
+        "n": 8,
+        "min": -9168.899999999907,
+        "median": 905.4499999999534,
+        "q1": -449.8999999993248,
+        "q3": 2213.074999999837,
+        "max": 6124.000000000466,
+        "mean": 230.41250000015134,
+        "all": [
+          -9168.899999999907,
+          1891.6999999997206,
+          718.1000000000931,
+          -2087.600000000093,
+          6124.000000000466,
+          1092.7999999998137,
+          3177.2000000001863,
+          96.00000000093132
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -2946.2749999998487,
+          2800.125000000233
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      }
+    },
+    "reload-partial": {
+      "delta": {
+        "n": 8,
+        "min": -2066.6500000003725,
+        "median": 228.99999999988358,
+        "q1": -139.28750000003492,
+        "q3": 1009.2874999999185,
+        "max": 1999.8000000005122,
+        "mean": 218.60624999995343,
+        "all": [
+          302.80000000004657,
+          1214.4499999999534,
+          -2066.6500000003725,
+          155.1999999997206,
+          -917.9000000001397,
+          1999.8000000005122,
+          940.8999999999069,
+          120.25
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -670.0125000001572,
+          982.0812500000757
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      },
+      "baselineMidpoint": {
+        "n": 8,
+        "min": 3880.100000000093,
+        "median": 5387.349999999744,
+        "q1": 4142.124999999709,
+        "q3": 6586.887500000128,
+        "max": 7144.800000000047,
+        "mean": 5441.2562499999185,
+        "all": [
+          4614.699999999953,
+          4049.9499999999534,
+          6419.950000000186,
+          3880.100000000093,
+          7087.699999999953,
+          7144.800000000047,
+          6159.999999999534,
+          4172.8499999996275
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 8,
+        "min": 4035.2999999998137,
+        "median": 5090.949999999953,
+        "q1": 4338.249999999767,
+        "q3": 6402.574999999721,
+        "max": 9144.600000000559,
+        "mean": 5659.862499999872,
+        "all": [
+          4917.5,
+          5264.399999999907,
+          4353.299999999814,
+          4035.2999999998137,
+          6169.799999999814,
+          9144.600000000559,
+          7100.899999999441,
+          4293.0999999996275
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": -5.50177731166166,
+      "orderDrift": {
+        "n": 8,
+        "min": -2032.5,
+        "median": -307.5999999998603,
+        "q1": -1263.1999999997206,
+        "q3": 149.9500000004191,
+        "max": 5396.800000000279,
+        "mean": 67.91250000020955,
+        "all": [
+          -1235.1999999997206,
+          -588.1000000000931,
+          -2032.5,
+          265,
+          5396.800000000279,
+          -1347.1999999997206,
+          111.6000000005588,
+          -27.09999999962747
+        ],
+        "exclusions": 0,
+        "improved": 5,
+        "descriptiveBootstrap95": [
+          -1127.6249999997672,
+          1759.0875000001397
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      }
+    }
+  },
+  "ciContrasts": {
+    "cold": {
+      "delta": {
+        "n": 8,
+        "min": -375.1000000000058,
+        "median": 449.549999999992,
+        "q1": -66.10000000002037,
+        "q3": 740.2374999999956,
+        "max": 1055.8999999999942,
+        "mean": 351.9812499999798,
+        "all": [
+          354.79999999999563,
+          544.2999999999884,
+          705.0500000000175,
+          -375.1000000000058,
+          1055.8999999999942,
+          25.25,
+          845.7999999999302,
+          -340.1500000000815
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          2.874999999967258,
+          687.7687500000002
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      },
+      "baselineMidpoint": {
+        "n": 8,
+        "min": 4617.3000000000175,
+        "median": 5248.499999999996,
+        "q1": 5060.387499999997,
+        "q3": 5450.837500000016,
+        "max": 6245.850000000035,
+        "mean": 5315.356250000011,
+        "all": [
+          5283.700000000004,
+          5213.299999999988,
+          4958.049999999988,
+          5346.600000000006,
+          4617.3000000000175,
+          5763.550000000047,
+          5094.5,
+          6245.850000000035
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 8,
+        "min": 4971.5,
+        "median": 5715.399999999994,
+        "q1": 5656.950000000004,
+        "q3": 5818.025000000023,
+        "max": 5940.29999999993,
+        "mean": 5667.3374999999905,
+        "all": [
+          5638.5,
+          5757.599999999977,
+          5663.100000000006,
+          4971.5,
+          5673.200000000012,
+          5788.800000000047,
+          5940.29999999993,
+          5905.699999999953
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": 8.895875011908139,
+      "orderDrift": {
+        "n": 8,
+        "min": -2209,
+        "median": -71.65000000005966,
+        "q1": -1028.824999999997,
+        "q3": 172.92500000003201,
+        "max": 1514.4000000000233,
+        "mean": -328.86249999999745,
+        "all": [
+          -102.80000000000291,
+          1514.4000000000233,
+          -841.5,
+          -1590.7999999999884,
+          26.20000000001164,
+          613.1000000000931,
+          -2209,
+          -40.500000000116415
+        ],
+        "exclusions": 0,
+        "improved": 5,
+        "descriptiveBootstrap95": [
+          -1085.9000000000124,
+          451.375
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      }
+    },
+    "reload-partial": {
+      "delta": {
+        "n": 8,
+        "min": -1030.1000000000058,
+        "median": 997.875,
+        "q1": 362.0124999999898,
+        "q3": 1205.4375000000146,
+        "max": 1262.5500000000466,
+        "mean": 569.1250000000036,
+        "all": [
+          -1030.1000000000058,
+          -879.5000000000146,
+          775.8499999999913,
+          1021.2000000000116,
+          1196.6500000000233,
+          974.5499999999884,
+          1231.7999999999884,
+          1262.5500000000466
+        ],
+        "exclusions": 0,
+        "improved": 2,
+        "descriptiveBootstrap95": [
+          -144.04999999999382,
+          1119.6187500000106
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      },
+      "baselineMidpoint": {
+        "n": 8,
+        "min": 4520.449999999953,
+        "median": 4674,
+        "q1": 4563.562500000011,
+        "q3": 4938.787499999984,
+        "max": 5026.25,
+        "mean": 4742.012499999995,
+        "all": [
+          4544.400000000009,
+          5013.000000000015,
+          4914.049999999974,
+          4734.299999999988,
+          4569.950000000012,
+          5026.25,
+          4613.700000000012,
+          4520.449999999953
+        ],
+        "exclusions": 0
+      },
+      "candidate": {
+        "n": 8,
+        "min": 3514.300000000003,
+        "median": 5761.0500000000175,
+        "q1": 5300.799999999974,
+        "q3": 5798.625,
+        "max": 6000.799999999988,
+        "mean": 5311.137499999999,
+        "all": [
+          3514.300000000003,
+          4133.5,
+          5689.899999999965,
+          5755.5,
+          5766.600000000035,
+          6000.799999999988,
+          5845.5,
+          5783
+        ],
+        "exclusions": 0
+      },
+      "medianChangePercent": 23.25738125802348,
+      "orderDrift": {
+        "n": 8,
+        "min": -730.6000000000058,
+        "median": 86.34999999997672,
+        "q1": -367.0250000000524,
+        "q3": 671.724999999984,
+        "max": 844.2999999999593,
+        "mean": 91.34999999997308,
+        "all": [
+          -730.6000000000058,
+          640.3999999999942,
+          844.2999999999593,
+          -253.20000000006985,
+          198.29999999993015,
+          -708.5,
+          -25.599999999976717,
+          765.6999999999534
+        ],
+        "exclusions": 0,
+        "improved": 4,
+        "descriptiveBootstrap95": [
+          -319.88750000001164,
+          492.13749999996435
+        ],
+        "note": "fixed-seed descriptive paired bootstrap; small sample, shared-host variation and observational uncertainty remain; not a population guarantee"
+      }
+    }
+  },
+  "limitations": [
+    "shared local host with high drift; no outliers excluded",
+    "descriptive bootstrap with eight blocks, not population guarantee",
+    "cache=\"reload-partial\" is Playwright context reuse, not full disk-cache control",
+    "detailed 18 separate from default48; never pooled",
+    "physical Safari and hardware GPU timing NOT_TESTED",
+    "formal16 regression and final independent reviews recorded separately in PR35"
+  ]
+}
