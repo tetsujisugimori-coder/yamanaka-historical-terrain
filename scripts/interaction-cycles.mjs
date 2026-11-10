@@ -1,13 +1,22 @@
 import {chromium,webkit,expect} from '@playwright/test';
-import {writeFile} from 'node:fs/promises';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {dirname} from 'node:path';
+const root=process.env.TEST_URL??'http://127.0.0.1:4317';
+const output=process.env.INTERACTION_EVIDENCE??'evidence/interaction-cycles.json';
 const results=[];
 for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
- const browser=await engine.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:900},hasTouch:true,isMobile:true});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:4317');await page.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
+ const browser=await engine.launch({headless:true,...(name==='webkit'&&process.env.WEBKIT_EXECUTABLE?{executablePath:process.env.WEBKIT_EXECUTABLE}:{})});const context=await browser.newContext({viewport:{width:390,height:900},hasTouch:true,isMobile:true});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(root);await page.waitForFunction(()=>window.__terrainDiagnostics?.().state.ready);
  const row={engine:name,checks:[],status:'RUNNING'};
  try{
-  const box=await page.locator('#viewport').boundingBox(),x=box.x+box.width*.45,y=box.y+box.height*.45;
+  // Panel content can move the terrain below the mobile fold. Test real input
+  // on the visible canvas, rather than silently dispatching outside the screen.
+  const canvas=page.locator('#viewport canvas');await canvas.scrollIntoViewIfNeeded();
+  const box=await canvas.boundingBox(),x=box.x+box.width*.45,y=box.y+box.height*.45;
+  row.pointerTarget={x,y,box};
+  expect(await page.evaluate(({x,y})=>document.elementFromPoint(x,y)===document.querySelector('#viewport canvas'),{x,y})).toBe(true);
+  const firstCamera=await page.evaluate(()=>window.__terrainDiagnostics().camera);
   await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x+30,y+20,{steps:5});await page.locator('canvas').dispatchEvent('pointercancel',{pointerId:1,pointerType:'mouse',clientX:x+30,clientY:y+20});await page.mouse.up();
-  const before=await page.evaluate(()=>window.__terrainDiagnostics().camera);await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x-35,y+30,{steps:5});await page.mouse.up();expect(await page.evaluate(()=>window.__terrainDiagnostics().camera)).not.toEqual(before);row.checks.push('synthetic pointercancel followed by trusted mouse drag recovers');
+  const before=await page.evaluate(()=>window.__terrainDiagnostics().camera);expect(before).not.toEqual(firstCamera);await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x-35,y+30,{steps:5});await page.mouse.up();expect(await page.evaluate(()=>window.__terrainDiagnostics().camera)).not.toEqual(before);row.checks.push('synthetic pointercancel followed by trusted mouse drag recovers');
   await page.mouse.move(x,y);await page.mouse.down({button:'right'});await page.mouse.move(x+35,y,{steps:5});await page.mouse.up({button:'right'});const target=await page.evaluate(()=>window.__terrainDiagnostics().target);expect(target).not.toEqual([0,480,0]);row.checks.push('trusted right-pointer pan');
   await page.touchscreen.tap(x,y);row.checks.push('trusted touchscreen tap in viewport');
   if(name==='chromium'){
@@ -23,4 +32,4 @@ for(const [name,engine]of [['chromium',chromium],['webkit',webkit]]){
  }catch(e){row.status='FAIL';row.reason=e.message;}
  results.push(row);console.log(JSON.stringify(row));await browser.close();
 }
-await writeFile('evidence/interaction-cycles.json',JSON.stringify({scope:'implementation self-verification, not physical mobile Safari; synthetic and trusted events distinguished',results},null,2));if(results.some(r=>r.status!=='PASS'))process.exitCode=1;
+await mkdir(dirname(output),{recursive:true});await writeFile(output,JSON.stringify({scope:'implementation self-verification, not physical mobile Safari; synthetic and trusted events distinguished',results},null,2));if(results.some(r=>r.status!=='PASS'))process.exitCode=1;

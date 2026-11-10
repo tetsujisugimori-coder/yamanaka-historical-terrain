@@ -6,14 +6,18 @@ export const WALK_ZONES=[[-40,-42,15,30],[-100,-45,-68,50],[-202,-43,-120,26]];
 export const GUIDE_IDS=['ic-station-nishinomaru','ic-lookout','ic-bridge','ic-koguchi','ic-koguchi-inside','ic-station-western','ic-station-westgate','ic-station-westmoat'];
 const forbidden=new Set(['nm-moat','nm-rampart','nm-context','wb-moat']);
 export function inWalkZone(x,z){return WALK_ZONES.some(([w,s,e,n])=>x>=w&&x<=e&&-z>=s&&-z<=n);}
-export function createWalkWorld(surfaces,obstacles){
- const groundCells=new Map();
+export function createWalkWorld(surfaces,obstacles,{groundCellBounds=[-102,8,-26,24]}={}){
+ if(!Array.isArray(groundCellBounds)||groundCellBounds.length!==4||!groundCellBounds.every(Number.isSafeInteger)||groundCellBounds[0]>groundCellBounds[1]||groundCellBounds[2]>groundCellBounds[3])throw Error('Invalid ground cell bounds');
+ const [minCellX,maxCellX,minCellZ,maxCellZ]=groundCellBounds;
+ const groundCells=new Map();let indexedTriangleCount=0;
  // Freeze displayed world-space triangles for this walking session. Visibility,
  // exaggeration and model changes stop the session before rebuilding this index.
  for(const mesh of surfaces){mesh.updateWorldMatrix(true,false);const p=mesh.geometry.attributes.position,index=mesh.geometry.index;
   for(let i=0;i<(index?.count??p.count);i+=3){const [a,b,c]=[0,1,2].map(k=>new Vector3().fromBufferAttribute(p,index?index.getX(i+k):i+k).applyMatrix4(mesh.matrixWorld));const det=(b.z-c.z)*(a.x-c.x)+(c.x-b.x)*(a.z-c.z);if(Math.abs(det)<1e-10)continue;
    const normal=b.clone().sub(a).cross(c.clone().sub(a)).normalize(),tri={a,b,c,det,slope:Math.acos(Math.min(1,Math.abs(normal.y)))*180/Math.PI,id:mesh.userData.elementId??mesh.userData.facilityId,name:mesh.name,face:i/3};
-   for(let x=Math.max(-102,Math.floor(Math.min(a.x,b.x,c.x)/2));x<=Math.min(8,Math.floor(Math.max(a.x,b.x,c.x)/2));x++)for(let z=Math.max(-26,Math.floor(Math.min(a.z,b.z,c.z)/2));z<=Math.min(24,Math.floor(Math.max(a.z,b.z,c.z)/2));z++){const key=x+','+z;if(!groundCells.has(key))groundCells.set(key,[]);groundCells.get(key).push(tri);}
+   let inserted=false;
+   for(let x=Math.max(minCellX,Math.floor(Math.min(a.x,b.x,c.x)/2));x<=Math.min(maxCellX,Math.floor(Math.max(a.x,b.x,c.x)/2));x++)for(let z=Math.max(minCellZ,Math.floor(Math.min(a.z,b.z,c.z)/2));z<=Math.min(maxCellZ,Math.floor(Math.max(a.z,b.z,c.z)/2));z++){const key=x+','+z;if(!groundCells.has(key))groundCells.set(key,[]);groundCells.get(key).push(tri);inserted=true;}
+   if(inserted)indexedTriangleCount++;
   }
  }
  // Imported meshes batch disconnected fence parts. A whole-mesh box would
@@ -40,7 +44,7 @@ export function createWalkWorld(surfaces,obstacles){
   for(const {box,name} of cells.get(Math.floor(x/2)+','+Math.floor(z/2))??[])if(x+WALK.radius>box.min.x&&x-WALK.radius<box.max.x&&z+WALK.radius>box.min.z&&z-WALK.radius<box.max.z&&hit.height+.12<box.max.y&&hit.height+WALK.eyeHeight>box.min.y)return {ok:false,reason:'構造物 '+name,hit};
   return {ok:true,hit};
  }
- return {sample,check,obstacleCount:boxes.length};
+ return {sample,check,obstacleCount:boxes.length,groundCellCount:groundCells.size,indexedTriangleCount};
 }
 export function advanceWalk(position,dx,dz,world){
  if(![...position,dx,dz].every(Number.isFinite))throw Error('Nonfinite walking input');

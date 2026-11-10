@@ -13,14 +13,14 @@ const q={A:oracle('public/data/castle.glb'),C:oracle('public/data/phase3i.glb'),
 const specs={moat:[[-66,-10],[-38,-10]],rampart:[[-15,15],[-45,15]]};
 await save();
 for(const engine of process.env.PHASE3I_ENGINE?[process.env.PHASE3I_ENGINE]:['chromium','webkit']){
- const browser=await({chromium,webkit}[engine]).launch();
+ const browser=await({chromium,webkit}[engine]).launch(engine==='webkit'&&process.env.WEBKIT_EXECUTABLE?{executablePath:process.env.WEBKIT_EXECUTABLE}:{});
  for(const width of [375,390,765,1280])for(const motion of ['no-preference','reduce']){
   const context=await browser.newContext({viewport:{width,height:960},reducedMotion:motion}),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));p.setDefaultTimeout(60000);
   const row={key:`${engine}-${width}-${motion}`,engine,width,motion,browserVersion:browser.version(),checks:[],sections:[],supports:[],errors};
   try{
    const started=performance.now();await p.goto(url);await ready(p);row.initialLoadMs=performance.now()-started;
    await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded);expect((await snap(p)).phase3iModel.version).toBe('phase3i-v1');
-   await p.locator('#parts-visible').check();await p.waitForFunction(()=>window.__terrainDiagnostics().parts.visible);const part= (await snap(p)).parts;expect(part.posts.length).toBe(5);row.parts=[part];
+   await p.locator('#cad-mode').selectOption('legacy');await p.locator('#parts-visible').check();await p.waitForFunction(()=>window.__terrainDiagnostics().parts.visible);const part= (await snap(p)).parts;expect(part.posts.length).toBe(5);row.parts=[part];
    for(const size of ['0.5','1.5','1']){await p.locator('#parts-size').selectOption(size);const d=(await snap(p)).parts;expect(d.visible).toBe(true);expect(d.posts[0].height).toBe(2*Number(size));row.parts.push(d);}
    for(const yaw of ['45','90','0']){await p.locator('#parts-yaw').selectOption(yaw);expect((await snap(p)).parts.visible).toBe(true);}
    await p.locator('#parts-select').click();expect(await p.locator('#parts-detail').isVisible()).toBe(true);await p.locator('#parts-visible').uncheck();expect((await snap(p)).parts.visible).toBe(false);

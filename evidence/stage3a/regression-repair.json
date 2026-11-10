@@ -1,0 +1,128 @@
+{
+  "baselineHead": "58b581854b22267a00eb762e1593e039e22fd2bc",
+  "scope": "Focused local red/green checks only. Final full CI and independent review remain separate gates. WebKit 26.0 Linux custom executable; not iPhone Safari.",
+  "pointerInput": {
+    "before": {
+      "viewportY": 1934.359375,
+      "screenHeight": 900,
+      "hitTarget": null,
+      "ciRun": 42691178019,
+      "ciJob": 129410990817
+    },
+    "after": {
+      "scope": "implementation self-verification, not physical mobile Safari; synthetic and trusted events distinguished",
+      "results": [
+        {
+          "engine": "chromium",
+          "checks": [
+            "synthetic pointercancel followed by trusted mouse drag recovers",
+            "trusted right-pointer pan",
+            "trusted touchscreen tap in viewport",
+            "trusted Chromium touch drag",
+            "trusted Chromium two-finger pinch",
+            "trusted touchCancel and Reset recover",
+            "page background/foreground cycle and render recovery",
+            "3 repeated scene swaps keep one canvas and bounded geometry count"
+          ],
+          "status": "PASS",
+          "pointerTarget": {
+            "x": 177.55,
+            "y": 427.359375,
+            "box": {
+              "x": 20.5,
+              "y": 220.359375,
+              "width": 349,
+              "height": 460
+            }
+          }
+        },
+        {
+          "engine": "webkit",
+          "checks": [
+            "synthetic pointercancel followed by trusted mouse drag recovers",
+            "trusted right-pointer pan",
+            "trusted touchscreen tap in viewport",
+            "page background/foreground cycle and render recovery",
+            "3 repeated scene swaps keep one canvas and bounded geometry count"
+          ],
+          "status": "PASS",
+          "pointerTarget": {
+            "x": 177.55,
+            "y": 426.75,
+            "box": {
+              "x": 20.5,
+              "y": 219.75,
+              "width": 349,
+              "height": 460
+            }
+          },
+          "touchDrag": "NOT_TESTED: public Playwright WebKit API exposes tap but not continuous trusted touch gesture; physical Safari NOT_TESTED"
+        }
+      ]
+    }
+  },
+  "cameraDiagnosis": {
+    "before": [
+      {
+        "cameraPath": "current",
+        "status": "PASS",
+        "renderCounts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "cameraPath": "prior-reintroduced",
+        "status": "FAIL",
+        "renderCounts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    ],
+    "after": [
+      {
+        "cameraPath": "current",
+        "status": "PASS",
+        "renderCounts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "cameraPath": "prior-reintroduced",
+        "status": "PASS",
+        "renderCounts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    ],
+    "expectedCountsUnchanged": {
+      "current": 1,
+      "prior-reintroduced": 3
+    },
+    "originalFailingRun": 42691178004,
+    "originalFailingJob": 129411153397
+  },
+  "limits": [
+    "Only inner=false, finish=false, one trial each in local camera red/green probe; CI retains all 24 cases.",
+    "Real iPhone Safari and continuous trusted WebKit touch drag remain NOT_TESTED."
+  ]
+}
