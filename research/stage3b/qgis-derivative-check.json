@@ -1,0 +1,71 @@
+{
+  "base": "production/yamanaka.qgz",
+  "baseSHA256": "3276a010b2cfd06f3e0c9724a91546bcfff1893c3de7e05de53d02be46482653",
+  "derivative": "production/stage3b/yamanaka-stage3b-overview.qgz",
+  "crs": "EPSG:6676",
+  "layers": [
+    {
+      "name": "Approximate observation anchors",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/observation-anchors.geojson"
+    },
+    {
+      "name": "C/D model envelopes; historical placement UNKNOWN",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/stage3b/model-envelopes.geojson"
+    },
+    {
+      "name": "Historical source catalog; all boundaries UNPLACED",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/stage3b/historical-regions.geojson"
+    },
+    {
+      "name": "Regional DEM: 5A + explicitly masked 10B gaps",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/regional-dem-20m.tif"
+    },
+    {
+      "name": "Source provenance: 5=DEM5A, 10=DEM10B",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/regional-source-mask.tif"
+    },
+    {
+      "name": "castle-dem-1m",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/castle-dem-1m.tif"
+    },
+    {
+      "name": "hillshade",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/hillshade.tif"
+    },
+    {
+      "name": "regional-10b-20m",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/regional-10b-20m.tif"
+    },
+    {
+      "name": "regional-5a-20m",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/regional-5a-20m.tif"
+    },
+    {
+      "name": "slope-degrees",
+      "valid": true,
+      "crs": "EPSG:6676",
+      "source": "$REPO/production/gis/slope-degrees.tif"
+    }
+  ],
+  "georeference": "BLOCKED: 0 controls, no transform, residual UNKNOWN",
+  "rawMapEmbedded": false,
+  "originalUnchanged": true
+}

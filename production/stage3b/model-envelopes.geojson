@@ -1,0 +1,870 @@
+{
+  "type": "FeatureCollection",
+  "name": "Model envelopes EPSG:6676 (not RFC7946 WGS84)",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "nm-bailey",
+      "properties": {
+        "id": "nm-bailey",
+        "name": "西ノ丸 曲輪候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i.glb",
+        "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nm-moat",
+      "properties": {
+        "id": "nm-moat",
+        "name": "西ノ丸 障子堀候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i.glb",
+        "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44800.121277226666,
+              -93504.07235405142
+            ],
+            [
+              44820.121277226666,
+              -93504.07235405142
+            ],
+            [
+              44820.121277226666,
+              -93446.07235405142
+            ],
+            [
+              44800.121277226666,
+              -93446.07235405142
+            ],
+            [
+              44800.121277226666,
+              -93504.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nm-rampart",
+      "properties": {
+        "id": "nm-rampart",
+        "name": "西ノ丸 土塁候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i.glb",
+        "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44821.621277226666,
+              -93504.57235405142
+            ],
+            [
+              44878.621277226666,
+              -93504.57235405142
+            ],
+            [
+              44878.621277226666,
+              -93445.57235405142
+            ],
+            [
+              44821.621277226666,
+              -93445.57235405142
+            ],
+            [
+              44821.621277226666,
+              -93504.57235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nm-passage",
+      "properties": {
+        "id": "nm-passage",
+        "name": "虎口・接続通路候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i.glb",
+        "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44858.121277226666,
+              -93518.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93518.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93488.07235405142
+            ],
+            [
+              44858.121277226666,
+              -93488.07235405142
+            ],
+            [
+              44858.121277226666,
+              -93518.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nm-transition",
+      "properties": {
+        "id": "nm-transition",
+        "name": "復元地形への接続",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i.glb",
+        "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93528.07235405142
+            ],
+            [
+              44892.121277226666,
+              -93528.07235405142
+            ],
+            [
+              44892.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93528.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wb-bailey",
+      "properties": {
+        "id": "wb-bailey",
+        "name": "西櫓の曲輪・土塁・板塀",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3b.glb",
+        "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44678.121277226666,
+              -93503.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93503.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44678.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44678.121277226666,
+              -93503.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wb-gate",
+      "properties": {
+        "id": "wb-gate",
+        "name": "西木戸口の門候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3b.glb",
+        "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wb-moat",
+      "properties": {
+        "id": "wb-moat",
+        "name": "西櫓堀の単列畝堀候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3b.glb",
+        "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44682.121277226666,
+              -93508.07235405142
+            ],
+            [
+              44704.121277226666,
+              -93508.07235405142
+            ],
+            [
+              44704.121277226666,
+              -93444.07235405142
+            ],
+            [
+              44682.121277226666,
+              -93444.07235405142
+            ],
+            [
+              44682.121277226666,
+              -93508.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wb-building",
+      "properties": {
+        "id": "wb-building",
+        "name": "西櫓の建物候補（上部構造未確定）",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3b.glb",
+        "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44726.371277226666,
+              -93474.93039581472
+            ],
+            [
+              44735.871277226666,
+              -93474.93039581472
+            ],
+            [
+              44735.871277226666,
+              -93467.27235386068
+            ],
+            [
+              44726.371277226666,
+              -93467.27235386068
+            ],
+            [
+              44726.371277226666,
+              -93474.93039581472
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ic-lookout",
+      "properties": {
+        "id": "ic-lookout",
+        "name": "西ノ丸見張台の高所候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i-inner.glb",
+        "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44778.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44778.121277226666,
+              -93500.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ic-bridge",
+      "properties": {
+        "id": "ic-bridge",
+        "name": "西ノ丸・西櫓方面の土橋候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i-inner.glb",
+        "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44762.121277226666,
+              -93523.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93523.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93523.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ic-koguchi",
+      "properties": {
+        "id": "ic-koguchi",
+        "name": "見張台側虎口の候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3i-inner.glb",
+        "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93515.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93515.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44780.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44780.121277226666,
+              -93515.07235405142
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dc-gate",
+      "properties": {
+        "id": "dc-gate",
+        "name": "見張台側の門候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3d.glb",
+        "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44785.421280278424,
+              -93509.87235328848
+            ],
+            [
+              44785.82127417491,
+              -93509.87235328848
+            ],
+            [
+              44785.82127417491,
+              -93504.27235481435
+            ],
+            [
+              44785.421280278424,
+              -93504.27235481435
+            ],
+            [
+              44785.421280278424,
+              -93509.87235328848
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dc-fence-north",
+      "properties": {
+        "id": "dc-fence-north",
+        "name": "接続路北側の柵候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3d.glb",
+        "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001274480084,
+              -93504.59235450918
+            ],
+            [
+              44784.24127997325,
+              -93504.59235450918
+            ],
+            [
+              44784.24127997325,
+              -93504.35235473806
+            ],
+            [
+              44766.001274480084,
+              -93504.35235473806
+            ],
+            [
+              44766.001274480084,
+              -93504.59235450918
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dc-fence-south",
+      "properties": {
+        "id": "dc-fence-south",
+        "name": "接続路南側の柵候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3d.glb",
+        "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001274480084,
+              -93509.79235336477
+            ],
+            [
+              44784.24127997325,
+              -93509.79235336477
+            ],
+            [
+              44784.24127997325,
+              -93509.55235359365
+            ],
+            [
+              44766.001274480084,
+              -93509.55235359365
+            ],
+            [
+              44766.001274480084,
+              -93509.79235336477
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dc-rail-north",
+      "properties": {
+        "id": "dc-rail-north",
+        "name": "北側の横木候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3d.glb",
+        "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93504.55235359365
+            ],
+            [
+              44785.621277226666,
+              -93504.55235359365
+            ],
+            [
+              44785.621277226666,
+              -93504.39235374624
+            ],
+            [
+              44766.121277226666,
+              -93504.39235374624
+            ],
+            [
+              44766.121277226666,
+              -93504.55235359365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dc-rail-south",
+      "properties": {
+        "id": "dc-rail-south",
+        "name": "南側の横木候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/phase3d.glb",
+        "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93509.75235435659
+            ],
+            [
+              44785.621277226666,
+              -93509.75235435659
+            ],
+            [
+              44785.621277226666,
+              -93509.59235450918
+            ],
+            [
+              44766.121277226666,
+              -93509.59235450918
+            ],
+            [
+              44766.121277226666,
+              -93509.75235435659
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sc-palisade",
+      "properties": {
+        "id": "sc-palisade",
+        "name": "土塁上の木柵候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/landscape.glb",
+        "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44825.9847873138,
+              -93501.19848968381
+            ],
+            [
+              44876.17127717898,
+              -93501.19848968381
+            ],
+            [
+              44876.17127717898,
+              -93447.0223540991
+            ],
+            [
+              44825.9847873138,
+              -93447.0223540991
+            ],
+            [
+              44825.9847873138,
+              -93501.19848968381
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sc-gate",
+      "properties": {
+        "id": "sc-gate",
+        "name": "虎口の門候補",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/landscape.glb",
+        "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44863.871277226666,
+              -93500.67235407526
+            ],
+            [
+              44870.371277226666,
+              -93500.67235407526
+            ],
+            [
+              44870.371277226666,
+              -93499.47235402757
+            ],
+            [
+              44863.871277226666,
+              -93499.47235402757
+            ],
+            [
+              44863.871277226666,
+              -93500.67235407526
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sc-vegetation",
+      "properties": {
+        "id": "sc-vegetation",
+        "name": "周辺の樹木と低木",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/landscape.glb",
+        "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44752.60861481593,
+              -93560.76815626318
+            ],
+            [
+              44928.65488232539,
+              -93560.76815626318
+            ],
+            [
+              44928.65488232539,
+              -93385.26413557226
+            ],
+            [
+              44752.60861481593,
+              -93385.26413557226
+            ],
+            [
+              44752.60861481593,
+              -93560.76815626318
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sc-flags",
+      "properties": {
+        "id": "sc-flags",
+        "name": "旗の創作演出",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/landscape.glb",
+        "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44833.05303227023,
+              -93496.13542186761
+            ],
+            [
+              44871.371277226666,
+              -93496.13542186761
+            ],
+            [
+              44871.371277226666,
+              -93456.92235443289
+            ],
+            [
+              44833.05303227023,
+              -93456.92235443289
+            ],
+            [
+              44833.05303227023,
+              -93496.13542186761
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sc-people",
+      "properties": {
+        "id": "sc-people",
+        "name": "人物の創作演出",
+        "kind": "model-envelope",
+        "historicalPosition": "UNKNOWN",
+        "asset": "data/landscape.glb",
+        "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44846.80930031703,
+              -93506.36066407258
+            ],
+            [
+              44870.433254136304,
+              -93506.36066407258
+            ],
+            [
+              44870.433254136304,
+              -93471.75235405857
+            ],
+            [
+              44846.80930031703,
+              -93471.75235405857
+            ],
+            [
+              44846.80930031703,
+              -93506.36066407258
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

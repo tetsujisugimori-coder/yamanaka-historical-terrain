@@ -1,0 +1,482 @@
+[
+  {
+    "project": "production/phase3d/yamanaka-phase3d.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/phase3f/yamanaka-phase3f.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/phase3g/yamanaka-phase3g.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/phase3h/yamanaka-phase3h.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": false,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": false,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": false,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/phase3i/yamanaka-phase3i.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/yamanaka-1590.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 4,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 5,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 6,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 7,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 8,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 9,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 10,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 11,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 12,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/yamanaka-phase2a.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 4,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 5,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 6,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 7,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 8,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 9,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 10,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/yamanaka-phase3b.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 4,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 5,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 6,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 7,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 8,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 9,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 10,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 11,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 12,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 13,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 14,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 15,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 16,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/yamanaka-phase3c.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 4,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 5,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 6,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 7,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 8,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 9,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 10,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 11,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 12,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 13,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 14,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 15,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 16,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 17,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 18,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 19,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 20,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 21,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  },
+  {
+    "project": "production/yamanaka.qgz",
+    "read": true,
+    "crs": "EPSG:6676",
+    "layers": [
+      {
+        "index": 1,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 2,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 3,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 4,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 5,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 6,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 7,
+        "valid": true,
+        "crs": "EPSG:6676"
+      },
+      {
+        "index": 8,
+        "valid": true,
+        "crs": "EPSG:6676"
+      }
+    ]
+  }
+]

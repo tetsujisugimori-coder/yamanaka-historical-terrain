@@ -1,0 +1,421 @@
+{
+  "checkedAt": "2026-11-10T03:27:32.203836+00:00",
+  "regions": [
+    {
+      "id": "honmaru",
+      "name": "本丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "主尾根中央。二ノ丸・北ノ丸と橋で連絡する。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "kitanomaru",
+          "type": "south_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "ninomaru",
+      "name": "二ノ丸",
+      "aliases": [
+        "北条丸"
+      ],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "本丸の西隣。北条丸は後の調査結果に基づき二ノ丸へ改称。",
+      "relations": [
+        {
+          "target": "honmaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "motonishi-yagura",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "kitanomaru",
+      "name": "北ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "本丸の北側の曲輪。東南の帯曲輪接続部に門の推定根拠となる柱穴がある。",
+      "relations": [
+        {
+          "target": "honmaru",
+          "type": "north_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishinomaru",
+      "name": "西ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "元西櫓と西櫓の間の曲輪。古絵図で二ノ丸と記す例があるため同名を機械同一視しない。",
+      "relations": [
+        {
+          "target": "motonishi-yagura",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "nishi-yagura",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "motonishi-yagura",
+      "name": "元西櫓",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "二ノ丸西隣の小曲輪。名称と上部構造の存在を区別する。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "nishinomaru",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishi-yagura",
+      "name": "西櫓",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "西ノ丸西側の堀を隔てた小曲輪。東南隅に虎口。",
+      "relations": [
+        {
+          "target": "nishinomaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "sannomaru",
+      "name": "三ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "二ノ丸南方、箱井戸東側。現在の公民館・宗閑寺周辺を含む。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "south_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "minami-yagura",
+          "type": "northeast_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "daizaki",
+      "name": "岱崎出丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "南櫓の西南の尾根。御馬場曲輪・すり鉢曲輪等を含む出丸の名称。",
+      "relations": [
+        {
+          "target": "minami-yagura",
+          "type": "southwest_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "minami-yagura",
+      "name": "南櫓",
+      "aliases": [
+        "大手"
+      ],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "三ノ丸西南隣り。道路・民家等で旧状がほとんど残らず、大手口の場所は未確定。",
+      "relations": [
+        {
+          "target": "sannomaru",
+          "type": "southwest_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "daizaki",
+          "type": "northeast_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "raoshiba",
+      "name": "ラオシバ",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "北ノ丸の深い堀を隔てた北側。計画書時点で本格調査未実施とされる。",
+      "relations": [
+        {
+          "target": "kitanomaru",
+          "type": "north_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishikido",
+      "name": "西木戸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "西櫓堀外の帯曲輪から外堀までの地域。門と柵の推定は測量済み形状ではない。",
+      "relations": [
+        {
+          "target": "nishi-yagura",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    }
+  ],
+  "georeference": {
+    "status": "BLOCKED",
+    "crs": "EPSG:6676",
+    "controlPointCount": 0,
+    "transform": null,
+    "residuals": null,
+    "residualUnits": "m",
+    "reason": "図3-35の座標枠に数値ラベルがなく、基準点を同定できない。名称点を測量基準点へ転用しない。",
+    "sourceScale": "UNKNOWN",
+    "sourceMapSurveyDate": "UNKNOWN",
+    "sourceOrientation": "図中の数値方位基準未確認。北上の外観のみで測地方位を認定しない。",
+    "demEpoch": "現況DEMは1590年地表と異なる。",
+    "controls": [],
+    "method": "No transform: zero independently verified correspondence points",
+    "limitations": "図3-35の座標枠に数値ラベルがなく、基準点を同定できない。名称点を測量基準点へ転用しない。"
+  },
+  "extentDistinctions": {
+    "designatedArea": "計画p47図3-1が指定区域と周知遺跡を区別。p48の指定面積117,856.91m²（1934年98,183.00＋1978年19,673.91）。実測面積との差があり得るとの注記。p65は約12万m²。形状未生成。",
+    "estimatedHistoricalArea": "計画p65時点で約20万m²。推定面積を円や矩形へ変換して境界を捏造しない。",
+    "demCoverage": "既存メタデータのcastle bounds/regional boundsで定義。指定区域や歴史城域ではない。",
+    "modelCoverage": "実GLB/geometryのboundsで定義。史実の遺構範囲と同一視しない。"
+  },
+  "sources": [
+    {
+      "id": "plan-2023",
+      "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+      "title": "史跡山中城跡保存活用計画",
+      "publisher": "三島市教育委員会",
+      "publication": "2023-03-10",
+      "pdfSha256": "611656844f9c993b2042c98b301f2a63a8e3d14a2be24830c34838b6c995d2d8",
+      "pages": {
+        "printed65": "PDF page73 (1-based)",
+        "printed66": "PDF page74 (1-based)",
+        "printed67": "PDF page75 (1-based)",
+        "printed47": "PDF page55 (1-based)",
+        "printed48": "PDF page56 (1-based)",
+        "printed49": "PDF page57 (1-based)"
+      },
+      "rawRedistribution": false
+    }
+  ]
+}

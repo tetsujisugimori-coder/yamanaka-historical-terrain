@@ -1,0 +1,163 @@
+{
+  "evidence": {
+    "checkedAt": "2026-11-10T03:22:20Z",
+    "source": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41",
+    "interpretation": "Issue #41 created and implementation in progress. Sign marks this software model-coordinate audit, not on-site construction or completion of historic reconstruction. Other regions have no verified development-state assignment."
+  },
+  "items": [
+    {
+      "id": "work-model-coordinate-audit",
+      "regionId": "nishinomaru",
+      "modelId": "nm-bailey",
+      "status": "制作中",
+      "description": "Stage 3-B：既存模型の位置照合・全域案内を制作中。現地工事や史実復元の完成度を示しません。看板位置は現在の模型の範囲中心で、歴史的区域の中心ではありません。",
+      "issueUrls": [
+        "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41"
+      ],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:22:20Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:22:20Z",
+          "status": "制作中",
+          "evidence": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41",
+          "reason": "Stage 3-B implementation initiated; static development snapshot, not live GitHub sync."
+        }
+      ],
+      "unresolved": [
+        "Historic placement UNKNOWN",
+        "This is not a whole-region completion classification"
+      ]
+    },
+    {
+      "id": "work-honmaru",
+      "regionId": "honmaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-ninomaru",
+      "regionId": "ninomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-kitanomaru",
+      "regionId": "kitanomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-motonishi-yagura",
+      "regionId": "motonishi-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-nishi-yagura",
+      "regionId": "nishi-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-sannomaru",
+      "regionId": "sannomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-daizaki",
+      "regionId": "daizaki",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-minami-yagura",
+      "regionId": "minami-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-raoshiba",
+      "regionId": "raoshiba",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    },
+    {
+      "id": "work-nishikido",
+      "regionId": "nishikido",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ]
+    }
+  ]
+}
