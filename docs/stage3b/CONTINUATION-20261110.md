@@ -43,3 +43,15 @@ PARTIAL. Full Stage 3-B completion NO. Limited merge recommendation NO pending r
 - No submission retry or alternate publishing route was used. The earlier publication-review blocker remains unchanged. Independent re-review could not be restarted due to the agent thread limit; no independent acceptance is claimed for this follow-up.
 
 Local full regression after follow-up: 389 tests PASS; build PASS (large-chunk warning); 212 protected files unchanged. Browser run: Chromium eight matrix conditions FAIL at the old global asset-fetch assertion, two acquisition fault cases PASS; WebKit NOT_TESTED because system libraries are unavailable in this invocation. Adopted PR38 now loads CAD GLBs before overview activation; the old PR36-based assertion incorrectly demanded every startup request be regional.glb. The runner now preserves initial requests separately and tests only overview-triggered requests. This correction has NOT been rerun, and no browser acceptance is claimed. Further browser launches paused to avoid contention with another task's diagnosis.
+
+## Recheck and independent review
+
+The corrected asset-request assertion was rerun. Chromium 375px normal completed all checks, including real app detail→overview→prior-view restoration. Seven subsequent Chromium conditions and two fault scenarios failed waiting for initial ready. Traces show ERR_INSUFFICIENT_RESOURCES while fetching current terrain JSON; no acceptance is inferred from these failures. WebKit could not launch due to host dependency detection.
+
+A fresh-browser-per-condition diagnostic run was attempted, preserved, and interrupted after repeated resource failures and shader/context loss. Its globally set WebKit library path also changed Chromium's environment, so it is not directly comparable. A smaller smoke attempt still failed at navigation with ERR_INSUFFICIENT_RESOURCES and then crashed during unroute, leaving partial traces rather than a complete result. The runner now records fatal failures in its result file instead of silently losing the aggregate. Further WebKit-only launch with existing local libraries still reported libGLESv2 unavailable. No dependencies were installed and no missing checks were bypassed.
+
+Runner corrections: timeout is now passed in the Playwright options position; each matrix condition uses a fresh browser; optional engine/smoke selectors make subset runs explicit; fatal runner errors remain FAIL. These runner-only changes have not obtained an independent final review. The previously reviewed application/data code is unchanged.
+
+Independent review of application HEAD d37d7759 completed: 22 saved models, CAD three asset-local variants, protected 212 inputs, 43 contract tests and independent controller fault harness passed. No P1/P2 remains in that checked scope. See INDEPENDENT-MAIN38.md and corresponding raw JSON. Rendering, runtime CAD support placement, full 16 conditions and CI are outside that acceptance.
+
+Current status remains PARTIAL, full completion NO, limited merge recommendation NO. All external submission remains blocked; no publishing retry occurred.

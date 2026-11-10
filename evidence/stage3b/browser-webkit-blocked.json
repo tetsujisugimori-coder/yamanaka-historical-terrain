@@ -1,0 +1,44 @@
+{
+  "head": "d37d7759f36d73f1f18cc3c868641aee1983d0f3",
+  "tree": "1e328ab6b66efe77266ad648257a6ab589c2d81e",
+  "workingTree": true,
+  "endHead": "d37d7759f36d73f1f18cc3c868641aee1983d0f3",
+  "at": "2026-11-10T13:40:34.642Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "engines": {},
+    "isolation": "fresh browser process per matrix condition"
+  },
+  "sourceHashes": {
+    "src/castle-overview.js": "0387a335713eddcc4affb8869f6719a1bce066fbe3101426171eadbe9d88c2c3",
+    "src/castle-overview-contract.js": "912a4345bcd2af6752051e1032bbc5426a885c3261a177ea410c99ba4dedba98",
+    "src/main.js": "614f6695a2eef2d3c57639ee94e8c04f9bf507bdfc5ccc49e3e6bb99787204da",
+    "src/style.css": "11497fee96418ba17918750b5a72c5a210d741fb0db46d2aa8585c5a3864c62c",
+    "public/data/castle-overview.json": "aba20e5dd486a595e32362728c3d4b64affc0ca456205561d43fc528a4ac8f53",
+    "scripts/stage3b-overview-browser.mjs": "f44b8daa6980681b20574003bc32efcaafd7d2792b599dd59650620761ab93eb"
+  },
+  "buildHashes": {
+    "dist/index.html": "6b7e0ba2bfa6c06cfb1128ce354eb460d89da946145512ccde38d3e9fee2a237",
+    "dist/assets/index-B9lkGHMg.js": "8724c59de3a9d94a4bcc28e4aeaba1a212593c9ccfe18f9202254bffc25fafa7",
+    "dist/assets/index-BozCaW8e.css": "d161f88110b5b7970416cb38e55d7386d1b5f319c371ca1816a134876ca0dae3",
+    "dist/data/castle-overview.json": "aba20e5dd486a595e32362728c3d4b64affc0ca456205561d43fc528a4ac8f53"
+  },
+  "hashes": {
+    "src/castle-overview.js": "0387a335713eddcc4affb8869f6719a1bce066fbe3101426171eadbe9d88c2c3",
+    "src/castle-overview-contract.js": "912a4345bcd2af6752051e1032bbc5426a885c3261a177ea410c99ba4dedba98",
+    "src/main.js": "614f6695a2eef2d3c57639ee94e8c04f9bf507bdfc5ccc49e3e6bb99787204da",
+    "src/style.css": "11497fee96418ba17918750b5a72c5a210d741fb0db46d2aa8585c5a3864c62c",
+    "public/data/castle-overview.json": "aba20e5dd486a595e32362728c3d4b64affc0ca456205561d43fc528a4ac8f53",
+    "scripts/stage3b-overview-browser.mjs": "f44b8daa6980681b20574003bc32efcaafd7d2792b599dd59650620761ab93eb"
+  },
+  "inputsChanged": false,
+  "rows": [
+    {
+      "key": "webkit",
+      "engine": "webkit",
+      "status": "NOT_TESTED",
+      "error": "Error: browserType.launch: \n╔══════════════════════════════════════════════════════╗\n║ Host system is missing dependencies to run browsers. ║\n║ Missing libraries:                                   ║\n║     libGLESv2.so.2                                   ║\n╚══════════════════════════════════════════════════════╝"
+    }
+  ]
+}

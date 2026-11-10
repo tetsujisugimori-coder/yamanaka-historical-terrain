@@ -1,0 +1,15 @@
+{
+  "faults": [
+    "initial rejection",
+    "older invalid response after newer valid response",
+    "duplicate build resource count",
+    "late response after dispose"
+  ],
+  "navigation": [
+    "capture once while active",
+    "restore saved snapshot",
+    "deactivate on return"
+  ],
+  "result": "PASS",
+  "method": "Node fake DOM controller harness, not browser rendering or actual main restoration"
+}
