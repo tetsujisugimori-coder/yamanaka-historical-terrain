@@ -1,0 +1,11 @@
+# Independent static environment/recovery review
+
+Basis HEAD 39f5201ac00331aa8cd7d73e197162ae412b842a, working tree includes runner wait for adopted CAD B0 and source-ledger additions. No browser launched.
+
+- Product `src` and `public` have no changes from d37d7759.
+- Runner change waits for the pre-existing CAD B0 initialization before clearing request collection and testing overview-triggered requests. This separates startup traffic from intervention traffic, rather than removing the no-extra-detail-load assertion. Prior waitForFunction timeout now uses its third options argument; runner failures remain FAIL and write results.
+- /tmp separately reports approximately 4.9GB/full while /workspace reports approximately 23GB available. Output relocation therefore targets a real independent filesystem capacity difference; this does not establish all earlier timeouts had the same cause.
+- work.bundle verifies successfully and advertises HEAD39f5201, prerequisite842d537. Its SHA256 is e0cc0971ebd6e42a5ffcd7242a1a27e9fe8f86fdb51d32c629db713a158aeba2. Restore-check staged index computes tree2f5bddebf30e4924fb62bf11e7eafb34bbf9c5ea, exactly matching original39f5201 tree. The restore-check HEAD itself is still baseline842d537; tree equality refers to restored staged content, not a new restored commit. Actual restart persistence remains NOT_TESTED.
+- Primary PDF hash independently equals611656844f9c993b2042c98b301f2a63a8e3d14a2be24830c34838b6c995d2d8. Viewed p61 image: 0–100m graphic scale and orientation symbol present. Read PDF p58/68/84 (printed50/60/76):1972 1:100/1:500 survey,2019 29,000m² UAV survey, and1:1800 specifically associated with Toyotomi offensive map agree with ledger. The correction scopes missing-scale finding to p65 rather than all plan figures. No registration/control point is manufactured from scale alone; all11 regions remain UNPLACED, geometry/transform/error null.
+
+No new P1/P2 in this static scope. Browser matrix results, launcher runtime behavior, actual restart, and final CI have not been accepted by this review. Raw source images/PDF were inspected in their existing private work location and not published/copied into repository. No external write.

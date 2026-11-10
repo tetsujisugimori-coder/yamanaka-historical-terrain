@@ -1,0 +1,324 @@
+{
+  "head": "39f5201ac00331aa8cd7d73e197162ae412b842a",
+  "tree": "2f5bddebf30e4924fb62bf11e7eafb34bbf9c5ea",
+  "endHead": "39f5201ac00331aa8cd7d73e197162ae412b842a",
+  "workingTree": true,
+  "matrixCount": 16,
+  "rows": 20,
+  "faults": [
+    {
+      "key": "chromium-missing",
+      "status": "PASS"
+    },
+    {
+      "key": "chromium-bad-coordinate",
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-missing",
+      "status": "PASS"
+    },
+    {
+      "key": "webkit-bad-coordinate",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "traces": [
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 508,
+      "key": "chromium-1280-no-preference",
+      "traceSha256": "462d36ce0c433e97a0afa9ae7cf8c56468e1a2ef3ce4531373fb55c5aa421601",
+      "pngSha256": "0654c46d5ebba577d1adaa79753f44210b164387ac9d0ee11a90e37cd4d122fc",
+      "pngSize": [
+        1280,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 514,
+      "key": "chromium-1280-reduce",
+      "traceSha256": "d1cad1a5f774b69658c5250a0104124450f6583fe94a73e8d77b01fbdc5969e4",
+      "pngSha256": "0654c46d5ebba577d1adaa79753f44210b164387ac9d0ee11a90e37cd4d122fc",
+      "pngSize": [
+        1280,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 510,
+      "key": "chromium-375-no-preference",
+      "traceSha256": "11e36d2295f796af99e7be9c2f192c95c3b866d060b9b7ef9df1edddaa7705bb",
+      "pngSha256": "72e8c8fefd502baa3f2b967d1dfc8b4ea27a8b47a74fb5e0c0bc150419065b98",
+      "pngSize": [
+        375,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 508,
+      "key": "chromium-375-reduce",
+      "traceSha256": "7a0da7985ceec7c7b2965b310f784ba5ee7de1a8550e3da9b3435d99e4c12ee1",
+      "pngSha256": "72e8c8fefd502baa3f2b967d1dfc8b4ea27a8b47a74fb5e0c0bc150419065b98",
+      "pngSize": [
+        375,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 508,
+      "key": "chromium-390-no-preference",
+      "traceSha256": "7ae3a752442387796e2296c19433c3310183b1e2cd4dafeebf11d3d06a79e9d0",
+      "pngSha256": "e6b4cddaf644fb3474c6764c8fff7d5567e4d7985f02dfeb97a4ce7147865569",
+      "pngSize": [
+        390,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 510,
+      "key": "chromium-390-reduce",
+      "traceSha256": "db202752f3f3660772c8c8281629085e16bbb77002e0e365da8a142128023ef5",
+      "pngSha256": "e6b4cddaf644fb3474c6764c8fff7d5567e4d7985f02dfeb97a4ce7147865569",
+      "pngSize": [
+        390,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 509,
+      "key": "chromium-765-no-preference",
+      "traceSha256": "adbe4caa975dcbef4a65c4b5a46ae6fdfd0ee4175e1fb89ddf74a8bd318bdc59",
+      "pngSha256": "667500e28f8e528fe01f0ecd653a5eadfa61dc162a8146fd05e77257840a8a61",
+      "pngSize": [
+        765,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 509,
+      "key": "chromium-765-reduce",
+      "traceSha256": "ab4fd8c2690de3f790b3d2aafb06364ba90ffe97f3ec8290d0e7477e9840c3b4",
+      "pngSha256": "3252fa7f80af738902d1b3e288e8d50426e09f2f05b31e40fe9054391d7af83b",
+      "pngSize": [
+        765,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 516,
+      "key": "webkit-1280-no-preference",
+      "traceSha256": "acab7d89ca3a95b0e7e467e642b19d83f9f5d41682b256c7dccbbd24b85c7fac",
+      "pngSha256": "4339124f71c476da7dd3e79d2777982b68530737e84bbcb78d965783f527a798",
+      "pngSize": [
+        1280,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 513,
+      "key": "webkit-1280-reduce",
+      "traceSha256": "4404c062c72593851ad5bd065fcaf1be07dd84c5540633ead267c10bf6f27a5c",
+      "pngSha256": "4339124f71c476da7dd3e79d2777982b68530737e84bbcb78d965783f527a798",
+      "pngSize": [
+        1280,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 518,
+      "key": "webkit-375-no-preference",
+      "traceSha256": "586db05054a22a507e1f0613e393f703e64c0048f4bf5fba012e762420b32e90",
+      "pngSha256": "803c107e3de37ba4b86d8787735dc8ddfadcc5c4a6efe2fb2fdb85c2fe531a6f",
+      "pngSize": [
+        375,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 513,
+      "key": "webkit-375-reduce",
+      "traceSha256": "0a9f58e008b4460d98e17908f0e7ba72d79fac40161db3632daa5fb9635b3f06",
+      "pngSha256": "803c107e3de37ba4b86d8787735dc8ddfadcc5c4a6efe2fb2fdb85c2fe531a6f",
+      "pngSize": [
+        375,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 516,
+      "key": "webkit-390-no-preference",
+      "traceSha256": "c9ec87d16c0b1d351ca8f040d9b06fe6a62d9a2c3463164781298d0f208f6c31",
+      "pngSha256": "5925107733caa36d5551804c02ad1950677434d76a8a2bfb6ee3047a412a9399",
+      "pngSize": [
+        390,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 515,
+      "key": "webkit-390-reduce",
+      "traceSha256": "7d98a1f102eb407e68c9eec92ee77883f03828d01dfde9803ddd25220471bffd",
+      "pngSha256": "5925107733caa36d5551804c02ad1950677434d76a8a2bfb6ee3047a412a9399",
+      "pngSize": [
+        390,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 516,
+      "key": "webkit-765-no-preference",
+      "traceSha256": "f2be9905c0d5d45389a215fed95dde69aa8e9bc432e3f4d072b2b60e1a29f3f4",
+      "pngSha256": "6f570f989c5c62209d1a99ef42a232b9e3aca61077005cee7a4b2582f7aa3d30",
+      "pngSize": [
+        765,
+        900
+      ]
+    },
+    {
+      "traceErrorCount": 0,
+      "servedBodyMatches": [
+        "assets/index-BozCaW8e.css",
+        "data/castle-overview.json"
+      ],
+      "bodiesNotCaptured": [
+        "assets/index-B9lkGHMg.js"
+      ],
+      "events": 516,
+      "key": "webkit-765-reduce",
+      "traceSha256": "a13042350d53864cf3a2e761f5ab39dd7f5945138bb79b92097633a6b12c42cd",
+      "pngSha256": "6f570f989c5c62209d1a99ef42a232b9e3aca61077005cee7a4b2582f7aa3d30",
+      "pngSize": [
+        765,
+        900
+      ]
+    }
+  ],
+  "limits": [
+    "Browser not launched by reviewer",
+    "Missing captured JS bodies cannot be independently byte-compared to served content",
+    "Source/build manifest compared with files, not independent fresh build",
+    "Trace after-events validate completed calls; visual screenshot review sampled separately",
+    "Four fault-case PASS entries are in runner JSON, but dedicated fault-case traces/PNG are not recorded; no independent runtime reproduction of those four cases"
+  ]
+}

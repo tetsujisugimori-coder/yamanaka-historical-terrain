@@ -1,0 +1,297 @@
+{
+  "checkedAt": "2026-11-10T14:19:04.045641+00:00",
+  "basisHead": "39f5201",
+  "source": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+  "pdfSha256": "611656844f9c993b2042c98b301f2a63a8e3d14a2be24830c34838b6c995d2d8",
+  "sources": [
+    {
+      "id": "plan-p61",
+      "printedPage": 61,
+      "pdfPage1based": 69,
+      "figure": "3-32",
+      "status": "IMAGE_VERIFIED",
+      "scale": "graphic bar 0–100m visible",
+      "orientation": "north/orientation symbol visible; numeric geodetic bearing unverified",
+      "purpose": "平成25〜30年度再整備箇所・指定範囲・周知遺跡範囲",
+      "limitation": "not a proven1590 boundary; map grid lacks verified numeric coordinates"
+    },
+    {
+      "id": "plan-p50",
+      "printedPage": 50,
+      "pdfPage1based": 58,
+      "status": "TEXT_VERIFIED",
+      "finding": "1972用地測量、100分の1及び500分の1全域図の記述",
+      "originalSurveyAcquired": false
+    },
+    {
+      "id": "plan-p60",
+      "printedPage": 60,
+      "pdfPage1based": 68,
+      "status": "TEXT_VERIFIED",
+      "finding": "2019年度三ノ丸中心未指定29,000m²をUAV等で測量",
+      "originalSurveyAcquired": false
+    },
+    {
+      "id": "plan-p76",
+      "printedPage": 76,
+      "pdfPage1based": 84,
+      "status": "TEXT_VERIFIED",
+      "finding": "市川近太郎実測図、1930実地調査・1938刊行図、複数版に言及。1800分の1は豊臣軍攻勢図への記述",
+      "limitation": "do not assign this scale to p65 or all maps"
+    }
+  ],
+  "georeference": {
+    "status": "NOT_COMPLETED",
+    "controlPoints": [],
+    "controlPointCount": 0,
+    "transform": null,
+    "residualMetres": null,
+    "reason": "scale/orientation alone does not identify datum, translation or independent corresponding ground points"
+  },
+  "regions": [
+    {
+      "id": "honmaru",
+      "name": "本丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "ninomaru",
+      "name": "二ノ丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "kitanomaru",
+      "name": "北ノ丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "nishinomaru",
+      "name": "西ノ丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "motonishi-yagura",
+      "name": "元西櫓",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "nishi-yagura",
+      "name": "西櫓",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "sannomaru",
+      "name": "三ノ丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "daizaki",
+      "name": "岱崎出丸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "minami-yagura",
+      "name": "南櫓",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "raoshiba",
+      "name": "ラオシバ",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    },
+    {
+      "id": "nishikido",
+      "name": "西木戸",
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "status": "UNPLACED",
+      "geometry": null,
+      "transform": null,
+      "errorMetres": null
+    }
+  ],
+  "repositoryChanges": false,
+  "priorClarification": "SOURCES.mdの縮尺・方位未確認はp65図3-35に限定する。保存活用計画全体に縮尺が無いという意味ではない。"
+}
