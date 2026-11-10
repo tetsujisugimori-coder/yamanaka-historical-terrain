@@ -431,6 +431,14 @@
       "id": "nm-bailey",
       "name": "西ノ丸 曲輪候補",
       "featureId": "nm-bailey",
+      "evidenceCategory": "C",
+      "facilityType": "曲輪",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i.glb",
       "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
       "metadata": "data/nishinomaru.json",
@@ -490,6 +498,14 @@
       "id": "nm-moat",
       "name": "西ノ丸 障子堀候補",
       "featureId": "nm-moat",
+      "evidenceCategory": "C",
+      "facilityType": "障子堀",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i.glb",
       "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
       "metadata": "data/nishinomaru.json",
@@ -549,6 +565,14 @@
       "id": "nm-rampart",
       "name": "西ノ丸 土塁候補",
       "featureId": "nm-rampart",
+      "evidenceCategory": "C",
+      "facilityType": "土塁",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i.glb",
       "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
       "metadata": "data/nishinomaru.json",
@@ -608,6 +632,14 @@
       "id": "nm-passage",
       "name": "虎口・接続通路候補",
       "featureId": "nm-passage",
+      "evidenceCategory": "C",
+      "facilityType": "通路",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i.glb",
       "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
       "metadata": "data/nishinomaru.json",
@@ -667,6 +699,14 @@
       "id": "nm-transition",
       "name": "復元地形への接続",
       "featureId": "nm-transition",
+      "evidenceCategory": "C",
+      "facilityType": "接続地形",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i.glb",
       "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
       "metadata": "data/nishinomaru.json",
@@ -726,6 +766,14 @@
       "id": "wb-bailey",
       "name": "西櫓の曲輪・土塁・板塀",
       "featureId": "wb-bailey",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓の曲輪・土塁・板塀",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3b.glb",
       "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
       "metadata": "data/phase3b.json",
@@ -1121,6 +1169,14 @@
       "id": "wb-gate",
       "name": "西木戸口の門候補",
       "featureId": "wb-gate",
+      "evidenceCategory": "C",
+      "facilityType": "西木戸口の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3b.glb",
       "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
       "metadata": "data/phase3b.json",
@@ -1231,6 +1287,14 @@
       "id": "wb-moat",
       "name": "西櫓堀の単列畝堀候補",
       "featureId": "wb-moat",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓堀の単列畝堀候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3b.glb",
       "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
       "metadata": "data/phase3b.json",
@@ -1290,6 +1354,14 @@
       "id": "wb-building",
       "name": "西櫓の建物候補（上部構造未確定）",
       "featureId": "wb-building",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓の建物候補（上部構造未確定）",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3b.glb",
       "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
       "metadata": "data/phase3b.json",
@@ -1370,6 +1442,14 @@
       "id": "ic-lookout",
       "name": "西ノ丸見張台の高所候補",
       "featureId": "ic-lookout",
+      "evidenceCategory": "C",
+      "facilityType": "西ノ丸見張台の高所候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i-inner.glb",
       "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
       "metadata": "data/phase3c.json",
@@ -1430,6 +1510,14 @@
       "id": "ic-bridge",
       "name": "西ノ丸・西櫓方面の土橋候補",
       "featureId": "ic-bridge",
+      "evidenceCategory": "C",
+      "facilityType": "西ノ丸・西櫓方面の土橋候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i-inner.glb",
       "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
       "metadata": "data/phase3c.json",
@@ -1491,6 +1579,14 @@
       "id": "ic-koguchi",
       "name": "見張台側虎口の候補",
       "featureId": "ic-koguchi",
+      "evidenceCategory": "C",
+      "facilityType": "見張台側虎口の候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3i-inner.glb",
       "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
       "metadata": "data/phase3c.json",
@@ -1551,6 +1647,14 @@
       "id": "dc-gate",
       "name": "見張台側の門候補",
       "featureId": "dc-gate",
+      "evidenceCategory": "C",
+      "facilityType": "見張台側の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3d.glb",
       "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
       "metadata": "data/phase3d.json",
@@ -1612,6 +1716,14 @@
       "id": "dc-fence-north",
       "name": "接続路北側の柵候補",
       "featureId": "dc-fence-north",
+      "evidenceCategory": "C",
+      "facilityType": "接続路北側の柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3d.glb",
       "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
       "metadata": "data/phase3d.json",
@@ -1680,6 +1792,14 @@
       "id": "dc-fence-south",
       "name": "接続路南側の柵候補",
       "featureId": "dc-fence-south",
+      "evidenceCategory": "C",
+      "facilityType": "接続路南側の柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3d.glb",
       "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
       "metadata": "data/phase3d.json",
@@ -1748,6 +1868,14 @@
       "id": "dc-rail-north",
       "name": "北側の横木候補",
       "featureId": "dc-rail-north",
+      "evidenceCategory": "C",
+      "facilityType": "北側の横木候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3d.glb",
       "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
       "metadata": "data/phase3d.json",
@@ -1826,6 +1954,14 @@
       "id": "dc-rail-south",
       "name": "南側の横木候補",
       "featureId": "dc-rail-south",
+      "evidenceCategory": "C",
+      "facilityType": "南側の横木候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/phase3d.glb",
       "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
       "metadata": "data/phase3d.json",
@@ -1904,6 +2040,14 @@
       "id": "sc-palisade",
       "name": "土塁上の木柵候補",
       "featureId": "sc-palisade",
+      "evidenceCategory": "C",
+      "facilityType": "土塁上の木柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/landscape.glb",
       "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
       "metadata": "data/landscape.json",
@@ -2096,6 +2240,14 @@
       "id": "sc-gate",
       "name": "虎口の門候補",
       "featureId": "sc-gate",
+      "evidenceCategory": "C",
+      "facilityType": "虎口の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/landscape.glb",
       "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
       "metadata": "data/landscape.json",
@@ -2159,6 +2311,14 @@
       "id": "sc-vegetation",
       "name": "周辺の樹木と低木",
       "featureId": "sc-vegetation",
+      "evidenceCategory": "C",
+      "facilityType": "周辺の樹木と低木",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/landscape.glb",
       "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
       "metadata": "data/landscape.json",
@@ -2325,6 +2485,14 @@
       "id": "sc-flags",
       "name": "旗の創作演出",
       "featureId": "sc-flags",
+      "evidenceCategory": "D",
+      "facilityType": "旗の創作演出",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/landscape.glb",
       "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
       "metadata": "data/landscape.json",
@@ -2391,6 +2559,14 @@
       "id": "sc-people",
       "name": "人物の創作演出",
       "featureId": "sc-people",
+      "evidenceCategory": "D",
+      "facilityType": "人物の創作演出",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
       "sourceAsset": "data/landscape.glb",
       "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
       "metadata": "data/landscape.json",
@@ -2829,5 +3005,21 @@
     "historicExtent": "UNKNOWN: unreferenced historical diagram is not a polygon",
     "terrainExtent": "Current DEM acquisition extent only",
     "modelExtent": "Actual model geometry envelope; not historical site survey"
+  },
+  "regionModelRelations": [
+    {
+      "regionId": "nishinomaru",
+      "modelId": "nm-bailey",
+      "type": "software-audit-association",
+      "geographicAgreement": "UNKNOWN",
+      "evidence": [
+        "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41"
+      ]
+    }
+  ],
+  "runtimeModelAudit": {
+    "status": "NOT_TESTED",
+    "scope": "CAD B0/B1/B2, runtime shrubs and legacy palisade are not included in saved-GLB envelopes",
+    "reason": "Their scene placement depends on current settings and supporting surfaces; asset-local dimensions are not a placed envelope"
   }
 }
