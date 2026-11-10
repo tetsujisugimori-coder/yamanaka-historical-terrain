@@ -1,0 +1,128 @@
+{
+  "scope": "Local Phase2A guard-repair red/green; unchanged app code at df97c403, final committed fixture full CI remains a separate gate.",
+  "previousFailedHead": "df97c40376f3e1fb38b694a9a65875a8765a9daa",
+  "previousArtifact": {
+    "id": 13725801489,
+    "sha256": "b4aad92bd77c09c29a6734dee4a138a60ff6849d1ebe5cd6f2b21b6dce8377d8",
+    "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/actions/runs/42729587761/artifacts/13725801489",
+    "fault": "Hidden-pick negative control altered CAD groundHits instead of facility hits; hidden-pick incorrectly remained PASS on both engines."
+  },
+  "fixtureHashes": {
+    "scripts/phase2a-fallback.mjs": "5c2bd6a2a1203e51724459eec6191f644010ec01f20a5586d36fbf267b6104e9",
+    "scripts/phase2a-fallback-mutation.mjs": "4f224a2f1b1d28cd23b1e803c51bebb8693961145850034d86c102700c52362d"
+  },
+  "normal": [
+    {
+      "engine": "chromium",
+      "scenario": "no-webgl",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-model-404",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "new-reading-404",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "context-lost",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "no-webgl",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-model-404",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "new-reading-404",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "context-lost",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "PASS"
+    }
+  ],
+  "negative": [
+    {
+      "engine": "chromium",
+      "scenario": "hidden-pick",
+      "status": "FAIL",
+      "mutationApplied": true,
+      "mutatedModule": "main",
+      "failureWitness": {
+        "selected": "nm-moat",
+        "hidden": [
+          "nm-moat"
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "scenario": "superseded-load",
+      "status": "FAIL",
+      "mutationApplied": true,
+      "mutatedModule": "intent",
+      "failureWitness": {
+        "renderState": "error",
+        "view": "regional"
+      }
+    },
+    {
+      "engine": "webkit",
+      "scenario": "hidden-pick",
+      "status": "FAIL",
+      "mutationApplied": true,
+      "mutatedModule": "main",
+      "failureWitness": {
+        "selected": "nm-moat",
+        "hidden": [
+          "nm-moat"
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "scenario": "superseded-load",
+      "status": "FAIL",
+      "mutationApplied": true,
+      "mutatedModule": "intent",
+      "failureWitness": {
+        "renderState": "error",
+        "view": "regional"
+      }
+    }
+  ],
+  "negativeAcceptance": "PASS: all four intended violations detected with required witnesses; unrelated failures rejected",
+  "physicalSafari": "NOT_TESTED"
+}
