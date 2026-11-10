@@ -89,3 +89,6 @@ PR #26から西側小区域の推定Cと景観D、編集可能原本・再生成
 PR #34の計測器、PR #35の低木支持点キャッシュは含めません。
 性能改善は未立証、史実形態・樹種・分布・実機Safariは未検証です。
 [採用範囲と後続接続](docs/phase3i-landscape-only.md)。
+
+## Latest landscape metrics reconnect
+See [measurement plan](docs/metrics-reconnect/PLAN.md). Metrics acceptance is separate from performance improvement; original 72% was CPU sample share, not wall waiting time.
