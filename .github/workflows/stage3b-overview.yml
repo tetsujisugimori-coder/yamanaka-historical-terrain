@@ -7,12 +7,17 @@ permissions:
   contents: read
 jobs:
   overview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Record run identity before dependency installation
+        run: |
+          mkdir -p evidence-run/stage3b
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' HEAD > evidence-run/stage3b/identity.txt
+          cat /etc/os-release > evidence-run/stage3b/os-release.txt
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -21,7 +26,7 @@ jobs:
       - run: npx playwright install --with-deps chromium webkit
       - run: node scripts/stage3b-overview-generate.mjs --verify
       - run: node scripts/stage3b-preservation-check.mjs
-      - run: python3 scripts/stage3b-independent-oracle.py
+      - run: python3 scripts/stage3b-independent-oracle.py --output-dir evidence-run/stage3b/oracle
       - run: node --test --test-concurrency=1 tests/*.test.mjs
       - run: git diff --check
       - run: npm run build
