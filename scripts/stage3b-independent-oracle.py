@@ -1,8 +1,12 @@
 """Independent GLB vertex/scene traversal, no product code or Three.js imports."""
-import json,struct,hashlib,pathlib,math
+import json,struct,hashlib,pathlib,math,argparse
 R=pathlib.Path(__file__).resolve().parents[1]
-O=R/'evidence/stage3b';O.mkdir(parents=True,exist_ok=True)
-D=json.loads((R/'public/data/castle-overview.json').read_text())
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output-dir',type=pathlib.Path,help='New evidence directory; refuses an existing directory')
+args=parser.parse_args()
+O=args.output_dir if args.output_dir is not None else R/'evidence/stage3b'
+O.mkdir(parents=True,exist_ok=args.output_dir is None)
+D=json.loads((R/'public/data/castle-overview.json').read_text(encoding='utf-8'))
 def mul(a,b):return [[sum(a[i][k]*b[k][j] for k in range(4))for j in range(4)]for i in range(4)]
 def identity():return [[float(i==j)for j in range(4)]for i in range(4)]
 def transform(n):
@@ -41,9 +45,9 @@ for m in D['models']:
  assert delta<1e-8 and sha==m['sha256'];assert m['vertexCount']==sum(x['count']for x in group)
  assert max(abs(a-b)for a,b in zip(m['center'],[(e0+e1)/2,(n0+n1)/2]))<1e-8
  results.append({'id':m['id'],'vertices':m['vertexCount'],'maxErrorMeters':delta,'sha256':sha})
-protected=json.loads((R/'research/stage3b/preserved-inputs.json').read_text());bad=[]
+protected=json.loads((R/'research/stage3b/preserved-inputs.json').read_text(encoding='utf-8'));bad=[]
 for f in protected['files']:
  if hashlib.sha256((R/f['path']).read_bytes()).hexdigest()!=f['sha256']:bad.append(f['path'])
 assert not bad
 report={'models':results,'modelCount':len(results),'maxErrorMeters':err,'protectedFiles':len(protected['files']),'modifiedProtected':bad,'precisionMeaning':'Only computational coordinate consistency; historical placement UNKNOWN','oracle':'Independent Python struct decode and scalar 4x4 matrices, no product generator or Three.js'}
-(O/'coordinate-oracle.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items()if k!='models'}))
+(O/'coordinate-oracle.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps({k:v for k,v in report.items()if k!='models'}))

@@ -1,0 +1,388 @@
+{
+  "at": "2026-11-13T12:18:08.270Z",
+  "status": "FAIL",
+  "errors": [
+    "Not PASS: webkit-375-no-preference",
+    "Incomplete checks: webkit-375-no-preference",
+    "Incomplete diagnostics: webkit-375-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-browser2\\webkit-375-no-preference-overview.png"
+  ],
+  "entry": {
+    "head": "d6898549b620cff0610228d646fc73d7acd5f055",
+    "tree": "696a96e6d6204b82f8dd33ff845c7ecea357699e"
+  },
+  "testedHead": "d6898549b620cff0610228d646fc73d7acd5f055",
+  "testedTree": "696a96e6d6204b82f8dd33ff845c7ecea357699e",
+  "branch": "codex/stage3b-restored-main38-20261113",
+  "upstream": {
+    "main": "842d5378bb1fad648f225b79933763b8e87b6afa",
+    "pr38": "666aa9cb8ccc159b716fa0d3ac1699cbdaf24310",
+    "pr40": "340b05a4c947e343076f76513535bf7d7d477f21",
+    "mainMergeBase": "842d5378bb1fad648f225b79933763b8e87b6afa",
+    "pr40MergeBase": "5adb7156acda3968827ff39d5e6f40c4ac837ec5",
+    "shallow": "true"
+  },
+  "matrix": {
+    "required": 16,
+    "observed": 16,
+    "pass": 15,
+    "fail": 1
+  },
+  "faults": {
+    "required": 4,
+    "observed": 4,
+    "pass": 4,
+    "fail": 0
+  },
+  "protectedFiles": 212,
+  "scripts": {
+    "scripts/stage3b-independent-oracle.py": "f1c16f652016cf807816a21fd3800f3a6eae085f357693ad50c3e6001b19ddcf",
+    "scripts/stage3b-resume-audit.mjs": "bfa0863901ba371cf111199c60440c3bdf93be7418ec2d772e8ee96882c9c8c0"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-1280-no-preference-overview.png",
+      "bytes": 144723,
+      "sha256": "13513e877ca2de9d66f2cb7e7b43b20c5ce9050a595e1e1dcde0d08631f6115d",
+      "repositoryBytes": 144723,
+      "repositorySha256": "13513e877ca2de9d66f2cb7e7b43b20c5ce9050a595e1e1dcde0d08631f6115d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-1280-no-preference.zip",
+      "bytes": 6283192,
+      "sha256": "ffc95674b485e3fbf74a7b9b3cb35418387282ea656cc72426a7aceecd97fda8",
+      "repositoryBytes": 6283192,
+      "repositorySha256": "ffc95674b485e3fbf74a7b9b3cb35418387282ea656cc72426a7aceecd97fda8"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-1280-reduce-overview.png",
+      "bytes": 144723,
+      "sha256": "13513e877ca2de9d66f2cb7e7b43b20c5ce9050a595e1e1dcde0d08631f6115d",
+      "repositoryBytes": 144723,
+      "repositorySha256": "13513e877ca2de9d66f2cb7e7b43b20c5ce9050a595e1e1dcde0d08631f6115d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-1280-reduce.zip",
+      "bytes": 6321950,
+      "sha256": "f8f7af025805a896a85c9ae93e3c3bae7e81a5e96215cd0c807993f9b3d82ec8",
+      "repositoryBytes": 6321950,
+      "repositorySha256": "f8f7af025805a896a85c9ae93e3c3bae7e81a5e96215cd0c807993f9b3d82ec8"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-375-no-preference-overview.png",
+      "bytes": 66648,
+      "sha256": "32d046e3225449f95710facfb02f17a15c0a3cae4914a446001142b2f9a9f17d",
+      "repositoryBytes": 66648,
+      "repositorySha256": "32d046e3225449f95710facfb02f17a15c0a3cae4914a446001142b2f9a9f17d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-375-no-preference.zip",
+      "bytes": 5577338,
+      "sha256": "cdf326ee21317217dabf7d2452155ed5a62fb95544553fc0354d155c1b2c0c23",
+      "repositoryBytes": 5577338,
+      "repositorySha256": "cdf326ee21317217dabf7d2452155ed5a62fb95544553fc0354d155c1b2c0c23"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-375-reduce-overview.png",
+      "bytes": 66648,
+      "sha256": "32d046e3225449f95710facfb02f17a15c0a3cae4914a446001142b2f9a9f17d",
+      "repositoryBytes": 66648,
+      "repositorySha256": "32d046e3225449f95710facfb02f17a15c0a3cae4914a446001142b2f9a9f17d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-375-reduce.zip",
+      "bytes": 5577212,
+      "sha256": "c9e6661edee82af1985204a42856c721d4ae8576dca9f5cfbea116a7f797191c",
+      "repositoryBytes": 5577212,
+      "repositorySha256": "c9e6661edee82af1985204a42856c721d4ae8576dca9f5cfbea116a7f797191c"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-390-no-preference-overview.png",
+      "bytes": 72461,
+      "sha256": "acc81a08966e338633a50f4f7f71f08aa03fd4cede1bdaec6d9094490680a583",
+      "repositoryBytes": 72461,
+      "repositorySha256": "acc81a08966e338633a50f4f7f71f08aa03fd4cede1bdaec6d9094490680a583"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-390-no-preference.zip",
+      "bytes": 5534900,
+      "sha256": "37adad108a9c4d4ff6e5ebc43ae62a0639247ff5fc50697b6c00a3ca2f95431a",
+      "repositoryBytes": 5534900,
+      "repositorySha256": "37adad108a9c4d4ff6e5ebc43ae62a0639247ff5fc50697b6c00a3ca2f95431a"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-390-reduce-overview.png",
+      "bytes": 72461,
+      "sha256": "acc81a08966e338633a50f4f7f71f08aa03fd4cede1bdaec6d9094490680a583",
+      "repositoryBytes": 72461,
+      "repositorySha256": "acc81a08966e338633a50f4f7f71f08aa03fd4cede1bdaec6d9094490680a583"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-390-reduce.zip",
+      "bytes": 5602604,
+      "sha256": "cecd80ed58e5df227befd2793e15ce6ba3e9e1c92fed686e1c7ee801fd0c5f43",
+      "repositoryBytes": 5602604,
+      "repositorySha256": "cecd80ed58e5df227befd2793e15ce6ba3e9e1c92fed686e1c7ee801fd0c5f43"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-765-no-preference-overview.png",
+      "bytes": 85625,
+      "sha256": "d0026cb26fecfd884fd5ffa9897c29b298616983b77957d005071732210c4a64",
+      "repositoryBytes": 85625,
+      "repositorySha256": "d0026cb26fecfd884fd5ffa9897c29b298616983b77957d005071732210c4a64"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-765-no-preference.zip",
+      "bytes": 6058113,
+      "sha256": "77e87eafb7cf0ef2833890fd4d7f8fe98f1be019711fb450bffdcace993b736a",
+      "repositoryBytes": 6058113,
+      "repositorySha256": "77e87eafb7cf0ef2833890fd4d7f8fe98f1be019711fb450bffdcace993b736a"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-765-reduce-overview.png",
+      "bytes": 85625,
+      "sha256": "d0026cb26fecfd884fd5ffa9897c29b298616983b77957d005071732210c4a64",
+      "repositoryBytes": 85625,
+      "repositorySha256": "d0026cb26fecfd884fd5ffa9897c29b298616983b77957d005071732210c4a64"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/chromium-765-reduce.zip",
+      "bytes": 6037901,
+      "sha256": "5890930914f14125465f8e957c47cebe5c85724d12b199428afb3c98c2f33b4c",
+      "repositoryBytes": 6037901,
+      "repositorySha256": "5890930914f14125465f8e957c47cebe5c85724d12b199428afb3c98c2f33b4c"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/results.json",
+      "bytes": 349965,
+      "sha256": "36ab5566af16156553c4699f81fb78259bf3803a750b8bef3b0c49f4c33bc329",
+      "repositoryBytes": 349965,
+      "repositorySha256": "36ab5566af16156553c4699f81fb78259bf3803a750b8bef3b0c49f4c33bc329"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-1280-no-preference-overview.png",
+      "bytes": 162925,
+      "sha256": "aa65d20c18e4024a289ba0686893d44d0342366f2903e8db300a63699bbfa35d",
+      "repositoryBytes": 162925,
+      "repositorySha256": "aa65d20c18e4024a289ba0686893d44d0342366f2903e8db300a63699bbfa35d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-1280-no-preference.zip",
+      "bytes": 6522389,
+      "sha256": "53406517461cae578b9afd3e9641baeb4e2e5cd010278a331c1d59baa0aac4f7",
+      "repositoryBytes": 6522389,
+      "repositorySha256": "53406517461cae578b9afd3e9641baeb4e2e5cd010278a331c1d59baa0aac4f7"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-1280-reduce-overview.png",
+      "bytes": 162925,
+      "sha256": "aa65d20c18e4024a289ba0686893d44d0342366f2903e8db300a63699bbfa35d",
+      "repositoryBytes": 162925,
+      "repositorySha256": "aa65d20c18e4024a289ba0686893d44d0342366f2903e8db300a63699bbfa35d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-1280-reduce.zip",
+      "bytes": 6307277,
+      "sha256": "811049645003933a70dc75b5263f7130c08a88642a1588518ebe0fa163696073",
+      "repositoryBytes": 6307277,
+      "repositorySha256": "811049645003933a70dc75b5263f7130c08a88642a1588518ebe0fa163696073"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-375-no-preference-failure.png",
+      "bytes": 33767,
+      "sha256": "a9bcaecacd97e325ff28bedc288bbaa3c994038780509fdf2a78034e597c646e",
+      "repositoryBytes": 33767,
+      "repositorySha256": "a9bcaecacd97e325ff28bedc288bbaa3c994038780509fdf2a78034e597c646e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-375-no-preference.zip",
+      "bytes": 43164,
+      "sha256": "6570848f68e6927055fa6754b75e5330e842b3575db2e9c69faced02e369e488",
+      "repositoryBytes": 43164,
+      "repositorySha256": "6570848f68e6927055fa6754b75e5330e842b3575db2e9c69faced02e369e488"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-375-reduce-overview.png",
+      "bytes": 58327,
+      "sha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e",
+      "repositoryBytes": 58327,
+      "repositorySha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-375-reduce.zip",
+      "bytes": 5661939,
+      "sha256": "2039f3aaf6e9c36106814f54baddeb8039424262fa7311e1f7a0c28dd064b382",
+      "repositoryBytes": 5661939,
+      "repositorySha256": "2039f3aaf6e9c36106814f54baddeb8039424262fa7311e1f7a0c28dd064b382"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-390-no-preference-overview.png",
+      "bytes": 64031,
+      "sha256": "5aae3df9d043a5908da8b8d1f7bbe26d5af8c81a4fcd9908da238e57b4b8eeee",
+      "repositoryBytes": 64031,
+      "repositorySha256": "5aae3df9d043a5908da8b8d1f7bbe26d5af8c81a4fcd9908da238e57b4b8eeee"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-390-no-preference.zip",
+      "bytes": 5610614,
+      "sha256": "e1674ddfa8cecf82afaf3734c92a08ef2c66d314ae60ad9e5752e086c57ba461",
+      "repositoryBytes": 5610614,
+      "repositorySha256": "e1674ddfa8cecf82afaf3734c92a08ef2c66d314ae60ad9e5752e086c57ba461"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-390-reduce-overview.png",
+      "bytes": 64031,
+      "sha256": "5aae3df9d043a5908da8b8d1f7bbe26d5af8c81a4fcd9908da238e57b4b8eeee",
+      "repositoryBytes": 64031,
+      "repositorySha256": "5aae3df9d043a5908da8b8d1f7bbe26d5af8c81a4fcd9908da238e57b4b8eeee"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-390-reduce.zip",
+      "bytes": 5600685,
+      "sha256": "dd4d91679745510a12968c06e2229ecafac8a3f70398719c6ef3ded75bf3a518",
+      "repositoryBytes": 5600685,
+      "repositorySha256": "dd4d91679745510a12968c06e2229ecafac8a3f70398719c6ef3ded75bf3a518"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-765-no-preference-overview.png",
+      "bytes": 100132,
+      "sha256": "2e881917694995abe7ce58ae659b9b7770b207fe943b82baa3359e0c743ee18e",
+      "repositoryBytes": 100132,
+      "repositorySha256": "2e881917694995abe7ce58ae659b9b7770b207fe943b82baa3359e0c743ee18e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-765-no-preference.zip",
+      "bytes": 6134391,
+      "sha256": "bc73d6e65e7ccd970a4f52903c49bc33f66e98e472791923be95be51e17e7b6b",
+      "repositoryBytes": 6134391,
+      "repositorySha256": "bc73d6e65e7ccd970a4f52903c49bc33f66e98e472791923be95be51e17e7b6b"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-765-reduce-overview.png",
+      "bytes": 100133,
+      "sha256": "36cf7e929a8833b6344430b48d1b5b5856b4073fef1638969cbae9f1961977b8",
+      "repositoryBytes": 100133,
+      "repositorySha256": "36cf7e929a8833b6344430b48d1b5b5856b4073fef1638969cbae9f1961977b8"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser2/webkit-765-reduce.zip",
+      "bytes": 6327764,
+      "sha256": "1cd7c829638e10c06340fd10a648db290382a761318576801b4e31ea6975f01a",
+      "repositoryBytes": 6327764,
+      "repositorySha256": "1cd7c829638e10c06340fd10a648db290382a761318576801b4e31ea6975f01a"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-no-preference-failure.png",
+      "bytes": 2801,
+      "sha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7",
+      "repositoryBytes": 2801,
+      "repositorySha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-no-preference.zip",
+      "bytes": 3173,
+      "sha256": "968ca5ac0bd910aa78a6f19cb8b3649286b60e0bec4432c6bf95968b1227870f",
+      "repositoryBytes": 3173,
+      "repositorySha256": "968ca5ac0bd910aa78a6f19cb8b3649286b60e0bec4432c6bf95968b1227870f"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-reduce-failure.png",
+      "bytes": 2801,
+      "sha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7",
+      "repositoryBytes": 2801,
+      "repositorySha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-reduce.zip",
+      "bytes": 3175,
+      "sha256": "8266344abe1f5ecada19571b2e82fdeaf0a253dd18e97f244a73f621b9b2ce51",
+      "repositoryBytes": 3175,
+      "repositorySha256": "8266344abe1f5ecada19571b2e82fdeaf0a253dd18e97f244a73f621b9b2ce51"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-390-no-preference.zip",
+      "bytes": 2892,
+      "sha256": "ff2c7b7e0291ede8ce2e5f81a2df8ee9005a7444dfc11335c01c2bf43e7c5409",
+      "repositoryBytes": 2892,
+      "repositorySha256": "ff2c7b7e0291ede8ce2e5f81a2df8ee9005a7444dfc11335c01c2bf43e7c5409"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/results.json",
+      "bytes": 25544,
+      "sha256": "1b44f6526784c6a3942cd8a451687446a4c61e610af3996582806fd7112a30f6",
+      "repositoryBytes": 25544,
+      "repositorySha256": "1b44f6526784c6a3942cd8a451687446a4c61e610af3996582806fd7112a30f6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference-overview.png",
+      "bytes": 58327,
+      "sha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e",
+      "repositoryBytes": 58327,
+      "repositorySha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference.zip",
+      "bytes": 5664355,
+      "sha256": "f45c1b29fd8ac75237bb0150ea2526fab7c0edddef9250ae20830fd33f58a4b6",
+      "repositoryBytes": 5664355,
+      "repositorySha256": "f45c1b29fd8ac75237bb0150ea2526fab7c0edddef9250ae20830fd33f58a4b6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-oracle/coordinate-oracle.json",
+      "bytes": 4314,
+      "sha256": "c8349f4cc0a4ea96fc26b4e937563f38c800c0e29482986b3cf76b1b1f54d6ba",
+      "repositoryBytes": 4172,
+      "repositorySha256": "a34a1de2fa103a0a2cf8720a8308c1409f94496fd616bb77c3b0f004148ce507"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/audit-first.json",
+      "bytes": 10244,
+      "sha256": "1dc69c790e9b473670b4ffe6601aa75e97479690134b0e644406e4601da52e81",
+      "repositoryBytes": 10244,
+      "repositorySha256": "1dc69c790e9b473670b4ffe6601aa75e97479690134b0e644406e4601da52e81"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/audit-formal.json",
+      "bytes": 11418,
+      "sha256": "83b4f7e98e2a5893156868af9e83d740af4cd83464a6d3ecac5adaab0a4b0809",
+      "repositoryBytes": 11418,
+      "repositorySha256": "83b4f7e98e2a5893156868af9e83d740af4cd83464a6d3ecac5adaab0a4b0809"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/audit-subset.json",
+      "bytes": 10550,
+      "sha256": "fa6b1a56ca124dcbe0477f148331a55c302dd55a90dec29bc2a0d34cb5d1e8f9",
+      "repositoryBytes": 10550,
+      "repositorySha256": "fa6b1a56ca124dcbe0477f148331a55c302dd55a90dec29bc2a0d34cb5d1e8f9"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/browser-runner.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repositoryBytes": 0,
+      "repositorySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/browser2-runner.txt",
+      "bytes": 1486,
+      "sha256": "e9d82d7bf7b5e97a56558ecc2cffc128751705b1fcc9e64b6b2257fa23d3fcf5",
+      "repositoryBytes": 1403,
+      "repositorySha256": "f280b103cb2e649eb7c08bf8285c69e7ee4bfed0ef5461f2ee1e2affccc4f67e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/unit.txt",
+      "bytes": 24462,
+      "sha256": "e69e2189c2ef9bcf103e2278d76054ce511605db07a6f3eade4550b1361dbb2d",
+      "repositoryBytes": 24062,
+      "repositorySha256": "f8be0ca835b08ef3d4014e9349fa807b672dabb0fcc87a4f90730bc57e6b31ff"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/webkit-recheck-runner.txt",
+      "bytes": 211,
+      "sha256": "78f1a3a1ac0907bf0f6004dcf351a32400a7f1853ac81130d51f2c49ed4b9ef0",
+      "repositoryBytes": 197,
+      "repositorySha256": "30ac453415859f687de62af86464ef924b939bf50d13e8d18d1b0f82027a8d1d"
+    }
+  ],
+  "limits": "Computational and automated desktop checks only; historic registration, physical devices, native reread and runtime-envelope completeness remain unverified. ZIP traces are preserved locally; this report does not imply remote archival."
+}
