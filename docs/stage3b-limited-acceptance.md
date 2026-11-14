@@ -65,3 +65,7 @@
 [固定追加検査と反例](maintenance/stage3b-followup/README.md)に対象を分離。実mesh・全祖先の可視性、開始A/C/C+Dからの22詳細、意図的な模型非表示対照、HTTP配信JS等の実本文対build実本文、旧取得後のscene書換えを追加で確認する。従来の画面名・選択ID・camera一致だけでは表示成功／旧応答排除の受入に使わない。
 
 取得中close／並列retry／旧restoreなど通常UIで発生させられない条件は[到達性原票](maintenance/stage3b-races-20261114/README.md)とNOT_TESTEDを維持する。context lossは実ブラウザの故障注入であり通常UI、OS強制終了、実機Safariの代わりではない。したがってCI job成功だけで要求5経路全体PASSとはしない。
+
+## 遅延操作の再審査契約（2026-11-14、追加レビュー5904216394）
+
+[遅延5経路の証拠分類と固定契約](maintenance/stage3b-races-20261114/CONTRACT.md)を追加する。UI到達性、内部controller安全性、native context-loss故障注入を別の試験種別とし、PASS等の結果と混同しない。過去の4経路×2engine NOT_TESTEDを保持する。最新HEADの正式CI・内部正常/故障対照・独立レビュー・原ZIP再取得照合が揃うまで、以前のPARTIAL/限定マージNOは自動変更しない。
