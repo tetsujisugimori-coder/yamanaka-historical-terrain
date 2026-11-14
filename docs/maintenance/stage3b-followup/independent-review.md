@@ -42,3 +42,15 @@
 `hidden-fixed` の保存実物13ファイルをmanifest・size・SHAで再照合。正常と故障元JSはともに `a89b6bf7021f064db8ea8971e288de58383292d467bf0bda874bd4ab8a6f7cb0`。故障JSは指定位置へのtarget mesh非表示コードの単一挿入と実バイト一致。両者のcamera/target/fovは同一、各条件の無変更control PNGは一致、正常／故障PNGは不一致。正常GREEN・非表示理由によるSEMANTIC_REDを独立確認した。これは固定buildの局所対照であり、最終HEAD CIやLibrary保全の代用ではない。
 
 独立反例を正式CIで再検証できるよう `scripts/stage3b-review-regressions-browser.mjs` に2ケースを固定した。Chromium/WebKitごとに実行し、非表示拒否→回復、同資源の最新操作成功を別々に記録する。
+
+### phase3e既存async契約の独立再確認
+
+提出 `eb91adf` の正式run `43581806025` でpending-resetがtimeoutし、404はPASSした旧原票を保持・独立照合した。旧テストは「cacheのみ」と説明しながら `phase3c.loaded`（sceneへ接続したinnerMeta）を待っており、今回の古い応答によるscene接続禁止と矛盾していた。
+
+取得完了とscene接続を別観測に変更した最終候補を独立実行し、pending-reset・404の2件PASS。timeoutは延長せず、HTTP応答完了、同じacquisitionのacquired/terminal、古いwaiterのstale-discarded/terminal、scene未接続、全state・comparison・camera・target・fov不変を要求する強化を確認した。候補main SHA-256 `75d99d84d539b5c93d733a5415f0702f477472250c790c2b2f4be68a6c7875e6`、試験script `cbe9237fa296638971f9c9b2dc9706bea51ce5a8d2242a87a78d052ab6cdff74`。原票は `independent-async-final` に分離保存。これは最終提出HEADのCI成功の代用ではない。
+
+### 植生の既存重複除外契約
+
+初回productionの植生4mesh非表示FAILを保持した上で、既存 `docs/phase3b.md` と `landscape.js` の西方地形重複除外を確認した。Three.jsや製品 `landscapeModel` を使わずPython structで元GLBのPOSITIONとnode TRSを独立再計算し、108元nodes、重複4batchの頂点数 `[84,210,252,546]`、非重複4batch `[504,546,672,1722]` を照合した。
+
+新検査はこの既知理由だけをsc-vegetationに限定し、西方の実mesh、祖先可視、非除外mesh可視を要求する。全非表示、別ID、未知理由、sourceFlag不整合、西方表示なし・実meshなし、祖先非表示、POSITION欠落、bounds欠落を拒否する関連単体を独立実行した。dev補助原票でも正常4可視/4除外、C OFF拒否、全植生hidden拒否を確認。利用者向けの部分除外説明も追加され、樹木が地形へ同等置換されたとは説明しない。単純な「1meshでも可視なら成功」への緩和ではない。最終production CIの成功は別途確認する。
