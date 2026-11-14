@@ -1,3 +1,4 @@
+import {inventoryEvidence} from './stage3b-evidence-inventory.mjs';
 /** Supplementary production acceptance. Never replaces historic dev/failed records. */
 import {chromium,webkit,expect} from '@playwright/test';
 import {mkdir,writeFile,readFile,readdir,stat,statfs} from 'node:fs/promises';
@@ -17,7 +18,7 @@ const expectedFeatures={};for(const name of ['nishinomaru','landscape','phase3b'
 // The landscape data intentionally amends the historic baseline description (e.g. nm-passage).
 const captions=JSON.parse(await readFile('public/data/landscape.json','utf8')).surfaceCaptions;
 for(const [id,caption] of Object.entries(captions))if(expectedFeatures[id])Object.assign(expectedFeatures[id],caption);
-const sources=['src/main.js','src/castle-overview.js','src/castle-overview-contract.js','scripts/stage3b-limited-browser.mjs','public/data/castle-overview.json','src/overview-destinations.js',...['nishinomaru','landscape','phase3b','phase3c','phase3d'].map(n=>`public/data/${n}.json`)];
+const sources=['scripts/stage3b-evidence-inventory.mjs','src/main.js','src/castle-overview.js','src/castle-overview-contract.js','scripts/stage3b-limited-browser.mjs','public/data/castle-overview.json','src/overview-destinations.js',...['nishinomaru','landscape','phase3b','phase3c','phase3d'].map(n=>`public/data/${n}.json`)];
 const sourceHashes=Object.fromEntries(await Promise.all(sources.map(async p=>[p,sha(await readFile(p))])));
 const buildFiles=['dist/index.html',...(await readdir('dist/assets')).map(p=>'dist/assets/'+p),'dist/data/castle-overview.json'];
 const buildHashes=Object.fromEntries(await Promise.all(buildFiles.map(async p=>[p,sha(await readFile(p))])));
@@ -78,5 +79,5 @@ for(const [name,engine]of Object.entries({chromium,webkit}).filter(([n])=>!proce
  await browser.close();
 }
 await saveResult();
-const manifest=[];for(const filename of await readdir(out)){const bytes=await readFile(path.join(out,filename));manifest.push({filename,size:bytes.length,sha256:sha(bytes)});}await writeFile(path.join(out,'manifest.json'),JSON.stringify(manifest,null,2));
+await writeFile(path.join(out,'manifest.json'),JSON.stringify(await inventoryEvidence(out),null,2));
 console.log(JSON.stringify(rows.map(({key,status,error})=>({key,status,error})),null,2));if(rows.some(r=>r.status!=='PASS')||(!process.env.SMOKE_ONLY&&!process.env.BROWSER_FILTER&&rows.filter(r=>/^\w+-\d+-/.test(r.key)).length!==16))process.exitCode=1;
