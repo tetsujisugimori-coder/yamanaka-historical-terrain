@@ -54,3 +54,11 @@
 初回productionの植生4mesh非表示FAILを保持した上で、既存 `docs/phase3b.md` と `landscape.js` の西方地形重複除外を確認した。Three.jsや製品 `landscapeModel` を使わずPython structで元GLBのPOSITIONとnode TRSを独立再計算し、108元nodes、重複4batchの頂点数 `[84,210,252,546]`、非重複4batch `[504,546,672,1722]` を照合した。
 
 新検査はこの既知理由だけをsc-vegetationに限定し、西方の実mesh、祖先可視、非除外mesh可視を要求する。全非表示、別ID、未知理由、sourceFlag不整合、西方表示なし・実meshなし、祖先非表示、POSITION欠落、bounds欠落を拒否する関連単体を独立実行した。dev補助原票でも正常4可視/4除外、C OFF拒否、全植生hidden拒否を確認。利用者向けの部分除外説明も追加され、樹木が地形へ同等置換されたとは説明しない。単純な「1meshでも可視なら成功」への緩和ではない。最終production CIの成功は別途確認する。
+
+### phase3c既存stale契約の独立再確認
+
+提出 `ea4ec6e` の正式inner run `43583845386` の原ZIP（SHA-256 `c15214f0c889eae4335858ac3b518b618b2c9cc0b49ff53b7981a3b130c9c2af`）を再読出し、CRCとChromium/WebKitのstale-success・stale-failure計4件の45秒timeoutを独立確認した。旧検査の `loaded || unavailable` はscene接続または現操作のerror反映を待つため、古い応答をsceneへ接続しない新契約と矛盾していた。旧失敗原票を保持する。
+
+試験器だけの修正を独立読解し、同じ保留HTTP応答・成功200/失敗404・timeout45秒を保持したまま、対応するacquisition sequenceとwaiter IDのterminal、acquired/failed、stale-discarded、scene未接続、全state・comparison・camera・target・fov不変を要求する強化であることを確認した。製品の生成・表示処理や正式期待値を成功のために変更していない。
+
+別port・別証拠領域で同じ修正scriptを独立再実行し、Chromium390pxの通常/Reduced Motion 2条件と8故障条件がPASS、source-stabilityもPASS。stale成功/失敗の原JSONを別読み直しして、HTTP終了と取得/旧waiter終了、その後のstate不変を照合した。対象main SHA-256 `857ba83920495004526db545eed0c2afdc2949ce814ac8d0d10a0bc24ce67455`、script SHA-256 `cc223656f1de850a0ae62c9932ade909472df5ba82de694f0c5530e11b1e26e8`。補助原票は `inner-terminal-independent` に保存。これはdev配信の局所再検証であり、最終提出HEADの正式CIやWebKit再受入の代用にはしない。

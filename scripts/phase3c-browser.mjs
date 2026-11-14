@@ -64,7 +64,20 @@ for(const name of process.env.PHASE3C_ENGINE?[process.env.PHASE3C_ENGINE]:['chro
     else{expect(d.phase3c.objects).toEqual([]);await expect(p.locator('#inner-asset-status')).toContainText('接続先');await p.locator('[data-station=bailey]').click();await p.waitForFunction(()=>window.__terrainDiagnostics().state.station==='bailey');expect((await snap(p)).state.ready).toBe(true);failed=false;await p.locator('[data-landscape-mode=c]').click();await ready(p);expect((await snap(p)).phase3c.visible).toBe(true);expect((await snap(p)).phase3c.objects.length).toBeGreaterThan(0);await expect(p.locator('#inner-asset-status')).not.toContainText('読み込めない');}
    }
    else if(kind==='404-retry'){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.unavailable);expect((await snap(p)).landscape.objects.length).toBeGreaterThan(0);failed=false;await p.locator('#inner-load').click();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded&&!window.__terrainDiagnostics().phase3c.unavailable);}
-   else if(kind.startsWith('stale')){await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);const request=p.waitForRequest('**/data/phase3i-inner.glb');await p.locator('#inner-load').click();await request;await p.locator('[data-view=castle]').click();await ready(p);const before=await snap(p);release();await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.loaded||window.__terrainDiagnostics().phase3c.unavailable);const after=await snap(p);expect(after.state).toEqual(before.state);expect(after.camera).toEqual(before.camera);expect(after.target).toEqual(before.target);expect(after.phase3c.objects).toEqual([]);}
+   else if(kind.startsWith('stale')){
+    await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);
+    const request=p.waitForRequest('**/data/phase3i-inner.glb');await p.locator('#inner-load').click();await request;
+    const pending=await snap(p),sequence=pending.phase3c.acquisition.sequence,operation=pending.phase3c.operations.findLast(o=>!o.terminal);
+    expect(operation,'matching pending waiter').toBeTruthy();expect(pending.phase3c.acquisition.status).toBe('pending');
+    await p.locator('[data-view=castle]').click();await ready(p);const before=await snap(p);
+    const response=p.waitForResponse('**/data/phase3i-inner.glb');release();const delivered=await response;await delivered.finished();
+    await p.waitForFunction(({sequence,id})=>{const d=window.__terrainDiagnostics().phase3c;return d.acquisition.sequence===sequence&&d.acquisition.terminal&&d.operations.some(o=>o.id===id&&o.terminal);},{sequence,id:operation.id});
+    const after=await snap(p);expect(delivered.status()).toBe(kind==='stale-success'?200:404);
+    expect(after.phase3c.acquisition.status).toBe(kind==='stale-success'?'acquired':'failed');expect(after.phase3c.operations.find(o=>o.id===operation.id).status).toBe('stale-discarded');
+    expect(after.state).toEqual(before.state);expect(after.camera).toEqual(before.camera);expect(after.target).toEqual(before.target);expect(after.cameraFov).toBe(before.cameraFov);expect(after.reconstruction.comparison).toBe(before.reconstruction.comparison);
+    expect(after.phase3c.loaded).toBe(before.phase3c.loaded);expect(after.phase3c.loaded).toBe(false);expect(after.phase3c.unavailable).toBe(before.phase3c.unavailable);expect(after.phase3c.visible).toBe(false);expect(after.phase3c.objects).toEqual([]);expect(after.modelMeshes.some(m=>m.featureId.startsWith('ic-'))).toBe(false);
+    row.before=before;row.after=after;row.acquisitionSequence=sequence;row.operationId=operation.id;row.httpStatus=delivered.status();row.observation='Matching HTTP acquisition and stale waiter terminated; scene metadata/error flag and complete new state remain unchanged';
+   }
    else if(kind==='metadata-mismatch'){
     await p.goto(root);await ready(p);await p.locator('#landscape-enter').click();await ready(p);const before=await snap(p);await p.locator('#inner-load').click();
     await p.waitForFunction(()=>window.__terrainDiagnostics().phase3c.unavailable&&document.body.dataset.innerReadingState==='unavailable');const rejected=await snap(p);
