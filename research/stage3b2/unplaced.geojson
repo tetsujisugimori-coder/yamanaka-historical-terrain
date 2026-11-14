@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "name": "Stage3B2 unplaced catalog, no projected coordinates",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "nishinomaru",
+      "geometry": null,
+      "properties": {
+        "name": "西ノ丸",
+        "status": "unplaced"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nishi-yagura",
+      "geometry": null,
+      "properties": {
+        "name": "西櫓",
+        "status": "unplaced"
+      }
+    }
+  ]
+}

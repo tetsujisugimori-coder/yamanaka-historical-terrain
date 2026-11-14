@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "baseline": "6d580aeb61a3b6b8f2d64b3c8f1ab45272c7b087",
+  "crs": "EPSG:6676",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "vertical": "GSI published orthometric height, m; no ellipsoid conversion; measurement epoch/individual datum revision UNKNOWN",
+  "webAxes": "x=E-E0, y=H, z=-(N-N0)",
+  "regions": [
+    {
+      "id": "nishinomaru",
+      "name": "西ノ丸",
+      "aliases": [],
+      "status": "unplaced",
+      "geometry": null,
+      "sourceIds": [
+        "plan-2023",
+        "mishima-works",
+        "mishima-repair"
+      ],
+      "controlPointIds": [
+        "nishinomaru-candidate-1",
+        "nishinomaru-candidate-2"
+      ],
+      "acceptedFitCount": 0,
+      "independentCheckCount": 0,
+      "transform": null,
+      "fitRmseMetres": null,
+      "checkRmseMetres": null,
+      "maxResidualMetres": null,
+      "distortion": "UNKNOWN",
+      "acceptanceToleranceMetres": null,
+      "reason": "独立対応点0。原測量図・座標簿・改修との対応が不足。",
+      "updatedAt": "2026-11-14T22:48:34.589230+00:00"
+    },
+    {
+      "id": "nishi-yagura",
+      "name": "西櫓",
+      "aliases": [],
+      "status": "unplaced",
+      "geometry": null,
+      "sourceIds": [
+        "plan-2023",
+        "mishima-works",
+        "mishima-repair"
+      ],
+      "controlPointIds": [
+        "nishi-yagura-candidate-1",
+        "nishi-yagura-candidate-2"
+      ],
+      "acceptedFitCount": 0,
+      "independentCheckCount": 0,
+      "transform": null,
+      "fitRmseMetres": null,
+      "checkRmseMetres": null,
+      "maxResidualMetres": null,
+      "distortion": "UNKNOWN",
+      "acceptanceToleranceMetres": null,
+      "reason": "独立対応点0。原測量図・座標簿・改修との対応が不足。",
+      "updatedAt": "2026-11-14T22:48:34.589230+00:00"
+    }
+  ],
+  "controlPoints": [
+    {
+      "id": "nishinomaru-candidate-1",
+      "regionId": "nishinomaru",
+      "feature": "西堀と北堀の接続部",
+      "sourceId": "plan-2023",
+      "locator": "印刷p65図3-35・p66表3-7",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "role": "rejected",
+      "accepted": false,
+      "reason": "特徴候補は図で読めるが、改修前後の同一地点・現況座標・独立性を同定できていない。",
+      "observer": "implementation agent",
+      "uncertainty": "UNKNOWN",
+      "method": "原図画像と既存現況資産の資料条件を比較。測量点採取ではない。"
+    },
+    {
+      "id": "nishinomaru-candidate-2",
+      "regionId": "nishinomaru",
+      "feature": "物見台と曲輪の接続部",
+      "sourceId": "plan-2023",
+      "locator": "印刷p65図3-35・p66表3-7",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "role": "rejected",
+      "accepted": false,
+      "reason": "特徴候補は図で読めるが、改修前後の同一地点・現況座標・独立性を同定できていない。",
+      "observer": "implementation agent",
+      "uncertainty": "UNKNOWN",
+      "method": "原図画像と既存現況資産の資料条件を比較。測量点採取ではない。"
+    },
+    {
+      "id": "nishi-yagura-candidate-1",
+      "regionId": "nishi-yagura",
+      "feature": "東南側虎口の土塁開口",
+      "sourceId": "plan-2023",
+      "locator": "印刷p65図3-35・p66表3-7",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "role": "rejected",
+      "accepted": false,
+      "reason": "特徴候補は図で読めるが、改修前後の同一地点・現況座標・独立性を同定できていない。",
+      "observer": "implementation agent",
+      "uncertainty": "UNKNOWN",
+      "method": "原図画像と既存現況資産の資料条件を比較。測量点採取ではない。"
+    },
+    {
+      "id": "nishi-yagura-candidate-2",
+      "regionId": "nishi-yagura",
+      "feature": "西ノ丸側の堀端",
+      "sourceId": "plan-2023",
+      "locator": "印刷p65図3-35・p66表3-7",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "role": "rejected",
+      "accepted": false,
+      "reason": "特徴候補は図で読めるが、改修前後の同一地点・現況座標・独立性を同定できていない。",
+      "observer": "implementation agent",
+      "uncertainty": "UNKNOWN",
+      "method": "原図画像と既存現況資産の資料条件を比較。測量点採取ではない。"
+    }
+  ],
+  "placementAllowed": false,
+  "history": [
+    {
+      "at": "2026-11-14T22:48:34.589230+00:00",
+      "action": "2区域調査台帳追加。全区域位置・全模型不変"
+    }
+  ]
+}
