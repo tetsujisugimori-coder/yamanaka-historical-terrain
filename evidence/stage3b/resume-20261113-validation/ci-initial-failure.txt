@@ -1,0 +1,21 @@
+overview	Run npx playwright install --with-deps chromium webkit	﻿2026-11-13T12:22:16.6086824Z ##[group]Run npx playwright install --with-deps chromium webkit
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:16.6087136Z ^[[36;1mnpx playwright install --with-deps chromium webkit^[[0m
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:16.6129527Z shell: /usr/bin/bash -e {0}
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:16.6129671Z ##[endgroup]
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:17.0906948Z BEWARE: your OS is not officially supported by Playwright; installing dependencies for ubuntu26.04-x64 as a fallback.
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:17.0907892Z Cannot install dependencies for ubuntu26.04-x64 with Playwright 1.56.1!
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:17.0949490Z Failed to install browsers
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:17.0950075Z Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
+overview	Run npx playwright install --with-deps chromium webkit	2026-11-13T12:22:17.1151779Z ##[error]Process completed with exit code 1.
+overview	Run actions/upload-artifact@v4	﻿2026-11-13T12:22:17.1229902Z ##[group]Run actions/upload-artifact@v4
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230092Z with:
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230269Z   name: stage3b-overview-d6993233f7e81c6d14a6eb6e0e40a73d3ef03166
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230476Z   path: evidence-run/stage3b
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230620Z   if-no-files-found: error
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230754Z   compression-level: 6
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1230880Z   overwrite: false
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1231008Z   include-hidden-files: false
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.1231151Z ##[endgroup]
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.2369529Z (node:2308) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.2370338Z (Use `node --trace-deprecation ...` to show where the warning was created)
+overview	Run actions/upload-artifact@v4	2026-11-13T12:22:17.2392703Z ##[error]No files were found with the provided path: evidence-run/stage3b. No artifacts will be uploaded.

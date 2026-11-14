@@ -1,0 +1,3025 @@
+{
+  "schemaVersion": 1,
+  "crs": "EPSG:6676",
+  "origin": {
+    "easting": 44862.121277226666,
+    "northing": -93478.07235405142,
+    "vertical": 0,
+    "crs": "EPSG:6676"
+  },
+  "checkedAt": "2026-11-10T03:27:32.203836+00:00",
+  "regions": [
+    {
+      "id": "honmaru",
+      "name": "本丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "主尾根中央。二ノ丸・北ノ丸と橋で連絡する。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "kitanomaru",
+          "type": "south_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "ninomaru",
+      "name": "二ノ丸",
+      "aliases": [
+        "北条丸"
+      ],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "本丸の西隣。北条丸は後の調査結果に基づき二ノ丸へ改称。",
+      "relations": [
+        {
+          "target": "honmaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "motonishi-yagura",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "kitanomaru",
+      "name": "北ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "本丸の北側の曲輪。東南の帯曲輪接続部に門の推定根拠となる柱穴がある。",
+      "relations": [
+        {
+          "target": "honmaru",
+          "type": "north_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishinomaru",
+      "name": "西ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "元西櫓と西櫓の間の曲輪。古絵図で二ノ丸と記す例があるため同名を機械同一視しない。",
+      "relations": [
+        {
+          "target": "motonishi-yagura",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "nishi-yagura",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "motonishi-yagura",
+      "name": "元西櫓",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "二ノ丸西隣の小曲輪。名称と上部構造の存在を区別する。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "nishinomaru",
+          "type": "east_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishi-yagura",
+      "name": "西櫓",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "西ノ丸西側の堀を隔てた小曲輪。東南隅に虎口。",
+      "relations": [
+        {
+          "target": "nishinomaru",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "sannomaru",
+      "name": "三ノ丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "二ノ丸南方、箱井戸東側。現在の公民館・宗閑寺周辺を含む。",
+      "relations": [
+        {
+          "target": "ninomaru",
+          "type": "south_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "minami-yagura",
+          "type": "northeast_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "daizaki",
+      "name": "岱崎出丸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "南櫓の西南の尾根。御馬場曲輪・すり鉢曲輪等を含む出丸の名称。",
+      "relations": [
+        {
+          "target": "minami-yagura",
+          "type": "southwest_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "minami-yagura",
+      "name": "南櫓",
+      "aliases": [
+        "大手"
+      ],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "三ノ丸西南隣り。道路・民家等で旧状がほとんど残らず、大手口の場所は未確定。",
+      "relations": [
+        {
+          "target": "sannomaru",
+          "type": "southwest_of",
+          "basis": "plan-2023 pp64-67"
+        },
+        {
+          "target": "daizaki",
+          "type": "northeast_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "raoshiba",
+      "name": "ラオシバ",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 67,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "北ノ丸の深い堀を隔てた北側。計画書時点で本格調査未実施とされる。",
+      "relations": [
+        {
+          "target": "kitanomaru",
+          "type": "north_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    },
+    {
+      "id": "nishikido",
+      "name": "西木戸",
+      "aliases": [],
+      "sourceRefs": [
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 66,
+          "figure": "表3-7"
+        },
+        {
+          "id": "plan-2023",
+          "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+          "page": 65,
+          "figure": "図3-35"
+        }
+      ],
+      "certainty": "unplaced",
+      "geometry": null,
+      "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+      "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+      "summary": "西櫓堀外の帯曲輪から外堀までの地域。門と柵の推定は測量済み形状ではない。",
+      "relations": [
+        {
+          "target": "nishi-yagura",
+          "type": "west_of",
+          "basis": "plan-2023 pp64-67"
+        }
+      ]
+    }
+  ],
+  "georeference": {
+    "status": "BLOCKED",
+    "crs": "EPSG:6676",
+    "controlPointCount": 0,
+    "transform": null,
+    "residuals": null,
+    "residualUnits": "m",
+    "reason": "図3-35の座標枠に数値ラベルがなく、基準点を同定できない。名称点を測量基準点へ転用しない。",
+    "sourceScale": "UNKNOWN",
+    "sourceMapSurveyDate": "UNKNOWN",
+    "sourceOrientation": "図中の数値方位基準未確認。北上の外観のみで測地方位を認定しない。",
+    "demEpoch": "現況DEMは1590年地表と異なる。",
+    "controls": [],
+    "method": "No transform: zero independently verified correspondence points",
+    "limitations": "図3-35の座標枠に数値ラベルがなく、基準点を同定できない。名称点を測量基準点へ転用しない。"
+  },
+  "extentDistinctions": {
+    "designatedArea": "計画p47図3-1が指定区域と周知遺跡を区別。p48の指定面積117,856.91m²（1934年98,183.00＋1978年19,673.91）。実測面積との差があり得るとの注記。p65は約12万m²。形状未生成。",
+    "estimatedHistoricalArea": "計画p65時点で約20万m²。推定面積を円や矩形へ変換して境界を捏造しない。",
+    "demCoverage": "既存メタデータのcastle bounds/regional boundsで定義。指定区域や歴史城域ではない。",
+    "modelCoverage": "実GLB/geometryのboundsで定義。史実の遺構範囲と同一視しない。"
+  },
+  "sources": [
+    {
+      "id": "plan-2023",
+      "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf",
+      "title": "史跡山中城跡保存活用計画",
+      "publisher": "三島市教育委員会",
+      "publication": "2023-03-10",
+      "pdfSha256": "611656844f9c993b2042c98b301f2a63a8e3d14a2be24830c34838b6c995d2d8",
+      "pages": {
+        "printed65": "PDF page73 (1-based)",
+        "printed66": "PDF page74 (1-based)",
+        "printed67": "PDF page75 (1-based)",
+        "printed47": "PDF page55 (1-based)",
+        "printed48": "PDF page56 (1-based)",
+        "printed49": "PDF page57 (1-based)"
+      },
+      "rawRedistribution": false
+    }
+  ],
+  "models": [
+    {
+      "id": "nm-bailey",
+      "name": "西ノ丸 曲輪候補",
+      "featureId": "nm-bailey",
+      "evidenceCategory": "C",
+      "facilityType": "曲輪",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "metadata": "data/nishinomaru.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44852.121277226666,
+        -93475.57235405142
+      ],
+      "webBounds": {
+        "min": [
+          -30,
+          574.9900512695312,
+          -25
+        ],
+        "max": [
+          10,
+          576.6566772460938,
+          20
+        ]
+      },
+      "nodeNames": [
+        "nm-bailey"
+      ],
+      "vertexCount": 26901,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "nm-moat",
+      "name": "西ノ丸 障子堀候補",
+      "featureId": "nm-moat",
+      "evidenceCategory": "C",
+      "facilityType": "障子堀",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "metadata": "data/nishinomaru.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44800.121277226666,
+              -93504.07235405142
+            ],
+            [
+              44820.121277226666,
+              -93504.07235405142
+            ],
+            [
+              44820.121277226666,
+              -93446.07235405142
+            ],
+            [
+              44800.121277226666,
+              -93446.07235405142
+            ],
+            [
+              44800.121277226666,
+              -93504.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44810.121277226666,
+        -93475.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -62,
+          572.89892578125,
+          -32
+        ],
+        "max": [
+          -42,
+          575.4996948242188,
+          26
+        ]
+      },
+      "nodeNames": [
+        "nm-moat"
+      ],
+      "vertexCount": 18873,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "nm-rampart",
+      "name": "西ノ丸 土塁候補",
+      "featureId": "nm-rampart",
+      "evidenceCategory": "C",
+      "facilityType": "土塁",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "metadata": "data/nishinomaru.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44821.621277226666,
+              -93504.57235405142
+            ],
+            [
+              44878.621277226666,
+              -93504.57235405142
+            ],
+            [
+              44878.621277226666,
+              -93445.57235405142
+            ],
+            [
+              44821.621277226666,
+              -93445.57235405142
+            ],
+            [
+              44821.621277226666,
+              -93504.57235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44850.121277226666,
+        -93475.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -40.5,
+          574.9380493164062,
+          -32.5
+        ],
+        "max": [
+          16.5,
+          577.9960327148438,
+          26.5
+        ]
+      },
+      "nodeNames": [
+        "nm-rampart"
+      ],
+      "vertexCount": 17436,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "nm-passage",
+      "name": "虎口・接続通路候補",
+      "featureId": "nm-passage",
+      "evidenceCategory": "C",
+      "facilityType": "通路",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "metadata": "data/nishinomaru.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44858.121277226666,
+              -93518.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93518.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93488.07235405142
+            ],
+            [
+              44858.121277226666,
+              -93488.07235405142
+            ],
+            [
+              44858.121277226666,
+              -93518.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44870.121277226666,
+        -93503.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -4,
+          565.4994506835938,
+          10
+        ],
+        "max": [
+          20,
+          575.0700073242188,
+          40
+        ]
+      },
+      "nodeNames": [
+        "nm-passage"
+      ],
+      "vertexCount": 11737,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "nm-transition",
+      "name": "復元地形への接続",
+      "featureId": "nm-transition",
+      "evidenceCategory": "C",
+      "facilityType": "接続地形",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+      "metadata": "data/nishinomaru.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44782.121277226666,
+              -93528.07235405142
+            ],
+            [
+              44892.121277226666,
+              -93528.07235405142
+            ],
+            [
+              44892.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93528.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44837.121277226666,
+        -93475.57235405142
+      ],
+      "webBounds": {
+        "min": [
+          -80,
+          553.8200073242188,
+          -55
+        ],
+        "max": [
+          30,
+          576.4600219726562,
+          50
+        ]
+      },
+      "nodeNames": [
+        "nm-transition"
+      ],
+      "vertexCount": 113214,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "wb-bailey",
+      "name": "西櫓の曲輪・土塁・板塀",
+      "featureId": "wb-bailey",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓の曲輪・土塁・板塀",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "metadata": "data/phase3b.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44678.121277226666,
+              -93503.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93503.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44678.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44678.121277226666,
+              -93503.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44730.121277226666,
+        -93463.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -184,
+          537.7064208984375,
+          -55
+        ],
+        "max": [
+          -80,
+          571.2000122070312,
+          25
+        ]
+      },
+      "nodeNames": [
+        "wb-bailey.surface.grass",
+        "wb-bailey.north.post.0",
+        "wb-bailey.north.rail.0.0.45",
+        "wb-bailey.north.rail.0.1.2",
+        "wb-bailey.north.board.0.0",
+        "wb-bailey.north.board.0.1",
+        "wb-bailey.north.board.0.2",
+        "wb-bailey.north.board.0.3",
+        "wb-bailey.north.board.0.4",
+        "wb-bailey.north.post.1",
+        "wb-bailey.north.rail.1.0.45",
+        "wb-bailey.north.rail.1.1.2",
+        "wb-bailey.north.board.1.0",
+        "wb-bailey.north.board.1.1",
+        "wb-bailey.north.board.1.2",
+        "wb-bailey.north.board.1.3",
+        "wb-bailey.north.board.1.4",
+        "wb-bailey.north.post.2",
+        "wb-bailey.north.rail.2.0.45",
+        "wb-bailey.north.rail.2.1.2",
+        "wb-bailey.north.board.2.0",
+        "wb-bailey.north.board.2.1",
+        "wb-bailey.north.board.2.2",
+        "wb-bailey.north.board.2.3",
+        "wb-bailey.north.board.2.4",
+        "wb-bailey.north.post.3",
+        "wb-bailey.north.rail.3.0.45",
+        "wb-bailey.north.rail.3.1.2",
+        "wb-bailey.north.board.3.0",
+        "wb-bailey.north.board.3.1",
+        "wb-bailey.north.board.3.2",
+        "wb-bailey.north.board.3.3",
+        "wb-bailey.north.board.3.4",
+        "wb-bailey.north.post.4",
+        "wb-bailey.north.rail.4.0.45",
+        "wb-bailey.north.rail.4.1.2",
+        "wb-bailey.north.board.4.0",
+        "wb-bailey.north.board.4.1",
+        "wb-bailey.north.board.4.2",
+        "wb-bailey.north.board.4.3",
+        "wb-bailey.north.board.4.4",
+        "wb-bailey.north.post.5",
+        "wb-bailey.north.rail.5.0.45",
+        "wb-bailey.north.rail.5.1.2",
+        "wb-bailey.north.board.5.0",
+        "wb-bailey.north.board.5.1",
+        "wb-bailey.north.board.5.2",
+        "wb-bailey.north.board.5.3",
+        "wb-bailey.north.board.5.4",
+        "wb-bailey.north.post.6",
+        "wb-bailey.north.rail.6.0.45",
+        "wb-bailey.north.rail.6.1.2",
+        "wb-bailey.north.board.6.0",
+        "wb-bailey.north.board.6.1",
+        "wb-bailey.north.board.6.2",
+        "wb-bailey.north.board.6.3",
+        "wb-bailey.north.board.6.4",
+        "wb-bailey.north.post.7",
+        "wb-bailey.north.rail.7.0.45",
+        "wb-bailey.north.rail.7.1.2",
+        "wb-bailey.north.board.7.0",
+        "wb-bailey.north.board.7.1",
+        "wb-bailey.north.board.7.2",
+        "wb-bailey.north.board.7.3",
+        "wb-bailey.north.board.7.4",
+        "wb-bailey.north.post.8",
+        "wb-bailey.north.rail.8.0.45",
+        "wb-bailey.north.rail.8.1.2",
+        "wb-bailey.north.board.8.0",
+        "wb-bailey.north.board.8.1",
+        "wb-bailey.north.board.8.2",
+        "wb-bailey.north.board.8.3",
+        "wb-bailey.north.board.8.4",
+        "wb-bailey.north.post.9",
+        "wb-bailey.north.rail.9.0.45",
+        "wb-bailey.north.rail.9.1.2",
+        "wb-bailey.north.board.9.0",
+        "wb-bailey.north.board.9.1",
+        "wb-bailey.north.board.9.2",
+        "wb-bailey.north.board.9.3",
+        "wb-bailey.north.board.9.4",
+        "wb-bailey.north.post.10",
+        "wb-bailey.north.rail.10.0.45",
+        "wb-bailey.north.rail.10.1.2",
+        "wb-bailey.north.board.10.0",
+        "wb-bailey.north.board.10.1",
+        "wb-bailey.north.board.10.2",
+        "wb-bailey.north.board.10.3",
+        "wb-bailey.north.board.10.4",
+        "wb-bailey.north.post.11",
+        "wb-bailey.north.rail.11.0.45",
+        "wb-bailey.north.rail.11.1.2",
+        "wb-bailey.north.board.11.0",
+        "wb-bailey.north.board.11.1",
+        "wb-bailey.north.board.11.2",
+        "wb-bailey.north.board.11.3",
+        "wb-bailey.north.board.11.4",
+        "wb-bailey.north.post.12",
+        "wb-bailey.north.rail.12.0.45",
+        "wb-bailey.north.rail.12.1.2",
+        "wb-bailey.north.board.12.0",
+        "wb-bailey.north.board.12.1",
+        "wb-bailey.north.board.12.2",
+        "wb-bailey.north.board.12.3",
+        "wb-bailey.north.board.12.4",
+        "wb-bailey.north.post.13",
+        "wb-bailey.north.rail.13.0.45",
+        "wb-bailey.north.rail.13.1.2",
+        "wb-bailey.north.board.13.0",
+        "wb-bailey.north.board.13.1",
+        "wb-bailey.north.board.13.2",
+        "wb-bailey.north.board.13.3",
+        "wb-bailey.north.board.13.4",
+        "wb-bailey.north.post.14",
+        "wb-bailey.north.rail.14.0.45",
+        "wb-bailey.north.rail.14.1.2",
+        "wb-bailey.north.board.14.0",
+        "wb-bailey.north.board.14.1",
+        "wb-bailey.north.board.14.2",
+        "wb-bailey.north.board.14.3",
+        "wb-bailey.north.board.14.4",
+        "wb-bailey.north.post.15",
+        "wb-bailey.north.rail.15.0.45",
+        "wb-bailey.north.rail.15.1.2",
+        "wb-bailey.north.board.15.0",
+        "wb-bailey.north.board.15.1",
+        "wb-bailey.north.board.15.2",
+        "wb-bailey.north.board.15.3",
+        "wb-bailey.north.board.15.4",
+        "wb-bailey.north.post.16",
+        "wb-bailey.north.rail.16.0.45",
+        "wb-bailey.north.rail.16.1.2",
+        "wb-bailey.north.board.16.0",
+        "wb-bailey.north.board.16.1",
+        "wb-bailey.north.board.16.2",
+        "wb-bailey.north.board.16.3",
+        "wb-bailey.north.board.16.4",
+        "wb-bailey.north.post.17",
+        "wb-bailey.north.rail.17.0.45",
+        "wb-bailey.north.rail.17.1.2",
+        "wb-bailey.north.board.17.0",
+        "wb-bailey.north.board.17.1",
+        "wb-bailey.north.board.17.2",
+        "wb-bailey.north.board.17.3",
+        "wb-bailey.north.board.17.4",
+        "wb-bailey.north.post.18",
+        "wb-bailey.north.rail.18.0.45",
+        "wb-bailey.north.rail.18.1.2",
+        "wb-bailey.north.board.18.0",
+        "wb-bailey.north.board.18.1",
+        "wb-bailey.north.board.18.2",
+        "wb-bailey.north.board.18.3",
+        "wb-bailey.north.board.18.4",
+        "wb-bailey.north.post.19",
+        "wb-bailey.north.rail.19.0.45",
+        "wb-bailey.north.rail.19.1.2",
+        "wb-bailey.north.board.19.0",
+        "wb-bailey.north.board.19.1",
+        "wb-bailey.north.board.19.2",
+        "wb-bailey.north.board.19.3",
+        "wb-bailey.north.board.19.4",
+        "wb-bailey.north.post.20",
+        "wb-bailey.north.rail.20.0.45",
+        "wb-bailey.north.rail.20.1.2",
+        "wb-bailey.north.board.20.0",
+        "wb-bailey.north.board.20.1",
+        "wb-bailey.north.board.20.2",
+        "wb-bailey.north.board.20.3",
+        "wb-bailey.north.board.20.4",
+        "wb-bailey.north.post.21",
+        "wb-bailey.north.rail.21.0.45",
+        "wb-bailey.north.rail.21.1.2",
+        "wb-bailey.north.board.21.0",
+        "wb-bailey.north.board.21.1",
+        "wb-bailey.north.board.21.2",
+        "wb-bailey.north.board.21.3",
+        "wb-bailey.north.board.21.4",
+        "wb-bailey.east.post.0",
+        "wb-bailey.east.rail.0.0.45",
+        "wb-bailey.east.rail.0.1.2",
+        "wb-bailey.east.board.0.0",
+        "wb-bailey.east.board.0.1",
+        "wb-bailey.east.board.0.2",
+        "wb-bailey.east.board.0.3",
+        "wb-bailey.east.board.0.4",
+        "wb-bailey.east.post.1",
+        "wb-bailey.east.rail.1.0.45",
+        "wb-bailey.east.rail.1.1.2",
+        "wb-bailey.east.board.1.0",
+        "wb-bailey.east.board.1.1",
+        "wb-bailey.east.board.1.2",
+        "wb-bailey.east.board.1.3",
+        "wb-bailey.east.board.1.4",
+        "wb-bailey.east.post.2",
+        "wb-bailey.east.rail.2.0.45",
+        "wb-bailey.east.rail.2.1.2",
+        "wb-bailey.east.board.2.0",
+        "wb-bailey.east.board.2.1",
+        "wb-bailey.east.board.2.2",
+        "wb-bailey.east.board.2.3",
+        "wb-bailey.east.board.2.4",
+        "wb-bailey.east.post.3",
+        "wb-bailey.east.rail.3.0.45",
+        "wb-bailey.east.rail.3.1.2",
+        "wb-bailey.east.board.3.0",
+        "wb-bailey.east.board.3.1",
+        "wb-bailey.east.board.3.2",
+        "wb-bailey.east.board.3.3",
+        "wb-bailey.east.board.3.4",
+        "wb-bailey.east.post.4",
+        "wb-bailey.east.rail.4.0.45",
+        "wb-bailey.east.rail.4.1.2",
+        "wb-bailey.east.board.4.0",
+        "wb-bailey.east.board.4.1",
+        "wb-bailey.east.board.4.2",
+        "wb-bailey.east.board.4.3",
+        "wb-bailey.east.board.4.4",
+        "wb-bailey.east.post.5",
+        "wb-bailey.east.rail.5.0.45",
+        "wb-bailey.east.rail.5.1.2",
+        "wb-bailey.east.board.5.0",
+        "wb-bailey.east.board.5.1",
+        "wb-bailey.east.board.5.2",
+        "wb-bailey.east.board.5.3",
+        "wb-bailey.east.board.5.4",
+        "wb-bailey.east.post.6",
+        "wb-bailey.east.rail.6.0.45",
+        "wb-bailey.east.rail.6.1.2",
+        "wb-bailey.east.board.6.0",
+        "wb-bailey.east.board.6.1",
+        "wb-bailey.east.board.6.2",
+        "wb-bailey.east.board.6.3",
+        "wb-bailey.east.board.6.4",
+        "wb-bailey.east.post.7",
+        "wb-bailey.east.rail.7.0.45",
+        "wb-bailey.east.rail.7.1.2",
+        "wb-bailey.east.board.7.0",
+        "wb-bailey.east.board.7.1",
+        "wb-bailey.east.board.7.2",
+        "wb-bailey.east.board.7.3",
+        "wb-bailey.east.board.7.4",
+        "wb-bailey.east.post.8",
+        "wb-bailey.east.rail.8.0.45",
+        "wb-bailey.east.rail.8.1.2",
+        "wb-bailey.east.board.8.0",
+        "wb-bailey.east.board.8.1",
+        "wb-bailey.east.board.8.2",
+        "wb-bailey.east.board.8.3",
+        "wb-bailey.east.board.8.4",
+        "wb-bailey.east.post.9",
+        "wb-bailey.east.rail.9.0.45",
+        "wb-bailey.east.rail.9.1.2",
+        "wb-bailey.east.board.9.0",
+        "wb-bailey.east.board.9.1",
+        "wb-bailey.east.board.9.2",
+        "wb-bailey.east.board.9.3",
+        "wb-bailey.east.board.9.4",
+        "wb-bailey.east.post.10",
+        "wb-bailey.east.rail.10.0.45",
+        "wb-bailey.east.rail.10.1.2",
+        "wb-bailey.east.board.10.0",
+        "wb-bailey.east.board.10.1",
+        "wb-bailey.east.board.10.2",
+        "wb-bailey.east.board.10.3",
+        "wb-bailey.east.board.10.4",
+        "wb-bailey.east.post.11",
+        "wb-bailey.east.rail.11.0.45",
+        "wb-bailey.east.rail.11.1.2",
+        "wb-bailey.east.board.11.0",
+        "wb-bailey.east.board.11.1",
+        "wb-bailey.east.board.11.2",
+        "wb-bailey.east.board.11.3",
+        "wb-bailey.east.board.11.4",
+        "wb-bailey.east.post.12",
+        "wb-bailey.east.rail.12.0.45",
+        "wb-bailey.east.rail.12.1.2",
+        "wb-bailey.east.board.12.0",
+        "wb-bailey.east.board.12.1",
+        "wb-bailey.east.board.12.2",
+        "wb-bailey.east.board.12.3",
+        "wb-bailey.east.board.12.4",
+        "wb-bailey.east.post.13",
+        "wb-bailey.east.rail.13.0.45",
+        "wb-bailey.east.rail.13.1.2",
+        "wb-bailey.east.board.13.0",
+        "wb-bailey.east.board.13.1",
+        "wb-bailey.east.board.13.2",
+        "wb-bailey.east.board.13.3",
+        "wb-bailey.east.board.13.4",
+        "wb-bailey.east.post.14",
+        "wb-bailey.east.rail.14.0.45",
+        "wb-bailey.east.rail.14.1.2",
+        "wb-bailey.east.board.14.0",
+        "wb-bailey.east.board.14.1",
+        "wb-bailey.east.board.14.2",
+        "wb-bailey.east.board.14.3",
+        "wb-bailey.east.board.14.4",
+        "wb-bailey.east.post.15",
+        "wb-bailey.east.rail.15.0.45",
+        "wb-bailey.east.rail.15.1.2",
+        "wb-bailey.east.board.15.0",
+        "wb-bailey.east.board.15.1",
+        "wb-bailey.east.board.15.2",
+        "wb-bailey.east.board.15.3",
+        "wb-bailey.east.board.15.4",
+        "wb-bailey.east.post.16",
+        "wb-bailey.east.rail.16.0.45",
+        "wb-bailey.east.rail.16.1.2",
+        "wb-bailey.east.board.16.0",
+        "wb-bailey.east.board.16.1",
+        "wb-bailey.east.board.16.2",
+        "wb-bailey.east.board.16.3",
+        "wb-bailey.east.board.16.4",
+        "wb-bailey.east.post.17",
+        "wb-bailey.east.rail.17.0.45",
+        "wb-bailey.east.rail.17.1.2",
+        "wb-bailey.east.board.17.0",
+        "wb-bailey.east.board.17.1",
+        "wb-bailey.east.board.17.2",
+        "wb-bailey.east.board.17.3",
+        "wb-bailey.east.board.17.4",
+        "wb-bailey.east.post.18",
+        "wb-bailey.east.rail.18.0.45",
+        "wb-bailey.east.rail.18.1.2",
+        "wb-bailey.east.board.18.0",
+        "wb-bailey.east.board.18.1",
+        "wb-bailey.east.board.18.2",
+        "wb-bailey.east.board.18.3",
+        "wb-bailey.east.board.18.4",
+        "wb-bailey.east.post.19",
+        "wb-bailey.east.rail.19.0.45",
+        "wb-bailey.east.rail.19.1.2",
+        "wb-bailey.east.board.19.0",
+        "wb-bailey.east.board.19.1",
+        "wb-bailey.east.board.19.2",
+        "wb-bailey.east.board.19.3",
+        "wb-bailey.east.board.19.4"
+      ],
+      "vertexCount": 60752,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "wb-gate",
+      "name": "西木戸口の門候補",
+      "featureId": "wb-gate",
+      "evidenceCategory": "C",
+      "facilityType": "西木戸口の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "metadata": "data/phase3b.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93533.07235405142
+            ],
+            [
+              44782.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93423.07235405142
+            ],
+            [
+              44657.121277226666,
+              -93533.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44719.621277226666,
+        -93478.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -205,
+          522.260009765625,
+          -55
+        ],
+        "max": [
+          -80,
+          572.7000122070312,
+          55
+        ]
+      },
+      "nodeNames": [
+        "wb-gate.surface.path",
+        "wb-gate.gate.post.0",
+        "wb-gate.gate.cap.0",
+        "wb-gate.gate.post.1",
+        "wb-gate.gate.cap.1",
+        "wb-gate.gate.crossbeam",
+        "wb-gate.gate.door.0.0",
+        "wb-gate.gate.door.0.1",
+        "wb-gate.gate.door.0.2",
+        "wb-gate.gate.door.0.3",
+        "wb-gate.gate.door.0.4",
+        "wb-gate.gate.door.0.5",
+        "wb-gate.gate.door.rail.0.0.45",
+        "wb-gate.gate.door.rail.0.2.15",
+        "wb-gate.gate.door.1.0",
+        "wb-gate.gate.door.1.1",
+        "wb-gate.gate.door.1.2",
+        "wb-gate.gate.door.1.3",
+        "wb-gate.gate.door.1.4",
+        "wb-gate.gate.door.1.5",
+        "wb-gate.gate.door.rail.1.0.45",
+        "wb-gate.gate.door.rail.1.2.15",
+        "wb-gate.side.post.0",
+        "wb-gate.side.rail.0.0.5",
+        "wb-gate.side.rail.0.1.25",
+        "wb-gate.side.post.1",
+        "wb-gate.side.rail.1.0.5",
+        "wb-gate.side.rail.1.1.25",
+        "wb-gate.side.post.2",
+        "wb-gate.side.rail.2.0.5",
+        "wb-gate.side.rail.2.1.25",
+        "wb-gate.side.post.3",
+        "wb-gate.side.rail.3.0.5",
+        "wb-gate.side.rail.3.1.25",
+        "wb-gate.side.post.4",
+        "wb-gate.side.rail.4.0.5",
+        "wb-gate.side.rail.4.1.25",
+        "wb-gate.side.post.5",
+        "wb-gate.side.rail.5.0.5",
+        "wb-gate.side.rail.5.1.25",
+        "wb-gate.side.post.6",
+        "wb-gate.side.rail.6.0.5",
+        "wb-gate.side.rail.6.1.25",
+        "wb-gate.side.post.7",
+        "wb-gate.side.rail.7.0.5",
+        "wb-gate.side.rail.7.1.25",
+        "wb-gate.side.post.8",
+        "wb-gate.side.rail.8.0.5",
+        "wb-gate.side.rail.8.1.25",
+        "wb-gate.side.post.9",
+        "wb-gate.side.rail.9.0.5",
+        "wb-gate.side.rail.9.1.25"
+      ],
+      "vertexCount": 30464,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "wb-moat",
+      "name": "西櫓堀の単列畝堀候補",
+      "featureId": "wb-moat",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓堀の単列畝堀候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "metadata": "data/phase3b.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44682.121277226666,
+              -93508.07235405142
+            ],
+            [
+              44704.121277226666,
+              -93508.07235405142
+            ],
+            [
+              44704.121277226666,
+              -93444.07235405142
+            ],
+            [
+              44682.121277226666,
+              -93444.07235405142
+            ],
+            [
+              44682.121277226666,
+              -93508.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44693.121277226666,
+        -93476.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -180,
+          543.4359741210938,
+          -34
+        ],
+        "max": [
+          -158,
+          551.7979736328125,
+          30
+        ]
+      },
+      "nodeNames": [
+        "wb-moat.surface.earth"
+      ],
+      "vertexCount": 6361,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "wb-building",
+      "name": "西櫓の建物候補（上部構造未確定）",
+      "featureId": "wb-building",
+      "evidenceCategory": "C",
+      "facilityType": "西櫓の建物候補（上部構造未確定）",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+      "metadata": "data/phase3b.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44726.371277226666,
+              -93474.93039581472
+            ],
+            [
+              44735.871277226666,
+              -93474.93039581472
+            ],
+            [
+              44735.871277226666,
+              -93467.27235386068
+            ],
+            [
+              44726.371277226666,
+              -93467.27235386068
+            ],
+            [
+              44726.371277226666,
+              -93474.93039581472
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44731.121277226666,
+        -93471.1013748377
+      ],
+      "webBounds": {
+        "min": [
+          -135.75,
+          552.933972120285,
+          -10.800000190734863
+        ],
+        "max": [
+          -126.25,
+          559.0239697247744,
+          -3.141958236694336
+        ]
+      },
+      "nodeNames": [
+        "wb-building.post.-135.4",
+        "wb-building.joint.-135.4",
+        "wb-building.post.-135.10",
+        "wb-building.joint.-135.10",
+        "wb-building.post.-131.4",
+        "wb-building.joint.-131.4",
+        "wb-building.post.-131.10",
+        "wb-building.joint.-131.10",
+        "wb-building.post.-127.4",
+        "wb-building.joint.-127.4",
+        "wb-building.post.-127.10",
+        "wb-building.joint.-127.10",
+        "wb-building.floor",
+        "wb-building.beam.4",
+        "wb-building.wall.4",
+        "wb-building.beam.10",
+        "wb-building.wall.10",
+        "wb-building.crossbeam.-135",
+        "wb-building.crossbeam.-127",
+        "wb-building.roof.-1",
+        "wb-building.roof.1",
+        "wb-building.ridge"
+      ],
+      "vertexCount": 1968,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "ic-lookout",
+      "name": "西ノ丸見張台の高所候補",
+      "featureId": "ic-lookout",
+      "evidenceCategory": "C",
+      "facilityType": "西ノ丸見張台の高所候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i-inner.glb",
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+      "metadata": "data/phase3c.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44778.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44778.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44778.121277226666,
+              -93500.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44786.121277226666,
+        -93464.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -84,
+          560.2544555664062,
+          -50
+        ],
+        "max": [
+          -68,
+          574.971435546875,
+          22
+        ]
+      },
+      "nodeNames": [
+        "ic-lookout.surface.grass",
+        "ic-lookout.surface.earth"
+      ],
+      "vertexCount": 7868,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "ic-bridge",
+      "name": "西ノ丸・西櫓方面の土橋候補",
+      "featureId": "ic-bridge",
+      "evidenceCategory": "C",
+      "facilityType": "西ノ丸・西櫓方面の土橋候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i-inner.glb",
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+      "metadata": "data/phase3c.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44762.121277226666,
+              -93523.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93523.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93428.07235405142
+            ],
+            [
+              44762.121277226666,
+              -93523.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44778.121277226666,
+        -93475.57235405142
+      ],
+      "webBounds": {
+        "min": [
+          -100,
+          554.7826538085938,
+          -50
+        ],
+        "max": [
+          -68,
+          572.9199829101562,
+          45
+        ]
+      },
+      "nodeNames": [
+        "ic-bridge.surface.path",
+        "ic-bridge.surface.grass",
+        "ic-bridge.surface.earth"
+      ],
+      "vertexCount": 28109,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "ic-koguchi",
+      "name": "見張台側虎口の候補",
+      "featureId": "ic-koguchi",
+      "evidenceCategory": "C",
+      "facilityType": "見張台側虎口の候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3i-inner.glb",
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+      "metadata": "data/phase3c.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44780.121277226666,
+              -93515.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93515.07235405142
+            ],
+            [
+              44794.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44780.121277226666,
+              -93500.07235405142
+            ],
+            [
+              44780.121277226666,
+              -93515.07235405142
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44787.121277226666,
+        -93507.57235405142
+      ],
+      "webBounds": {
+        "min": [
+          -82,
+          562.5313110351562,
+          22
+        ],
+        "max": [
+          -68,
+          572.6231079101562,
+          37
+        ]
+      },
+      "nodeNames": [
+        "ic-koguchi.surface.path",
+        "ic-koguchi.surface.earth"
+      ],
+      "vertexCount": 11133,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "dc-gate",
+      "name": "見張台側の門候補",
+      "featureId": "dc-gate",
+      "evidenceCategory": "C",
+      "facilityType": "見張台側の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "metadata": "data/phase3d.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44785.421280278424,
+              -93509.87235328848
+            ],
+            [
+              44785.82127417491,
+              -93509.87235328848
+            ],
+            [
+              44785.82127417491,
+              -93504.27235481435
+            ],
+            [
+              44785.421280278424,
+              -93504.27235481435
+            ],
+            [
+              44785.421280278424,
+              -93509.87235328848
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44785.621277226666,
+        -93507.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          -76.69999694824219,
+          566.77880859375,
+          26.200000762939453
+        ],
+        "max": [
+          -76.30000305175781,
+          570.4705810546875,
+          31.799999237060547
+        ]
+      },
+      "nodeNames": [
+        "dc-gate.post.north",
+        "dc-gate.post.south",
+        "dc-gate.lintel"
+      ],
+      "vertexCount": 103,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "dc-fence-north",
+      "name": "接続路北側の柵候補",
+      "featureId": "dc-fence-north",
+      "evidenceCategory": "C",
+      "facilityType": "接続路北側の柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "metadata": "data/phase3d.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001274480084,
+              -93504.59235450918
+            ],
+            [
+              44784.24127997325,
+              -93504.59235450918
+            ],
+            [
+              44784.24127997325,
+              -93504.35235473806
+            ],
+            [
+              44766.001274480084,
+              -93504.35235473806
+            ],
+            [
+              44766.001274480084,
+              -93504.59235450918
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44775.121277226666,
+        -93504.47235462362
+      ],
+      "webBounds": {
+        "min": [
+          -96.12000274658203,
+          556.9635009765625,
+          26.280000686645508
+        ],
+        "max": [
+          -77.87999725341797,
+          568.0616455078125,
+          26.520000457763672
+        ]
+      },
+      "nodeNames": [
+        "dc-fence-north.post.0",
+        "dc-fence-north.post.1",
+        "dc-fence-north.post.2",
+        "dc-fence-north.post.3",
+        "dc-fence-north.post.4",
+        "dc-fence-north.post.5",
+        "dc-fence-north.post.6",
+        "dc-fence-north.post.7",
+        "dc-fence-north.post.8",
+        "dc-fence-north.post.9"
+      ],
+      "vertexCount": 438,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "dc-fence-south",
+      "name": "接続路南側の柵候補",
+      "featureId": "dc-fence-south",
+      "evidenceCategory": "C",
+      "facilityType": "接続路南側の柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "metadata": "data/phase3d.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.001274480084,
+              -93509.79235336477
+            ],
+            [
+              44784.24127997325,
+              -93509.79235336477
+            ],
+            [
+              44784.24127997325,
+              -93509.55235359365
+            ],
+            [
+              44766.001274480084,
+              -93509.55235359365
+            ],
+            [
+              44766.001274480084,
+              -93509.79235336477
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44775.121277226666,
+        -93509.67235347921
+      ],
+      "webBounds": {
+        "min": [
+          -96.12000274658203,
+          556.9029541015625,
+          31.479999542236328
+        ],
+        "max": [
+          -77.87999725341797,
+          567.9815063476562,
+          31.719999313354492
+        ]
+      },
+      "nodeNames": [
+        "dc-fence-south.post.0",
+        "dc-fence-south.post.1",
+        "dc-fence-south.post.2",
+        "dc-fence-south.post.3",
+        "dc-fence-south.post.4",
+        "dc-fence-south.post.5",
+        "dc-fence-south.post.6",
+        "dc-fence-south.post.7",
+        "dc-fence-south.post.8",
+        "dc-fence-south.post.9"
+      ],
+      "vertexCount": 436,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "dc-rail-north",
+      "name": "北側の横木候補",
+      "featureId": "dc-rail-north",
+      "evidenceCategory": "C",
+      "facilityType": "北側の横木候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "metadata": "data/phase3d.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93504.55235359365
+            ],
+            [
+              44785.621277226666,
+              -93504.55235359365
+            ],
+            [
+              44785.621277226666,
+              -93504.39235374624
+            ],
+            [
+              44766.121277226666,
+              -93504.39235374624
+            ],
+            [
+              44766.121277226666,
+              -93504.55235359365
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44775.871277226666,
+        -93504.47235366995
+      ],
+      "webBounds": {
+        "min": [
+          -96,
+          557.8336181640625,
+          26.31999969482422
+        ],
+        "max": [
+          -76.5,
+          568.6039428710938,
+          26.479999542236328
+        ]
+      },
+      "nodeNames": [
+        "dc-rail-north.rail.0.0.75",
+        "dc-rail-north.rail.0.1.35",
+        "dc-rail-north.rail.1.0.75",
+        "dc-rail-north.rail.1.1.35",
+        "dc-rail-north.rail.2.0.75",
+        "dc-rail-north.rail.2.1.35",
+        "dc-rail-north.rail.3.0.75",
+        "dc-rail-north.rail.3.1.35",
+        "dc-rail-north.rail.4.0.75",
+        "dc-rail-north.rail.4.1.35",
+        "dc-rail-north.rail.5.0.75",
+        "dc-rail-north.rail.5.1.35",
+        "dc-rail-north.rail.6.0.75",
+        "dc-rail-north.rail.6.1.35",
+        "dc-rail-north.rail.7.0.75",
+        "dc-rail-north.rail.7.1.35",
+        "dc-rail-north.rail.8.0.75",
+        "dc-rail-north.rail.8.1.35",
+        "dc-rail-north.rail.9.0.75",
+        "dc-rail-north.rail.9.1.35"
+      ],
+      "vertexCount": 480,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "dc-rail-south",
+      "name": "南側の横木候補",
+      "featureId": "dc-rail-south",
+      "evidenceCategory": "C",
+      "facilityType": "南側の横木候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+      "metadata": "data/phase3d.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44766.121277226666,
+              -93509.75235435659
+            ],
+            [
+              44785.621277226666,
+              -93509.75235435659
+            ],
+            [
+              44785.621277226666,
+              -93509.59235450918
+            ],
+            [
+              44766.121277226666,
+              -93509.59235450918
+            ],
+            [
+              44766.121277226666,
+              -93509.75235435659
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44775.871277226666,
+        -93509.67235443289
+      ],
+      "webBounds": {
+        "min": [
+          -96,
+          557.773681640625,
+          31.520000457763672
+        ],
+        "max": [
+          -76.5,
+          568.6910400390625,
+          31.68000030517578
+        ]
+      },
+      "nodeNames": [
+        "dc-rail-south.rail.0.0.75",
+        "dc-rail-south.rail.0.1.35",
+        "dc-rail-south.rail.1.0.75",
+        "dc-rail-south.rail.1.1.35",
+        "dc-rail-south.rail.2.0.75",
+        "dc-rail-south.rail.2.1.35",
+        "dc-rail-south.rail.3.0.75",
+        "dc-rail-south.rail.3.1.35",
+        "dc-rail-south.rail.4.0.75",
+        "dc-rail-south.rail.4.1.35",
+        "dc-rail-south.rail.5.0.75",
+        "dc-rail-south.rail.5.1.35",
+        "dc-rail-south.rail.6.0.75",
+        "dc-rail-south.rail.6.1.35",
+        "dc-rail-south.rail.7.0.75",
+        "dc-rail-south.rail.7.1.35",
+        "dc-rail-south.rail.8.0.75",
+        "dc-rail-south.rail.8.1.35",
+        "dc-rail-south.rail.9.0.75",
+        "dc-rail-south.rail.9.1.35"
+      ],
+      "vertexCount": 480,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "sc-palisade",
+      "name": "土塁上の木柵候補",
+      "featureId": "sc-palisade",
+      "evidenceCategory": "C",
+      "facilityType": "土塁上の木柵候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "metadata": "data/landscape.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44825.9847873138,
+              -93501.19848968381
+            ],
+            [
+              44876.17127717898,
+              -93501.19848968381
+            ],
+            [
+              44876.17127717898,
+              -93447.0223540991
+            ],
+            [
+              44825.9847873138,
+              -93447.0223540991
+            ],
+            [
+              44825.9847873138,
+              -93501.19848968381
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44851.07803224639,
+        -93474.11042189146
+      ],
+      "webBounds": {
+        "min": [
+          -36.136489912867546,
+          574.6535888910294,
+          -31.049999952316284
+        ],
+        "max": [
+          14.049999952316284,
+          579.6821044683456,
+          23.126135632395744
+        ]
+      },
+      "nodeNames": [
+        "sc-palisade.000",
+        "sc-palisade.001",
+        "sc-palisade.002",
+        "sc-palisade.003",
+        "sc-palisade.004",
+        "sc-palisade.005",
+        "sc-palisade.006",
+        "sc-palisade.007",
+        "sc-palisade.008",
+        "sc-palisade.009",
+        "sc-palisade.010",
+        "sc-palisade.011",
+        "sc-palisade.012",
+        "sc-palisade.013",
+        "sc-palisade.014",
+        "sc-palisade.015",
+        "sc-palisade.016",
+        "sc-palisade.017",
+        "sc-palisade.018",
+        "sc-palisade.019",
+        "sc-palisade.020",
+        "sc-palisade.021",
+        "sc-palisade.022",
+        "sc-palisade.023",
+        "sc-palisade.024",
+        "sc-palisade.025",
+        "sc-palisade.026",
+        "sc-palisade.027",
+        "sc-palisade.028",
+        "sc-palisade.029",
+        "sc-palisade.030",
+        "sc-palisade.031",
+        "sc-palisade.032",
+        "sc-palisade.033",
+        "sc-palisade.034",
+        "sc-palisade.035",
+        "sc-palisade.036",
+        "sc-palisade.037",
+        "sc-palisade.038",
+        "sc-palisade.039",
+        "sc-palisade.040",
+        "sc-palisade.041",
+        "sc-palisade.042",
+        "sc-palisade.043",
+        "sc-palisade.044",
+        "sc-palisade.045",
+        "sc-palisade.046",
+        "sc-palisade.047",
+        "sc-palisade.048",
+        "sc-palisade.049",
+        "sc-palisade.050",
+        "sc-palisade.051",
+        "sc-palisade.052",
+        "sc-palisade.053",
+        "sc-palisade.054",
+        "sc-palisade.055",
+        "sc-palisade.056",
+        "sc-palisade.057",
+        "sc-palisade.058",
+        "sc-palisade.059",
+        "sc-palisade.060",
+        "sc-palisade.061",
+        "sc-palisade.062",
+        "sc-palisade.063",
+        "sc-palisade.064",
+        "sc-palisade.065",
+        "sc-palisade.066",
+        "sc-palisade.067",
+        "sc-palisade.068",
+        "sc-palisade.069",
+        "sc-palisade.070",
+        "sc-palisade.071",
+        "sc-palisade.072",
+        "sc-palisade.073",
+        "sc-palisade.074",
+        "sc-palisade.075",
+        "sc-palisade.076",
+        "sc-palisade.077",
+        "sc-palisade.078",
+        "sc-palisade.079",
+        "sc-palisade.080",
+        "sc-palisade.081",
+        "sc-palisade.082",
+        "sc-palisade.083",
+        "sc-palisade.084",
+        "sc-palisade.085",
+        "sc-palisade.086",
+        "sc-palisade.087",
+        "sc-palisade.088",
+        "sc-palisade.089",
+        "sc-palisade.090",
+        "sc-palisade.091",
+        "sc-palisade.092",
+        "sc-palisade.093",
+        "sc-palisade.094",
+        "sc-palisade.095",
+        "sc-palisade.096",
+        "sc-palisade.097",
+        "sc-palisade.098",
+        "sc-palisade.099",
+        "sc-palisade.100",
+        "sc-palisade.101",
+        "sc-palisade.102",
+        "sc-palisade.103",
+        "sc-palisade.104",
+        "sc-palisade.105",
+        "sc-palisade.106",
+        "sc-palisade.107",
+        "sc-palisade.108",
+        "sc-palisade.109",
+        "sc-palisade.110",
+        "sc-palisade.111",
+        "sc-palisade.112",
+        "sc-palisade.113",
+        "sc-palisade.114",
+        "sc-palisade.115",
+        "sc-palisade.116",
+        "sc-palisade.117",
+        "sc-palisade.118",
+        "sc-palisade.119",
+        "sc-palisade.120",
+        "sc-palisade.121",
+        "sc-palisade.122",
+        "sc-palisade.123",
+        "sc-palisade.124",
+        "sc-palisade.125",
+        "sc-palisade.126",
+        "sc-palisade.127",
+        "sc-palisade.128",
+        "sc-palisade.129",
+        "sc-palisade.130",
+        "sc-palisade.131",
+        "sc-palisade.132",
+        "sc-palisade.133"
+      ],
+      "vertexCount": 4422,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "sc-gate",
+      "name": "虎口の門候補",
+      "featureId": "sc-gate",
+      "evidenceCategory": "C",
+      "facilityType": "虎口の門候補",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "metadata": "data/landscape.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44863.871277226666,
+              -93500.67235407526
+            ],
+            [
+              44870.371277226666,
+              -93500.67235407526
+            ],
+            [
+              44870.371277226666,
+              -93499.47235402757
+            ],
+            [
+              44863.871277226666,
+              -93499.47235402757
+            ],
+            [
+              44863.871277226666,
+              -93500.67235407526
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44867.121277226666,
+        -93500.07235405142
+      ],
+      "webBounds": {
+        "min": [
+          1.75,
+          574.7661011219025,
+          21.399999976158142
+        ],
+        "max": [
+          8.25,
+          578.3661132752895,
+          22.600000023841858
+        ]
+      },
+      "nodeNames": [
+        "sc-gate.134",
+        "sc-gate.135",
+        "sc-gate.136",
+        "sc-gate.137",
+        "sc-gate.138"
+      ],
+      "vertexCount": 156,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "sc-vegetation",
+      "name": "周辺の樹木と低木",
+      "featureId": "sc-vegetation",
+      "evidenceCategory": "C",
+      "facilityType": "周辺の樹木と低木",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "metadata": "data/landscape.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44752.60861481593,
+              -93560.76815626318
+            ],
+            [
+              44928.65488232539,
+              -93560.76815626318
+            ],
+            [
+              44928.65488232539,
+              -93385.26413557226
+            ],
+            [
+              44752.60861481593,
+              -93385.26413557226
+            ],
+            [
+              44752.60861481593,
+              -93560.76815626318
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44840.63174857066,
+        -93473.01614591772
+      ],
+      "webBounds": {
+        "min": [
+          -109.51266241073608,
+          550.2781982421875,
+          -92.8082184791565
+        ],
+        "max": [
+          66.53360509872437,
+          584.2906007766724,
+          82.69580221176147
+        ]
+      },
+      "nodeNames": [
+        "sc-vegetation.139",
+        "sc-vegetation.140",
+        "sc-vegetation.141",
+        "sc-vegetation.142",
+        "sc-vegetation.143",
+        "sc-vegetation.144",
+        "sc-vegetation.145",
+        "sc-vegetation.146",
+        "sc-vegetation.147",
+        "sc-vegetation.148",
+        "sc-vegetation.149",
+        "sc-vegetation.150",
+        "sc-vegetation.151",
+        "sc-vegetation.152",
+        "sc-vegetation.153",
+        "sc-vegetation.154",
+        "sc-vegetation.155",
+        "sc-vegetation.156",
+        "sc-vegetation.157",
+        "sc-vegetation.158",
+        "sc-vegetation.159",
+        "sc-vegetation.160",
+        "sc-vegetation.161",
+        "sc-vegetation.162",
+        "sc-vegetation.163",
+        "sc-vegetation.164",
+        "sc-vegetation.165",
+        "sc-vegetation.166",
+        "sc-vegetation.167",
+        "sc-vegetation.168",
+        "sc-vegetation.169",
+        "sc-vegetation.170",
+        "sc-vegetation.171",
+        "sc-vegetation.172",
+        "sc-vegetation.173",
+        "sc-vegetation.174",
+        "sc-vegetation.175",
+        "sc-vegetation.176",
+        "sc-vegetation.177",
+        "sc-vegetation.178",
+        "sc-vegetation.179",
+        "sc-vegetation.180",
+        "sc-vegetation.181",
+        "sc-vegetation.182",
+        "sc-vegetation.183",
+        "sc-vegetation.184",
+        "sc-vegetation.185",
+        "sc-vegetation.186",
+        "sc-vegetation.187",
+        "sc-vegetation.188",
+        "sc-vegetation.189",
+        "sc-vegetation.190",
+        "sc-vegetation.191",
+        "sc-vegetation.192",
+        "sc-vegetation.193",
+        "sc-vegetation.194",
+        "sc-vegetation.195",
+        "sc-vegetation.196",
+        "sc-vegetation.197",
+        "sc-vegetation.198",
+        "sc-vegetation.199",
+        "sc-vegetation.200",
+        "sc-vegetation.201",
+        "sc-vegetation.202",
+        "sc-vegetation.203",
+        "sc-vegetation.204",
+        "sc-vegetation.205",
+        "sc-vegetation.206",
+        "sc-vegetation.207",
+        "sc-vegetation.208",
+        "sc-vegetation.209",
+        "sc-vegetation.210",
+        "sc-vegetation.211",
+        "sc-vegetation.212",
+        "sc-vegetation.213",
+        "sc-vegetation.214",
+        "sc-vegetation.215",
+        "sc-vegetation.216",
+        "sc-vegetation.217",
+        "sc-vegetation.218",
+        "sc-vegetation.219",
+        "sc-vegetation.220",
+        "sc-vegetation.221",
+        "sc-vegetation.222",
+        "sc-vegetation.223",
+        "sc-vegetation.224",
+        "sc-vegetation.225",
+        "sc-vegetation.226",
+        "sc-vegetation.227",
+        "sc-vegetation.228",
+        "sc-vegetation.229",
+        "sc-vegetation.230",
+        "sc-vegetation.231",
+        "sc-vegetation.232",
+        "sc-vegetation.233",
+        "sc-vegetation.234",
+        "sc-vegetation.235",
+        "sc-vegetation.236",
+        "sc-vegetation.237",
+        "sc-vegetation.238",
+        "sc-vegetation.239",
+        "sc-vegetation.240",
+        "sc-vegetation.241",
+        "sc-vegetation.242",
+        "sc-vegetation.243",
+        "sc-vegetation.244",
+        "sc-vegetation.245",
+        "sc-vegetation.246"
+      ],
+      "vertexCount": 4536,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "sc-flags",
+      "name": "旗の創作演出",
+      "featureId": "sc-flags",
+      "evidenceCategory": "D",
+      "facilityType": "旗の創作演出",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "metadata": "data/landscape.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44833.05303227023,
+              -93496.13542186761
+            ],
+            [
+              44871.371277226666,
+              -93496.13542186761
+            ],
+            [
+              44871.371277226666,
+              -93456.92235443289
+            ],
+            [
+              44833.05303227023,
+              -93456.92235443289
+            ],
+            [
+              44833.05303227023,
+              -93496.13542186761
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44852.21215474845,
+        -93476.52888815025
+      ],
+      "webBounds": {
+        "min": [
+          -29.068244956433773,
+          575.006103515625,
+          -21.149999618530273
+        ],
+        "max": [
+          9.25,
+          580.318115234375,
+          18.063067816197872
+        ]
+      },
+      "nodeNames": [
+        "sc-flags.247",
+        "sc-flags.248",
+        "sc-flags.249",
+        "sc-flags.250",
+        "sc-flags.251",
+        "sc-flags.252",
+        "sc-flags.253",
+        "sc-flags.254"
+      ],
+      "vertexCount": 232,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    },
+    {
+      "id": "sc-people",
+      "name": "人物の創作演出",
+      "featureId": "sc-people",
+      "evidenceCategory": "D",
+      "facilityType": "人物の創作演出",
+      "positionComparison": {
+        "distanceMetres": null,
+        "direction": null,
+        "status": "UNKNOWN",
+        "reason": "No independent historical geographic counterpart"
+      },
+      "sourceAsset": "data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+      "metadata": "data/landscape.json",
+      "certainty": "model-envelope",
+      "historicalPosition": "UNKNOWN",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44846.80930031703,
+              -93506.36066407258
+            ],
+            [
+              44870.433254136304,
+              -93506.36066407258
+            ],
+            [
+              44870.433254136304,
+              -93471.75235405857
+            ],
+            [
+              44846.80930031703,
+              -93471.75235405857
+            ],
+            [
+              44846.80930031703,
+              -93506.36066407258
+            ]
+          ]
+        ]
+      },
+      "center": [
+        44858.621277226666,
+        -93489.05650906557
+      ],
+      "webBounds": {
+        "min": [
+          -15.311976909637451,
+          573.9260131716728,
+          -6.319999992847443
+        ],
+        "max": [
+          8.311976909637451,
+          576.8579785227776,
+          28.288310021162033
+        ]
+      },
+      "nodeNames": [
+        "sc-people.255",
+        "sc-people.256",
+        "sc-people.257",
+        "sc-people.258",
+        "sc-people.259",
+        "sc-people.260",
+        "sc-people.261",
+        "sc-people.262",
+        "sc-people.263",
+        "sc-people.264",
+        "sc-people.265",
+        "sc-people.266",
+        "sc-people.267",
+        "sc-people.268",
+        "sc-people.269",
+        "sc-people.270"
+      ],
+      "vertexCount": 952,
+      "method": "Decoded GLB POSITION vertices transformed through scene hierarchy; axis-aligned model envelope, not historical boundary.",
+      "uncertainty": "Numeric transform only. Model placement and historical position are UNKNOWN; no relocation."
+    }
+  ],
+  "terrain": [
+    {
+      "id": "regional",
+      "kind": "current-dem-coverage",
+      "bounds": [
+        -2000,
+        -2000,
+        2000,
+        2000
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42862.121277226666,
+              -95478.07235405142
+            ],
+            [
+              46862.121277226666,
+              -95478.07235405142
+            ],
+            [
+              46862.121277226666,
+              -91478.07235405142
+            ],
+            [
+              42862.121277226666,
+              -91478.07235405142
+            ],
+            [
+              42862.121277226666,
+              -95478.07235405142
+            ]
+          ]
+        ]
+      },
+      "historicCoverage": "UNKNOWN"
+    },
+    {
+      "id": "castle",
+      "kind": "current-dem-coverage",
+      "bounds": [
+        -350,
+        -650,
+        650,
+        450
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44512.121277226666,
+              -94128.07235405142
+            ],
+            [
+              45512.121277226666,
+              -94128.07235405142
+            ],
+            [
+              45512.121277226666,
+              -93028.07235405142
+            ],
+            [
+              44512.121277226666,
+              -93028.07235405142
+            ],
+            [
+              44512.121277226666,
+              -94128.07235405142
+            ]
+          ]
+        ]
+      },
+      "historicCoverage": "UNKNOWN"
+    }
+  ],
+  "progress": [
+    {
+      "id": "work-model-coordinate-audit",
+      "regionId": "nishinomaru",
+      "modelId": "nm-bailey",
+      "status": "制作中",
+      "description": "Stage 3-B：既存模型の位置照合・全域案内を制作中。現地工事や史実復元の完成度を示しません。看板位置は現在の模型の範囲中心で、歴史的区域の中心ではありません。",
+      "issueUrls": [
+        "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41"
+      ],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:22:20Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:22:20Z",
+          "status": "制作中",
+          "evidence": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41",
+          "reason": "Stage 3-B implementation initiated; static development snapshot, not live GitHub sync."
+        }
+      ],
+      "unresolved": [
+        "Historic placement UNKNOWN",
+        "This is not a whole-region completion classification"
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93498.07235405142
+            ],
+            [
+              44872.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93453.07235405142
+            ],
+            [
+              44832.121277226666,
+              -93498.07235405142
+            ]
+          ]
+        ]
+      },
+      "geometryMeaning": "Current model envelope under software coordinate audit; not historical region",
+      "position": [
+        44852.121277226666,
+        -93475.57235405142
+      ],
+      "positionBasis": "Current model envelope center; modern development UI only"
+    },
+    {
+      "id": "work-honmaru",
+      "regionId": "honmaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-ninomaru",
+      "regionId": "ninomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-kitanomaru",
+      "regionId": "kitanomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-motonishi-yagura",
+      "regionId": "motonishi-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-nishi-yagura",
+      "regionId": "nishi-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-sannomaru",
+      "regionId": "sannomaru",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-daizaki",
+      "regionId": "daizaki",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-minami-yagura",
+      "regionId": "minami-yagura",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-raoshiba",
+      "regionId": "raoshiba",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    },
+    {
+      "id": "work-nishikido",
+      "regionId": "nishikido",
+      "status": "UNKNOWN",
+      "description": "この区域の現代の制作状態は未確認。史料にある当時の未完成記述から推測しません。",
+      "issueUrls": [],
+      "prUrls": [],
+      "updatedAt": "2026-11-10T03:27:32.203836+00:00",
+      "history": [],
+      "unresolved": [
+        "No verified modern development state"
+      ],
+      "geometry": null,
+      "geometryMeaning": null,
+      "position": null,
+      "positionBasis": "UNPLACED"
+    }
+  ],
+  "progressEvidence": {
+    "checkedAt": "2026-11-10T03:22:20Z",
+    "source": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41",
+    "interpretation": "Issue #41 created and implementation in progress. Sign marks this software model-coordinate audit, not on-site construction or completion of historic reconstruction. Other regions have no verified development-state assignment."
+  },
+  "inputHashes": [
+    {
+      "path": "public/data/phase3i.glb",
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "path": "public/data/nishinomaru.json",
+      "sha256": "0468e88ea55d26eceb10210735aa270968ad3ce91db4e9848b0017dada4035ca"
+    },
+    {
+      "path": "public/data/phase3b.glb",
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    {
+      "path": "public/data/phase3b.json",
+      "sha256": "635a427a8f3897dae165415b0352437f77e4f70bf8058e5428d07cb84ee52ef5"
+    },
+    {
+      "path": "public/data/phase3i-inner.glb",
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+    },
+    {
+      "path": "public/data/phase3c.json",
+      "sha256": "17a0e4bf21214248402b850e8878aea790d10a01b0818a113f6302436daa03a9"
+    },
+    {
+      "path": "public/data/phase3d.glb",
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "path": "public/data/phase3d.json",
+      "sha256": "282e1ec723c9d1f73ee6efa9fb46a8175b1268906a75222f207903aa9f21d9b1"
+    },
+    {
+      "path": "public/data/landscape.glb",
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    {
+      "path": "public/data/landscape.json",
+      "sha256": "c8bc5b4767fef0d3c03989a20667685f2195a7b02986082f6f984cebb87d6e87"
+    },
+    {
+      "path": "public/data/regional.json",
+      "sha256": "17ef568fb7a1fd9d0c81c432f7f5208c71805ff972fd829c1dd19e805e883bc3"
+    },
+    {
+      "path": "public/data/castle.json",
+      "sha256": "ef4688ccc0427177f3a39cc04d354ea6cfc3c1d7356ab41f1c40c9e97460c3cd"
+    }
+  ],
+  "distinctions": {
+    "designation": "UNKNOWN: no adopted legal designation polygon",
+    "historicExtent": "UNKNOWN: unreferenced historical diagram is not a polygon",
+    "terrainExtent": "Current DEM acquisition extent only",
+    "modelExtent": "Actual model geometry envelope; not historical site survey"
+  },
+  "regionModelRelations": [
+    {
+      "regionId": "nishinomaru",
+      "modelId": "nm-bailey",
+      "type": "software-audit-association",
+      "geographicAgreement": "UNKNOWN",
+      "evidence": [
+        "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41"
+      ]
+    }
+  ],
+  "runtimeModelAudit": {
+    "status": "NOT_TESTED",
+    "scope": "CAD B0/B1/B2, runtime shrubs and legacy palisade are not included in saved-GLB envelopes",
+    "reason": "Their scene placement depends on current settings and supporting surfaces; asset-local dimensions are not a placed envelope"
+  }
+}

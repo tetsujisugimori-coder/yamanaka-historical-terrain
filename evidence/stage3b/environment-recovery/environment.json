@@ -1,0 +1,26 @@
+{
+  "disk": {
+    "total": 67586535424,
+    "used": 39791136768,
+    "free": 24342650880
+  },
+  "memoryInfo": {
+    "MemTotal": "       10206468 kB",
+    "MemFree": "         1747528 kB",
+    "MemAvailable": "    2926468 kB",
+    "Buffers": "          120220 kB"
+  },
+  "fileLimit": [
+    16384,
+    16384
+  ],
+  "processLimit": [
+    39792,
+    39792
+  ],
+  "restartPerformed": false,
+  "restartPersistence": "NOT_TESTED",
+  "recoveryTree": "2f5bddebf30e4924fb62bf11e7eafb34bbf9c5ea",
+  "sharedDirectory": "read-only in this execution",
+  "webkitPreflightFinding": "ldd honors LD_LIBRARY_PATH but missingDLOPENLibraries checks ldconfig -p only; local libGLESv2 absent from system cache"
+}

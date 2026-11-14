@@ -1,0 +1,209 @@
+{
+  "at": "2026-11-13T12:17:11.110Z",
+  "status": "FAIL",
+  "errors": [
+    "Incomplete or duplicate matrix",
+    "Not PASS: chromium-375-no-preference",
+    "Not PASS: chromium-375-reduce",
+    "Not PASS: chromium-390-no-preference",
+    "Not PASS: chromium-390-reduce",
+    "Not PASS: chromium-765-no-preference",
+    "Not PASS: chromium-765-reduce",
+    "Not PASS: chromium-1280-no-preference",
+    "Not PASS: chromium-1280-reduce",
+    "Not PASS: chromium-missing",
+    "Not PASS: chromium-bad-coordinate",
+    "Not PASS: webkit-375-reduce",
+    "Not PASS: webkit-390-no-preference",
+    "Not PASS: webkit-390-reduce",
+    "Not PASS: webkit-765-no-preference",
+    "Not PASS: webkit-765-reduce",
+    "Not PASS: webkit-1280-no-preference",
+    "Not PASS: webkit-1280-reduce",
+    "Incomplete checks: chromium-375-no-preference",
+    "Incomplete diagnostics: chromium-375-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-375-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-375-no-preference-overview.png",
+    "Incomplete checks: chromium-375-reduce",
+    "Incomplete diagnostics: chromium-375-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-375-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-375-reduce-overview.png",
+    "Incomplete checks: chromium-390-no-preference",
+    "Incomplete diagnostics: chromium-390-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-390-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-390-no-preference-overview.png",
+    "Incomplete checks: chromium-390-reduce",
+    "Incomplete diagnostics: chromium-390-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-390-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-390-reduce-overview.png",
+    "Incomplete checks: chromium-765-no-preference",
+    "Incomplete diagnostics: chromium-765-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-765-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-765-no-preference-overview.png",
+    "Incomplete checks: chromium-765-reduce",
+    "Incomplete diagnostics: chromium-765-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-765-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-765-reduce-overview.png",
+    "Incomplete checks: chromium-1280-no-preference",
+    "Incomplete diagnostics: chromium-1280-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-1280-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-1280-no-preference-overview.png",
+    "Incomplete checks: chromium-1280-reduce",
+    "Incomplete diagnostics: chromium-1280-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-1280-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\chromium-1280-reduce-overview.png",
+    "Incomplete checks: webkit-375-reduce",
+    "Incomplete diagnostics: webkit-375-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-375-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-375-reduce-overview.png",
+    "Incomplete checks: webkit-390-no-preference",
+    "Incomplete diagnostics: webkit-390-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-390-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-390-no-preference-overview.png",
+    "Incomplete checks: webkit-390-reduce",
+    "Incomplete diagnostics: webkit-390-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-390-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-390-reduce-overview.png",
+    "Incomplete checks: webkit-765-no-preference",
+    "Incomplete diagnostics: webkit-765-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-765-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-765-no-preference-overview.png",
+    "Incomplete checks: webkit-765-reduce",
+    "Incomplete diagnostics: webkit-765-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-765-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-765-reduce-overview.png",
+    "Incomplete checks: webkit-1280-no-preference",
+    "Incomplete diagnostics: webkit-1280-no-preference",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-1280-no-preference.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-1280-no-preference-overview.png",
+    "Incomplete checks: webkit-1280-reduce",
+    "Incomplete diagnostics: webkit-1280-reduce",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-1280-reduce.zip",
+    "Missing artifact: evidence\\stage3b\\resume-20261113-webkit-recheck\\webkit-1280-reduce-overview.png"
+  ],
+  "entry": {
+    "head": "d6898549b620cff0610228d646fc73d7acd5f055",
+    "tree": "696a96e6d6204b82f8dd33ff845c7ecea357699e"
+  },
+  "testedHead": "d6898549b620cff0610228d646fc73d7acd5f055",
+  "testedTree": "696a96e6d6204b82f8dd33ff845c7ecea357699e",
+  "branch": "codex/stage3b-restored-main38-20261113",
+  "upstream": {
+    "main": "842d5378bb1fad648f225b79933763b8e87b6afa",
+    "pr38": "666aa9cb8ccc159b716fa0d3ac1699cbdaf24310",
+    "pr40": "340b05a4c947e343076f76513535bf7d7d477f21",
+    "mainMergeBase": "842d5378bb1fad648f225b79933763b8e87b6afa",
+    "pr40MergeBase": "5adb7156acda3968827ff39d5e6f40c4ac837ec5",
+    "shallow": "true"
+  },
+  "matrix": {
+    "required": 16,
+    "observed": 1,
+    "pass": 1,
+    "fail": 0
+  },
+  "faults": {
+    "required": 4,
+    "observed": 2,
+    "pass": 2,
+    "fail": 0
+  },
+  "protectedFiles": 212,
+  "scripts": {
+    "scripts/stage3b-independent-oracle.py": "f1c16f652016cf807816a21fd3800f3a6eae085f357693ad50c3e6001b19ddcf",
+    "scripts/stage3b-resume-audit.mjs": "c63b3a7918450381de047596c60cb57530970aa7865648d32614e10e2d666402"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/results.json",
+      "bytes": 25544,
+      "sha256": "1b44f6526784c6a3942cd8a451687446a4c61e610af3996582806fd7112a30f6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference-overview.png",
+      "bytes": 58327,
+      "sha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference.zip",
+      "bytes": 5664355,
+      "sha256": "f45c1b29fd8ac75237bb0150ea2526fab7c0edddef9250ae20830fd33f58a4b6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-no-preference-failure.png",
+      "bytes": 2801,
+      "sha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-no-preference.zip",
+      "bytes": 3173,
+      "sha256": "968ca5ac0bd910aa78a6f19cb8b3649286b60e0bec4432c6bf95968b1227870f"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-reduce-failure.png",
+      "bytes": 2801,
+      "sha256": "337643841429d14e5994f0c2ef9806eada2af4965b58806f46d1eb91a40a56a7"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-375-reduce.zip",
+      "bytes": 3175,
+      "sha256": "8266344abe1f5ecada19571b2e82fdeaf0a253dd18e97f244a73f621b9b2ce51"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-browser/chromium-390-no-preference.zip",
+      "bytes": 2892,
+      "sha256": "ff2c7b7e0291ede8ce2e5f81a2df8ee9005a7444dfc11335c01c2bf43e7c5409"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/results.json",
+      "bytes": 25544,
+      "sha256": "1b44f6526784c6a3942cd8a451687446a4c61e610af3996582806fd7112a30f6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference-overview.png",
+      "bytes": 58327,
+      "sha256": "02fccbb3e0bfb803f317d19ca4a94f1d337f6bd6c74c43a605a346c96c57be7e"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-webkit-recheck/webkit-375-no-preference.zip",
+      "bytes": 5664355,
+      "sha256": "f45c1b29fd8ac75237bb0150ea2526fab7c0edddef9250ae20830fd33f58a4b6"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-oracle/coordinate-oracle.json",
+      "bytes": 4314,
+      "sha256": "c8349f4cc0a4ea96fc26b4e937563f38c800c0e29482986b3cf76b1b1f54d6ba"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/audit-first.json",
+      "bytes": 10244,
+      "sha256": "1dc69c790e9b473670b4ffe6601aa75e97479690134b0e644406e4601da52e81"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/audit-formal.json",
+      "bytes": 11418,
+      "sha256": "83b4f7e98e2a5893156868af9e83d740af4cd83464a6d3ecac5adaab0a4b0809"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/browser-runner.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/browser2-runner.txt",
+      "bytes": 1486,
+      "sha256": "e9d82d7bf7b5e97a56558ecc2cffc128751705b1fcc9e64b6b2257fa23d3fcf5"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/unit.txt",
+      "bytes": 24462,
+      "sha256": "e69e2189c2ef9bcf103e2278d76054ce511605db07a6f3eade4550b1361dbb2d"
+    },
+    {
+      "path": "evidence/stage3b/resume-20261113-validation/webkit-recheck-runner.txt",
+      "bytes": 211,
+      "sha256": "78f1a3a1ac0907bf0f6004dcf351a32400a7f1853ac81130d51f2c49ed4b9ef0"
+    }
+  ],
+  "limits": "Computational and automated desktop checks only; historic registration, physical devices, native reread and runtime-envelope completeness remain unverified. ZIP traces are preserved locally; this report does not imply remote archival."
+}

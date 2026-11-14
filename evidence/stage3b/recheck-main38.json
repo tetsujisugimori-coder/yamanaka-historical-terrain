@@ -1,0 +1,63 @@
+{
+  "head": "d37d7759f36d73f1f18cc3c868641aee1983d0f3",
+  "cadLocal": [
+    {
+      "revision": "B0",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.475000381469727,
+          2.200000047683716,
+          0.17399999499320984
+        ]
+      },
+      "sha256": "0a64c2ab5629e43d61b7f3ae719d532bc69322f57b0050af56fe393bb1f5a0cc",
+      "meshes": 14,
+      "vertices": 336
+    },
+    {
+      "revision": "B1",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.475000381469727,
+          2.4000000953674316,
+          0.17399999499320984
+        ]
+      },
+      "sha256": "79a078103bc9c64a68c718fa49b8b31adafbd25f34d09e164e0fb3962d824cc7",
+      "meshes": 14,
+      "vertices": 336
+    },
+    {
+      "revision": "B2",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.675000190734863,
+          2.4000000953674316,
+          0.17399999499320984
+        ]
+      },
+      "sha256": "9cb407e1c591594e8d46ca24ccb7c51eddeefd1ace7c3f917acc0a96a1c6ab93",
+      "meshes": 14,
+      "vertices": 336
+    }
+  ],
+  "protectedGitObjects": 212,
+  "baseline": "842d5378bb1fad648f225b79933763b8e87b6afa",
+  "runtimePlacement": "NOT_TESTED",
+  "browser": "NOT_TESTED at parent request; parent running serially"
+}

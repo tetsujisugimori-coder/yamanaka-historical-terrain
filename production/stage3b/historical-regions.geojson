@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "name": "Historical regions EPSG:6676; null geometry is deliberately unplaced",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:6676"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "honmaru",
+      "properties": {
+        "id": "honmaru",
+        "name": "本丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "ninomaru",
+      "properties": {
+        "id": "ninomaru",
+        "name": "二ノ丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "kitanomaru",
+      "properties": {
+        "id": "kitanomaru",
+        "name": "北ノ丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":67,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "nishinomaru",
+      "properties": {
+        "id": "nishinomaru",
+        "name": "西ノ丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "motonishi-yagura",
+      "properties": {
+        "id": "motonishi-yagura",
+        "name": "元西櫓",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "nishi-yagura",
+      "properties": {
+        "id": "nishi-yagura",
+        "name": "西櫓",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "sannomaru",
+      "properties": {
+        "id": "sannomaru",
+        "name": "三ノ丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":67,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "daizaki",
+      "properties": {
+        "id": "daizaki",
+        "name": "岱崎出丸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":67,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "minami-yagura",
+      "properties": {
+        "id": "minami-yagura",
+        "name": "南櫓",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":67,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "raoshiba",
+      "properties": {
+        "id": "raoshiba",
+        "name": "ラオシバ",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":67,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "id": "nishikido",
+      "properties": {
+        "id": "nishikido",
+        "name": "西木戸",
+        "certainty": "unplaced",
+        "method": "公式本文と図の名称・相対位置を照合。測量基準点を同定できず地理座標の生成は保留。",
+        "uncertainty": "原図上の名称は確認済み。測量系・縮尺・対応点・位置精度・1590年の個別境界はUNKNOWN。",
+        "sourceRefs": "[{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":66,\"figure\":\"表3-7\"},{\"id\":\"plan-2023\",\"url\":\"https://www.city.mishima.shizuoka.jp/uploaded/attachment/4805.pdf\",\"page\":65,\"figure\":\"図3-35\"}]"
+      },
+      "geometry": null
+    }
+  ]
+}

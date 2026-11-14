@@ -1,0 +1,142 @@
+{
+  "models": [
+    {
+      "id": "nm-bailey",
+      "vertices": 26901,
+      "maxErrorMeters": 0.0,
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "id": "nm-moat",
+      "vertices": 18873,
+      "maxErrorMeters": 0.0,
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "id": "nm-rampart",
+      "vertices": 17436,
+      "maxErrorMeters": 0.0,
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "id": "nm-passage",
+      "vertices": 11737,
+      "maxErrorMeters": 0.0,
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "id": "nm-transition",
+      "vertices": 113214,
+      "maxErrorMeters": 0.0,
+      "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830"
+    },
+    {
+      "id": "wb-bailey",
+      "vertices": 60752,
+      "maxErrorMeters": 0.0,
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    {
+      "id": "wb-gate",
+      "vertices": 30464,
+      "maxErrorMeters": 0.0,
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    {
+      "id": "wb-moat",
+      "vertices": 6361,
+      "maxErrorMeters": 0.0,
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    {
+      "id": "wb-building",
+      "vertices": 1968,
+      "maxErrorMeters": 0.0,
+      "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c"
+    },
+    {
+      "id": "ic-lookout",
+      "vertices": 7868,
+      "maxErrorMeters": 0.0,
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+    },
+    {
+      "id": "ic-bridge",
+      "vertices": 28109,
+      "maxErrorMeters": 0.0,
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+    },
+    {
+      "id": "ic-koguchi",
+      "vertices": 11133,
+      "maxErrorMeters": 0.0,
+      "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a"
+    },
+    {
+      "id": "dc-gate",
+      "vertices": 103,
+      "maxErrorMeters": 0.0,
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "id": "dc-fence-north",
+      "vertices": 438,
+      "maxErrorMeters": 0.0,
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "id": "dc-fence-south",
+      "vertices": 436,
+      "maxErrorMeters": 0.0,
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "id": "dc-rail-north",
+      "vertices": 480,
+      "maxErrorMeters": 0.0,
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "id": "dc-rail-south",
+      "vertices": 480,
+      "maxErrorMeters": 0.0,
+      "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85"
+    },
+    {
+      "id": "sc-palisade",
+      "vertices": 4422,
+      "maxErrorMeters": 0.0,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    {
+      "id": "sc-gate",
+      "vertices": 156,
+      "maxErrorMeters": 0.0,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    {
+      "id": "sc-vegetation",
+      "vertices": 4536,
+      "maxErrorMeters": 0.0,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    {
+      "id": "sc-flags",
+      "vertices": 232,
+      "maxErrorMeters": 0.0,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    },
+    {
+      "id": "sc-people",
+      "vertices": 952,
+      "maxErrorMeters": 0.0,
+      "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71"
+    }
+  ],
+  "modelCount": 22,
+  "maxErrorMeters": 0,
+  "protectedFiles": 212,
+  "modifiedProtected": [],
+  "precisionMeaning": "Only computational coordinate consistency; historical placement UNKNOWN",
+  "oracle": "Independent Python struct decode and scalar 4x4 matrices, no product generator or Three.js"
+}

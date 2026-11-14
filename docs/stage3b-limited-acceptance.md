@@ -55,3 +55,17 @@
 これは旧Cloudと同一実体だと認定した測定ではありません。[旧Temp整理BLOCKED・削除0件](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41#issuecomment-6867438305)を維持し、旧環境への接続・棚卸し・削除・容量回復は今回の受入整理の前提にしません。新しい製品試験へ進むときは、その実行先の容量・実効Tempを改めて測定します。
 
 この文書変更はREADMEの現在地表示と完成条件の整理だけです。mainへの直接変更、PR #42変更、Draft解除、マージ、Pages公開、旧Tempの削除は行いません。
+
+## 2026-11-14 実装候補の追補
+
+本書上部は文書審査時点の記録として保持します。最新main c0ba33b52を既存PR #42へ通常mergeし、[限定補強記録](stage3b/LIMITED-20261114.md)の実装・試験を追加中。過去HEADのCIと新候補の受入は別判定です。最終原票・正式CI・独立レビュー・保全が未完了の間はPARTIAL／マージNOを維持します。
+
+## 2026-11-14 追加レビュー後の検査補強（正式結果待ち）
+
+[固定追加検査と反例](maintenance/stage3b-followup/README.md)に対象を分離。実mesh・全祖先の可視性、開始A/C/C+Dからの22詳細、意図的な模型非表示対照、HTTP配信JS等の実本文対build実本文、旧取得後のscene書換えを追加で確認する。従来の画面名・選択ID・camera一致だけでは表示成功／旧応答排除の受入に使わない。
+
+取得中close／並列retry／旧restoreなど通常UIで発生させられない条件は[到達性原票](maintenance/stage3b-races-20261114/README.md)とNOT_TESTEDを維持する。context lossは実ブラウザの故障注入であり通常UI、OS強制終了、実機Safariの代わりではない。したがってCI job成功だけで要求5経路全体PASSとはしない。
+
+## 遅延操作の再審査契約（2026-11-14、追加レビュー5904216394）
+
+[遅延5経路の証拠分類と固定契約](maintenance/stage3b-races-20261114/CONTRACT.md)を追加する。UI到達性、内部controller安全性、native context-loss故障注入を別の試験種別とし、PASS等の結果と混同しない。過去の4経路×2engine NOT_TESTEDを保持する。最新HEADの正式CI・内部正常/故障対照・独立レビュー・原ZIP再取得照合が揃うまで、以前のPARTIAL/限定マージNOは自動変更しない。

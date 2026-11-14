@@ -70,3 +70,16 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 - Added project-original D slope/path colors and sparse low shrubs, isolated from A and C-only presentation.
 - QGIS/Blender regeneration and reload, numerical expansion/negative controls, browser/artifact validation.
 - No merge or publication. Final execution evidence and independent assessment recorded in PR.
+
+## 2026-11-10 Stage 3-B：城域案内・模型位置照合・制作管理（Issue #41）
+
+- 既存mainから独立し、現況A／歴史資料／C・D模型範囲／現代の制作進捗を分離した城域案内を追加。原図の地理参照点を同定できないため、11区域は未配置のまま公式頁と相対関係を示す。境界・残差・位置精度を捏造しない。
+- 五つの保存済みGLBから22模型の実頂点・階層変換を読み、EPSG:6676の範囲を再生成。別実装の独立計算と一致。185原本の不変を検査。実世界の位置精度や、実行時生成物全体の検証とは扱わない。
+- 制作中の看板はIssue #41の模型位置照合作業を示す現代UI。歴史景観時には非表示。未確認区域はUNKNOWNで、現地工事を示さない。
+- QGIS派生プロジェクトは元プロジェクトから分離し、10レイヤーを再読検査。原図画像は再配布しない。PR #38 CAD依存は未統合のため保留。詳細な試験・CI・独立レビュー結果はDraft PRとdocs/stage3bに記録する。
+
+## 2026-11-14 PR #42 遅延5経路の分類と内部契約補強
+
+- 通常UI到達性・内部controller・native context-loss故障注入を別軸化。旧4経路×2engineのNOT_TESTEDは保持。Stage3B HOLD、Draft維持。
+- 実製品ソースを用いる内部正常15件・意味的故障10件を追加。閉鎖、retry逆順、restore、dispose、共有取得の最新waiterを独立集計し、実UI成功と読み替えない。製品コード・212原本・生成データは無変更。
+- 検査器案の独立指摘を修正し、源ソース・変異hash・期待拒否理由・正常対照を記録。最終HEAD正式CIと原ZIP保全結果はPR/Issueの追補で同一HEADに紐付ける。未完了の間は限定マージNO。

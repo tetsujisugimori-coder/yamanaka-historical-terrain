@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "method": "Decode actual GLB vertices and hierarchy, verify pinned hash. No supporting-surface or user-yaw assumption.",
+  "records": [
+    {
+      "revision": "B0",
+      "asset": "parts/cad/B0/assembly.glb",
+      "sha256": "0a64c2ab5629e43d61b7f3ae719d532bc69322f57b0050af56fe393bb1f5a0cc",
+      "upstreamCommit": "1cc50d1a6d1af8164cada51124cb02279dbe316c",
+      "category": "D",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.475000381469727,
+          2.200000047683716,
+          0.17399999499320984
+        ]
+      },
+      "meshCount": 14,
+      "vertices": 336,
+      "placementCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "runtimeHeight": "NOT_TESTED",
+      "runtimeEnvelope": "NOT_TESTED"
+    },
+    {
+      "revision": "B1",
+      "asset": "parts/cad/B1/assembly.glb",
+      "sha256": "79a078103bc9c64a68c718fa49b8b31adafbd25f34d09e164e0fb3962d824cc7",
+      "upstreamCommit": "1cc50d1a6d1af8164cada51124cb02279dbe316c",
+      "category": "D",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.475000381469727,
+          2.4000000953674316,
+          0.17399999499320984
+        ]
+      },
+      "meshCount": 14,
+      "vertices": 336,
+      "placementCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "runtimeHeight": "NOT_TESTED",
+      "runtimeEnvelope": "NOT_TESTED"
+    },
+    {
+      "revision": "B2",
+      "asset": "parts/cad/B2/assembly.glb",
+      "sha256": "9cb407e1c591594e8d46ca24ccb7c51eddeefd1ace7c3f917acc0a96a1c6ab93",
+      "upstreamCommit": "1cc50d1a6d1af8164cada51124cb02279dbe316c",
+      "category": "D",
+      "localBounds": {
+        "min": [
+          -2.4749999046325684,
+          0,
+          -0.07500000298023224
+        ],
+        "max": [
+          8.675000190734863,
+          2.4000000953674316,
+          0.17399999499320984
+        ]
+      },
+      "meshCount": 14,
+      "vertices": 336,
+      "placementCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "runtimeHeight": "NOT_TESTED",
+      "runtimeEnvelope": "NOT_TESTED"
+    }
+  ],
+  "defaultAnchor": {
+    "source": "src/main.js syncParts placement",
+    "localEast": -20,
+    "localNorth": 0,
+    "epsg6676": [
+      44842.121277226666,
+      -93478.07235405142
+    ],
+    "interpretation": "Configured default anchor only, not surveyed historical position. Runtime rotation 0/45/90 and ground support are separate."
+  },
+  "limitations": [
+    "Runtime scene placement and support heights not remeasured",
+    "Approximate 89mm prior support residual is prior Stage3A evidence, not a new measurement",
+    "Runtime vegetation and legacy palisade remain outside this asset audit"
+  ]
+}

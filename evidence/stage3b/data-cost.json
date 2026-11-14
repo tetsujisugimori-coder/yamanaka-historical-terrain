@@ -1,0 +1,204 @@
+{
+  "scope": "Node JSON parse/validation CPU only, not browser load/render/input performance",
+  "node": "v24.22.1",
+  "platform": "linux",
+  "bytes": 93061,
+  "plan": [
+    {
+      "block": 0,
+      "order": [
+        "parse",
+        "parseValidate"
+      ]
+    },
+    {
+      "block": 1,
+      "order": [
+        "parseValidate",
+        "parse"
+      ]
+    },
+    {
+      "block": 2,
+      "order": [
+        "parse",
+        "parseValidate"
+      ]
+    },
+    {
+      "block": 3,
+      "order": [
+        "parseValidate",
+        "parse"
+      ]
+    },
+    {
+      "block": 4,
+      "order": [
+        "parse",
+        "parseValidate"
+      ]
+    },
+    {
+      "block": 5,
+      "order": [
+        "parseValidate",
+        "parse"
+      ]
+    },
+    {
+      "block": 6,
+      "order": [
+        "parse",
+        "parseValidate"
+      ]
+    },
+    {
+      "block": 7,
+      "order": [
+        "parseValidate",
+        "parse"
+      ]
+    },
+    {
+      "block": 8,
+      "order": [
+        "parse",
+        "parseValidate"
+      ]
+    },
+    {
+      "block": 9,
+      "order": [
+        "parseValidate",
+        "parse"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "block": 0,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 233.28956799999997
+    },
+    {
+      "block": 0,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 310.569766
+    },
+    {
+      "block": 1,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 256.666347
+    },
+    {
+      "block": 1,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 189.5668750000001
+    },
+    {
+      "block": 2,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 223.9721669999999
+    },
+    {
+      "block": 2,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 261.8229729999998
+    },
+    {
+      "block": 3,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 232.56918500000006
+    },
+    {
+      "block": 3,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 200.35544200000004
+    },
+    {
+      "block": 4,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 196.41525500000012
+    },
+    {
+      "block": 4,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 234.75288
+    },
+    {
+      "block": 5,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 237.37158499999987
+    },
+    {
+      "block": 5,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 199.98921000000018
+    },
+    {
+      "block": 6,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 204.98668199999975
+    },
+    {
+      "block": 6,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 234.452855
+    },
+    {
+      "block": 7,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 236.3293020000001
+    },
+    {
+      "block": 7,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 196.29870600000004
+    },
+    {
+      "block": 8,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 201.4439550000002
+    },
+    {
+      "block": 8,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 237.88619300000028
+    },
+    {
+      "block": 9,
+      "condition": "parseValidate",
+      "iterations": 1000,
+      "milliseconds": 254.57529799999975
+    },
+    {
+      "block": 9,
+      "condition": "parse",
+      "iterations": 1000,
+      "milliseconds": 230.14243799999986
+    }
+  ],
+  "browserLoad": "NOT_TESTED",
+  "renderImpact": "NOT_TESTED",
+  "inputImpact": "NOT_TESTED",
+  "limitations": "Same data and process, no baseline scene rendering. No performance improvement claim."
+}

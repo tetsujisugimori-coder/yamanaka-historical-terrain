@@ -1,0 +1,83 @@
+[
+  {
+    "key": "chromium-375-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-375-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-390-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-390-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-765-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-765-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-1280-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-1280-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-missing",
+    "status": "PASS"
+  },
+  {
+    "key": "chromium-bad-coordinate",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-375-no-preference",
+    "status": "FAIL",
+    "error": "TimeoutError: page.waitForFunction: Timeout 60000ms exceeded."
+  },
+  {
+    "key": "webkit-375-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-390-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-390-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-765-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-765-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-1280-no-preference",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-1280-reduce",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-missing",
+    "status": "PASS"
+  },
+  {
+    "key": "webkit-bad-coordinate",
+    "status": "PASS"
+  }
+]
