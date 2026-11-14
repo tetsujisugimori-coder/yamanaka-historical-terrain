@@ -55,3 +55,7 @@
 これは旧Cloudと同一実体だと認定した測定ではありません。[旧Temp整理BLOCKED・削除0件](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/41#issuecomment-6867438305)を維持し、旧環境への接続・棚卸し・削除・容量回復は今回の受入整理の前提にしません。新しい製品試験へ進むときは、その実行先の容量・実効Tempを改めて測定します。
 
 この文書変更はREADMEの現在地表示と完成条件の整理だけです。mainへの直接変更、PR #42変更、Draft解除、マージ、Pages公開、旧Tempの削除は行いません。
+
+## 2026-11-14 実装候補の追補
+
+本書上部は文書審査時点の記録として保持します。最新main c0ba33b52を既存PR #42へ通常mergeし、[限定補強記録](stage3b/LIMITED-20261114.md)の実装・試験を追加中。過去HEADのCIと新候補の受入は別判定です。最終原票・正式CI・独立レビュー・保全が未完了の間はPARTIAL／マージNOを維持します。

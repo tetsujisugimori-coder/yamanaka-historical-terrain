@@ -1,0 +1,47 @@
+name: Stage 3-B limited production acceptance
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  limited:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      TMPDIR: ${{ github.workspace }}/.work/stage3b-limited/tmp
+      EVIDENCE_DIR: ${{ github.workspace }}/evidence-run/stage3b-limited
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          mkdir -p "$TMPDIR" "$EVIDENCE_DIR"
+          df -B1 . > "$EVIDENCE_DIR/capacity-before.txt"
+          df -i . >> "$EVIDENCE_DIR/capacity-before.txt"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > "$EVIDENCE_DIR/identity.txt"
+          cat /etc/os-release > "$EVIDENCE_DIR/os.txt"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - run: node scripts/stage3b-preservation-check.mjs
+      - run: node scripts/stage3b-overview-generate.mjs --verify
+      - run: python3 scripts/stage3b-independent-oracle.py --output-dir evidence-run/stage3b-limited/oracle
+      - run: node --test --test-concurrency=1 tests/*.test.mjs
+      - run: git diff --check
+      - run: npm run build
+      - name: Production matrix (not Pages deployment)
+        run: |
+          ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4394 --strictPort > "$EVIDENCE_DIR/server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4394/ >/dev/null && break; sleep 1; done
+          TEST_URL=http://127.0.0.1:4394 node scripts/stage3b-limited-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3b-limited-${{ github.sha }}
+          path: evidence-run/stage3b-limited
+          if-no-files-found: error
