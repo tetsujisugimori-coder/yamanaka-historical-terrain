@@ -59,3 +59,9 @@
 ## 2026-11-14 実装候補の追補
 
 本書上部は文書審査時点の記録として保持します。最新main c0ba33b52を既存PR #42へ通常mergeし、[限定補強記録](stage3b/LIMITED-20261114.md)の実装・試験を追加中。過去HEADのCIと新候補の受入は別判定です。最終原票・正式CI・独立レビュー・保全が未完了の間はPARTIAL／マージNOを維持します。
+
+## 2026-11-14 追加レビュー後の検査補強（正式結果待ち）
+
+[固定追加検査と反例](maintenance/stage3b-followup/README.md)に対象を分離。実mesh・全祖先の可視性、開始A/C/C+Dからの22詳細、意図的な模型非表示対照、HTTP配信JS等の実本文対build実本文、旧取得後のscene書換えを追加で確認する。従来の画面名・選択ID・camera一致だけでは表示成功／旧応答排除の受入に使わない。
+
+取得中close／並列retry／旧restoreなど通常UIで発生させられない条件は[到達性原票](maintenance/stage3b-races-20261114/README.md)とNOT_TESTEDを維持する。context lossは実ブラウザの故障注入であり通常UI、OS強制終了、実機Safariの代わりではない。したがってCI job成功だけで要求5経路全体PASSとはしない。

@@ -5,3 +5,10 @@ const routes={
  connected:['dc-gate','dc-fence-north','dc-fence-south','dc-rail-north','dc-rail-south']
 };
 export function overviewDestination(id){return Object.entries(routes).find(([,ids])=>ids.includes(id))?.[0]??null;}
+
+// Detail navigation leaves current A explicitly. D-only exhibits require C+D;
+// inferred C exhibits use C without silently carrying creative scenery forward.
+export function overviewPresentation(feature){
+ if(!feature||!overviewDestination(feature.id))return null;
+ return {variant:'restored',drama:feature.category==='D'};
+}

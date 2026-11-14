@@ -7,7 +7,15 @@ jobs:
   limited:
     runs-on: ubuntu-24.04
     timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        browser: [chromium, webkit]
     env:
+      BROWSER_FILTER: ${{ matrix.browser }}
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      BASE_HEAD_SHA: ${{ github.event.pull_request.base.sha }}
       TMPDIR: ${{ github.workspace }}/.work/stage3b-limited/tmp
       EVIDENCE_DIR: ${{ github.workspace }}/evidence-run/stage3b-limited
     steps:
@@ -39,9 +47,37 @@ jobs:
           trap 'kill "$server"' EXIT
           for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4394/ >/dev/null && break; sleep 1; done
           TEST_URL=http://127.0.0.1:4394 node scripts/stage3b-limited-browser.mjs
+      - name: Target visibility semantic negative (separate from normal matrix)
+        if: ${{ !cancelled() }}
+        run: |
+          ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4396 --strictPort > "$EVIDENCE_DIR/hidden-server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4396/ >/dev/null && break; sleep 1; done
+          TEST_URL=http://127.0.0.1:4396 EVIDENCE_DIR="$EVIDENCE_DIR/hidden-control" node scripts/stage3b-hidden-control-browser.mjs
+      - name: Explicit delayed-operation supplement (not full race coverage)
+        if: ${{ !cancelled() }}
+        run: |
+          ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4397 --strictPort > "$EVIDENCE_DIR/races-server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4397/ >/dev/null && break; sleep 1; done
+          TEST_URL=http://127.0.0.1:4397 EVIDENCE_DIR="$EVIDENCE_DIR/races" node scripts/stage3b-races-browser.mjs
+      - name: Independent fixed-counterexample regressions
+        if: ${{ !cancelled() }}
+        run: |
+          ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4398 --strictPort > "$EVIDENCE_DIR/review-server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4398/ >/dev/null && break; sleep 1; done
+          TEST_URL=http://127.0.0.1:4398 EVIDENCE_DIR="$EVIDENCE_DIR/review-regressions" node scripts/stage3b-review-regressions-browser.mjs
+      - name: Final complete evidence inventory
+        if: always()
+        run: |
+          node --input-type=module -e 'import {inventoryEvidence} from "./scripts/stage3b-evidence-inventory.mjs";import{writeFile}from"node:fs/promises";const root=process.env.EVIDENCE_DIR;await writeFile(root+"/complete-manifest.json",JSON.stringify({files:await inventoryEvidence(root)},null,2));'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: stage3b-limited-${{ github.sha }}
+          name: stage3b-limited-${{ matrix.browser }}-${{ github.sha }}
           path: evidence-run/stage3b-limited
           if-no-files-found: error
