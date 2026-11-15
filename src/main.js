@@ -51,7 +51,7 @@ function showError(message,error,kind='error'){
  $('#loading')?.remove();$('#app-status').textContent=message;viewport.querySelector('.error')?.remove();const block=document.createElement('div');block.className='error';block.setAttribute('role','status');const p=document.createElement('p');p.textContent=message;block.append(p);viewport.append(block);console.error(error);
 }
 async function json(url){const r=await fetch(url);if(!r.ok)throw new Error(`${r.status} ${url}`);return r.json();}
-const castleOverview=createCastleOverview({load:()=>json(assetPath('data/castle-overview.json'))});
+const castleOverview=createCastleOverview({load:()=>json(assetPath('data/castle-overview.json')),loadInferred:()=>json(assetPath('data/inferred-regions.json'))});
 setRenderControls(false);
 async function bootstrap(){
  let features,sources;

@@ -104,3 +104,8 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 - PR48統合main f6aae9a / tree32e7a3cから独立branch。PR49の文書修正には依存せず、B3成果物・履歴は変更しない。
 - 事業記録、原成果の現存/所在、閲覧/取得、A〜F利用許可を分離した台帳と検査器を追加。1972/2012とも原成果現存・資料番号・個別許可UNKNOWN。
 - 問い合わせ文案のみ、送信なし。B3候補4件REJECTED・未配置・変換NOT_TESTED・Stage3B HOLD維持。結果はdocs/stage3b4/RESULTS.md。
+
+## 2026-11-15 JST Stage 3-B5 開始
+Issue #52。PR51 merge 4b7a11dを基準に別branchで推定C別レイヤーを実装中。候補採否・表示契約は製品前commit a1543a7に固定。既存模型や相対関係から区域形状を捏造せず、今回11区域の採用候補0・geometry=null維持。原本212/模型22のpath/size/SHA固定。正常/故障/本番16条件/独立レビュー/原ZIP保全は新HEADで確認し、完了までPARTIAL・限定マージNO。マージ・Pages公開なし。
+
+- Stage 3-B5（2026-11-15 23:23 JST）実装HEAD3208e41で622 Node PASS、保護230files/212原本/22模型不変。候補0/11未配置維持。局所ブラウザ24枠は環境不足NOT_TESTED。独立3指摘は同反例修正、CI/原票保全未完につきPARTIAL・限定マージNO。詳細docs/stage3b5/RESULTS.md。
