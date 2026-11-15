@@ -1,5 +1,16 @@
 # Stage 3-B3 結果と再開条件
 
+## マージ後の確定状態（2026-11-15 20:04 JST確認・P3追補）
+
+- **PR #48は2026-11-15 19:10 JSTにマージ済み**。対象の提出HEAD `19844064df889d733951f91add8f3bdfce70e7e7`、merge commit `f6aae9afecad1d7fd55072a9efe5841583c6eb57`。本節を現状の正本とし、以下の提出当時のPENDING/NO/「マージしていない」は履歴として保存する。
+- **対象HEADの正式CIはPR12+push4=16 workflowが最終的にcompleted/success**。15件はattempt1成功、内側観察はattempt1の`diagnose-render-cost`がWebKit `route.fetch` 中の`ECONNRESET`で失敗し、同一HEADの該当jobを一度再実行したattempt2で成功。初回失敗票は保持し、根本原因はUNKNOWN。最新36 checksは35 success・Pages deploy 1 skipped。build成功をPages公開実施とはしない。
+- **正式原ZIP33本（初回32本＋再実行1本、合計1,071,790,701 bytes）**の正規取得・保存後実再取得・全バイト/SHA-256/CRC・適用可能manifest照合PASSは[PR最終報告](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/48#issuecomment-6892728993)の担当者記録による。本P3文書追補では33本の保存先実物を再監査しておらず、第三者監査の新規実施とも扱わない。全入力の完全保全、画像の意味内容、実効ACL・保持期限、Windows追加移管は立証していない。
+- **採用範囲は資料不足と不採用点を管理する台帳・検査器のみ**。西ノ丸・西櫓の2区域は未配置、候補4件不採用、fit/check各0、`geometry=null`、実変換`NOT_TESTED`、残差`null`、歴史的位置`UNKNOWN`。測量原図・座標簿未取得、同一点・変換精度の確証なし。**総合PARTIAL、Stage 3-B全体HOLD**を継続する。
+- 本追補は**マージ後の文書修正**であり、PR #48の検証済みHEADと別版。追補commit自身のCI・原証拠監査は結果が確定するまでPENDINGとし、以前のworkflow成功を流用しない。製品・地理データ・原本・検査契約の追加変更はしない。
+
+---
+
+
 ## 提出版の最終確認追補（2026-11-15 18:03 JST）
 
 対象HEAD `e770141ff8c479b9f962890d3b9b6c97f2391137` / tree `58b06b597ad3d455e7d7b1f4113831e12ecec991`。提出後のPR12+push4、16 workflowはすべて成功。Pagesのdeployはskip。正式原ZIP32本（既存専用2本＋今回補完30本）と局所bundle1本について、保存後の実再取得・サイズ・SHA-256・CRC・適用可能な内部manifestを照合済み。追加30本は取得元原ZIPとの全バイト比較も実施した。版別run/artifact/digest・検証範囲・容量・留保は[CI-EVIDENCE.md](CI-EVIDENCE.md)。
