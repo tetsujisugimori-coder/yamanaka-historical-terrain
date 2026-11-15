@@ -26,7 +26,10 @@ export function createInferredRegions({load,validate=validateInferredRegions,onR
   const text={idle:'未取得。表示をオンにすると候補採否資料を読み込みます。',loading:'推定資料を読込中。既存の地形・模型は引き続き利用できます。',empty:'候補なし：採用条件を満たす推定区域は0件です。全区域の未配置理由を下の一覧で確認できます。',ready:`推定C候補 ${data?.regions.filter(r=>r.status==='ACCEPTED_C').length??0} 件。歴史的位置は未確定です。`,invalid:'不正な推定データのため表示しません。既存の地形・模型は利用できます。',error:'推定資料の読込失敗。候補なしとは異なります。既存の地形・模型は利用できます。'};
   const message=`${text[state]}${error?` 理由：${error}`:''}${toggle.checked?(active?' 城域表示中。':' 城域を開くと描画します。'):' 推定レイヤーはOFFです。'}`;
   if(status.textContent!==message)status.textContent=message;
-  element.dataset.state=state;retry.disabled=!toggle.checked||state==='loading'||disposed;
+  // Native disabled blurs the operation's button. Keep it focusable while busy;
+  // the click guard below blocks duplicate activation without moving focus.
+  element.dataset.state=state;retry.disabled=!toggle.checked||disposed;
+  retry.setAttribute('aria-disabled',String(retry.disabled||state==='loading'));
  }
  function showRegion(item){
   selectedRegionId=item.regionId;for(const button of list.querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.inferredRegion===item.regionId));
@@ -55,7 +58,7 @@ export function createInferredRegions({load,validate=validateInferredRegions,onR
   finally{operation.terminal=true;if(!disposed&&ticket===sequence){sync();binding?.render?.();}}
  }
  toggle.onchange=()=>{if(disposed)return;if(!toggle.checked){sequence++;if(state==='loading'){state='idle';error=null;}sync();binding?.render?.();}else if(data){sync();binding?.render?.();}else void reload();};
- retry.onclick=()=>void reload();
+ retry.onclick=()=>{if(state!=='loading')void reload();};
  reset.onclick=()=>{sequence++;toggle.checked=false;data=null;state='idle';error=null;selectedRegionId=null;clearShapes();list.replaceChildren();detail.replaceChildren();sync();binding?.render?.();toggle.focus();};
  updateStatus();
  return {element,attach(value){binding=value;value.scene.add(group);try{build();}catch(e){clearShapes();data=null;state='invalid';error=String(e.message??e);}sync();},sync,reload,diagnostics:()=>({state,error,requestedVisible:toggle.checked,active,accepted:data?.regions.filter(r=>r.status==='ACCEPTED_C').length??0,unplaced:data?.regions.filter(r=>r.status==='UNPLACED').length??0,objects:group.children.length,visibleObjects:group.visible?group.children.length:0,selectedRegionId,loadSequence:sequence,operations:operations.map(o=>({...o})),renderObjects:group.children.map(o=>({candidateId:o.userData.candidateId,vertices:o.geometry.attributes.position.count,dashed:o.material.isLineDashedMaterial===true,visible:group.visible,points:Array.from(o.geometry.attributes.position.array)}))}),dispose(){if(disposed)return;disposed=true;sequence++;clearShapes();group.parent?.remove(group);group.visible=false;toggle.disabled=true;retry.disabled=true;reset.disabled=true;}};

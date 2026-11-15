@@ -27,3 +27,8 @@
 ## 証拠・残件
 局所原票と後作成台帳は別分類。承認済みLibrary保全・実再取得はPENDING。正式CIと原ZIPは未確認。本人限定取得URL/IDは公開資料へ載せない。
 実機Safari、VoiceOver、物理touch、OS文字拡大はNOT_TESTED。史実位置の確証・実測位置合わせを実施していない。Draft解除・マージ・Pages公開なし。
+
+## P2-B5-FOCUS follow-up (2026-11-15 JST)
+Review 5911291309 is anchored to submitted HEAD 18f7ee5. PR run 43724320094 (merge cd207d0, identical submitted tree) and push run 43724289611 both retain their failures. Each engine passed 8 production cases, stale-response control and synthetic renderer; its 503/invalid recovery cases lost retry-button focus. Four original ZIPs (14166087674, 14165793479, 14165913089, 14165567488) were saved and separately materialized; full bytes, official SHA256, all CRCs and complete manifest membership/size/hash matched. This was verified by the current reviewer using a separate Python audit, not a second-person audit. Private retrieval identifiers are omitted; long-term retention UNKNOWN.
+
+The focused retry button now remains natively enabled during loading and reports aria-disabled=true. Its click handler ignores duplicate activation while loading. No completion-time focus() is added, so moving focus elsewhere while waiting is respected. OFF/dispose still use native disabled. The new regression failed before the fix (native disabled true), then passed; all Node tests 623 PASS, protected 230-path set / 212 originals / 22 model registrations unchanged, production and isolated synthetic builds PASS. Existing four browser counterexamples and their focus expectations are unchanged. Formal new-HEAD CI and its original artifact preservation remain PENDING until a PR comment records them. Stage3B HOLD; 0 adopted / 11 UNPLACED; actual historical polygons NOT_TESTED. Draft, no merge/deploy.
