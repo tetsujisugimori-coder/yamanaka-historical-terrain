@@ -1,0 +1,12 @@
+import * as THREE from 'three';
+import {createInferredRegions} from '../src/inferred-regions.js';
+import {validateInferredRegions} from '../src/inferred-regions-contract.js';
+import {syntheticFixture} from './stage3b5-fixture.mjs';
+const scene=new THREE.Scene();scene.background=new THREE.Color(0xf4f4ed);
+const camera=new THREE.PerspectiveCamera(45,1,0.1,1000);camera.position.set(40,70,70);camera.lookAt(10,0,-10);
+const renderer=new THREE.WebGLRenderer({antialias:false});renderer.setSize(320,320);document.querySelector('#synthetic-viewport').append(renderer.domElement);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(100,100),new THREE.MeshBasicMaterial({color:0xd7dfcc,side:THREE.DoubleSide}));ground.rotation.x=-Math.PI/2;scene.add(ground);
+const grid={bounds:[-100,-100,100,100],rows:3,cols:3,step:100,heights:[[0,0,0],[0,0,0],[0,0,0]]};
+const ui=createInferredRegions({load:async()=>structuredClone(syntheticFixture),validate:d=>validateInferredRegions(d,{allowSynthetic:true})});
+document.body.append(ui.element);const render=()=>{ui.sync(true);renderer.render(scene,camera);};ui.attach({scene,grid,render});render();
+window.__b5Harness={ready:true,dataKind:'SYNTHETIC',diagnostics:()=>ui.diagnostics()};

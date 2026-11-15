@@ -1,0 +1,477 @@
+// Test only. Never shipped as historical evidence.
+export const syntheticFixture = {
+  "schemaVersion": 1,
+  "dataKind": "SYNTHETIC",
+  "baselineHead": "SYNTHETIC_NOT_REAL_RESEARCH",
+  "checkedAt": "2026-11-15T23:17:00+09:00",
+  "crs": "EPSG:6676",
+  "unit": "m",
+  "axisOrder": "E,N",
+  "defaultVisible": false,
+  "displayOffsetMetres": 4,
+  "displayOffsetMeaning": "現況DEMの地表から表示線を浮かせる描画上の調整。歴史的標高や精度ではない。",
+  "stage3B": "HOLD",
+  "sources": [
+    {
+      "id": "prior-region-ledger",
+      "title": "合成試験専用座標。実地・史料由来ではない。",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/blob/4b7a11d271cd6018c41ee8d78619fa69a3b8a391/research/stage3b/regions.json",
+      "recordPath": "research/stage3b/regions.json",
+      "recordSha256": "2c4026325ef63e2d786c9665f81e5716b231315f23168159201899ecf09b92cc"
+    },
+    {
+      "id": "prior-georeference-ledger",
+      "title": "既存座標参照調査記録",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/blob/4b7a11d271cd6018c41ee8d78619fa69a3b8a391/research/stage3b/source-georeference-ledger.json",
+      "recordPath": "research/stage3b/source-georeference-ledger.json",
+      "recordSha256": "a904cfc33127a1bdd2799b37c484c9661cea6dbfff338facb5558d414977a826"
+    },
+    {
+      "id": "b3-correspondence-ledger",
+      "title": "Stage 3-B3対応点検討記録",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/blob/4b7a11d271cd6018c41ee8d78619fa69a3b8a391/research/stage3b3/ledger.json",
+      "recordPath": "research/stage3b3/ledger.json",
+      "recordSha256": "8d9d82a98c8e3e8b41eca7829ccf88d0104db63f205c8a01a2485fa505674574"
+    },
+    {
+      "id": "b4-custody-ledger",
+      "title": "Stage 3-B4原成果所在・権利記録",
+      "url": "https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/blob/4b7a11d271cd6018c41ee8d78619fa69a3b8a391/research/stage3b4/ledger.json",
+      "recordPath": "research/stage3b4/ledger.json",
+      "recordSha256": "eb683d11e509d931929f98e41755d866d7a74dcdce7d103650b5e5d3e59f9a4a"
+    }
+  ],
+  "regions": [
+    {
+      "regionId": "honmaru",
+      "candidateId": "b5-honmaru-assessment-1",
+      "name": "本丸",
+      "status": "ACCEPTED_C",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44862.121277226666,
+              -93478.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93478.07235405142
+            ],
+            [
+              44882.121277226666,
+              -93458.07235405142
+            ],
+            [
+              44862.121277226666,
+              -93458.07235405142
+            ],
+            [
+              44862.121277226666,
+              -93478.07235405142
+            ]
+          ]
+        ]
+      },
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=honmaru]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=honmaru], georeference"
+        }
+      ],
+      "directStatement": "合成試験形状。史料の主張ではない。",
+      "statementBasis": "SYNTHETIC test-only",
+      "inferenceProcedure": "原点と20mを使う合成試験。",
+      "decisionReason": "描画経路試験だけに採用。史実候補でない。",
+      "limitations": [
+        "SYNTHETIC; not a historical candidate"
+      ],
+      "geometryBasis": {
+        "method": "SYNTHETIC square only",
+        "steps": [
+          "固定原点から東20m北20mの合成矩形。歴史的位置ではない。"
+        ],
+        "coordinateSourceRef": "prior-region-ledger"
+      }
+    },
+    {
+      "regionId": "ninomaru",
+      "candidateId": "b5-ninomaru-assessment-1",
+      "name": "二ノ丸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=ninomaru]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=ninomaru], georeference"
+        }
+      ],
+      "directStatement": "本丸の西隣。北条丸は後の調査結果に基づき二ノ丸へ改称。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "別名北条丸と現在の二ノ丸の名称対応だけでは区域輪郭の地理座標を取得できない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "kitanomaru",
+      "candidateId": "b5-kitanomaru-assessment-1",
+      "name": "北ノ丸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=kitanomaru]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=kitanomaru], georeference"
+        }
+      ],
+      "directStatement": "本丸の北側の曲輪。東南の帯曲輪接続部に門の推定根拠となる柱穴がある。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "本丸北方の記述と柱穴の存在は区域外周座標を示さない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "nishinomaru",
+      "candidateId": "b5-nishinomaru-assessment-1",
+      "name": "西ノ丸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=nishinomaru]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=nishinomaru], georeference"
+        },
+        {
+          "id": "b3-correspondence-ledger",
+          "locator": "regions[id=nishinomaru], candidates"
+        },
+        {
+          "id": "b4-custody-ledger",
+          "locator": "projects[id=survey-1972|survey-2012]; materials[id=target-1972|target-2012].facts; materials[id=target-1972|target-2012].rights"
+        }
+      ],
+      "directStatement": "元西櫓と西櫓の間の曲輪。古絵図で二ノ丸と記す例があるため同名を機械同一視しない。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "元西櫓・西櫓間という関係は確認記録があるが、B3の2対応点候補は不採用。修復・災害履歴があり位置同一性を認定できない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "motonishi-yagura",
+      "candidateId": "b5-motonishi-yagura-assessment-1",
+      "name": "元西櫓",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=motonishi-yagura]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=motonishi-yagura], georeference"
+        }
+      ],
+      "directStatement": "二ノ丸西隣の小曲輪。名称と上部構造の存在を区別する。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "二ノ丸・西ノ丸間の小曲輪という記述はあるが、元西櫓を西櫓の資料・模型座標と同一視できない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "nishi-yagura",
+      "candidateId": "b5-nishi-yagura-assessment-1",
+      "name": "西櫓",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=nishi-yagura]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=nishi-yagura], georeference"
+        },
+        {
+          "id": "b3-correspondence-ledger",
+          "locator": "regions[id=nishi-yagura], candidates"
+        },
+        {
+          "id": "b4-custody-ledger",
+          "locator": "projects[id=survey-1972|survey-2012]; materials[id=target-1972|target-2012].facts; materials[id=target-1972|target-2012].rights"
+        }
+      ],
+      "directStatement": "西ノ丸西側の堀を隔てた小曲輪。東南隅に虎口。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "西ノ丸西側・東南虎口の記述はあるが、B3の2対応点候補は不採用。復元植栽と平面表示は座標根拠にならない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "sannomaru",
+      "candidateId": "b5-sannomaru-assessment-1",
+      "name": "三ノ丸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=sannomaru]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=sannomaru], georeference"
+        }
+      ],
+      "directStatement": "二ノ丸南方、箱井戸東側。現在の公民館・宗閑寺周辺を含む。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "現宗閑寺周辺等の広域記述から境界を一意に作れず、現在の敷地形状を歴史区域へ転用できない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "daizaki",
+      "candidateId": "b5-daizaki-assessment-1",
+      "name": "岱崎出丸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=daizaki]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=daizaki], georeference"
+        }
+      ],
+      "directStatement": "南櫓の西南の尾根。御馬場曲輪・すり鉢曲輪等を含む出丸の名称。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "尾根と複数曲輪の総称であり、名称範囲の記述のみから単一外周を作れない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "minami-yagura",
+      "candidateId": "b5-minami-yagura-assessment-1",
+      "name": "南櫓",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=minami-yagura]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=minami-yagura], georeference"
+        }
+      ],
+      "directStatement": "三ノ丸西南隣り。道路・民家等で旧状がほとんど残らず、大手口の場所は未確定。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "道路・民家等で改変され大手口も未確定。現在の地形輪郭を旧境界として採用できない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "raoshiba",
+      "candidateId": "b5-raoshiba-assessment-1",
+      "name": "ラオシバ",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=raoshiba]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=raoshiba], georeference"
+        }
+      ],
+      "directStatement": "北ノ丸の深い堀を隔てた北側。計画書時点で本格調査未実施とされる。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "本格調査未実施という記録であり、北方という関係だけでは形状・位置を作れない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    },
+    {
+      "regionId": "nishikido",
+      "candidateId": "b5-nishikido-assessment-1",
+      "name": "西木戸",
+      "status": "UNPLACED",
+      "geometry": null,
+      "evidenceCategory": "C",
+      "historicalPosition": "UNKNOWN",
+      "precision": {
+        "status": "UNKNOWN",
+        "metres": null
+      },
+      "transformStatus": "NOT_TESTED",
+      "residualMetres": null,
+      "sourceRefs": [
+        {
+          "id": "prior-region-ledger",
+          "locator": "regions[id=nishikido]; underlying plan-2023 printed pp.65–67 / 図3-35・表3-7"
+        },
+        {
+          "id": "prior-georeference-ledger",
+          "locator": "regions[id=nishikido], georeference"
+        }
+      ],
+      "directStatement": "西櫓堀外の帯曲輪から外堀までの地域。門と柵の推定は測量済み形状ではない。",
+      "statementBasis": "既存調査記録の要約を継承。今回の原PDF再閲覧・新規測量ではない。",
+      "inferenceProcedure": "既存区域記録の資料箇所と座標参照調査を照合。名称・相対位置だけで平面境界を作れるかを評価し、説明可能な座標生成手順がないためgeometryを生成しない。",
+      "decisionReason": "帯曲輪から外堀までの相対範囲記述だけでは輪郭座標を得られず、既存門柵模型の位置は区域根拠にならない。",
+      "limitations": [
+        "原図の座標枠・基準点・座標系を同定できない。",
+        "位置精度と1590年境界はUNKNOWN。",
+        "模型位置・面積からの便宜的矩形・現況の見た目を境界根拠にしない。"
+      ],
+      "geometryBasis": null
+    }
+  ]
+};

@@ -13,3 +13,5 @@ research/stage3b5/preservation-baseline.jsonに212保護集合、22模型全登�
 
 ## 旧B3/B4検査との整合（実装前設計）
 旧workflowは当時の「public/src全無変更」を旧基準から検査する。B5でUI追加が明示許可された専用branchに限り、212原本・22模型・全baseline配信データ/研究台帳の厳格なpath/size/hash検査へ接続する。旧B3/B4 branchでは旧git diff検査をそのまま実行。単体/故障/既存ブラウザ期待値は弱めない。新wrapperと依存ソースを原票へ収録する。B5以外へ無制限に無変更保証を廃止しない。
+
+独立レビューでbranch名依存は後続branchの誤失敗を生むため、追跡済みB5契約・検証器が存在するcheckoutへ厳格保全を適用する方式へ修正。public/dataだけでなくpublic・data全体の追加も検出する。旧checkoutは旧検査を維持する。

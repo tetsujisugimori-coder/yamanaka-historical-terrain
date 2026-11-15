@@ -175,7 +175,7 @@
         },
         {
           "id": "b4-custody-ledger",
-          "locator": "targets: 1972/2012 survey deliverables; unresolved custody and permissions"
+          "locator": "projects[id=survey-1972|survey-2012]; materials[id=target-1972|target-2012].facts; materials[id=target-1972|target-2012].rights"
         }
       ],
       "directStatement": "元西櫓と西櫓の間の曲輪。古絵図で二ノ丸と記す例があるため同名を機械同一視しない。",
@@ -253,7 +253,7 @@
         },
         {
           "id": "b4-custody-ledger",
-          "locator": "targets: 1972/2012 survey deliverables; unresolved custody and permissions"
+          "locator": "projects[id=survey-1972|survey-2012]; materials[id=target-1972|target-2012].facts; materials[id=target-1972|target-2012].rights"
         }
       ],
       "directStatement": "西ノ丸西側の堀を隔てた小曲輪。東南隅に虎口。",

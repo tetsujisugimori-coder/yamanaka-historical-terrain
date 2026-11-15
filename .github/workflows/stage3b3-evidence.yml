@@ -23,7 +23,7 @@ jobs:
           node --version >> evidence-run/stage3b3/environment.txt
           df -B1 . >> evidence-run/stage3b3/environment.txt
           df -i . >> evidence-run/stage3b3/environment.txt
-          cp --parents scripts/stage3b3-evidence.mjs tests/stage3b3-evidence.test.mjs scripts/stage3b-preservation-check.mjs scripts/stage3b2-evidence.mjs research/stage3b3/*.json research/stage3b2/*.json research/stage3b2/*.geojson research/stage3b/preserved-inputs.json public/data/castle-overview.json docs/stage3b3/*.md .github/workflows/stage3b3-evidence.yml AGENTS.md package.json package-lock.json evidence-run/stage3b3/source/
+          cp --parents scripts/stage3b-legacy-preservation.sh scripts/stage3b5-preservation.mjs research/stage3b5/preservation-baseline.json scripts/stage3b3-evidence.mjs tests/stage3b3-evidence.test.mjs scripts/stage3b-preservation-check.mjs scripts/stage3b2-evidence.mjs research/stage3b3/*.json research/stage3b2/*.json research/stage3b2/*.geojson research/stage3b/preserved-inputs.json public/data/castle-overview.json docs/stage3b3/*.md .github/workflows/stage3b3-evidence.yml AGENTS.md package.json package-lock.json evidence-run/stage3b3/source/
       - name: Survey gate and semantic fault controls
         run: |
           export TMPDIR="$PWD/evidence-run/stage3b3/temp"
@@ -31,7 +31,7 @@ jobs:
           node scripts/stage3b3-evidence.mjs > evidence-run/stage3b3/result.json
           node scripts/stage3b2-evidence.mjs > evidence-run/stage3b3/b2-regression.json
           node scripts/stage3b-preservation-check.mjs > evidence-run/stage3b3/protection.json
-          git diff --exit-code 7ef4bd6a77ea0447ee0862af5b3677ac34389367 -- production public src data research/stage3b research/stage3b2
+          bash scripts/stage3b-legacy-preservation.sh 7ef4bd6a77ea0447ee0862af5b3677ac34389367 -- production public src data research/stage3b research/stage3b2
       - name: Manifest even on failure
         if: always()
         run: |
