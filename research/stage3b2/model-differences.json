@@ -1,0 +1,200 @@
+[
+  {
+    "modelId": "nm-bailey",
+    "sourceAsset": "data/phase3i.glb",
+    "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "nm-moat",
+    "sourceAsset": "data/phase3i.glb",
+    "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "nm-rampart",
+    "sourceAsset": "data/phase3i.glb",
+    "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "nm-passage",
+    "sourceAsset": "data/phase3i.glb",
+    "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "nm-transition",
+    "sourceAsset": "data/phase3i.glb",
+    "sha256": "67efa0217e1e3e41b15ec5aba2508d65e4f73bacff165da9bca67d0dd18b8830",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "wb-bailey",
+    "sourceAsset": "data/phase3b.glb",
+    "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "wb-gate",
+    "sourceAsset": "data/phase3b.glb",
+    "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "wb-moat",
+    "sourceAsset": "data/phase3b.glb",
+    "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "wb-building",
+    "sourceAsset": "data/phase3b.glb",
+    "sha256": "894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "ic-lookout",
+    "sourceAsset": "data/phase3i-inner.glb",
+    "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "ic-bridge",
+    "sourceAsset": "data/phase3i-inner.glb",
+    "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "ic-koguchi",
+    "sourceAsset": "data/phase3i-inner.glb",
+    "sha256": "a02c5a909314af12e094ea65dc30df96887c5b215d3eedf9f0db4b803fdbe83a",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "dc-gate",
+    "sourceAsset": "data/phase3d.glb",
+    "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "dc-fence-north",
+    "sourceAsset": "data/phase3d.glb",
+    "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "dc-fence-south",
+    "sourceAsset": "data/phase3d.glb",
+    "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "dc-rail-north",
+    "sourceAsset": "data/phase3d.glb",
+    "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "dc-rail-south",
+    "sourceAsset": "data/phase3d.glb",
+    "sha256": "728642b2bc52015e3c31a28740b82562b59bda06bcc126265ed54f515817ad85",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "sc-palisade",
+    "sourceAsset": "data/landscape.glb",
+    "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "sc-gate",
+    "sourceAsset": "data/landscape.glb",
+    "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "sc-vegetation",
+    "sourceAsset": "data/landscape.glb",
+    "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "sc-flags",
+    "sourceAsset": "data/landscape.glb",
+    "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  },
+  {
+    "modelId": "sc-people",
+    "sourceAsset": "data/landscape.glb",
+    "sha256": "9407b7521b0e959e6bf302a6f0eb066c16ca482d5bfc88250d925452eb599c71",
+    "historicalDistanceMetres": null,
+    "direction": null,
+    "status": "UNKNOWN",
+    "reason": "独立した歴史対応形状なし。模型を移動しない。"
+  }
+]

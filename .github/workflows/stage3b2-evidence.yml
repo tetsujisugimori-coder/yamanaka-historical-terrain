@@ -1,0 +1,37 @@
+name: Stage 3-B2 unplaced evidence contract
+on:
+  push:
+    branches: ['feat/stage3b2-location-evidence']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Evidence contract and fail-closed controls
+        run: |
+          mkdir -p evidence-run/stage3b2
+          export TMPDIR="$PWD/evidence-run/stage3b2/temp"
+          mkdir -p "$TMPDIR"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > evidence-run/stage3b2/identity.txt
+          node --test tests/stage3b2-evidence.test.mjs > evidence-run/stage3b2/tests.tap
+          node scripts/stage3b2-evidence.mjs > evidence-run/stage3b2/result.json
+          node scripts/stage3b-preservation-check.mjs > evidence-run/stage3b2/protection.json
+          cp -r research/stage3b2 evidence-run/stage3b2/inputs
+          cp scripts/stage3b2-evidence.mjs tests/stage3b2-evidence.test.mjs evidence-run/stage3b2/
+          find evidence-run/stage3b2 -type f -exec sha256sum {} \; > evidence-run/stage3b2.sha256
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3b2-evidence-${{ github.sha }}
+          path: |
+            evidence-run/stage3b2
+            evidence-run/stage3b2.sha256
+          if-no-files-found: error
