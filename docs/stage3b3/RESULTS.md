@@ -1,5 +1,16 @@
 # Stage 3-B3 結果と再開条件
 
+## 提出版の最終確認追補（2026-11-15 18:03 JST）
+
+対象HEAD `e770141ff8c479b9f962890d3b9b6c97f2391137` / tree `58b06b597ad3d455e7d7b1f4113831e12ecec991`。提出後のPR12+push4、16 workflowはすべて成功。Pagesのdeployはskip。正式原ZIP32本（既存専用2本＋今回補完30本）と局所bundle1本について、保存後の実再取得・サイズ・SHA-256・CRC・適用可能な内部manifestを照合済み。追加30本は取得元原ZIPとの全バイト比較も実施した。版別run/artifact/digest・検証範囲・容量・留保は[CI-EVIDENCE.md](CI-EVIDENCE.md)。
+
+本レビュアーの変更11ファイル確認・専用69再実行はPASS、新規blocking P1/P2なし。全492成功は保存原票確認。原レビュー記録は[PR #48 レビュー](../reviews/pr-48-20261115-180330-JST.md)。測量原図・座標簿は未取得、採用fit/check0、2区域未配置、geometry=null、変換NOT_TESTED、残差null、歴史的位置UNKNOWN、総合PARTIAL・Stage3-B HOLDを維持する。
+
+この追補とレビュー記録を追加する後続文書commitは別HEADである。後続HEADのCI・原証拠保全は提出後のPR報告で確認するため、ここでは旧HEAD成功を流用しない。現時点の限定マージ推奨NOは維持し、マージ・Draft解除・公開は実施しない。以下は提出時点の履歴として保持し、当時のPENDINGを現在の実装版の未完了と取り違えない。
+
+---
+
+
 2026-11-15 JST。対象: 西ノ丸/nishinomaru・西櫓/nishi-yagura。Issue #47。
 
 ## 対象版
