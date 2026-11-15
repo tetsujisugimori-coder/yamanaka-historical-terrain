@@ -18,7 +18,7 @@ mainには第3期Hまでの限定成果、第3期Iの景観C/D限定版、Stage 
 | Stage 3-B2 未配置調査台帳 | [PR #46](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/46)を限定採用済み（merge 7ef4bd6a）。西ノ丸・西櫓は未配置、変換NOT_TESTED、残差null |
 | Stage 3-B3 測量資料と対応点 | [Issue #47](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/47)、[計画・境界](docs/stage3b3/PLAN.md)。調査・検査器の後続工程、製品配置昇格なし。検証状況は[結果](docs/stage3b3/RESULTS.md)へ分離 |
 | Stage 3-B4 原成果所在・利用条件 | [PR #51](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/51)を限定採用済み（2026-11-15、merge 4b7a11d）。原成果・利用許可UNKNOWN、Stage3B HOLD。過去時点の結果は[記録](docs/stage3b4/RESULTS.md)へ分離 |
-| Stage 3-B5 推定C別レイヤー | [Issue #52](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/52)、[事前契約](docs/stage3b5/CONTRACT.md)。実装・検証中。採用候補0・11区域未配置、実区域推定表示NOT_TESTED、Stage3B HOLD。正式CI・受入未完了 |
+| Stage 3-B5 推定C別レイヤー | [Issue #52](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/52)、[事前契約](docs/stage3b5/CONTRACT.md)。PR #53限定マージ済み（148317e5）。採用候補0・11区域未配置、実区域推定表示NOT_TESTED、Stage3B HOLD。過去結果は当時の記録 |
 | 計測基盤・最適化候補 | PR [#26](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/26)・[#31](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/31)・[#34](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/34)・[#35](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/35)・[#40](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/40)はopen/Draft・未採用。性能改善は未立証 |
 
 第3期Aの作業版は、冒頭の「1590年の景観へ」から西ノ丸のC推定・D創作景観と4つの定点観察へ入れます。同じカメラでA現況/Cのみ/C＋Dを比較できます。史実確定の復元ではありません。[制作・編集元・再現・検証と留保](docs/landscape-1590.md)を参照。第3期Aの独立レビューは完了し、PR #10はマージ済みです。史実の精度・実機受入は引き続きPARTIALです。
@@ -121,3 +121,6 @@ PR #34の計測器、PR #35の低木支持点キャッシュは含めません�
 ### PR #42 限定閲覧の追加確認（2026-11-14）
 
 現況Aから模型詳細へ移る操作は、C推定または必要なC＋Dを明示して選びます。手動で非表示にした模型は、表示成功とせず理由と既存の表示操作を案内します。[追加受入と限界](docs/maintenance/stage3b-followup/README.md)・[遅延操作の到達性](docs/maintenance/stage3b-races-20261114/README.md)を参照してください。正式結果は対象HEADのCI原票と照合して追記します。Stage 3-B全体の受入、史実位置精度、公開許可への昇格ではありません。
+
+## Stage 3-B6 対照閲覧（Draft実装中）
+[Issue #54](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/54)。11区域の史料要約・推論・UNKNOWNを正本参照で分離し、既存模型と往復する。唯一の既存ソフトウェア関連1件のみ採用、他21模型の区域関連は未確証。正式CI・独立画面レビュー・証拠保全は[結果](docs/stage3b6/RESULTS.md)に記録。Stage3B HOLD。

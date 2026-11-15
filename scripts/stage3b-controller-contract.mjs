@@ -53,6 +53,7 @@ function overviewFixture(mutant){let code={...sources};if(mutant==='reload-stale
  vm.runInContext(`
 let epoch=0,loadEpoch=0,disposed=false,error=null,data=null,active=false,previous=null;
 const node=()=>({disabled:false,hidden:false,textContent:'',dataset:{},setAttribute(){}}),panel=node(),retry=node(),open=node(),close=node(),back=node(),controls=node(),status=node();
+const guide={setData(){events.push('guide-data');},error(){events.push('guide-error');}};
 const labels=[],labelHost={remove(){events.push('labels-removed');}};
 const binding={cancel(){events.push('cancel');},capture(){return {selected:'saved'};},open(){return new Promise((resolve,reject)=>requests.push({resolve,reject,kind:'open'}));},terrain:{visible:true},render(){events.push('render');}};
 function load(){return new Promise((resolve,reject)=>requests.push({resolve,reject,kind:'load'}));}

@@ -109,3 +109,6 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 Issue #52。PR51 merge 4b7a11dを基準に別branchで推定C別レイヤーを実装中。候補採否・表示契約は製品前commit a1543a7に固定。既存模型や相対関係から区域形状を捏造せず、今回11区域の採用候補0・geometry=null維持。原本212/模型22のpath/size/SHA固定。正常/故障/本番16条件/独立レビュー/原ZIP保全は新HEADで確認し、完了までPARTIAL・限定マージNO。マージ・Pages公開なし。
 
 - Stage 3-B5（2026-11-15 23:23 JST）実装HEAD3208e41で622 Node PASS、保護230files/212原本/22模型不変。候補0/11未配置維持。局所ブラウザ24枠は環境不足NOT_TESTED。独立3指摘は同反例修正、CI/原票保全未完につきPARTIAL・限定マージNO。詳細docs/stage3b5/RESULTS.md。
+
+## 2026-11-16 JST Stage 3-B6
+Issue54、PR53 merged基準の専用branch。11区域の根拠/推論/UNKNOWNと既存22模型の対照閲覧。関連の新史実認定なし。初回647 Nodeの1fixture失敗とブラウザ環境NOT_TESTEDを保持、648 Node PASS。独立P2三件同反例修正、正式CI/証拠保全はPENDING。Stage3B HOLD、Draft提出まで。
