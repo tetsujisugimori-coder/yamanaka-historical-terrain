@@ -112,3 +112,8 @@ Issue #52。PR51 merge 4b7a11dを基準に別branchで推定C別レイヤーを�
 
 ## 2026-11-16 JST Stage 3-B6
 Issue54、PR53 merged基準の専用branch。11区域の根拠/推論/UNKNOWNと既存22模型の対照閲覧。関連の新史実認定なし。初回647 Nodeの1fixture失敗とブラウザ環境NOT_TESTEDを保持、648 Node PASS。独立P2三件同反例修正、正式CI/証拠保全はPENDING。Stage3B HOLD、Draft提出まで。
+
+## 2026-11-16 Stage 3-B6a 着手
+PR55の未実施P2三経路（逆リンク実押下、Tab/ShiftTab/Space、実要求を明示保留する競合）の限定再検証。HEAD4489311基準、既存branchへ集約。検査実装前契約は docs/stage3b6a/CONTRACT.md、結果は同RESULTS.md。旧成果と未commitレビューを保持。新HEAD正式CI・独立原票監査完了まではPARTIAL/限定マージNO。DraftとStage3-B HOLDを維持。
+
+Stage 3-B6a局所追補：旧製品の俯瞰ボタンfocus喪失を同runner正常/遅延2反例で再現し、最新操作かつbodyへ喪失時のみ復帰する最小修正。同反例GREEN、他10正常維持。Chromium8通常/64競合/3故障PASS。集合ガード8契約と最終runner smoke12PASS。旧配信接続失敗と未追跡source制限を保持し、WebKit/新HEAD正式結果へ流用しない。

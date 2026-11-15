@@ -124,3 +124,6 @@ PR #34の計測器、PR #35の低木支持点キャッシュは含めません�
 
 ## Stage 3-B6 対照閲覧（Draft実装中）
 [Issue #54](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/54)。11区域の史料要約・推論・UNKNOWNを正本参照で分離し、既存模型と往復する。唯一の既存ソフトウェア関連1件のみ採用、他21模型の区域関連は未確証。正式CI・独立画面レビュー・証拠保全は[結果](docs/stage3b6/RESULTS.md)に記録。Stage3B HOLD。
+
+### Stage 3-B6a の検証中状態
+PR #55のB6実装は未マージのDraft。逆リンクの実押下、実Tab/Shift+Tab/Space操作、明示的に保留した旧応答との競合を追加検証中です。[固定契約](docs/stage3b6a/CONTRACT.md)と[結果記録](docs/stage3b6a/RESULTS.md)を参照。旧B6の19 CI成功はB6aの正式成功ではありません。Stage 3-B全体HOLD、総合PARTIAL・限定マージNOを維持します。
