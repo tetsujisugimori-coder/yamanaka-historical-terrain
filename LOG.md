@@ -86,7 +86,7 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 
 ## Stage 3-B2 (Issue #45): 2区域位置根拠調査
 - 基準main 6d580ae / tree165c110、PR42マージ確認。専用branchで開始。
-- 西ノ丸/nishi-yaguraの原図・本文を再取得照合。独立対応点0、2区域未配置維持。史料確証と台帳技術検査を分離。
+- 西ノ丸/nishinomaru・西櫓/nishi-yaguraの原図・本文を再取得照合。独立対応点0、2区域未配置維持。史料確証と台帳技術検査を分離。
 - sources/ledger/model-differences/null-geometry GIS、fail-closed検査・故障対照・実QGIS読取を追加。製品・模型・既存原本不変。
 - 1972測量原成果/2012改修図/独立点/歴史位置の精度はUNKNOWN。正式結果はdocs/stage3b2/RESULTS.mdへ追記する。
 
@@ -94,3 +94,8 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 - 実装HEAD afa83d76/tree740e7c6の原票を再確認。単体423件、専用24件（正常2/故障22）。初期412件/正常1故障12の旧原票は保持。
 - RESULTSに独立レビュー・既存2ZIP読戻し完了、正式CIの版別状態と追加保全未完了を分けて追記。文書だけの変更であり、区域geometry=null、変換NOT_TESTED、製品/原本不変。
 - 文書更新後HEADのCIとartifactは別検証し、旧HEAD結果で代替しない。Draft・Stage3B HOLD・公開なし。
+
+## 2026-11-15 Stage 3-B3 着手（Issue #47）
+- 基準main 7ef4bd6a/tree1759a757、PR #42/#46統合確認。旧報告のDraft状態は当時の履歴として保持。
+- 旧B2 LOGの「西ノ丸/nishi-yagura」を名称/IDの正しい組へ訂正（正式レビュー5908834701のP3）。台帳・模型の変更ではない。
+- 測量資料の所在・実閲覧・利用条件と対応点/変換可否を分離。2区域未配置、Stage3-B HOLDを維持。最終検証はdocs/stage3b3/RESULTS.mdへ記録。
