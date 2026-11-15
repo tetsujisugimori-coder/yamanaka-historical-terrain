@@ -17,3 +17,6 @@
 
 ## 保存・限界
 案件専用領域、初期空き約51GiB/4M inode、入力原本の再生成なし。局所原票は現時点ローカルのみ、Library保存と実再取得はPENDING。ACL/保持期限UNKNOWN、WindowsNOT_TRANSFERRED。正式CIと原ZIPの結論は最終HEADで追補する。実機Safari/VoiceOver/物理touchNOT_TESTED。
+
+### 取得状態確定の追補
+提出後自己点検で、guide拒否前にoverviewのdataへ代入する順序を発見。guide検証後にのみ状態を確定するよう順序変更。既存controller隔離試験に実adapterを接続し、正当座標だが根拠なしconfirmedへの改変も同じ取得・回復ケースに追加した。旧モデル不正ケース/既存反例は維持。新HEAD正式CIで再確認する。局所保存01はこの追補前の補足資料であり新sourceを収録済みとは扱わない。
