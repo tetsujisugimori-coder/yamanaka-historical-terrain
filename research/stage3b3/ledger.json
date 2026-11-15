@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "baseline": "7ef4bd6a77ea0447ee0862af5b3677ac34389367",
+  "dataKind": "REAL_RESEARCH",
+  "placementAllowed": false,
+  "crs": "EPSG:6676",
+  "unit": "m",
+  "axisOrder": "E,N",
+  "origin": [
+    44862.121277226666,
+    -93478.07235405142,
+    0
+  ],
+  "vertical": "GSI published orthometric height, m; no ellipsoid conversion; measurement epoch/individual datum revision UNKNOWN",
+  "webAxes": "x=E-E0, y=H, z=-(N-N0)",
+  "regions": [
+    {
+      "id": "nishinomaru",
+      "name": "西ノ丸",
+      "sourceIds": [
+        "plan-2023",
+        "mishima-works",
+        "mishima-repair",
+        "mishima-disaster",
+        "survey-1972",
+        "survey-2012"
+      ],
+      "candidateIds": [
+        "nishinomaru-candidate-1",
+        "nishinomaru-candidate-2"
+      ],
+      "status": "unplaced",
+      "geometry": null,
+      "transformStatus": "NOT_TESTED",
+      "transform": null,
+      "fitPointIds": [],
+      "checkPointIds": [],
+      "fitRmseMetres": null,
+      "checkRmseMetres": null,
+      "maxResidualMetres": null,
+      "historyCertainty": "UNKNOWN",
+      "reason": "原測量資料・点番号対応・不動性・独立検査点と精度計画が不足。資料所在の手掛かりは取得したが位置合わせは開始不可。",
+      "distributionReview": "UNKNOWN",
+      "distortionReview": "UNKNOWN",
+      "accuracyPlan": null
+    },
+    {
+      "id": "nishi-yagura",
+      "name": "西櫓",
+      "sourceIds": [
+        "plan-2023",
+        "mishima-works",
+        "mishima-repair",
+        "mishima-disaster",
+        "survey-1972",
+        "survey-2012"
+      ],
+      "candidateIds": [
+        "nishi-yagura-candidate-1",
+        "nishi-yagura-candidate-2"
+      ],
+      "status": "unplaced",
+      "geometry": null,
+      "transformStatus": "NOT_TESTED",
+      "transform": null,
+      "fitPointIds": [],
+      "checkPointIds": [],
+      "fitRmseMetres": null,
+      "checkRmseMetres": null,
+      "maxResidualMetres": null,
+      "historyCertainty": "UNKNOWN",
+      "reason": "原測量資料・点番号対応・不動性・独立検査点と精度計画が不足。資料所在の手掛かりは取得したが位置合わせは開始不可。",
+      "distributionReview": "UNKNOWN",
+      "distortionReview": "UNKNOWN",
+      "accuracyPlan": null
+    }
+  ],
+  "candidates": [
+    {
+      "id": "nishinomaru-candidate-1",
+      "regionId": "nishinomaru",
+      "name": "西堀と北堀の接続部",
+      "sourceId": "plan-2023",
+      "locator": "印刷65頁 図3-35（PDF73頁）、B2候補を継承",
+      "currentEvidence": "既存GSI現況DEM/概略アンカーは候補点の独立測量値ではない。現地基準点/点番号/再観測成果は未取得。",
+      "alterationEvidence": "西ノ丸の2019/2021災害と堀の修復記録あり。候補点そのものの変位量・安定性はUNKNOWN。",
+      "identity": "UNKNOWN",
+      "identityEvidence": "報告図と現在の同一不動点を結ぶ独立資料なし。地名・模型配置・復元表示だけでは同定しない。",
+      "decision": "REJECTED",
+      "reason": "計算用として不採用。原図/座標簿/点番号対応/安定性/現在座標/読取誤差が不足。候補の不存在を意味しない。",
+      "role": "NONE",
+      "independenceGroup": "UNKNOWN",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "sourceCRS": "UNKNOWN",
+      "sourceUnit": "UNKNOWN",
+      "currentCRS": "UNKNOWN",
+      "currentUnit": "UNKNOWN",
+      "readingUncertainty": "UNKNOWN",
+      "distribution": "UNKNOWN: no coordinates; fit/check independence not established",
+      "evidenceSourceIds": [
+        "plan-2023",
+        "mishima-repair",
+        "mishima-disaster"
+      ]
+    },
+    {
+      "id": "nishinomaru-candidate-2",
+      "regionId": "nishinomaru",
+      "name": "物見台と曲輪の接続部",
+      "sourceId": "plan-2023",
+      "locator": "印刷65頁 図3-35（PDF73頁）、B2候補を継承",
+      "currentEvidence": "既存GSI現況DEM/概略アンカーは候補点の独立測量値ではない。現地基準点/点番号/再観測成果は未取得。",
+      "alterationEvidence": "2013年度物見台・土塁修復。改修前後の点番号対応は未取得。",
+      "identity": "UNKNOWN",
+      "identityEvidence": "報告図と現在の同一不動点を結ぶ独立資料なし。地名・模型配置・復元表示だけでは同定しない。",
+      "decision": "REJECTED",
+      "reason": "計算用として不採用。原図/座標簿/点番号対応/安定性/現在座標/読取誤差が不足。候補の不存在を意味しない。",
+      "role": "NONE",
+      "independenceGroup": "UNKNOWN",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "sourceCRS": "UNKNOWN",
+      "sourceUnit": "UNKNOWN",
+      "currentCRS": "UNKNOWN",
+      "currentUnit": "UNKNOWN",
+      "readingUncertainty": "UNKNOWN",
+      "distribution": "UNKNOWN: no coordinates; fit/check independence not established",
+      "evidenceSourceIds": [
+        "plan-2023",
+        "mishima-repair",
+        "mishima-disaster"
+      ]
+    },
+    {
+      "id": "nishi-yagura-candidate-1",
+      "regionId": "nishi-yagura",
+      "name": "東南側虎口の土塁開口",
+      "sourceId": "plan-2023",
+      "locator": "印刷65頁 図3-35（PDF73頁）、B2候補を継承",
+      "currentEvidence": "既存GSI現況DEM/概略アンカーは候補点の独立測量値ではない。現地基準点/点番号/再観測成果は未取得。",
+      "alterationEvidence": "2014年度西櫓土塁・建物跡表示修復。候補点そのものの改変量はUNKNOWN。",
+      "identity": "UNKNOWN",
+      "identityEvidence": "報告図と現在の同一不動点を結ぶ独立資料なし。地名・模型配置・復元表示だけでは同定しない。",
+      "decision": "REJECTED",
+      "reason": "計算用として不採用。原図/座標簿/点番号対応/安定性/現在座標/読取誤差が不足。候補の不存在を意味しない。",
+      "role": "NONE",
+      "independenceGroup": "UNKNOWN",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "sourceCRS": "UNKNOWN",
+      "sourceUnit": "UNKNOWN",
+      "currentCRS": "UNKNOWN",
+      "currentUnit": "UNKNOWN",
+      "readingUncertainty": "UNKNOWN",
+      "distribution": "UNKNOWN: no coordinates; fit/check independence not established",
+      "evidenceSourceIds": [
+        "plan-2023",
+        "mishima-repair",
+        "mishima-disaster"
+      ]
+    },
+    {
+      "id": "nishi-yagura-candidate-2",
+      "regionId": "nishi-yagura",
+      "name": "西ノ丸側の堀端",
+      "sourceId": "plan-2023",
+      "locator": "印刷65頁 図3-35（PDF73頁）、B2候補を継承",
+      "currentEvidence": "既存GSI現況DEM/概略アンカーは候補点の独立測量値ではない。現地基準点/点番号/再観測成果は未取得。",
+      "alterationEvidence": "2014年度西櫓土塁・建物跡表示修復。候補点そのものの改変量はUNKNOWN。",
+      "identity": "UNKNOWN",
+      "identityEvidence": "報告図と現在の同一不動点を結ぶ独立資料なし。地名・模型配置・復元表示だけでは同定しない。",
+      "decision": "REJECTED",
+      "reason": "計算用として不採用。原図/座標簿/点番号対応/安定性/現在座標/読取誤差が不足。候補の不存在を意味しない。",
+      "role": "NONE",
+      "independenceGroup": "UNKNOWN",
+      "sourceCoordinates": null,
+      "currentCoordinates": null,
+      "sourceCRS": "UNKNOWN",
+      "sourceUnit": "UNKNOWN",
+      "currentCRS": "UNKNOWN",
+      "currentUnit": "UNKNOWN",
+      "readingUncertainty": "UNKNOWN",
+      "distribution": "UNKNOWN: no coordinates; fit/check independence not established",
+      "evidenceSourceIds": [
+        "plan-2023",
+        "mishima-repair",
+        "mishima-disaster"
+      ]
+    }
+  ]
+}
