@@ -1,0 +1,52 @@
+name: Stage 3-B4 survey custody
+on:
+  push:
+    branches: ['feat/stage3b4-survey-custody']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  custody:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Capture inputs before execution
+        run: |
+          mkdir -p evidence-run/stage3b4/source evidence-run/stage3b4/temp
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > evidence-run/stage3b4/identity.txt
+          { uname -a; node --version; python3 --version; df -B1 .; df -i .; } > evidence-run/stage3b4/environment.txt
+          cp --parents scripts/stage3b4-custody.mjs tests/stage3b4-custody.test.mjs scripts/stage3b-preservation-check.mjs scripts/stage3b2-evidence.mjs scripts/stage3b3-evidence.mjs research/stage3b4/*.json research/stage3b3/*.json research/stage3b2/*.json research/stage3b2/*.geojson research/stage3b/preserved-inputs.json public/data/castle-overview.json docs/stage3b4/*.md .github/workflows/stage3b4-custody.yml AGENTS.md package.json package-lock.json evidence-run/stage3b4/source/
+      - name: Run checks and preserve all exit codes
+        run: |
+          export TMPDIR="$PWD/evidence-run/stage3b4/temp"
+          set +e
+          result=0
+          check() { "$@" > "evidence-run/stage3b4/$name.log" 2>&1; code=$?; printf '%s\t%s\n' "$name" "$code" >> evidence-run/stage3b4/exit-codes.tsv; if [ "$code" -ne 0 ]; then result=1; fi; }
+          name=tests; check node --test tests/stage3b4-custody.test.mjs
+          name=ledger; check node scripts/stage3b4-custody.mjs
+          name=b2; check node scripts/stage3b2-evidence.mjs
+          name=b3; check node scripts/stage3b3-evidence.mjs
+          name=protected; check node scripts/stage3b-preservation-check.mjs
+          name=unchanged; check git diff --exit-code f6aae9afecad1d7fd55072a9efe5841583c6eb57 -- production public src data research/stage3b research/stage3b2 research/stage3b3
+          exit "$result"
+      - name: Manifest even on failure
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          root=pathlib.Path('evidence-run/stage3b4')
+          rows=[{'path':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]
+          (root/'manifest.json').write_text(json.dumps(rows,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3b4-custody-${{ github.sha }}
+          path: evidence-run/stage3b4
+          include-hidden-files: true
+          if-no-files-found: error
