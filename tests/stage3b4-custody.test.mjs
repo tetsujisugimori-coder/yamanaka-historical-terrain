@@ -36,3 +36,33 @@ const faults=[
 ];
 for(const [name,mutate,reason] of faults){test('normal control for '+name,()=>assert.doesNotThrow(()=>validateCustody(normal())));test('reject '+name,()=>{const d=normal();mutate(d);assert.throws(()=>validateCustody(d),reason);});}
 test('valid copy is distinct and linked, not a second independent original',()=>{const d=normal(),m=d.materials[1];m.recordKind='ITEM';m.form='copy';m.copyOf=d.materials[0].id;m.copyEvidenceIds=['copy'];d.evidence.push({id:'copy',sourceId:'fixture',subjectId:m.id,claim:'COPY_OF',basis:'合成複写の照合',scope:d.materials[0].id,observedAt:'2026-11-15'});assert.doesNotThrow(()=>validateCustody(d));d.evidence.at(-1).scope='other';assert.throws(()=>validateCustody(d),/mismatched original/);});
+
+
+// Regression: a search target is not a demonstrated original, even if copyOf resolves.
+function linkedCopyFixture(){
+  const d=normal(),m=d.materials[1];
+  m.recordKind='ITEM';m.form='copy';m.copyOf=d.materials[0].id;m.copyEvidenceIds=['copy'];
+  d.evidence.push({id:'copy',sourceId:'fixture',subjectId:m.id,claim:'COPY_OF',basis:'合成複写関係',scope:d.materials[0].id,observedAt:'2026-11-15'});
+  return d;
+}
+function unsetIdentifiedEvidence(m){
+  for(const f of FIELDS)m.facts[f]={status:'UNKNOWN',evidenceIds:[]};
+  for(const a of ACTIONS)m.rights[a]={status:'UNKNOWN',evidenceIds:[],restrictions:'合成未確認',checkedAt:'2026-11-15'};
+}
+test('copy from unconfirmed original is rejected, independently of ID link',()=>{
+  const d=linkedCopyFixture();unsetIdentifiedEvidence(d.materials[0]);
+  assert.throws(()=>validateCustody(d),/original must be confirmed ITEM/);
+});
+test('copy from SEARCH_TARGET is rejected (negative counterpart)',()=>{
+  const d=linkedCopyFixture();unsetIdentifiedEvidence(d.materials[0]);d.materials[0].recordKind='SEARCH_TARGET';
+  assert.throws(()=>validateCustody(d),/original must be confirmed ITEM/);
+});
+test('copy from confirmed ITEM remains allowed',()=>assert.doesNotThrow(()=>validateCustody(linkedCopyFixture())));
+for(const field of FIELDS.filter(f=>f!=='existence')){
+  test('dependent '+field+' cannot be CONFIRMED when existence UNKNOWN',()=>{
+    const d=normal(),m=d.materials[0];
+    for(const f of FIELDS)m.facts[f]={status:f===field?'CONFIRMED':'UNKNOWN',evidenceIds:f===field?['fixture-'+field]:[]};
+    for(const a of ACTIONS)m.rights[a]={status:'UNKNOWN',evidenceIds:[],restrictions:'合成未確認',checkedAt:'2026-11-15'};
+    assert.throws(()=>validateCustody(d),/dependent CONFIRMED requires CONFIRMED existence/);
+  });
+}

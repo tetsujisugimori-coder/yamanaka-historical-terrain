@@ -18,3 +18,9 @@
 
 ## 次の最小条件
 1972/2012別の成果品目録・管理番号・保存移管記録・個別許可の確認。文化財課と情報公開制度はRESEARCH.md参照。問い合わせ案は未送信、本人承認が必要。原成果取得だけで対応点/1590年位置/変換受入にはしない。2区域未配置、4候補REJECTED、fit/check0、geometry=null、transformStatus=NOT_TESTED、残差null、EPSG:6676契約不変。
+
+## 2026-11-15 P2/P3独立レビュー追補（新HEADのCIは要別確認）
+- 対象review #5910717428。P2: copyOf参照先を単なる探索課題ではなく、存在CONFIRMEDのITEMに限定。P3: existence UNKNOWNと残りのfacts CONFIRMEDの矛盾を拒否。同一合成反例と正常複写対照を追加。
+- 正式CI原票のmanifestにはidentity.txtが既に含まれていた。局所の後作成bundleでmanifest外だったものと混同しない。CIにmanifest全ファイル網羅・必須原票・byte/SHA検証を追加。
+- 前HEAD `27b0719` の正式17 workflow成功とB4 PR/push原ZIP初回取得のCRC/size/SHA/manifest整合を別確認。ただし修正後HEADへは成功を流用せず、新HEAD正式CI・原ZIPの保存後再取得監査はPENDING。
+- 問い合わせを送信しない。1972/2012原成果はUNKNOWN、B3の4候補REJECTED、2区域未配置・変換NOT_TESTED、Stage3B HOLDは不変。歴史的推定位置を今後扱う場合は史実確定と分離しC推定として別契約で審査する。

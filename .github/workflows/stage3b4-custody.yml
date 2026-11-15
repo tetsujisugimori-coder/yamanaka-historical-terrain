@@ -43,6 +43,26 @@ jobs:
           rows=[{'path':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]
           (root/'manifest.json').write_text(json.dumps(rows,indent=2))
           PY
+      - name: Validate manifest coverage and bytes
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('evidence-run/stage3b4')
+          rows=json.loads((root/'manifest.json').read_text())
+          names=[r['path'] for r in rows]
+          actual={p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and p.name!='manifest.json'}
+          if len(names)!=len(set(names)) or set(names)!=actual:
+            raise SystemExit('manifest coverage mismatch: missing='+str(sorted(actual-set(names)))+' extra='+str(sorted(set(names)-actual)))
+          required={'identity.txt','environment.txt','exit-codes.tsv','tests.log','ledger.log','b2.log','b3.log','protected.log','unchanged.log'}
+          if not required.issubset(actual):
+            raise SystemExit('required evidence missing: '+str(sorted(required-actual)))
+          for row in rows:
+            blob=(root/row['path']).read_bytes()
+            if len(blob)!=row['bytes'] or hashlib.sha256(blob).hexdigest()!=row['sha256']:
+              raise SystemExit('manifest byte/hash mismatch: '+row['path'])
+          print('manifest coverage PASS; bytes/SHA-256 PASS; files='+str(len(rows)))
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
