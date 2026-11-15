@@ -99,3 +99,8 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 - 基準main 7ef4bd6a/tree1759a757、PR #42/#46統合確認。旧報告のDraft状態は当時の履歴として保持。
 - 旧B2 LOGの「西ノ丸/nishi-yagura」を名称/IDの正しい組へ訂正（正式レビュー5908834701のP3）。台帳・模型の変更ではない。
 - 測量資料の所在・実閲覧・利用条件と対応点/変換可否を分離。2区域未配置、Stage3-B HOLDを維持。最終検証はdocs/stage3b3/RESULTS.mdへ記録。
+
+## 2026-11-15 Stage 3-B4（Issue #50）
+- PR48統合main f6aae9a / tree32e7a3cから独立branch。PR49の文書修正には依存せず、B3成果物・履歴は変更しない。
+- 事業記録、原成果の現存/所在、閲覧/取得、A〜F利用許可を分離した台帳と検査器を追加。1972/2012とも原成果現存・資料番号・個別許可UNKNOWN。
+- 問い合わせ文案のみ、送信なし。B3候補4件REJECTED・未配置・変換NOT_TESTED・Stage3B HOLD維持。結果はdocs/stage3b4/RESULTS.md。

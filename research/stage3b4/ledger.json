@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "kind": "REAL_RESEARCH",
+  "stage": "HOLD",
+  "placementAllowed": false,
+  "projects": [
+    {
+      "id": "survey-1972",
+      "year": 1972,
+      "description": "用地測量調査・全域図作製（全域図部分はB3参照記録、今回原図未閲覧）",
+      "status": "RECORDED",
+      "evidenceIds": [
+        "executed-1972"
+      ]
+    },
+    {
+      "id": "survey-2012",
+      "year": 2012,
+      "description": "現況測量・修復設計",
+      "status": "RECORDED",
+      "evidenceIds": [
+        "executed-2012",
+        "contract-2012"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "works",
+      "url": "https://www.city.mishima.shizuoka.jp/page/1301.html",
+      "title": "山中城跡環境整備事業",
+      "locator": "環境整備事業の経過・昭和47年9月",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "PROJECT_RECORD"
+    },
+    {
+      "id": "repair",
+      "url": "https://www.city.mishima.shizuoka.jp/page/2118.html",
+      "title": "史跡山中城跡再整備事業",
+      "locator": "平成24年度事業表",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "PROJECT_RECORD"
+    },
+    {
+      "id": "accounts",
+      "url": "https://www.city.mishima.shizuoka.jp/uploaded/attachment/2188.pdf",
+      "title": "決算関係資料（PDF掲載表）",
+      "locator": "PDF18頁・印刷185頁、文化財保護費",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "PROJECT_RECORD"
+    },
+    {
+      "id": "department",
+      "url": "https://www.city.mishima.shizuoka.jp/soshiki/67/",
+      "title": "教育推進部 文化財課",
+      "locator": "部署・所在地・業務",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "GENERAL_POLICY"
+    },
+    {
+      "id": "disclosure",
+      "url": "https://www.city.mishima.shizuoka.jp/page/1313.html",
+      "title": "情報公開制度のしくみ",
+      "locator": "対象公文書・請求方法",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "GENERAL_POLICY"
+    },
+    {
+      "id": "request",
+      "url": "https://www.city.mishima.shizuoka.jp/page/3941.html",
+      "title": "公文書開示請求書",
+      "locator": "費用と申請方法",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "GENERAL_POLICY"
+    },
+    {
+      "id": "rights",
+      "url": "https://www.city.mishima.shizuoka.jp/site/userguide/17917.html",
+      "title": "免責事項・著作権・リンク",
+      "locator": "著作権",
+      "inspected": "TEXT",
+      "checkedAt": "2026-11-15",
+      "kind": "GENERAL_POLICY"
+    },
+    {
+      "id": "catalogue",
+      "url": "https://ci.nii.ac.jp/ncid/BA72358535.amp",
+      "title": "史跡山中城跡 発掘調査報告書",
+      "locator": "NCID BA72358535、書誌/所蔵一覧",
+      "inspected": "CATALOGUE",
+      "checkedAt": "2026-11-15",
+      "kind": "ITEM_RECORD"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "executed-1972",
+      "sourceId": "works",
+      "subjectId": "survey-1972",
+      "claim": "PROJECT_EXECUTED",
+      "basis": "昭和47年9月に用地測量調査を開始した事業記録。原成果現存とは別。",
+      "scope": "事業実施の記録のみ",
+      "observedAt": "2026-11-15"
+    },
+    {
+      "id": "executed-2012",
+      "sourceId": "repair",
+      "subjectId": "survey-2012",
+      "claim": "PROJECT_EXECUTED",
+      "basis": "平成24年度18,700㎡現況測量と修復設計の事業記録。",
+      "scope": "事業実施の記録のみ",
+      "observedAt": "2026-11-15"
+    },
+    {
+      "id": "contract-2012",
+      "sourceId": "accounts",
+      "subjectId": "survey-2012",
+      "claim": "PROJECT_EXECUTED",
+      "basis": "史跡山中城跡 再整備調査測量設計 業務委託、12地点の工事計画書作成。成果品の管理番号や現存の記録ではない。",
+      "scope": "事業実施の記録のみ",
+      "observedAt": "2026-11-15"
+    }
+  ],
+  "materials": [
+    {
+      "id": "target-1972",
+      "projectId": "survey-1972",
+      "recordKind": "SEARCH_TARGET",
+      "searchDescription": "用地測量・全域図原成果の探索",
+      "formalName": null,
+      "materialNumber": null,
+      "institution": null,
+      "department": null,
+      "creator": null,
+      "year": null,
+      "scale": null,
+      "crs": null,
+      "verticalDatum": null,
+      "form": null,
+      "viewingPlace": null,
+      "viewingMethod": null,
+      "nextStep": "文化財課へ所在・成果品目録・保存移管廃棄記録・個別利用条件を照会する案。送信は本人追加承認後のみ。",
+      "unknowns": [
+        "原成果の正式名称/管理番号/作成主体/現存/現物所蔵",
+        "原図・複写・電子データの区別、縮尺、座標系、標高基準",
+        "座標簿・基準点成果・成果表・地形図・現況図・成果品目録の存在自体",
+        "閲覧方法/場所、複写・研究分析・派生データ・公開再配布の個別条件"
+      ],
+      "facts": {
+        "existence": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "survival": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "location": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "viewing": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "acquisition": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        }
+      },
+      "rights": {
+        "A_LOCATION": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "B_VIEW": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "C_COPY_DOWNLOAD": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "D_ANALYZE_TRANSFORM": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "E_DERIVE": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "F_WEB_REDISTRIBUTE": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        }
+      },
+      "copyOf": null,
+      "copyEvidenceIds": []
+    },
+    {
+      "id": "target-2012",
+      "projectId": "survey-2012",
+      "recordKind": "SEARCH_TARGET",
+      "searchDescription": "現況測量・修復設計原成果の探索",
+      "formalName": null,
+      "materialNumber": null,
+      "institution": null,
+      "department": null,
+      "creator": null,
+      "year": null,
+      "scale": null,
+      "crs": null,
+      "verticalDatum": null,
+      "form": null,
+      "viewingPlace": null,
+      "viewingMethod": null,
+      "nextStep": "文化財課へ所在・成果品目録・保存移管廃棄記録・個別利用条件を照会する案。送信は本人追加承認後のみ。",
+      "unknowns": [
+        "原成果の正式名称/管理番号/作成主体/現存/現物所蔵",
+        "原図・複写・電子データの区別、縮尺、座標系、標高基準",
+        "座標簿・基準点成果・成果表・地形図・現況図・成果品目録の存在自体",
+        "閲覧方法/場所、複写・研究分析・派生データ・公開再配布の個別条件"
+      ],
+      "facts": {
+        "existence": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "survival": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "location": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "viewing": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        },
+        "acquisition": {
+          "status": "UNKNOWN",
+          "evidenceIds": []
+        }
+      },
+      "rights": {
+        "A_LOCATION": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "B_VIEW": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "C_COPY_DOWNLOAD": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "D_ANALYZE_TRANSFORM": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "E_DERIVE": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        },
+        "F_WEB_REDISTRIBUTE": {
+          "status": "UNKNOWN",
+          "evidenceIds": [],
+          "restrictions": "個別原成果の根拠未取得。一般公開/事業記録から許可を推定しない。",
+          "checkedAt": "2026-11-15"
+        }
+      },
+      "copyOf": null,
+      "copyEvidenceIds": []
+    }
+  ]
+}

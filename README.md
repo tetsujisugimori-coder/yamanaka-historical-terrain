@@ -17,6 +17,7 @@ mainには第3期Hまでの限定成果、第3期Iの景観C/D限定版、Stage 
 | Stage 3-B 城域入口・保存済み模型の範囲 | [PR #42](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/42)を限定採用済み（merge 6d580aeb）。Stage 3-B全体HOLD・PARTIALは継続 |
 | Stage 3-B2 未配置調査台帳 | [PR #46](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/46)を限定採用済み（merge 7ef4bd6a）。西ノ丸・西櫓は未配置、変換NOT_TESTED、残差null |
 | Stage 3-B3 測量資料と対応点 | [Issue #47](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/47)、[計画・境界](docs/stage3b3/PLAN.md)。調査・検査器の後続工程、製品配置昇格なし。検証状況は[結果](docs/stage3b3/RESULTS.md)へ分離 |
+| Stage 3-B4 原成果所在・利用条件 | [Issue #50](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/issues/50)・[調査記録](docs/stage3b4/RESEARCH.md)。PR48マージ後mainを基準、PR49とは独立。原成果・利用許可UNKNOWN、Stage3B HOLD。検証/CIは[結果](docs/stage3b4/RESULTS.md)へ分離 |
 | 計測基盤・最適化候補 | PR [#26](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/26)・[#31](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/31)・[#34](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/34)・[#35](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/35)・[#40](https://github.com/tetsujisugimori-coder/yamanaka-historical-terrain/pull/40)はopen/Draft・未採用。性能改善は未立証 |
 
 第3期Aの作業版は、冒頭の「1590年の景観へ」から西ノ丸のC推定・D創作景観と4つの定点観察へ入れます。同じカメラでA現況/Cのみ/C＋Dを比較できます。史実確定の復元ではありません。[制作・編集元・再現・検証と留保](docs/landscape-1590.md)を参照。第3期Aの独立レビューは完了し、PR #10はマージ済みです。史実の精度・実機受入は引き続きPARTIALです。
