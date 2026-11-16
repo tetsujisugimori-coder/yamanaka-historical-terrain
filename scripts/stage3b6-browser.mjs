@@ -5,6 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {deliveryPath,preserveEntity} from './stage3b-delivery-evidence.mjs';
+import {createResponseObserver} from './stage3b6-response-observer.mjs';
 import {matrixPlan,assertMatrix} from './stage3b6-matrix-contract.mjs';
 const fixedPlan=matrixPlan(process.env.BROWSER_FILTER??null,Boolean(process.env.SMOKE_ONLY));
 const out=process.env.EVIDENCE_DIR,base=process.env.TEST_URL??'http://127.0.0.1:4395',harnessBase=process.env.HARNESS_URL??'http://127.0.0.1:4399';
@@ -14,7 +15,7 @@ try{await stat(path.join(out,'results.json'));throw Error('Refuse evidence overw
 const hash=b=>createHash('sha256').update(b).digest('hex'),git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim();
 const identity={head:git('rev-parse','HEAD'),tree:git('rev-parse','HEAD^{tree}'),dirty:git('status','--porcelain'),parents:git('show','-s','--format=%P'),githubSha:process.env.GITHUB_SHA??null,prHead:process.env.PR_HEAD_SHA??null,run:process.env.GITHUB_RUN_ID??null,attempt:process.env.GITHUB_RUN_ATTEMPT??null,node:process.version,platform:process.platform};
 const capacity=await statfs(out);if(Number(capacity.bavail)*Number(capacity.bsize)<2*1024**3)throw Error('2 GiB free required for bounded evidence');
-const sourceFiles=git('ls-files','src','scripts','tests','.github','docs/stage3b6','docs/stage3b6a','research','package.json','package-lock.json','vite.config.js','index.html','AGENTS.md','public/data/castle-overview.json','public/data/castle-overview.json').split('\n').filter(Boolean);
+const sourceFiles=git('ls-files','src','scripts','tests','.github','docs/stage3b6','docs/stage3b6a','docs/stage3b6b','research','package.json','package-lock.json','vite.config.js','index.html','AGENTS.md','public/data/castle-overview.json','public/data/castle-overview.json').split('\n').filter(Boolean);
 const sources=[];for(const file of sourceFiles){const b=await readFile(file),dest=path.join(out,'source',file);await mkdir(path.dirname(dest),{recursive:true});await writeFile(dest,b,{flag:'wx'});sources.push({file,bytes:b.length,sha256:hash(b),gitBlob:git('rev-parse',`HEAD:${file}`)});}
 const realData=JSON.parse(await readFile('public/data/castle-overview.json','utf8'));
 const {widths,motions}=fixedPlan;let matrixCoverage=null;
@@ -30,17 +31,18 @@ async function checkpoint(p,row,name){row.observations.push({name,diagnostics:aw
 async function screenshot(p,row,name){const file=`${row.key}-${name}.png`,b=await p.screenshot({path:path.join(out,file),fullPage:false});row.images.push({file,bytes:b.length,sha256:hash(b)});}
 async function save(){await writeFile(path.join(out,'results.json'),JSON.stringify({schema:1,identity,endHead:git('rev-parse','HEAD'),at:new Date().toISOString(),sources,engines,capacity:{availableBytes:Number(capacity.bavail)*Number(capacity.bsize),freeInodes:Number(capacity.ffree),plannedEvidenceBytes:4*1024**3},scope:'B6a: normal A reverse click / B native keys, plus separately counted controlled C races; historical polygons and transforms NOT_TESTED',fixedPlan,matrixCoverage,rows,runnerErrors},null,2));}
 async function runCase(browser,key,options,work,{kind='PRODUCTION',injected=false,allow503=false,synthetic=false}={}){
- const row={key,kind,status:'RUNNING',pageErrors:[],consoleErrors:[],cleanupErrors:[],captureErrors:[],http:[],observations:[],images:[],injected};rows.push(row);
+ const row={key,kind,status:'RUNNING',pageErrors:[],consoleErrors:[],cleanupErrors:[],captureErrors:[],responseObservations:[],http:[],observations:[],images:[],injected};rows.push(row);
  const endpoint=synthetic?harnessBase:base,dist=synthetic?'.work/stage3b5-harness':'dist';
  let context,page,tracing=false;const pending=[];
  try{
   context=await browser.newContext({...options,recordHar:{path:path.join(out,`${key}.har`),mode:'full',content:'omit'}});
   await context.tracing.start({screenshots:true,snapshots:true,sources:true});tracing=true;
   page=await context.newPage();page.setDefaultTimeout(15000);page.on('pageerror',e=>row.pageErrors.push(String(e)));page.on('console',m=>{if(m.type()==='error')row.consoleErrors.push({text:m.text(),location:m.location()});});
-  page.on('response',r=>{if(deliveryPath(r.url(),endpoint)||(synthetic&&new URL(r.url()).pathname==='/tests/stage3b5-harness.html'))pending.push((async()=>{try{const b=await r.body();let entry;if(synthetic&&new URL(r.url()).pathname==='/tests/stage3b5-harness.html'){const sha256=hash(b),rawFile=`harness-html-${sha256}.html`,buildPath=dist+'/tests/stage3b5-harness.html',built=await readFile(buildPath);await writeFile(path.join(out,rawFile),b);entry={url:r.url(),status:r.status(),bytes:b.length,sha256,rawFile,buildPath,buildSha256:hash(built),matchesBuild:hash(built)===sha256};}else entry=await preserveEntity({body:b,url:r.url(),status:r.status(),headers:await r.allHeaders(),base:endpoint,out,dist});entry.injected=injected&&new URL(r.url()).pathname==='/data/castle-overview.json';row.http.push(entry);}catch(e){row.captureErrors.push(String(e));}})());});
+  const observer=createResponseObserver({contextId:key,pageId:key+':page-1',onRecord:r=>row.responseObservations.push(r)});
+  page.on('response',r=>{if(deliveryPath(r.url(),endpoint)||(synthetic&&new URL(r.url()).pathname==='/tests/stage3b5-harness.html'))pending.push((async()=>{try{await observer.capture(r,async(b,observation)=>{let entry;if(synthetic&&new URL(r.url()).pathname==='/tests/stage3b5-harness.html'){const sha256=hash(b),rawFile=`harness-html-${sha256}.html`,buildPath=dist+'/tests/stage3b5-harness.html',built=await readFile(buildPath);await writeFile(path.join(out,rawFile),b);entry={url:r.url(),status:r.status(),bytes:b.length,sha256,rawFile,buildPath,buildSha256:hash(built),matchesBuild:hash(built)===sha256};}else entry=await preserveEntity({body:b,url:r.url(),status:r.status(),headers:observation.responseHeaders,base:endpoint,out,dist});entry.injected=injected&&new URL(r.url()).pathname==='/data/castle-overview.json';entry.observationId=observation.responseId;row.http.push(entry);});}catch(e){row.captureErrors.push({operation:'response-capture',responseId:e.observation?.responseId??null,requestId:e.observation?.requestId??null,url:e.observation?.url??null,status:e.observation?.status??null,error:'response capture failed',body:e.observation?.body??null});}})());});
   await work(page,row);
   await page.evaluate(({key,kind})=>{window.__b6EvidenceMarker={key,kind};},{key,kind});
-  await Promise.all(pending);expect(row.pageErrors).toEqual([]);expect(row.captureErrors).toEqual([]);
+  await Promise.all(pending);expect(row.responseObservations.flatMap(r=>r.observerErrors),'observer metadata complete').toEqual([]);expect(row.pageErrors).toEqual([]);expect(row.captureErrors).toEqual([]);
   const unexpected=row.consoleErrors.filter(e=>!(allow503&&e.text.includes('503')&&/Failed to load resource/.test(e.text)&&(!e.location.url||e.location.url.includes('castle-overview.json'))));expect(unexpected).toEqual([]);
   expect(row.http.some(e=>e.buildPath.endsWith('.js')),'served JS required').toBe(true);expect(row.http.some(e=>e.buildPath.endsWith('.html')),'served HTML required').toBe(true);
   for(const e of row.http)if(!e.injected){expect(e.status,`status ${e.url}`).toBe(200);expect(e.matchesBuild,`served byte identity ${e.url}`).toBe(true);}
