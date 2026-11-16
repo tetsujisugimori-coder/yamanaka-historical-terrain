@@ -108,18 +108,20 @@ export async function runCacheDiagnostics(browser,engine,{out}){
   if(u.pathname.endsWith('/asset.js'))({status,headers,body,representation}=diagnosticEntity(row.mode,phase,safeHeaders(req.headers)));
   else if(u.pathname===`/${row.id}/`){status=200;headers={'content-type':'text/html','cache-control':'no-store'};body=Buffer.from('<!doctype html><meta charset="utf-8"><div id="marker">unset</div><script src="asset.js"></script>');}
   else {status=404;headers={'content-type':'text/plain','cache-control':'no-store'};body=Buffer.from('not found');}
-  row.server.push({sequence:row.server.length+1,phase,at:new Date().toISOString(),method:req.method,path:u.pathname,requestHeaders:safeHeaders(req.headers),status,responseHeaders:safeHeaders(headers),representation,bodyBytes:body.length,bodySha256:sha(body)});
-  res.writeHead(status,headers);res.end(body);
+  row.server.push({sequence:row.server.length+1,phase,at:new Date().toISOString(),monotonicMs:performance.now(),method:req.method,path:u.pathname,requestHeaders:safeHeaders(req.headers),status,responseHeaders:safeHeaders(headers),representation,bodyBytes:body.length,bodySha256:sha(body)});
+  const entry=row.server.at(-1);res.once('finish',()=>{entry.responseFinishEventMs=performance.now();});res.writeHead(status,headers);entry.responseEndBeforeCallMs=performance.now();res.end(body);
  });
  server.requestTimeout=5000;server.headersTimeout=5000;
  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
  const base=`http://127.0.0.1:${server.address().port}`;
  try{
   for(const plan of cacheDiagnosticPlan){
-   const row={...plan,engine,scope:'SYNTHETIC_HTTP_DIAGNOSTIC',routing:plan.mode==='routed',usedBytes:'UNKNOWN',server:[],responses:[],captureFailures:[],operationErrors:[],pages:[]};rows.push(row);active={row,phase:1};
+   const row={...plan,engine,scope:'SYNTHETIC_HTTP_DIAGNOSTIC',routing:plan.mode==='routed',usedBytes:'UNKNOWN',server:[],responses:[],captureFailures:[],operationErrors:[],operations:[],pages:[]};rows.push(row);active={row,phase:1};
    let context,observer;const pending=[];let currentPhase=1,operation='context.new';
    const failure=(error,failedOperation)=>diagnosticFailure(error,{operation:failedOperation,phase:currentPhase,pending:row.responses.filter(r=>!r.events.some(e=>e.phase==='capture-settled'))});
-   const drain=async()=>{let n=0;while(n<pending.length){const next=pending.length;await bounded(Promise.all(pending.slice(n,next)));n=next;}if(observer)observer.finalize();};
+   const snapshot=()=>row.responses.map(r=>({requestId:r.requestId,responseId:r.responseId,body:r.body.status,completion:r.completion?.status??'PENDING',lastEvent:r.events.at(-1)?.phase??null,settled:r.events.some(e=>e.phase==='capture-settled')}));
+   const mark=(operation,state)=>row.operations.push({operation,state,phase:currentPhase,monotonicMs:performance.now(),captures:snapshot()});
+   const drain=async(label='capture.settle')=>{mark(label,'START');try{let n=0;while(n<pending.length){const next=pending.length;await bounded(Promise.all(pending.slice(n,next)));n=next;}if(observer)observer.finalize();mark(label,'END');}catch(e){mark(label,e?.code==='DIAGNOSTIC_DEADLINE'?'DEADLINE':'FAILED');throw e;}};
    try{
     context=await browser.newContext({viewport:{width:375,height:900},serviceWorkers:'block'});
     operation='page.new';const page=await context.newPage();page.setDefaultTimeout(5000);page.setDefaultNavigationTimeout(5000);
@@ -137,12 +139,12 @@ export async function runCacheDiagnostics(browser,engine,{out}){
     }
    }catch(e){row.runError=failure(e,operation);row.operationErrors.push(row.runError);}
    finally{
-    if(context)try{await bounded(context.close());}catch(e){row.cleanupError=failure(e,'context.close');row.operationErrors.push(row.cleanupError);row.runError??=row.cleanupError;}
-    try{await drain();row.captureSettlement={status:'SETTLED',observed:row.responses.length};}catch(e){const error=failure(e,'capture.settle.after-close');row.operationErrors.push(error);row.captureSettlement={status:'UNKNOWN',observed:row.responses.length};row.runError??=error;}
+    if(context)try{mark('context.close','START');await bounded(context.close());mark('context.close','END');}catch(e){mark('context.close','FAILED');row.cleanupError=failure(e,'context.close');row.operationErrors.push(row.cleanupError);row.runError??=row.cleanupError;}
+    try{await drain('capture.settle.after-close');row.captureSettlement={status:'SETTLED',observed:row.responses.length};}catch(e){const error=failure(e,'capture.settle.after-close');row.operationErrors.push(error);row.captureSettlement={status:'UNKNOWN',observed:row.responses.length};row.runError??=error;}
     row.assessment=evaluateCacheDiagnostic(row);row.timingAssessment=evaluateDiagnosticTiming(row);row.resourceIntegrity=evaluateDiagnosticResources(row);
    }
   }
  }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
- const result={schema:2,engine,scope:'synthetic loopback diagnostic only; original production acceptance unchanged',conditions:cacheDiagnosticPlan.length,rows,usedBytes:'UNKNOWN',limitations:['Server wire status and Playwright response status may differ.','DOM marker is a narrow function observation, not proof of every browser-used byte.','Routing and service-worker blocking are explicit diagnostic conditions, not production equivalence.','No screenshots or trace are generated by this diagnostic.']};
+ const result={schema:3,engine,scope:'synthetic loopback diagnostic only; original production acceptance unchanged',conditions:cacheDiagnosticPlan.length,rows,usedBytes:'UNKNOWN',limitations:['Server wire status and Playwright response status may differ.','DOM marker is a narrow function observation, not proof of every browser-used byte.','Routing and service-worker blocking are explicit diagnostic conditions, not production equivalence.','No screenshots or trace are generated by this diagnostic.']};
  await mkdir(out,{recursive:true});await writeFile(path.join(out,`cache-diagnostic-${engine}.json`),JSON.stringify(result,null,2),{flag:'wx'});return result;
 }
