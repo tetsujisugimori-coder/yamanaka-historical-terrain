@@ -5,11 +5,14 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import signal
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(sys.argv[1]).resolve()
 OUT.mkdir(parents=True, exist_ok=False)
+spec=importlib.util.spec_from_file_location('supervisor', ROOT/'scripts/stage3b6g-supervisor.py')
+SUP=importlib.util.module_from_spec(spec);spec.loader.exec_module(SUP);SUP.enable_subreaper()
 FIXTURE = OUT/'worker.py'
 FIXTURE.write_text('''import json,os,signal,subprocess,sys,time
 from pathlib import Path
@@ -26,6 +29,8 @@ if mode=='first-cleanup':save('FAIL','INITIAL_DIAGNOSTIC_FAILURE')
 signal.signal(signal.SIGTERM,signal.SIG_IGN)
 while True:time.sleep(.01)
 ''')
+watchspec=importlib.util.spec_from_file_location('watchdog', ROOT/'scripts/stage3b6h-watchdog.py')
+WATCH=importlib.util.module_from_spec(watchspec);watchspec.loader.exec_module(WATCH)
 results=[]
 for mode in ['normal','hang','close','orphan','first-cleanup','total']:
     case=OUT/mode
@@ -36,10 +41,15 @@ for mode in ['normal','hang','close','orphan','first-cleanup','total']:
     if mode=='total':config['totalMs']=1100
     cp=OUT/(mode+'-config.json');cp.write_text(json.dumps(config))
     start=time.monotonic()
-    run=subprocess.run([sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)],capture_output=True,timeout=6)
+    command=[sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)]
+    outer=WATCH.run_bounded(command,OUT,mode)
     wall=(time.monotonic()-start)*1000
-    (OUT/(mode+'-stdout.log')).write_bytes(run.stdout);(OUT/(mode+'-stderr.log')).write_bytes(run.stderr)
+    if outer['firstFailure'] or outer['cleanupFailure'] or outer['auditStatus']!='PASS':
+        results.append({'case':mode,'status':'INCOMPLETE','outer':outer,'pass':False})
+        SUP.save_json(OUT/'assertions.json',results)
+        raise AssertionError(outer)
     data=json.loads((case/'trial-ledger.json').read_text());row=data['trials'][0]
+    assert outer['exitCode']==(0 if mode=='normal' else 1),(mode,outer)
     expected='COMPLETED' if mode=='normal' else 'FAIL'
     assert row['status']==expected,(mode,row)
     assert row['withinBudget'],(mode,row)
@@ -51,7 +61,8 @@ for mode in ['normal','hang','close','orphan','first-cleanup','total']:
     if mode=='orphan':
         pid=int((case/'first/descendant.pid').read_text())
         assert not Path(f'/proc/{pid}').exists(),pid
-    results.append({'case':mode,'expected':expected,'actual':row['status'],'returncode':run.returncode,'elapsedMs':wall,
+    results.append({'case':mode,'expected':expected,'actual':row['status'],'returncode':outer['exitCode'],'elapsedMs':wall,
         'firstFailure':row['firstFailure'],'workerFirstFailure':row.get('workerFirstFailure'),'residual':row['residual'],'pass':True})
-(OUT/'assertions.json').write_text(json.dumps(results,indent=2))
+    SUP.save_json(OUT/'assertions.json',results)
+SUP.save_json(OUT/'assertions.json',results)
 print(json.dumps(results,indent=2))

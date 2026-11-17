@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {EventEmitter} from 'node:events';
-import {mkdirSync,mkdtempSync} from 'node:fs';
+import {mkdirSync,mkdtempSync,writeFileSync,renameSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {createResponseObserver} from '../scripts/stage3b6-response-observer.mjs';
@@ -9,7 +9,9 @@ import {attachTerminalNotifications} from '../scripts/stage3b6g-notifications.mj
 
 test('B6g finite process controls including detached descendants and first failure', {timeout:20000,skip:process.platform!=='linux'},()=>{
  mkdirSync('.work/stage3b6g',{recursive:true});const base=mkdtempSync('.work/stage3b6g/test-');
+ const started=Date.now();
  const result=spawnSync('python3',['tests/stage3b6g-supervisor.py',path.resolve(base,'results')],{encoding:'utf8',timeout:18000});
+ for(const [name,body] of [['outer-node-stdout.log',result.stdout??''],['outer-node-stderr.log',result.stderr??''],['outer-node-result.json',JSON.stringify({startedAt:started,endedAt:Date.now(),exitCode:result.status,signal:result.signal,errorCode:result.error?.code??null,status:result.status===0?'COMPLETED':'FAIL',descendantAudit:result.error?'UNKNOWN':'SEE_PYTHON_OUTER_RECORDS'})]]){const file=path.join(base,name);writeFileSync(file+'.pending',body);renameSync(file+'.pending',file);}
  assert.equal(result.status,0,result.stdout+result.stderr);
 });
 test('B6g terminal notifications use same Request identity and sanitize failure',()=>{

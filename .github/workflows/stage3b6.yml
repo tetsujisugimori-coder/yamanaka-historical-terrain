@@ -46,6 +46,10 @@ jobs:
           name=diff; check git diff --check
           name=build; check npm run build
           exit "$result"
+      - name: Collect finite-process evidence even on failure
+        if: always()
+        run: |
+          python3 scripts/stage3b6h-artifacts.py collect "$EVIDENCE_DIR" .work/stage3b6g > "$EVIDENCE_DIR/finite-process-collection.log" 2>&1
       - name: Production guide matrix and injected data controls
         run: |
           ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4395 --strictPort > "$EVIDENCE_DIR/server.log" 2>&1 &
@@ -61,13 +65,7 @@ jobs:
           exit "$code"
       - name: Evidence inventory including hidden source
         if: always()
-        run: |
-          python3 - <<'PY'
-          import pathlib,hashlib,json
-          root=pathlib.Path('evidence-run/stage3b6a-${{ matrix.browser }}')
-          rows=[{'path':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]
-          (root/'manifest.json').write_text(json.dumps(rows,indent=2))
-          PY
+        run: python3 scripts/stage3b6h-artifacts.py seal "$EVIDENCE_DIR"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
