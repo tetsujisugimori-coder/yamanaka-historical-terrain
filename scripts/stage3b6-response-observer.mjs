@@ -25,7 +25,7 @@ export function createResponseObserver({contextId,pageId,onRecord,bodyTiming='AS
   for(const record of records){record.correlation=correlate304(record,records.filter(p=>p!==record));record.correlationPhase='ALL_CAPTURES_SETTLED';}
   return {records:records.length,status:'SETTLED',scope:'observed records only; not completeness or used-byte proof'};
  };
- return {records,observeRequest,finalize,async capture(response,consume){
+ return {records,observeRequest,requestId,finalize,async capture(response,consume){
   const req=response.request(),record={contextId,pageId,requestId:requestId(req),responseId:`${contextId}:response-${++seq}`,sequence:seq,observedAt:new Date().toISOString(),idSemantics:'observer-local; native identifier unavailable',url:safeUrl(response.url()),urlIdentity:createHash('sha256').update(response.url()).digest('hex'),method:req.method(),status:response.status(),requestHeaders:{},responseHeaders:{},body:{status:'NOT_TESTED'},observerErrors:[],events:[...(requests.has(req)?[requests.get(req)]:[]),event('response')],requestTiming:requests.has(req)?'OBSERVED':'NOT_OBSERVED',bodyTiming};
   inFlight++;records.push(record);onRecord(record);
   // Completion observation does not gate the original metadata -> body path.

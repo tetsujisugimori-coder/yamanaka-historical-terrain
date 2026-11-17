@@ -3,6 +3,7 @@ import {createServer} from 'node:http';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
+import {attachTerminalNotifications} from './stage3b6g-notifications.mjs';
 import {createResponseObserver,safeHeaders} from './stage3b6-response-observer.mjs';
 export const cacheDiagnosticPlan=Object.freeze([
  {id:'revalidate-immediate',mode:'revalidate',bodyTiming:'AS_OBSERVED'},
@@ -97,7 +98,7 @@ export function evaluateDiagnosticResources(row){
  });
  return {status:results.includes('FAIL')?'FAIL':results.includes('UNKNOWN')?'UNKNOWN':'CAPTURE_MATCH',phases:results,scope:'captured entity versus synthetic server only; used browser bytes UNKNOWN'};
 }
-export async function runCacheDiagnostics(browser,engine,{out}){
+export async function runCacheDiagnostics(browser,engine,{out,plans=cacheDiagnosticPlan,terminalNotifications=false,onProgress=null}){
  if(!out)throw Error('diagnostic output required');
  const rows=[];let active;
  const server=createServer((req,res)=>{
@@ -115,20 +116,21 @@ export async function runCacheDiagnostics(browser,engine,{out}){
  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
  const base=`http://127.0.0.1:${server.address().port}`;
  try{
-  for(const plan of cacheDiagnosticPlan){
+  for(const plan of plans){
    const row={...plan,engine,scope:'SYNTHETIC_HTTP_DIAGNOSTIC',routing:plan.mode==='routed',usedBytes:'UNKNOWN',server:[],responses:[],captureFailures:[],operationErrors:[],operations:[],pages:[]};rows.push(row);active={row,phase:1};
    let context,observer;const pending=[];let currentPhase=1,operation='context.new';
    const failure=(error,failedOperation)=>diagnosticFailure(error,{operation:failedOperation,phase:currentPhase,pending:row.responses.filter(r=>!r.events.some(e=>e.phase==='capture-settled'))});
    const snapshot=()=>row.responses.map(r=>({requestId:r.requestId,responseId:r.responseId,body:r.body.status,completion:r.completion?.status??'PENDING',lastEvent:r.events.at(-1)?.phase??null,settled:r.events.some(e=>e.phase==='capture-settled')}));
-   const mark=(operation,state)=>row.operations.push({operation,state,phase:currentPhase,monotonicMs:performance.now(),captures:snapshot()});
+   const mark=(operation,state)=>{const event={operation,state,phase:currentPhase,monotonicMs:performance.now(),captures:snapshot()};row.operations.push(event);onProgress?.({kind:'operation',...event});};
    const drain=async(label='capture.settle')=>{mark(label,'START');try{let n=0;while(n<pending.length){const next=pending.length;await bounded(Promise.all(pending.slice(n,next)));n=next;}if(observer)observer.finalize();mark(label,'END');}catch(e){mark(label,e?.code==='DIAGNOSTIC_DEADLINE'?'DEADLINE':'FAILED');throw e;}};
    try{
     context=await browser.newContext({viewport:{width:375,height:900},serviceWorkers:'block'});
     operation='page.new';const page=await context.newPage();page.setDefaultTimeout(5000);page.setDefaultNavigationTimeout(5000);
     if(row.routing){operation='page.route';await page.route('**/*',route=>route.continue());}
     observer=createResponseObserver({contextId:`diagnostic:${engine}:${row.id}`,pageId:'page',bodyTiming:row.bodyTiming,onRecord:r=>{r.diagnosticPhase=currentPhase;row.responses.push(r);}});let errors=0;
+    const notifications=terminalNotifications?attachTerminalNotifications(page,observer,{target:`${base}/${row.id}/asset.js`,phase:()=>currentPhase,events:row.terminalEvents=[]}):null;
     page.on('pageerror',()=>{errors++;});page.on('request',r=>{if(r.url()===`${base}/${row.id}/asset.js`)observer.observeRequest(r);});
-    page.on('response',r=>{if(r.url()!==`${base}/${row.id}/asset.js`)return;const phase=currentPhase;pending.push(observer.capture(r,async(body,record)=>{const raw=row.server.filter(s=>s.phase===phase&&s.path===`/${row.id}/asset.js`),entry=raw.length===1?raw[0]:null;record.savedBody={bytes:body.length,sha256:sha(body),base64:body.toString('base64'),serverSequence:entry?.sequence??null,serverEntityStatus:entry?.status??null,matchesServerEntity:!entry||entry.status===304?null:sha(body)===entry.bodySha256,comparisonScope:!entry?'raw server correspondence UNKNOWN':entry.status===304?'304 has no server body; captured bytes are not equated with wire bytes':'captured body versus actual synthetic server record'};}).catch(e=>{row.captureFailures.push(diagnosticFailure(e,{operation:'response.capture',phase}));}));});
+    page.on('response',r=>{if(r.url()!==`${base}/${row.id}/asset.js`)return;const phase=currentPhase;const capture=observer.capture(r,async(body,record)=>{const raw=row.server.filter(s=>s.phase===phase&&s.path===`/${row.id}/asset.js`),entry=raw.length===1?raw[0]:null;record.savedBody={bytes:body.length,sha256:sha(body),base64:body.toString('base64'),serverSequence:entry?.sequence??null,serverEntityStatus:entry?.status??null,matchesServerEntity:!entry||entry.status===304?null:sha(body)===entry.bodySha256,comparisonScope:!entry?'raw server correspondence UNKNOWN':entry.status===304?'304 has no server body; captured bytes are not equated with wire bytes':'captured body versus actual synthetic server record'};}).catch(e=>{row.captureFailures.push(diagnosticFailure(e,{operation:'response.capture',phase}));});notifications?.bind(r.request(),observer.records.at(-1));pending.push(capture);});
     for(const phase of [1,2]){
      active.phase=phase;currentPhase=phase;
      operation='page.setExtraHTTPHeaders';await page.setExtraHTTPHeaders({Accept:row.mode==='vary-change'&&phase===2?accepts.second:accepts.first});
@@ -137,14 +139,14 @@ export async function runCacheDiagnostics(browser,engine,{out}){
      operation='marker.textContent';const text=await page.locator('#marker').textContent();
      row.pages.push({phase,at:new Date().toISOString(),marker,text,pageErrorCount:errors-before});operation='capture.settle';await drain();
     }
-   }catch(e){row.runError=failure(e,operation);row.operationErrors.push(row.runError);}
+   }catch(e){row.runError=failure(e,operation);row.operationErrors.push(row.runError);onProgress?.({kind:'first-error',error:row.runError});}
    finally{
-    if(context)try{mark('context.close','START');await bounded(context.close());mark('context.close','END');}catch(e){mark('context.close','FAILED');row.cleanupError=failure(e,'context.close');row.operationErrors.push(row.cleanupError);row.runError??=row.cleanupError;}
-    try{await drain('capture.settle.after-close');row.captureSettlement={status:'SETTLED',observed:row.responses.length};}catch(e){const error=failure(e,'capture.settle.after-close');row.operationErrors.push(error);row.captureSettlement={status:'UNKNOWN',observed:row.responses.length};row.runError??=error;}
+    if(context)try{mark('context.close','START');await bounded(context.close());mark('context.close','END');}catch(e){mark('context.close','FAILED');row.cleanupError=failure(e,'context.close');row.operationErrors.push(row.cleanupError);row.runError??=row.cleanupError;onProgress?.({kind:'cleanup-error',error:row.cleanupError,firstError:row.runError});}
+    try{await drain('capture.settle.after-close');row.captureSettlement={status:'SETTLED',observed:row.responses.length};}catch(e){const error=failure(e,'capture.settle.after-close');row.operationErrors.push(error);row.captureSettlement={status:'UNKNOWN',observed:row.responses.length};row.runError??=error;onProgress?.({kind:'settlement-error',error,firstError:row.runError});}
     row.assessment=evaluateCacheDiagnostic(row);row.timingAssessment=evaluateDiagnosticTiming(row);row.resourceIntegrity=evaluateDiagnosticResources(row);
    }
   }
  }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
- const result={schema:3,engine,scope:'synthetic loopback diagnostic only; original production acceptance unchanged',conditions:cacheDiagnosticPlan.length,rows,usedBytes:'UNKNOWN',limitations:['Server wire status and Playwright response status may differ.','DOM marker is a narrow function observation, not proof of every browser-used byte.','Routing and service-worker blocking are explicit diagnostic conditions, not production equivalence.','No screenshots or trace are generated by this diagnostic.']};
+ const result={schema:3,engine,scope:'synthetic loopback diagnostic only; original production acceptance unchanged',conditions:plans.length,rows,usedBytes:'UNKNOWN',limitations:['Server wire status and Playwright response status may differ.','DOM marker is a narrow function observation, not proof of every browser-used byte.','Routing and service-worker blocking are explicit diagnostic conditions, not production equivalence.','No screenshots or trace are generated by this diagnostic.']};
  await mkdir(out,{recursive:true});await writeFile(path.join(out,`cache-diagnostic-${engine}.json`),JSON.stringify(result,null,2),{flag:'wx'});return result;
 }
