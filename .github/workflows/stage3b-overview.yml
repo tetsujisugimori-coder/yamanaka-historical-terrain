@@ -27,7 +27,19 @@ jobs:
       - run: node scripts/stage3b-overview-generate.mjs --verify
       - run: node scripts/stage3b-preservation-check.mjs
       - run: python3 scripts/stage3b-independent-oracle.py --output-dir evidence-run/stage3b/oracle
-      - run: node --test --test-concurrency=1 tests/*.test.mjs
+      - name: Unit contracts with retained stdout and exit status
+        run: |
+          mkdir -p evidence-run/stage3b
+          set +e
+          node --test --test-concurrency=1 tests/*.test.mjs > evidence-run/stage3b/unit.log 2>&1
+          code=$?
+          printf 'unit\t%s\n' "$code" > evidence-run/stage3b/exit-codes.tsv
+          exit "$code"
+      - name: Collect finite-process evidence even on failure
+        if: always()
+        run: |
+          mkdir -p evidence-run/stage3b
+          python3 scripts/stage3b6h-artifacts.py collect evidence-run/stage3b .work/stage3b6g > evidence-run/stage3b/finite-process-collection.log 2>&1
       - run: git diff --check
       - run: npm run build
       - name: Browser matrix and evidence
@@ -38,9 +50,13 @@ jobs:
           npm run dev -- --port 4393 > /tmp/stage3b-server.log 2>&1 &
           for i in $(seq 1 60); do curl -fsS http://127.0.0.1:4393/ >/dev/null && break; sleep 1; done
           TEST_URL=http://127.0.0.1:4393 EVIDENCE_DIR=evidence-run/stage3b node scripts/stage3b-overview-browser.mjs
+      - name: Seal overview evidence manifest on success or failure
+        if: always()
+        run: python3 scripts/stage3b6h-artifacts.py seal evidence-run/stage3b
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: stage3b-overview-${{ github.sha }}
           path: evidence-run/stage3b
+          include-hidden-files: true
           if-no-files-found: error

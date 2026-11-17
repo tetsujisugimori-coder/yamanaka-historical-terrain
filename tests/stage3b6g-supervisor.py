@@ -44,6 +44,26 @@ for mode in ['normal','hang','close','orphan','first-cleanup','total']:
     command=[sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)]
     outer=WATCH.run_bounded(command,OUT,mode)
     wall=(time.monotonic()-start)*1000
+    # The external 150ms observation is NOT a process cleanup or root-cause proof.
+    # Record it before assertions so a failed case remains inspectable in the artifact.
+    timing={'schema':1,'case':mode,'totalMs':config['totalMs'],'toleranceMs':150,
+            'externalWallMs':wall,'watchdogElapsedMs':outer.get('elapsedMs'),
+            'watchdogFirstFailure':outer.get('firstFailure'),
+            'watchdogCleanupFailure':outer.get('cleanupFailure'),
+            'watchdogAuditStatus':outer.get('auditStatus'),
+            'externalWallWithinWindow':wall<config['totalMs']+150,
+            'interpretation':'OBSERVATION_ONLY_NOT_ROOT_CAUSE'}
+    try:
+        ledger=json.loads((case/'trial-ledger.json').read_text())
+        timing['supervisorElapsedMs']=ledger.get('elapsedMs')
+        timing['firstTrialStatus']=ledger['trials'][0].get('status')
+        timing['firstTrialBudgetMs']=ledger['trials'][0].get('budgetMs')
+        timing['firstTrialElapsedMs']=ledger['trials'][0].get('elapsedMs')
+        timing['firstTrialAuditStatus']=ledger['trials'][0].get('auditStatus')
+        timing['firstTrialResidualCount']=len(ledger['trials'][0].get('residual') or [])
+    except (OSError,ValueError,KeyError,TypeError,IndexError):
+        timing['supervisorRecord']='UNAVAILABLE'
+    SUP.save_json(OUT/(mode+'-timing-observation.json'),timing)
     if outer['firstFailure'] or outer['cleanupFailure'] or outer['auditStatus']!='PASS':
         results.append({'case':mode,'status':'INCOMPLETE','outer':outer,'pass':False})
         SUP.save_json(OUT/'assertions.json',results)
@@ -54,6 +74,10 @@ for mode in ['normal','hang','close','orphan','first-cleanup','total']:
     assert row['status']==expected,(mode,row)
     assert row['withinBudget'],(mode,row)
     assert row['residual']==[],(mode,row)
+    if not timing['externalWallWithinWindow']:
+        results.append({'case':mode,'status':'FAIL','reason':'EXTERNAL_WALL_WINDOW_EXCEEDED',
+                        'rootCause':'UNKNOWN','externalWallMs':wall,'pass':False})
+        SUP.save_json(OUT/'assertions.json',results)
     assert wall<config['totalMs']+150,(mode,wall)
     if mode!='normal':assert data['trials'][1]['status']=='NOT_TESTED'
     if mode=='total':assert row['firstFailure']=='TOTAL_DEADLINE'
