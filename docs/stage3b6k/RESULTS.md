@@ -17,3 +17,8 @@ Required assessment:
 5. An independent reviewer reopens raw sources, failed control evidence and the exact final HEAD. B6k limited acceptance remains NO/PENDING until these gates are demonstrably met.
 
 **Provisional verdict: PARTIAL / LIMITED ACCEPTANCE NO / MERGE NO / Draft / Stage 3-B HOLD.**
+
+## First formal-HEAD observation and bounded amendment
+The initial submitted B6k HEAD `7dc4921d166e479e5475f7093ce48591fc84ced8` triggered automatic Actions. The first three inspected failure jobs (castle-exploration `134970655756`, Pages build `134970655693`, landscape-only `134970655427`) all show the same new B6j harness failure at delayed GREEN: the controlled new supervisor completed with `withinBudget=true`, `auditStatus=PASS`, `residual=[]`, `directChildExited=true`, outer containment PASS, and `injectedDelayReached=false`. The original test mistakenly demanded a delayed **pre-signal checkpoint** in the repaired source even though that checkpoint's removal is the feature under test.
+
+This is a **test-oracle defect**, not evidence that the new source ran the baseline checkpoint. The amendment requires the old source's delayed pre-signal checkpoint to be present, the new one's to be absent, and independently checks observed SIGTERM plus the recorded checkpoint start times between deadline and SIGTERM; all original wall budgets, exit/audit/residual and manifest gates remain unchanged. The original failed CI, original logs and unexecuted cases remain FAIL/NOT_TESTED. This amendment cannot establish acceptance until new-HEAD formal results and original artifacts are reviewed.

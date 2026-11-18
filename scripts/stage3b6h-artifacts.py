@@ -161,7 +161,9 @@ def collect(source,root):
                 assertion = next(row for row in assertions if row['case']=='checkpoint-delay-'+label)
                 if assertion.get('observedInner') != inner or assertion.get('outerAuditStatus') != outer.get('auditStatus') or assertion.get('outerResidual') != outer.get('residual') or assertion.get('outerExitCode') != outer.get('exitCode') or assertion.get('outerCleanupFailure') != outer.get('cleanupFailure') or assertion.get('outerFirstFailure') != outer.get('firstFailure') or assertion.get('outerPreCleanupSnapshot') != outer.get('preCleanupSnapshot'):
                     missing.append('B6J_DELAY_EVIDENCE_MISMATCH_'+label)
-                if (inner.get('label') != label or inner.get('injectedDelayReached') is not True
+                if (inner.get('label') != label or inner.get('injectedDelayReached') is not (label=='old')
+                    or inner.get('signalObserved') is not True
+                    or inner.get('checkpointBetweenDeadlineAndSignal') is not (label=='old')
                     or inner.get('expectedWithinBudget') is not (label=='new')
                     or inner.get('withinBudget') is not (label=='new')
                     or not isinstance(inner.get('elapsedMs'),(int,float))

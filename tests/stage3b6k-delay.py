@@ -35,8 +35,19 @@ cfg = {'cwd': str(ROOT), 'individualMs': 1800, 'totalMs': 4000,
 try:
     result = S.supervise(cfg, out)
     row = result['trials'][0]
+    events = row.get('events', [])
+    deadline_at = next((e.get('monotonicMs') for e in events
+                        if e.get('kind') in ('INDIVIDUAL_DEADLINE', 'TOTAL_DEADLINE')), None)
+    signal_at = next((e.get('monotonicMs') for e in events if e.get('kind') == 'SIGTERM'), None)
+    writes = result.get('recordTimings', [])
+    before_signal = (None if deadline_at is None or signal_at is None else
+                     any(w.get('file', '').endswith('supervisor-checkpoint.json')
+                         and deadline_at <= w.get('startMs', -1) < signal_at
+                         for w in writes))
     summary = {
-        'label': label, 'injectedDelayReached': bool(injected),
+        'label': label,
+        'signalObserved': signal_at is not None,
+        'checkpointBetweenDeadlineAndSignal': before_signal, 'injectedDelayReached': bool(injected),
         'expectedWithinBudget': label == 'new',
         'withinBudget': row.get('withinBudget'), 'status': row.get('status'),
         'elapsedMs': row.get('elapsedMs'),

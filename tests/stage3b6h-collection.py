@@ -49,7 +49,9 @@ b6j_names=['normal-fault','within-budget-false','external-wall','outer-failure',
 control=base/'b6j-controls/run-synthetic'
 assertions=[{'case':name,'status':'PASS','pass':True} for name in b6j_names]
 for label in ['old','new']:
- inner={'label':label,'injectedDelayReached':True,'expectedWithinBudget':label=='new',
+ inner={'label':label,'injectedDelayReached':label=='old','signalObserved':True,
+        'checkpointBetweenDeadlineAndSignal':label=='old',
+        'expectedWithinBudget':label=='new',
         'withinBudget':label=='new','status':'FAIL','elapsedMs':1900 if label=='old' else 1300,
         'firstFailure':'INDIVIDUAL_DEADLINE','cleanupFailure':None,
         'auditStatus':'PASS','residual':[],'directChildExited':True,
