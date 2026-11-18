@@ -19,12 +19,12 @@ test('B6i overview retains failed unit output and collects before browser withou
   assert.match(w.slice(seal,upload),/if: always\(\)/);
   assert.match(w.slice(upload),/include-hidden-files: true/);
 });
-test('B6i keeps the existing 150ms wall deadline as FAIL and saves a cause-unknown diagnostic',()=>{
+test('B6i keeps the existing 150ms wall deadline and saves cause-unknown diagnostic before failed verdict',()=>{
   const py=readFileSync('tests/stage3b6g-supervisor.py','utf8');
-  const diagnostic=py.indexOf("SUP.save_json(OUT/(mode+'-timing-observation.json'),timing)");
-  const deadline=py.indexOf("assert wall<config['totalMs']+150");
-  assert(diagnostic>0&&deadline>diagnostic);
-  assert.match(py,/EXTERNAL_WALL_WINDOW_EXCEEDED/);
-  assert.match(py,/'rootCause':'UNKNOWN'/);
-  assert.match(py,/timing\['supervisorElapsedMs'\]/);
+  const helper=readFileSync('scripts/stage3b6j-case-record.py','utf8');
+  assert.match(helper,/wall < config\['totalMs'\] \+ 150/);
+  assert.match(helper,/'rootCause': 'UNKNOWN'/);
+  assert.match(helper,/supervisorElapsedMs/);
+  assert(py.indexOf("mode+'-timing-observation.json'")<py.indexOf('raise AssertionError'));
+  assert.match(py,/finally:\n        persist\(\)/);
 });

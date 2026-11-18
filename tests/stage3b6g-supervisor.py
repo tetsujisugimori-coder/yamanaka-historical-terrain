@@ -31,8 +31,19 @@ while True:time.sleep(.01)
 ''')
 watchspec=importlib.util.spec_from_file_location('watchdog', ROOT/'scripts/stage3b6h-watchdog.py')
 WATCH=importlib.util.module_from_spec(watchspec);watchspec.loader.exec_module(WATCH)
-results=[]
-for mode in ['normal','hang','close','orphan','first-cleanup','total']:
+casespec=importlib.util.spec_from_file_location('case_record',ROOT/'scripts/stage3b6j-case-record.py')
+C=importlib.util.module_from_spec(casespec);casespec.loader.exec_module(C)
+identity=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,timeout=2)
+head=identity.stdout.strip() if identity.returncode==0 else None
+run_id=OUT.name+'-'+str(os.getpid())
+results=[{'case':mode,'status':'NOT_TESTED','pass':False,'reason':'PRIOR_CASE_NOT_COMPLETED'} for mode in C.CASES]
+def persist():
+    try: SUP.save_json(OUT/'assertions.json',results)
+    except Exception:
+        print(json.dumps({'status':'INCOMPLETE','firstFailure':'ASSERTION_RECORD_WRITE_FAILED','runId':run_id}),file=sys.stderr,flush=True)
+        raise
+persist()
+for index,mode in enumerate(C.CASES):
     case=OUT/mode
     config={'cwd':str(ROOT),'individualMs':1800,'totalMs':4000,'cleanupReserveMs':700,
         'termGraceMs':150,'auditReserveMs':150,
@@ -40,53 +51,28 @@ for mode in ['normal','hang','close','orphan','first-cleanup','total']:
                   {'id':'remaining','argv':[sys.executable,str(FIXTURE),'normal']}]}
     if mode=='total':config['totalMs']=1100
     cp=OUT/(mode+'-config.json');cp.write_text(json.dumps(config))
-    start=time.monotonic()
-    command=[sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)]
-    outer=WATCH.run_bounded(command,OUT,mode)
-    wall=(time.monotonic()-start)*1000
-    # The external 150ms observation is NOT a process cleanup or root-cause proof.
-    # Record it before assertions so a failed case remains inspectable in the artifact.
-    timing={'schema':1,'case':mode,'totalMs':config['totalMs'],'toleranceMs':150,
-            'externalWallMs':wall,'watchdogElapsedMs':outer.get('elapsedMs'),
-            'watchdogFirstFailure':outer.get('firstFailure'),
-            'watchdogCleanupFailure':outer.get('cleanupFailure'),
-            'watchdogAuditStatus':outer.get('auditStatus'),
-            'externalWallWithinWindow':wall<config['totalMs']+150,
-            'interpretation':'OBSERVATION_ONLY_NOT_ROOT_CAUSE'}
+    started=time.time();start=time.monotonic()
+    results[index]={'case':mode,'status':'RUNNING','pass':False,'runId':run_id,'targetHead':head,'startedAtUnix':started}
+    persist()
     try:
-        ledger=json.loads((case/'trial-ledger.json').read_text())
-        timing['supervisorElapsedMs']=ledger.get('elapsedMs')
-        timing['firstTrialStatus']=ledger['trials'][0].get('status')
-        timing['firstTrialBudgetMs']=ledger['trials'][0].get('budgetMs')
-        timing['firstTrialElapsedMs']=ledger['trials'][0].get('elapsedMs')
-        timing['firstTrialAuditStatus']=ledger['trials'][0].get('auditStatus')
-        timing['firstTrialResidualCount']=len(ledger['trials'][0].get('residual') or [])
-    except (OSError,ValueError,KeyError,TypeError,IndexError):
-        timing['supervisorRecord']='UNAVAILABLE'
-    SUP.save_json(OUT/(mode+'-timing-observation.json'),timing)
-    if outer['firstFailure'] or outer['cleanupFailure'] or outer['auditStatus']!='PASS':
-        results.append({'case':mode,'status':'INCOMPLETE','outer':outer,'pass':False})
-        SUP.save_json(OUT/'assertions.json',results)
-        raise AssertionError(outer)
-    data=json.loads((case/'trial-ledger.json').read_text());row=data['trials'][0]
-    assert outer['exitCode']==(0 if mode=='normal' else 1),(mode,outer)
-    expected='COMPLETED' if mode=='normal' else 'FAIL'
-    assert row['status']==expected,(mode,row)
-    assert row['withinBudget'],(mode,row)
-    assert row['residual']==[],(mode,row)
-    if not timing['externalWallWithinWindow']:
-        results.append({'case':mode,'status':'FAIL','reason':'EXTERNAL_WALL_WINDOW_EXCEEDED',
-                        'rootCause':'UNKNOWN','externalWallMs':wall,'pass':False})
-        SUP.save_json(OUT/'assertions.json',results)
-    assert wall<config['totalMs']+150,(mode,wall)
-    if mode!='normal':assert data['trials'][1]['status']=='NOT_TESTED'
-    if mode=='total':assert row['firstFailure']=='TOTAL_DEADLINE'
-    if mode=='first-cleanup':assert row['workerFirstFailure']=='INITIAL_DIAGNOSTIC_FAILURE'
-    if mode=='orphan':
-        pid=int((case/'first/descendant.pid').read_text())
-        assert not Path(f'/proc/{pid}').exists(),pid
-    results.append({'case':mode,'expected':expected,'actual':row['status'],'returncode':outer['exitCode'],'elapsedMs':wall,
-        'firstFailure':row['firstFailure'],'workerFirstFailure':row.get('workerFirstFailure'),'residual':row['residual'],'pass':True})
-    SUP.save_json(OUT/'assertions.json',results)
-SUP.save_json(OUT/'assertions.json',results)
+        command=[sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)]
+        outer=WATCH.run_bounded(command,OUT,mode)
+        wall=(time.monotonic()-start)*1000
+        row,timing=C.evaluate(mode,config,outer,wall,case)
+        row.update(runId=run_id,targetHead=head,startedAtUnix=started)
+        if head is None:
+            row.update(status='INCOMPLETE')
+            row['pass']=False;row['firstFailure']=row['firstFailure'] or 'TARGET_HEAD_UNAVAILABLE'
+        results[index]=row
+        SUP.save_json(OUT/(mode+'-timing-observation.json'),timing)
+        SUP.save_json(OUT/(mode+'-assertion.json'),row)
+    except Exception as exc:
+        row=results[index]
+        row.update(status='INCOMPLETE',finishedAtUnix=time.time(),exceptionType=type(exc).__name__)
+        row['pass']=False;row['firstFailure']=row.get('firstFailure') or 'CASE_EXECUTION_OR_RECORD_FAILED'
+        print(json.dumps({'case':mode,'status':'INCOMPLETE','firstFailure':row['firstFailure'],'exceptionType':type(exc).__name__}),file=sys.stderr,flush=True)
+    finally:
+        persist()
+    if not results[index]['pass']:
+        raise AssertionError({'case':mode,'firstFailure':results[index].get('firstFailure'),'status':results[index]['status']})
 print(json.dumps(results,indent=2))

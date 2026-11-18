@@ -93,12 +93,18 @@ def supervise(config, out):
               'limits': ['No guarantee under host suspension, uninterruptible I/O or forced environment destruction.',
                          'Controlled descendant tree/subreaper only; not a hostile-code security boundary.']}
     record_errors = []
+    record_timings = []
+    result['recordTimings'] = record_timings
+    result['recordTimingScope'] = 'Completed writes before this ledger serialization; final ledger write cannot self-time.'
     def record(path, data):
+        began = time.monotonic()
         try: save_json(path, data); return True
         except (OSError, ValueError, TypeError):
             record_errors.append({'file': path.name, 'reason': 'RECORD_WRITE_FAILED'})
             print(json.dumps({'status': 'INCOMPLETE', 'firstFailure': 'RECORD_WRITE_FAILED', 'file': path.name}), file=sys.stderr, flush=True)
             return False
+        finally:
+            record_timings.append({'file': str(path.relative_to(out)), 'startMs': (began-start)*1000, 'endMs': (time.monotonic()-start)*1000})
     record(out/'trial-ledger.json', result)
     deadline = start + total
     stopped = None
@@ -111,12 +117,12 @@ def supervise(config, out):
         def checkpoint():
             if not record(trial_dir/'supervisor-checkpoint.json', row):
                 row['firstFailure'] = row['firstFailure'] or 'RECORD_WRITE_FAILED'
-        def event(kind, **extra):
+        def event(kind, persist=True, **extra):
             row['events'].append({'kind': kind, 'monotonicMs': (time.monotonic()-start)*1000, **extra})
-            checkpoint()
-        def fail(code):
+            if persist: checkpoint()
+        def fail(code, persist=True):
             row['firstFailure'] = row['firstFailure'] or code
-            event(code)
+            event(code, persist=persist)
         worker = None; streams = []; term_sent = kill_sent = False; audit_errors = []
         op_end = hard-reserve; kill_at = min(op_end+grace, hard-audit)
         env = os.environ.copy(); env.update(B6G_OUT=str(trial_dir.resolve()), B6G_CLOSE_MS=str(min(5000, int((reserve-grace-audit)*1000))), TMPDIR=str((out/'tmp').resolve()))
@@ -124,32 +130,33 @@ def supervise(config, out):
         checkpoint()
         try:
             streams = [(trial_dir/'stdout.log').open('xb'), (trial_dir/'stderr.log').open('xb')]
+            event('SPAWN_BEGIN', persist=False)
             worker = subprocess.Popen(trial['argv'], env=env, cwd=config['cwd'], stdout=streams[0], stderr=streams[1], start_new_session=True)
             row['phase'] = 'OPERATION'
             event('WORKER_STARTED', pid=worker.pid, processSnapshot=members(worker.pid, audit_errors))
             while time.monotonic() < hard-audit:
-                now = time.monotonic(); rc = worker.poll(); group = members(worker.pid, audit_errors)
+                rc = worker.poll(); group = members(worker.pid, audit_errors); now = time.monotonic()
                 if rc is not None and not group: break
                 if rc is not None and group and not term_sent:
-                    fail('CHILD_RESIDUAL'); op_end = now; kill_at = min(now+grace, hard-audit)
+                    fail('CHILD_RESIDUAL', persist=False); op_end = now; kill_at = min(now+grace, hard-audit)
                 if sum(s.tell() for s in streams) > 8*1024*1024 and not term_sent:
-                    fail('OUTPUT_BUDGET'); op_end = now; kill_at = min(now+grace, hard-audit)
+                    fail('OUTPUT_BUDGET', persist=False); op_end = now; kill_at = min(now+grace, hard-audit)
                 if (now >= op_end or record_errors) and not term_sent:
-                    fail('RECORD_WRITE_FAILED' if record_errors else ('TOTAL_DEADLINE' if deadline <= t0+individual else 'INDIVIDUAL_DEADLINE'))
-                    row['phase'] = 'CLEANUP'; event('CLEANUP_START')
-                    signal_family(worker.pid, signal.SIGTERM, audit_errors); term_sent = True; event('SIGTERM')
+                    fail('RECORD_WRITE_FAILED' if record_errors else ('TOTAL_DEADLINE' if deadline <= t0+individual else 'INDIVIDUAL_DEADLINE'), persist=False)
+                    row['phase'] = 'CLEANUP'; event('CLEANUP_START', persist=False)
+                    signal_family(worker.pid, signal.SIGTERM, audit_errors); term_sent = True; event('SIGTERM', persist=False)
                 if term_sent and now >= kill_at and not kill_sent:
-                    signal_family(worker.pid, signal.SIGKILL, audit_errors); kill_sent = True; event('FORCED_KILL')
+                    signal_family(worker.pid, signal.SIGKILL, audit_errors); kill_sent = True; event('FORCED_KILL', persist=False)
                 if rc is not None: reap()
-                time.sleep(.01)
+                time.sleep(max(0, min(.01, (kill_at if term_sent and not kill_sent else op_end if not term_sent else hard-audit)-time.monotonic())))
         except Exception as exc:
             # Error details may contain argv/secrets: persist a fixed category only.
-            fail('SPAWN_OR_SUPERVISOR_EXCEPTION'); row['exceptionType'] = type(exc).__name__
+            fail('SPAWN_OR_SUPERVISOR_EXCEPTION', persist=False); row['exceptionType'] = type(exc).__name__
         finally:
             row['phase'] = 'CLEANUP'
             if worker is not None:
                 if members(worker.pid, audit_errors):
-                    signal_family(worker.pid, signal.SIGKILL, audit_errors); event('FINAL_FORCED_KILL')
+                    signal_family(worker.pid, signal.SIGKILL, audit_errors); event('FINAL_FORCED_KILL', persist=False)
                 while time.monotonic() < hard-audit/2:
                     worker.poll()
                     if worker.returncode is not None: reap()
@@ -165,7 +172,9 @@ def supervise(config, out):
             row['descendantsExited'] = None if audit_errors else not bool(row['residual'])
             if row['residual'] or (worker is not None and row['exitCode'] is None): row['cleanupFailure'] = 'CLEANUP_FAILED'
             elif audit_errors: row['cleanupFailure'] = 'AUDIT_INCOMPLETE'
-            event('RESIDUAL_AUDIT', count=len(row['residual']))
+            event('RESIDUAL_AUDIT', persist=False, count=len(row['residual']))
+            row['phase'] = 'RECORD_FINALIZATION'
+            checkpoint()
             for stream in streams: stream.close()
         try:
             p = trial_dir/'worker-result.json'
@@ -174,6 +183,7 @@ def supervise(config, out):
             if not isinstance(data, dict) or data.get('status') not in ('OBSERVED','FAIL','BLOCKED') or 'firstFailure' not in data or not (data['firstFailure'] is None or isinstance(data['firstFailure'], str) and re.fullmatch(r'[A-Z0-9_]{1,64}',data['firstFailure'])) or (data['status'] in ('FAIL','BLOCKED') and data['firstFailure'] is None): raise ValueError('INVALID_RESULT')
             row['workerResult'] = data; row['workerFirstFailure'] = data['firstFailure']
         except (OSError, ValueError): fail('RESULT_MISSING_OR_INVALID')
+        row['budgetObservationScope'] = 'trial setup through residual audit checkpoint and worker-result validation; final result/ledger writes excluded and separately timed'
         row['elapsedMs'] = (time.monotonic()-t0)*1000; row['withinBudget'] = time.monotonic() <= hard
         if not row['withinBudget']: fail('BOUND_EXCEEDED')
         if row['firstFailure'] or row['cleanupFailure'] or row.get('exitCode') != 0 or row.get('workerResult',{}).get('status') == 'FAIL': row['status'] = 'FAIL'

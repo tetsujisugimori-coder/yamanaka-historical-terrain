@@ -1,5 +1,6 @@
 """Collect finite-process raw evidence after success OR failure. No test-result promotion."""
 import hashlib
+import math
 import json
 import os
 from pathlib import Path
@@ -17,6 +18,9 @@ def verify(root):
     actual=[{'path':p.relative_to(root).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file() and p!=root/'manifest.json']
     if rows!=actual:raise ValueError('MANIFEST_SET_OR_CONTENT_MISMATCH')
     return len(rows)
+
+def valid_window(elapsed,budget):
+    return all(isinstance(n,(int,float)) and not isinstance(n,bool) and math.isfinite(n) for n in (elapsed,budget)) and 0 <= elapsed <= budget
 
 def collect(source,root):
     root.mkdir(parents=True,exist_ok=True)
@@ -39,6 +43,7 @@ def collect(source,root):
         expected=6 if base.name.startswith('test-') else 14 if base.name.startswith('b6h-') else None
         if expected is None:continue
         missing=[name for name in ['outer-node-stdout.log','outer-node-stderr.log','outer-node-result.json','results/assertions.json'] if not (base/name).is_file()]
+        assertions=[]
         try:
             outer=json.loads((base/'outer-node-result.json').read_text())
             if outer.get('exitCode')!=0 or outer.get('errorCode') is not None:missing.append('OUTER_NODE_FAILED')
@@ -50,9 +55,13 @@ def collect(source,root):
         # Each declared case is represented by raw bytes/records, not an empty successful inventory.
         if base.name.startswith('test-'):
             for mode in ['normal','hang','close','orphan','first-cleanup','total']:
-                for name in [mode+'-stdout.log',mode+'-stderr.log',mode+'-outer-result.json',mode+'/trial-ledger.json',mode+'/first/supervisor-result.json']:
+                for name in [mode+'-stdout.log',mode+'-stderr.log',mode+'-outer-result.json',mode+'/trial-ledger.json',mode+'/first/supervisor-result.json', mode+'-assertion.json', mode+'-timing-observation.json']:
                     if not (base/'results'/name).is_file():missing.append(name)
                 try:
+                    assertion=json.loads((base/'results'/(mode+'-assertion.json')).read_text())
+                    if assertion != next(a for a in assertions if a['case']==mode) or assertion.get('status')!='PASS' or assertion.get('pass') is not True:missing.append(mode+'/CASE_RECORD_MISMATCH')
+                    timing=json.loads((base/'results'/(mode+'-timing-observation.json')).read_text())
+                    if timing.get('case')!=mode or timing.get('externalWallWithinWindow') is not True or timing.get('toleranceMs')!=150 or not isinstance(timing.get('externalWallMs'),(int,float)) or isinstance(timing.get('externalWallMs'),bool) or not isinstance(timing.get('totalMs'),(int,float)) or isinstance(timing.get('totalMs'),bool) or not valid_window(timing['externalWallMs'],timing['totalMs']+150) or timing['externalWallMs']==timing['totalMs']+150:missing.append(mode+'/TIMING_RECORD_INVALID')
                     outer=json.loads((base/'results'/(mode+'-outer-result.json')).read_text())
                     if outer.get('exitCode')!=(0 if mode=='normal' else 1):missing.append(mode+'/OUTER_EXIT_MISMATCH')
                     if outer.get('firstFailure') or outer.get('cleanupFailure') or outer.get('auditStatus')!='PASS':missing.append(mode+'/OUTER_FAILED')
@@ -66,11 +75,12 @@ def collect(source,root):
                             if not (folder/name).is_file():missing.append(mode+'/'+trial['id']+'/'+name)
                         saved=json.loads((folder/'supervisor-result.json').read_text())
                         if saved!=trial:missing.append(mode+'/SUPERVISOR_LEDGER_MISMATCH')
+                        if saved.get('withinBudget') is not True or saved.get('directChildExited') is not True or saved.get('cleanupFailure') is not None or not valid_window(saved.get('elapsedMs'),saved.get('budgetMs')):missing.append(mode+'/BUDGET_OR_CHILD_EXIT_FAILED')
                         if saved.get('auditStatus')!='PASS' or saved.get('residual')!=[]:missing.append(mode+'/AUDIT_INCOMPLETE')
                         if mode=='normal':
                             worker=json.loads((folder/'worker-result.json').read_text())
                             if worker.get('status')!='OBSERVED' or worker.get('firstFailure') is not None:missing.append(mode+'/NORMAL_WORKER_INVALID')
-                except (OSError,ValueError,KeyError,TypeError):missing.append(mode+'/RECORD_INVALID')
+                except (OSError,ValueError,KeyError,TypeError,StopIteration,IndexError,AttributeError):missing.append(mode+'/RECORD_INVALID')
         if base.name.startswith('b6h-'):
             for mode in ['normal','missing','invalid','killed','record-failure','first-cleanup','stdout-failure','audit-failure']:
                 folder=base/'results'/mode
@@ -92,7 +102,7 @@ def collect(source,root):
                     elif not ledger.get('recordErrors'):missing.append(mode+'/RECORD_FAILURE_UNEXPLAINED')
                     if mode in ('normal','first-cleanup'):
                         json.loads((folder/'first/worker-result.json').read_text())
-                except (OSError,ValueError,KeyError,TypeError):missing.append(mode+'/RECORD_INVALID')
+                except (OSError,ValueError,KeyError,TypeError,StopIteration,IndexError,AttributeError):missing.append(mode+'/RECORD_INVALID')
             for partial in ['partial-partial.bin','silent-partial.bin']:
                 if not (base/'results'/partial).is_file():missing.append(partial)
             for mode in ['outer-timeout','outer-timeout-silent','outer-orphan']:
