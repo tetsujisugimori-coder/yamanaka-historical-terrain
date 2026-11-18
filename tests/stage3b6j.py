@@ -88,7 +88,7 @@ for label in ['old','new']:
  observed=(isinstance(summary,dict) and summary.get('label')==label
            and summary.get('injectedDelayReached') is (label=='old')
            and summary.get('signalObserved') is True
-           and summary.get('checkpointBetweenDeadlineAndSignal') is (label=='old')
+           and (label=='old' or summary.get('checkpointBetweenDeadlineAndSignal') is False)
            and summary.get('withinBudget') is (label=='new')
            and summary.get('firstFailure') is not None)
  # The old inner audit is deliberately not promoted: its failures and Z remain

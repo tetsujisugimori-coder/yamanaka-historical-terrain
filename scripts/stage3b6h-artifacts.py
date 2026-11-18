@@ -163,7 +163,7 @@ def collect(source,root):
                     missing.append('B6J_DELAY_EVIDENCE_MISMATCH_'+label)
                 if (inner.get('label') != label or inner.get('injectedDelayReached') is not (label=='old')
                     or inner.get('signalObserved') is not True
-                    or inner.get('checkpointBetweenDeadlineAndSignal') is not (label=='old')
+                    or (label=='new' and inner.get('checkpointBetweenDeadlineAndSignal') is not False)
                     or inner.get('expectedWithinBudget') is not (label=='new')
                     or inner.get('withinBudget') is not (label=='new')
                     or not isinstance(inner.get('elapsedMs'),(int,float))

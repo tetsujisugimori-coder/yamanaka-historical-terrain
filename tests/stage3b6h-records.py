@@ -70,7 +70,7 @@ watchspec=importlib.util.spec_from_file_location('watchdog', ROOT/'scripts/stage
 W=importlib.util.module_from_spec(watchspec);watchspec.loader.exec_module(W)
 for mode,body in [('outer-timeout',"import time;print('partial 日本語',flush=True);time.sleep(10)"),('outer-timeout-silent','import time;time.sleep(10)')]:
     data=W.run_bounded([sys.executable,'-c',body],OUT,mode,timeout=.1)
-    assert data['firstFailure']=='OUTER_TIMEOUT' and data['directChildExited'] and data['residual']==[] and data['auditStatus']=='PASS'
+    assert data['firstFailure']=='OUTER_TIMEOUT' and data['directChildExited'] and data['residual']==[] and data['auditStatus']=='PASS',json.dumps({'case':mode,'outerResult':data,'scope':'B6K_DIAGNOSTIC_NO_PASS_PROMOTION'})
     rows.append({'case':mode,'expected':'OUTER_TIMEOUT','actual':data['firstFailure'],'cleanupFailure':data['cleanupFailure'],'auditStatus':data['auditStatus'],'passed':True})
 orphan=W.run_bounded([sys.executable,'-c',"import subprocess,sys;subprocess.Popen([sys.executable,'-c','import time;time.sleep(20)'],start_new_session=True)"],OUT,'outer-orphan',timeout=.5)
 assert orphan['exitCode']==0 and orphan['firstFailure']=='OUTER_CHILD_RESIDUAL' and orphan['preCleanupSnapshot'] and orphan['residual']==[] and orphan['auditStatus']=='PASS'

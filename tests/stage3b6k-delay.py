@@ -47,7 +47,10 @@ try:
     summary = {
         'label': label,
         'signalObserved': signal_at is not None,
-        'checkpointBetweenDeadlineAndSignal': before_signal, 'injectedDelayReached': bool(injected),
+        'checkpointBetweenDeadlineAndSignal': before_signal,
+        'eventKinds': [e.get('kind') for e in events],
+        'checkpointWrites': [w for w in writes if w.get('file','').endswith('supervisor-checkpoint.json')],
+        'timingCorrelationScope': 'DIAGNOSTIC_ONLY; injection flag is the controlled pre-signal source hook', 'injectedDelayReached': bool(injected),
         'expectedWithinBudget': label == 'new',
         'withinBudget': row.get('withinBudget'), 'status': row.get('status'),
         'elapsedMs': row.get('elapsedMs'),
