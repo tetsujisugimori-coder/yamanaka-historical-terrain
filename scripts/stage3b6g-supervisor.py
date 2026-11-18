@@ -48,19 +48,35 @@ def signal_family(worker_pid, sig, errors=None):
     for row in reversed(members(worker_pid, errors)):
         try:
             fields = Path(f"/proc/{row['pid']}/stat").read_text().rsplit(')', 1)[1].split()
-            if fields[19] == row['birth']: os.kill(row['pid'], sig)
+            if fields[19] == row['birth'] and fields[0] != 'Z': os.kill(row['pid'], sig)
         except ProcessLookupError: pass
         except FileNotFoundError: pass
         except (OSError, ValueError, IndexError):
             if errors is not None: errors.append('SIGNAL_IDENTITY_OR_DELIVERY_FAILED')
 
 
-def reap():
-    while True:
+def reap_adopted(worker_pid=None, errors=None):
+    """Reap only observed, birth-verified zombie children adopted by this subreaper.
+
+    Popen.poll() exclusively owns the direct child's wait status. Never use
+    waitpid(-1): it can consume a live Popen object's status and hide its exit.
+    """
+    recovered = []
+    for row in members(worker_pid, errors):
+        if row['state'] != 'Z' or row['ppid'] != os.getpid() or row['pid'] == worker_pid:
+            continue
         try:
-            pid, _ = os.waitpid(-1, os.WNOHANG)
-            if pid == 0: return
-        except ChildProcessError: return
+            fields = Path(f"/proc/{row['pid']}/stat").read_text().rsplit(')', 1)[1].split()
+            if fields[0] != 'Z' or int(fields[1]) != os.getpid() or fields[19] != row['birth']:
+                continue
+            pid, _ = os.waitpid(row['pid'], os.WNOHANG)
+            if pid:
+                recovered.append({'pid': pid, 'birth': row['birth']})
+        except (FileNotFoundError, ChildProcessError):
+            pass
+        except (OSError, ValueError, IndexError):
+            if errors is not None: errors.append('ADOPTED_REAP_FAILED')
+    return recovered
 
 
 def save_json(path, data):
@@ -123,7 +139,7 @@ def supervise(config, out):
         def fail(code, persist=True):
             row['firstFailure'] = row['firstFailure'] or code
             event(code, persist=persist)
-        worker = None; streams = []; term_sent = kill_sent = False; audit_errors = []
+        worker = None; streams = []; term_sent = kill_sent = False; audit_errors = []; reaped_children = []
         op_end = hard-reserve; kill_at = min(op_end+grace, hard-audit)
         env = os.environ.copy(); env.update(B6G_OUT=str(trial_dir.resolve()), B6G_CLOSE_MS=str(min(5000, int((reserve-grace-audit)*1000))), TMPDIR=str((out/'tmp').resolve()))
         Path(env['TMPDIR']).mkdir(exist_ok=True)
@@ -135,7 +151,9 @@ def supervise(config, out):
             row['phase'] = 'OPERATION'
             event('WORKER_STARTED', pid=worker.pid, processSnapshot=members(worker.pid, audit_errors))
             while time.monotonic() < hard-audit:
-                rc = worker.poll(); group = members(worker.pid, audit_errors); now = time.monotonic()
+                rc = worker.poll()
+                reaped_children.extend(reap_adopted(worker.pid, audit_errors))
+                group = members(worker.pid, audit_errors); now = time.monotonic()
                 if rc is not None and not group: break
                 if rc is not None and group and not term_sent:
                     fail('CHILD_RESIDUAL', persist=False); op_end = now; kill_at = min(now+grace, hard-audit)
@@ -147,7 +165,7 @@ def supervise(config, out):
                     signal_family(worker.pid, signal.SIGTERM, audit_errors); term_sent = True; event('SIGTERM', persist=False)
                 if term_sent and now >= kill_at and not kill_sent:
                     signal_family(worker.pid, signal.SIGKILL, audit_errors); kill_sent = True; event('FORCED_KILL', persist=False)
-                if rc is not None: reap()
+                if rc is not None: reaped_children.extend(reap_adopted(worker.pid, audit_errors))
                 time.sleep(max(0, min(.01, (kill_at if term_sent and not kill_sent else op_end if not term_sent else hard-audit)-time.monotonic())))
         except Exception as exc:
             # Error details may contain argv/secrets: persist a fixed category only.
@@ -155,17 +173,23 @@ def supervise(config, out):
         finally:
             row['phase'] = 'CLEANUP'
             if worker is not None:
+                worker.poll()
+                reaped_children.extend(reap_adopted(worker.pid, audit_errors))
                 if members(worker.pid, audit_errors):
                     signal_family(worker.pid, signal.SIGKILL, audit_errors); event('FINAL_FORCED_KILL', persist=False)
-                while time.monotonic() < hard-audit/2:
+                # The old hard-audit/2 compared an absolute monotonic timestamp
+                # against half another timestamp and skipped cleanup on most hosts.
+                while time.monotonic() < hard-audit:
                     worker.poll()
-                    if worker.returncode is not None: reap()
+                    reaped_children.extend(reap_adopted(worker.pid, audit_errors))
                     if not members(worker.pid, audit_errors): break
                     signal_family(worker.pid, signal.SIGKILL, audit_errors); time.sleep(.005)
                 row['exitCode'] = worker.poll()
                 row['directChildExited'] = row['exitCode'] is not None
+                reaped_children.extend(reap_adopted(worker.pid, audit_errors))
             else:
                 row.update(exitCode=None, directChildExited=None)
+            row['reapedAdopted'] = reaped_children
             row['residual'] = members(None, audit_errors)
             row['auditErrors'] = sorted(set(audit_errors))
             row['auditStatus'] = 'UNKNOWN' if audit_errors else ('FAIL' if row['residual'] else 'PASS')

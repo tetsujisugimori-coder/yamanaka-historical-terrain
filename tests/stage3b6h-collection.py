@@ -39,6 +39,34 @@ for suite,modes in [('test-synthetic',base_modes),('b6h-synthetic',h_modes+extra
    put(p/'results'/(m+'-outer-result.json'),{'firstFailure':'OUTER_CHILD_RESIDUAL' if m=='outer-orphan' else 'OUTER_TIMEOUT','residual':[],'auditStatus':'PASS'})
   for f in ['stdout.log','stderr.log']:put(p/'results/worker-first-cleanup'/f,'')
   put(p/'results/worker-first-cleanup/worker-result.json',{'status':'FAIL','firstFailure':'OPERATION_FAILED','cleanupFailure':'BROWSER_CLOSE_FAILED'})
+# B6k synthetic fixtures ONLY: these records test the collector parser, not
+# actual process containment or production evidence.
+b6j_names=['normal-fault','within-budget-false','external-wall','outer-failure',
+           'ledger-missing','ledger-corrupt','cleanup-failure','stdout-missing',
+           'stderr-missing','residual','direct-child','checkpoint-delay-old',
+           'checkpoint-delay-new','adopted-zombie-reap','exception-signal-before-write',
+           'withinBudget-harness-old','withinBudget-harness-new','upload-failure-model']
+control=base/'b6j-controls/run-synthetic'
+assertions=[{'case':name,'status':'PASS','pass':True} for name in b6j_names]
+for label in ['old','new']:
+ inner={'label':label,'injectedDelayReached':True,'expectedWithinBudget':label=='new',
+        'withinBudget':label=='new','status':'FAIL','elapsedMs':1900 if label=='old' else 1300,
+        'firstFailure':'INDIVIDUAL_DEADLINE','cleanupFailure':None,
+        'auditStatus':'PASS','residual':[],'directChildExited':True,
+        'rootCause':'UNKNOWN','baselineIsDiagnosticOnly':label=='old'}
+ outer={'auditStatus':'PASS','residual':[],'exitCode':0,'cleanupFailure':None,'directChildExited':True}
+ put(control/('delay-'+label)/'b6k-summary.json',inner)
+ put(control/('b6k-delay-'+label+'-outer-result.json'),outer)
+ target=next(row for row in assertions if row['case']=='checkpoint-delay-'+label)
+ target.update(observedInner=inner,outerAuditStatus='PASS',outerFirstFailure=None,
+               outerPreCleanupSnapshot=None,outerResidual=[],
+               outerExitCode=0,outerCleanupFailure=None,baselineInnerResultPromoted=False)
+put(control/'assertions.json',assertions)
+put(control/'assertions-child-original.json',assertions)
+for f in ['test.stdout','test.stderr']:put(control/f,'')
+put(control/'execution.json',{'exit':0,'signal':None,'error':None,'status':'PASS',
+                              'nonPassCases':0,'assertionCases':18})
+A.seal(control)
 assert A.collect(base,OUT/'normal-output')['status']=='PASS'
 mutations=[('root-assertions','test-synthetic/results/assertions.json'),('case-assertion','test-synthetic/results/normal-assertion.json'),('timing','test-synthetic/results/normal-timing-observation.json'),('partial','b6h-synthetic/results/partial-partial.bin'),('checkpoint','b6h-synthetic/results/normal/first/supervisor-checkpoint.json'),('worker-stdout','b6h-synthetic/results/worker-first-cleanup/stdout.log'),('worker-stderr','b6h-synthetic/results/worker-first-cleanup/stderr.log'),('normal-worker','test-synthetic/results/normal/first/worker-result.json')]
 results=[{'case':'normal','passed':True}]
@@ -65,5 +93,27 @@ for label,value in [('partial-assertions',[]),('corrupt-assertions','{'),('forge
    put(p,row)
  else:put(source/'test-synthetic/results/assertions.json',value)
  assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE'
+ results.append({'case':label,'expected':'INCOMPLETE','passed':True})
+# B6k collection faults: even re-sealed fake PASS must fail semantic checks.
+for label,change in [('b6j-absent','absent'),('b6j-partial','partial'),
+                     ('b6j-forged-pass','forged'),('b6j-manifest','manifest'),
+                     ('b6j-outer','outer'),('b6j-duplicate','duplicate')]:
+ source=OUT/label;shutil.copytree(base,source)
+ run=source/'b6j-controls/run-synthetic'
+ if change=='absent':
+  shutil.rmtree(source/'b6j-controls')
+ elif change=='manifest':
+  (run/'manifest.json').write_text('[]')
+ else:
+  if change=='partial':
+   put(run/'assertions.json',assertions[:-1])
+  elif change=='forged':
+   p=run/'delay-new/b6k-summary.json';bad=json.loads(p.read_text());bad['elapsedMs']=99999;put(p,bad)
+  elif change=='outer':
+   p=run/'b6k-delay-old-outer-result.json';bad=json.loads(p.read_text());bad['residual']=[{'pid':17}];put(p,bad)
+  elif change=='duplicate':
+   bad=list(assertions);bad[1]=bad[0];put(run/'assertions.json',bad)
+  A.seal(run)
+ assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE',(label,'not rejected')
  results.append({'case':label,'expected':'INCOMPLETE','passed':True})
 put(OUT/'assertions.json',results);print(json.dumps(results))

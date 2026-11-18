@@ -120,6 +120,68 @@ def collect(source,root):
                 if worker.get('status')!='FAIL' or worker.get('firstFailure')!='OPERATION_FAILED' or worker.get('cleanupFailure')!='BROWSER_CLOSE_FAILED':missing.append('WORKER_CLEANUP_RECORD_INVALID')
             except (OSError,ValueError,TypeError):missing.append('WORKER_CLEANUP_RECORD_MISSING')
         suites.append({'suite':base.name,'expectedCases':expected,'status':'INCOMPLETE' if missing else 'PASS','missing':missing})
+    # B6k: explicitly enumerate the additional B6j controlled RED/GREEN suite.
+    # No implicit PASS from the older six/fourteen control declarations.
+    controls = dest/'b6j-controls'
+    names = ['normal-fault','within-budget-false','external-wall','outer-failure',
+             'ledger-missing','ledger-corrupt','cleanup-failure','stdout-missing',
+             'stderr-missing','residual','direct-child','checkpoint-delay-old',
+             'checkpoint-delay-new','adopted-zombie-reap','exception-signal-before-write',
+             'withinBudget-harness-old','withinBudget-harness-new','upload-failure-model']
+    runs = sorted(controls.glob('run-*')) if controls.is_dir() else []
+    if len(runs) != 1 or not runs[0].is_dir():
+        errors.append('B6J_CONTROL_RUN_SET_INVALID')
+    for control in runs:
+        if not control.is_dir():
+            errors.append('B6J_CONTROL_NOT_DIRECTORY')
+            continue
+        missing = []
+        for name in ['assertions.json','assertions-child-original.json',
+                     'test.stdout','test.stderr','execution.json','manifest.json',
+                     'b6k-delay-old-outer-result.json','b6k-delay-new-outer-result.json',
+                     'delay-old/b6k-summary.json','delay-new/b6k-summary.json']:
+            if not (control/name).is_file():missing.append('B6J_MISSING_'+name)
+        try:
+            verify(control)  # exact set, sizes and raw SHA for this entire suite
+        except (OSError, ValueError, TypeError, KeyError):
+            missing.append('B6J_MANIFEST_INVALID')
+        try:
+            assertions = json.loads((control/'assertions.json').read_text())
+            if not isinstance(assertions, list) or len(assertions) != len(names) or (
+                sorted(row['case'] for row in assertions) != sorted(names)):
+                missing.append('B6J_ASSERTION_CASE_SET_INVALID')
+            elif not all(row.get('status') == 'PASS' and row.get('pass') is True for row in assertions):
+                missing.append('B6J_ASSERTIONS_NOT_ALL_PASS')
+            execution = json.loads((control/'execution.json').read_text())
+            if execution.get('exit') != 0 or execution.get('signal') is not None or execution.get('error') is not None or execution.get('status') != 'PASS' or execution.get('nonPassCases') != 0 or execution.get('assertionCases') != 18:
+                missing.append('B6J_EXECUTION_FAILED')
+            for label in ['old','new']:
+                inner = json.loads((control/('delay-'+label)/'b6k-summary.json').read_text())
+                outer = json.loads((control/('b6k-delay-'+label+'-outer-result.json')).read_text())
+                assertion = next(row for row in assertions if row['case']=='checkpoint-delay-'+label)
+                if assertion.get('observedInner') != inner or assertion.get('outerAuditStatus') != outer.get('auditStatus') or assertion.get('outerResidual') != outer.get('residual') or assertion.get('outerExitCode') != outer.get('exitCode') or assertion.get('outerCleanupFailure') != outer.get('cleanupFailure') or assertion.get('outerFirstFailure') != outer.get('firstFailure') or assertion.get('outerPreCleanupSnapshot') != outer.get('preCleanupSnapshot'):
+                    missing.append('B6J_DELAY_EVIDENCE_MISMATCH_'+label)
+                if (inner.get('label') != label or inner.get('injectedDelayReached') is not True
+                    or inner.get('expectedWithinBudget') is not (label=='new')
+                    or inner.get('withinBudget') is not (label=='new')
+                    or not isinstance(inner.get('elapsedMs'),(int,float))
+                    or isinstance(inner.get('elapsedMs'),bool)
+                    or not math.isfinite(inner['elapsedMs'])
+                    or (inner['elapsedMs'] <= 1800 if label=='old' else inner['elapsedMs'] > 1800)
+                    or outer.get('auditStatus') != 'PASS' or outer.get('residual') != []
+                    or outer.get('exitCode') != 0 or outer.get('cleanupFailure') is not None
+                    or outer.get('directChildExited') is not True
+                    or (label=='new' and outer.get('firstFailure') is not None)
+                    or (label=='old' and outer.get('firstFailure') not in (None,'OUTER_CHILD_RESIDUAL'))):
+                    missing.append('B6J_DELAY_CONTROL_INVALID_'+label)
+                if label=='new' and (inner.get('auditStatus') != 'PASS' or inner.get('residual') != [] or inner.get('cleanupFailure') is not None or inner.get('directChildExited') is not True):
+                    missing.append('B6J_NEW_AUDIT_INVALID')
+                if label=='old' and assertion.get('baselineInnerResultPromoted') is not False:
+                    missing.append('B6J_BASELINE_PROMOTION_FORBIDDEN')
+        except (OSError, ValueError, TypeError, KeyError, StopIteration, IndexError, AttributeError):
+            missing.append('B6J_CONTROL_EVIDENCE_INVALID')
+        suites.append({'suite':'b6j-controls/'+control.name,'expectedCases':18,
+                       'status':'INCOMPLETE' if missing else 'PASS','missing':missing})
     if not any(s['suite'].startswith('test-') for s in suites):errors.append('BASE_PROCESS_SUITE_MISSING')
     if not any(s['suite'].startswith('b6h-') for s in suites):errors.append('B6H_RECORD_SUITE_MISSING')
     report={'schema':1,'status':'INCOMPLETE' if errors or any(s['status']!='PASS' for s in suites) else 'PASS','errors':errors,'suites':suites,

@@ -28,7 +28,10 @@ def run_bounded(command, OUT, mode, timeout=6):
             outer['firstFailure']='OUTER_RECORD_OR_WAIT_FAILURE'
             outer['exceptionType']=type(exc).__name__
         finally:
-            errors=[];owned=SUP.members(run.pid,errors)
+            errors=[]
+            run.poll()
+            adopted=SUP.reap_adopted(run.pid,errors)
+            owned=SUP.members(run.pid,errors)
             outer['preCleanupSnapshot']=owned
             if owned and outer['firstFailure'] is None:outer['firstFailure']='OUTER_CHILD_RESIDUAL'
             if owned:
@@ -37,10 +40,13 @@ def run_bounded(command, OUT, mode, timeout=6):
             until=time.monotonic()+.7
             while time.monotonic()<until:
                 run.poll()
-                if run.returncode is not None:SUP.reap()
+                adopted.extend(SUP.reap_adopted(run.pid,errors))
                 if not SUP.members(run.pid,errors):break
                 SUP.signal_family(run.pid,signal.SIGKILL,errors);time.sleep(.01)
-            outer.update(exitCode=run.poll(),directChildExited=run.returncode is not None,
+            run.poll()
+            adopted.extend(SUP.reap_adopted(run.pid,errors))
+            outer['reapedAdopted']=adopted
+            outer.update(exitCode=run.returncode,directChildExited=run.returncode is not None,
                          residual=SUP.members(run.pid,errors),auditErrors=sorted(set(errors)))
             outer['auditStatus']='UNKNOWN' if errors else 'FAIL' if outer['residual'] else 'PASS'
             if outer['residual'] or run.returncode is None:outer['cleanupFailure']='CLEANUP_FAILED'
