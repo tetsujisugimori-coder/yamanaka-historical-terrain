@@ -34,6 +34,8 @@ while True:time.sleep(.01)
 ''')
 watchspec=importlib.util.spec_from_file_location('watchdog', ROOT/'scripts/stage3b6h-watchdog.py')
 WATCH=importlib.util.module_from_spec(watchspec);watchspec.loader.exec_module(WATCH)
+totalspec=importlib.util.spec_from_file_location('b6l_total', ROOT/'scripts/stage3b6l-total-observation.py')
+TOTAL=importlib.util.module_from_spec(totalspec);totalspec.loader.exec_module(TOTAL)
 casespec=importlib.util.spec_from_file_location('case_record',ROOT/'scripts/stage3b6j-case-record.py')
 C=importlib.util.module_from_spec(casespec);casespec.loader.exec_module(C)
 identity=subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True,timeout=2)
@@ -57,11 +59,18 @@ for index,mode in enumerate(C.CASES):
     if mode=='total':config['totalMs']=1100
     cp=OUT/(mode+'-config.json');cp.write_text(json.dumps(config))
     started=time.time();start=time.monotonic()
+    started_ns=time.monotonic_ns();started_unix_ns=time.time_ns()
     results[index]={'case':mode,'status':'RUNNING','pass':False,'runId':run_id,'targetHead':head,'startedAtUnix':started}
     persist()
     try:
         command=[sys.executable,str(ROOT/'scripts/stage3b6g-supervisor.py'),str(cp),str(case)]
-        outer=WATCH.run_bounded(command,OUT,mode)
+        outer=None
+        try:
+            outer=WATCH.run_bounded(command,OUT,mode)
+        finally:
+            if mode=='total':
+                TOTAL.record_total(OUT,case,config,outer,started_ns,time.monotonic_ns(),
+                                   started_unix_ns,time.time_ns())
         wall=(time.monotonic()-start)*1000
         row,timing=C.evaluate(mode,config,outer,wall,case)
         row.update(runId=run_id,targetHead=head,startedAtUnix=started)
