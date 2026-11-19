@@ -22,3 +22,13 @@ Inability to save the raw record, job/host cancellation before always-steps, and
 
 ## Governance
 The central preservation policy v0.2.0 governs classification, authorization, immutable old evidence, one-year intended retention on approved owner-only destination, separate-session direct re-fetch and byte/SHA/CRC verification. Manifest-free old ZIP coverage remains UNKNOWN. Actual external preservation and independent human review must be reported separately from code-level and CI checks. Draft and merge-NO remain until explicitly re-adjudicated.
+
+## Follow-up: eight independent evidence states
+
+The local follow-up to fixed `29eb183726e6649b62495c573e19bd32f8f33abe` records `evidenceStates` for (1) deadline detection, (2) direct-child exit-code observation, (3) direct-child reaping by Popen, (4) any observed Z, (5) adopted-Z reaping or observed-not-reaped, (6) live descendants remaining, (7) audit errors and (8) final-record save verification. These are observations, not eight process PASS verdicts. Missing scans remain UNKNOWN; a clean final scan does not erase an earlier audit error. Z observations are retained before reaping. Initial failure, cleanup failure and evidence-write failure remain separate.
+
+Root ownership is now a birth-identity set learned under the designated worker, not all children of the supervising Python process. Only a previously observed descendant that is now an immediate, birth-matching Z child is reaped; unrelated Popen children are never consumed. An unattributed direct child produces UNKNOWN and is not signalled. Fast orphaning before ownership can be observed is a limitation, not a success. Controlled orphan fixtures keep their parent alive briefly or use a release handshake to establish ownership, without changing deadlines.
+
+Final raw records contain `PENDING_RECEIPT` for the eighth state, avoiding circular self-certification. A separate `*-evidence-receipt.json` records the actual saved source filename, nonempty raw byte size and SHA after readback. The collector requires the receipt and rechecks source/size/SHA. The receipt proves only its named final JSON, not log completeness, a whole manifest, external storage or process success. Write/readback failure is INCOMPLETE and cannot become a save PASS.
+
+B6h's 14 controls now have a preinitialized `execution-cases.json`: active cases are RUNNING, assertion exceptions FAIL, other exceptions INCOMPLETE and later cases NOT_TESTED. Complete available supervisor/outer observations are saved before assertions. The eight-axis supplemental controls are synthetic/controlled local processes, not browser acceptance or reconstruction of the historical failure.

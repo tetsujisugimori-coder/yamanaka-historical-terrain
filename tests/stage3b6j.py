@@ -113,12 +113,19 @@ Z=module('zombie_reaper',ROOT/'scripts/stage3b6g-supervisor.py')
 Z.enable_subreaper()
 zdir=OUT/'adopted-zombie';zdir.mkdir()
 pid_path=zdir/'adopted.pid'
-script=("import subprocess,sys\nfrom pathlib import Path\n"
+script=("import subprocess,sys,time\nfrom pathlib import Path\n"
         "p=subprocess.Popen([sys.executable,'-c','import os,time;time.sleep(.2);os._exit(0)'],start_new_session=True)\n"
-        "Path(sys.argv[1]).write_text(str(p.pid))\n")
+        "Path(sys.argv[1]).write_text(str(p.pid))\n"
+        "while not Path(sys.argv[1]+'.release').exists():time.sleep(.01)\n")
 parent=subprocess.Popen([sys.executable,'-c',script,str(pid_path)])
-assert parent.wait(timeout=2)==0
+identity_deadline=time.monotonic()+2
+while not pid_path.exists() and time.monotonic()<identity_deadline:time.sleep(.01)
+assert pid_path.exists()
 adopted=int(pid_path.read_text())
+owned_snapshot=Z.members(parent.pid)
+assert any(r['pid']==adopted and r['ppid']==parent.pid for r in owned_snapshot)
+pathlib.Path(str(pid_path)+'.release').write_text('release')
+assert parent.wait(timeout=2)==0
 errors=[];observed=None;deadline=time.monotonic()+2
 while time.monotonic()<deadline:
  try:

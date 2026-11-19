@@ -12,14 +12,25 @@ SUP=importlib.util.module_from_spec(spec);spec.loader.exec_module(SUP)
 def run_bounded(command, OUT, mode, timeout=6):
     SUP.enable_subreaper()
     start=time.monotonic()
+    errors=[]; zombies=[]
     outer={'case':mode,'command':command,'startedAt':time.time(),'firstFailure':None,'cleanupFailure':None,'auditStatus':'NOT_TESTED'}
     SUP.save_json(OUT/(mode+'-outer-checkpoint.json'),outer)
     with (OUT/(mode+'-stdout.log')).open('xb') as stdout,(OUT/(mode+'-stderr.log')).open('xb') as stderr:
         run=subprocess.Popen(command,stdout=stdout,stderr=stderr,start_new_session=True)
         try:
-            outer['pid']=run.pid;outer['processSnapshot']=SUP.members(run.pid)
+            outer['pid']=run.pid;outer['processSnapshot']=SUP.members(run.pid,errors)
             SUP.save_json(OUT/(mode+'-outer-checkpoint.json'),outer)
-            run.wait(timeout=timeout) # fixed fixture deadline, not extended to obtain success
+            deadline=time.monotonic()+timeout
+            while True:
+                SUP.members(run.pid,errors)  # learn birth-verified descendants before adoption
+                remaining=deadline-time.monotonic()
+                if remaining <= 0: raise subprocess.TimeoutExpired(command,timeout)
+                try:
+                    run.wait(timeout=min(.01,remaining))
+                    break
+                except subprocess.TimeoutExpired:
+                    if time.monotonic() >= deadline: raise subprocess.TimeoutExpired(command,timeout)
+            # Fixed fixture deadline; polling does not extend it.
         except subprocess.TimeoutExpired as exc:
             outer['firstFailure']='OUTER_TIMEOUT'
             # wait() with file streams has no partial pipe attributes; logs remain actual bytes.
@@ -28,9 +39,8 @@ def run_bounded(command, OUT, mode, timeout=6):
             outer['firstFailure']='OUTER_RECORD_OR_WAIT_FAILURE'
             outer['exceptionType']=type(exc).__name__
         finally:
-            errors=[]
             run.poll()
-            adopted=SUP.reap_adopted(run.pid,errors)
+            adopted=SUP.reap_adopted(run.pid,errors,zombies)
             owned=SUP.members(run.pid,errors)
             outer['preCleanupSnapshot']=owned
             if owned and outer['firstFailure'] is None:outer['firstFailure']='OUTER_CHILD_RESIDUAL'
@@ -40,20 +50,26 @@ def run_bounded(command, OUT, mode, timeout=6):
             until=time.monotonic()+.7
             while time.monotonic()<until:
                 run.poll()
-                adopted.extend(SUP.reap_adopted(run.pid,errors))
+                adopted.extend(SUP.reap_adopted(run.pid,errors,zombies))
                 if not SUP.members(run.pid,errors):break
                 SUP.signal_family(run.pid,signal.SIGKILL,errors);time.sleep(.01)
             run.poll()
-            adopted.extend(SUP.reap_adopted(run.pid,errors))
+            adopted.extend(SUP.reap_adopted(run.pid,errors,zombies))
             outer['reapedAdopted']=adopted
+            outer['zombieObservations']=zombies
             outer.update(exitCode=run.returncode,directChildExited=run.returncode is not None,
                          residual=SUP.members(run.pid,errors),auditErrors=sorted(set(errors)))
             outer['auditStatus']='UNKNOWN' if errors else 'FAIL' if outer['residual'] else 'PASS'
             if outer['residual'] or run.returncode is None:outer['cleanupFailure']='CLEANUP_FAILED'
             outer.update(endedAt=time.time(),elapsedMs=(time.monotonic()-start)*1000)
-            try:SUP.save_json(OUT/(mode+'-outer-result.json'),outer)
+            outer['evidenceStates']=SUP.evidence_states(outer,zombies,errors,True,outer['firstFailure']=='OUTER_TIMEOUT')
+            try:
+                SUP.save_json(OUT/(mode+'-outer-result.json'),outer)
+                SUP.save_evidence_receipt(OUT/(mode+'-outer-evidence-receipt.json'),OUT/(mode+'-outer-result.json'),outer)
+
             except Exception:
                 outer['recordFailure']='OUTER_RECORD_WRITE_FAILED'
+                outer['evidenceStates']['evidenceSavedVerified']='INCOMPLETE'
                 outer['firstFailure']=outer['firstFailure'] or outer['recordFailure']
                 print(json.dumps(outer),file=sys.stderr,flush=True)
     return outer

@@ -19,6 +19,19 @@ def verify(root):
     if rows!=actual:raise ValueError('MANIFEST_SET_OR_CONTENT_MISMATCH')
     return len(rows)
 
+def verify_process_receipt(source):
+    name = ('supervisor-evidence-receipt.json' if source.name == 'supervisor-result.json'
+            else source.name.replace('-outer-result.json', '-outer-evidence-receipt.json'))
+    receipt = json.loads(source.with_name(name).read_text())
+    raw = source.read_bytes()
+    if (receipt.get('schema') != 1 or receipt.get('source') != source.name
+        or type(receipt.get('size')) is not int or receipt['size'] != len(raw)
+        or receipt.get('sha256') != hashlib.sha256(raw).hexdigest()
+        or receipt.get('evidenceSavedVerified') != 'PASS'):
+        raise ValueError('PROCESS_RECEIPT_INVALID')
+    return receipt
+
+
 def valid_window(elapsed,budget):
     return all(isinstance(n,(int,float)) and not isinstance(n,bool) and math.isfinite(n) for n in (elapsed,budget)) and 0 <= elapsed <= budget
 
@@ -63,6 +76,7 @@ def collect(source,root):
                     timing=json.loads((base/'results'/(mode+'-timing-observation.json')).read_text())
                     if timing.get('case')!=mode or timing.get('externalWallWithinWindow') is not True or timing.get('toleranceMs')!=150 or not isinstance(timing.get('externalWallMs'),(int,float)) or isinstance(timing.get('externalWallMs'),bool) or not isinstance(timing.get('totalMs'),(int,float)) or isinstance(timing.get('totalMs'),bool) or not valid_window(timing['externalWallMs'],timing['totalMs']+150) or timing['externalWallMs']==timing['totalMs']+150:missing.append(mode+'/TIMING_RECORD_INVALID')
                     outer=json.loads((base/'results'/(mode+'-outer-result.json')).read_text())
+                    verify_process_receipt(base/'results'/(mode+'-outer-result.json'))
                     if outer.get('exitCode')!=(0 if mode=='normal' else 1):missing.append(mode+'/OUTER_EXIT_MISMATCH')
                     if outer.get('firstFailure') or outer.get('cleanupFailure') or outer.get('auditStatus')!='PASS':missing.append(mode+'/OUTER_FAILED')
                     ledger=json.loads((base/'results'/mode/'trial-ledger.json').read_text())
@@ -74,6 +88,7 @@ def collect(source,root):
                         for name in ['stdout.log','stderr.log','supervisor-result.json','supervisor-checkpoint.json']:
                             if not (folder/name).is_file():missing.append(mode+'/'+trial['id']+'/'+name)
                         saved=json.loads((folder/'supervisor-result.json').read_text())
+                        verify_process_receipt(folder/'supervisor-result.json')
                         if saved!=trial:missing.append(mode+'/SUPERVISOR_LEDGER_MISMATCH')
                         if saved.get('withinBudget') is not True or saved.get('directChildExited') is not True or saved.get('cleanupFailure') is not None or not valid_window(saved.get('elapsedMs'),saved.get('budgetMs')):missing.append(mode+'/BUDGET_OR_CHILD_EXIT_FAILED')
                         if saved.get('auditStatus')!='PASS' or saved.get('residual')!=[]:missing.append(mode+'/AUDIT_INCOMPLETE')
@@ -98,6 +113,7 @@ def collect(source,root):
                             if not (folder/'first'/name).is_file():missing.append(mode+'/'+name)
                     if mode!='record-failure':
                         saved=json.loads((folder/'first/supervisor-result.json').read_text())
+                        verify_process_receipt(folder/'first/supervisor-result.json')
                         if saved!=trial:missing.append(mode+'/SUPERVISOR_LEDGER_MISMATCH')
                     elif not ledger.get('recordErrors'):missing.append(mode+'/RECORD_FAILURE_UNEXPLAINED')
                     if mode in ('normal','first-cleanup'):
@@ -108,6 +124,7 @@ def collect(source,root):
             for mode in ['outer-timeout','outer-timeout-silent','outer-orphan']:
                 try:
                     data=json.loads((base/'results'/(mode+'-outer-result.json')).read_text())
+                    verify_process_receipt(base/'results'/(mode+'-outer-result.json'))
                     for suffix in ['-stdout.log','-stderr.log','-outer-checkpoint.json']:
                         if not (base/'results'/(mode+suffix)).is_file():missing.append(mode+suffix)
                     json.loads((base/'results'/(mode+'-outer-checkpoint.json')).read_text())
@@ -158,6 +175,7 @@ def collect(source,root):
             for label in ['old','new']:
                 inner = json.loads((control/('delay-'+label)/'b6k-summary.json').read_text())
                 outer = json.loads((control/('b6k-delay-'+label+'-outer-result.json')).read_text())
+                verify_process_receipt(control/('b6k-delay-'+label+'-outer-result.json'))
                 assertion = next(row for row in assertions if row['case']=='checkpoint-delay-'+label)
                 if assertion.get('observedInner') != inner or assertion.get('outerAuditStatus') != outer.get('auditStatus') or assertion.get('outerResidual') != outer.get('residual') or assertion.get('outerExitCode') != outer.get('exitCode') or assertion.get('outerCleanupFailure') != outer.get('cleanupFailure') or assertion.get('outerFirstFailure') != outer.get('firstFailure') or assertion.get('outerPreCleanupSnapshot') != outer.get('preCleanupSnapshot'):
                     missing.append('B6J_DELAY_EVIDENCE_MISMATCH_'+label)

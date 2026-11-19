@@ -1,5 +1,5 @@
 """Synthetic collection-contract fixtures; never evidence of process execution."""
-import importlib.util,json,shutil,sys
+import importlib.util,json,shutil,sys,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];OUT=Path(sys.argv[1]);OUT.mkdir(parents=True,exist_ok=False)
 spec=importlib.util.spec_from_file_location('artifact',ROOT/'scripts/stage3b6h-artifacts.py');A=importlib.util.module_from_spec(spec);spec.loader.exec_module(A)
@@ -68,6 +68,11 @@ put(control/'assertions-child-original.json',assertions)
 for f in ['test.stdout','test.stderr']:put(control/f,'')
 put(control/'execution.json',{'exit':0,'signal':None,'error':None,'status':'PASS',
                               'nonPassCases':0,'assertionCases':18})
+# Synthetic receipts are fixture data, never real save attestations.
+for source in base.rglob('*.json'):
+ if source.name=='supervisor-result.json' or source.name.endswith('-outer-result.json'):
+  name='supervisor-evidence-receipt.json' if source.name=='supervisor-result.json' else source.name.replace('-outer-result.json','-outer-evidence-receipt.json')
+  raw=source.read_bytes();put(source.with_name(name),{'schema':1,'source':source.name,'size':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'evidenceSavedVerified':'PASS'})
 A.seal(control)
 assert A.collect(base,OUT/'normal-output')['status']=='PASS'
 mutations=[('root-assertions','test-synthetic/results/assertions.json'),('case-assertion','test-synthetic/results/normal-assertion.json'),('timing','test-synthetic/results/normal-timing-observation.json'),('partial','b6h-synthetic/results/partial-partial.bin'),('checkpoint','b6h-synthetic/results/normal/first/supervisor-checkpoint.json'),('worker-stdout','b6h-synthetic/results/worker-first-cleanup/stdout.log'),('worker-stderr','b6h-synthetic/results/worker-first-cleanup/stderr.log'),('normal-worker','test-synthetic/results/normal/first/worker-result.json')]
@@ -119,3 +124,14 @@ for label,change in [('b6j-absent','absent'),('b6j-partial','partial'),
  assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE',(label,'not rejected')
  results.append({'case':label,'expected':'INCOMPLETE','passed':True})
 put(OUT/'assertions.json',results);print(json.dumps(results))
+
+for label in ['receipt-missing','receipt-corrupt','receipt-other-source']:
+ source=OUT/label;shutil.copytree(base,source)
+ p=source/'test-synthetic/results/normal-outer-evidence-receipt.json'
+ if label=='receipt-missing':p.unlink()
+ elif label=='receipt-corrupt':p.write_text('{')
+ else:
+  data=json.loads(p.read_text());data['source']='different-outer-result.json';put(p,data)
+ assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE'
+ results.append({'case':label,'expected':'INCOMPLETE','passed':True})
+put(OUT/'receipt-assertions.json',results[-3:])
