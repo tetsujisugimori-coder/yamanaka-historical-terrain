@@ -1,0 +1,63 @@
+{
+  "reviewer": "/root/yamanaka_request/local_review",
+  "time": "2026-11-17T20:37:28.452397+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "files": [
+    {
+      "path": ".github/workflows/stage3b6.yml",
+      "bytes": 3488,
+      "sha256": "438af3f4e6785348fed9be94d0121733899f1c5fb056bfff160b7e672d3018f2"
+    },
+    {
+      "path": "scripts/stage3b6g-supervisor.py",
+      "bytes": 11347,
+      "sha256": "eb8e9c4ee03918616f77a80db5a8bc4c4fd48173dea2a0148d43d20d5e7fc68b"
+    },
+    {
+      "path": "scripts/stage3b6g-worker.mjs",
+      "bytes": 3756,
+      "sha256": "5eddf9f7a608ae0f111f25ed8544312eb53df85e83b375beb325627707cafab0"
+    },
+    {
+      "path": "scripts/stage3b6h-artifacts.py",
+      "bytes": 10634,
+      "sha256": "51d3fa082a247259df7131867145cde4904f6177b75a49d929e3315232cdcd91"
+    },
+    {
+      "path": "scripts/stage3b6h-watchdog.py",
+      "bytes": 3011,
+      "sha256": "a8333a6062ab4961131eef55e25eac576f3e87942c4cbdc808bd72507b11e3a4"
+    },
+    {
+      "path": "tests/stage3b6g-supervisor.py",
+      "bytes": 3619,
+      "sha256": "25e3d15a83fd196cec503e1742a5cdbd29be01eee7185e8882ecf6a7a10c525e"
+    },
+    {
+      "path": "tests/stage3b6g.test.mjs",
+      "bytes": 3665,
+      "sha256": "86be0e2ba84bb04e897663346a2ade8e4ff9821eafee8782f4ed92bbd41f494d"
+    },
+    {
+      "path": "tests/stage3b6h-artifacts.test.mjs",
+      "bytes": 3192,
+      "sha256": "0f366eb73873a0debba4132729eb82059b9a6067e5c379ac860a4cd00a5f2aa5"
+    },
+    {
+      "path": "tests/stage3b6h-collection.py",
+      "bytes": 4230,
+      "sha256": "1b98cd95e34e1469b08add8ba2b801930ed67165cad3133d76cdc81d10afd0d2"
+    },
+    {
+      "path": "tests/stage3b6h-records.py",
+      "bytes": 6661,
+      "sha256": "8fd70fab4385800b5bef60ad243de2e5ba0b1d02fee33795527ef5f4b521b710"
+    },
+    {
+      "path": "tests/stage3b6h-records.test.mjs",
+      "bytes": 957,
+      "sha256": "ccd01f752c0834883f93289314650ffd9cb987e8f9b643a3c607227ab58ac097"
+    }
+  ]
+}

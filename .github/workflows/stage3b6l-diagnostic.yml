@@ -1,0 +1,99 @@
+name: Stage 3-B6l diagnostic evidence (not acceptance)
+on:
+  push:
+    branches: ['feat/stage3b6-comparison']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    env:
+      EVIDENCE_DIR: ${{ github.workspace }}/evidence-run/stage3b6l-${{ matrix.browser }}
+      TMPDIR: ${{ github.workspace }}/.work/stage3b6l/tmp
+      BROWSER_FILTER: ${{ matrix.browser }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Record identity and bounded work area
+        run: |
+          mkdir -p "$TMPDIR" "$EVIDENCE_DIR"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > "$EVIDENCE_DIR/identity.txt"
+          printf 'EVENT=%s\nREF=%s\nPR_HEAD=%s\n' "$GITHUB_EVENT_NAME" "$GITHUB_REF" "${{ github.event.pull_request.head.sha }}" > "$EVIDENCE_DIR/event.txt"
+          { node --version; python3 --version; df -B1 .; df -i .; } > "$EVIDENCE_DIR/environment.txt"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Independent synthetic negative controls
+        run: |
+          set +e
+          node --test tests/stage3b6l-observations.test.mjs > "$EVIDENCE_DIR/control-tests.log" 2>&1
+          code=$?
+          printf 'control-tests\t%s\n' "$code" > "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Capture distinct 404 and 304 layers
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node scripts/stage3b6l-http-runner.mjs "$BROWSER_FILTER" "$EVIDENCE_DIR" > "$EVIDENCE_DIR/diagnostic.log" 2>&1
+          code=$?
+          printf 'diagnostic\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Verify 404 conditional-header evidence contract
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node --test tests/stage3b6m-404.test.mjs > "$EVIDENCE_DIR/conditional-contract.log" 2>&1
+          code=$?
+          printf 'conditional-contract\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Compare synthetic 404 with and without If-None-Match
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node scripts/stage3b6m-404-runner.mjs "$BROWSER_FILTER" "$EVIDENCE_DIR" > "$EVIDENCE_DIR/conditional-404.log" 2>&1
+          code=$?
+          printf 'conditional-404\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Verify route 404 contrast contract
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node --test tests/stage3b6n-route.test.mjs > "$EVIDENCE_DIR/route-contract.log" 2>&1
+          code=$?
+          printf 'route-contract\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Compare synthetic 404 routing off and on
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node scripts/stage3b6n-route-runner.mjs "$BROWSER_FILTER" "$EVIDENCE_DIR" > "$EVIDENCE_DIR/route-404.log" 2>&1
+          code=$?
+          printf 'route-404\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Preserve synthetic negative raw records
+        if: always()
+        run: |
+          mkdir -p "$EVIDENCE_DIR/control-raw"
+          for source in .work/stage3b6l/record-*; do
+            if [ -d "$source" ]; then cp -a "$source" "$EVIDENCE_DIR/control-raw/"; fi
+          done
+      - name: Seal captured evidence, even when tests fail
+        if: always()
+        run: python3 scripts/stage3b6h-artifacts.py seal "$EVIDENCE_DIR"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3b6l-${{ matrix.browser }}-${{ github.sha }}
+          path: evidence-run/stage3b6l-${{ matrix.browser }}
+          include-hidden-files: true
+          if-no-files-found: error
