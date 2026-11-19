@@ -110,6 +110,8 @@ export async function runCacheDiagnostics(browser,engine,{out,plans=cacheDiagnos
   if(u.pathname.endsWith('/asset.js'))({status,headers,body,representation}=diagnosticEntity(row.mode,phase,safeHeaders(req.headers)));
   else if(u.pathname===`/${row.id}/`){status=200;headers={'content-type':'text/html','cache-control':'no-store'};body=Buffer.from('<!doctype html><meta charset="utf-8"><div id="marker">unset</div><script src="asset.js"></script>');}
   else {status=404;headers={'content-type':'text/plain','cache-control':'no-store'};body=Buffer.from('not found');}
+  // B6n only: disable conditional revalidation in both route/no-route controls.
+  if(row.routeControl && u.pathname.endsWith('/asset.js'))headers['cache-control']='no-store';
   row.server.push({sequence:row.server.length+1,phase,at:new Date().toISOString(),monotonicMs:performance.now(),method:req.method,path:u.pathname,requestHeaders:safeHeaders(req.headers),status,responseHeaders:safeHeaders(headers),representation,bodyBytes:body.length,bodySha256:sha(body)});
   const entry=row.server.at(-1);entry.socketId=socketIds.get(req.socket)??null;
   entry.transportEvents=[];
@@ -152,6 +154,17 @@ export async function runCacheDiagnostics(browser,engine,{out,plans=cacheDiagnos
     context=await browser.newContext({viewport:{width:375,height:900},serviceWorkers:'block'});
     operation='page.new';const page=await context.newPage();page.setDefaultTimeout(5000);page.setDefaultNavigationTimeout(5000);
     if(row.routing){operation='page.route';await page.route('**/*',route=>route.continue());}
+    if(plan.routeControl){
+     if(row.mode!=='missing'||!['enabled','disabled'].includes(plan.routeControl))throw Error('INVALID_B6N_ROUTE_CONTROL');
+     row.routeContrast={policy:plan.routeControl,events:[],scope:'B6N_SYNTHETIC_ONLY'};
+     if(plan.routeControl==='enabled'){
+      operation='page.route.b6n';
+      await page.route('**/asset.js',route=>{
+       row.routeContrast.events.push({phase:currentPhase,at:new Date().toISOString(),kind:'ROUTE_CONTINUE'});
+       return route.continue();
+      });
+     }
+    }
     if(plan.ifNoneMatchControl){
      if(row.mode!=='missing'||!['present','absent'].includes(plan.ifNoneMatchControl))throw Error('INVALID_404_CONTROL_PLAN');
      row.conditionalRoute={policy:plan.ifNoneMatchControl,scope:'BOTH_PHASES_SAME_ROUTE',events:[]};
