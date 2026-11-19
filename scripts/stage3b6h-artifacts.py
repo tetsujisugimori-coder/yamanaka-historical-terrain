@@ -35,6 +35,25 @@ def verify_process_receipt(source):
 def valid_window(elapsed,budget):
     return all(isinstance(n,(int,float)) and not isinstance(n,bool) and math.isfinite(n) for n in (elapsed,budget)) and 0 <= elapsed <= budget
 
+
+def verify_fixture_ownership(record, request_file, release_file):
+    """Exact raw handshake correspondence; never infer unobserved process ancestry."""
+    request=json.loads(request_file.read_text())
+    release=json.loads(release_file.read_text())
+    if release != record.get('ownershipHandshake') or release.get('status')!='CONFIRMED' or release.get('scope')!='TEST_FIXTURE_ONLY' or request.get('schema')!=1:
+        raise ValueError('OWNERSHIP_EVIDENCE_MISMATCH')
+    parent=release.get('root');child=release.get('child')
+    if not isinstance(parent,dict) or not isinstance(child,dict):
+        raise ValueError('OWNERSHIP_EVIDENCE_INVALID')
+    if (type(parent.get('pid')) is not int or type(child.get('pid')) is not int or
+        parent['pid']<=0 or child['pid']<=0 or child.get('ppid')!=parent['pid'] or
+        parent.get('birth')!=request.get('parentBirth') or
+        child.get('birth')!=request.get('childBirth') or
+        parent['pid']!=request.get('parentPid') or child['pid']!=request.get('childPid') or
+        not isinstance(parent.get('birth'),str) or not isinstance(child.get('birth'),str)):
+        raise ValueError('OWNERSHIP_EVIDENCE_INVALID')
+    return release
+
 def collect(source,root):
     root.mkdir(parents=True,exist_ok=True)
     dest=root/'finite-process'
@@ -92,6 +111,14 @@ def collect(source,root):
                         if saved!=trial:missing.append(mode+'/SUPERVISOR_LEDGER_MISMATCH')
                         if saved.get('withinBudget') is not True or saved.get('directChildExited') is not True or saved.get('cleanupFailure') is not None or not valid_window(saved.get('elapsedMs'),saved.get('budgetMs')):missing.append(mode+'/BUDGET_OR_CHILD_EXIT_FAILED')
                         if saved.get('auditStatus')!='PASS' or saved.get('residual')!=[]:missing.append(mode+'/AUDIT_INCOMPLETE')
+                        if mode=='orphan':
+                            try:
+                                ack=verify_fixture_ownership(
+                                    saved,folder/'ownership-request.json',folder/'ownership-release.json')
+                                if int((folder/'descendant.pid').read_text()) != ack['child']['pid']:
+                                    missing.append('orphan/OWNERSHIP_CHILD_PID_MISMATCH')
+                            except (OSError,ValueError,KeyError,TypeError,AttributeError):
+                                missing.append('orphan/OWNERSHIP_HANDSHAKE_MISSING_OR_INVALID')
                         if mode=='normal':
                             worker=json.loads((folder/'worker-result.json').read_text())
                             if worker.get('status')!='OBSERVED' or worker.get('firstFailure') is not None:missing.append(mode+'/NORMAL_WORKER_INVALID')
@@ -129,6 +156,13 @@ def collect(source,root):
                         if not (base/'results'/(mode+suffix)).is_file():missing.append(mode+suffix)
                     json.loads((base/'results'/(mode+'-outer-checkpoint.json')).read_text())
                     if data.get('firstFailure')!=('OUTER_CHILD_RESIDUAL' if mode=='outer-orphan' else 'OUTER_TIMEOUT') or data.get('residual')!=[] or data.get('auditStatus')!='PASS':missing.append(mode+'/OUTER_INVALID')
+                    if mode=='outer-orphan':
+                        try:
+                            verify_fixture_ownership(
+                                data,base/'results/outer-orphan-ownership-request.json',
+                                base/'results/outer-orphan-ownership-release.json')
+                        except (OSError,ValueError,KeyError,TypeError,AttributeError):
+                            missing.append('outer-orphan/OWNERSHIP_HANDSHAKE_MISSING_OR_INVALID')
                 except (OSError,ValueError,TypeError):missing.append(mode+'/OUTER_MISSING')
             try:
                 for name in ['stdout.log','stderr.log']:

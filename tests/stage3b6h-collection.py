@@ -39,6 +39,28 @@ for suite,modes in [('test-synthetic',base_modes),('b6h-synthetic',h_modes+extra
    put(p/'results'/(m+'-outer-result.json'),{'firstFailure':'OUTER_CHILD_RESIDUAL' if m=='outer-orphan' else 'OUTER_TIMEOUT','residual':[],'auditStatus':'PASS'})
   for f in ['stdout.log','stderr.log']:put(p/'results/worker-first-cleanup'/f,'')
   put(p/'results/worker-first-cleanup/worker-result.json',{'status':'FAIL','firstFailure':'OPERATION_FAILED','cleanupFailure':'BROWSER_CLOSE_FAILED'})
+# Synthetic handshake fixtures support the exact-set collector contract only.
+# These are fabricated parser inputs, NOT proof that an OS process was observed.
+ack={'schema':1,'status':'CONFIRMED',
+     'root':{'pid':1001,'birth':'111','ppid':900},
+     'child':{'pid':1002,'birth':'222','ppid':1001},
+     'scope':'TEST_FIXTURE_ONLY','observedMonotonicNs':1234567}
+req={'schema':1,'parentPid':1001,'parentBirth':'111','childPid':1002,'childBirth':'222'}
+orphan_folder=base/'test-synthetic/results/orphan/first'
+put(orphan_folder/'ownership-request.json',req)
+put(orphan_folder/'ownership-release.json',ack)
+put(orphan_folder/'descendant.pid','1002')
+ledger_file=base/'test-synthetic/results/orphan/trial-ledger.json'
+ledger_row=json.loads(ledger_file.read_text());ledger_row['trials'][0]['ownershipHandshake']=ack
+put(ledger_file,ledger_row)
+saved_file=orphan_folder/'supervisor-result.json'
+saved=json.loads(saved_file.read_text());saved['ownershipHandshake']=ack
+put(saved_file,saved)
+outer_file=base/'b6h-synthetic/results/outer-orphan-outer-result.json'
+outer=json.loads(outer_file.read_text());outer['ownershipHandshake']=ack
+put(outer_file,outer)
+put(base/'b6h-synthetic/results/outer-orphan-ownership-request.json',req)
+put(base/'b6h-synthetic/results/outer-orphan-ownership-release.json',ack)
 # B6k synthetic fixtures ONLY: these records test the collector parser, not
 # actual process containment or production evidence.
 b6j_names=['normal-fault','within-budget-false','external-wall','outer-failure',
@@ -135,3 +157,19 @@ for label in ['receipt-missing','receipt-corrupt','receipt-other-source']:
  assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE'
  results.append({'case':label,'expected':'INCOMPLETE','passed':True})
 put(OUT/'receipt-assertions.json',results[-3:])
+# Missing and falsified handshake records remain INCOMPLETE, even if the suite's
+# generic assertions were fabricated as PASS.
+for label,relative,forge in [
+    ('ownership-inner-missing','test-synthetic/results/orphan/first/ownership-release.json',False),
+    ('ownership-inner-forged','test-synthetic/results/orphan/first/ownership-release.json',True),
+    ('ownership-outer-missing','b6h-synthetic/results/outer-orphan-ownership-release.json',False),
+    ('ownership-outer-forged','b6h-synthetic/results/outer-orphan-ownership-release.json',True)]:
+ source=OUT/label;shutil.copytree(base,source)
+ target=source/relative
+ if forge:
+  bad=json.loads(target.read_text());bad['child']['birth']='INVALID';put(target,bad)
+ else:target.unlink()
+ assert A.collect(source,OUT/(label+'-output'))['status']=='INCOMPLETE',label
+ results.append({'case':label,'expected':'INCOMPLETE','passed':True})
+put(OUT/'ownership-assertions.json',results[-4:])
+

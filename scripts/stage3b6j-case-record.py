@@ -49,6 +49,19 @@ def evaluate(mode, config, outer, wall, case):
         if mode == 'first-cleanup': check('WORKER_FIRST_FAILURE_LOST', row.get('workerFirstFailure') == 'INITIAL_DIAGNOSTIC_FAILURE')
         if mode == 'orphan':
             pid = int((case / 'first/descendant.pid').read_text())
+            ack = json.loads((case / 'first/ownership-release.json').read_text())
+            request = json.loads((case / 'first/ownership-request.json').read_text())
+            observed = row.get('ownershipHandshake')
+            check('OWNERSHIP_HANDSHAKE_UNVERIFIED',
+                  isinstance(observed, dict) and ack == observed and
+                  ack.get('status') == 'CONFIRMED' and
+                  ack.get('scope') == 'TEST_FIXTURE_ONLY' and
+                  ack.get('child', {}).get('pid') == pid and
+                  ack.get('child', {}).get('ppid') == ack.get('root', {}).get('pid') and
+                  ack.get('root', {}).get('pid') == request.get('parentPid') and
+                  ack.get('root', {}).get('birth') == request.get('parentBirth') and
+                  ack.get('child', {}).get('birth') == request.get('childBirth'),
+                  'INCOMPLETE')
             check('DESCENDANT_STILL_EXISTS', not Path(f'/proc/{pid}').exists())
         for stream in ['stdout.log', 'stderr.log']:
             check('STREAM_MISSING_' + stream, (case / 'first' / stream).is_file(), 'INCOMPLETE')

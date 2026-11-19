@@ -95,9 +95,17 @@ for mode,body in [('outer-timeout',"import time;print('partial 日本語',flush=
     assert data['firstFailure']=='OUTER_TIMEOUT' and data['directChildExited'] and data['residual']==[] and data['auditStatus']=='PASS',json.dumps({'case':mode,'outerResult':data,'scope':'B6K_DIAGNOSTIC_NO_PASS_PROMOTION'})
     finish_case({'case':mode,'expected':'OUTER_TIMEOUT','actual':data['firstFailure'],'cleanupFailure':data['cleanupFailure'],'auditStatus':data['auditStatus'],'passed':True})
 begin_case('outer-orphan')
-orphan=W.run_bounded([sys.executable,'-c',"import subprocess,sys,time;subprocess.Popen([sys.executable,'-c','import time;time.sleep(20)'],start_new_session=True);time.sleep(.1)"],OUT,'outer-orphan',timeout=.5)
+orphan=W.run_bounded(
+    [sys.executable,str(ROOT/'tests/stage3b6k-ownership-fixture.py'),'live',
+     str(OUT/'outer-orphan-ownership-request.json'),
+     str(OUT/'outer-orphan-ownership-release.json'),'0.40'],
+    OUT,'outer-orphan',timeout=.5,ownership_handshake=True)
 S.save_json(OUT/'outer-orphan-test-observed-before-assert.json',orphan)
-assert orphan['exitCode']==0 and orphan['firstFailure']=='OUTER_CHILD_RESIDUAL' and orphan['preCleanupSnapshot'] and orphan['residual']==[] and orphan['auditStatus']=='PASS'
+assert orphan['exitCode']==0 and orphan['firstFailure']=='OUTER_CHILD_RESIDUAL' and orphan['preCleanupSnapshot'] and orphan['residual']==[] and orphan['auditStatus']=='PASS',orphan
+ack=orphan.get('ownershipHandshake')
+assert ack is not None and ack.get('status')=='CONFIRMED',orphan
+assert json.loads((OUT/'outer-orphan-ownership-release.json').read_text())==ack
+assert ack['root']['pid']==orphan['pid'] and ack['child']['ppid']==orphan['pid']
 finish_case({'case':'outer-orphan','expected':'OUTER_CHILD_RESIDUAL','actual':orphan['firstFailure'],'cleanupFailure':orphan['cleanupFailure'],'auditStatus':orphan['auditStatus'],'passed':True})
 # Execute actual worker control flow with a synthetic runtime: initial operation and close both fail.
 begin_case('worker-first-cleanup')

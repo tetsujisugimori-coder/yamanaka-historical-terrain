@@ -32,3 +32,6 @@ Root ownership is now a birth-identity set learned under the designated worker, 
 Final raw records contain `PENDING_RECEIPT` for the eighth state, avoiding circular self-certification. A separate `*-evidence-receipt.json` records the actual saved source filename, nonempty raw byte size and SHA after readback. The collector requires the receipt and rechecks source/size/SHA. The receipt proves only its named final JSON, not log completeness, a whole manifest, external storage or process success. Write/readback failure is INCOMPLETE and cannot become a save PASS.
 
 B6h's 14 controls now have a preinitialized `execution-cases.json`: active cases are RUNNING, assertion exceptions FAIL, other exceptions INCOMPLETE and later cases NOT_TESTED. Complete available supervisor/outer observations are saved before assertions. The eight-axis supplemental controls are synthetic/controlled local processes, not browser acceptance or reconstruction of the historical failure.
+
+## Test-only ownership handshake follow-up
+See [HANDSHAKE.md](HANDSHAKE.md). The fixture must remain blocked until the observer verifies PID/birth/PPID for both direct parent and child, then writes and reads a non-forgeable-to-the-fixture acknowledgment. Invalid/missing evidence remains FAIL/INCOMPLETE, not an owned child. No deadline change.

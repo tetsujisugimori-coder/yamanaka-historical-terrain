@@ -9,11 +9,13 @@ import time
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('b6g_supervisor',ROOT/'scripts/stage3b6g-supervisor.py')
 SUP=importlib.util.module_from_spec(spec);spec.loader.exec_module(SUP)
-def run_bounded(command, OUT, mode, timeout=6):
+def run_bounded(command, OUT, mode, timeout=6, ownership_handshake=False):
     SUP.enable_subreaper()
     start=time.monotonic()
-    errors=[]; zombies=[]
+    errors=[]; zombies=[]; ownership_ack=None
     outer={'case':mode,'command':command,'startedAt':time.time(),'firstFailure':None,'cleanupFailure':None,'auditStatus':'NOT_TESTED'}
+    if ownership_handshake:
+        outer['ownershipHandshake'] = {'status': 'PENDING', 'scope': 'TEST_FIXTURE_ONLY'}
     SUP.save_json(OUT/(mode+'-outer-checkpoint.json'),outer)
     with (OUT/(mode+'-stdout.log')).open('xb') as stdout,(OUT/(mode+'-stderr.log')).open('xb') as stderr:
         run=subprocess.Popen(command,stdout=stdout,stderr=stderr,start_new_session=True)
@@ -22,7 +24,14 @@ def run_bounded(command, OUT, mode, timeout=6):
             SUP.save_json(OUT/(mode+'-outer-checkpoint.json'),outer)
             deadline=time.monotonic()+timeout
             while True:
-                SUP.members(run.pid,errors)  # learn birth-verified descendants before adoption
+                family=SUP.members(run.pid,errors)  # learn birth-verified descendants before adoption
+                if ownership_handshake and ownership_ack is None:
+                    ownership_ack=SUP.confirm_fixture_ownership(
+                        run.pid, OUT/(mode+'-ownership-request.json'),
+                        OUT/(mode+'-ownership-release.json'), family, errors)
+                    if ownership_ack is not None:
+                        outer['ownershipHandshake']=ownership_ack
+                        SUP.save_json(OUT/(mode+'-outer-checkpoint.json'),outer)
                 remaining=deadline-time.monotonic()
                 if remaining <= 0: raise subprocess.TimeoutExpired(command,timeout)
                 try:
@@ -55,6 +64,10 @@ def run_bounded(command, OUT, mode, timeout=6):
                 SUP.signal_family(run.pid,signal.SIGKILL,errors);time.sleep(.01)
             run.poll()
             adopted.extend(SUP.reap_adopted(run.pid,errors,zombies))
+            if ownership_handshake and ownership_ack is None:
+                outer['ownershipHandshake'] = {'status': 'NOT_CONFIRMED', 'scope': 'TEST_FIXTURE_ONLY'}
+                outer['firstFailure'] = outer['firstFailure'] or 'OWNERSHIP_HANDSHAKE_NOT_CONFIRMED'
+                errors.append('OWNERSHIP_HANDSHAKE_NOT_CONFIRMED')
             outer['reapedAdopted']=adopted
             outer['zombieObservations']=zombies
             outer.update(exitCode=run.returncode,directChildExited=run.returncode is not None,

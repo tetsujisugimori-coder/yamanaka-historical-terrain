@@ -100,6 +100,58 @@ def reap_adopted(worker_pid=None, errors=None, observations=None):
     return recovered
 
 
+
+def confirm_fixture_ownership(root_pid, request_path, release_path, family, errors=None):
+    """Test-only ownership handshake; never infer lineage from an unobserved PID.
+
+    Only the supplied root Popen direct child and its immediately observed child
+    are eligible. Both birth identities and both PPIDs are checked against /proc.
+    The release is written only after the observer has seen this live relation.
+    """
+    if release_path.exists():
+        # An unverified pre-existing receipt must never open the fixture gate.
+        if errors is not None: errors.append('UNEXPECTED_OWNERSHIP_RELEASE')
+        return None
+    if not request_path.is_file():
+        return None
+    try:
+        request = json.loads(request_path.read_text())
+        if (request.get('schema') != 1 or
+                type(request.get('parentPid')) is not int or
+                type(request.get('childPid')) is not int or
+                request['parentPid'] != root_pid or
+                request['childPid'] == root_pid or
+                not isinstance(request.get('parentBirth'), str) or
+                not isinstance(request.get('childBirth'), str)):
+            raise ValueError('INVALID_OWNERSHIP_REQUEST')
+        root = next((r for r in family if r['pid'] == root_pid), None)
+        child = next((r for r in family if r['pid'] == request['childPid']), None)
+        if root is None or child is None:
+            return None  # not observed yet: must not release
+        if (root['ppid'] != os.getpid() or root['state'] == 'Z' or
+                child['ppid'] != root_pid or
+                root['birth'] != request['parentBirth'] or
+                child['birth'] != request['childBirth']):
+            raise ValueError('OWNERSHIP_IDENTITY_MISMATCH')
+        for row in (root, child):
+            fields = Path(f"/proc/{row['pid']}/stat").read_text().rsplit(')', 1)[1].split()
+            if fields[19] != row['birth'] or int(fields[1]) != row['ppid']:
+                raise ValueError('OWNERSHIP_IDENTITY_CHANGED')
+        acknowledgment = {
+            'schema': 1, 'status': 'CONFIRMED',
+            'root': {'pid': root['pid'], 'birth': root['birth'], 'ppid': root['ppid']},
+            'child': {'pid': child['pid'], 'birth': child['birth'], 'ppid': child['ppid']},
+            'scope': 'TEST_FIXTURE_ONLY', 'observedMonotonicNs': time.monotonic_ns()}
+        save_json(release_path, acknowledgment)
+        if json.loads(release_path.read_text()) != acknowledgment:
+            raise ValueError('OWNERSHIP_RELEASE_READBACK_MISMATCH')
+        return acknowledgment
+    except (OSError, ValueError, KeyError, IndexError, TypeError):
+        if errors is not None:
+            errors.append('OWNERSHIP_HANDSHAKE_UNVERIFIED')
+        return None
+
+
 def save_json(path, data):
     """New checkpoint name replaced only after complete write/fsync/parse validation."""
     payload = json.dumps(data, indent=2, allow_nan=False)
@@ -192,6 +244,10 @@ def supervise(config, out):
             row['firstFailure'] = row['firstFailure'] or code
             event(code, persist=persist)
         worker = None; streams = []; term_sent = kill_sent = False; audit_errors = []; reaped_children = []; zombies = []; deadline_detected = False
+        handshake_required = trial.get('fixtureOwnershipHandshake') is True
+        ownership_ack = None
+        if handshake_required:
+            row['ownershipHandshake'] = {'status': 'PENDING', 'scope': 'TEST_FIXTURE_ONLY'}
         op_end = hard-reserve; kill_at = min(op_end+grace, hard-audit)
         env = os.environ.copy(); env.update(B6G_OUT=str(trial_dir.resolve()), B6G_CLOSE_MS=str(min(5000, int((reserve-grace-audit)*1000))), TMPDIR=str((out/'tmp').resolve()))
         Path(env['TMPDIR']).mkdir(exist_ok=True)
@@ -207,6 +263,14 @@ def supervise(config, out):
                 rc = worker.poll()
                 reaped_children.extend(reap_adopted(worker.pid, audit_errors, zombies))
                 group = members(worker.pid, audit_errors); now = time.monotonic()
+                if handshake_required and ownership_ack is None and rc is None:
+                    ownership_ack = confirm_fixture_ownership(
+                        worker.pid, trial_dir/'ownership-request.json',
+                        trial_dir/'ownership-release.json', group, audit_errors)
+                    if ownership_ack is not None:
+                        row['ownershipHandshake'] = ownership_ack
+                        event('FIXTURE_OWNERSHIP_CONFIRMED', persist=False,
+                              rootPid=worker.pid, childPid=ownership_ack['child']['pid'])
                 if rc is not None and not group: break
                 if rc is not None and group and not term_sent:
                     fail('CHILD_RESIDUAL', persist=False); op_end = now; kill_at = min(now+grace, hard-audit)
@@ -243,6 +307,9 @@ def supervise(config, out):
                 reaped_children.extend(reap_adopted(worker.pid, audit_errors, zombies))
             else:
                 row.update(exitCode=None, directChildExited=None)
+            if handshake_required and ownership_ack is None:
+                row['ownershipHandshake'] = {'status': 'NOT_CONFIRMED', 'scope': 'TEST_FIXTURE_ONLY'}
+                audit_errors.append('OWNERSHIP_HANDSHAKE_NOT_CONFIRMED')
             row['reapedAdopted'] = reaped_children
             row['zombieObservations'] = zombies
             row['residual'] = members(worker.pid, audit_errors) if worker is not None else []

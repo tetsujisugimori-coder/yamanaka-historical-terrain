@@ -22,8 +22,11 @@ def save(status,first=None):
 if mode=='normal':
  save('OBSERVED');sys.exit(0)
 if mode=='orphan':
- child=subprocess.Popen([sys.executable,'-c','import signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);time.sleep(60)'],start_new_session=True)
- (out/'descendant.pid').write_text(str(child.pid));save('OBSERVED');sys.exit(0)
+ import importlib.util
+ sp=importlib.util.spec_from_file_location('b6k_fixture',Path.cwd()/'tests/stage3b6k-ownership-fixture.py')
+ fm=importlib.util.module_from_spec(sp);sp.loader.exec_module(fm)
+ sys.exit(fm.run_fixture('orphan',out/'ownership-request.json',
+                         out/'ownership-release.json',.62,out))
 if mode=='close':save('FAIL','CLOSE_STARTED')
 if mode=='first-cleanup':save('FAIL','INITIAL_DIAGNOSTIC_FAILURE')
 signal.signal(signal.SIGTERM,signal.SIG_IGN)
@@ -49,6 +52,8 @@ for index,mode in enumerate(C.CASES):
         'termGraceMs':150,'auditReserveMs':150,
         'trials':[{'id':'first','argv':[sys.executable,str(FIXTURE),mode]},
                   {'id':'remaining','argv':[sys.executable,str(FIXTURE),'normal']}]}
+    if mode=='orphan':
+        config['trials'][0]['fixtureOwnershipHandshake']=True
     if mode=='total':config['totalMs']=1100
     cp=OUT/(mode+'-config.json');cp.write_text(json.dumps(config))
     started=time.time();start=time.monotonic()
