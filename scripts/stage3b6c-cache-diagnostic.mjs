@@ -152,6 +152,23 @@ export async function runCacheDiagnostics(browser,engine,{out,plans=cacheDiagnos
     context=await browser.newContext({viewport:{width:375,height:900},serviceWorkers:'block'});
     operation='page.new';const page=await context.newPage();page.setDefaultTimeout(5000);page.setDefaultNavigationTimeout(5000);
     if(row.routing){operation='page.route';await page.route('**/*',route=>route.continue());}
+    if(plan.ifNoneMatchControl){
+     if(row.mode!=='missing'||!['present','absent'].includes(plan.ifNoneMatchControl))throw Error('INVALID_404_CONTROL_PLAN');
+     row.conditionalRoute={policy:plan.ifNoneMatchControl,scope:'BOTH_PHASES_SAME_ROUTE',events:[]};
+     operation='page.route.if-none-match-control';
+     await page.route('**/asset.js',async route=>{
+      const headers={...route.request().headers()};
+      const phase=currentPhase;
+      const before=typeof headers['if-none-match']==='string'?'PRESENT':'ABSENT';
+      if(phase===2){
+       if(plan.ifNoneMatchControl==='present')headers['if-none-match']='"first"';
+       else delete headers['if-none-match'];
+      }
+      row.conditionalRoute.events.push({phase,before,after:typeof headers['if-none-match']==='string'?'PRESENT':'ABSENT',
+                                        policy:plan.ifNoneMatchControl,at:new Date().toISOString()});
+      await route.continue({headers});
+     });
+    }
     observer=createResponseObserver({contextId:`diagnostic:${engine}:${row.id}`,pageId:'page',bodyTiming:row.bodyTiming,onRecord:r=>{r.diagnosticPhase=currentPhase;row.responses.push(r);}});let errors=0;
     const notifications=terminalNotifications?attachTerminalNotifications(page,observer,{target:`${base}/${row.id}/asset.js`,phase:()=>currentPhase,events:row.terminalEvents=[]}):null;
     page.on('pageerror',()=>{errors++;});page.on('request',r=>{if(r.url()===`${base}/${row.id}/asset.js`)observer.observeRequest(r);});

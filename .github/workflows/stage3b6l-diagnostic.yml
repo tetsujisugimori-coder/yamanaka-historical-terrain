@@ -48,6 +48,22 @@ jobs:
           code=$?
           printf 'diagnostic\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
           exit "$code"
+      - name: Verify 404 conditional-header evidence contract
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node --test tests/stage3b6m-404.test.mjs > "$EVIDENCE_DIR/conditional-contract.log" 2>&1
+          code=$?
+          printf 'conditional-contract\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Compare synthetic 404 with and without If-None-Match
+        if: ${{ !cancelled() }}
+        run: |
+          set +e
+          node scripts/stage3b6m-404-runner.mjs "$BROWSER_FILTER" "$EVIDENCE_DIR" > "$EVIDENCE_DIR/conditional-404.log" 2>&1
+          code=$?
+          printf 'conditional-404\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
       - name: Preserve synthetic negative raw records
         if: always()
         run: |
