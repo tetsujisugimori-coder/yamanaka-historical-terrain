@@ -74,7 +74,7 @@ for index,mode in enumerate(C.CASES):
                 TOTAL.record_total(OUT,case,config,outer,started_ns,ended_ns,
                                    started_unix_ns,ended_unix_ns)
         # Record serialization happens AFTER the original watchdog timing boundary.
-        wall=(ended_ns-start_ns)/1_000_000 if mode=='total' else (time.monotonic()-start)*1000
+        wall=(ended_ns-started_ns)/1_000_000 if mode=='total' else (time.monotonic()-start)*1000
         row,timing=C.evaluate(mode,config,outer,wall,case)
         row.update(runId=run_id,targetHead=head,startedAtUnix=started)
         if head is None:
