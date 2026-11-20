@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {westGateEdgeWeight,westGateEdgeColor,westGateRelief} from './west-gate-finish.js';
 // Project-original D display recipe. No species, location or 1590 vegetation claim.
 export const NATURE={version:'phase3i-d-v1',category:'D',license:'project-original procedural recipe; no third-party image',shrubs:[[-27,24],[-24,26],[-21,27],[-101,-18],[-104,-17],[-106,-20]],maxSlope:18};
 // Parse the palette once; per-vertex evaluation never reparses CSS/sRGB colours.
@@ -15,21 +16,40 @@ export function surfaceTint(id,e,n,slope,target=new THREE.Color()){
  if(path)target.lerp(PALETTE.track,wear);
  return target.multiplyScalar(.92+.09*patch+.035*fine);
 }
-export function createNatureFinish(){
+export function createNatureFinish(westernBounds){
  const states=new Map(),materials=new Set();
  function restore(){for(const [mesh,s]of states){if(mesh.geometry.attributes.color===s.colors){if(s.baseColors)mesh.geometry.setAttribute('color',s.baseColors);else mesh.geometry.deleteAttribute('color');}if(mesh.material===s.material)mesh.material=s.baseMaterial;}}
- function apply(mesh){
-  if(!mesh.isMesh||!(mesh.userData.surface||mesh.userData.facilityId)||mesh.userData.facilityId==='nm-context')return;
-  const g=mesh.geometry,p=g.attributes.position,norm=g.attributes.normal;if(!p||!norm)return;
+ function apply(mesh,westVisible=false){
+  const {facilityId,elementId,surface}=mesh.userData,context=facilityId==='nm-context';
+  if(!mesh.isMesh||!(surface||facilityId)||(context&&!westVisible))return;
+  const west=surface&&['wb-gate','wb-moat','wb-bailey'].includes(elementId);
+  const continuity=Boolean(westernBounds&&westVisible&&(context||west));
+  if(context&&!continuity)return;
+  const g=mesh.geometry,p=g.attributes.position,norm=g.attributes.normal;
+  const baseColors=g.attributes.color;
+  if(!p||!norm||(context&&(!baseColors||baseColors.count!==p.count)))return;
   let s=states.get(mesh);
-  if(s&&s.position===p&&s.baseMaterial===mesh.material&&g.attributes.color!==s.colors)s.baseColors=g.attributes.color;
-  if(!s||s.position!==p||s.baseMaterial!==mesh.material){
-   const colors=new Float32Array(p.count*3),id=mesh.name.includes('.surface.')?mesh.name:(mesh.userData.facilityId??mesh.userData.elementId??'');
-   const tint=new THREE.Color();
-   for(let i=0;i<p.count;i++){const slope=Math.acos(Math.min(1,Math.abs(norm.getY(i))))*180/Math.PI,c=surfaceTint(id,p.getX(i),-p.getZ(i),slope,tint);colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;}
+  if(!s||s.position!==p||s.baseMaterial!==mesh.material||s.baseColors!==baseColors||s.continuity!==continuity){
+   const colors=new Float32Array(p.count*3),id=mesh.name.includes('.surface.')?mesh.name:(facilityId??elementId??'');
+   const tint=new THREE.Color(),edge=new THREE.Color();
+   for(let i=0;i<p.count;i++){
+    const e=p.getX(i),n=-p.getZ(i),ny=norm.getY(i);
+    if(context)tint.setRGB(baseColors.getX(i),baseColors.getY(i),baseColors.getZ(i));
+    else{
+     surfaceTint(id,e,n,Math.acos(Math.min(1,Math.abs(ny)))*180/Math.PI,tint);
+     if(west&&continuity)tint.multiplyScalar(westGateRelief(elementId,e,n,ny,norm.getZ(i)));
+    }
+    if(continuity){
+     const weight=westGateEdgeWeight(e,n,westernBounds);
+     if(weight)tint.lerp(westGateEdgeColor(e,n,edge),weight);
+    }
+    colors[i*3]=tint.r;colors[i*3+1]=tint.g;colors[i*3+2]=tint.b;
+   }
    if(s){materials.delete(s.material);s.material.dispose();}
-   const material=mesh.material.clone();material.vertexColors=true;material.roughness=.98;material.color.set('#ffffff');
-   s={position:p,baseColors:g.attributes.color,colors:new THREE.BufferAttribute(colors,3),baseMaterial:mesh.material,material};states.set(mesh,s);materials.add(material);
+   const material=mesh.material.clone();material.vertexColors=true;
+   // Preserve the existing context finish outside the collar (its base is white).
+   if(!context){material.roughness=.98;material.color.set('#ffffff');}
+   s={position:p,baseColors,colors:new THREE.BufferAttribute(colors,3),baseMaterial:mesh.material,material,continuity};states.set(mesh,s);materials.add(material);
   }
   g.setAttribute('color',s.colors);mesh.material=s.material;
  }
