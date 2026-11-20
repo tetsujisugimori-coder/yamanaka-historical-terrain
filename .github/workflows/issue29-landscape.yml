@@ -1,0 +1,96 @@
+name: Issue 29 west gate landscape
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'src/main.js'
+      - 'src/nature-finish.js'
+      - 'src/phase3b.js'
+      - 'src/west-gate-finish.js'
+      - 'scripts/issue29-browser.mjs'
+      - 'tests/west-gate-landscape.test.mjs'
+      - '.github/workflows/issue29-landscape.yml'
+permissions:
+  contents: read
+jobs:
+  compare:
+    if: github.head_ref == 'feat/issue-29-west-gate-landscape'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 36
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [chromium, webkit]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Record source identity and capacity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .work/issue-29/evidence
+          {
+            date -u +%FT%TZ
+            git rev-parse HEAD HEAD^{tree}
+            git --version
+            node --version
+            df -h .
+            df -i .
+            git ls-files -s src/main.js src/nature-finish.js src/phase3b.js src/west-gate-finish.js scripts/issue29-browser.mjs tests/west-gate-landscape.test.mjs
+          } > .work/issue-29/evidence/identity.txt
+      - name: Install locked dependencies and browser
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/issue-29/browsers
+          TMPDIR: ${{ github.workspace }}/.work/issue-29
+        run: |
+          npm ci
+          npx playwright install --with-deps ${{ matrix.engine }}
+      - name: Run baseline and candidate comparison
+        shell: bash
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.work/issue-29/browsers
+          TMPDIR: ${{ github.workspace }}/.work/issue-29
+          ISSUE29_ENGINE: ${{ matrix.engine }}
+          ISSUE29_OUT: .work/issue-29/evidence
+        run: |
+          set -euo pipefail
+          export ISSUE29_BASELINE_DIR="$PWD/.work/issue-29/base"
+          git worktree add --detach "$ISSUE29_BASELINE_DIR" 148317e52a7dc5efba8aa519538a476dfead18c5
+          node --test tests/west-gate-landscape.test.mjs | tee "$ISSUE29_OUT/unit.txt"
+          npm run build | tee "$ISSUE29_OUT/build-after.txt"
+          (
+            cd "$ISSUE29_BASELINE_DIR"
+            set -euo pipefail
+            npm ci
+            npm run build
+          ) > "$ISSUE29_OUT/build-before.txt" 2>&1
+          node "$ISSUE29_BASELINE_DIR/node_modules/vite/bin/vite.js" preview --host 127.0.0.1 --port 4370 --strictPort --config "$ISSUE29_BASELINE_DIR/vite.config.js" "$ISSUE29_BASELINE_DIR" > "$ISSUE29_OUT/server-before.txt" 2>&1 &
+          before=$!
+          node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4371 --strictPort > "$ISSUE29_OUT/server-after.txt" 2>&1 &
+          after=$!
+          trap 'kill "$before" "$after" 2>/dev/null || true' EXIT
+          for port in 4370 4371; do
+            for n in $(seq 1 30); do curl -fsS "http://127.0.0.1:$port/" >/dev/null && break || sleep 1; done
+            curl -fsS "http://127.0.0.1:$port/" >/dev/null
+          done
+          node scripts/issue29-browser.mjs | tee "$ISSUE29_OUT/browser.txt"
+      - name: Seal collected evidence (including failures)
+        if: always()
+        shell: bash
+        run: |
+          cd .work/issue-29/evidence
+          find . -maxdepth 1 -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: issue29-${{ matrix.engine }}-${{ github.event.pull_request.head.sha }}-attempt-${{ github.run_attempt }}
+          path: .work/issue-29/evidence
+          if-no-files-found: error
+          retention-days: 30

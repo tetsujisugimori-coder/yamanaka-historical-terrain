@@ -74,6 +74,8 @@ export function createSurfaceFinish(){
    if(!['cloth','leaf','skin'].includes(role)){
     mat.bumpMap=role==='wood'?wood:soil;mat.bumpScale=role==='wood'?.022:.065;mat.map=role==='wood'?wood:soil;
     mat.roughnessMap=role==='wood'?wood:soil;mat.roughness=.95;mat.metalness=0;
+    // Warm the existing gate timbers only in D; never modify the base material.
+    if(mesh.userData.elementId==='wb-gate'&&role==='wood')mat.color.lerp(new THREE.Color('#80644b'),.18);
    }
    pair.finish=mat;
   }
