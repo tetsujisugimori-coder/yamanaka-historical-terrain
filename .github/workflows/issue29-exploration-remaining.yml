@@ -1,0 +1,155 @@
+name: Issue 29 exploration cancelled remainder
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/issue29-exploration-remaining.yml'
+      - 'scripts/phase3e-negative.mjs'
+      - 'docs/issue-29/REMAINING-CI.md'
+permissions:
+  contents: read
+
+jobs:
+  negative:
+    if: github.head_ref == 'feat/issue-29-west-gate-landscape'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      EVIDENCE_DIR: .work/issue-29/remaining/negative
+      TMPDIR: ${{ github.workspace }}/.work/issue-29/remaining/tmp-negative
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify source identity and capacity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$EVIDENCE_DIR" "$TMPDIR"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > "$EVIDENCE_DIR/identity.txt"
+          printf 'BASE_EVIDENCE_HEAD=1061ee060f46e3ac1b1e19766e69d2660223171f\n' >> "$EVIDENCE_DIR/identity.txt"
+          { df -B1 .; df -i .; node --version; } > "$EVIDENCE_DIR/environment.txt"
+          git diff --exit-code 1061ee060f46e3ac1b1e19766e69d2660223171f HEAD -- src public/data package.json package-lock.json scripts/phase3e-browser.mjs scripts/phase3e-safety.mjs scripts/phase3e-async.mjs tests/exploration.test.mjs
+      - run: npm ci
+      - name: Run only original three negative controls
+        shell: bash
+        env:
+          PHASE3E_NEGATIVE: .work/issue-29/remaining/negative/raw
+        run: |
+          set +e
+          node scripts/phase3e-negative.mjs > "$EVIDENCE_DIR/stdout.log" 2> "$EVIDENCE_DIR/stderr.log"
+          code=$?
+          printf 'negative\t%s\n' "$code" > "$EVIDENCE_DIR/exit-codes.tsv"
+          if [ "$code" -ne 0 ]; then exit "$code"; fi
+          node --input-type=module -e '
+            import{readFile,stat}from"node:fs/promises";import assert from"node:assert/strict";
+            const d="."+"/.work/issue-29/remaining/negative/raw/";
+            const r=JSON.parse(await readFile(d+"results.json","utf8"));
+            const expected=["omit-obstacles","permit-moats","skip-edge-probes"];
+            assert.equal(r.head,process.env.PR_HEAD_SHA);
+            assert.deepEqual(r.results.map(x=>x.id),expected);
+            for(const row of r.results){
+              assert.equal(row.redExit,1);assert.equal(row.greenExit,0);
+              for(const phase of ["RED","GREEN"]){
+                const f=d+row.id+"-"+phase+".log";
+                assert.ok((await stat(f)).size>0,"nonempty "+f);
+              }
+            }
+          ' > "$EVIDENCE_DIR/verification.log" 2>&1
+      - name: Seal bounded raw evidence
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$EVIDENCE_DIR"
+          (cd "$EVIDENCE_DIR" && find . -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: issue29-remaining-negative-${{ github.event.pull_request.head.sha }}-attempt-${{ github.run_attempt }}
+          path: .work/issue-29/remaining/negative
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+  async:
+    if: github.head_ref == 'feat/issue-29-west-gate-landscape'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      EVIDENCE_DIR: .work/issue-29/remaining/async
+      TMPDIR: ${{ github.workspace }}/.work/issue-29/remaining/tmp-async
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify source identity and capacity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$EVIDENCE_DIR" "$TMPDIR"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > "$EVIDENCE_DIR/identity.txt"
+          printf 'BASE_EVIDENCE_HEAD=1061ee060f46e3ac1b1e19766e69d2660223171f\n' >> "$EVIDENCE_DIR/identity.txt"
+          { df -B1 .; df -i .; node --version; } > "$EVIDENCE_DIR/environment.txt"
+          git diff --exit-code 1061ee060f46e3ac1b1e19766e69d2660223171f HEAD -- src public/data package.json package-lock.json scripts/phase3e-browser.mjs scripts/phase3e-safety.mjs scripts/phase3e-async.mjs tests/exploration.test.mjs
+      - run: npm ci
+      - name: Build unchanged candidate and install Chromium only
+        run: |
+          npm run build > "$EVIDENCE_DIR/build.log" 2>&1
+          npx playwright install --with-deps chromium > "$EVIDENCE_DIR/install.log" 2>&1
+      - name: Run only pending-reset and 404 async controls
+        shell: bash
+        env:
+          TEST_URL: http://127.0.0.1:4317
+          PHASE3E_ASYNC: .work/issue-29/remaining/async/raw
+        run: |
+          set -euo pipefail
+          npm run dev -- --port 4317 --strictPort > "$EVIDENCE_DIR/server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for n in $(seq 1 30); do
+            if curl -fsS "$TEST_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS "$TEST_URL/" > /dev/null
+          set +e
+          timeout --signal=TERM --kill-after=10s 420s node scripts/phase3e-async.mjs > "$EVIDENCE_DIR/stdout.log" 2> "$EVIDENCE_DIR/stderr.log"
+          code=$?
+          printf 'async\t%s\n' "$code" > "$EVIDENCE_DIR/exit-codes.tsv"
+          if [ "$code" -ne 0 ]; then exit "$code"; fi
+          node --input-type=module -e '
+            import{readFile}from"node:fs/promises";import assert from"node:assert/strict";
+            const r=JSON.parse(await readFile(".work/issue-29/remaining/async/raw/results.json","utf8"));
+            assert.equal(r.head,process.env.PR_HEAD_SHA);
+            assert.deepEqual(r.rows.map(x=>x.mode),["pending-reset","404"]);
+            for(const row of r.rows){
+              assert.equal(row.status,"PASS");assert.deepEqual(row.errors,[]);
+              assert.ok(row.observation,"missing observed outcome");
+            }
+          ' > "$EVIDENCE_DIR/verification.log" 2>&1
+      - name: Seal bounded raw evidence
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$EVIDENCE_DIR"
+          (cd "$EVIDENCE_DIR" && find . -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 -r sha256sum > SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: issue29-remaining-async-${{ github.event.pull_request.head.sha }}-attempt-${{ github.run_attempt }}
+          path: .work/issue-29/remaining/async
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
