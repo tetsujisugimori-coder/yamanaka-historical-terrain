@@ -35,13 +35,78 @@ const views={
  gate:'[data-station=wb-gate]',join:'[data-western-overview=wb-gate]',bridge:'[data-exploration-station=ic-bridge]',
  moat:'[data-station=wb-moat]',bank:'[data-station=bank]',far:'#landscape-overview',
 };
+const protectedViews=new Set(['current','inferred','finishOff']);
+const captureRaw=(p,includePng=false)=>p.evaluate(async includePng=>{
+ const source=document.querySelector('#viewport canvas');
+ if(document.hidden||!source?.width||!source.height)throw Error('raw terrain frame unavailable');
+ const {width,height}=source,c=document.createElement('canvas');c.width=width;c.height=height;
+ const ctx=c.getContext('2d',{willReadFrequently:true});
+ function frame(){
+  // The existing visibilitychange listener renders synchronously. Copy before this
+  // task returns: WebGL is intentionally not configured to preserve its buffer.
+  document.dispatchEvent(new Event('visibilitychange'));
+  ctx.clearRect(0,0,width,height);ctx.drawImage(source,0,0);
+  const {data}=ctx.getImageData(0,0,width,height);
+  let opaque=0,first=null,diverse=false;
+  for(let i=0;i<data.length;i+=4)if(data[i+3]===255){
+   opaque++;
+   const rgb=(data[i]<<16)|(data[i+1]<<8)|data[i+2];
+   if(first===null)first=rgb;
+   else if(first!==rgb)diverse=true;
+  }
+  if(opaque!==width*height||!diverse)throw Error('raw terrain frame is transparent or uniform');
+  return data;
+ }
+ const digest=async data=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data)),x=>x.toString(16).padStart(2,'0')).join('');
+ const pixels=frame(),repeat=frame();
+ // The canvas is opaque; encode precisely the audited RGBA, independently
+ // decodable without DOM compositing or premultiplication loss.
+ let pngData=null;
+ if(includePng){
+  ctx.putImageData(new ImageData(pixels,width,height),0,0);
+  pngData=c.toDataURL('image/png');
+ }
+ const sha256=await digest(pixels),repeatSha256=await digest(repeat);
+ if(repeatSha256!==sha256)throw Error('same-scene raw terrain frames differ');
+ const changed=pixels.slice();changed[(Math.floor(height/2)*width+Math.floor(width/2))*4]^=1;
+ return {width,height,sha256,mutatedSha256:await digest(changed),pngData};
+},includePng);
+function requireSameRaw(a,b,label){
+ assert.equal(a.width,b.width,`raw width drift: ${label}`);
+ assert.equal(a.height,b.height,`raw height drift: ${label}`);
+ assert.equal(a.sha256,b.sha256,`raw terrain pixels drift: ${label}`);
+}
 const metrics=d=>({camera:d.camera,target:d.target,fov:d.cameraFov,canvas:d.canvas,drawCalls:d.drawCalls,triangles:d.triangles});
 async function view(p,key,selector,out,row){
  await p.locator(selector).click();
  if(key==='bridge')await p.waitForFunction(()=>window.__terrainDiagnostics().state.station==='ic-bridge');
  if(key==='gate'||key==='moat'||key==='bank')await p.waitForFunction(id=>window.__terrainDiagnostics().state.station===id,{gate:'wb-gate',moat:'wb-moat',bank:'bank'}[key]);
  await checkpoint(p);const d=await snap(p),result={...metrics(d),station:d.state.station,western:d.phase3b.visible,shadows:d.phase3b.shadows};
- if(out){const bytes=await p.locator('#viewport canvas').screenshot({path:out,timeout:15000});result.png={name:out.split('/').at(-1),bytes:bytes.length,sha256:hash(bytes)};row.images++;}
+ if(protectedViews.has(key)||out){
+  const {mutatedSha256,pngData,...raw}=await captureRaw(p,Boolean(out));result.raw=raw;
+  if(out){
+   assert.ok(pngData?.startsWith('data:image/png;base64,'),'raw terrain PNG missing');
+   const rawPng=Buffer.from(pngData.slice('data:image/png;base64,'.length),'base64');
+   const rawPath=out.replace(/\.png$/,'-raw.png');
+   await writeFile(rawPath,rawPng,{flag:'wx'});
+   result.rawPng={name:rawPath.split('/').at(-1),bytes:rawPng.length,sha256:hash(rawPng)};row.rawImages++;
+   const canvas=p.locator('#viewport canvas');
+   const bytes=await canvas.screenshot({path:out,timeout:15000});
+   result.png={name:out.split('/').at(-1),bytes:bytes.length,sha256:hash(bytes)};row.images++;
+   if(key==='current'&&out.endsWith('-after.png')){
+    // A one-channel one-level pixel change must fail the exact same comparator.
+    assert.throws(()=>requireSameRaw(raw,{...raw,sha256:mutatedSha256},'one-channel negative control'),/raw terrain pixels drift/);
+    // Move only the DOM compositing, not the WebGL framebuffer or product layout.
+    const style=await p.addStyleTag({content:'#viewport canvas{transform:translateY(1px)!important}'});
+    try{
+     const shifted=hash(await canvas.screenshot({timeout:15000}));
+     assert.notEqual(shifted,result.png.sha256,'composited shift control did not change screenshot');
+     requireSameRaw(raw,await captureRaw(p),'composited shift control');
+     row.imageControls={oneChannelChange:'REJECTED',compositedShift:'RAW_IDENTICAL',shiftedScreenshotSha256:shifted,mutatedRawSha256:mutatedSha256};
+    }finally{await style.evaluate(e=>e.remove());}
+   }
+  }
+ }
  return result;
 }
 async function probe(browser,config,url,version,row,recordImages){
@@ -116,7 +181,7 @@ async function probe(browser,config,url,version,row,recordImages){
   await p.screenshot({path:join(dir,`${row.key}-${version}-failure.png`),timeout:3000}).catch(()=>{});
  }finally{await context.close();}
 }
-const strip=({png,...rest})=>rest;
+const strip=({png,raw,rawPng,...rest})=>rest;
 const requested=process.env.ISSUE29_ENGINE?[process.env.ISSUE29_ENGINE]:['chromium','webkit'];
 const widths=process.env.ISSUE29_LOCAL_WIDTH?[Number(process.env.ISSUE29_LOCAL_WIDTH)]:[375,390,765,1280];
 const motions=['no-preference','reduce'];
@@ -129,7 +194,7 @@ for(const engine of requested){
   await output();continue;
  }
  for(const width of widths)for(const motion of motions){
-  const row={key:`${engine}-${width}-${motion}`,engine,width,motion,browserVersion:browser.version(),images:0};
+  const row={key:`${engine}-${width}-${motion}`,engine,width,motion,browserVersion:browser.version(),images:0,rawImages:0};
   const images=(width===1280&&motion==='no-preference')||(width===375&&motion==='reduce');
   try{
    await probe(browser,{width,motion},process.env.ISSUE29_BASE_URL??'http://127.0.0.1:4370','before',row,images);
@@ -137,12 +202,12 @@ for(const engine of requested){
    for(const version of ['before','after'])assert.equal(row[version].status,'PASS',row[version].reason);
    for(const [key,after] of Object.entries(row.after.views)){
     const before=row.before.views[key];assert.deepEqual(strip(after),strip(before),`pose/draw/triangle drift: ${key}`);
-    if(images&&['current','inferred','finishOff'].includes(key))assert.equal(after.png.sha256,before.png.sha256,`protected image drift: ${key}`);
+    if(protectedViews.has(key))requireSameRaw(after.raw,before.raw,key);
    }
    assert.deepEqual(row.after.posts,row.before.posts);
    assert.deepEqual(row.after.sections,row.before.sections);
    assert.deepEqual(row.after.walkStart,row.before.walkStart);
-   if(images)assert.ok(Object.keys(views).some(key=>row.before.views[key].png.sha256!==row.after.views[key].png.sha256),'D image change not observed');
+   if(images)assert.ok(Object.keys(views).some(key=>row.before.views[key].raw.sha256!==row.after.views[key].raw.sha256),'D image change not observed');
    row.status='PASS';
   }catch(e){row.status='FAIL';row.reason=e.message;}
   report.rows.push(row);console.log(row.key,row.status,row.reason??'');await output();
