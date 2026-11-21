@@ -1,4 +1,4 @@
-name: West gate left door: delivered browser restoration
+name: 'West gate left door: delivered browser restoration'
 on:
   pull_request:
     paths:
