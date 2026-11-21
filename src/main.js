@@ -17,7 +17,7 @@ import {sampleSurfaceHeight} from './surface.js';
 import {createSectionExhibit} from './section-exhibit.js';
 import {landscapeModel,landscapeColor} from './landscape.js';
 import {WEST_GATE_FINISH} from './west-gate-finish.js';
-import {createWestGateDoorInspector,leftDoorWorldTarget} from './west-gate-door-inspection.js';
+import {createWestGateDoorInspector,leftDoorDetailWorldTarget} from './west-gate-door-inspection.js';
 import {contextOutsidePatch,createSurfaceFinish} from './phase3b.js';
 import {supportedPose,validateInnerMetadata,createInnerPanel} from './phase3c.js';
 import {DEFENCE_PAIRS,validateConnectedMetadata,createConnectedPanel} from './phase3d.js';
@@ -112,13 +112,13 @@ async function initialize(features){
    let gateVisible=false;westernGroup.traverseVisible(o=>{if(o.isMesh&&o.userData.elementId==='wb-gate')gateVisible=true;});
    return gateVisible;
   },
-  target:()=>{
+  target:(part)=>{
    const station=innerMeta?.stations.find(s=>s.id==='ic-station-westgate');
    if(!station)throw Error('西木戸口の観察地点が未読込です');
    if(Math.abs(camera.position.x-station.eye[0])>1e-3||Math.abs(camera.position.z+station.eye[1])>1e-3)throw Error('既存の西木戸口地点を選び直してください');
    supportedPose(station,stationSurfaces(),state.exaggeration,camera.position.y);
    const ground=sampleSurfaceHeight(stationSurfaces(),-191,-35,state.exaggeration);
-   return leftDoorWorldTarget(ground,state.exaggeration);
+   return leftDoorDetailWorldTarget(ground,state.exaggeration,part);
   }
  });
  const modelFeatures=features.filter(f=>f.reconstruction&&!f.landscape);
