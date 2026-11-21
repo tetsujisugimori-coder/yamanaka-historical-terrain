@@ -32,6 +32,9 @@ let sceneryUnavailable=false,westernUnavailable=false,innerUnavailable=false,inn
 const camera=new THREE.PerspectiveCamera();camera.position.set(1,2,3);camera.fov=38;const controls={target:new THREE.Vector3(4,5,6),update(){}};
 const $=s=>{if(!elements.has(s))elements.set(s,{textContent:'',hidden:false,closest(){return this;},replaceChildren(){},remove(){}});return elements.get(s);},$$=()=>[];
 const render=()=>events.push('render'),syncLandscape=()=>{},paint=()=>{},applyLayers=()=>{},placeMarkers=()=>{},makeRoute=()=>{},setRenderControls=()=>{},reportReady=()=>{},syncInnerNavigation=()=>{},resize=()=>{},focusPreset=()=>{},leaveStation=()=>{};
+// The extracted setView now notifies a view-only gate inspector. Mock only its
+// UI notification here; keep camera and intent behavior from the real source.
+const gateInspector={sync(){events.push('gate-inspector-sync');}};
 const sectionExhibit={sync(){}},castleOverview={deactivate(){}},features=[],reading={addFeatures(){}},document={createElement(){return {};}};
 function getModel(view,variant){return new Promise((resolve,reject)=>requests.push({view,variant,resolve,reject}));}
 function beginIntent(){return intents.begin();}function showError(){events.push('latest-error');}
