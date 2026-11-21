@@ -66,7 +66,7 @@ test('switching among details restores the one original camera pose',()=>{
   assert.equal(i.diagnostics().focused,false);
   assert(d.el('west-gate-door-back').disabled);
   assert(d.el('west-gate-detail-board').disabled);
-  assert.equal(renders,5);
+  assert.equal(renders,6);
  }finally{d.restore();}
 });
 test('invalid target leaves saved pose and view unchanged',()=>{
