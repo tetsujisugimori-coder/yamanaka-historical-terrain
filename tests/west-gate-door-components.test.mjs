@@ -87,3 +87,42 @@ test('invalid target leaves saved pose and view unchanged',()=>{
   i.cancel();assert.equal(i.diagnostics().focused,false);assert.equal(renders,2);
  }finally{d.restore();}
 });
+
+test('C to A to C clears stale door guidance and permits a fresh observation',()=>{
+ const d=fixture();
+ try{
+  let allowed=true,renders=0;
+  const camera={position:new V([1,2,3]),fov:60,updateProjectionMatrix(){},lookAt(){}};
+  const controls={target:new V([4,5,6])};
+  const inspector=createWestGateDoorInspector({camera,controls,render:()=>renders++,canInspect:()=>allowed,target:n=>leftDoorDetailWorldTarget(548.38,1,n)});
+  const status=d.el('west-gate-door-status');
+  assert.equal(status.textContent,'左扉全体または観察部位を選ぶと注視できます。');
+  d.el('west-gate-detail-upperRail').onclick();
+  assert.match(status.textContent,/上の横桟.*注視中/);
+  assert.equal(inspector.diagnostics().focused,true);
+  const observedTarget=controls.target.toArray(),observedFov=camera.fov;
+  allowed=false;inspector.sync();
+  assert.equal(d.el('west-gate-door-inspection').hidden,true);
+  assert.equal(inspector.diagnostics().focused,false);
+  assert.equal(d.el('west-gate-door-back').disabled,true);
+  assert.equal(status.textContent,'西木戸口を選択すると観察できます。');
+  assert.deepEqual(camera.position.toArray(),[1,2,3]);
+  assert.deepEqual(controls.target.toArray(),observedTarget);
+  assert.equal(camera.fov,observedFov);
+  allowed=true;inspector.sync();
+  assert.equal(d.el('west-gate-door-inspection').hidden,false);
+  assert.equal(d.el('west-gate-door-focus').disabled,false);
+  assert.equal(d.el('west-gate-door-back').disabled,true);
+  assert.equal(status.textContent,'左扉全体または観察部位を選ぶと注視できます。');
+  for(const name of ['board','upperRail','lowerRail','postSide']){
+   const button=d.el('west-gate-detail-'+name);
+   assert.equal(button.disabled,false);
+   assert.equal(button.attrs['aria-pressed'],'false');
+  }
+  assert.equal(renders,1);
+  d.el('west-gate-detail-board').onclick();
+  assert.equal(inspector.diagnostics().part,'board');
+  assert.equal(d.el('west-gate-door-back').disabled,false);
+  assert.match(status.textContent,/板材.*注視中/);
+ }finally{d.restore();}
+});
