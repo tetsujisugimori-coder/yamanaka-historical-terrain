@@ -70,14 +70,17 @@ export function createWestGateDoorInspector({camera,controls,render,canInspect,t
   const button=document.createElement('button');button.id='west-gate-detail-'+part;button.type='button';button.textContent=spec.label;
   button.setAttribute('aria-pressed','false');details.append(button);detailButtons.set(part,button);
  }
- const status=document.createElement('p');status.id='west-gate-door-status';status.setAttribute('role','status');status.textContent='西木戸口を選択すると観察できます。';
+ const idleStatus='西木戸口を選択すると観察できます。';
+ const readyStatus='左扉全体または観察部位を選ぶと注視できます。';
+ const status=document.createElement('p');status.id='west-gate-door-status';status.setAttribute('role','status');status.textContent=idleStatus;
  section.append(heading,note,actions,details,status);
  document.querySelector('#inner-observation').append(section);
  let saved=null,part=null;
  function sync(){
   const visible=Boolean(canInspect());
   section.hidden=!visible;
-  if(!visible){saved=null;part=null;}
+  if(!visible){saved=null;part=null;status.textContent=idleStatus;}
+  else if(status.textContent===idleStatus)status.textContent=readyStatus;
   focus.disabled=!visible||Boolean(saved);
   back.disabled=!visible||!saved;
   for(const [name,button] of detailButtons){
@@ -86,7 +89,7 @@ export function createWestGateDoorInspector({camera,controls,render,canInspect,t
   }
   return visible;
  }
- function cancel(){saved=null;part=null;status.textContent='西木戸口を選択すると観察できます。';sync();}
+ function cancel(){saved=null;part=null;status.textContent=idleStatus;sync();}
  function inspect(nextPart){
   if(!canInspect()||!Object.hasOwn(WEST_GATE_DOOR_DETAILS,nextPart))return;
   if(nextPart==='leaf'&&saved)return;
