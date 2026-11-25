@@ -109,3 +109,11 @@ Issue21。Fの狭域ZをC2接合へ改訂、QGIS/Blender原本とGLB再生成を
 Issue #52。PR51 merge 4b7a11dを基準に別branchで推定C別レイヤーを実装中。候補採否・表示契約は製品前commit a1543a7に固定。既存模型や相対関係から区域形状を捏造せず、今回11区域の採用候補0・geometry=null維持。原本212/模型22のpath/size/SHA固定。正常/故障/本番16条件/独立レビュー/原ZIP保全は新HEADで確認し、完了までPARTIAL・限定マージNO。マージ・Pages公開なし。
 
 - Stage 3-B5（2026-11-15 23:23 JST）実装HEAD3208e41で622 Node PASS、保護230files/212原本/22模型不変。候補0/11未配置維持。局所ブラウザ24枠は環境不足NOT_TESTED。独立3指摘は同反例修正、CI/原票保全未完につきPARTIAL・限定マージNO。詳細docs/stage3b5/RESULTS.md。
+
+## 2026-11-16 JST Stage 3-B6
+Issue54、PR53 merged基準の専用branch。11区域の根拠/推論/UNKNOWNと既存22模型の対照閲覧。関連の新史実認定なし。初回647 Nodeの1fixture失敗とブラウザ環境NOT_TESTEDを保持、648 Node PASS。独立P2三件同反例修正、正式CI/証拠保全はPENDING。Stage3B HOLD、Draft提出まで。
+
+## 2026-11-16 Stage 3-B6a 着手
+PR55の未実施P2三経路（逆リンク実押下、Tab/ShiftTab/Space、実要求を明示保留する競合）の限定再検証。HEAD4489311基準、既存branchへ集約。検査実装前契約は docs/stage3b6a/CONTRACT.md、結果は同RESULTS.md。旧成果と未commitレビューを保持。新HEAD正式CI・独立原票監査完了まではPARTIAL/限定マージNO。DraftとStage3-B HOLDを維持。
+
+Stage 3-B6a局所追補：旧製品の俯瞰ボタンfocus喪失を同runner正常/遅延2反例で再現し、最新操作かつbodyへ喪失時のみ復帰する最小修正。同反例GREEN、他10正常維持。Chromium8通常/64競合/3故障PASS。集合ガード8契約と最終runner smoke12PASS。旧配信接続失敗と未追跡source制限を保持し、WebKit/新HEAD正式結果へ流用しない。

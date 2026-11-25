@@ -1,0 +1,2 @@
+# B6b 固定契約
+基準 fb0939bb/tree ed067220。検査器・合成対照・文書のみ。製品/依存/workflow不変。304と先行200の候補相関を本文同一性・ブラウザ使用実バイト証明にしない。304は本文採取を試行し、例外を応答に結合する。新しい検査器も例外/未確認本文をPASSにしない。既存normal/race/fault集合・期待値を保持。request/response IDは同case内の観測器IDでありnative IDではない。秘密ヘッダーはallowlist以外を記録しない。旧原票は非破壊。局所合成、独立審査後のみ既存正式CIへ提出。PR15/push4=19 run、専用2イベント×2engine、追加手動dispatchなし。Pages deployはmain限定。課金の現在残額はUNKNOWN、既存$5停止方針の変更なし。容量予算追加4GiB、空き2GiB未満で開始しない。

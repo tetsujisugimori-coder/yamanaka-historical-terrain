@@ -1,0 +1,11 @@
+# B6j preservation contract
+
+Central v0.2.0 fixed reference `4695c3ce2d61e66df0dd36a4312373459e1557d4` (tree `b39380c8e767142d36a7b166fdb1a2bf5de20d2a`): policy, gates-and-audit, authorization-and-rescue, adoption-record. Formal central adoption is not destination authorization.
+
+Ordinary code/docs: Level1. Important original CI ZIPs, measured raw records, original Git bundle and audit evidence: Level2. No Level3 assertion. SOLO_STANDARD is permitted only with separate session/execution/verification directory and direct retrieval from the authorized destination. Technical verification PASS is not human organizational independence; same owner/platform remains LIMITED_SHARED_OWNER.
+
+Approval reuse requires matching target,classification,destination,actor,permission,retention,deletion and validity scope. Windows/owner-only Space/Library are not interchangeable permissions. The owner subsequently approved this task's non-confidential formal CI originals and audit records for owner-only Library storage and separate-session direct retrieval, with one-year intended retention from the saving date. Existing originals remain unchanged; deletion, movement and overwrite require separate approval. This approval does not prove the service's retention mechanism, whose guarantee remains UNKNOWN. No new Library upload had occurred at this preparation checkpoint. Available Space listing did not identify a Yamanaka preservation destination. Do not publish private locators or approval details.
+
+Preserve original names,run/artifact IDs,official size/digest,actual size/SHA,full bytes,all ZIP CRCs,duplicate/unsafe paths and manifest exact set/size/SHA. Missing manifest means coverage UNKNOWN, not implicit completeness. Use new directories and never delete/move/overwrite existing evidence. Keep failed attempts. Save followed by metadata-only read is not verification.
+
+Report separately CUSTODY_STATUS,VERIFICATION_STATUS,INDEPENDENCE_STATUS,ACCEPTANCE_STATUS. Pending authorization or transfer/readback failure must not become PASS. Current local source/records are retained but do not establish durable custody. Formal acceptance requires exact submitted HEAD correspondence, required finite-process CI, independent review and Level2 save/readback. Browser acceptance and merge remain separate gates.

@@ -1,0 +1,75 @@
+name: Stage 3-B6a interaction acceptance
+on:
+  push:
+    branches: ['feat/stage3b6-comparison']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  inferred:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    env:
+      BROWSER_FILTER: ${{ matrix.browser }}
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      TMPDIR: ${{ github.workspace }}/.work/stage3b6a/tmp
+      EVIDENCE_DIR: ${{ github.workspace }}/evidence-run/stage3b6a-${{ matrix.browser }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Identity and source before execution
+        run: |
+          mkdir -p "$TMPDIR" "$EVIDENCE_DIR/source-before"
+          git show -s --format='HEAD=%H%nTREE=%T%nPARENTS=%P' > "$EVIDENCE_DIR/identity.txt"
+          { uname -a; node --version; python3 --version; df -B1 .; df -i .; } > "$EVIDENCE_DIR/environment.txt"
+          git ls-files -z src scripts tests .github docs/stage3b6 docs/stage3b6a research package.json package-lock.json vite.config.js index.html AGENTS.md public/data/inferred-regions.json public/data/castle-overview.json | xargs -0 cp --parents --target-directory="$EVIDENCE_DIR/source-before"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Contracts, preservation and builds
+        run: |
+          set +e
+          result=0
+          check() { "$@" > "$EVIDENCE_DIR/$name.log" 2>&1; code=$?; printf '%s\t%s\n' "$name" "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"; if [ "$code" -ne 0 ]; then result=1; fi; }
+          name=unit; check node --test --test-concurrency=1 tests/*.test.mjs
+          name=preservation; check node scripts/stage3b5-preservation.mjs
+          name=protected; check node scripts/stage3b-preservation-check.mjs
+          name=generated; check node scripts/stage3b-overview-generate.mjs --verify
+          name=diff; check git diff --check
+          name=build; check npm run build
+          exit "$result"
+      - name: Collect finite-process evidence even on failure
+        if: always()
+        run: |
+          python3 scripts/stage3b6h-artifacts.py collect "$EVIDENCE_DIR" .work/stage3b6g > "$EVIDENCE_DIR/finite-process-collection.log" 2>&1
+      - name: Production guide matrix and injected data controls
+        run: |
+          ./node_modules/.bin/vite preview --host 127.0.0.1 --port 4395 --strictPort > "$EVIDENCE_DIR/server.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          ready=0
+          for i in $(seq 1 60); do if curl -fsS http://127.0.0.1:4395/ >/dev/null; then ready=1; break; fi; sleep 1; done
+          test "$ready" = 1
+          set +e
+          TEST_URL=http://127.0.0.1:4395 node scripts/stage3b6-browser.mjs > "$EVIDENCE_DIR/browser.log" 2>&1
+          code=$?
+          printf 'browser\t%s\n' "$code" >> "$EVIDENCE_DIR/exit-codes.tsv"
+          exit "$code"
+      - name: Evidence inventory including hidden source
+        if: always()
+        run: python3 scripts/stage3b6h-artifacts.py seal "$EVIDENCE_DIR"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage3b6a-${{ matrix.browser }}-${{ github.sha }}
+          path: evidence-run/stage3b6a-${{ matrix.browser }}
+          include-hidden-files: true
+          if-no-files-found: error

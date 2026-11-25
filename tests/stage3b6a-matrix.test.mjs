@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {matrixPlan,assertMatrix} from '../scripts/stage3b6-matrix-contract.mjs';
+const smokeKeys=['chromium-375-no-preference','chromium-375-no-preference-race-region-normal','chromium-375-no-preference-race-region-delayed','chromium-375-no-preference-race-model-normal','chromium-375-no-preference-race-model-delayed','chromium-375-no-preference-race-overview-normal','chromium-375-no-preference-race-overview-delayed','chromium-375-no-preference-race-return-normal','chromium-375-no-preference-race-return-delayed','chromium-503','chromium-invalid','chromium-empty'];
+const normal=smokeKeys.map((key,i)=>({key,kind:i===0?'PRODUCTION':i<9?'CONTROLLED_RACE':'INJECTED',status:'PASS'}));
+test('B6a hand-listed smoke 12 keys and coverage accepted',()=>{const p=matrixPlan('chromium',true);assert.deepEqual(p.rows.map(r=>r.key),smokeKeys);assert.equal(assertMatrix(normal,p).rows,12);});
+test('B6a full fixed matrix is 16 production + 128 controlled + 6 faults',()=>{const p=matrixPlan();assert.equal(p.rows.length,150);assert.equal(p.rows.filter(r=>r.kind==='PRODUCTION').length,16);assert.equal(p.rows.filter(r=>r.kind==='CONTROLLED_RACE').length,128);assert.equal(p.rows.filter(r=>r.kind==='INJECTED').length,6);assert.deepEqual(p.widths,[375,390,765,1280]);assert.deepEqual(p.motions,['no-preference','reduce']);assert.equal(matrixPlan('webkit').rows.length,75);});
+test('B6a missing normal or race is refused',()=>{for(const index of [0,4])assert.throws(()=>assertMatrix(normal.filter((_,i)=>i!==index),matrixPlan('chromium',true)),/MISSING_ROWS/);});
+test('B6a duplicate is refused even when total row count is unchanged',()=>{const r=structuredClone(normal);r[4]=r[3];assert.throws(()=>assertMatrix(r,matrixPlan('chromium',true)),/DUPLICATE_ROW/);});
+test('B6a extra condition is refused',()=>assert.throws(()=>assertMatrix([...normal,{key:'chromium-999-reduce',kind:'PRODUCTION'}],matrixPlan('chromium',true)),/EXTRA_ROW/));
+test('B6a fault cannot become production',()=>{const r=structuredClone(normal);r[11].kind='PRODUCTION';assert.throws(()=>assertMatrix(r,matrixPlan('chromium',true)),/WRONG_KIND/);});
+test('B6a unknown or empty engine refuses before launch',()=>{for(const value of ['firefox','Chromium',''])assert.throws(()=>matrixPlan(value),/UNKNOWN_ENGINE/);});
+test('B6a coverage PASS does not turn product FAIL into success',()=>{const r=structuredClone(normal);r[4].status='FAIL';assert.equal(assertMatrix(r,matrixPlan('chromium',true)).status,'PASS');assert.equal(r[4].status,'FAIL');});
