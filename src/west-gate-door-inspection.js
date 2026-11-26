@@ -135,7 +135,7 @@ export function createWestGateDoorInspector({camera,controls,render,canInspect,t
    const x=data[side];
    const term=document.createElement('dt');term.textContent=label+'門扉';
    const description=document.createElement('dd');
-   description.textContent='板群中心 E / N '+en(x.boardCenter)+'、横桟 E / N '+en(x.railCenter)+'、門柱 E / N '+en(x.postCenter)+'。制作角 '+(x.yawRadians*180/Math.PI).toFixed(2)+'°。'+(x.postGround?'模型の柱下端−表示地表 '+x.postGround.gap.toFixed(3)+' m（負＝模型が地表より低い）。':'柱下端と表示地表の差はUNKNOWN。');
+   description.textContent=(x.extent?'扉全体の模型外形 E × N × 高さ '+x.extent.map(v=>v.toFixed(3)).join(' × ')+' m（門柱を除く）。':'')+'板群中心 E / N '+en(x.boardCenter)+'、横桟 E / N '+en(x.railCenter)+'、門柱 E / N '+en(x.postCenter)+'。制作角 '+(x.yawRadians*180/Math.PI).toFixed(2)+'°。'+(x.postGround?'模型の柱下端−表示地表 '+x.postGround.gap.toFixed(3)+' m（負＝模型が地表より低い）。':'柱下端と表示地表の差はUNKNOWN。');
    list.append(term,description);
   }
   const support=document.createElement('p');

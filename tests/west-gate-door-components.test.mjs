@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+import {landscapeModel} from '../src/landscape.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -185,4 +187,22 @@ test('switching leaves, toggling comparison and failing safely retain the origin
   assert.equal(active,null);assert.equal(inspector.diagnostics().side,'left');
   assert.equal(inspector.diagnostics().comparisonOpen,false);
  }finally{d.restore();}
+});
+
+test('display batching preserves independent authored gate bounds without splitting batches',()=>{
+ const scene=new THREE.Group(),material=new THREE.MeshStandardMaterial();
+ for(const [index,x] of [[0,-191],[1,-190]]){
+  const mesh=new THREE.Mesh(new THREE.BoxGeometry(.25,1,1),material);
+  // The GLTFLoader's authored ID differs from its sanitized Object3D.name.
+  mesh.name='sanitized'+index;
+  mesh.userData={name:'wb-gate.gate.door.0.'+index,elementId:'wb-gate',evidenceCategory:'C',groundHeight:548.66};
+  mesh.position.set(x,550,36);scene.add(mesh);
+ }
+ const group=landscapeModel({scene});
+ assert.equal(group.children.length,1);
+ assert.equal(group.children[0].name,'wb-gate');
+ const a=group.userData.westGateParts.get('wb-gate.gate.door.0.0'),b=group.userData.westGateParts.get('wb-gate.gate.door.0.1');
+ assert.equal(a.groundHeight,548.66);
+ assert.deepEqual(a.bounds.getCenter(new THREE.Vector3()).toArray(),[-191,550,36]);
+ assert.deepEqual(b.bounds.getCenter(new THREE.Vector3()).toArray(),[-190,550,36]);
 });

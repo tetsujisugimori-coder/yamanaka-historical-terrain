@@ -106,14 +106,13 @@ async function initialize(features){
  const loader=new GLTFLoader(),models=new Map(),grids={regional,castle};let currentModel,routeLine;const intents=createIntentController();
  let comparison='restored';const hiddenFacilities=new Set();
  const gateFocusGroup=new THREE.Group();scene.add(gateFocusGroup);
- function gatePartMeshes(side,part){
-  const pending=new Set(doorPartNodeNames(side,part)),meshes=[];
-  westernGroup.traverseVisible(object=>{
-   if(!object.isMesh||object.userData.elementId!=='wb-gate'||!pending.delete(object.name))return;
-   meshes.push(object);
-  });
-  if(pending.size)throw Error('C模型の対象部材が見つかりません');
-  return meshes;
+ function gateParts(side,part){
+  const western=westernGroup.children[0];
+  const parts=western?.userData.westGateParts;
+  const result=doorPartNodeNames(side,part).map(name=>parts?.get(name));
+  if(result.some(value=>!value||value.bounds.isEmpty()))throw Error('C模型の対象部材が見つかりません');
+  western.updateWorldMatrix(true,false);
+  return result.map(value=>({...value,bounds:value.bounds.clone().applyMatrix4(western.matrixWorld)}));
  }
  function clearGateFocus(){
   for(const helper of [...gateFocusGroup.children]){
@@ -128,23 +127,27 @@ async function initialize(features){
    return gateVisible;
   },
   highlight:(side,part)=>{
-   const meshes=side===null?[]:gatePartMeshes(side,part);
+   const parts=side===null?[]:gateParts(side,part);
    clearGateFocus();
-   for(const mesh of meshes){
-    const helper=new THREE.BoxHelper(mesh,0xffd56c);
+   for(const {name,bounds} of parts){
+    const helper=new THREE.Box3Helper(bounds,0xffd56c);
     helper.material.depthTest=false;helper.material.transparent=true;helper.material.opacity=.82;
-    helper.renderOrder=20;helper.userData.gateNode=mesh.name;
+    helper.renderOrder=20;helper.userData.gateNode=name;
     gateFocusGroup.add(helper);
    }
   },
   compare:()=>{
-   const meshes=['left','right'].flatMap(side=>[...gatePartMeshes(side,'leaf'),...gatePartMeshes(side,'postSide')]);
-   const ground=meshes[0].userData.groundHeight;
-   if(!Number.isFinite(ground)||!meshes.every(o=>o.userData.groundHeight===ground))throw Error('C模型に共通の支持基準高を確認できません');
+   const parts=['left','right'].flatMap(side=>[...gateParts(side,'leaf'),...gateParts(side,'postSide')]);
+   const ground=parts[0].groundHeight;
+   if(!Number.isFinite(ground)||!parts.every(o=>o.groundHeight===ground))throw Error('C模型に共通の支持基準高を確認できません');
    const comparison=westGateComparison(ground);
    for(const side of ['left','right']){
-    const post=gatePartMeshes(side,'postSide')[0];
-    const bottom=new THREE.Box3().setFromObject(post,true).min.y/state.exaggeration;
+    const bounds=new THREE.Box3();
+    for(const part of gateParts(side,'leaf'))bounds.union(part.bounds);
+    const extent=bounds.getSize(new THREE.Vector3());
+    comparison[side].extent=[extent.x,extent.z,extent.y/state.exaggeration];
+    const [post]=gateParts(side,'postSide');
+    const bottom=post.bounds.min.y/state.exaggeration;
     try{
      const localGround=sampleSurfaceHeight(stationSurfaces(),...comparison[side].postCenter,state.exaggeration);
      comparison[side].postGround={bottom,localGround,gap:bottom-localGround};
@@ -160,11 +163,9 @@ async function initialize(features){
    const ground=sampleSurfaceHeight(stationSurfaces(),-191,-35,state.exaggeration);
    // Keep the established north/left sightlines unchanged.
    if(side==='left')return leftDoorDetailWorldTarget(ground,state.exaggeration,part);
-   const meshes=gatePartMeshes(side,part);
+   const parts=gateParts(side,part);
    const combined=new THREE.Box3();
-   for(const mesh of part==='board'?[meshes.find(o=>o.name.endsWith('.2'))]:meshes){
-    combined.expandByObject(mesh,true);
-   }
+   for(const piece of part==='board'?[parts[2]]:parts)combined.union(piece.bounds);
    return combined.getCenter(new THREE.Vector3()).toArray();
   }
  });
@@ -257,7 +258,7 @@ async function initialize(features){
  sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{leaveStation();if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
  function render(){if(renderFailed||document.hidden)return;const r=viewport.getBoundingClientRect();if(r.width===0||r.height===0)return;syncConnected();renderer.render(scene,camera);updateLabels();updateScale();}
  function resize(){const r=viewport.getBoundingClientRect(),ratio=renderer.getPixelRatio(),width=Math.max(1,Math.floor(r.width*ratio))/ratio,height=Math.max(1,Math.floor(r.height*ratio))/ratio;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();const active=state.landscape&&state.view==='reconstruction';syncWestern(active);if(active)syncNature(active);render();}
- const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{castleOverview.dispose();walk?.dispose();cadSupportCache.clear();disposePart(partsGroup);nature.dispose();clearNature();closeDetail.dispose();sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
+ const ro=new ResizeObserver(resize);ro.observe(viewport);controls.addEventListener('change',render);controls.addEventListener('start',()=>beginCameraIntent());const onVisibility=()=>{if(!document.hidden)render();};document.addEventListener('visibilitychange',onVisibility);teardownTerrain=()=>{clearGateFocus();castleOverview.dispose();walk?.dispose();cadSupportCache.clear();disposePart(partsGroup);nature.dispose();clearNature();closeDetail.dispose();sectionExhibit?.dispose();controls.dispose();ro.disconnect();document.removeEventListener('visibilitychange',onVisibility);renderer.dispose();};
  function fitTerrain(g){
   const direction=camera.position.clone().sub(controls.target).normalize();let distance=camera.position.distanceTo(controls.target);
   for(let i=0;i<15;i++){camera.position.copy(controls.target).addScaledVector(direction,distance);camera.lookAt(controls.target);camera.updateMatrixWorld();let fits=true;for(const x of [g.bounds[0],g.bounds[2]])for(const n of [g.bounds[1],g.bounds[3]])for(const h of [g.min,g.max]){const p=new THREE.Vector3(x,h*state.exaggeration,-n).project(camera);if(Math.abs(p.x)>.86||Math.abs(p.y)>.76||p.z>1)fits=false;}if(fits)break;distance*=1.12;}

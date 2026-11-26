@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'src/main.js'
+      - 'src/landscape.js'
       - 'src/style.css'
       - 'public/data/phase3b.glb'
       - 'tests/west-gate-door-components.test.mjs'
