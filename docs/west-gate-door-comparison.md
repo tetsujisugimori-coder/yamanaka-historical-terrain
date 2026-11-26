@@ -13,7 +13,7 @@
 | 施設・模型版 | `wb-gate` / `phase3b-v1`（推定C） |
 | 部品識別 | `wb-gate.gate.door.{j}.{0..5}`、`wb-gate.gate.door.rail.{j}.{0.45,2.15}`、`wb-gate.gate.post.{j}`、左 j=1、右 j=0 |
 | 固定制作commit | `36d8417df3a70f9530db3df92fd3f46015b0bb68`（GLBの最新変更）。本機能の基準mainは `cc7cfc6b55d7d1fa1ba67b9ee5f053c2cc44d820` |
-| 正本・配信物 | 本リポジトリの `scripts/phase3b-build-blender.py`、`public/data/phase3b.json`、`public/data/phase3b.glb`。castle-3d-parts共通部品ではない |
+| 正本・配信物 | 編集原本は `production/yamanaka-phase3b.blend` と `production/phase3b/recipe.json`（`public/data/phase3b.json` の editor）。制作補助は `scripts/phase3b-build-blender.py`、配信物は `public/data/phase3b.glb`。castle-3d-parts共通部品ではない |
 | 配信GLB SHA-256 | `894f76faa3b601bbfb65ec1f153de972f62c3b502135ac9e46e51bdaa4c42a4c` |
 | 単位・座標 | ローカル投影E/Nと標高はm、GLB座標は東・上・南。1単位=1 m、比較数値は縦倍率を含まない制作寸法。現地の実寸はUNKNOWN |
 | 配置 | 左板群中心 E −190.456/N −33.850、右 E −190.744/N −36.150。両側横桟 E −190.700、Nは各板群と同じ。門柱 E −191、Nは左 −32.9、右 −37.1 |
@@ -23,6 +23,6 @@
 
 ## 検証範囲
 
-Nodeで配信GLB内の名称・位置・角・支持オフセットを照合し、左右・復帰・欠損拒否・C解除を確認。専用の正式ブラウザー試験は従来の左扉観察に左右・4部位・比較・復帰・枠消去を追加し、Chromium/WebKit別、375/390/765/1280px、通常／動き軽減で検証する。既存地形・模型・操作の回帰は既存テストの対象。この文書は実機・現地・原証拠保全・CIの成立を宣言しない。
+Nodeで配信GLB内の名称・位置・角・支持オフセットを照合し、左右・復帰・欠損拒否・C解除を確認。専用の正式ブラウザー試験は従来の左扉観察に左右・4部位・比較・復帰・枠消去、実canvasへの合成contextlostイベントによる観察の終了を追加し、Chromium/WebKit別、375/390/765/1280px、通常／動き軽減で検証する。既存地形・模型・操作の回帰は既存テストの対象。この文書は実機・実GPU異常・現地・原証拠保全・CIの成立を宣言しない。
 
 PR #61/#62 の左扉と案内同期を継承し、地形・GLB・CAD・歩行・史料は変更しない。PR #55 の未マージ内容への依存なし。Stage 3-B HOLD／PR #55 HOLDは維持する。

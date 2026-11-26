@@ -137,6 +137,17 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
     await page.waitForFunction(()=>window.__terrainDiagnostics().state.station==='ic-station-westmoat');
     await expect(panel).toBeHidden();
     row.checks.push('new station invalidates stale back control');
+    await page.locator('[data-exploration-station="ic-station-westgate"]').click();
+    await expect(panel).toBeVisible();
+    await page.locator('#west-gate-side-right').click();
+    expect((await snap(page)).westGateDoor.highlightNodes).toHaveLength(8);
+    // Target the real context-loss handler without claiming a GPU/driver failure.
+    await page.locator('#viewport canvas').dispatchEvent('webglcontextlost',{cancelable:true});
+    await expect(panel).toBeHidden();
+    await expect(back).toBeDisabled();
+    expect((await snap(page)).westGateDoor.highlightNodes).toEqual([]);
+    await expect(page.locator('#app-status')).toContainText('3Dの描画接続が失われました');
+    row.checks.push('synthetic context lost event on real canvas invalidates panel and disposes outline');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
     expect(errors).toEqual([]);
     row.checks.push('no viewport overflow or uncaught page error');
@@ -154,6 +165,6 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
  await browser.close();
 }
 report.finishedAt=new Date().toISOString();
-report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===11);
+report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===12);
 await save();
 if(!report.complete)process.exitCode=1;
