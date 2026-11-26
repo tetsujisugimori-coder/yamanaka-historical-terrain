@@ -4,6 +4,7 @@ on:
     paths:
       - 'src/main.js'
       - 'src/landscape.js'
+      - 'src/west-gate-landscape.js'
       - 'src/style.css'
       - 'public/data/phase3b.glb'
       - 'tests/west-gate-door-components.test.mjs'

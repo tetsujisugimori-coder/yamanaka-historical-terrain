@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {landscapeModel} from '../src/landscape.js';
+import {westGateLandscapeModel} from '../src/west-gate-landscape.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -198,11 +198,17 @@ test('display batching preserves independent authored gate bounds without splitt
   mesh.userData={name:'wb-gate.gate.door.0.'+index,elementId:'wb-gate',evidenceCategory:'C',groundHeight:548.66};
   mesh.position.set(x,550,36);scene.add(mesh);
  }
- const group=landscapeModel({scene});
+ const group=westGateLandscapeModel({scene});
  assert.equal(group.children.length,1);
  assert.equal(group.children[0].name,'wb-gate');
  const a=group.userData.westGateParts.get('wb-gate.gate.door.0.0'),b=group.userData.westGateParts.get('wb-gate.gate.door.0.1');
  assert.equal(a.groundHeight,548.66);
  assert.deepEqual(a.bounds.getCenter(new THREE.Vector3()).toArray(),[-191,550,36]);
  assert.deepEqual(b.bounds.getCenter(new THREE.Vector3()).toArray(),[-190,550,36]);
+ const duplicate=scene.children[0].clone();scene.add(duplicate);
+ const ambiguous=westGateLandscapeModel({scene}).userData.westGateParts;
+ assert.equal(ambiguous.get('wb-gate.gate.door.0.0'),null);
+ assert.equal(ambiguous.has('wb-gate.gate.post.0'),false);
+ const main=readFileSync(new URL('../src/main.js',import.meta.url),'utf8');
+ assert.match(main,/if\(file==='phase3b'\)return westGateLandscapeModel\(gltf,westernMeta.bounds\)/);
 });

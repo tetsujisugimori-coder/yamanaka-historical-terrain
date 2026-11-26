@@ -8,7 +8,7 @@ const out=process.env.WEST_GATE_EVIDENCE??'evidence/west-gate-left-door/ci';
 await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
-const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','src/landscape.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md','docs/west-gate-door-comparison.md','public/data/phase3b.glb'];
+const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','src/landscape.js','src/west-gate-landscape.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md','docs/west-gate-door-comparison.md','public/data/phase3b.glb'];
 const hashes=Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])));
 const report={scope:'Actual Playwright Chromium/WebKit page interaction. No iPhone Safari or physical touch/VoiceOver claim.',head,tree,hashes,startedAt:new Date().toISOString(),rows:[]};
 const save=()=>writeFile(out+'/results.json',JSON.stringify({...report,updatedAt:new Date().toISOString()},null,2));

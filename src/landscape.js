@@ -4,18 +4,11 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 // Bake exported transforms and batch by stable element ID + material. The .blend
 // keeps every post, tree and person editable; the browser needs few draw calls.
 export function landscapeModel(gltf,westernBounds){
- const buckets=new Map(),westGateParts=new Map();gltf.scene.updateMatrixWorld(true);
+ const buckets=new Map();gltf.scene.updateMatrixWorld(true);
  gltf.scene.traverse(o=>{if(!o.isMesh)return;const id=o.userData.elementId,category=o.userData.evidenceCategory;
   if(!id||!['C','D'].includes(category))throw Error('Scenery missing ledger binding');
   const geo=o.geometry.clone();geo.applyMatrix4(o.matrixWorld);
   geo.computeBoundingBox();const center=geo.boundingBox.getCenter(new THREE.Vector3());
-  // GLTFLoader preserves the authored node name in userData.name and sanitizes
-  // Object3D.name. Retain only gate part metadata; never split render batches.
-  const node=o.userData.name;
-  if(id==='wb-gate'&&typeof node==='string'&&/^wb-gate\.gate\.(door|post)\./.test(node)){
-   const metadata={name:node,bounds:geo.boundingBox.clone(),groundHeight:o.userData.groundHeight};
-   westGateParts.set(node,westGateParts.has(node)?null:metadata);
-  }
   const overlap=id==='sc-vegetation'&&westernBounds&&center.x>westernBounds[0]-4&&center.x<westernBounds[2]+4&&-center.z>westernBounds[1]-4&&-center.z<westernBounds[3]+4;
   const key=id+':'+o.material.uuid+':'+Boolean(overlap);
   const materialRole=o.userData.materialRole??({'sc-vegetation':'leaf','sc-flags':'cloth','sc-people':'skin'}[id]??'wood');
@@ -23,7 +16,6 @@ export function landscapeModel(gltf,westernBounds){
   buckets.get(key).geometries.push(geo);
  });
  const group=new THREE.Group();
- if(westGateParts.size)group.userData.westGateParts=westGateParts;
  for(const b of buckets.values()){const geometry=mergeGeometries(b.geometries);if(!geometry)throw Error('Scenery batching failed');b.geometries.forEach(g=>g.dispose());b.material.side=THREE.DoubleSide;const m=new THREE.Mesh(geometry,b.material);m.userData=b.data;m.name=b.data.elementId;group.add(m);}
  return group;
 }

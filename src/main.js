@@ -16,6 +16,7 @@ import {refineObservationMetadata} from './refined-observation.js';
 import {sampleSurfaceHeight} from './surface.js';
 import {createSectionExhibit} from './section-exhibit.js';
 import {landscapeModel,landscapeColor} from './landscape.js';
+import {westGateLandscapeModel} from './west-gate-landscape.js';
 import {WEST_GATE_FINISH} from './west-gate-finish.js';
 import {createWestGateDoorInspector,leftDoorDetailWorldTarget,doorPartNodeNames,westGateComparison} from './west-gate-door-inspection.js';
 import {contextOutsidePatch,createSurfaceFinish} from './phase3b.js';
@@ -252,7 +253,7 @@ async function initialize(features){
  async function getModel(view,variant){
   const file=view==='reconstruction'?(variant==='current'?'castle':'phase3i'):view==='study'?'moat-study':view==='phase3c'?'phase3i-inner':view;
   if(models.has(file))return models.get(file);
-  const pending=loader.loadAsync(assetPath(`data/${file}.glb`)).then(gltf=>{if(['landscape','phase3b','phase3c','phase3f-inner','phase3h-inner','phase3i-inner','phase3d'].includes(file))return landscapeModel(gltf,westernMeta.bounds);gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});return group;});
+  const pending=loader.loadAsync(assetPath(`data/${file}.glb`)).then(gltf=>{if(file==='phase3b')return westGateLandscapeModel(gltf,westernMeta.bounds);if(['landscape','phase3c','phase3f-inner','phase3h-inner','phase3i-inner','phase3d'].includes(file))return landscapeModel(gltf,westernMeta.bounds);gltf.scene.updateMatrixWorld(true);const group=new THREE.Group();gltf.scene.traverse(ob=>{if(!ob.isMesh)return;const geo=ob.geometry.clone();geo.applyMatrix4(ob.matrixWorld);geo.computeVertexNormals();const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:1,metalness:0,side:THREE.DoubleSide});const mesh=new THREE.Mesh(geo,mat);mesh.name=ob.name;mesh.userData={...ob.userData};group.add(mesh);});return group;});
   models.set(file,pending);try{return await pending;}catch(error){if(models.get(file)===pending)models.delete(file);throw error;}
  }
  sectionExhibit=createSectionExhibit({getModel,scene,render,context:()=>({ready:state.ready,view:state.view,comparison,exaggeration:state.exaggeration,failed:renderFailed,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name)??[]}),open:s=>runAction(async intent=>{leaveStation();if(!await setView('reconstruction',{reset:false,intent}))return;if(!intent.canMoveCamera())return;const e=(s.start[0]+s.end[0])/2,n=(s.start[1]+s.end[1])/2,h=sampleSurfaceHeight(currentModel.children,e,n,state.exaggeration)*state.exaggeration;controls.target.set(e,h,-n);camera.position.set(e-28,h+42,-n+45);controls.update();render();})});
