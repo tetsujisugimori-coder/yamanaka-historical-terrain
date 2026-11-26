@@ -1,8 +1,15 @@
-name: 'West gate left door: delivered browser restoration'
+name: 'West gate doors: delivered comparison and restoration'
 on:
   pull_request:
     paths:
       - 'src/main.js'
+      - 'src/landscape.js'
+      - 'src/west-gate-landscape.js'
+      - 'src/style.css'
+      - 'public/data/phase3b.glb'
+      - 'tests/west-gate-door-components.test.mjs'
+      - 'docs/west-gate-door-comparison.md'
+      - 'tests/west-gate-door-inspection.test.mjs'
       - 'src/west-gate-door-inspection.js'
       - 'scripts/west-gate-door-browser.mjs'
       - '.github/workflows/west-gate-left-door.yml'
@@ -27,7 +34,7 @@ jobs:
       - name: Install pinned Playwright browsers
         timeout-minutes: 15
         run: npx playwright install --with-deps chromium webkit
-      - name: Exercise actual fixed camera focus and restoration
+      - name: Exercise actual left and right camera focus, comparison and restoration
         timeout-minutes: 20
         shell: bash
         run: |
@@ -46,6 +53,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: west-gate-left-door-browser
+          name: west-gate-door-comparison-browser
           path: evidence/west-gate-left-door/ci/
           if-no-files-found: warn
