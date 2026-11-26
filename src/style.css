@@ -62,3 +62,11 @@ body[data-landscape=true] .map-help,body[data-landscape=true] .map-bottom{backgr
 
 /* Independent inferred-C layer. Dashed styling is not an accuracy radius. */
 #inferred-regions{border:2px dashed #7b3790;border-radius:8px;margin-top:1rem;padding:1rem;min-width:0;overflow-wrap:anywhere}#inferred-regions>label{display:flex;align-items:center;gap:.5rem;min-height:44px}#inferred-regions button{min-height:44px;max-width:100%;white-space:normal;overflow-wrap:anywhere;margin:.25rem}#inferred-regions-list{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0}#inferred-regions-list li{min-width:0;max-width:100%}#inferred-regions-list button[aria-pressed=true]{outline:2px dashed currentColor}#inferred-regions-detail{border-top:1px solid #7b3790;padding-top:.5rem}#inferred-regions :focus-visible{outline:3px solid #123f98;outline-offset:3px}
+
+/* Fixed-station gate comparison: readable without zooming on narrow screens. */
+#west-gate-door-inspection .segmented{flex-wrap:wrap;margin-block:.4rem}
+#west-gate-door-comparison{border:1px solid #a6b49b;border-radius:5px;padding:.65rem .85rem;background:#f6f3e7;overflow-wrap:anywhere}
+#west-gate-door-comparison h5{font-size:1rem;margin:0}
+#west-gate-door-comparison dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.35rem .65rem}
+#west-gate-door-comparison dd{margin:0}
+@media(max-width:480px){#west-gate-door-comparison dl{grid-template-columns:minmax(0,1fr)}}

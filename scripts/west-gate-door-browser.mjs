@@ -8,7 +8,7 @@ const out=process.env.WEST_GATE_EVIDENCE??'evidence/west-gate-left-door/ci';
 await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
-const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md'];
+const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md','docs/west-gate-door-comparison.md','public/data/phase3b.glb'];
 const hashes=Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])));
 const report={scope:'Actual Playwright Chromium/WebKit page interaction. No iPhone Safari or physical touch/VoiceOver claim.',head,tree,hashes,startedAt:new Date().toISOString(),rows:[]};
 const save=()=>writeFile(out+'/results.json',JSON.stringify({...report,updatedAt:new Date().toISOString()},null,2));
@@ -82,9 +82,49 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
     await page.locator('#west-gate-detail-board').click();await expect(back).toBeEnabled();
     await back.click();samePose(await snap(page),initial,'direct component entry followed by restore');
     row.checks.push('direct detail entry without preliminary whole-leaf focus restores initial pose');
-    await focus.click();
+    await page.locator('#west-gate-side-right').click();
+    const right=await snap(page);
+    expect(right.camera).toEqual(initial.camera);
+    expect(right.target[2]).toBeGreaterThan(35);
+    expect(right.westGateDoor.highlightNodes).toHaveLength(8);
+    expect(right.westGateDoor.highlightNodes.every(name=>/^wb-gate\.gate\.door\.(0|rail\.0)\./.test(name))).toBe(true);
+    for(const [part,nodes] of [['board',6],['upperRail',1],['lowerRail',1],['postSide',1]]){
+     const button=page.locator('#west-gate-detail-'+part);await button.click();
+     await expect(button).toHaveAttribute('aria-pressed','true');
+     const current=await snap(page);
+     expect(current.camera).toEqual(initial.camera);expect(current.westGateDoor.highlightNodes).toHaveLength(nodes);
+     if(part==='postSide'){
+      expect(current.westGateDoor.highlightNodes).toEqual(['wb-gate.gate.post.0']);
+      expect(current.target[2]).toBeCloseTo(37.1,3);
+     }
+    }
+    row.checks.push('right leaf and four component selections frame delivered right nodes without moving camera');
+    if([390,1280].includes(width)&&motion==='no-preference'){
+     const image=out+'/'+key+'-right.png';
+     await page.locator('#viewport').screenshot({path:image});
+     row.rightImageSha256=createHash('sha256').update(await readFile(image)).digest('hex');
+    }
+    const comparison=page.locator('#west-gate-door-comparison');
+    await page.locator('#west-gate-door-compare').click();
+    await expect(comparison).toBeVisible();
+    await expect(comparison).toContainText('-190.456 / -33.850');
+    await expect(comparison).toContainText('-190.744 / -36.150');
+    await expect(comparison).toContainText('548.660 m');
+    await expect(comparison).toContainText('史実の左右対称性、蝶番、接合、開閉方向はUNKNOWN');
+    if([390,1280].includes(width)&&motion==='no-preference'){
+     const image=out+'/'+key+'-comparison.png';
+     await comparison.screenshot({path:image});
+     row.comparisonImageSha256=createHash('sha256').update(await readFile(image)).digest('hex');
+    }
+    await page.locator('#west-gate-side-left').click();
+    expect((await snap(page)).target).toEqual(near.target);
+    await back.click();samePose(await snap(page),initial,'right → left → original pose');
+    expect((await snap(page)).westGateDoor.highlightNodes).toEqual([]);
+    row.checks.push('comparison values, left/right switching, highlight cleanup and original pose');
+    await page.locator('#west-gate-side-right').click();
     await page.locator('[data-landscape-mode="a"]').click();await ready(page);
     await expect(panel).toBeHidden();await expect(back).toBeDisabled();
+    expect((await snap(page)).westGateDoor.highlightNodes).toEqual([]);
     row.checks.push('A/current mode invalidates saved C camera and hides controls');
     await page.locator('[data-landscape-mode="cd"]').click();await ready(page);
     await expect(back).toBeDisabled();
@@ -109,6 +149,6 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
  await browser.close();
 }
 report.finishedAt=new Date().toISOString();
-report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===9);
+report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===11);
 await save();
 if(!report.complete)process.exitCode=1;

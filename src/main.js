@@ -17,7 +17,7 @@ import {sampleSurfaceHeight} from './surface.js';
 import {createSectionExhibit} from './section-exhibit.js';
 import {landscapeModel,landscapeColor} from './landscape.js';
 import {WEST_GATE_FINISH} from './west-gate-finish.js';
-import {createWestGateDoorInspector,leftDoorDetailWorldTarget} from './west-gate-door-inspection.js';
+import {createWestGateDoorInspector,leftDoorDetailWorldTarget,doorPartNodeNames,westGateComparison} from './west-gate-door-inspection.js';
 import {contextOutsidePatch,createSurfaceFinish} from './phase3b.js';
 import {supportedPose,validateInnerMetadata,createInnerPanel} from './phase3c.js';
 import {DEFENCE_PAIRS,validateConnectedMetadata,createConnectedPanel} from './phase3d.js';
@@ -105,6 +105,21 @@ async function initialize(features){
  }
  const loader=new GLTFLoader(),models=new Map(),grids={regional,castle};let currentModel,routeLine;const intents=createIntentController();
  let comparison='restored';const hiddenFacilities=new Set();
+ const gateFocusGroup=new THREE.Group();scene.add(gateFocusGroup);
+ function gatePartMeshes(side,part){
+  const pending=new Set(doorPartNodeNames(side,part)),meshes=[];
+  westernGroup.traverseVisible(object=>{
+   if(!object.isMesh||object.userData.elementId!=='wb-gate'||!pending.delete(object.name))return;
+   meshes.push(object);
+  });
+  if(pending.size)throw Error('C模型の対象部材が見つかりません');
+  return meshes;
+ }
+ function clearGateFocus(){
+  for(const helper of [...gateFocusGroup.children]){
+   helper.removeFromParent();helper.geometry.dispose();helper.material.dispose();
+  }
+ }
  const gateInspector=createWestGateDoorInspector({
   camera,controls,render,
   canInspect:()=>{
@@ -112,13 +127,45 @@ async function initialize(features){
    let gateVisible=false;westernGroup.traverseVisible(o=>{if(o.isMesh&&o.userData.elementId==='wb-gate')gateVisible=true;});
    return gateVisible;
   },
-  target:(part)=>{
+  highlight:(side,part)=>{
+   const meshes=side===null?[]:gatePartMeshes(side,part);
+   clearGateFocus();
+   for(const mesh of meshes){
+    const helper=new THREE.BoxHelper(mesh,0xffd56c);
+    helper.material.depthTest=false;helper.material.transparent=true;helper.material.opacity=.82;
+    helper.renderOrder=20;helper.userData.gateNode=mesh.name;
+    gateFocusGroup.add(helper);
+   }
+  },
+  compare:()=>{
+   const meshes=['left','right'].flatMap(side=>[...gatePartMeshes(side,'leaf'),...gatePartMeshes(side,'postSide')]);
+   const ground=meshes[0].userData.groundHeight;
+   if(!Number.isFinite(ground)||!meshes.every(o=>o.userData.groundHeight===ground))throw Error('C模型に共通の支持基準高を確認できません');
+   const comparison=westGateComparison(ground);
+   for(const side of ['left','right']){
+    const post=gatePartMeshes(side,'postSide')[0];
+    const bottom=new THREE.Box3().setFromObject(post,true).min.y/state.exaggeration;
+    try{
+     const localGround=sampleSurfaceHeight(stationSurfaces(),...comparison[side].postCenter,state.exaggeration);
+     comparison[side].postGround={bottom,localGround,gap:bottom-localGround};
+    }catch{comparison[side].postGround=null;}
+   }
+   return comparison;
+  },
+  target:(part,side)=>{
    const station=innerMeta?.stations.find(s=>s.id==='ic-station-westgate');
    if(!station)throw Error('西木戸口の観察地点が未読込です');
    if(Math.abs(camera.position.x-station.eye[0])>1e-3||Math.abs(camera.position.z+station.eye[1])>1e-3)throw Error('既存の西木戸口地点を選び直してください');
    supportedPose(station,stationSurfaces(),state.exaggeration,camera.position.y);
    const ground=sampleSurfaceHeight(stationSurfaces(),-191,-35,state.exaggeration);
-   return leftDoorDetailWorldTarget(ground,state.exaggeration,part);
+   // Keep the established north/left sightlines unchanged.
+   if(side==='left')return leftDoorDetailWorldTarget(ground,state.exaggeration,part);
+   const meshes=gatePartMeshes(side,part);
+   const combined=new THREE.Box3();
+   for(const mesh of part==='board'?[meshes.find(o=>o.name.endsWith('.2'))]:meshes){
+    combined.expandByObject(mesh,true);
+   }
+   return combined.getCenter(new THREE.Vector3()).toArray();
   }
  });
  const modelFeatures=features.filter(f=>f.reconstruction&&!f.landscape);
@@ -279,7 +326,7 @@ async function initialize(features){
    const b=new THREE.Box3().setFromObject(o);const visibilityExclusion=featureId==='sc-vegetation'&&o.userData.westernOverlap===true&&westernGroup.visible&&replacementMeshCount>0&&!o.visible?{reason:'western-terrain-overlap',sourceFlag:true,replacementGroupVisible:true,replacementMeshCount}:null;meshes.push({featureId,name:o.name,visible:o.visible,ancestors,visibilityExclusion,effectiveVisible:o.visible&&ancestors.every(p=>p.visible),category:o.userData.evidenceCategory??'C',positionCount:o.geometry?.attributes.position?.count??0,worldBounds:b.isEmpty()?null:[...b.min.toArray(),...b.max.toArray()]});});
   return meshes;
  }
- window.__terrainDiagnostics=()=>({modelMeshes:modelMeshDiagnostics(),castleOverview:castleOverview.diagnostics(),phase3iModel:{version:"phase3i-v1",terrain:"data/phase3i.glb",inner:"data/phase3i-inner.glb"},nature:{westGateFinish:westGateApplied?WEST_GATE_FINISH:null,version:NATURE.version,category:'D',visible:natureGroup.visible,supports:natureSupports},parts:{...cadPanel.diagnostics(),supportCache:cadSupportCache.diagnostics(),visible:partsGroup.visible,error:partError,manifest:cadPanel.mode==='cad'?cadPanel.asset?.manifest:partAsset?.manifest,posts:partPosts,placement:partPlacement},phase3h:{baseline:'phase3h-v1',active:false},phase3f:{baseline:'phase3f-v1',active:false},phase3e:walk?.diagnostics(),phase3d:{loaded:Boolean(connectedMeta),error:connectedError,visible:connectedGroup.visible,ray:connectedRay,objects:connectedGroup.children.flatMap(g=>g.children).filter(o=>connectedGroup.visible&&o.visible).map(o=>({name:o.name,id:o.userData.elementId,category:o.userData.evidenceCategory}))},state:{...state},landscape:{visible:sceneryGroup.visible,scale:sceneryGroup.scale.y,objects:sceneryGroup.children.flatMap(g=>g.children).filter(o=>sceneryGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory})),stations:landscapeMeta.stations},phase3c:{acquisition:{...innerAcquisition},operations:innerLoadOperations.map(o=>({...o})),dependencyUnavailable:westernUnavailable||westernGroup.children.length===0,visible:innerGroup.visible,unavailable:innerUnavailable,loaded:Boolean(innerMeta),pose:innerPose,stations:innerMeta?.stations??[],objects:innerGroup.children.flatMap(g=>g.children).filter(o=>innerGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)}))},phase3b:{visible:westernGroup.visible,unavailable:westernUnavailable,objects:westernGroup.children.flatMap(g=>g.children).filter(o=>westernGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)})),quality:$('#quality').value,finish:$('#surface-finish').checked,building:$('#western-building').checked,bounds:westernMeta.bounds,shadows:renderer.shadowMap.enabled},section:sectionExhibit?.diagnostics(),cameraFov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
+ window.__terrainDiagnostics=()=>({westGateDoor:{...gateInspector.diagnostics(),highlightNodes:gateFocusGroup.children.map(o=>o.userData.gateNode)},modelMeshes:modelMeshDiagnostics(),castleOverview:castleOverview.diagnostics(),phase3iModel:{version:"phase3i-v1",terrain:"data/phase3i.glb",inner:"data/phase3i-inner.glb"},nature:{westGateFinish:westGateApplied?WEST_GATE_FINISH:null,version:NATURE.version,category:'D',visible:natureGroup.visible,supports:natureSupports},parts:{...cadPanel.diagnostics(),supportCache:cadSupportCache.diagnostics(),visible:partsGroup.visible,error:partError,manifest:cadPanel.mode==='cad'?cadPanel.asset?.manifest:partAsset?.manifest,posts:partPosts,placement:partPlacement},phase3h:{baseline:'phase3h-v1',active:false},phase3f:{baseline:'phase3f-v1',active:false},phase3e:walk?.diagnostics(),phase3d:{loaded:Boolean(connectedMeta),error:connectedError,visible:connectedGroup.visible,ray:connectedRay,objects:connectedGroup.children.flatMap(g=>g.children).filter(o=>connectedGroup.visible&&o.visible).map(o=>({name:o.name,id:o.userData.elementId,category:o.userData.evidenceCategory}))},state:{...state},landscape:{visible:sceneryGroup.visible,scale:sceneryGroup.scale.y,objects:sceneryGroup.children.flatMap(g=>g.children).filter(o=>sceneryGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory})),stations:landscapeMeta.stations},phase3c:{acquisition:{...innerAcquisition},operations:innerLoadOperations.map(o=>({...o})),dependencyUnavailable:westernUnavailable||westernGroup.children.length===0,visible:innerGroup.visible,unavailable:innerUnavailable,loaded:Boolean(innerMeta),pose:innerPose,stations:innerMeta?.stations??[],objects:innerGroup.children.flatMap(g=>g.children).filter(o=>innerGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)}))},phase3b:{visible:westernGroup.visible,unavailable:westernUnavailable,objects:westernGroup.children.flatMap(g=>g.children).filter(o=>westernGroup.visible&&o.visible).map(o=>({id:o.userData.elementId,category:o.userData.evidenceCategory,surface:Boolean(o.userData.surface)})),quality:$('#quality').value,finish:$('#surface-finish').checked,building:$('#western-building').checked,bounds:westernMeta.bounds,shadows:renderer.shadowMap.enabled},section:sectionExhibit?.diagnostics(),cameraFov:camera.fov,camera:camera.position.toArray(),target:controls.target.toArray(),scale:currentScale,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,geometries:renderer.info.memory.geometries,modelBounds:currentModel?new THREE.Box3().setFromObject(currentModel).min.toArray().concat(new THREE.Box3().setFromObject(currentModel).max.toArray()):null,canvas:renderer.getSize(new THREE.Vector2()).toArray(),studyBounds:studyMeta.bounds,facilityScreen:modelFeatures.map(f=>({id:f.id,ndc:new THREE.Vector3(f.local[0],f.height*state.exaggeration,-f.local[1]).project(camera).toArray()})),reconstruction:{comparison,visible:currentModel?.children.filter(o=>o.visible).map(o=>o.userData.facilityId??o.name),hidden:[...hiddenFacilities]},markerScreen:markers.map(m=>({id:m.userData.featureId,ndc:m.position.clone().project(camera).toArray()}))});
 
 
  function syncInnerNavigation(){const stationIndex=innerMeta?.stations.findIndex(p=>p.id===state.station)??-1;$('#inner-previous').disabled=stationIndex<=0;$('#inner-next').disabled=stationIndex<0||stationIndex===innerMeta.stations.length-1;}
