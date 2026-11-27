@@ -8,7 +8,7 @@ const out=process.env.WEST_GATE_EVIDENCE??'evidence/west-gate-left-door/ci';
 await mkdir(out,{recursive:true});
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const tree=execFileSync('git',['rev-parse','HEAD^{tree}'],{encoding:'utf8'}).trim();
-const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','src/landscape.js','src/west-gate-landscape.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md','docs/west-gate-door-comparison.md','public/data/phase3b.glb'];
+const paths=['src/main.js','src/west-gate-door-inspection.js','src/phase3c.js','src/landscape.js','src/west-gate-landscape.js','scripts/phase3b-build-blender.py','scripts/west-gate-door-browser.mjs','tests/west-gate-door-components.test.mjs','docs/west-gate-left-door-components.md','docs/west-gate-door-comparison.md','public/data/phase3b.glb','public/data/shared-parts/west-gate-left-leaf-d0.glb','src/west-gate-d0-contract.js','src/west-gate-d0-trial.js','tests/west-gate-d0-trial.test.mjs','docs/west-gate-d0-trial.md'];
 const hashes=Object.fromEntries(await Promise.all(paths.map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])));
 const report={scope:'Actual Playwright Chromium/WebKit page interaction. No iPhone Safari or physical touch/VoiceOver claim.',head,tree,hashes,startedAt:new Date().toISOString(),rows:[]};
 const save=()=>writeFile(out+'/results.json',JSON.stringify({...report,updatedAt:new Date().toISOString()},null,2));
@@ -82,7 +82,33 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
     await page.locator('#west-gate-detail-board').click();await expect(back).toBeEnabled();
     await back.click();samePose(await snap(page),initial,'direct component entry followed by restore');
     row.checks.push('direct detail entry without preliminary whole-leaf focus restores initial pose');
+    const toggle=page.locator('#west-gate-d0-toggle'),trialStatus=page.locator('#west-gate-d0-status');
+    await expect(toggle).toBeVisible();await expect(toggle).toHaveAttribute('aria-pressed','false');
+    const assetPattern='**/data/shared-parts/west-gate-left-leaf-d0.glb';
+    await page.route(assetPattern,route=>route.fulfill({status:200,body:'wrong bytes'}));
+    await toggle.click();await expect(trialStatus).toContainText('取得不可');
+    expect((await snap(page)).westGateD0.visible).toBe(false);
+    await page.unroute(assetPattern);
+    await focus.click();
+    const trialBefore=await snap(page);
+    await toggle.click();await expect(trialStatus).toContainText('D0試験表示中');
+    const trialAfter=await snap(page);
+    samePose(trialAfter,trialBefore,'D0 overlay');
+    expect(trialAfter.westGateD0.partIds).toEqual(['B01','B02','B03','B04','B05','B06','R01','R02']);
+    expect(trialAfter.westGateD0.visible).toBe(true);
+    expect(trialAfter.modelMeshes).toEqual(trialBefore.modelMeshes);
+    if([390,1280].includes(width)&&motion==='no-preference'){
+     const image=out+'/'+key+'-d0.png';await page.locator('#viewport').screenshot({path:image});
+     row.d0ImageSha256=createHash('sha256').update(await readFile(image)).digest('hex');
+    }
+    await toggle.click();expect((await snap(page)).westGateD0.visible).toBe(false);
+    await back.click();samePose(await snap(page),initial,'D0 close and restore');
+    row.checks.push('verified D0 asset, wrong-byte refusal, eight actual parts, unchanged C geometry and camera');
+    await toggle.click();await expect(trialStatus).toContainText('D0試験表示中');
     await page.locator('#west-gate-side-right').click();
+    await expect(toggle).toBeHidden();
+    expect((await snap(page)).westGateD0.visible).toBe(false);
+    row.checks.push('right selection cancels the left D0 overlay');
     const right=await snap(page);
     expect(right.camera).toEqual(initial.camera);
     expect(right.target[2]).toBeGreaterThan(35);
@@ -165,6 +191,6 @@ for(const engine of process.env.WEST_GATE_ENGINE?[process.env.WEST_GATE_ENGINE]:
  await browser.close();
 }
 report.finishedAt=new Date().toISOString();
-report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===12);
+report.complete=report.rows.length===16&&report.rows.every(r=>r.status==='PASS'&&r.checks.length===14);
 await save();
 if(!report.complete)process.exitCode=1;
