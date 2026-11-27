@@ -32,9 +32,9 @@ let sceneryUnavailable=false,westernUnavailable=false,innerUnavailable=false,inn
 const camera=new THREE.PerspectiveCamera();camera.position.set(1,2,3);camera.fov=38;const controls={target:new THREE.Vector3(4,5,6),update(){}};
 const $=s=>{if(!elements.has(s))elements.set(s,{textContent:'',hidden:false,closest(){return this;},replaceChildren(){},remove(){}});return elements.get(s);},$$=()=>[];
 const render=()=>events.push('render'),syncLandscape=()=>{},paint=()=>{},applyLayers=()=>{},placeMarkers=()=>{},makeRoute=()=>{},setRenderControls=()=>{},reportReady=()=>{},syncInnerNavigation=()=>{},resize=()=>{},focusPreset=()=>{},leaveStation=()=>{};
-// The extracted setView now notifies a view-only gate inspector. Mock only its
-// UI notification here; keep camera and intent behavior from the real source.
+// Record the view-only notifications issued by the extracted setView.
 const gateInspector={sync(){events.push('gate-inspector-sync');}};
+const gateTrial={sync(){events.push('gate-trial-ready:'+state.ready);}};
 const sectionExhibit={sync(){}},castleOverview={deactivate(){}},features=[],reading={addFeatures(){}},document={createElement(){return {};}};
 function getModel(view,variant){return new Promise((resolve,reject)=>requests.push({view,variant,resolve,reject}));}
 function beginIntent(){return intents.begin();}function showError(){events.push('latest-error');}
@@ -46,7 +46,18 @@ globalThis.api={beginIntent,setView,loadInner,restore,runAction,cameraOnly:()=>i
 `,context);return{...context.api,snapshot:()=>JSON.parse(JSON.stringify(context.api.snapshot())),requests,events};}
 const group=name=>{const g=new THREE.Group();g.name=name;return g;};
 const comparable=s=>({state:s.state,comparison:s.comparison,camera:s.camera,target:s.target,fov:s.fov,terrain:s.terrain,inner:s.inner,innerUnavailable:s.innerUnavailable});
-async function normalRestore(){const f=fixture();const saved={view:'castle',landscape:false,drama:true,selected:'saved',variant:'restored',camera:[100,200,300],target:[400,500,600],fov:70};const pending=f.restore(saved);f.requests[0].resolve(group('saved'));await pending;const s=f.snapshot();for(const k of ['view','landscape','drama','selected'])assert.equal(s.state[k],saved[k]);assert.equal(s.comparison,saved.variant);assert.deepEqual(s.camera,saved.camera);assert.deepEqual(s.target,saved.target);assert.equal(s.fov,saved.fov);return{snapshot:s};}
+async function normalRestore(){
+ const f=fixture(),saved={view:'castle',landscape:false,drama:true,selected:'saved',variant:'restored',camera:[100,200,300],target:[400,500,600],fov:70};
+ const pending=f.restore(saved);
+ assert.deepEqual(f.events,['gate-trial-ready:false']);
+ f.requests[0].resolve(group('saved'));await pending;
+ const s=f.snapshot();
+ for(const k of ['view','landscape','drama','selected'])assert.equal(s.state[k],saved[k]);
+ assert.equal(s.comparison,saved.variant);
+ assert.deepEqual(s.camera,saved.camera);assert.deepEqual(s.target,saved.target);assert.equal(s.fov,saved.fov);
+ assert.deepEqual(f.events.filter(event=>event.startsWith('gate-trial-ready:')),['gate-trial-ready:false','gate-trial-ready:true']);
+ return{snapshot:s};
+}
 async function viewReverse(mutant,oldFails=false,newFails=false){const f=fixture(mutant),old=f.runAction(i=>f.setView('castle',{intent:i,reset:false,selected:'old'})),newer=f.runAction(i=>f.setView('castle',{intent:i,reset:false,selected:'new'}));const [a,b]=f.requests;if(newFails)b.reject(Error('new failure'));else b.resolve(group('new'));await newer;if(newFails){assert.ok(f.events.includes('latest-error'),'new failure must be exposed');assert.equal(f.snapshot().state.selected,'original');}else{assert.equal(f.snapshot().state.selected,'new','new success selected');assert.deepEqual(f.snapshot().terrain,['new'],'new success scene');}const expected=comparable(f.snapshot()),errors=[...f.events];if(oldFails)a.reject(Error('old failure'));else a.resolve(group('old'));await old;assert.deepEqual(comparable(f.snapshot()),expected,'stale view changed latest state or scene');assert.deepEqual(f.events,errors,'stale error/render changed latest outcome');return{order:['hold old','complete new','release old','old terminal'],snapshot:expected};}
 async function close(mutant){const f=fixture(mutant);const old=f.runAction(i=>f.setView('castle',{intent:i,reset:false,selected:'old'}));f.cancel();const next=f.runAction(i=>f.setView('castle',{intent:i,reset:false,selected:'new'}));f.requests[1].resolve(group('new'));assert.equal(await next,true);assert.equal(f.snapshot().state.selected,'new');const expected=comparable(f.snapshot());f.requests[0].resolve(group('old'));assert.equal(await old,false,'cancelled old operation attached');assert.deepEqual(comparable(f.snapshot()),expected);return{terminal:true,newOperation:true,order:['old held','cancel','new complete','old released','old terminal'],snapshot:expected};}
 async function restore(mutant,cameraOnly=false){const f=fixture(mutant),saved={view:'castle',landscape:false,drama:true,selected:'saved',variant:'restored',camera:[100,200,300],target:[400,500,600],fov:70};const old=f.restore(saved);if(cameraOnly){f.cameraOnly();f.pose();f.requests[0].resolve(group('saved'));await old;assert.deepEqual(f.snapshot().camera,[7,8,9],'old restore camera overwrote newer camera input');assert.deepEqual(f.snapshot().target,[10,11,12]);assert.equal(f.snapshot().fov,51);return{cameraOnly:true};}const newer=f.runAction(i=>f.setView('castle',{intent:i,reset:false,landscape:false,drama:false,selected:'latest',variant:'current'}));f.requests[1].resolve(group('new'));await newer;f.pose();const expected=comparable(f.snapshot());f.requests[0].resolve(group('old'));await old;assert.deepEqual(comparable(f.snapshot()),expected,'old restore overwrote state');return{snapshot:expected,terminal:true};}
