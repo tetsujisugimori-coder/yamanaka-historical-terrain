@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {webcrypto,createHash} from 'node:crypto';
 import {D0,expectedParts,trialPlacement,trialPoint,verifyD0Bytes} from '../src/west-gate-d0-contract.js';
-const asset=new URL('../public/data/shared-parts/west-gate-left-leaf-d0.glb',import.meta.url);
+const asset=new URL('../src/assets/west-gate-left-leaf-d0.glb',import.meta.url);
 const ctx={east:-190.456,north:-33.85,angle:.20,ground:548.6599731445312,scale:1};
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} != ${b}`);
 test('accepted D0 bytes and source-node inventory',async()=>{
